@@ -41,3 +41,7 @@
 - [寒霜行星包](https://store.steampowered.com/app/2952300/) (Frosty Planet Pack)
 - [仿生加速包](https://store.steampowered.com/app/3302470/) (Bionic Booster Pack)
 - [史前行星包](https://store.steampowered.com/app/3655420/) (Prehistoric Planet Pack)
+
+#### 不相容於
+- DGSM / CGSM / WGSM
+- Visual Fixes N Tweaks
