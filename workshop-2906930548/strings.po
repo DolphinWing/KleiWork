@@ -6603,7 +6603,7 @@ msgstr "這個建築存有用於提速的<link=\"MILKFAT\">鹹乳蠟</link>\n\n�
 #. STRINGS.BUILDING.STATUSITEMS.TURBINE_ACTIVE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TURBINE_ACTIVE.NAME"
 msgid "Active"
-msgstr "啟動"
+msgstr "運轉中"
 
 #. STRINGS.BUILDING.STATUSITEMS.TURBINE_ACTIVE.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TURBINE_ACTIVE.TOOLTIP"
@@ -6628,7 +6628,7 @@ msgstr "所有的進氣口阻塞"
 #. STRINGS.BUILDING.STATUSITEMS.TURBINE_BLOCKED_INPUT.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TURBINE_BLOCKED_INPUT.TOOLTIP"
 msgid "This turbine's <style=\"KKeyword\">Input Vents</style> are blocked, so it can't intake any <link=\"STEAM\">Steam</link>.\n\nThe <style=\"KKeyword\">Input Vents</style> are located directly below the foundation <style=\"KKeyword\">Tile</style> this building is resting on."
-msgstr "這個渦輪機的<style=\"KKeyword\">進氣口</style>阻塞，所以不能輸入<link=\"STEAM\">蒸氣</link>。\n\n<style=\"KKeyword\">進氣口</style>位於地基<style=\"KKeyword\">磚塊</style>的下方，這個建築停機中。"
+msgstr "這個渦輪機的<style=\"KKeyword\">進氣口</style>阻塞，所以不能輸入<link=\"STEAM\">蒸氣</link>。\n\n<style=\"KKeyword\">進氣口</style>位於該建築所處的地基<style=\"KKeyword\">磚塊</style>的正下方。"
 
 #. STRINGS.BUILDING.STATUSITEMS.TURBINE_BLOCKED_OUTPUT.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TURBINE_BLOCKED_OUTPUT.NAME"
@@ -6668,17 +6668,17 @@ msgstr "{Blocked}/{Total} 個進氣口阻塞"
 #. STRINGS.BUILDING.STATUSITEMS.TURBINE_PARTIALLY_BLOCKED_INPUT.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TURBINE_PARTIALLY_BLOCKED_INPUT.TOOLTIP"
 msgid "<b>{Blocked}</b> of this turbine's <b>{Total}</b> inputs have been blocked, resulting in reduced throughput"
-msgstr "這個渦輪機的 <b>{Total}</b> 個進氣口有 <b>{Blocked}</b> 個阻塞，將導致發電量減少"
+msgstr "這個渦輪機的 <b>{Total}</b> 個進氣口有 <b>{Blocked}</b> 個阻塞，將導致處理量下降"
 
 #. STRINGS.BUILDING.STATUSITEMS.TURBINE_SPINNING_UP.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TURBINE_SPINNING_UP.NAME"
 msgid "Spinning Up"
-msgstr "運轉中"
+msgstr "啟動中"
 
 #. STRINGS.BUILDING.STATUSITEMS.TURBINE_SPINNING_UP.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TURBINE_SPINNING_UP.TOOLTIP"
 msgid "This turbine is currently spinning up\n\nSpinning up allows a turbine to continue running for a short period if the pressure it needs to run becomes unavailable"
-msgstr "這個渦輪機正在運轉中\n\n渦輪機將會持續運轉一小段時間，如果壓力不足它會停止運作"
+msgstr "這個渦輪機正在啟動中\n\n啟動狀態會讓渦輪機在所需壓力消失時，仍能持續運轉一小段時間"
 
 #. STRINGS.BUILDING.STATUSITEMS.TURBINE_TOO_HOT.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TURBINE_TOO_HOT.NAME"
@@ -6688,7 +6688,7 @@ msgstr "渦輪機過熱"
 #. STRINGS.BUILDING.STATUSITEMS.TURBINE_TOO_HOT.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TURBINE_TOO_HOT.TOOLTIP"
 msgid "This turbine must be below <b>{Overheat_Temperature}</b> to properly process {Src_Element} into {Dest_Element}"
-msgstr "渦輪機的溫度必須低於 <b>{Overheat_Temperature}</b> 才能處理{Src_Element}進入{Dest_Element}"
+msgstr "渦輪機的溫度必須低於 <b>{Overheat_Temperature}</b> 才能正常將{Src_Element}處理成{Dest_Element}"
 
 #. STRINGS.BUILDING.STATUSITEMS.UNASSIGNED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.UNASSIGNED.NAME"
@@ -6728,7 +6728,7 @@ msgstr "低氣壓"
 #. STRINGS.BUILDING.STATUSITEMS.UNDERPRESSURE.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.UNDERPRESSURE.TOOLTIP"
 msgid "A minimum atmospheric pressure of <b>{TargetPressure}</b> is needed for this building to operate"
-msgstr "最低需要 <b>{TargetPressure}</b> 的氣壓，才能操作這個建築"
+msgstr "最低需要 <b>{TargetPressure}</b> 的氣壓，這個建築才能運作"
 
 #. STRINGS.BUILDING.STATUSITEMS.UNUSABLE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.UNUSABLE.NAME"
