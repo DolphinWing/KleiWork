@@ -69483,12 +69483,12 @@ msgstr "這個間歇泉每 <b>{1}</b>將噴發 <b>{0}</b>"
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.GEYSER_PRODUCTION
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.GEYSER_PRODUCTION"
 msgid "While erupting, this geyser will produce <style=\"KKeyword\">{0}</style> at a rate of <style=\"produced\">{1}</style>, and at a <style=\"KKeyword\">Temperature</style> of <b>{2}</b>"
-msgstr "當噴發時，這個間歇泉將會以 <style=\"produced\">{1}</style> 的速率噴發<style=\"KKeyword\">{0}</style>，且<style=\"KKeyword\">溫度</style>為 <b>{2}</b>"
+msgstr "噴發時，這個間歇泉會以 <style=\"produced\">{1}</style> 的速率輸出<style=\"KKeyword\">溫度</style>為 <b>{2}</b> 的<style=\"KKeyword\">{0}</style>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.GEYSER_PRODUCTION_GEOTUNED
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.GEYSER_PRODUCTION_GEOTUNED"
 msgid "While erupting, this geyser will produce <style=\"KKeyword\">{0}</style> at a rate of <style=\"produced\">{1}</style>, and at a <style=\"KKeyword\">Temperature</style> of <b>{2}</b>"
-msgstr "噴發時，這個間歇泉會以 <style=\"produced\">{1}</style> 的速率輸出<style=\"KKeyword\">温度</style>為 <b>{2}</b>的 <style=\"KKeyword\">{0}</style>"
+msgstr "噴發時，這個間歇泉會以 <style=\"produced\">{1}</style> 的速率輸出<style=\"KKeyword\">溫度</style>為 <b>{2}</b> 的<style=\"KKeyword\">{0}</style>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.GEYSER_PRODUCTION_GEOTUNED_COUNT
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.GEYSER_PRODUCTION_GEOTUNED_COUNT"
