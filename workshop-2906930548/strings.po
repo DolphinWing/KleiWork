@@ -58308,7 +58308,7 @@ msgstr "<link=\"CRABWOODSHELL\">木殼蟹殼</link>"
 #. STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.DEWDRIP.DESC
 msgctxt "STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.DEWDRIP.DESC"
 msgid "A crystallized blob of <link=\"MILK\">Brackene</link> from the <link=\"DEWDRIPPERPLANT\">Dew Dripper</link>."
-msgstr "A crystallized blob of <link=\"MILK\">Brackene</link> from the <link=\"DEWDRIPPERPLANT\">凝露藤</link>."
+msgstr "一團來自<link=\"DEWDRIPPERPLANT\">凝露藤</link>、結晶化的<link=\"MILK\">鹹乳</link>。"
 
 #. STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.DEWDRIP.NAME
 msgctxt "STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.DEWDRIP.NAME"
