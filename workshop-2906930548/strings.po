@@ -69393,47 +69393,47 @@ msgstr "行動電源儲存了{0}<style=\"KKeyword\">電力</style>\n\n行動電�
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTCONSUMED
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTCONSUMED"
 msgid "Consumes <style=\"consumed\">{1}</style> of <style=\"KKeyword\">{0}</style> when in use"
-msgstr "使用時消耗 <style=\"consumed\">{1}</style>的<style=\"KKeyword\">{0}</style>"
+msgstr "使用時消耗 <style=\"consumed\">{1}</style> 的<style=\"KKeyword\">{0}</style>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTCONSUMEDPERUSE
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTCONSUMEDPERUSE"
 msgid "Consumes <style=\"consumed\">{1}</style> of <style=\"KKeyword\">{0}</style> per use"
-msgstr "每次使用消耗 <style=\"produced\">{1}</style>的<style=\"KKeyword\">{0}</style>"
+msgstr "每次使用消耗 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_ENTITYTEMP
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_ENTITYTEMP"
 msgid "Produces <style=\"produced\">{1}</style> of <style=\"KKeyword\">{0}</style> when in use\n\nIt will be the <style=\"KKeyword\">Temperature</style> of the building at the time of production"
-msgstr "使用時生產 <style=\"produced\">{1}</style>的<style=\"KKeyword\">{0}</style>\n\n這是建築在生產時的<style=\"KKeyword\">溫度</style>"
+msgstr "使用時生產 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n這是建築在生產時的<style=\"KKeyword\">溫度</style>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_FIXEDTEMP
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_FIXEDTEMP"
 msgid "Produces <style=\"produced\">{1}</style> of <style=\"KKeyword\">{0}</style> when in use\n\nIt will be produced at <b>{2}</b>."
-msgstr "使用時生產 <style=\"produced\">{1}</style>的<style=\"KKeyword\">{0}</style>\n\n它會用<b>{2}</b>生產。"
+msgstr "使用時生產 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n它會用<b>{2}</b>生產。"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_INPUTTEMP
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_INPUTTEMP"
 msgid "Produces <style=\"produced\">{1}</style> of <style=\"KKeyword\">{0}</style> when in use\n\nIt will be the combined <style=\"KKeyword\">Temperature</style> of the input materials."
-msgstr "使用時生產 <style=\"produced\">{1}</style>的<style=\"KKeyword\">{0}</style>\n\n它會加上輸入材料的<style=\"KKeyword\">溫度</style>。"
+msgstr "使用時生產 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n它會加上輸入材料的<style=\"KKeyword\">溫度</style>。"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_MINORENTITYTEMP
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_MINORENTITYTEMP"
 msgid "Produces <style=\"produced\">{1}</style> of <style=\"KKeyword\">{0}</style> when in use\n\nIt will be at least <b>{2}</b>, or hotter if the building is hotter."
-msgstr "使用時生產 <style=\"produced\">{1}</style>的<style=\"KKeyword\">{0}</style>\n\n最小溫度為 <b>{2}</b>，如果建築變熱也會跟著升溫。"
+msgstr "使用時生產 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n最小溫度為 <b>{2}</b>，如果建築變熱也會跟著升溫。"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_MINTEMP
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_MINTEMP"
 msgid "Produces <style=\"produced\">{1}</style> of <style=\"KKeyword\">{0}</style> when in use\n\nIt will be at least <b>{2}</b>, or hotter if the input materials are hotter."
-msgstr "使用時生產 <style=\"produced\">{1}</style>的<style=\"KKeyword\">{0}</style>\n\n最小溫度為 <b>{2}</b>，如果輸入材料變熱也會跟著升溫。"
+msgstr "使用時生產 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n最小溫度為 <b>{2}</b>，如果輸入材料變熱也會跟著升溫。"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_TOILET
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_TOILET"
 msgid "Produces <style=\"produced\">{1}</style> of <style=\"KKeyword\">{0}</style> per use\n\nDuplicant waste is emitted at <b>{2}</b>."
-msgstr "每次使用生產 <style=\"produced\">{1}</style>的<style=\"KKeyword\">{0}</style>\n\n複製人排泄時會釋放 <b>{2}</b>。"
+msgstr "每次使用生產 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n複製人排泄時會釋放 <b>{2}</b>。"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTEDPERUSE
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTEDPERUSE"
 msgid "Produces <style=\"produced\">{1}</style> of <style=\"KKeyword\">{0}</style> per use\n\nIt will be the <style=\"KKeyword\">Temperature</style> of the input materials."
-msgstr "每次使用生產 <style=\"produced\">{1}</style>的<style=\"KKeyword\">{0}</style>\n\n它的溫度等於輸入材料的<style=\"KKeyword\">溫度</style>。"
+msgstr "每次使用生產 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n它的溫度等於輸入材料的<style=\"KKeyword\">溫度</style>。"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ENABLESDOMESTICGROWTH
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ENABLESDOMESTICGROWTH"
