@@ -17,36 +17,30 @@ cells:
   temperature: 306.944641
   location_x: -5
   location_y: -1
-  preventFoWReveal: true
 - element: ToxicSand
   mass: 960.564453
   temperature: 306.849609
   location_x: -4
   location_y: -1
-  preventFoWReveal: true
 - element: ToxicSand
   mass: 957.727722
   temperature: 306.968353
   location_x: -3
   location_y: -1
-  preventFoWReveal: true
 - element: ToxicSand
   mass: 955.740479
   temperature: 307.011353
   location_x: -2
   location_y: -1
-  preventFoWReveal: true
 - element: ToxicSand
   mass: 952.031677
   temperature: 307.055786
   location_x: -1
   location_y: -1
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1030.2312
   temperature: 306.961884
   location_y: -1
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1030.23413
   temperature: 306.894897
@@ -412,30 +406,25 @@ cells:
   temperature: 307.185059
   location_x: -4
   location_y: -2
-  preventFoWReveal: true
 - element: IgneousRock
   mass: 1775.58643
   temperature: 307.005249
   location_x: -3
   location_y: -2
-  preventFoWReveal: true
 - element: GoldAmalgam
   mass: 614.875061
   temperature: 307.167053
   location_x: -2
   location_y: -2
-  preventFoWReveal: true
 - element: IgneousRock
   mass: 1761.29309
   temperature: 307.121857
   location_x: -1
   location_y: -2
-  preventFoWReveal: true
 - element: Obsidian
   mass: 956.353027
   temperature: 307.089111
   location_y: -2
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1040.52087
   temperature: 306.894714
@@ -470,7 +459,6 @@ cells:
   mass: 1000
   temperature: 277.149994
   location_y: -4
-  preventFoWReveal: true
 - element: Katairite
   mass: 1000
   temperature: 277.149994
@@ -491,24 +479,20 @@ cells:
   temperature: 307.54892
   location_x: -3
   location_y: -3
-  preventFoWReveal: true
 - element: Obsidian
   mass: 966.774475
   temperature: 307.387146
   location_x: -2
   location_y: -3
-  preventFoWReveal: true
 - element: Katairite
   mass: 1000
   temperature: 277.149994
   location_x: -1
   location_y: -3
-  preventFoWReveal: true
 - element: Katairite
   mass: 1000
   temperature: 277.149994
   location_y: -3
-  preventFoWReveal: true
 - element: Obsidian
   mass: 965.721497
   temperature: 307.115143

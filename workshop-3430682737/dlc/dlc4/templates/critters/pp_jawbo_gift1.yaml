@@ -234,36 +234,30 @@ cells:
   temperature: 301.358978
   location_x: -2
   location_y: -1
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1020.04663
   temperature: 301.377472
   location_x: -1
   location_y: -1
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1020.05371
   temperature: 301.442505
   location_y: -1
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1020.04651
   temperature: 301.507233
   location_x: 1
   location_y: -1
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1020.04675
   temperature: 301.590149
   location_x: 2
   location_y: -1
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1020.05463
   temperature: 301.670197
   location_x: 3
   location_y: -1
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1020.05963
   temperature: 301.676849
@@ -300,31 +294,25 @@ cells:
   mass: 1009.96655
   temperature: 301.358978
   location_x: -2
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1009.96997
   temperature: 301.149994
   location_x: -1
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1009.96997
   temperature: 301.149994
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1009.96997
   temperature: 301.149994
   location_x: 1
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1009.96997
   temperature: 301.149994
   location_x: 2
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1009.96997
   temperature: 301.149994
   location_x: 3
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1009.96997
   temperature: 301.149994
@@ -361,36 +349,30 @@ cells:
   temperature: 301.149994
   location_x: -2
   location_y: 1
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1009.96997
   temperature: 301.149994
   location_x: -1
   location_y: 1
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1009.96997
   temperature: 301.149994
   location_y: 1
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1009.96997
   temperature: 301.149994
   location_x: 1
   location_y: 1
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1009.96997
   temperature: 301.149994
   location_x: 2
   location_y: 1
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1009.96997
   temperature: 301.149994
   location_x: 3
   location_y: 1
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1009.96997
   temperature: 301.149994
@@ -475,36 +457,30 @@ cells:
   temperature: 301.358948
   location_x: -2
   location_y: -2
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1030.23132
   temperature: 301.377472
   location_x: -1
   location_y: -2
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1030.24036
   temperature: 301.442352
   location_y: -2
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1030.2312
   temperature: 301.507233
   location_x: 1
   location_y: -2
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1030.23169
   temperature: 301.590149
   location_x: 2
   location_y: -2
-  preventFoWReveal: true
 - element: DirtyWater
   mass: 1030.23926
   temperature: 301.670197
   location_x: 3
   location_y: -2
-  preventFoWReveal: true
 - element: Dirt
   mass: 1807.80908
   temperature: 301.968445

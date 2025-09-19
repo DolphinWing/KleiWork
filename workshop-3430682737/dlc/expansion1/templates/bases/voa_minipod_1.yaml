@@ -9,21 +9,21 @@ info:
 cells:
 - element: SolidEthanol
   mass: 2000
-  temperature: 73.1499939
+  temperature: 73.25
   location_x: -1
   location_y: -2
 - element: SolidEthanol
   mass: 2000
-  temperature: 73.1499939
+  temperature: 73.25
   location_y: -2
 - element: SolidEthanol
   mass: 2000
-  temperature: 73.1499939
+  temperature: 73.25
   location_x: 1
   location_y: -2
 - element: SolidEthanol
   mass: 2000
-  temperature: 73.1499939
+  temperature: 73.25
   location_x: -2
   location_y: -1
 - element: Vacuum
@@ -36,12 +36,12 @@ cells:
   location_y: -1
 - element: SolidEthanol
   mass: 2000
-  temperature: 73.1499939
+  temperature: 73.25
   location_x: 2
   location_y: -1
 - element: SolidEthanol
   mass: 2000
-  temperature: 73.1499939
+  temperature: 73.25
   location_x: -2
 - element: Vacuum
   location_x: -1
@@ -50,11 +50,11 @@ cells:
   location_x: 1
 - element: SolidEthanol
   mass: 2000
-  temperature: 73.1499939
+  temperature: 73.25
   location_x: 2
 - element: SolidEthanol
   mass: 2000
-  temperature: 73.1499939
+  temperature: 73.25
   location_x: -2
   location_y: 1
 - element: Vacuum
@@ -67,25 +67,81 @@ cells:
   location_y: 1
 - element: SolidEthanol
   mass: 2000
-  temperature: 73.1499939
+  temperature: 73.25
   location_x: 2
   location_y: 1
 - element: SolidEthanol
   mass: 2000
-  temperature: 73.1499939
+  temperature: 73.25
   location_x: -1
   location_y: 2
 - element: SolidEthanol
   mass: 2000
-  temperature: 73.1499939
+  temperature: 73.25
   location_y: 2
 - element: SolidEthanol
   mass: 2000
-  temperature: 73.1499939
+  temperature: 73.25
   location_x: 1
   location_y: 2
 buildings:
 - id: ExobaseHeadquarters
   location_y: -1
   element: Granite
-  temperature: 74.3308716
+  temperature: 73.25
+- id: ThermalBlock
+  location_y: -2
+  element: Diamond
+  temperature: 73.25
+- id: ExteriorWall
+  location_x: -1
+  location_y: -2
+  element: Graphite
+  temperature: 73.25
+- id: ExteriorWall
+  location_x: 1
+  location_y: -2
+  element: Graphite
+  temperature: 73.25
+- id: ExteriorWall
+  location_x: -2
+  location_y: -1
+  element: Ceramic
+  temperature: 73.25
+- id: ExteriorWall
+  location_x: -2
+  element: Ceramic
+  temperature: 73.25
+- id: ExteriorWall
+  location_x: -2
+  location_y: 1
+  element: Ceramic
+  temperature: 73.25
+- id: ExteriorWall
+  location_x: 2
+  location_y: -1
+  element: Ceramic
+  temperature: 73.25
+- id: ExteriorWall
+  location_x: 2
+  element: Ceramic
+  temperature: 73.25
+- id: ExteriorWall
+  location_x: 2
+  location_y: 1
+  element: Ceramic
+  temperature: 73.25
+- id: ExteriorWall
+  location_y: 2
+  element: Graphite
+  temperature: 73.25
+- id: ExteriorWall
+  location_x: -1
+  location_y: 2
+  element: Fossil
+  temperature: 73.25
+- id: ExteriorWall
+  location_x: 1
+  location_y: 2
+  element: Fossil
+  temperature: 73.25
