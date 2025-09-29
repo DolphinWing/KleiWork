@@ -20053,17 +20053,17 @@ msgstr "啟動！"
 #. STRINGS.BUILDINGS.PREFABS.TEMPORALTEAROPENER.SIDESCREEN.TOOLTIP
 msgctxt "STRINGS.BUILDINGS.PREFABS.TEMPORALTEAROPENER.SIDESCREEN.TOOLTIP"
 msgid "The big red button."
-msgstr "大顆紅色按鈕。"
+msgstr "巨大的紅色按鈕。"
 
 #. STRINGS.BUILDINGS.PREFABS.THERMALBLOCK.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.THERMALBLOCK.DESC"
 msgid "The thermal properties of construction materials determine their heat retention."
-msgstr "建築材料的屬性決定它們的保溫能力。"
+msgstr "建築材料的熱特性決定了其熱量保有程度。"
 
 #. STRINGS.BUILDINGS.PREFABS.THERMALBLOCK.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.THERMALBLOCK.EFFECT"
 msgid "Accelerates or buffers <link=\"HEAT\">Heat</link> dispersal based on the construction material used.\n\nHas a small area of effect."
-msgstr "基於使用的建材，加速或減緩<link=\"HEAT\">熱</link>散失。\n\n影響小區域。"
+msgstr "根據使用的建材，加速或緩衝<link=\"HEAT\">熱</link>散失。\n\n作用範圍較小。"
 
 #. STRINGS.BUILDINGS.PREFABS.THERMALBLOCK.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.THERMALBLOCK.NAME"
@@ -20073,12 +20073,12 @@ msgstr "<link=\"THERMALBLOCK\">散熱板</link>"
 #. STRINGS.BUILDINGS.PREFABS.TILE.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.TILE.DESC"
 msgid "Tile can be used to bridge gaps and get to unreachable areas."
-msgstr "磚塊可用於彌合間隙並到達無法到達的區域。"
+msgstr "磚塊能跨越空隙，前往原本無法抵達的區域。"
 
 #. STRINGS.BUILDINGS.PREFABS.TILE.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.TILE.EFFECT"
 msgid "Used to build the walls and floors of rooms.\n\nIncreases Duplicant runspeed."
-msgstr "可用來建造房間的牆壁與地板。\n\n增加複製人的移動速度。"
+msgstr "用於建造房間的牆壁與地板。\n\n提高複製人的跑速。"
 
 #. STRINGS.BUILDINGS.PREFABS.TILE.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.TILE.NAME"
