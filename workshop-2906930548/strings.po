@@ -4923,12 +4923,12 @@ msgstr "這個建築物最近發射了<style=\"KKeyword\">星際爆破彈</style
 #. STRINGS.BUILDING.STATUSITEMS.MISSILELAUNCHER_NOSURFACESIGHT.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.MISSILELAUNCHER_NOSURFACESIGHT.NAME"
 msgid "No Line of Sight"
-msgstr "沒有視野"
+msgstr "視線受阻"
 
 #. STRINGS.BUILDING.STATUSITEMS.MISSILELAUNCHER_NOSURFACESIGHT.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.MISSILELAUNCHER_NOSURFACESIGHT.TOOLTIP"
 msgid "This building has no view of space\n\nTo properly function, this building requires an unblocked view of space"
-msgstr "這個建築沒有太空視野\n\n為達正常運作，需要確保這個建築的太空視野暢通無阻"
+msgstr "這個建築無法觀測太空\n\n若要正常運作，此建築需要有暢通無阻的太空視野"
 
 #. STRINGS.BUILDING.STATUSITEMS.MISSILELAUNCHER_PARTIALLYBLOCKED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.MISSILELAUNCHER_PARTIALLYBLOCKED.NAME"
@@ -4938,7 +4938,7 @@ msgstr "視野受限"
 #. STRINGS.BUILDING.STATUSITEMS.MISSILELAUNCHER_PARTIALLYBLOCKED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.MISSILELAUNCHER_PARTIALLYBLOCKED.TOOLTIP"
 msgid "This building has a partially obstructed view of space\n\nTo properly function, this building requires an unblocked view of space"
-msgstr "這個建築部分太空視野受遮擋\n\n為達正常運作，需要確保這個建築的太空視野暢通無阻"
+msgstr "這個建築的太空視野受到部分遮蔽\n\n若要正常運作，此建築需要有暢通無阻的太空視野"
 
 #. STRINGS.BUILDING.STATUSITEMS.MISSINGFOUNDATION.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.MISSINGFOUNDATION.NAME"
@@ -4963,12 +4963,12 @@ msgstr "<link=\"GANTRY\">空橋</link>必須建在<link=\"COMMANDMODULE\">指揮
 #. STRINGS.BUILDING.STATUSITEMS.MISSINGREQUIREMENTS.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.MISSINGREQUIREMENTS.NAME"
 msgid "Missing Requirements"
-msgstr "缺少需求"
+msgstr "缺少必備條件"
 
 #. STRINGS.BUILDING.STATUSITEMS.MISSINGREQUIREMENTS.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.MISSINGREQUIREMENTS.TOOLTIP"
 msgid "There are some problems that need to be fixed before this building is operational"
-msgstr "這個建築在運作之前還有一些問題需要解決"
+msgstr "這個建築在運作之前還有若干問題需要排除"
 
 #. STRINGS.BUILDING.STATUSITEMS.MISSIONCONTROLASSISTINGROCKET.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.MISSIONCONTROLASSISTINGROCKET.NAME"
@@ -4978,7 +4978,7 @@ msgstr "引導信號：{0}"
 #. STRINGS.BUILDING.STATUSITEMS.MISSIONCONTROLASSISTINGROCKET.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.MISSIONCONTROLASSISTINGROCKET.TOOLTIP"
 msgid "Once transmission is complete, Mission Control will boost targeted rocket's speed"
-msgstr "一旦傳輸完成，任務控制站將可以提高目標火箭的速度"
+msgstr "一旦傳輸完成，任務控制站將會提升目標火箭的速度"
 
 #. STRINGS.BUILDING.STATUSITEMS.MISSIONCONTROLBOOSTED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.MISSIONCONTROLBOOSTED.NAME"
@@ -4988,7 +4988,7 @@ msgstr "任務控制速度提升：{0}"
 #. STRINGS.BUILDING.STATUSITEMS.MISSIONCONTROLBOOSTED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.MISSIONCONTROLBOOSTED.TOOLTIP"
 msgid "Mission Control has given this rocket a {0} speed boost\n\n{1} remaining"
-msgstr "任務控制站已為這艘火箭提供 {0} 的速度提升\n\n剩餘 {1}"
+msgstr "任務控制站已為這艘火箭提供 {0} 的速度提升\n\n剩餘時間：{1}"
 
 #. STRINGS.BUILDING.STATUSITEMS.MODULEGENERATORNOTPOWERED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.MODULEGENERATORNOTPOWERED.NAME"
@@ -5153,7 +5153,7 @@ msgstr "無輸送帶裝載機"
 #. STRINGS.BUILDING.STATUSITEMS.NEEDSOLIDIN.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NEEDSOLIDIN.TOOLTIP"
 msgid "Material cannot be fed onto this Conveyor system for transport\n\nEnter the <b>Shipping Tab</b> {Hotkey/Plan13} of the Build Menu to build and connect a <style=\"KKeyword\">Conveyor Loader</style>"
-msgstr "材料無法送進這條輸送帶軌道系統進行運送\n\n開啟<b>運輸</b> {Hotkey/Plan13} 的建造選單，建造並連接一個<style=\"KKeyword\">輸送帶裝載機</style>"
+msgstr "材料無法送入這條輸送帶軌道系統進行運輸\n\n開啟<b>運輸</b> {Hotkey/Plan13} 的建造選單，建造並連接一個<style=\"KKeyword\">輸送帶裝載機</style>"
 
 #. STRINGS.BUILDING.STATUSITEMS.NEEDSOLIDOUT.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NEEDSOLIDOUT.NAME"
@@ -5163,7 +5163,7 @@ msgstr "無輸送帶存儲箱"
 #. STRINGS.BUILDING.STATUSITEMS.NEEDSOLIDOUT.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NEEDSOLIDOUT.TOOLTIP"
 msgid "Material cannot be offloaded from this Conveyor system and will backup the rails\n\nEnter the <b>Shipping Tab</b> {Hotkey/Plan13} of the Build Menu to build and connect a <style=\"KKeyword\">Conveyor Receptacle</style>"
-msgstr "材料無法從這條輸送帶系統卸載，將會阻塞軌道\n\n開啟<b>運輸</b> {Hotkey/Plan13} 的建造選單，建造並連接一個<style=\"KKeyword\">輸送帶存儲箱</style>"
+msgstr "材料無法從這條輸送帶系統卸載，將會導致軌道堵塞\n\n開啟<b>運輸</b> {Hotkey/Plan13} 的建造選單，建造並連接一個<style=\"KKeyword\">輸送帶存儲箱</style>"
 
 #. STRINGS.BUILDING.STATUSITEMS.NETWORKQUALITY.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NETWORKQUALITY.NAME"
@@ -5173,7 +5173,7 @@ msgstr "探測系統品質：{TotalQuality}"
 #. STRINGS.BUILDING.STATUSITEMS.NETWORKQUALITY.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NETWORKQUALITY.TOOLTIP"
 msgid "This scanner network is scanning at <b>{TotalQuality}</b> effectiveness\n\nIt will detect incoming objects <b>{WorstTime}</b> to <b>{BestTime}</b> before they arrive\n\nBuild multiple <link=\"COMETDETECTOR\">Space Scanner</link>s to increase surface coverage and improve network quality\n\n    • Surface Coverage: <b>{Coverage}</b>"
-msgstr "探測網路正在以 <b>{TotalQuality}</b> 的效率進行掃描\n\n它將在來襲物體到達前的 <b>{WorstTime}</b>至 <b>{BestTime}</b>偵測到它們\n\n建造多個<link=\"COMETDETECTOR\">太空雷達</link>來增加地表覆蓋率並改進探測網路品質\n\n    • 地表覆蓋率：<b>{Coverage}</b>"
+msgstr "掃描網路正以 <b>{TotalQuality}</b> 的效率運行\n\n它會在來襲物體抵達前 <b>{WorstTime}</b>至 <b>{BestTime}</b>偵測到目標\n\n建造多個<link=\"COMETDETECTOR\">太空雷達</link>可提高地表覆蓋率，並改善網路品質\n\n    • 地表覆蓋率：<b>{Coverage}</b>"
 
 #. STRINGS.BUILDING.STATUSITEMS.NEUTRONIUMUNMINABLE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NEUTRONIUMUNMINABLE.NAME"
@@ -5403,7 +5403,7 @@ msgstr "未被控制"
 #. STRINGS.BUILDING.STATUSITEMS.NOROCKETRESTRICTION.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NOROCKETRESTRICTION.TOOLTIP"
 msgid "This building is not controlled by a <link=\"ROCKETCONTROLSTATION\">Rocket Control Station</link>"
-msgstr "火箭沒有被<link=\"ROCKETCONTROLSTATION\">火箭控制站</link>控制"
+msgstr "這個建築沒有被<link=\"ROCKETCONTROLSTATION\">火箭控制站</link>控制"
 
 #. STRINGS.BUILDING.STATUSITEMS.NOROCKETSTOMISSIONCONTROLBOOST.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NOROCKETSTOMISSIONCONTROLBOOST.NAME"
@@ -5413,7 +5413,7 @@ msgstr "範圍內沒有合適的火箭"
 #. STRINGS.BUILDING.STATUSITEMS.NOROCKETSTOMISSIONCONTROLBOOST.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NOROCKETSTOMISSIONCONTROLBOOST.TOOLTIP"
 msgid "Rockets must be mid-flight and not targeted by another Mission Control Station, or already boosted"
-msgstr "火箭必須在飛行中，且不是另一個任務控制站的目標，同時未被加速過"
+msgstr "火箭必須處於飛行狀態，未被其他任務控制站鎖定，且尚未獲得加速效果"
 
 #. STRINGS.BUILDING.STATUSITEMS.NOROCKETSTOMISSIONCONTROLCLUSTERBOOST.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NOROCKETSTOMISSIONCONTROLCLUSTERBOOST.NAME"
@@ -5423,7 +5423,7 @@ msgstr "範圍內沒有合適的火箭"
 #. STRINGS.BUILDING.STATUSITEMS.NOROCKETSTOMISSIONCONTROLCLUSTERBOOST.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NOROCKETSTOMISSIONCONTROLCLUSTERBOOST.TOOLTIP"
 msgid "Rockets must be mid-flight, within {0} tiles, and not targeted by another Mission Control Station or already boosted"
-msgstr "火箭必須在飛行中，{0} 格範圍內，不是另一個任務控制站的目標，而且未被加速過"
+msgstr "火箭必須處於飛行狀態，位於 {0} 格範圍內，未被其他任務控制站鎖定，且尚未獲得加速效果"
 
 #. STRINGS.BUILDING.STATUSITEMS.NOSTORAGEFILTERSET.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NOSTORAGEFILTERSET.NAME"
@@ -5438,22 +5438,22 @@ msgstr "這個建築未指定要儲存的資源"
 #. STRINGS.BUILDING.STATUSITEMS.NOSUITMARKER.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NOSUITMARKER.NAME"
 msgid "No Checkpoint"
-msgstr "沒有檢查點"
+msgstr "缺少檢查點"
 
 #. STRINGS.BUILDING.STATUSITEMS.NOSUITMARKER.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NOSUITMARKER.TOOLTIP"
 msgid "Docks must be placed beside a <link=\"CHECKPOINT\">Duplicant Checkpoint</link>, opposite the side the checkpoint faces"
-msgstr "存放櫃必需放在<link=\"CHECKPOINT\">複製人檢查點</link>的旁邊，與檢查點箭頭所指的方向相反"
+msgstr "存放櫃必須緊鄰<link=\"CHECKPOINT\">複製人檢查點</link>設置，並與檢查點箭頭指示的方向相對"
 
 #. STRINGS.BUILDING.STATUSITEMS.NOSURFACESIGHT.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NOSURFACESIGHT.NAME"
 msgid "No Line of Sight"
-msgstr "沒有視野"
+msgstr "視線受阻"
 
 #. STRINGS.BUILDING.STATUSITEMS.NOSURFACESIGHT.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NOSURFACESIGHT.TOOLTIP"
 msgid "This building has no view of space\n\nTo properly function, this building requires an unblocked view of space"
-msgstr "這個建築沒有太空的視野\n\n要正常運作，需要這個建築的太空視野暢通無阻"
+msgstr "這個建築無法觀測太空\n\n若要正常運作，此建築需要有暢通無阻的太空視野"
 
 #. STRINGS.BUILDING.STATUSITEMS.NOTENOUGHPOWER.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NOTENOUGHPOWER.NAME"
@@ -5638,7 +5638,7 @@ msgstr "受損：超載"
 #. STRINGS.BUILDING.STATUSITEMS.OVERLOADED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.OVERLOADED.TOOLTIP"
 msgid "This <style=\"KKeyword\">Wire</style> is taking damage because there are too many buildings pulling <style=\"KKeyword\">Power</style> from this circuit\n\nSplit this <style=\"KKeyword\">Power</style> circuit into multiple circuits, or use higher quality <style=\"KKeyword\">Wires</style> to prevent overloading"
-msgstr "這條<style=\"KKeyword\">電線</style>正在受損，因為有太多電器使用同個線路，而使<style=\"KKeyword\">電力</style>超載\n\n將<style=\"KKeyword\">電線</style>拆成多個部分，或使用較高品質的<style=\"KKeyword\">電線</style>來避免超載"
+msgstr "這條<style=\"KKeyword\">電線</style>正在受損，因為有太多建築使用同個線路，而使<style=\"KKeyword\">電力</style>超載\n\n將<style=\"KKeyword\">電線</style>拆成多個部分，或使用較高品質的<style=\"KKeyword\">電線</style>來避免超載"
 
 #. STRINGS.BUILDING.STATUSITEMS.PASSENGERMODULEUNREACHABLE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.PASSENGERMODULEUNREACHABLE.NAME"
@@ -5678,12 +5678,12 @@ msgstr "複製人有空時會拆除建築"
 #. STRINGS.BUILDING.STATUSITEMS.PENDINGDEMOLITION.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.PENDINGDEMOLITION.NAME"
 msgid "Demolition Errand"
-msgstr "拆除遺跡任務"
+msgstr "拆毀遺跡任務"
 
 #. STRINGS.BUILDING.STATUSITEMS.PENDINGDEMOLITION.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.PENDINGDEMOLITION.TOOLTIP"
 msgid "Object will be permanently demolished once a Duplicant is available"
-msgstr "一旦複製人有空，物件將會被永久移除"
+msgstr "一旦複製人有空，物件將會被永久拆毀"
 
 #. STRINGS.BUILDING.STATUSITEMS.PENDINGFISH.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.PENDINGFISH.NAME"
@@ -5793,12 +5793,12 @@ msgstr "目前的<style=\"KKeyword\">溫度</style>有使管道熔化的危險"
 #. STRINGS.BUILDING.STATUSITEMS.PLAYERCONTROLLEDTOGGLESIDESCREEN.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.PLAYERCONTROLLEDTOGGLESIDESCREEN.NAME"
 msgid "Pending Toggle on Unpause"
-msgstr "未暫停等待切換"
+msgstr "等待恢復執行"
 
 #. STRINGS.BUILDING.STATUSITEMS.PLAYERCONTROLLEDTOGGLESIDESCREEN.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.PLAYERCONTROLLEDTOGGLESIDESCREEN.TOOLTIP"
 msgid "This will be toggled when time is unpaused"
-msgstr "時間未暫停時會被切換"
+msgstr "將在遊戲時間恢復後切換狀態"
 
 #. STRINGS.BUILDING.STATUSITEMS.POWERBANKCHARGERINPROGRESS.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.POWERBANKCHARGERINPROGRESS.NAME"
@@ -5848,7 +5848,7 @@ msgstr "平均流量：{FlowRate}"
 #. STRINGS.BUILDING.STATUSITEMS.PUMPINGLIQUIDORGAS.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.PUMPINGLIQUIDORGAS.TOOLTIP"
 msgid "This building is pumping an average volume of <style=\"produced\">{FlowRate}</style>"
-msgstr "這個建築抽取的平均量為 <style=\"produced\">{FlowRate}</style>"
+msgstr "這個建築平均的抽取量為 <style=\"produced\">{FlowRate}</style>"
 
 #. STRINGS.BUILDING.STATUSITEMS.PUMPINGSTATION.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.PUMPINGSTATION.NAME"
@@ -5883,12 +5883,12 @@ msgstr "未設定運送目的地"
 #. STRINGS.BUILDING.STATUSITEMS.RAILGUN_PATH_NOT_CLEAR.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.RAILGUN_PATH_NOT_CLEAR.NAME"
 msgid "Launch Path Blocked"
-msgstr "發射路徑被阻擋"
+msgstr "發射路徑受阻"
 
 #. STRINGS.BUILDING.STATUSITEMS.RAILGUN_PATH_NOT_CLEAR.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.RAILGUN_PATH_NOT_CLEAR.TOOLTIP"
 msgid "There are obstructions in the launch trajectory of this <link=\"RAILGUN\">Interplanetary Launcher</link>\n\nThis launcher requires a clear path to launch payloads"
-msgstr "這個<link=\"RAILGUN\">行星軌道炮</link>的發射軌跡上存在一些障礙物\n\n需要先清除發射器路徑上的障礙物，才能發射載貨"
+msgstr "這個<link=\"RAILGUN\">行星軌道炮</link>的發射軌跡上存在障礙物\n\n若要發射負載，此發射器需要暢通無阻的路徑"
 
 #. STRINGS.BUILDING.STATUSITEMS.RAILGUNCOOLDOWN.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.RAILGUNCOOLDOWN.NAME"
@@ -5898,7 +5898,7 @@ msgstr "清理軌道：{timeleft}"
 #. STRINGS.BUILDING.STATUSITEMS.RAILGUNCOOLDOWN.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.RAILGUNCOOLDOWN.TOOLTIP"
 msgid "This building automatically performs routine maintenance every {x} launches"
-msgstr "這個建築在每 {x} 次發射後都會進行維護"
+msgstr "這個建築會在每 {x} 次發射後，自動進行例行性維護"
 
 #. STRINGS.BUILDING.STATUSITEMS.RAILGUNPAYLOADNEEDSEMPTYING.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.RAILGUNPAYLOADNEEDSEMPTYING.NAME"
@@ -5928,17 +5928,17 @@ msgstr "反應爐熔毀"
 #. STRINGS.BUILDING.STATUSITEMS.REACTORMELTDOWN.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.REACTORMELTDOWN.TOOLTIP"
 msgid "This reactor is spilling dangerous radioactive waste and cannot be stopped"
-msgstr "反應爐溢出危險的輻射廢棄物且無法停止"
+msgstr "反應爐正在溢出危險的放射性廢料，且無法停止"
 
 #. STRINGS.BUILDING.STATUSITEMS.REACTORREFUELDISABLED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.REACTORREFUELDISABLED.NAME"
 msgid "Refuel Disabled"
-msgstr "停用補充燃料"
+msgstr "停用再裝填"
 
 #. STRINGS.BUILDING.STATUSITEMS.REACTORREFUELDISABLED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.REACTORREFUELDISABLED.TOOLTIP"
 msgid "This building will not be refueled once its active fuel has been consumed"
-msgstr "這個建築無法補充燃料，一經啟動需等燃料耗盡"
+msgstr "一旦這個建築的主動燃料耗盡，它將不會被再次裝填"
 
 #. STRINGS.BUILDING.STATUSITEMS.RELEASING_PRESSURE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.RELEASING_PRESSURE.NAME"
@@ -5948,7 +5948,7 @@ msgstr "壓力釋放"
 #. STRINGS.BUILDING.STATUSITEMS.RELEASING_PRESSURE.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.RELEASING_PRESSURE.TOOLTIP"
 msgid "Pressure buildup is being safely released"
-msgstr "積存的壓力正在安全釋放"
+msgstr "累積的壓力正在安全地釋放"
 
 #. STRINGS.BUILDING.STATUSITEMS.REMOTEWORKERDEPOT.MAKINGWORKER.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.REMOTEWORKERDEPOT.MAKINGWORKER.NAME"
@@ -5968,7 +5968,7 @@ msgstr "未分配基站"
 #. STRINGS.BUILDING.STATUSITEMS.REMOTEWORKTERMINAL.NODOCK.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.REMOTEWORKTERMINAL.NODOCK.TOOLTIP"
 msgid "This building must be assigned a <style=\"KKeyword\">Remote Worker Dock</style> in order to function"
-msgstr "這個建築必須分配一個<style=\"KKeyword\">遙控機器人基站</style>才能運作"
+msgstr "這個建築必須指派一個<style=\"KKeyword\">遙控機器人基站</style>才能開始運作"
 
 #. STRINGS.BUILDING.STATUSITEMS.REQUIRESSKILLPERK.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.REQUIRESSKILLPERK.NAME"
@@ -6003,7 +6003,7 @@ msgstr "閒置"
 #. STRINGS.BUILDING.STATUSITEMS.ROCKET_PORT_IDLE.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.ROCKET_PORT_IDLE.TOOLTIP"
 msgid "This port is idle because there is no rocket on the connected <style=\"KKeyword\">Rocket Platform</style>"
-msgstr "這座貨港閒置，因為沒有火箭停靠此<style=\"KKeyword\">火箭平台</style>"
+msgstr "這座貨港閒置，因為沒有火箭停駐於連接的<style=\"KKeyword\">火箭平台</style>"
 
 #. STRINGS.BUILDING.STATUSITEMS.ROCKET_PORT_LOADED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.ROCKET_PORT_LOADED.NAME"
@@ -6013,7 +6013,7 @@ msgstr "貨物轉移完成"
 #. STRINGS.BUILDING.STATUSITEMS.ROCKET_PORT_LOADED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.ROCKET_PORT_LOADED.TOOLTIP"
 msgid "The connected rocket has either reached max capacity for this resource type, or lacks appropriate storage modules"
-msgstr "連接的火箭這類資源的存量達到最大，或是缺少適合的儲存模組"
+msgstr "連接的火箭對於這類資源的存量已達上限，或是缺少適當的儲存模組"
 
 #. STRINGS.BUILDING.STATUSITEMS.ROCKET_PORT_LOADING.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.ROCKET_PORT_LOADING.NAME"
@@ -6103,7 +6103,7 @@ msgstr "操作：受限制"
 #. STRINGS.BUILDING.STATUSITEMS.ROCKETRESTRICTIONACTIVE.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.ROCKETRESTRICTIONACTIVE.TOOLTIP"
 msgid "This building cannot be operated while restricted, though it can be filled\n\nControlled by a <link=\"ROCKETCONTROLSTATION\">Rocket Control Station</link>"
-msgstr "這個建築在受限制時無法操作，但可以填入物品\n\n透過<link=\"ROCKETCONTROLSTATION\">火箭控制站</link>控制"
+msgstr "這個建築在受到限制時無法運作，但仍可裝載物資\n\n透過<link=\"ROCKETCONTROLSTATION\">火箭控制站</link>控制"
 
 #. STRINGS.BUILDING.STATUSITEMS.ROCKETRESTRICTIONINACTIVE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.ROCKETRESTRICTIONINACTIVE.NAME"
@@ -6123,7 +6123,7 @@ msgstr "擱淺"
 #. STRINGS.BUILDING.STATUSITEMS.ROCKETSTRANDED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.ROCKETSTRANDED.TOOLTIP"
 msgid "This rocket has run out of fuel and cannot move"
-msgstr "這艘火箭用完燃料無法移動"
+msgstr "這艘火箭燃料耗盡，無法移動"
 
 #. STRINGS.BUILDING.STATUSITEMS.SKILL_POINTS_AVAILABLE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SKILL_POINTS_AVAILABLE.NAME"
@@ -6153,27 +6153,27 @@ msgstr "輸送帶軌道阻塞"
 #. STRINGS.BUILDING.STATUSITEMS.SOLIDCONDUITBLOCKEDMULTIPLES.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SOLIDCONDUITBLOCKEDMULTIPLES.TOOLTIP"
 msgid "Output <style=\"KKeyword\">Conveyor Rail</style> is blocked"
-msgstr "輸出<style=\"KKeyword\">輸送帶軌道</style>阻塞"
+msgstr "輸出端的<style=\"KKeyword\">輸送帶軌道</style>已阻塞"
 
 #. STRINGS.BUILDING.STATUSITEMS.SOLIDPIPEOBSTRUCTED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SOLIDPIPEOBSTRUCTED.NAME"
 msgid "Conveyor Rail Backup"
-msgstr "輸送帶軌道阻塞"
+msgstr "輸送帶軌道堵塞"
 
 #. STRINGS.BUILDING.STATUSITEMS.SOLIDPIPEOBSTRUCTED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SOLIDPIPEOBSTRUCTED.TOOLTIP"
 msgid "This <style=\"KKeyword\">Conveyor Rail</style> cannot carry anymore material\n\nRemove material from the <style=\"KKeyword\">Conveyor Receptacle</style> to free space for more objects"
-msgstr "<style=\"KKeyword\">輸送帶軌道</style>無法搬運更多材料\n\n從<style=\"KKeyword\">輸送帶存儲箱</style>清出空間給更多物品"
+msgstr "<style=\"KKeyword\">輸送帶軌道</style>無法再承載更多材料\n\n從<style=\"KKeyword\">輸送帶存儲箱</style>移除材料，以騰出更多空間"
 
 #. STRINGS.BUILDING.STATUSITEMS.SPACE_VISIBILITY_NONE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SPACE_VISIBILITY_NONE.NAME"
 msgid "No Line of Sight"
-msgstr "沒有視野"
+msgstr "視線受阻"
 
 #. STRINGS.BUILDING.STATUSITEMS.SPACE_VISIBILITY_NONE.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SPACE_VISIBILITY_NONE.TOOLTIP"
 msgid "This building has no view of space\n\nTo properly function, this building requires an unblocked view of space\n    • Efficiency: <b>{VISIBILITY}</b>"
-msgstr "這個建築沒有太空視野\n\n需要確保這個建築的太空視野暢通無阻才能正常工作\n    • 效率：<b>{VISIBILITY}</b>"
+msgstr "這個建築無法觀測太空\n\n若要正常運作，此建築需要有暢通無阻的太空視野\n    • 效率：<b>{VISIBILITY}</b>"
 
 #. STRINGS.BUILDING.STATUSITEMS.SPACE_VISIBILITY_REDUCED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SPACE_VISIBILITY_REDUCED.NAME"
@@ -12883,12 +12883,12 @@ msgstr "<link=\"LARGEELECTROBANKDISCHARGER\">大型放電器</link>"
 #. STRINGS.BUILDINGS.PREFABS.LAUNCHPAD.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LAUNCHPAD.DESC"
 msgid "A platform from which rockets can be launched and on which they can land."
-msgstr "一艘火箭可以升空與降落的平台。"
+msgstr "供火箭升空及降落的平台。"
 
 #. STRINGS.BUILDINGS.PREFABS.LAUNCHPAD.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LAUNCHPAD.EFFECT"
 msgid "Precursor to construction of all other Rocket modules.\n\nAllows Rockets to launch from or land on the host Planetoid.\n\nAutomatically links up to <link=\"MODULARLAUNCHPADPORTSOLID\">Rocket Port</link><link=\"MODULARLAUNCHPADPORTSOLID\">s</link> built to either side of the platform."
-msgstr "可以建造火箭所有模組的建築。\n\n讓火箭可以在主星上發射或著陸。\n\n自動連接到建在平台任一側的<link=\"MODULARLAUNCHPADPORTSOLID\">火箭貨港</link>。"
+msgstr "是建造所有其他火箭模組的先決條件。\n\n讓火箭可以從所屬的小行星上發射或著陸。\n\n會自動連線到建在平台兩側的<link=\"MODULARLAUNCHPADPORTSOLID\">火箭貨港</link>。"
 
 #. STRINGS.BUILDINGS.PREFABS.LAUNCHPAD.LOGIC_PORT_LANDED_ROCKET
 msgctxt "STRINGS.BUILDINGS.PREFABS.LAUNCHPAD.LOGIC_PORT_LANDED_ROCKET"
@@ -12943,7 +12943,7 @@ msgstr "<link=\"LAUNCHPAD\">火箭平台</link>"
 #. STRINGS.BUILDINGS.PREFABS.LEADSUITLOCKER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LEADSUITLOCKER.DESC"
 msgid "Lead suit docks can refill lead suits with air and empty them of waste."
-msgstr "輻射防護衣存放櫃可以重新補充輻射防護衣的氧氣與清理其中的廢棄物。"
+msgstr "輻射防護衣存放櫃可以重新補充輻射防護衣的氧氣並排出廢料。"
 
 #. STRINGS.BUILDINGS.PREFABS.LEADSUITLOCKER.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LEADSUITLOCKER.EFFECT"
@@ -65173,7 +65173,7 @@ msgstr "<link=\"DURABLELIFESUPPORT\">耐用的維生裝置</link>"
 #. STRINGS.RESEARCH.TECHS.ENGINESI.DESC
 msgctxt "STRINGS.RESEARCH.TECHS.ENGINESI.DESC"
 msgid "Rockets that fly further, longer."
-msgstr "火箭飛的更遠、更久。"
+msgstr "火箭飛得更遠、更久。"
 
 #. STRINGS.RESEARCH.TECHS.ENGINESI.NAME
 msgctxt "STRINGS.RESEARCH.TECHS.ENGINESI.NAME"
