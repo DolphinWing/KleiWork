@@ -33968,7 +33968,7 @@ msgstr "枯萎懲罰"
 #. STRINGS.CREATURES.SPECIES.VINEBRANCH.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.VINEBRANCH.DESC"
 msgid "Ovagro Vines are invasive plants that produce edible <link=\"VINEFRUIT\">Ovagro Fig</link>.\n\nIf a vine is cut off from its <link=\"VINEMOTHER\">Ovagro Node</link>, it will perish."
-msgstr "蔓殖藤是一種侵略性植物，能產出可食用的<link=\"VINEFRUIT\">蔓殖燈籠果</link>。\n\n如果切斷藤蔓與<link=\"VINEMOTHER\">蔓殖母藤</link>的連線，藤蔓就會死亡。"
+msgstr "蔓殖藤是一種侵略性植物，能結出可食用的<link=\"VINEFRUIT\">蔓殖燈籠果</link>。\n\n如果藤蔓與<link=\"VINEMOTHER\">蔓殖母藤</link>的聯繫被切斷，藤蔓就會枯萎死亡。"
 
 #. STRINGS.CREATURES.SPECIES.VINEBRANCH.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.VINEBRANCH.NAME"
@@ -33978,7 +33978,7 @@ msgstr "<link=\"VINEMOTHER\">蔓殖藤</link>"
 #. STRINGS.CREATURES.SPECIES.VINEMOTHER.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.VINEMOTHER.DESC"
 msgid "Ovagro Nodes are trellis plants that spread onto nearby available surfaces.\n\nA single <link=\"VINEMOTHER\">Ovagro Node</link> can support several <link=\"VINEMOTHER\">Ovagro Vines</link> without any increase in its <link=\"WATER\">Water</link> requirements."
-msgstr "蔓殖母藤是一種蔓棚植物，會侵佔附近的可用表面。\n\n單個<link=\"VINEMOTHER\">蔓殖母藤</link>可在對<link=\"WATER\">水</link>需求不變的情況下維持多條<link=\"VINEMOTHER\">蔓殖藤</link>。"
+msgstr "蔓殖母藤是一種蔓棚植物，會侵佔附近的可用表面。\n\n單個<link=\"VINEMOTHER\">蔓殖母藤</link>能供養多條<link=\"VINEMOTHER\">蔓殖藤</link>，而不會增加它對<link=\"WATER\">水</link>的需求量。"
 
 #. STRINGS.CREATURES.SPECIES.VINEMOTHER.DOMESTICATEDDESC
 msgctxt "STRINGS.CREATURES.SPECIES.VINEMOTHER.DOMESTICATEDDESC"
@@ -44278,7 +44278,7 @@ msgstr "<link=\"BIONICSC1\">原理示意</link>"
 #. STRINGS.DUPLICANTS.ROLES.BIONICS_C2.DESCRIPTION
 msgctxt "STRINGS.DUPLICANTS.ROLES.BIONICS_C2.DESCRIPTION"
 msgid "Allows Bionic Duplicants to install an additional booster and increase their runspeed."
-msgstr "允許仿生複製人安裝額外的加速器，並提高移動速度。"
+msgstr "允許仿生複製人能安裝額外的加速器，藉此提升奔跑速度。"
 
 #. STRINGS.DUPLICANTS.ROLES.BIONICS_C2.NAME
 msgctxt "STRINGS.DUPLICANTS.ROLES.BIONICS_C2.NAME"
@@ -44288,7 +44288,7 @@ msgstr "<link=\"BIONICSC2\">進階原理</link>"
 #. STRINGS.DUPLICANTS.ROLES.BIONICS_C3.DESCRIPTION
 msgctxt "STRINGS.DUPLICANTS.ROLES.BIONICS_C3.DESCRIPTION"
 msgid "Increases <link=\"ELECTROBANK\">Power Bank</link> storage capacity to maximize work time between replacements."
-msgstr "增加<link=\"ELECTROBANK\">行動電源</link>儲存容量以最大限度地延長更換之間的工作時間。"
+msgstr "提高<link=\"ELECTROBANK\">行動電源</link>的儲存容量，大幅延長每次更換前的作業時間。"
 
 #. STRINGS.DUPLICANTS.ROLES.BIONICS_C3.NAME
 msgctxt "STRINGS.DUPLICANTS.ROLES.BIONICS_C3.NAME"
@@ -44673,7 +44673,7 @@ msgstr "<link=\"SPACERESEARCH\">資料分析研究員</link>"
 #. STRINGS.DUPLICANTS.ROLES.SUIT_DURABILITY.DESCRIPTION
 msgctxt "STRINGS.DUPLICANTS.ROLES.SUIT_DURABILITY.DESCRIPTION"
 msgid "Suits equipped by this Duplicant lose durability 25% slower."
-msgstr "降低這名複製人使用太空衣時的耐久消耗速度 25%。"
+msgstr "這名複製人裝備的太空衣，耐久損耗速度減慢 25%。"
 
 #. STRINGS.DUPLICANTS.ROLES.SUIT_DURABILITY.NAME
 msgctxt "STRINGS.DUPLICANTS.ROLES.SUIT_DURABILITY.NAME"
@@ -44683,7 +44683,7 @@ msgstr "<link=\"SUITDURABILITY\">裝備耐久度訓練</link>"
 #. STRINGS.DUPLICANTS.ROLES.SUIT_EXPERT.DESCRIPTION
 msgctxt "STRINGS.DUPLICANTS.ROLES.SUIT_EXPERT.DESCRIPTION"
 msgid "Eliminates the runspeed loss experienced while wearing exosuits"
-msgstr "消除穿著太空衣對移動速度的處罰"
+msgstr "消除穿著太空衣時所導致的移動速度降低"
 
 #. STRINGS.DUPLICANTS.ROLES.SUIT_EXPERT.NAME
 msgctxt "STRINGS.DUPLICANTS.ROLES.SUIT_EXPERT.NAME"
@@ -44693,12 +44693,12 @@ msgstr "<link=\"SUITS1\">太空衣訓練</link>"
 #. STRINGS.DUPLICANTS.ROLES.USELESSSKILL.DESCRIPTION
 msgctxt "STRINGS.DUPLICANTS.ROLES.USELESSSKILL.DESCRIPTION"
 msgid "This skill doesn't really do anything right now."
-msgstr "這個技能目前沒有什麼作用。"
+msgstr "這個技能目前暫時沒有作用。"
 
 #. STRINGS.DUPLICANTS.ROLES.USELESSSKILL.NAME
 msgctxt "STRINGS.DUPLICANTS.ROLES.USELESSSKILL.NAME"
 msgid "W.I.P. Skill"
-msgstr "未定技能"
+msgstr "開發中技能"
 
 #. STRINGS.DUPLICANTS.SKILLGROUPS.ART.NAME
 msgctxt "STRINGS.DUPLICANTS.SKILLGROUPS.ART.NAME"
@@ -44773,7 +44773,7 @@ msgstr "黏渣"
 #. STRINGS.DUPLICANTS.STATS.BIONICGUNK.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATS.BIONICGUNK.TOOLTIP"
 msgid "Bionic Duplicants become <style=\"KKeyword\">Stressed</style> when too much <style=\"KKeyword\">Gunk</style> builds up in their bionic parts\n\nRegular visits to the <style=\"KKeyword\">Gunk Extractor</style> are required"
-msgstr "當仿生部件產生的<style=\"KKeyword\">黏渣</style>過多時，仿生複製人就會感到<style=\"KKeyword\">壓力</style>\n\n需要定期光顧<style=\"KKeyword\">黏渣提取器</style>"
+msgstr "當仿生部件堆積過多的<style=\"KKeyword\">黏渣</style>時，仿生複製人會累積<style=\"KKeyword\">壓力</style>\n\n需要定期使用<style=\"KKeyword\">黏渣提取器</style>進行清理"
 
 #. STRINGS.DUPLICANTS.STATS.BIONICINTERNALBATTERY.NAME
 msgctxt "STRINGS.DUPLICANTS.STATS.BIONICINTERNALBATTERY.NAME"
@@ -44783,7 +44783,7 @@ msgstr "行動電源"
 #. STRINGS.DUPLICANTS.STATS.BIONICINTERNALBATTERY.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATS.BIONICINTERNALBATTERY.TOOLTIP"
 msgid "A Bionic Duplicant with zero remaining <style=\"KKeyword\">Power</style> will become incapacitated until replacement <style=\"KKeyword\">Power Banks</style> are installed"
-msgstr "剩餘<style=\"KKeyword\">電力</style>為零的仿生複製人在安裝替代用<style=\"KKeyword\">行動電源</style>前會停止運作"
+msgstr "當仿生複製人的剩餘<style=\"KKeyword\">電力</style>歸零時，將會停止運作，直到更換<style=\"KKeyword\">行動電源</style>為止"
 
 #. STRINGS.DUPLICANTS.STATS.BIONICOIL.NAME
 msgctxt "STRINGS.DUPLICANTS.STATS.BIONICOIL.NAME"
@@ -44793,7 +44793,7 @@ msgstr "齒輪油"
 #. STRINGS.DUPLICANTS.STATS.BIONICOIL.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATS.BIONICOIL.TOOLTIP"
 msgid "Bionic Duplicants will slow down significantly when <style=\"KKeyword\">Gear Oil</style> levels reach zero\n\nThey can oil their joints by visiting a <style=\"KKeyword\">Lubrication Station</style> or using <style=\"KKeyword\">Gear Balm</style> "
-msgstr "當<style=\"KKeyword\">齒輪油</style>降為零時，仿生複製人會大幅減緩動作\n\n他們可以拜訪<style=\"KKeyword\">潤滑站</style>或<style=\"KKeyword\">齒輪膏</style>潤滑他們的關節"
+msgstr "當<style=\"KKeyword\">齒輪油</style>存量歸零時，仿生複製人的移動速度將會大幅降低\n\n他們可以藉由<style=\"KKeyword\">潤滑站</style>或<style=\"KKeyword\">齒輪膏</style>來為關節進行潤滑"
 
 #. STRINGS.DUPLICANTS.STATS.BIONICOXYGENTANK.NAME
 msgctxt "STRINGS.DUPLICANTS.STATS.BIONICOXYGENTANK.NAME"
@@ -44838,7 +44838,7 @@ msgstr "呼吸"
 #. STRINGS.DUPLICANTS.STATS.BREATH.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATS.BREATH.TOOLTIP"
 msgid "A Duplicant with zero remaining <style=\"KKeyword\">Breath</style> will die immediately"
-msgstr "複製人若剩餘<style=\"KKeyword\">氧氣</style>量為零，將會立即死亡。"
+msgstr "當複製人的<style=\"KKeyword\">氧氣</style>存量歸零時，將會立即死亡。"
 
 #. STRINGS.DUPLICANTS.STATS.CALORIES.NAME
 msgctxt "STRINGS.DUPLICANTS.STATS.CALORIES.NAME"
@@ -44898,7 +44898,7 @@ msgstr "生命值"
 #. STRINGS.DUPLICANTS.STATS.HITPOINTS.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATS.HITPOINTS.TOOLTIP"
 msgid "When Duplicants reach zero <style=\"KKeyword\">Health</style> they become incapacitated and require rescuing\n\nWhen critters reach zero <style=\"KKeyword\">Health</style>, they will die immediately"
-msgstr "當複製人的<style=\"KKeyword\">生命值</style>降到零時，會變成沒有行為能力並且需要治療\n\n當小動物的<style=\"KKeyword\">生命值</style>降到零時，牠們會立即死亡"
+msgstr "當複製人的<style=\"KKeyword\">生命值</style>歸零時，將會失去行為能力並需要救援\n\n當小動物的<style=\"KKeyword\">生命值</style>歸零時，牠們會立即死亡"
 
 #. STRINGS.DUPLICANTS.STATS.RADIATIONBALANCE.CURRENT_EXPOSURE
 msgctxt "STRINGS.DUPLICANTS.STATS.RADIATIONBALANCE.CURRENT_EXPOSURE"
@@ -44943,7 +44943,7 @@ msgstr "耐力"
 #. STRINGS.DUPLICANTS.STATS.STAMINA.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATS.STAMINA.TOOLTIP"
 msgid "Duplicants will pass out from fatigue when <style=\"KKeyword\">Stamina</style> reaches zero"
-msgstr "當複製人的<style=\"KKeyword\">耐力</style>變成 0 時會累倒"
+msgstr "當複製人的<style=\"KKeyword\">耐力</style>歸零時，將會疲勞昏倒"
 
 #. STRINGS.DUPLICANTS.STATS.STRESS.NAME
 msgctxt "STRINGS.DUPLICANTS.STATS.STRESS.NAME"
@@ -44953,7 +44953,7 @@ msgstr "壓力"
 #. STRINGS.DUPLICANTS.STATS.STRESS.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATS.STRESS.TOOLTIP"
 msgid "Duplicants exhibit their Stress Reactions at one hundred percent <style=\"KKeyword\">Stress</style>"
-msgstr "複製人在<style=\"KKeyword\">壓力</style>達 100% 時，會表現出他們的壓力反應"
+msgstr "複製人在<style=\"KKeyword\">壓力</style>達到百分之百時，就會展現他們的壓力反應"
 
 #. STRINGS.DUPLICANTS.STATS.SUBJECTS.CREATURE
 msgctxt "STRINGS.DUPLICANTS.STATS.SUBJECTS.CREATURE"
@@ -45023,7 +45023,7 @@ msgstr "樹幹健康度"
 #. STRINGS.DUPLICANTS.STATS.TRUNKHEALTH.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATS.TRUNKHEALTH.TOOLTIP"
 msgid "Tree branches will die if they do not have a healthy trunk to grow from"
-msgstr "如果沒有健康的樹幹，樹枝會枯死"
+msgstr "樹枝若沒有健康的樹幹支撐生長，就會枯死"
 
 #. STRINGS.DUPLICANTS.STATS.VINEMOTHERHEALTH.NAME
 msgctxt "STRINGS.DUPLICANTS.STATS.VINEMOTHERHEALTH.NAME"
@@ -45033,7 +45033,7 @@ msgstr "母藤健康"
 #. STRINGS.DUPLICANTS.STATS.VINEMOTHERHEALTH.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATS.VINEMOTHERHEALTH.TOOLTIP"
 msgid "Vines cannot grow if they do not have a healthy node to grow from"
-msgstr "如果沒有健康的母藤，藤蔓就會死亡"
+msgstr "藤蔓若沒有健康的母藤支撐生長，將無法繼續生長"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.ANALYZINGARTIFACT.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.ANALYZINGARTIFACT.NAME"
@@ -45053,7 +45053,7 @@ msgstr "分析植物基因"
 #. STRINGS.DUPLICANTS.STATUSITEMS.ANALYZINGGENES.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.ANALYZINGGENES.TOOLTIP"
 msgid "This Duplicant is peering deep into the genetic code of an odd seed"
-msgstr "這名複製人正在深入研究一個奇怪種子的遺傳密碼"
+msgstr "這名複製人正在深入探查一個奇怪種子的遺傳密碼"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.ARMINGTRAP.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.ARMINGTRAP.NAME"
@@ -45183,7 +45183,7 @@ msgstr "程式化微晶片： {0}"
 #. STRINGS.DUPLICANTS.STATUSITEMS.BIONICMICROCHIPGENERATION.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.BIONICMICROCHIPGENERATION.TOOLTIP"
 msgid "This Duplicant is programming a microchip for use in <style=\"KKeyword\">Booster</style> production\n\nBionic Duplicants will program microchips while defragmenting\n\nThey will produce 1 microchip every {0}"
-msgstr "這名複製人正在對微晶片進行程式化，使其用於<style=\"KKeyword\">加速器</style>生產\n\n生複製人將在重組時程式化微晶片\n\n他們將會每隔 {0}生產 1 個微晶片"
+msgstr "這名複製人正在對微晶片進行程式化，使其用於<style=\"KKeyword\">加速器</style>生產\n\n仿生複製人將在重組期間程式化微晶片\n\n他們將會每隔 {0}生產 1 個微晶片"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.BIONICOFFLINEINCAPACITATED.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.BIONICOFFLINEINCAPACITATED.NAME"
@@ -45198,12 +45198,12 @@ msgstr "仿生複製人喪失行動能力"
 #. STRINGS.DUPLICANTS.STATUSITEMS.BIONICOFFLINEINCAPACITATED.NOTIFICATION_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.BIONICOFFLINEINCAPACITATED.NOTIFICATION_TOOLTIP"
 msgid "These Bionic Duplicants are non-functional.\n\nA charged <style=\"KKeyword\">Power Bank</style> and full reboot by a skilled Duplicant are required for rescue:"
-msgstr "這些仿生複製人無法運作。\n\n需要充飽的<style=\"KKeyword\">行動電源</style>以及有相應技能的複製人對其完全重啟才能救援："
+msgstr "這些仿生複製人無法運作。\n\n需要充飽的<style=\"KKeyword\">行動電源</style>，並由有相應技能的複製人對其進行完全重啟，才能進行救援："
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.BIONICOFFLINEINCAPACITATED.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.BIONICOFFLINEINCAPACITATED.TOOLTIP"
 msgid "This Duplicant is non-functional!\n\nDeliver a charged <style=\"KKeyword\">Power Bank</style> and reboot their systems to revive them"
-msgstr "這名複製人無法運作。\n\n運送充飽的<style=\"KKeyword\">行動電源</style>並重啟系統從而將其恢復"
+msgstr "這名複製人無法運作。\n\n運送充飽的<style=\"KKeyword\">行動電源</style>並重啟系統，以將其復原"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.BIONICREQUIRESSKILLPERK.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.BIONICREQUIRESSKILLPERK.NAME"
@@ -45223,7 +45223,7 @@ msgstr "等待重啟"
 #. STRINGS.DUPLICANTS.STATUSITEMS.BIONICWAITINGFORREBOOT.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.BIONICWAITINGFORREBOOT.TOOLTIP"
 msgid "This Duplicant needs someone to reboot their bionic systems so they can get back to work"
-msgstr "這名複製人需要有人來重啟仿生系統才能重新開始工作"
+msgstr "這名複製人需要有人重啟仿生系統，才能重新投入工作"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.BIONICWANTSOILCHANGE.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.BIONICWANTSOILCHANGE.NAME"
@@ -45238,22 +45238,22 @@ msgstr "這名複製人的<style=\"KKeyword\">齒輪油</style>即將用盡\n\n�
 #. STRINGS.DUPLICANTS.STATUSITEMS.BODYREGULATINGCOOLING.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.BODYREGULATINGCOOLING.NAME"
 msgid "Regulating temperature at: {TempDelta}"
-msgstr "調節溫度為：{TempDelta}"
+msgstr "正在以 {TempDelta} 調節溫度"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.BODYREGULATINGCOOLING.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.BODYREGULATINGCOOLING.TOOLTIP"
 msgid "This Duplicant is regulating their internal <style=\"KKeyword\">Temperature</style>"
-msgstr "這名複製人正在調節他們的<style=\"KKeyword\">體溫</style>"
+msgstr "這名複製人正在調節他們的內部<style=\"KKeyword\">溫度</style>"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.BODYREGULATINGHEATING.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.BODYREGULATINGHEATING.NAME"
 msgid "Regulating temperature at: {TempDelta}"
-msgstr "調節溫度為：{TempDelta}"
+msgstr "正在以 {TempDelta} 調節溫度"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.BODYREGULATINGHEATING.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.BODYREGULATINGHEATING.TOOLTIP"
 msgid "This Duplicant is regulating their internal <style=\"KKeyword\">Temperature</style>"
-msgstr "這名複製人正在調節他們的<style=\"KKeyword\">體溫</style>"
+msgstr "這名複製人正在調節他們的內部<style=\"KKeyword\">溫度</style>"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.BREAKDELIVERSTATUS.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.BREAKDELIVERSTATUS.NAME"
@@ -45373,7 +45373,7 @@ msgstr "堵塞廁所"
 #. STRINGS.DUPLICANTS.STATUSITEMS.CLOGGINGTOILET.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.CLOGGINGTOILET.TOOLTIP"
 msgid "This Duplicant is clogging a toilet with <style=\"KKeyword\">Gunk</style>\n\nThey couldn't get to a <style=\"KKeyword\">Gunk Extractor</style> in time"
-msgstr "這名複製人正在使用<style=\"KKeyword\">黏渣</style>堵塞廁所\n\n他們無法及時抵達<style=\"KKeyword\">黏渣提取器</style>"
+msgstr "這名複製人正因體內積存的<style=\"KKeyword\">黏渣</style>而堵塞廁所\n\n他們無法及時抵達<style=\"KKeyword\">黏渣提取器</style>"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.COLD.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.COLD.NAME"
@@ -45383,7 +45383,7 @@ msgstr "周圍環境太冷"
 #. STRINGS.DUPLICANTS.STATUSITEMS.COLD.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.COLD.TOOLTIP"
 msgid "This Duplicant cannot retain enough heat to stay warm and may be under-insulated for this area\n\nThey will begin to recover shortly after they leave this area\n\nStress: <b>{StressModification}</b>\nStamina: <b>{StaminaModification}</b>\nAthletics: <b>{AthleticsModification}</b>\n\nCurrent Environmental Exchange: <b>{currentTransferWattage}</b>\n\nInsulation Thickness: {conductivityBarrier}"
-msgstr "這名複製人無法儲存足夠熱量以保持溫暖，對這片區域的隔熱值可能不夠\n\n當離開這片區域之後一小段時間後，他們就會開始恢復體溫\n\n壓力變化：<b>{StressModification}</b>\n耐力：<b>{StaminaModification}</b>\n體能：<b>{AthleticsModification}</b>\n\n當前環境交換：<b>{currentTransferWattage}</b>\n\n隔熱厚度：{conductivityBarrier}"
+msgstr "這名複製人無法保留足夠熱能以維持溫暖，對這片區域而言，隔熱可能不足\n\n離開此區域後不久，他們就會開始恢復體溫\n\n壓力變化：<b>{StressModification}</b>\n耐力：<b>{StaminaModification}</b>\n體能：<b>{AthleticsModification}</b>\n\n當前環境交換：<b>{currentTransferWattage}</b>\n\n隔熱厚度：{conductivityBarrier}"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.COMPOSTFLIPSTATUS.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.COMPOSTFLIPSTATUS.NAME"
@@ -45433,7 +45433,7 @@ msgstr "肺部不適咳嗽"
 #. STRINGS.DUPLICANTS.STATUSITEMS.COUGHING.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.COUGHING.TOOLTIP"
 msgid "Hey! Do that into your elbow\n• Coughing fit was caused by Yucky Lungs"
-msgstr "嘿！用你的手肘遮一下\n• 一陣咳嗽是由肺部不適所引起的"
+msgstr "嘿！記得用手肘遮一下！\n• 這陣咳嗽是因肺部不適所引起"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.DAILYRATIONLIMITREACHED.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.DAILYRATIONLIMITREACHED.NAME"
@@ -45448,12 +45448,12 @@ msgstr "已達到每日卡路里限制"
 #. STRINGS.DUPLICANTS.STATUSITEMS.DAILYRATIONLIMITREACHED.NOTIFICATION_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.DAILYRATIONLIMITREACHED.NOTIFICATION_TOOLTIP"
 msgid "These Duplicants have consumed their allotted <link=\"FOOD\">Rations</link> for the day:"
-msgstr "這些複製人已經吃掉了今天分配給他們的<link=\"FOOD\">食物</link>："
+msgstr "這些複製人已用完今日分配的<link=\"FOOD\">配給</link>量："
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.DAILYRATIONLIMITREACHED.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.DAILYRATIONLIMITREACHED.TOOLTIP"
 msgid "This Duplicant has consumed their allotted <link=\"FOOD\">Rations</link> for the day"
-msgstr "這名複製人今天吃光了分配給他們的<link=\"FOOD\">食物</link>"
+msgstr "這名複製人已用完今日分配的<link=\"FOOD\">配給</link>量"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.DATARAINERPLANNING.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.DATARAINERPLANNING.NAME"
@@ -45463,7 +45463,7 @@ msgstr "神山之力"
 #. STRINGS.DUPLICANTS.STATUSITEMS.DATARAINERPLANNING.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.DATARAINERPLANNING.TOOLTIP"
 msgid "This Duplicant is planning to dish out microchips in their downtime"
-msgstr "這名複製人正打算在休息時間分發微晶片"
+msgstr "這名複製人正計畫在休息時間產出微晶片"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.DATARAINERRAINING.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.DATARAINERRAINING.NAME"
@@ -45473,7 +45473,7 @@ msgstr "神山之力"
 #. STRINGS.DUPLICANTS.STATUSITEMS.DATARAINERRAINING.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.DATARAINERRAINING.TOOLTIP"
 msgid "This Duplicant is making it \"rain\" microchips"
-msgstr "這名複製人正在「下」微晶片雨"
+msgstr "這名複製人正在「降落」微晶片"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.DEAD.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.DEAD.NAME"
@@ -45928,7 +45928,7 @@ msgstr "周圍環境太熱"
 #. STRINGS.DUPLICANTS.STATUSITEMS.HOT.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.HOT.TOOLTIP"
 msgid "This Duplicant cannot let off enough <style=\"KKeyword\">Heat</style> to stay cool and may be over-insulated for this area\n\nThey will begin to recover shortly after they leave this area\n\nStress Modification: <b>{StressModification}</b>\nStamina: <b>{StaminaModification}</b>\nAthletics: <b>{AthleticsModification}</b>\n\nCurrent Environmental Exchange: <b>{currentTransferWattage}</b>\n\nInsulation Thickness: {conductivityBarrier}"
-msgstr "這名複製人無法排出足夠的<style=\"KKeyword\">熱量</style>以保持涼爽，對這片區域的隔熱值可能過高\n\n當離開這片區域之後一小段時間後，他們就會開始恢復體溫\n\n壓力變化：<b>{StressModification}</b>\n耐力：<b>{StaminaModification}</b>\n體能：<b>{AthleticsModification}</b>\n\n當前環境交換：<b>{currentTransferWattage}</b>\n\n隔熱厚度：{conductivityBarrier}"
+msgstr "這名複製人無法排出足夠的<style=\"KKeyword\">熱量</style>以保持涼爽，對這片區域而言，隔熱可能過高\n\n離開此區域後不久，他們就會開始恢復體溫\n\n壓力變化：<b>{StressModification}</b>\n耐力：<b>{StaminaModification}</b>\n體能：<b>{AthleticsModification}</b>\n\n當前環境交換：<b>{currentTransferWattage}</b>\n\n隔熱厚度：{conductivityBarrier}"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.HUNGRY.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.HUNGRY.NAME"
@@ -45993,12 +45993,12 @@ msgstr "喪失工作能力"
 #. STRINGS.DUPLICANTS.STATUSITEMS.INCAPACITATED.NOTIFICATION_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.INCAPACITATED.NOTIFICATION_TOOLTIP"
 msgid "These Duplicants are near death.\nA <link=\"MEDICALCOT\">Triage Cot</link> is required for rescue:"
-msgstr "這些複製人奄奄一息。\n需要<link=\"MEDICALCOT\">醫療床</link>搶救："
+msgstr "這些複製人奄奄一息。\n需要<link=\"MEDICALCOT\">醫療床</link>才能進行搶救："
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.INCAPACITATED.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.INCAPACITATED.TOOLTIP"
 msgid "This Duplicant is near death!\n\nAssign them to a Triage Cot for rescue"
-msgstr "這名複製人快死了！\n\n分配一個醫療床給他接受治療"
+msgstr "這名複製人瀕臨死亡！\n\n請將他們分配到醫療床進行救援"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.INSTALLINGELECTROBANK.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.INSTALLINGELECTROBANK.NAME"
@@ -46038,12 +46038,12 @@ msgstr "發泄"
 #. STRINGS.DUPLICANTS.STATUSITEMS.LASHINGOUT.NOTIFICATION_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.LASHINGOUT.NOTIFICATION_TOOLTIP"
 msgid "These Duplicants broke buildings to relieve their <style=\"KKeyword\">Stress</style>:"
-msgstr "這些複製人正在藉由破壞建築物紓解他們的<style=\"KKeyword\">壓力</style>："
+msgstr "這些複製人藉由破壞建築物來紓解<style=\"KKeyword\">壓力</style>："
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.LASHINGOUT.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.LASHINGOUT.TOOLTIP"
 msgid "This Duplicant is breaking buildings to relieve their <style=\"KKeyword\">Stress</style>"
-msgstr "這名複製人正在藉由破壞建築物紓解他們的<style=\"KKeyword\">壓力/style>"
+msgstr "這名複製人正在藉由破壞建築物來紓解<style=\"KKeyword\">壓力</style>"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.LIGHTWORKEFFICIENCYBONUS.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.LIGHTWORKEFFICIENCYBONUS.NAME"
@@ -46543,7 +46543,7 @@ msgstr "這個遙控機器人正在進入基站"
 #. STRINGS.DUPLICANTS.STATUSITEMS.REMOTEWORKER.FULLGUNK.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.REMOTEWORKER.FULLGUNK.NAME"
 msgid "Gunk Clogged"
-msgstr "黏稠物堵塞"
+msgstr "黏渣堵塞"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.REMOTEWORKER.FULLGUNK.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.REMOTEWORKER.FULLGUNK.TOOLTIP"
@@ -47863,7 +47863,7 @@ msgstr "炸廚房"
 #. STRINGS.DUPLICANTS.TRAITS.DATARAINER.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.DATARAINER.DESC"
 msgid "This Duplicant distributes microchips when they are <style=\"KKeyword\">Overjoyed</style>"
-msgstr "這名複製人在<style=\"KKeyword\">欣喜若狂</style>時會分發微晶片"
+msgstr "這名複製人在<style=\"KKeyword\">欣喜若狂</style>狀態時，會分發微晶片"
 
 #. STRINGS.DUPLICANTS.TRAITS.DATARAINER.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.DATARAINER.NAME"
@@ -47903,7 +47903,7 @@ msgstr "深潛者的肺"
 #. STRINGS.DUPLICANTS.TRAITS.DIGGINGDOWN.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.DIGGINGDOWN.DESC"
 msgid "This Duplicant couldn't dig themselves out of a paper bag"
-msgstr "這名複製人無法自己從紙袋挖洞逃出來"
+msgstr "這名複製人笨手笨腳，連從紙袋中挖洞脫困都辦不到"
 
 #. STRINGS.DUPLICANTS.TRAITS.DIGGINGDOWN.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.DIGGINGDOWN.NAME"
@@ -49683,12 +49683,12 @@ msgstr "<color=#{0}>({1})</color>"
 #. STRINGS.ELEMENTS.BRICK.DESC
 msgctxt "STRINGS.ELEMENTS.BRICK.DESC"
 msgid "Brick is a hard, brittle material formed from heated <link=\"CLAY\">Clay</link>.\n\nIt is a reliable <b>Construction Material</b>."
-msgstr "瓷磚是一種堅硬的、易碎的的材料，由<link=\"CLAY\">黏土</link>燒製而成。\n它是一種可靠的<b>建築材料</b>。"
+msgstr "黏土磚是一種堅硬且易碎的材料，由加熱後的<link=\"CLAY\">黏土</link>燒製而成。\n它是一種可靠的<b>建築材料</b>。"
 
 #. STRINGS.ELEMENTS.BRICK.NAME
 msgctxt "STRINGS.ELEMENTS.BRICK.NAME"
 msgid "<link=\"BRICK\">Brick</link>"
-msgstr "<link=\"BRICK\">瓷磚</link>"
+msgstr "<link=\"BRICK\">黏土磚</link>"
 
 #. STRINGS.ELEMENTS.BRINE.DESC
 msgctxt "STRINGS.ELEMENTS.BRINE.DESC"
@@ -49733,7 +49733,7 @@ msgstr "<link=\"CARBONDIOXIDE\">二氧化碳</link>"
 #. STRINGS.ELEMENTS.CARBONFIBRE.DESC
 msgctxt "STRINGS.ELEMENTS.CARBONFIBRE.DESC"
 msgid "Carbon Fiber is a <link=\"REFINEDMINERAL\">Manufactured Material</link> with high tensile strength."
-msgstr "碳纖維是一種<link=\"REFINEDMINERAL\">製造材料</link>擁有高強度。"
+msgstr "碳纖維是一種擁有高強度的<link=\"REFINEDMINERAL\">加工材料</link>。"
 
 #. STRINGS.ELEMENTS.CARBONFIBRE.NAME
 msgctxt "STRINGS.ELEMENTS.CARBONFIBRE.NAME"
@@ -50113,7 +50113,7 @@ msgstr "冷凍植物油是一種濃厚滑溜的<link=\"SLIME\">軟泥</link>提�
 #. STRINGS.ELEMENTS.FROZENPHYTOOIL.NAME
 msgctxt "STRINGS.ELEMENTS.FROZENPHYTOOIL.NAME"
 msgid "<link=\"FROZENPHYTOOIL\">Frozen Phyto Oil</link>"
-msgstr "<link=\"FROZENPHYTOOIL\">冷凍植物油</link>"
+msgstr "<link=\"FROZENPHYTOOIL\">植物油</link>"
 
 #. STRINGS.ELEMENTS.FULLERENE.DESC
 msgctxt "STRINGS.ELEMENTS.FULLERENE.DESC"
@@ -50658,7 +50658,7 @@ msgstr "冰凍鹹乳是一種凍結成<link=\"ELEMENTSSOLID\">固體</link>狀�
 #. STRINGS.ELEMENTS.MILKICE.NAME
 msgctxt "STRINGS.ELEMENTS.MILKICE.NAME"
 msgid "<link=\"MILKICE\">Frozen Brackene</link>"
-msgstr "<link=\"MILKICE\">冰凍鹹乳</link>"
+msgstr "<link=\"MILKICE\">鹹乳</link>"
 
 #. STRINGS.ELEMENTS.MOLTENALUMINUM.DESC
 msgctxt "STRINGS.ELEMENTS.MOLTENALUMINUM.DESC"
