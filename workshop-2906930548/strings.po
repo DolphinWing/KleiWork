@@ -13743,12 +13743,12 @@ msgstr "<link=\"LOGICELEMENTSENSORLIQUID\">液體元素感測器</link>"
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEAND.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEAND.DESC"
 msgid "This gate outputs a Green Signal when both its inputs are receiving Green Signals at the same time."
-msgstr "這個邏輯閘同時收到兩個綠色訊號時，發出綠色訊號。"
+msgstr "當兩個輸入端同時收到綠色訊號時，這個邏輯閘會發出綠色訊號。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEAND.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEAND.EFFECT"
 msgid "Outputs a <b><style=\"logic_on\">Green Signal</style></b> when both Input A <b>AND</b> Input B are receiving <b><style=\"logic_on\">Green</style></b>.\n\nOutputs a <b><style=\"logic_off\">Red Signal</style></b> when even one Input is receiving <b><style=\"logic_off\">Red</style></b>."
-msgstr "當輸入端 A <b>與</b>輸入端 B <b>都收到<b><style=\"logic_on\">綠色訊號</style></b>時，輸出端會發出<b><style=\"logic_on\">綠色訊號</style></b>。\n\n當有一個輸入端收到<b><style=\"logic_off\">紅色訊號</style></b>時，輸出端會發出<b><style=\"logic_off\">紅色訊號</style></b>。"
+msgstr "當輸入端 A <b>與</b>輸入端 B <b>同時收到<b><style=\"logic_on\">綠色訊號</style></b>時，輸出端會發出<b><style=\"logic_on\">綠色訊號</style></b>。\n\n即使任何一個輸入端收到<b><style=\"logic_off\">紅色訊號</style></b>時，輸出端也會發出<b><style=\"logic_off\">紅色訊號</style></b>。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEAND.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEAND.NAME"
@@ -13758,12 +13758,12 @@ msgstr "<link=\"LOGICGATEAND\">及閘</link>"
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEAND.OUTPUT_ACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEAND.OUTPUT_ACTIVE"
 msgid "Sends a <b><style=\"logic_on\">Green Signal</style></b> if both Inputs are receiving <b><style=\"logic_on\">Green</style></b>"
-msgstr "如果兩個輸入端都收到<b><style=\"logic_on\">綠色訊號</style></b>時，會發出<b><style=\"logic_on\">綠色訊號</style></b>"
+msgstr "如果兩個輸入端都收到<b><style=\"logic_on\">綠色訊號</style></b>，則發出<b><style=\"logic_on\">綠色訊號</style></b>。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEAND.OUTPUT_INACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEAND.OUTPUT_INACTIVE"
 msgid "Sends a <b><style=\"logic_off\">Red Signal</style></b> if any Input is receiving <b><style=\"logic_off\">Red</style></b>"
-msgstr "如果任何一個輸入端收到<b><style=\"logic_off\">紅色訊號</style></b>時，會發出<b><style=\"logic_off\">紅色訊號</style></b>"
+msgstr "如果任何一個輸入端收到<b><style=\"logic_off\">紅色訊號</style></b>，則發出<b><style=\"logic_off\">紅色訊號</style></b>。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEAND.OUTPUT_NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEAND.OUTPUT_NAME"
@@ -13778,7 +13778,7 @@ msgstr "這個邏輯閘在停止收到綠色訊號後，短時間內會持續的
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEBUFFER.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEBUFFER.EFFECT"
 msgid "Outputs a <b><style=\"logic_on\">Green Signal</style></b> if the Input is receiving a <b><style=\"logic_on\">Green Signal</style></b>.\n\nContinues sending a <b><style=\"logic_on\">Green Signal</style></b> for an amount of buffer time after the Input receives a <b><style=\"logic_off\">Red Signal</style></b>."
-msgstr "當收到<b><style=\"logic_on\">綠色訊號</style></b>時，發出<b><style=\"logic_on\">綠色訊號</style></b>。\n\n而在收到<b><style=\"logic_off\">紅色訊號</style></b>後，短時間內會持續發出<b><style=\"logic_on\">綠色訊號</style></b>。"
+msgstr "當輸入端收到<b><style=\"logic_on\">綠色訊號</style></b>時，輸出端會發出<b><style=\"logic_on\">綠色訊號</style></b>。\n\n在輸入端收到<b><style=\"logic_off\">紅色訊號</style></b>後，輸出端會根據緩衝時間長度，持續發出<b><style=\"logic_on\">綠色訊號</style></b>。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEBUFFER.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEBUFFER.NAME"
@@ -13788,7 +13788,7 @@ msgstr "<link=\"LOGICGATEBUFFER\">緩衝閘</link>"
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEBUFFER.OUTPUT_ACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEBUFFER.OUTPUT_ACTIVE"
 msgid "Sends a <b><style=\"logic_on\">Green Signal</style></b> while receiving <b><style=\"logic_on\">Green</style></b>. After receiving <b><style=\"logic_off\">Red</style></b>, will continue sending <b><style=\"logic_on\">Green</style></b> until the timer has expired"
-msgstr "當收到<b><style=\"logic_on\">綠色訊號</style></b>時，發出<b><style=\"logic_on\">綠色訊號</style></b>。而在收到<b><style=\"logic_off\">紅色訊號</style></b>後，會繼續發出<b><style=\"logic_on\">綠色訊號</style></b>直到計時器逾時"
+msgstr "當輸入端收到<b><style=\"logic_on\">綠色訊號</style></b>時，會發出<b><style=\"logic_on\">綠色訊號</style></b>。在收到<b><style=\"logic_off\">紅色訊號</style></b>後，將持續發出<b><style=\"logic_on\">綠色訊號</style></b>直到計時結束"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEBUFFER.OUTPUT_INACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEBUFFER.OUTPUT_INACTIVE"
@@ -13833,7 +13833,7 @@ msgstr "輸出端"
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEFILTER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEFILTER.DESC"
 msgid "This gate only lets a Green Signal through if its Input has received a Green Signal that lasted longer than the selected filter time."
-msgstr "如果收到綠色訊號的時間，比計時器所設定的時間長，這個邏輯閘只會發出綠色訊號。"
+msgstr "只有當輸入端收到的綠色訊號持續時間超過所選的篩選時間時，這個邏輯閘才會輸出綠色訊號。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEFILTER.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEFILTER.EFFECT"
@@ -13848,7 +13848,7 @@ msgstr "<link=\"LOGICGATEFILTER\">過濾閘</link>"
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEFILTER.OUTPUT_ACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEFILTER.OUTPUT_ACTIVE"
 msgid "Sends a <b><style=\"logic_on\">Green Signal</style></b> after receiving <b><style=\"logic_on\">Green</style></b> for longer than the selected filter timer"
-msgstr "收到<b><style=\"logic_on\">綠色訊號</style></b>的時間，比計時器所設定的時間長，則發出<b><style=\"logic_on\">綠色訊號</style></b>"
+msgstr "在收到<b><style=\"logic_on\">綠色訊號</style></b>的時間長於所選篩選時間後，發出<b><style=\"logic_on\">綠色訊號</style></b>。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEFILTER.OUTPUT_INACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEFILTER.OUTPUT_INACTIVE"
@@ -13893,12 +13893,12 @@ msgstr "輸出端"
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATENOT.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATENOT.DESC"
 msgid "This gate reverses automation signals, turning a Green Signal into a Red Signal and vice versa."
-msgstr "這個邏輯閘會輸出相反的訊號，綠色訊號變成紅色訊號，反之亦然。"
+msgstr "這個邏輯閘會反轉自動化訊號，將綠色訊號轉為紅色訊號，反之亦然。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATENOT.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATENOT.EFFECT"
 msgid "Outputs a <b><style=\"logic_on\">Green Signal</style></b> if the Input is receiving a <b><style=\"logic_off\">Red Signal</style></b>.\n\nOutputs a <b><style=\"logic_off\">Red Signal</style></b> when its Input is receiving a <b><style=\"logic_on\">Green Signal</style></b>."
-msgstr "在收到<b><style=\"logic_off\">紅色訊號</style></b>後，發出<b><style=\"logic_on\">綠色訊號</style></b>。\n\n在收到<b><style=\"logic_on\">綠色訊號</style></b>後，發出<b><style=\"logic_off\">紅色訊號</style></b>。"
+msgstr "當輸入端收到<b><style=\"logic_off\">紅色訊號</style></b>時，輸出會發出<b><style=\"logic_on\">綠色訊號</style></b>。\n\n當輸入端收到<b><style=\"logic_on\">綠色訊號</style></b>時，輸出會發出<b><style=\"logic_off\">紅色訊號</style></b>。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATENOT.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATENOT.NAME"
@@ -13908,12 +13908,12 @@ msgstr "<link=\"LOGICGATENOT\">非閘</link>"
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATENOT.OUTPUT_ACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATENOT.OUTPUT_ACTIVE"
 msgid "Sends a <b><style=\"logic_on\">Green Signal</style></b> if receiving <b><style=\"logic_off\">Red</style></b>"
-msgstr "在收到<b><style=\"logic_off\">紅色訊號</style></b>後，發出<b><style=\"logic_on\">綠色訊號</style></b>"
+msgstr "如果收到<b><style=\"logic_off\">紅色訊號</style></b>，則發出<b><style=\"logic_on\">綠色訊號</style></b>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATENOT.OUTPUT_INACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATENOT.OUTPUT_INACTIVE"
 msgid "Sends a <b><style=\"logic_off\">Red Signal</style></b> if receiving <b><style=\"logic_on\">Green</style></b>"
-msgstr "在收到<b><style=\"logic_on\">綠色訊號</style></b>後，發出<b><style=\"logic_off\">紅色訊號</style></b>"
+msgstr "如果收到<b><style=\"logic_on\">綠色訊號</style></b>，則發出<b><style=\"logic_off\">紅色訊號</style></b>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATENOT.OUTPUT_NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATENOT.OUTPUT_NAME"
@@ -13923,12 +13923,12 @@ msgstr "輸出端"
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEOR.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEOR.DESC"
 msgid "This gate outputs a Green Signal if receiving one or more Green Signals."
-msgstr "如果收到任意一個綠色訊號，這個邏輯閘會發出綠色訊號。"
+msgstr "只要收到一個或多個綠色訊號，這個邏輯閘就會輸出綠色訊號。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEOR.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEOR.EFFECT"
 msgid "Outputs a <b><style=\"logic_on\">Green Signal</style></b> if at least one of Input A <b>OR</b> Input B is receiving <b><style=\"logic_on\">Green</style></b>.\n\nOutputs a <b><style=\"logic_off\">Red Signal</style></b> when neither Input A or Input B are receiving <b><style=\"logic_on\">Green</style></b>."
-msgstr "如果輸入端 A <b>或</b>輸入端 B，至少有一個收到<b><style=\"logic_on\">綠色訊號</style></b>時，發出<b><style=\"logic_on\">綠色訊號</style></b>。\n\n如果輸入端 A 與輸入端 B 兩個輸入端，都沒有收到<b><style=\"logic_on\">綠色訊號</style></b>，則發出<b><style=\"logic_off\">紅色訊號</style></b>。"
+msgstr "當輸入端 A <b>或</b>輸入端 B 至少有一個收到<b><style=\"logic_on\">綠色訊號</style></b>時，輸出端會發出<b><style=\"logic_on\">綠色訊號</style></b>。\n\n當輸入端 A 與輸入端 B 兩個輸入端都未收到<b><style=\"logic_on\">綠色訊號</style></b>時，輸出端會發出<b><style=\"logic_off\">紅色訊號</style></b>。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEOR.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEOR.NAME"
@@ -13938,12 +13938,12 @@ msgstr "<link=\"LOGICGATEOR\">或閘</link>"
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEOR.OUTPUT_ACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEOR.OUTPUT_ACTIVE"
 msgid "Sends a <b><style=\"logic_on\">Green Signal</style></b> if any Input is receiving <b><style=\"logic_on\">Green</style></b>"
-msgstr "任一輸入端收到<b><style=\"logic_on\">綠色訊號</style></b>時，發出<b><style=\"logic_on\">綠色訊號</style></b>"
+msgstr "當任一輸入端收到<b><style=\"logic_on\">綠色訊號</style></b>時，則發出<b><style=\"logic_on\">綠色訊號</style></b>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEOR.OUTPUT_INACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEOR.OUTPUT_INACTIVE"
 msgid "Sends a <b><style=\"logic_off\">Red Signal</style></b> if both Inputs are receiving <b><style=\"logic_off\">Red</style></b>"
-msgstr "如果兩個輸入端都收到<b><style=\"logic_off\">紅色訊號</style></b>時，發出<b><style=\"logic_off\">紅色訊號</style></b>"
+msgstr "如果兩個輸入端都收到<b><style=\"logic_off\">紅色訊號</style></b>，則發出<b><style=\"logic_off\">紅色訊號</style></b>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEOR.OUTPUT_NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEOR.OUTPUT_NAME"
@@ -13953,12 +13953,12 @@ msgstr "輸出端"
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEXOR.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEXOR.DESC"
 msgid "This gate outputs a Green Signal if exactly one of its Inputs is receiving a Green Signal."
-msgstr "在輸入端只收到一個綠色訊號時，這個邏輯閘會發出綠色訊號。"
+msgstr "當輸入端正好收到一個綠色訊號時，這個邏輯閘會輸出綠色訊號。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEXOR.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEXOR.EFFECT"
 msgid "Outputs a <b><style=\"logic_on\">Green Signal</style></b> if exactly one of its Inputs is receiving <b><style=\"logic_on\">Green</style></b>.\n\nOutputs a <b><style=\"logic_off\">Red Signal</style></b> if both or neither Inputs are receiving a <b><style=\"logic_on\">Green Signal</style></b>."
-msgstr "如果只收到一個<b><style=\"logic_on\">綠色訊號</style></b>時，發出<b><style=\"logic_on\">綠色訊號</style></b>。\n\n如果收到的兩個都是或都不是<b><style=\"logic_on\">綠色訊號</style></b>時，發出<b><style=\"logic_off\">紅色訊號</style></b>。"
+msgstr "當輸入端正好有一個收到<b><style=\"logic_on\">綠色訊號</style></b>時，輸出端會發出<b><style=\"logic_on\">綠色訊號</style></b>。\n\n當輸入端全部收到或全部未收到<b><style=\"logic_on\">綠色訊號</style></b>時，輸出端會發出<b><style=\"logic_off\">紅色訊號</style></b>。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEXOR.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEXOR.NAME"
@@ -13968,12 +13968,12 @@ msgstr "<link=\"LOGICGATEXOR\">互斥或閘</link>"
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEXOR.OUTPUT_ACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEXOR.OUTPUT_ACTIVE"
 msgid "Sends a <b><style=\"logic_on\">Green Signal</style></b> if exactly one of its Inputs is receiving <b><style=\"logic_on\">Green</style></b>"
-msgstr "如果只收到一個<b><style=\"logic_on\">綠色訊號</style></b>時，發出<b><style=\"logic_on\">綠色訊號</style></b>"
+msgstr "如果輸入端正好有一個收到<b><style=\"logic_on\">綠色訊號</style></b>，則發出<b><style=\"logic_on\">綠色訊號</style></b>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEXOR.OUTPUT_INACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEXOR.OUTPUT_INACTIVE"
 msgid "Sends a <b><style=\"logic_off\">Red Signal</style></b> if both Input signals match (any color)"
-msgstr "如果收到兩個一樣的訊號（任何顏色），則發出<b><style=\"logic_off\">紅色訊號</style></b>"
+msgstr "如果兩個輸入訊號一致（任何顏色），則發出<b><style=\"logic_off\">紅色訊號</style></b>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICGATEXOR.OUTPUT_NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICGATEXOR.OUTPUT_NAME"
@@ -14143,12 +14143,12 @@ msgstr "<link=\"LOGICLIGHTSENSOR\">光感測器</link>"
 #. STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.DESC"
 msgid "A Memory stores a Green Signal received in the Set Port (S) until the Reset Port (R) receives a Green Signal."
-msgstr "記憶體儲存設定端（S）收到的綠色訊號，直到重設端（R）收到綠色訊號。"
+msgstr "這個記憶體會儲存來自設定端（S）收到的綠色訊號，直到重設端（R）收到綠色訊號為止。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.EFFECT"
 msgid "Contains an internal Memory, and will output whatever signal is stored in that Memory.\n\nSignals sent to the Inputs <i>only</i> affect the Memory, and do not pass through to the Output. \n\nSending a <b><style=\"logic_on\">Green Signal</style></b> to the Set Port (S) will set the memory to <b><style=\"logic_on\">Green</style></b>. \n\nSending a <b><style=\"logic_on\">Green Signal</style></b> to the Reset Port (R) will reset the memory back to <b><style=\"logic_off\">Red</style></b>."
-msgstr "含有一個記憶體，並會輸出儲存在記憶體中的訊號。輸入的訊號<b>只會</b>影響記憶體，並不會傳到輸出端。\n\n設定端（S）收到<b><style=\"logic_on\">綠色訊號</style></b>時，記憶體會儲存<b><style=\"logic_on\">綠色訊號</style></b>。\n\n重設端（R）收到<b><style=\"logic_on\">綠色訊號</style></b>時，記憶體會重設為<b><style=\"logic_off\">紅色訊號</style></b>。"
+msgstr "元件內含一個記憶體，並會輸出儲存在該記憶體中的訊號。\n\n傳送至輸入端的訊號<style=\"emphasis\">只會</style>影響記憶體，而不會傳到輸出端。\n\n傳送<b><style=\"logic_on\">綠色訊號</style></b>到設定端（S），會將記憶體設定為<b><style=\"logic_on\">綠色訊號</style></b>。\n\n傳送<b><style=\"logic_on\">綠色訊號</style></b>到重設端（R），會將記憶體重設為<b><style=\"logic_off\">紅色訊號</style></b>。""
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.NAME"
@@ -14163,12 +14163,12 @@ msgstr "記憶體輸出端"
 #. STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.READ_PORT_ACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.READ_PORT_ACTIVE"
 msgid "Outputs a <b><style=\"logic_on\">Green Signal</style></b> if the internal Memory is set to <b><style=\"logic_on\">Green</style></b>"
-msgstr "如果內部記憶體被設為<b><style=\"logic_on\">綠色訊號</style></b>，則發出<b><style=\"logic_on\">綠色訊號</style></b>"
+msgstr "如果內部記憶體設為<b><style=\"logic_on\">綠色</style></b>，則輸出<b><style=\"logic_on\">綠色訊號</style></b>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.READ_PORT_INACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.READ_PORT_INACTIVE"
 msgid "Outputs a <b><style=\"logic_off\">Red Signal</style></b> if the internal Memory is set to <b><style=\"logic_off\">Red</style></b>"
-msgstr "如果內部記憶體被設為<b><style=\"logic_off\">紅色訊號</style></b>，則發出<b><style=\"logic_off\">紅色訊號</style></b>"
+msgstr "如果內部記憶體設為<b><style=\"logic_off\">紅色</style></b>，則輸出<b><style=\"logic_off\">紅色訊號</style></b>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.RESET_PORT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.RESET_PORT"
@@ -14178,7 +14178,7 @@ msgstr "重設端（R）"
 #. STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.RESET_PORT_ACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.RESET_PORT_ACTIVE"
 msgid "<b><style=\"logic_on\">Green Signal</style></b>: Reset the internal Memory to <b><style=\"logic_off\">Red</style></b>"
-msgstr "<b><style=\"logic_on\">綠色訊號</style></b>：將內部記憶體重設為<b><style=\"logic_off\">紅色訊號</style></b>"
+msgstr "<b><style=\"logic_on\">綠色訊號</style></b>：將內部記憶體重設為<b><style=\"logic_off\">紅色</style></b>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.RESET_PORT_INACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.RESET_PORT_INACTIVE"
@@ -14193,7 +14193,7 @@ msgstr "設定端（S）"
 #. STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.SET_PORT_ACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.SET_PORT_ACTIVE"
 msgid "<b><style=\"logic_on\">Green Signal</style></b>: Set the internal Memory to <b><style=\"logic_on\">Green</style></b>"
-msgstr "<b><style=\"logic_on\">綠色訊號</style></b>：將內部記憶體設為<b><style=\"logic_on\">綠色訊號</style></b>"
+msgstr "<b><style=\"logic_on\">綠色訊號</style></b>：將內部記憶體設為<b><style=\"logic_on\">綠色</style></b>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.SET_PORT_INACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.SET_PORT_INACTIVE"
@@ -14208,12 +14208,12 @@ msgstr "目前設定值：{0}"
 #. STRINGS.BUILDINGS.PREFABS.LOGICPOWERRELAY.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICPOWERRELAY.DESC"
 msgid "Automated systems save power and time by removing the need for Duplicant input."
-msgstr "自動化系統節省能源與減少需要被複製人管理的時間。"
+msgstr "自動化系統可節省能源與時間，且無需複製人手動操作。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICPOWERRELAY.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICPOWERRELAY.EFFECT"
 msgid "Connects to an <link=\"LOGIC\">Automation</link> grid to automatically turn <link=\"POWER\">Power</link> on or off.\n\nDoes not affect circuitry preceding the switch."
-msgstr "連接到一個<link=\"LOGIC\">自動化</link>系統，來自動切換<link=\"POWER\">電力</link>打開或關閉。\n\n不影響開關之前的電路。"
+msgstr "連接至<link=\"LOGIC\">自動化</link>網格，以自動開啟或關閉<link=\"POWER\">電源</link>。\n\n不影響此開關之前的電路系統。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICPOWERRELAY.LOGIC_PORT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICPOWERRELAY.LOGIC_PORT"
@@ -14223,12 +14223,12 @@ msgstr "斷電"
 #. STRINGS.BUILDINGS.PREFABS.LOGICPOWERRELAY.LOGIC_PORT_ACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICPOWERRELAY.LOGIC_PORT_ACTIVE"
 msgid "<b><style=\"logic_on\">Green Signal</style></b>: Allow <style=\"KKeyword\">Power</style> through connected circuits"
-msgstr "<b><style=\"logic_on\">綠色訊號</style></b>：允許<style=\"KKeyword\">電力</style>通過連接的電路"
+msgstr "<b><style=\"logic_on\">綠色訊號</style></b>：導通連接電路的<style=\"KKeyword\">電源</style>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICPOWERRELAY.LOGIC_PORT_INACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICPOWERRELAY.LOGIC_PORT_INACTIVE"
 msgid "<b><style=\"logic_off\">Red Signal</style></b>: Prevent <style=\"KKeyword\">Power</style> from flowing through connected circuits"
-msgstr "<b><style=\"logic_off\">紅色訊號</style></b>：防止<style=\"KKeyword\">電力</style>流經連接的電路"
+msgstr "<b><style=\"logic_off\">紅色訊號</style></b>：切斷連接電路的<style=\"KKeyword\">電源</style>流通"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICPOWERRELAY.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICPOWERRELAY.NAME"
@@ -14328,12 +14328,12 @@ msgstr "<link=\"LOGICRADIATIONSENSOR\">輻射感測器</link>"
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBON.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBON.DESC"
 msgid "Logic ribbons use significantly less space to carry multiple automation signals."
-msgstr "訊號排線使用很小的空間就可以傳輸多個自動化訊號。"
+msgstr "邏輯訊號排線大幅節省空間，可用於傳輸多個自動化訊號。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBON.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBON.EFFECT"
 msgid "A 4-Bit <link=\"LOGICWIRE\">Automation Wire</link> which can carry up to four automation signals.\n\nUse a <link=\"LOGICRIBBONWRITER\">Ribbon Writer</link> to output to multiple Bits, and a <link=\"LOGICRIBBONREADER\">Ribbon Reader</link> to input from multiple Bits."
-msgstr "一個四位元的<link=\"LOGICWIRE\">訊號線</link>可傳輸四個自動化訊號。\n\n使用<link=\"LOGICRIBBONWRITER\">排線寫入端</link>輸出多個位元的訊號，並使用 <link=\"LOGICRIBBONREADER\">排線讀取端</link> 輸入多個位元的訊號。"
+msgstr "一個四位元的<link=\"LOGICWIRE\">訊號線</link>，最多可傳輸四個自動化訊號。\n\n使用<link=\"LOGICRIBBONWRITER\">排線寫入器</link>輸出多個位元，並使用<link=\"LOGICRIBBONREADER\">排線讀取器</link>輸入多個位元。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBON.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBON.NAME"
@@ -14373,12 +14373,12 @@ msgstr "<link=\"LOGICWIREBRIDGE\">訊號排線橋接器</link>"
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBONREADER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBONREADER.DESC"
 msgid "Inputs the signal from a single Bit in an <link=\"LOGICRIBBON\">Automation Ribbon</link> into an <link=\"LOGICWIRE\">Automation Wire</link>."
-msgstr "將<link=\"LOGICRIBBON\">訊號排線</link>內一個位元的訊號，輸入<link=\"LOGICWIRE\">訊號線</link>。"
+msgstr "將<link=\"LOGICRIBBON\">訊號排線</link>內單一位元的訊號，匯入<link=\"LOGICWIRE\">訊號線</link>。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBONREADER.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBONREADER.EFFECT"
 msgid "Reads a <b><style=\"logic_on\">Green Signal</style></b> or a <b><style=\"logic_off\">Red Signal</style></b> from the specified Bit of an <link=\"LOGICRIBBON\">Automation Ribbon</link> onto an <link=\"LOGICWIRE\">Automation Wire</link>."
-msgstr "從<link=\"LOGICRIBBON\">訊號排線</link>讀取指定位元的<b><style=\"logic_on\">綠色訊號</style></b>或<b><style=\"logic_off\">紅色訊號</style></b>傳輸到<link=\"LOGICWIRE\">訊號線</link>。"
+msgstr "從<link=\"LOGICRIBBON\">訊號排線</link>的指定位元讀取<b><style=\"logic_on\">綠色訊號</style></b>或<b><style=\"logic_off\">紅色訊號</style></b>，並將其匯入<link=\"LOGICWIRE\">訊號線</link>。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBONREADER.INPUT_NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBONREADER.INPUT_NAME"
@@ -14388,12 +14388,12 @@ msgstr "排線輸入端"
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBONREADER.INPUT_PORT_ACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBONREADER.INPUT_PORT_ACTIVE"
 msgid "<b><style=\"logic_on\">Green Signal</style></b>: Reads a <b><style=\"logic_on\">Green Signal</style></b> from selected Bit"
-msgstr "<b><style=\"logic_on\">綠色訊號</style></b>：讀取指定位元的<b><style=\"logic_on\">綠色訊號</style></b>"
+msgstr "<b><style=\"logic_on\">綠色訊號</style></b>：讀取所選位元的<b><style=\"logic_on\">綠色訊號</style></b>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBONREADER.INPUT_PORT_INACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBONREADER.INPUT_PORT_INACTIVE"
 msgid "<b><style=\"logic_off\">Red Signal</style></b>: Reads a <b><style=\"logic_off\">Red Signal</style></b> from selected Bit"
-msgstr "<b><style=\"logic_off\">紅色訊號</style></b>：讀取指定位元的<b><style=\"logic_off\">紅色訊號</style></b>"
+msgstr "<b><style=\"logic_off\">紅色訊號</style></b>：讀取所選位元的<b><style=\"logic_off\">紅色訊號</style></b>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBONREADER.LOGIC_PORT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBONREADER.LOGIC_PORT"
@@ -14408,7 +14408,7 @@ msgstr "位元讀取中"
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBONREADER.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBONREADER.NAME"
 msgid "<link=\"LOGICRIBBONREADER\">Ribbon Reader</link>"
-msgstr "<link=\"LOGICRIBBONREADER\">排線讀取端</link>"
+msgstr "<link=\"LOGICRIBBONREADER\">排線讀取器</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBONREADER.OUTPUT_NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBONREADER.OUTPUT_NAME"
@@ -14428,12 +14428,12 @@ msgstr "<b><style=\"logic_off\">紅色訊號</style></b>：發出<b><style=\"log
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.DESC"
 msgid "Translates the signal from an <link=\"LOGICWIRE\">Automation Wire</link> to a single Bit in an <link=\"LOGICRIBBON\">Automation Ribbon</link>"
-msgstr "將<link=\"LOGICWIRE\">訊號線</link>的訊號轉為<link=\"LOGICRIBBON\">訊號排線</link>內的一個位元"
+msgstr "將來自<link=\"LOGICWIRE\">訊號線</link>的訊號，轉換成<link=\"LOGICRIBBON\">訊號排線</link>內的單一位元"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.EFFECT"
 msgid "Writes a <b><style=\"logic_on\">Green Signal</style></b> or a <b><style=\"logic_off\">Red Signal</style></b> to the specified Bit of an <link=\"LOGICRIBBON\">Automation Ribbon</link>\n\n<link=\"LOGICRIBBON\">Automation Ribbon</link> must be used as the output wire to avoid overloading."
-msgstr "寫入<b><style=\"logic_on\">綠色訊號</style></b>或<b><style=\"logic_off\">紅色訊號</style></b>到<link=\"LOGICRIBBON\">訊號排線</link>的指定位元上。\n\n<link=\"LOGICRIBBON\">訊號排線</link>必須作為輸出端才能避免超載。"
+msgstr "寫入<b><style=\"logic_on\">綠色訊號</style></b>或<b><style=\"logic_off\">紅色訊號</style></b>到<link=\"LOGICRIBBON\">訊號排線</link>的指定位元中。\n\n<link=\"LOGICRIBBON\">訊號排線</link>必須作為輸出線使用，以避免超載。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.INPUT_NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.INPUT_NAME"
@@ -14443,12 +14443,12 @@ msgstr "排線輸入端"
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.INPUT_PORT_ACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.INPUT_PORT_ACTIVE"
 msgid "<b><style=\"logic_on\">Green Signal</style></b>: Receives <b><style=\"logic_on\">Green Signal</style></b> to be written to selected Bit"
-msgstr "<b><style=\"logic_on\">綠色訊號</style></b>：收到<b><style=\"logic_on\">綠色訊號</style></b>寫入指定位元"
+msgstr "<b><style=\"logic_on\">綠色訊號</style></b>：收到<b><style=\"logic_on\">綠色訊號</style></b>寫入所選位元"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.INPUT_PORT_INACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.INPUT_PORT_INACTIVE"
 msgid "<b><style=\"logic_off\">Red Signal</style></b>: Receives <b><style=\"logic_off\">Red Signal</style></b> to to be written selected Bit"
-msgstr "<b><style=\"logic_off\">紅色訊號</style></b>：收到<b><style=\"logic_off\">紅色訊號</style></b>寫入指定位元"
+msgstr "<b><style=\"logic_off\">紅色訊號</style></b>：收到<b><style=\"logic_off\">紅色訊號</style></b>寫入所選位元"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.LOGIC_PORT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.LOGIC_PORT"
@@ -14463,7 +14463,7 @@ msgstr "位元寫入中"
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.NAME"
 msgid "<link=\"LOGICRIBBONWRITER\">Ribbon Writer</link>"
-msgstr "<link=\"LOGICRIBBONWRITER\">排線寫入端</link>"
+msgstr "<link=\"LOGICRIBBONWRITER\">排線寫入器</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.OUTPUT_NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.OUTPUT_NAME"
@@ -14473,22 +14473,22 @@ msgstr "排線輸出端"
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.OUTPUT_PORT_ACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.OUTPUT_PORT_ACTIVE"
 msgid "<b><style=\"logic_on\">Green Signal</style></b>: Writes a <b><style=\"logic_on\">Green Signal</style></b> to selected Bit of an <link=\"LOGICRIBBON\">Automation Ribbon</link>"
-msgstr "<b><style=\"logic_on\">綠色訊號</style></b>：寫入<b><style=\"logic_on\">綠色訊號</style></b>到<link=\"LOGICRIBBON\">訊號排線</link>的指定位元"
+msgstr "<b><style=\"logic_on\">綠色訊號</style></b>：寫入<b><style=\"logic_on\">綠色訊號</style></b>到<link=\"LOGICRIBBON\">訊號排線</link>的所選位元"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.OUTPUT_PORT_INACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICRIBBONWRITER.OUTPUT_PORT_INACTIVE"
 msgid "<b><style=\"logic_off\">Red Signal</style></b>: Writes a <b><style=\"logic_off\">Red Signal</style></b> to selected Bit of an <link=\"LOGICRIBBON\">Automation Ribbon</link>"
-msgstr "<b><style=\"logic_off\">紅色訊號</style></b>：寫入<b><style=\"logic_off\">紅色訊號</style></b>到<link=\"LOGICRIBBON\">訊號排線</link>的指定位元"
+msgstr "<b><style=\"logic_off\">紅色訊號</style></b>：寫入<b><style=\"logic_off\">紅色訊號</style></b>到<link=\"LOGICRIBBON\">訊號排線</link>的所選位元"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICSWITCH.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICSWITCH.DESC"
 msgid "Signal switches don't turn grids on and off like power switches, but add an extra signal."
-msgstr "訊號開關不像電源開關可以啟動或關閉系統，但能加入一個額外的訊號。"
+msgstr "訊號開關不像電源開關那樣能開啟或關閉電路網格，而是能提供額外訊號。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICSWITCH.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICSWITCH.EFFECT"
 msgid "Sends a <b><style=\"logic_on\">Green Signal</style></b> or a <b><style=\"logic_off\">Red Signal</style></b> on an <link=\"LOGIC\">Automation</link> grid."
-msgstr "發出<b><style=\"logic_on\">綠色訊號</style></b>或<b><style=\"logic_off\">紅色訊號</style></b>到一個<link=\"LOGIC\">自動化</link>系統上。"
+msgstr "在<link=\"LOGIC\">自動化</link>網格上發出<b><style=\"logic_on\">綠色訊號</style></b>或<b><style=\"logic_off\">紅色訊號</style></b>。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICSWITCH.LOGIC_PORT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICSWITCH.LOGIC_PORT"
@@ -14548,7 +14548,7 @@ msgstr "<link=\"LOGICTEMPERATURESENSOR\">溫度感測器</link>"
 #. STRINGS.BUILDINGS.PREFABS.LOGICTIMEOFDAYSENSOR.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICTIMEOFDAYSENSOR.DESC"
 msgid "Cycle sensors ensure systems always turn on at the same time, day or night, every cycle."
-msgstr "周期感測器可確保系統總是在相同的時間、白天或夜晚、或每個周期啟動。"
+msgstr "周期感測器可確保系統在每個週期中，無論晝夜，都能在固定的時間開啟。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICTIMEOFDAYSENSOR.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICTIMEOFDAYSENSOR.EFFECT"
@@ -14563,12 +14563,12 @@ msgstr "周期時間"
 #. STRINGS.BUILDINGS.PREFABS.LOGICTIMEOFDAYSENSOR.LOGIC_PORT_ACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICTIMEOFDAYSENSOR.LOGIC_PORT_ACTIVE"
 msgid "Sends a <b><style=\"logic_on\">Green Signal</style></b> if current time is within the selected <b><style=\"logic_on\">Green</style></b> range"
-msgstr "如果目前時間在<b><style=\"logic_on\">綠色</style></b>範圍，發出<b><style=\"logic_on\">綠色訊號</style></b>"
+msgstr "如果目前時間落在所選的<b><style=\"logic_on\">綠色</style></b>範圍內，則輸出<b><style=\"logic_on\">綠色訊號</style></b>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICTIMEOFDAYSENSOR.LOGIC_PORT_INACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICTIMEOFDAYSENSOR.LOGIC_PORT_INACTIVE"
 msgid "Otherwise, sends a <b><style=\"logic_off\">Red Signal</style></b>"
-msgstr "否則，發出<b><style=\"logic_off\">紅色訊號</style></b>"
+msgstr "否則，輸出<b><style=\"logic_off\">紅色訊號</style></b>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICTIMEOFDAYSENSOR.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICTIMEOFDAYSENSOR.NAME"
@@ -14578,12 +14578,12 @@ msgstr "<link=\"LOGICTIMEOFDAYSENSOR\">周期感測器</link>"
 #. STRINGS.BUILDINGS.PREFABS.LOGICTIMERSENSOR.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICTIMERSENSOR.DESC"
 msgid "Timer sensors create automation schedules for very short or very long periods of time."
-msgstr "計時感測器可建立時間很短或很長的自動化排程。"
+msgstr "計時器感測器可為極短或極長的時間段建立自動化排程。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICTIMERSENSOR.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICTIMERSENSOR.EFFECT"
 msgid "Creates a timer to send <b><style=\"logic_on\">Green Signals</style></b> and <b><style=\"logic_off\">Red Signals</style></b> for specific amounts of time."
-msgstr "使用計時器，設定發出<b><style=\"logic_on\">綠色訊號</style></b>與<b><style=\"logic_off\">紅色訊號</style></b>的時長。"
+msgstr "建立一個計時器，用於在特定的時間長度內發送<b><style=\"logic_on\">綠色訊號</style></b>和<b><style=\"logic_off\">紅色訊號</style></b>。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICTIMERSENSOR.LOGIC_PORT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICTIMERSENSOR.LOGIC_PORT"
@@ -14593,17 +14593,17 @@ msgstr "計時器排程"
 #. STRINGS.BUILDINGS.PREFABS.LOGICTIMERSENSOR.LOGIC_PORT_ACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICTIMERSENSOR.LOGIC_PORT_ACTIVE"
 msgid "Sends a <b><style=\"logic_on\">Green Signal</style></b> for the selected amount of Green time"
-msgstr "在所選定的綠色時間範圍內時，發出<b><style=\"logic_on\">綠色訊號</style></b>"
+msgstr "在所選的綠色時間長度內，發出<b><style=\"logic_on\">綠色訊號</style></b>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICTIMERSENSOR.LOGIC_PORT_INACTIVE
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICTIMERSENSOR.LOGIC_PORT_INACTIVE"
 msgid "Then, sends a <b><style=\"logic_off\">Red Signal</style></b> for the selected amount of Red time"
-msgstr "在所選定的紅色時間範圍內時，發出<b><style=\"logic_off\">紅色訊號</style></b>"
+msgstr "接著，在所選的紅色時間長度內，發出<b><style=\"logic_off\">紅色訊號</style></b>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICTIMERSENSOR.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICTIMERSENSOR.NAME"
 msgid "<link=\"LOGICTIMERSENSOR\">Timer Sensor</link>"
-msgstr "<link=\"LOGICTIMERSENSOR\">計時感測器</link>"
+msgstr "<link=\"LOGICTIMERSENSOR\">計時器感測器</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICWATTAGESENSOR.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICWATTAGESENSOR.DESC"
@@ -91668,7 +91668,7 @@ msgstr "選定的<b>位元訊號</b>會被<b>輸出端</b>讀取"
 #. STRINGS.UI.UISIDESCREENS.LOGICBITSELECTORSIDESCREEN.RIBBON_READER_TITLE
 msgctxt "STRINGS.UI.UISIDESCREENS.LOGICBITSELECTORSIDESCREEN.RIBBON_READER_TITLE"
 msgid "Ribbon Reader"
-msgstr "排線讀取端"
+msgstr "排線讀取器"
 
 #. STRINGS.UI.UISIDESCREENS.LOGICBITSELECTORSIDESCREEN.RIBBON_WRITER_DESCRIPTION
 msgctxt "STRINGS.UI.UISIDESCREENS.LOGICBITSELECTORSIDESCREEN.RIBBON_WRITER_DESCRIPTION"
@@ -91678,7 +91678,7 @@ msgstr "接收到的<b>訊號</b>會被寫入所選定的<b>位元</b>"
 #. STRINGS.UI.UISIDESCREENS.LOGICBITSELECTORSIDESCREEN.RIBBON_WRITER_TITLE
 msgctxt "STRINGS.UI.UISIDESCREENS.LOGICBITSELECTORSIDESCREEN.RIBBON_WRITER_TITLE"
 msgid "Ribbon Writer"
-msgstr "排線寫入端"
+msgstr "排線寫入器"
 
 #. STRINGS.UI.UISIDESCREENS.LOGICBITSELECTORSIDESCREEN.STATE_ACTIVE
 msgctxt "STRINGS.UI.UISIDESCREENS.LOGICBITSELECTORSIDESCREEN.STATE_ACTIVE"
