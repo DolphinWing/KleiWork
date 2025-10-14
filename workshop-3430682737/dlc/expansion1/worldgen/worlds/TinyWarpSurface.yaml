@@ -25,7 +25,7 @@ defaultsOverrides:
 worldTraitRules: [] # Disable world traits
 
 seasons:
-  - MiniMetallicSwampyMeteorShowers
+  - MiniRadioactiveOceanMeteorShowers
 #  - NoDamagingMeteorShowers
 
 fixedTraits:
