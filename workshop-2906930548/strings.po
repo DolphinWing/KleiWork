@@ -21043,7 +21043,7 @@ msgstr "火山星團"
 #. STRINGS.CODEX.A0_PRELIMINARYCALCULATIONS.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.A0_PRELIMINARYCALCULATIONS.BODY.CONTAINER2"
 msgid "<indent=5%>Director,\n\nEven with dramatic optimization, we can't fit the massive volume of resources needed for a colony seed aboard the craft. Not even when calculating for a very small interplanetary travel duration.\n\nSome serious changes are gonna have to be made for this to work.</indent>"
-msgstr "<indent=5%>總監，\n\n即使有了巨幅的優化，我們也無法負擔一個殖民船所需的大量資源，即便是短暫的星際旅行也是。\n\n如果真要展開這項計劃的話，我們可能得面對嚴重的後果。</indent>"
+msgstr "<indent=5%>總監：\n\n即使進行了大幅度的優化，我們依然無法將殖民種子所需的龐大資源裝載到太空船上。即使將星際旅行的時間計算得非常短暫，情況也一樣。\n\n為了讓計畫能夠執行，我們必須做出一些重大的改變。</indent>"
 
 #. STRINGS.CODEX.A0_PRELIMINARYCALCULATIONS.BODY.EMAILHEADER1
 msgctxt "STRINGS.CODEX.A0_PRELIMINARYCALCULATIONS.BODY.EMAILHEADER1"
@@ -21128,22 +21128,22 @@ msgstr "除熱機促銷"
 #. STRINGS.CODEX.A1_A046.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A1_A046.BODY.CONTAINER1"
 msgid "Gravitas has been growing pretty rapidly since our first product hit the market. I just got a look at some of the new hires - they're practically babies! Not quite what I was expecting, but then I've never had an opportunity to mentor someone before. Could be fun!\n------------------\n"
-msgstr "自從我們的第一款產品上市後，引力科技發展得相當快速。我剛剛看到了一些新員工－他們都還像是嬰兒一般！不完全符合我的期待，但我之前從未有機會指導人。也許會很有趣！\n------------------\n"
+msgstr "自從我們的第一款產品上市以來，引力科技的發展速度相當快。我剛剛去看了看新招募的一批員工－他們簡直就是菜鳥！這跟我原先的預期不太一樣，不過我以前從來沒有機會指導別人。或許會很有意思！\n------------------\n"
 
 #. STRINGS.CODEX.A1_A046.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.A1_A046.BODY.CONTAINER2"
 msgid "Well, mentorship hasn't gone quite how I'd expected. Turns out the young hires don't need me to show them the ropes. Actually, since the facility's gotten rid of our swipe cards one of the nice young men had to show me how to operate the doors after I got stuck outside my own lab. Don't I feel silly.\n------------------\n"
-msgstr "好吧，指導並未如我所預期的那樣。原來，年輕的員工並不需要我教他們如何工作。事實上，自從設施取消了我們的刷卡系統後，而我又被擋在自己的實驗室外的時候，其中一位年輕男子不得不教我如何在門禁系統打開門。真是丟臉。\n------------------\n"
+msgstr "嗯，看來指導工作跟我預期的不太一樣。原來這些年輕的新人根本不需要我來帶。說真的，自從設施取消了我們的刷卡門禁之後，我被困在自己的實驗室門外時，還得靠其中一位親切的年輕人教我怎麼操作開門。我真是糗大了\n------------------\n"
 
 #. STRINGS.CODEX.A1_A046.BODY.CONTAINER3
 msgctxt "STRINGS.CODEX.A1_A046.BODY.CONTAINER3"
 msgid "Well, if that isn't just gravy, hm? One of the new hires will be acting as the team lead on my next project.\n\nWhen I first started it wasn't that uncommon to sample a whole rack of test tubes by hand. Now a machine can do hundreds of them in seconds. Who knows what this job will look like in another ten or twenty years. Will I still even be in it?\n------------------\n"
-msgstr "好吧，如果那不僅僅是偶發事件的話？其中一名新進員工將擔任我下一個項目的團隊負責人。\n\n當我第一次開始實驗時，經常用手取樣整個架子的試管。而現在一個機器在很短的時間內就可以處理幾百個。誰又能知道在十或二十年之後，這項工作會變的如何。我還會從事這項工作嗎？\n------------------\n"
+msgstr "嗯，這難道不是雪上加霜嗎？其中一位新進員工將擔任我下一個專案的團隊領導人。\n\n我剛開始工作的時候，用手取樣一整架試管是很常見的事。現在，一台機器可以在幾秒鐘內處理好幾百個。誰知道再過個十年或二十年，這份工作會變成什麼樣子？到時候，我還會在這個行業裡嗎？\n------------------\n"
 
 #. STRINGS.CODEX.A1_A046.BODY.CONTAINER4
 msgctxt "STRINGS.CODEX.A1_A046.BODY.CONTAINER4"
 msgid "That nice young man who helped me with the door the other day, Mr. Kraus, has been an absolute angel. He's been kind enough to help me with this horrible e-mail system and even showed me how to digitize my research notes. I'm learning a lot. Turns out I wasn't the mentor, I'm the mentee! If that isn't a chuckle. At any rate, I feel like I have a better handle on things around here due to Mr. Kraus' help. Turns out you're never too old to learn something new!\n------------------\n"
-msgstr "那個在前幾天教我開門的年輕人，Kraus 先生，絕對是個天使。他還幫我處理這可怕的電子郵件系統，並教我如何將我的研究筆記數位化。我學到了很多。\n\n原來，我不是一位指導者，而是一位受指導者！這不是玩笑。\n\n無論如何，由於 Kraus 先生幫助，我能把周圍的事情處理的更好。事實證明，活到老學到老！\n------------------\n"
+msgstr "那位前幾天幫我開門的親切年輕人，Kraus 先生，簡直是個天使。他好心地幫我搞定這個爛透了的電子郵件系統，甚至還教我怎麼把我的研究筆記數位化。我學到了好多東西。\n\n原來，我不是一位指導者，而是一位被指導者！！這真是個笑話。無論如何，多虧了 Kraus 先生的幫忙，我覺得我對這裡的一切更有把握了。事實證明，活到老學到老，一點都不嫌遲！\n------------------\n"
 
 #. STRINGS.CODEX.A1_A046.SUBTITLE
 msgctxt "STRINGS.CODEX.A1_A046.SUBTITLE"
@@ -21158,7 +21158,7 @@ msgstr "個人日誌：A046"
 #. STRINGS.CODEX.A1_CLONEDRABBITS.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A1_CLONEDRABBITS.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subject Identified: B111]</smallcaps>\n\n[LOG BEGINS]\n\n[A throat clears.]\n\nB111: We are now reliably printing healthy, living subjects, though all have exhibited unusual qualities as a result of the cloning process.\n\n[Chattering sounds can be heard.]\n\nB111: Odd communications, abnormal excrescenses, and vestigial limbs have been seen in all subjects thus far, to varying degrees of severity. It seems that bypassing or accelerating juvenility halts certain critical stages of development. Brain function, however, appears typical.\n\n[Chattering.]\n\nB111: T-They also seem quite happy.\n\nB111: Dr. Broussard, signing off.\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B111]</smallcaps>\n\n[紀錄開始]\n\n[清嗓聲。]\n\nB111：我們現在可以可靠地列印出健康、有生命的實驗體，雖然複製的結果都表現出了不尋常的品質。\n\n[可以聽到低聲交談的聲音。]\n\nB111：到目前為止，所有的實驗體都可以見到奇怪的對話、異常的腫瘤生長與肢體退化。繞過或加速幼年期似乎會阻止實驗體某些關鍵的發展階段。不過，大腦功能似乎完整。\n\n[交談聲。]\n\nB111：他－他們似乎相當高興。\n\nB111：Broussard 博士，簽字。\n\n[紀錄結束]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B111]</smallcaps>\n\n[日誌開始]\n\n[清嗓聲。]\n\nB111：我們現在可以可靠地列印出健康、有生命的實驗體，雖然複製的結果都表現出了不尋常的品質。\n\n[可以聽到低聲交談的聲音。]\n\nB111：到目前為止，所有的實驗體都可以見到奇怪的對話、異常的腫瘤生長與肢體退化。繞過或加速幼年期似乎會阻止實驗體某些關鍵的發展階段。不過，大腦功能似乎完整。\n\n[交談聲。]\n\nB111：他－他們似乎相當高興。\n\nB111：Broussard 博士，簽字。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.A1_CLONEDRABBITS.SUBTITLE
 msgctxt "STRINGS.CODEX.A1_CLONEDRABBITS.SUBTITLE"
@@ -21173,7 +21173,7 @@ msgstr "初始化成功"
 #. STRINGS.CODEX.A1_CLONEDRACCOONS.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A1_CLONEDRACCOONS.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subject Identified: B111]</smallcaps>\n\n[LOG BEGINS]\n\n[A throat clears.]\n\nB111: We are now reliably printing healthy, living subjects, though all have exhibited unusual qualities as a result of the cloning process.\n\n[Trilling sounds can be heard.]\n\nB111: Unusual mewings, benign neoplasms, and atavistic extremities have been seen in all subjects thus far, to varying degrees of severity. It seems that bypassing or accelerating juvenility halts certain critical stages of development. Brain function, however, appears typical.\n\n[Trilling.]\n\nB111: T-They also seem quite happy.\n\nB111: Dr. Broussard, signing off.\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B111]</smallcaps>\n\n[紀錄開始]\n\n[清嗓聲。]\n\nB111：我們現在可以可靠地列印出健康、有生命的實驗體，雖然複製的結果都表現出了不尋常的品質。\n\n[可以聽到顫抖的聲音。]\n\nB111：到目前為止，所有的實驗體都可以見到不同程度的異常喵喵聲、良性的腫瘤生長與四肢出現返祖現象。繞過或加速幼年期似乎會阻止實驗體某些關鍵的發展階段。不過，大腦功能似乎完整。\n\n[顫抖聲。]\n\nB111：他－他們似乎相當高興。\n\nB111：Broussard 博士，簽字。\n\n[紀錄結束]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B111]</smallcaps>\n\n[日誌開始]\n\n[清嗓聲。]\n\nB111：我們現在可以可靠地列印出健康、有生命的實驗體，雖然複製的結果都表現出了不尋常的品質。\n\n[可以聽到顫抖的聲音。]\n\nB111：到目前為止，所有的實驗體都可以見到不同程度的異常喵喵聲、良性的腫瘤生長與四肢出現返祖現象。繞過或加速幼年期似乎會阻止實驗體某些關鍵的發展階段。不過，大腦功能似乎完整。\n\n[顫抖聲。]\n\nB111：他－他們似乎相當高興。\n\nB111：Broussard 博士，簽字。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.A1_CLONEDRACCOONS.SUBTITLE
 msgctxt "STRINGS.CODEX.A1_CLONEDRACCOONS.SUBTITLE"
@@ -21188,7 +21188,7 @@ msgstr "初始化成功"
 #. STRINGS.CODEX.A1_CLONEDRATS.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A1_CLONEDRATS.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subject Identified: B111]</smallcaps>\n\n[LOG BEGINS]\n\n[A throat clears.]\n\nB111: We are now reliably printing healthy, living subjects, though all have exhibited unusual qualities as a result of the cloning process.\n\n[Squeaking sounds can be heard.]\n\nB111: Unusual vocalizations, benign growths, and missing appendages have been seen in all subjects thus far, to varying degrees of severity. It seems that bypassing or accelerating juvenility halts certain critical stages of development. Brain function, however, appears typical.\n\n[Squeaking.]\n\nB111: T-They also seem quite happy.\n\nB111: Dr. Broussard, signing off.\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B111]</smallcaps>\n\n[紀錄開始]\n\n[清嗓聲。]\n\nB111：我們現在可以可靠地列印出健康、有生命的實驗體，雖然複製的結果都表現出了不尋常的品質。\n\n[可以聽到吱吱聲。]\n\nB111：到目前為止，所有的實驗體都可以見到不同程度的異常發聲、良性生長與肢體殘缺。繞過或加速幼年期似乎會阻止實驗體某些關鍵的發展階段。不過，大腦功能似乎完整。\n\n[吱吱聲。]\n\nB111：他－他們似乎相當高興。\n\nB111：Broussard 博士，簽字。\n\n[紀錄結束]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B111]</smallcaps>\n\n[日誌開始]\n\n[清嗓聲。]\n\nB111：我們現在可以可靠地列印出健康、有生命的實驗體，雖然複製的結果都表現出了不尋常的品質。\n\n[可以聽到吱吱聲。]\n\nB111：到目前為止，所有的實驗體都可以見到不同程度的異常發聲、良性生長與肢體殘缺。繞過或加速幼年期似乎會阻止實驗體某些關鍵的發展階段。不過，大腦功能似乎完整。\n\n[吱吱聲。]\n\nB111：他－他們似乎相當高興。\n\nB111：Broussard 博士，簽字。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.A1_CLONEDRATS.SUBTITLE
 msgctxt "STRINGS.CODEX.A1_CLONEDRATS.SUBTITLE"
@@ -21268,22 +21268,22 @@ msgstr "主旨：你看過這個了嗎？"
 #. STRINGS.CODEX.A1A_B111.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A1A_B111.BODY.CONTAINER1"
 msgid "I sent Dr. Holland home today after I found him wandering the lab mumbling to himself. He looked like he hadn't slept in days!\n\nI worry that everyone here is so afraid of disappointing ‘The Director' that they are pushing themselves to the breaking point. Next chance I get, I'm going to bring this up with Jackie.\n------------------\n"
-msgstr "今天我發現 Holland 博士在實驗室內徘徊且喃喃自語後，隨即就將他送回家了。他看起來好幾天沒睡了！\n\n我擔心這裡的每個人都害怕讓「總監」失望，而將自已推向了臨界點。下次有機會的話，我會和 Jackie 談談。\n------------------\n"
+msgstr "今天我發現 Holland 博士在實驗室裡遊蕩，嘴裡還喃喃自語，我隨即就請他回家休息了。他看起來已經好幾天沒睡覺了！\n\n我很擔心這裡的每個人都太害怕讓「總監」失望，結果將自己逼到了極限。下次有機會，我會找 Jackie 聊聊這件事。\n------------------\n"
 
 #. STRINGS.CODEX.A1A_B111.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.A1A_B111.BODY.CONTAINER2"
 msgid "Well, that didn't work.\n\nBringing up the need for some office bonding activities with the Director only met with her usual stubborn insistence that we \"don't have time for any fun\".\n\nThis is ridiculous. Tomorrow I'm going to organize something fun for everyone and Jackie will just have to deal with it. She just needs to see the long term benefits of short term stress relief to fully understand the importance of this.\n------------------\n"
-msgstr "好吧，那行不通。\n\n向總監提出需要一些辦公室聯誼活動的要求，只換來她一如既往的頑固堅持，認為我們「沒那麼多時間玩樂」。\n\n這太荒謬了。明天我就要為大家舉辦一些有意思的活動。每個人都參加， Jackie 只能接受。她僅僅需要看到短期的壓力釋放能帶來的長期的好處，這樣她就能理解娛樂的重要性了。\n------------------\n"
+msgstr "嗯，看來行不通。\n\n向總監提出需要一些辦公室聯誼活動的要求，，只換來她一貫的固執，堅稱我們「沒那個閒工夫玩樂」。\n\n這真是荒謬。明天我要為大家舉辦一些有趣活動，而 Jackie 只能接受。她只需要看到短暫的壓力釋放能帶來長遠的好處，就能完全理解這件事的重要性了。\n------------------\n"
 
 #. STRINGS.CODEX.A1A_B111.BODY.CONTAINER3
 msgctxt "STRINGS.CODEX.A1A_B111.BODY.CONTAINER3"
 msgid "I can't believe this! I organized a potluck lunch thinking it would be a nice break but Jackie discovered us as we were setting up and insisted that no one had time for \"fooling around\". Of course, everyone was too afraid to defy 'The Director' and went right back to work.\n\nAll the food was just thrown out. Someone had even brought homemade perogies! Seeing the break room garbage full of potato salad and chicken wings made me even more depressed than before. Those perogies looked so good.\n------------------\n"
-msgstr "我簡直無法相信！我安排了一個午餐聚會，幻想會是一次很好的休息。但我們還在準備時就被 Jackie 發現了，並強調說沒有人有時間「打混」。當然，每個人都太害怕違抗「總監」，然後都回去工作了。\n\n所有的食物都被扔掉了。有些人甚至帶來了在家裡做的餃子！看到休息室裡堆滿了馬鈴薯沙拉和雞翅的垃圾，使我比以前更加沮喪。那些餃子看來很好吃。\n------------------\n"
+msgstr "我簡直不敢相信！我組織了一個百樂餐午餐，以為可以讓大家好好休息一下。但我們才剛準備好，就被 Jackie 發現了，她堅稱沒人有時間「鬼混」。當然，每個人都太害怕違抗「總監」了，只好立刻回去工作。\n\n所有食物就這樣被扔掉了。有人甚至還帶了手工波蘭餃子！看到休息室的垃圾桶裡塞滿了馬鈴薯沙拉和雞翅，讓我比之前更加沮喪。那些波蘭餃子看起來超棒的。\n------------------\n"
 
 #. STRINGS.CODEX.A1A_B111.BODY.CONTAINER4
 msgctxt "STRINGS.CODEX.A1A_B111.BODY.CONTAINER4"
 msgid "I keep finding senseless mistakes from stressed-out lab workers. It's getting dangerous. I'm worried this colony we're building will be plagued with these kinds of problems if we don't prioritize mental health as much as physical health. What's the use of making all these plans for the future if we can't build a better world?\n\nMaybe there's some way I can sneak some prerequisite downtime activities into the Printing Pod without Jackie knowing.\n------------------\n"
-msgstr "我持續發現，在壓力過大的實驗室裡的工作人員總是犯些無意義的錯誤。這越來越危險了。\n\n我擔心，如果我們不重視心理健康與身體健康一樣重要，我們正在建立的殖民地也將會受到這些問題的困擾。\n\n如果我們不能創造更美好的世界，那麼我們制定這些計劃又有什麼用？\n\n也許我可以在 Jackie 不知道的情況下，偷偷地加入一些必要的休息時間活動到列印元中。\n------------------\n"
+msgstr "我持續發現，壓力過大的實驗室工作人員不斷犯下一些沒有道理的錯誤。這已經變得越來越危險了。\n\n我很擔心，如果我們不將心理健康視為與身體健康同等重要，我們正在建造的這個殖民地將會一直受到這類問題的困擾。\n\n如果我們無法建立一個更好的世界，那麼為未來制定這些規劃又有什麼意義呢？\n\n也許我可以想個辦法，在 Jackie 不知情的情況下，偷偷將一些必要的休息時間活動塞進列印元中。\n------------------\n"
 
 #. STRINGS.CODEX.A1A_B111.SUBTITLE
 msgctxt "STRINGS.CODEX.A1A_B111.SUBTITLE"
@@ -21298,37 +21298,37 @@ msgstr "個人日誌：B111"
 #. STRINGS.CODEX.A2_AGRICULTURALNOTES.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A2_AGRICULTURALNOTES.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subject Identified: B577]</smallcaps>\n\n[LOG BEGINS]\n\nGeneticist: We've engineered crops to be rotated as needed depending on environmental situation. While a variety of plants would be ideal to supplement any remaining nutritional needs, any one of our designs would be enough to sustain a colony indefinitely without adverse effects on physical health.\n\nGeneticist: Some environmental survival issues still remain. Differing temperatures, light availability and last pass changes to nutrient levels take top priority, particularly for food and oxygen producing plants.\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B577]</smallcaps>\n\n[紀錄開始]\n\n遺傳學家：我們根據環境情況設計了一些農作物。各種植物都可以理想的補充營養所需，而任何一種我們所設計的植物都足以無限期地維持殖民地，而不會對身體健康有不利的影響。\n\n遺傳學家：仍然有一些環境生存上的問題。不同的溫度、可見光與最後所施予的養份是最重要的，特別是可生產食物與氧氣的植物。\n\n[紀錄結束]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B577]</smallcaps>\n\n[日誌開始]\n\n遺傳學家：我們根據環境情況設計了一些農作物。各種植物都可以理想的補充營養所需，而任何一種我們所設計的植物都足以無限期地維持殖民地，而不會對身體健康有不利的影響。\n\n遺傳學家：仍然有一些環境生存上的問題。不同的溫度、可見光與最後所施予的養份是最重要的，特別是可生產食物與氧氣的植物。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.A2_AGRICULTURALNOTES.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.A2_AGRICULTURALNOTES.BODY.CONTAINER2"
 msgid "<smallcaps>[Log fragmentation detected]\n[Voice Recognition unavailable]</smallcaps>\n\n[LOG BEGINS]\n\n...Selected in response to concerns about colony psychological well-being.\n\nWhile design should focus on attributing mood-enhancing effects to natural Briar pheromone emissions, the project has been moved to the lowest priority level beneath more life-sustaining designs...\n\n[LOG ENDS]\n------------------\n"
-msgstr "<smallcaps>[偵測到紀錄片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[紀錄開始]\n\n…選擇回應關心殖民地的心理健康。\n\n整個設計應專注於情緒增強效果來自於天然荊棘所釋放的費洛蒙，此計畫已被將降到最低優先層級，比維持生命設計更低層級…\n\n[紀錄結束]\n------------------\n"
+msgstr "<smallcaps>[偵測到日誌片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[日誌開始]\n\n…選擇回應關心殖民地的心理健康。\n\n整個設計應專注於情緒增強效果來自於天然荊棘所釋放的費洛蒙，此計畫已被將降到最低優先層級，比維持生命設計更低層級…\n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.A2_AGRICULTURALNOTES.BODY.CONTAINER3
 msgctxt "STRINGS.CODEX.A2_AGRICULTURALNOTES.BODY.CONTAINER3"
 msgid "<smallcaps>[Log fragmentation detected]\n[Voice Recognition unavailable]</smallcaps>\n\n[LOG BEGINS]\n\n...It is yet unknown if we can surmount the obstacles that stand in the way of engineering a root capable of reproduction in the more uninhabitable situations we anticipate for our colonies, or whether it is even worth the effort...\n\n[LOG ENDS]\n------------------\n"
-msgstr "<smallcaps>[偵測到紀錄片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[紀錄開始]\n\n…目前還不知道，我們是否可以在不適合居住的環境下，利用工程學來克服殖民地在繁殖上的根本問題，但還是值得努力的…\n\n[紀錄結束]\n------------------\n"
+msgstr "<smallcaps>[偵測到日誌片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[日誌開始]\n\n…目前還不知道，我們是否可以在不適合居住的環境下，利用工程學來克服殖民地在繁殖上的根本問題，但還是值得努力的…\n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.A2_AGRICULTURALNOTES.BODY.CONTAINER4
 msgctxt "STRINGS.CODEX.A2_AGRICULTURALNOTES.BODY.CONTAINER4"
 msgid "<smallcaps>[Log fragmentation detected]\n[Voice Recognition unavailable]</smallcaps>\n\n[LOG BEGINS]\n\n...The Mealwood's hardiness will make it a potential contingency crop should Bristle Blossoms be unable to sustain sizable populations.\n\nIf pursued, design should focus on longterm viability and solving the psychological repercussions of prolonged Mealwood grain ingestion...\n\n[LOG ENDS]\n------------------\n"
-msgstr "<smallcaps>[偵測到紀錄片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[紀錄開始]\n\n…如果鬃花無法維持在一定栽種數量，那麼米虱木可以作為一種應急的農作物。\n\n以此前提，那麼設計上應該著眼於長期的生存能力，與長時間食用米虱木對心理層面的影響…\n\n[紀錄結束]\n------------------\n"
+msgstr "<smallcaps>[偵測到日誌片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[日誌開始]\n\n…如果鬃花無法維持在一定栽種數量，那麼米虱木可以作為一種應急的農作物。\n\n以此前提，那麼設計上應該著眼於長期的生存能力，與長時間食用米虱木對心理層面的影響…\n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.A2_AGRICULTURALNOTES.BODY.CONTAINER5
 msgctxt "STRINGS.CODEX.A2_AGRICULTURALNOTES.BODY.CONTAINER5"
 msgid "<smallcaps>[Log fragmentation detected]\n[Voice Recognition unavailable]</smallcaps>\n\n[LOG BEGINS]\n\n...The Thimble Reed will be used as a contingency for textile production in the event that printed materials not be sufficient.\n\nDesign should focus on the yield frequency of the plant, as well as... erm... softness.\n\n[LOG ENDS]\n------------------\n"
-msgstr "<smallcaps>[偵測到紀錄片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[紀錄開始]\n\n…如果列印材料不足，頂針蘆葦可以作為應急的紡織材料。\n\n設計上應著眼於這株植物的產量，以及…恩…柔軟度。\n\n[紀錄結束]\n------------------\n"
+msgstr "<smallcaps>[偵測到日誌片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[日誌開始]\n\n…如果列印材料不足，頂針蘆葦可以作為應急的紡織材料。\n\n設計上應著眼於這株植物的產量，以及…恩…柔軟度。\n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.A2_AGRICULTURALNOTES.BODY.CONTAINER6
 msgctxt "STRINGS.CODEX.A2_AGRICULTURALNOTES.BODY.CONTAINER6"
 msgid "<smallcaps>[Log fragmentation detected]\n[Voice Recognition unavailable]</smallcaps>\n\n[LOG BEGINS]\n\n...Balm Lily is a reliable all-purpose medicinal plant.\n\nVery little need be altered, save for assurances that it will survive wherever it may be planted...\n\n[LOG ENDS]\n------------------\n"
-msgstr "<smallcaps>[偵測到紀錄片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[紀錄開始]\n\n…香水百合是一種可靠又多用途的藥用植物。\n\n幾乎不需要修改，只要確保它在任何地方都可以種植…\n\n[紀錄結束]\n------------------\n"
+msgstr "<smallcaps>[偵測到日誌片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[日誌開始]\n\n…香水百合是一種可靠又多用途的藥用植物。\n\n幾乎不需要修改，只要確保它在任何地方都可以種植…\n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.A2_AGRICULTURALNOTES.BODY.CONTAINER7
 msgctxt "STRINGS.CODEX.A2_AGRICULTURALNOTES.BODY.CONTAINER7"
 msgid "<smallcaps>[Log fragmentation detected]\n[Voice Recognition unavailable]</smallcaps>\n\n[LOG BEGINS]\n\n...The gene sequences within the common Dusk Cap allow it to grow in low light environments.\n\nThese genes should be sampled, with the hope that we can splice them into other plant designs....\n\n[LOG ENDS]\n------------------\n"
-msgstr "<smallcaps>[偵測到紀錄片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[紀錄開始]\n\n…常見的黃昏蘑菇的基因序列，讓它可以生長在低光源的環境中。\n\n應該採樣這些基因，希望可以將它們加入到其它植物設計中…\n\n[紀錄結束]\n------------------\n"
+msgstr "<smallcaps>[偵測到日誌片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[日誌開始]\n\n…常見的黃昏蘑菇的基因序列，讓它可以生長在低光源的環境中。\n\n應該採樣這些基因，希望可以將它們加入到其它植物設計中…\n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.A2_AGRICULTURALNOTES.SUBTITLE
 msgctxt "STRINGS.CODEX.A2_AGRICULTURALNOTES.SUBTITLE"
@@ -21343,22 +21343,22 @@ msgstr "農業筆記"
 #. STRINGS.CODEX.A2_B327.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A2_B327.BODY.CONTAINER1"
 msgid "I'm starting my new job at Gravitas today. I'm... well, I'm nervous.\n\nIt turns out they hired a bunch of new people - I guess they're expanding - and most of them are about my age, but I'm the only one that hasn't done my doctorate. They all call me \"Mister\" Kraus and it's the <i>worst</i>.\n\nI have no idea where I'll find the time to do my PhD while working a full time job.\n------------------\n"
-msgstr "我今天開始了在引力科技的新工作。我…很好，我很緊張。\n\n他們雇用一大堆新人－我猜他們正在擴張－多數和我年齡差不多，但我是唯一沒有完成博士學位的人。他們都叫我 Kraus「先生」，真的<b>很壞</b>。\n\n在一個全職的工作上，我該怎麼找到時間完成我的博士學位。\n------------------\n"
+msgstr "我今天開始在「引力科技」的新工作了。我... 該怎麼說呢，有點緊張。\n\n看來他們招募了一批新人——我猜他們正在擴大編制吧——大多都跟我年紀差不多，但我卻是唯一一個還沒有拿到博士學位的人。他們都叫我 Kraus「先生」，這感覺簡直<b>糟透了</b>。\n\n我真不知道一邊做著全職工作，一邊要怎麼擠出時間來把我的博士學位搞定。\n------------------\n"
 
 #. STRINGS.CODEX.A2_B327.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.A2_B327.BODY.CONTAINER2"
 msgid "<i>I screwed up so much today.</i>\n\nAt one point I spaced on the formula for calculating the volume of a cone. They must have thought I was completely useless.\n\nThe only time I knew what I was doing was when I helped an older coworker figure out her dumb old email.\n\nPeople say education isn't so important as long as you've got the skills, but there's things my colleagues know that I just <i>don't</i>. They're not mean about it or anything, it's just so frustrating. I feel dumb when I talk to them!\n\nI bet they're gonna realize soon that I don't belong here, and then I'll be fired for sure. Man... I'm still paying off my student loans (WITH international fees), I <i>can't</i> lose this income.\n------------------\n"
-msgstr "<b>我今天搞砸了。</b>\n\n我完全忘了計算圓錐體的公式，我的腦中一片空白，他們一定認為我沒有用。\n\n我唯一知道我有用的時候，就是教會了一位年長的同事使用她的電子郵件。\n\n人們總是說只要你有技能，教育就沒那麼重要。但有些事情就是我的同事知道，而我就是<b>不知道</b>。\n\n他們不是故意的，只是令人沮喪。與他們交談時，我感覺很蠢！\n\n我敢打賭，他們很快就會意識到我不屬於這裡，然後我肯定會被開除。天哪…我還在償還就學貸款（包括國際費用），我<b>不能</b>失去這份收入。\n------------------\n"
+msgstr "<b>我今天真的搞砸慘了。</b>\n\n有一次，我居然忘記計算圓錐體體積的公式，腦子一片空白。他們一定覺得我完全是個廢物。\n\n我唯一感覺自己還能派上用場的時候，是幫一位資深同事搞定她那個超老舊的電子郵件問題。\n\n大家都說「有能力比學歷重要」，但我的那些同事們知道的事情，我就是<b>不知道</b>。\n\n他們人沒有惡意啦，但這真的太令人挫敗了。跟他們講話的時候，我都覺得自己好笨！\n\n我打賭，他們很快就會發現我不屬於這裡，然後我一定會被開除。天啊... 我的學貸還沒繳完耶（還包括國際學費），我<b>絕對不能</b>失去這份收入。\n------------------\n"
 
 #. STRINGS.CODEX.A2_B327.BODY.CONTAINER3
 msgctxt "STRINGS.CODEX.A2_B327.BODY.CONTAINER3"
 msgid "Dr. Sklodowska's been really nice and welcoming since I started working here. Sometimes she comes and sits with me in the cafeteria. The food she brings from home smells like old feet but she chats with me about what new research papers we're each reading and it's very kind.\n\nShe tells me the fact I got hired without a doctorate means I must be very smart, and management must see something in me.\n\nI'm not sure I believe her but it's nice to hear something that counters little voice in my head anyway.\n------------------\n"
-msgstr "自從我開始在此工作後，Sklodowska 博士一直非常友善與熱情。有時她會和我坐在自助餐廳。她從家裡帶來的食物聞起來不是很美味，但她會和我聊聊每次閱讀的新文件是什麼，感覺真不錯。\n\n她告訴我一個事實，我沒有博士學位就被錄取，表示我必須很聰明，管理層肯定在我身上看到了什麼特質。\n\n我不確定我是否相信她，但很高興聽到一些反駁我腦中微小聲音的事情。\n------------------\n"
+msgstr "自從我來這裡工作後，Sklodowska 博士一直對我很好、也很熱情。她有時候會來自助餐廳跟我一起坐。她從家裡帶來的午餐聞起來像舊襪子一樣，但她會跟我聊聊我們各自正在讀什麼新的研究論文，這真的很窩心。\n\n她告訴我，能沒靠博士學位就被錄取，就代表我一定很聰明，高層肯定在我身上看到了什麼特質。\n\n我不太確定該不該相信她，但無論如何，能聽到一些能反駁我腦中那個小聲音的話，感覺真好。\n------------------\n"
 
 #. STRINGS.CODEX.A2_B327.BODY.CONTAINER4
 msgctxt "STRINGS.CODEX.A2_B327.BODY.CONTAINER4"
 msgid "It's been about a week and a half and I think I'm finally starting to settle in. I'm feeling a lot better about my position - some of the senior scientists have even started using my ideas in the lab.\n\nDr. Sklodowska might have been right, my anxiety was just growing pains. This is my first real job and I guess afraid to let myself believe I could really, actually do it, just in case it went wrong.\n\nI think I want to buy Dr. Sklowdoska a digital reader for her books and papers as a thank-you one day, if I ever pay off my student loans.\n\nONCE I pay off my student loans.\n------------------\n"
-msgstr "經過了一周半，我想我開始適應了。我對自己的職位感覺好多了－一些資深科學家甚至開始在實驗室裡採用我的點子。\n\nSklodowska 博士或許是對的，我的焦慮只是成長的痛苦。這是我第一份真正的工作，我想我只是不敢讓自己相信我可以做到－真的做到避免出錯。\n\n我想如果有天，我還清了我的就學貸款，我想給 Sklowdoska 博士她的書和文件買一個數位閱讀器。\n\n一旦我還清了我的就學貸款。\n------------------\n"
+msgstr "已經過了一個半禮拜，我想我終於開始適應了。我對自己的職位感覺好很多－一些資深科學家甚至已經開始在實驗室裡採用我的點子了。\n\nSklodowska 博士說得可能沒錯，我的焦慮只是成長的陣痛期。這是我第一份真正的工作，我猜我只是不敢讓自己相信我真的、真的能做到，怕萬一搞砸了怎麼辦。\n\n我想有一天，等我還清學貸後，我想買一個電子閱讀器給 Sklowdoska 博士，讓她用來看書和論文，當作是感謝。\n\n<B>等我還清學貸的那一天</B>。\n------------------\n"
 
 #. STRINGS.CODEX.A2_B327.SUBTITLE
 msgctxt "STRINGS.CODEX.A2_B327.SUBTITLE"
@@ -21438,22 +21438,22 @@ msgstr "熱力學定律"
 #. STRINGS.CODEX.A3_B556.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A3_B556.BODY.CONTAINER1"
 msgid "I've been so tired lately. I've probably spent the last 3 nights sleeping at my desk, and I've used the lab's safety shower to bathe twice already this month.\n\nWe're technically on schedule, but for some reason Director Stern has been breathing down my neck to get these new products ready for market.\n\nNormally I'd be mad about the added pressure on my work, but something in the Director's voice tells me that time is of the essence.\n------------------\n"
-msgstr "最近我累壞了。大概過去三天晚上都在實驗桌前睡著，這個月已經兩次用實驗室的安全淋浴間洗澡了。\n\n從技術上來說我們進度還算準時。但出於某種原因， Stern 總監一直緊盯著我們，催促著要新產品盡快上市。\n\n通常我會對這種額外的壓力感到生氣，但總監語氣中的某種東西告訴我，時間真的很緊迫。\n------------------\n"
+msgstr "最近我真的是累慘了。過去大概三個晚上我都是趴在辦公桌上睡的，這個月我已經用實驗室的安全淋浴間洗了兩次澡。\n\n嚴格來說，我們的進度還算準時。但不知道是出於什麼原因， Stern 總監一直在緊盯著我，催促著要讓這些新產品盡快上市。\n\n一般來說，我會對這種額外的工作壓力感到不滿，但總監語氣中的某種訊號告訴我，現在是刻不容緩的時候。\n------------------\n"
 
 #. STRINGS.CODEX.A3_B556.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.A3_B556.BODY.CONTAINER2"
 msgid "I keep finding myself staring at my computer screen, totally unable to remember what it was I was doing.\n\nI try to force myself to type up some notes or analyze my data but it's like my brain is paralyzed, I can't get anything done.\n\nI'll have to stay late to make up for all this time I've wasted staying late.\n------------------\n"
-msgstr "我發現自己一直盯著電腦螢幕，完全記不起自己在做什麼。\n\n我試著強迫自己打一些筆記或分析數據，但感覺腦子好像癱瘓了，什麼都做不了。\n\n我必須加班才能彌補我所浪費掉的加班時間。\n------------------\n"
+msgstr "我發現自己不停地盯著電腦螢幕發呆，完全想不起自己到底在做些什麼。\n\n我試著逼自己寫些筆記或是分析數據，但感覺我的大腦像麻痺了一樣，完全沒辦法完成任何事情。\n\n我必須用更多的加班時間，來彌補我浪費掉的那些加班時間。\n------------------\n"
 
 #. STRINGS.CODEX.A3_B556.BODY.CONTAINER3
 msgctxt "STRINGS.CODEX.A3_B556.BODY.CONTAINER3"
 msgid "Dr. Broussard told me I looked half dead and sent me home today. I don't think she even has the authority to do that, but I did as I was told. She wasn't messing around if you know what I mean.\n\nI can probably get a head start on my paper from home today, anyway.\n\nI think I have an idea for a circuit configuration that will improve the battery life of all our technologies by a whole 2.3%.\n------------------\n"
-msgstr "Broussard 博士告訴我，我今天看上去半死不活的，就將我送回家了。我不認為她有權力這麼做，但我還是聽了她的話。她可不是開玩笑的，如果你知道我的意思。\n\n不管怎樣，我今天可以在家中開始撰寫的我論文。\n\n我對電路配置有個想法，可以將我們所有科技的電池壽命整體提高 2.3%。\n------------------\n"
+msgstr "Broussard 博士說我看起來像半個死人，然後就直接把我送回家了。我不覺得她有權力這麼做，但我還是照做了。她可不是開玩笑的，如果你懂我的意思。\n\n話說回來，我今天可以在家裡先開始著手我的論文了。\n\n我想到了某種電路配置的點子，可以將我們所有科技的電池續航力整體提升整整 2.3%。\n------------------\n"
 
 #. STRINGS.CODEX.A3_B556.BODY.CONTAINER4
 msgctxt "STRINGS.CODEX.A3_B556.BODY.CONTAINER4"
 msgid "I got home yesterday fully intending to work on my paper after Broussard sent me home, but the second I walked in the door I hit the pillow and didn't get back up. I slept for <i>12 straight hours</i>.\n\nI had no idea I needed that. When I got into the lab this morning I looked over my work from the past few weeks, and realized it's completely useless.\n\nIt'll take me hours to correct all the mistakes I made these past few months. Is this what I was killing myself for? I'm such a rube, I owe Broussard a huge thanks.\n\nI'll start keeping more regular hours from now on... Also, I was considering maybe getting a dog."
-msgstr "昨天 Broussard 將我送回家後，我打算撰寫我的論文。但當我走進門時，我撞上了枕頭然後就起不來了。我昏睡了<b>整整 12 小時</b>。\n\n我不知道我需要睡那麼久。當我在今天早上走進實驗室時，我檢視了自己過去幾周的工作，發現完全沒有進度。\n\n我需要花幾個小時來糾正我過去幾個月的所有錯誤。這就是我犧牲自己的原因嗎？我真是個傻瓜，我要對 Broussard 深表謝意。\n\n從現在開始，我會開始保持更規律的工作時間…另外，我在考慮養一隻狗。"
+msgstr "昨天 Broussard 叫我回家後，我原本打算在家裡好好寫論文，但一進門就直接倒在枕頭上，然後就再也起不來了。我足足睡了<b>整整 12 個小時</b>。\n\n我完全不知道我這麼需要睡眠。今天早上我回到實驗室後，檢視了過去幾週的工作成果，才發現那些東西根本完全沒用。\n\n我得花好幾個小時來改正過去這幾個月犯下的所有錯誤。這就是我拿命去拼換來的結果嗎？我真是個笨蛋，我欠 Broussard 一聲大大的感謝。\n\n從現在開始，我會保持更規律的工作時間……對了，我還在考慮是不是該養一隻狗。"
 
 #. STRINGS.CODEX.A3_B556.SUBTITLE
 msgctxt "STRINGS.CODEX.A3_B556.SUBTITLE"
@@ -21518,37 +21518,37 @@ msgstr "主旨：devon 的部落格"
 #. STRINGS.CODEX.A3_HUSBANDRYNOTES.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A3_HUSBANDRYNOTES.BODY.CONTAINER1"
 msgid "<smallcaps>[Log Fragmentation Detected]\n[Voice Recognition Unavailable]</smallcaps>\n\n[LOG BEGINS]\n\n...The Hatch has been selected for development due to its naturally wide range of potential food sources.\n\nEnergy production is our primary goal, but augmentation to allow for the consumption of non-organic materials is a more attainable first step, and will have additional uses for waste disposal...\n\n[LOG ENDS]\n------------------\n"
-msgstr "<smallcaps>[偵測到紀錄片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[紀錄開始]\n\n…選擇哈奇是因為其廣泛的潛在食物來源。\n\n生產能源是我們的主要目標，但增加無機材料的使用是實現的第一步，而且廢棄物將會有更多的用途…\n\n[紀錄結束]\n------------------\n"
+msgstr "<smallcaps>[偵測到日誌片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[日誌開始]\n\n…選擇哈奇進行改良，是基於其天然具有廣泛的潛在食物來源。\n\n能源生產是我們的首要目標，但將其改良以容許消耗非有機材料，是更具可行性的第一步，並且將在廢物處理方面具備額外的用途...\n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.A3_HUSBANDRYNOTES.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.A3_HUSBANDRYNOTES.BODY.CONTAINER2"
 msgid "[LOG BEGINS]\n\n...The Morb has been selected for development based on its ability to perform a multitude of the waste breakdown functions typical for a healthy ecosystem.\n\nDesign should focus on eliminating the disease risks posed by a fully matured Morb specimen...\n\n[LOG ENDS]\n------------------\n"
-msgstr "[紀錄開始]\n\n選擇莫布的原因是它具有多種健康生態系的廢棄物分解功能典型。\n\n設計的著重點在於消除完全成熟的莫布疾病風險…\n\n[紀錄結束]\n------------------\n"
+msgstr "[日誌開始]\n\n選擇莫布進行開發，是基於其能夠執行健康生態系統中典型的多種廢物分解功能。\n\n設計的重點應放在消除由完全成熟的莫布樣本所帶來的疾病風險上... \n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.A3_HUSBANDRYNOTES.BODY.CONTAINER3
 msgctxt "STRINGS.CODEX.A3_HUSBANDRYNOTES.BODY.CONTAINER3"
 msgid "[LOG BEGINS]\n\n...The Puft may be suited for serving a sustainable decontamination role.\n\nPotential design must focus on the efficiency of these processes...\n\n[LOG ENDS]\n------------------\n"
-msgstr "[紀錄開始]\n\n…帕夫適合擔任可持續淨化的角色。\n\n潛在的設計應注重在這些流程的效率…\n\n[紀錄結束]\n------------------\n"
+msgstr "[日誌開始]\n\n…帕夫可能適合扮演可持續的除污淨化角色。\n\n潛在的設計方案必須著重於這些流程的效率... \n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.A3_HUSBANDRYNOTES.BODY.CONTAINER4
 msgctxt "STRINGS.CODEX.A3_HUSBANDRYNOTES.BODY.CONTAINER4"
 msgid "[LOG BEGINS]\n\n...Wheezeworts are an ideal selection due to their low nutrient requirements and natural terraforming capabilities.\n\nDesign of these creatures should focus on enhancing their natural influence on ambient temperatures...\n\n[LOG ENDS]\n------------------\n"
-msgstr "[紀錄開始]\n\n…冰樹是一個理想的選擇，它們的營養需要求低且對地形的適應力強。\n\n這些生物的設計應著重於增強它們對環境溫度的自然影響力…\n\n[紀錄結束]\n------------------\n"
+msgstr "[日誌開始]\n\n…冰樹是一個理想的選擇，這是因為它們對營養的需求量低，並且具有天然的環境改造能力\n\n這些生物的設計重點，應是增強它們對周遭環境溫度的自然影響力...\n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.A3_HUSBANDRYNOTES.BODY.CONTAINER5
 msgctxt "STRINGS.CODEX.A3_HUSBANDRYNOTES.BODY.CONTAINER5"
 msgid "[LOG BEGINS]\n\n...The preliminary Hatch gene splices were successful.\n\nThe prolific mucus excretions that are typical of the species are now producing hydrocarbons at an incredible pace.\n\nThe creature has essentially become a free source of burnable oil...\n\n[LOG ENDS]\n------------------\n"
-msgstr "[紀錄開始]\n\n…初步的哈奇基因融合成功了。\n\n該物種正以驚人的速度大量排泄碳氫化合物。\n\n此生物實際上已變成了一種免費的燃料來源…\n\n[紀錄結束]\n------------------\n"
+msgstr "[日誌開始]\n\n…初步的哈奇基因剪接已成功。\n\n該物種典型的大量黏液排泄物，現正以驚人的速度生產碳氫化合物。\n\n這種生物基本上已成為可燃油料的免費來源... \n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.A3_HUSBANDRYNOTES.BODY.CONTAINER6
 msgctxt "STRINGS.CODEX.A3_HUSBANDRYNOTES.BODY.CONTAINER6"
 msgid "[LOG BEGINS]\n\n...Bioluminescence is always a novelty, but little time should be spent on perfecting these insects from here on out.\n\nThe project has more pressing concerns than light sources, particularly now that the low light vegetation issue has been solved...\n\n[LOG ENDS]\n------------------\n"
-msgstr "[紀錄開始]\n\n…生物冷光一直令人新奇，但現在應該花費少量的時間來完善這些昆蟲。\n\n這計劃比光源來的更緊迫，尤其是在克服了低光源植物的問題之後…\n\n[紀錄結束]\n------------------\n"
+msgstr "[日誌開始]\n\n...生物冷光雖然一直很新奇，但從現在開始，不應再花費太多時間來完善這些昆蟲。\n\n該專案有比光源更為緊迫的考量，特別是現在低光照植被的問題已經得到解決...\n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.A3_HUSBANDRYNOTES.BODY.CONTAINER7
 msgctxt "STRINGS.CODEX.A3_HUSBANDRYNOTES.BODY.CONTAINER7"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subject Identified: B363]</smallcaps>\n\n[LOG BEGINS]\n\nGeneticist: The primary concern raised by this project is the variability of environments that colonies may be forced to deal with. The creatures we send with the settlement party will not have the time to evolve and adapt to a new environment, yet each creature has been chosen to play a vital role in colony sustainability and is thus too precious to risk loss.\n\nGeneticist: It follows that each organism we design must be equipped with the tools to survive in as many volatile environments as we are capable of planning for. We should not rely on the Pod alone to replenish creature populations.\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B363]</smallcaps>\n\n[紀錄開始]\n\n遺傳學家：這計劃被關心的主要風險是，殖民地可能被迫面對環境的可變性。我們送出的移民團和生物將沒有時間進化和適應新環境，而每個被選中的生物在殖民地的可持續性發展都擔任重要的角色且異常珍貴，無法冒著損失的風險。\n\n遺傳學家：因此我們設計的生物都必須裝備工具，以便在我們能夠設想的多種可變環境中生存。我們不應該只靠列印元來補充生物群落。\n\n[紀錄結束]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B363]</smallcaps>\n\n[日誌開始]\n\n遺傳學家：本專案引起的首要考量，是殖民地可能必須面對的環境多變性。我們隨定居隊伍送出的生物，將沒有時間進化並適應新的環境，然而，每個生物都被選中在殖民地的永續發展中扮演關鍵角色，因此極為珍貴，不容許損失的風險。\n\n遺傳學家：由此可知，我們設計的每個有機體，都必須具備在我們所能設想的、盡可能多的不穩定環境中生存的能力。我們不應該只依賴列印元來補充生物族群。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.A3_HUSBANDRYNOTES.SUBTITLE
 msgctxt "STRINGS.CODEX.A3_HUSBANDRYNOTES.SUBTITLE"
@@ -21578,7 +21578,7 @@ msgstr "新的安全協議"
 #. STRINGS.CODEX.A4_ATOMICONRECRUITMENT.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.A4_ATOMICONRECRUITMENT.BODY.CONTAINER2"
 msgid "<indent=5%>Director,\n\nEverything went well. Broussard was reluctant at first, but she has little alternative given the nature of her work and the recent turn of events.\n\nShe can begin at your convenience.</indent>"
-msgstr "<indent=5%>總監，\n\n一切順利。起初 Broussard 不情願，但鑑於她的工作性質，她幾乎沒有其他選擇。\n\n她可以在您方便的時候開始。</indent>"
+msgstr "<indent=5%>總監：\n\n一切順利。一開始 Broussard 有些不情願，但考量到她的工作性質和近期的發展，她幾乎沒有其他選擇。\n\n她可以在您方便的任何時間開始工作。</indent>"
 
 #. STRINGS.CODEX.A4_ATOMICONRECRUITMENT.BODY.EMAILHEADER1
 msgctxt "STRINGS.CODEX.A4_ATOMICONRECRUITMENT.BODY.EMAILHEADER1"
@@ -21603,27 +21603,27 @@ msgstr "來自原子部門的結果"
 #. STRINGS.CODEX.A4_B835.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A4_B835.BODY.CONTAINER1"
 msgid "I started work at a new company called the \"Gravitas Facility\" today! I was nervous I wouldn't get the job at first because I was fresh out of school, and I was so so so pushy in the interview, but the Director apparently liked my thesis on the physiological thermal regulation of Arctic lizards. I'll be working with some brilliant geneticists, bioengineering organisms for space travel in harsh environments! It's like a dream come true. I get to work on exciting new research in a place where no one knows me!\n------------------\n"
-msgstr "我今天開始在一間叫作「引力科技」的公司上班！我最初擔心自己不會得到這份工作，因為我剛從學校畢業，所以我在面試時表現的很積極，但是總監顯然喜歡我關於北極蜥蜴的生理溫度調節的論文。\n\n我將與一些傑出的遺傳學家，生物工程所製造的生物們，一起在惡劣的環境中進行太空旅行！\n\n這就像夢想成真。我在一個沒有人認識我的地方展開激動人心的新研究！\n------------------\n"
+msgstr "我今天開始在一家名為「引力科技」的新公司上班了！我一開始很緊張，怕自己拿不到這份工作，因為我剛從學校畢業，而且面試時表現得實在是太過積極了。不過，總監顯然很喜歡我關於北極蜥蜴生理溫度調節的論文。\n\n我將會跟一些傑出的遺傳學家合作，為在惡劣環境中進行太空旅行而生物工程改造生物！\n\n這簡直就是夢想成真。我可以在一個沒有人認識我的地方，展開令人興奮的全新研究！\n------------------\n"
 
 #. STRINGS.CODEX.A4_B835.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.A4_B835.BODY.CONTAINER2"
 msgid "No no no no no! It can't be! BANHI ANSARI is here, working on space shuttle thrusters in the robotics lab! As soon as she saw me she called me \"Bubbles\" and told everyone about the time I accidentally inhaled a bunch of fungal spores during lab, blew a big snot bubble out my nose and then sneezed all over Professor Avery! Everyone's calling me \"Bubbles\" instead of \"Doctor\" at work now. Some of them don't even know it's a nickname, but I don't want to correct them and seem rude or anything. Ugh, I can't believe that story followed me here! BANHI RUINS EVERYTHING!\n------------------\n"
-msgstr "不不不不不！不可能！BANHI ANSARI 在這裡，在機器人實驗室研究太空船推進器！她一見到我就叫我「泡泡」，並將我在實驗室裡意外吸入一堆真菌孢子的糗事告訴了大家，從鼻子裡噴出了一個大鼻涕泡泡，然後打噴嚏到了 Avery 教授身上！現在工作中每個人都叫我「泡泡」而不是「博士」。他們中的一些人甚至不知道這是一個暱稱，但我不想糾正他們，看起來很粗魯什麼的。呃，我不敢相信這個故事跟著我來到這裡！BANHI 破壞了一切！\n------------------\n"
+msgstr "不不不不不！怎麼會這樣！BANHI ANSARI 竟然在這裡，在機器人實驗室研究太空梭推進器！她一見到我就叫我「泡泡」，還把當年我在實驗室不小心吸入一堆真菌孢子，從鼻孔吹出一個大鼻涕泡，最後還打噴嚏噴了 Avery 教授一身的糗事全都抖了出來！現在工作上每個人都叫我「泡泡」而不是「博士」。他們有些人甚至不知道這是暱稱，但我又不想糾正他們，怕顯得不禮貌什麼的。呃，我真不敢相信那個故事竟然跟著我來了！BANHI 真是毀了一切！\n------------------\n"
 
 #. STRINGS.CODEX.A4_B835.BODY.CONTAINER3
 msgctxt "STRINGS.CODEX.A4_B835.BODY.CONTAINER3"
 msgid "I've spent the last few days buried in my work, and I'm actually feeling a lot better. We finally perfected a gene manipulation that controls heat sensitivity in rats. Our test subjects barely even shiver in subzero temperatures now. We'll probably do a testrun tomorrow with Robotics to see how the rats fare in the prototype shuttles we're developing.\n------------------\n"
-msgstr "我將自己埋入工作幾天後，現在我感覺好多了。我們最後完美的控制的了小白鼠的熱感覺器官。我們的測試對象現在幾乎不會在零度以下感到寒冷。\n\n我們明天可能會和機器人部門一起做個測試，看看小白鼠們在我們開發的原型機中會表現如何。\n------------------\n"
+msgstr "過去幾天，我將自己完全投入到工作中，現在我的感覺真的好多了。我們終於成功地完善了一種基因操縱技術，能控制小白鼠的熱敏感性。現在我們的測試對象在零度以下的低溫中幾乎不會顫抖了。\n\n我們預計明天會和機器人部門進行一次試運行，看看小白鼠們在我們正在開發的原型太空梭裡表現如何。\n------------------\n"
 
 #. STRINGS.CODEX.A4_B835.BODY.CONTAINER4
 msgctxt "STRINGS.CODEX.A4_B835.BODY.CONTAINER4"
 msgid "HAHAHAHAHA! Bioengineering and Robotics did the test run today and Banhi was securing the live cargo pods when one of the rats squeaked at her. She was so scared, she fell on her butt and TOOTED in front of EVERYONE! They're all calling her \"Pipsqueak\". \"Bubbles\" doesn't seem quite so bad now. Pipsqueak's been a really good sport about it though, she even laughed it off at the time. I think we might actually be friends now? It's weird.\n------------------\n"
-msgstr "哈～～～～！生物工程部與機器人部今天在做測試的時候，當時 Banhi 正在固定活體貨艙，其中有隻小白鼠對著他狂叫。她感到很害怕，當著大家的面坐在地上哭了起來！他們現在稱他為「膽小鬼」－而「泡泡」現在聽起來似乎沒那麼糟了。膽小鬼似乎是個不錯的玩笑，她當時聽了也哈哈大笑。我覺得現在我們真的成為了朋友？還真奇怪。\n------------------\n"
+msgstr "哈哈哈哈哈哈！生物工程部和機器人部今天進行了測試運行，當時 Banhi 正在固定活體貨艙，結果其中一隻小白鼠對著她吱吱叫。她嚇壞了，一屁股跌坐在地上，還放了個屁！他們現在稱她為「膽小鬼」－而「泡泡」這個綽號現在聽起來倒沒那麼糟了。膽小鬼對這件事倒是很看得開，當時她甚至還笑了出來。我想我們現在可能真的成為朋友了？真是奇怪。\n------------------\n"
 
 #. STRINGS.CODEX.A4_B835.BODY.CONTAINER5
 msgctxt "STRINGS.CODEX.A4_B835.BODY.CONTAINER5"
 msgid "I lied. Me and Banhi aren't friends - we're BEST FRIENDS. She even showed me how she does her hair. We're gonna book the wind tunnel after work and run experiments together on thermo-rat rockets! Haha!\n------------------\n"
-msgstr "我撒了謊。我和 Banhi 不是朋友－我們是最好的朋友。她甚至向我展示了她的髮型。下班之後我們要去預約一個風洞，並和她一起在熱鼠火箭上實驗！哈哈！\n------------------\n"
+msgstr "我撒了個謊。我和 Banhi 不只是朋友－她甚至還向我展示了她是怎麼整理頭髮的。我們打算下班後去預約風洞，然後一起在熱鼠火箭上進行實驗！哈哈！\n------------------\n"
 
 #. STRINGS.CODEX.A4_B835.SUBTITLE
 msgctxt "STRINGS.CODEX.A4_B835.SUBTITLE"
@@ -21673,7 +21673,7 @@ msgstr "實驗 7D"
 #. STRINGS.CODEX.A5_GENETICOOZE.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A5_GENETICOOZE.BODY.CONTAINER1"
 msgid "[LOG BEGINS]\n\nThe Printing Pod is primed by a synthesized bio-organic concoction the technicians have taken to calling \"Ooze\", a specialized mixture composed of water, carbon, and dozens upon dozens of the trace elements necessary for the creation of life.\n\nThe pod reconstitutes these elements into a living organism using the blueprints we feed it, before finally administering a shock of life.\n\nIt is like any other 3D printer. We just use different ink.\n\nDr. Broussard, signing off.\n\n[LOG ENDS]"
-msgstr "[紀錄開始]\n\n此列印元填充了一種綜合的生物有機合成物，技術人員稱它為「基因軟泥」，一種由水、碳、以及數十種創造生命所必需的微量元素組成的特殊混合物。\n\n此設備依使用的藍圖將這些元素重新組成一個生命體，最後給予生命的衝擊。\n\n它就像是任何其它的 3D 列印機。我們只是使用不同的墨水。\n\nBroussard 博士，簽字\"\n\n[紀錄結束]"
+msgstr "[日誌開始]\n\n此列印元填充了一種綜合的生物有機合成物，技術人員稱它為「基因軟泥」，一種由水、碳、以及數十種創造生命所必需的微量元素組成的特殊混合物。\n\n此設備依使用的藍圖將這些元素重新組成一個生命體，最後給予生命的衝擊。\n\n它就像是任何其它的 3D 列印機。我們只是使用不同的墨水。\n\nBroussard 博士，簽字\"\n\n[日誌結束]"
 
 #. STRINGS.CODEX.A5_GENETICOOZE.SUBTITLE
 msgctxt "STRINGS.CODEX.A5_GENETICOOZE.SUBTITLE"
@@ -21688,7 +21688,7 @@ msgstr "生物液體"
 #. STRINGS.CODEX.A5_SHRIMP.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A5_SHRIMP.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subject Identified: B111]</smallcaps>\n\n[LOG BEGINS]\n\n\"A-and how are you clever little guys today?\n\n(trilling)\n\nLook! I brought some pink shrimp for you to eat. Your favorite! Are you hungry?\n\n(excited trilling)\n\nOh, one moment, my keen eager pals. I left the recorder on --\n\n(rustling)\"\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B111]</smallcaps>\n\n[紀錄開始]\n\n「聰明的小伙伴，今…今天好嗎？\n\n（激動）\n\n看！粉紅蝦。你的最愛！你餓了嗎？\n\n（興奮的尖叫聲）\n\n哦，等等，我親愛的朋友們。我忘了關錄音機了。——\n\n（沙沙）」\n\n[紀錄結束]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B111]</smallcaps>\n\n[日誌開始]\n\n「聰明的小伙伴，今…今天好嗎？\n\n（激動）\n\n看！粉紅蝦。你的最愛！你餓了嗎？\n\n（興奮的尖叫聲）\n\n哦，等等，我親愛的朋友們。我忘了關錄音機了。——\n\n（沙沙）」\n\n[日誌結束]"
 
 #. STRINGS.CODEX.A5_SHRIMP.SUBTITLE
 msgctxt "STRINGS.CODEX.A5_SHRIMP.SUBTITLE"
@@ -21703,7 +21703,7 @@ msgstr "蝦子"
 #. STRINGS.CODEX.A5_STRAWBERRIES.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A5_STRAWBERRIES.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subject Identified: B111]</smallcaps>\n\n[LOG BEGINS]\n\n\"A-and how are you bouncy little critters today?\n\n(chattering)\n\nLook! I brought strawberries. Your favorite! Are you hungry?\n\n(excited chattering)\n\nOh, one moment, my precious, little pals. I left the recorder on --\n\n(rustling)\"\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B111]</smallcaps>\n\n[紀錄開始]\n\n「快活的小動物，今…今天好嗎？\n\n（喋喋不休）\n\n看！草莓。你的最愛！你餓了嗎？\n\n（興奮的喋喋不休）\n\n哦，等等，我親愛的朋友們。我忘了關錄音機了。——\n\n（沙沙）」\n\n[紀錄結束]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B111]</smallcaps>\n\n[日誌開始]\n\n「快活的小動物，今…今天好嗎？\n\n（喋喋不休）\n\n看！草莓。你的最愛！你餓了嗎？\n\n（興奮的喋喋不休）\n\n哦，等等，我親愛的朋友們。我忘了關錄音機了。——\n\n（沙沙）」\n\n[日誌結束]"
 
 #. STRINGS.CODEX.A5_STRAWBERRIES.SUBTITLE
 msgctxt "STRINGS.CODEX.A5_STRAWBERRIES.SUBTITLE"
@@ -21718,7 +21718,7 @@ msgstr "草莓"
 #. STRINGS.CODEX.A5_SUNFLOWERSEEDS.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A5_SUNFLOWERSEEDS.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subject Identified: B111]</smallcaps>\n\n[LOG BEGINS]\n\n\"A-and how are you furry little fellows today?\n\n(squeaking)\n\nLook! I brought sunflower seeds. Your favorite! Are you hungry?\n\n(excited squeaking)\n\nOh, one moment, my dear, little friends. I left the recorder on --\n\n(rustling)\"\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B111]</smallcaps>\n\n[紀錄開始]\n\n「你今天好嗎？\n\n（尖叫聲）\n\n看！葵花子。你的最愛！你餓了嗎？\n\n（興奮的尖叫聲）\n\n哦，等等，我親愛的朋友們。我忘了關錄音機了。——\n\n（沙沙）」\n\n[紀錄結束]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B111]</smallcaps>\n\n[日誌開始]\n\n「你今天好嗎？\n\n（尖叫聲）\n\n看！葵花子。你的最愛！你餓了嗎？\n\n（興奮的尖叫聲）\n\n哦，等等，我親愛的朋友們。我忘了關錄音機了。——\n\n（沙沙）」\n\n[日誌結束]"
 
 #. STRINGS.CODEX.A5_SUNFLOWERSEEDS.SUBTITLE
 msgctxt "STRINGS.CODEX.A5_SUNFLOWERSEEDS.SUBTITLE"
@@ -21803,12 +21803,12 @@ msgstr "洗碗機器人"
 #. STRINGS.CODEX.A6_MEMORYIMPLANTATION.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A6_MEMORYIMPLANTATION.BODY.CONTAINER1"
 msgid "[LOG BEGINS]\n\nTraditionally, cloning produces a subject that is genetically identical to the donor but develops independently, producing a being that is, in its own way, unique.\n\nThe pod, conversely, attempts to print an exact atomic copy. Theoretically all neural pathways should be intact and identical to the original subject.\n\nIt's fascinating, given this, that memories are not already inherent in our subjects; however, no cloned subjects as of yet have shown any signs of recognition when introduced to familiar stimuli, such as the donor subject's enclosure.\n\nRefer to Experiment 7D.\n\nRefer to Experiment 7F."
-msgstr "[紀錄開始]\n\n傳統上，複製實驗體在遺傳學上會與捐贈者完全一樣，但在獨立發展後，會以自己的方式產生一種獨立的存在。\n\n而這個設備，則反過來，企圖列印一個原子級的複製品。從理論上講，所有神經系統都應該是完整並與原實驗體相同。\n\n於此，令人著迷的是，在我們的實驗體身上沒有相關的記憶；不管用什麼方法，當引入熟悉的刺激物時，複製的實驗體沒有表現出認得的樣子，例如捐贈者的隨身物。\n\n參考實驗 7D。\n\n參考實驗 7F。"
+msgstr "[日誌開始]\n\n傳統上，複製會產生一個與捐贈者基因完全相同的個體，但由於獨立發展，會以自己的方式成為一個獨特的生命體。\n\n然而，這個列印元卻是試圖列印一個精確的原子級複製品。從理論上講，所有神經通路都應完整無缺，並且與原個體完全一致。\n\n有鑑於此，最令人著迷的是，我們的個體並未內建任何記憶；至今為止，沒有任何複製個體在接觸熟悉的刺激物時表現出認得的跡象，例如捐贈者個體生活過的環境。\n\n請參閱實驗 7D。\n\n請參閱實驗 7F。"
 
 #. STRINGS.CODEX.A6_MEMORYIMPLANTATION.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.A6_MEMORYIMPLANTATION.BODY.CONTAINER2"
 msgid "\nMemories <i>must</i> be embedded within the physical brainmaps of our subjects. The only question that remains is how to activate them. Hormones? Chemical supplements? Situational triggers?\n\nThe Director seems eager to move past this problem, and I am concerned at her willingness to bypass essential stages of the research development process.\n\nWe cannot move on to the fine polish of printing systems until the core processes have been perfected - which they have not.\n\nDr. Broussard, signing off.\n\n[LOG ENDS]"
-msgstr "\n記憶<b>必須</b>植入實驗體的大腦中。唯一的問題是要如何產生作用。激素？化學補充劑？情境觸發？\n\n總監似乎急於解決這個問題，我擔心她會跳過必要的研發階段。\n\n在核心流程得到完善之前，我們無法繼續對列印系統進行優化－而這些流程尚未完善。\n\nBroussard 博士，簽字。\n\n[紀錄結束]"
+msgstr "\n記憶<b>必須</b>嵌入個體的實體腦圖中。唯一剩下的問題是如何將其啟動。賀爾蒙？化學補充劑？情境觸發機制？\n\n總監似乎急於跳過這個問題，我很擔心她願意繞過研究開發流程中那些必要的階段。\n\n直到核心流程臻於完善之前，我們不能繼續進行列印系統的精細打磨－而這些流程，目前還遠遠沒有。\n\nBroussard 博士，日誌簽退。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.A6_MEMORYIMPLANTATION.SUBTITLE
 msgctxt "STRINGS.CODEX.A6_MEMORYIMPLANTATION.SUBTITLE"
@@ -21818,12 +21818,12 @@ msgstr "加密等級：二"
 #. STRINGS.CODEX.A6_MEMORYIMPLANTATION.TITLE
 msgctxt "STRINGS.CODEX.A6_MEMORYIMPLANTATION.TITLE"
 msgid "Memory Dysfunction Log"
-msgstr "記憶功能障礙日誌"
+msgstr "記憶功能失調日誌"
 
 #. STRINGS.CODEX.A6_NEWSECURITY2.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.A6_NEWSECURITY2.BODY.CONTAINER2"
 msgid "<indent=5%>So, the facility is introducing this new security system that scans your hand to unlock the doors. My question is, what exactly are they scanning?\n\nThe folks in engineering say the door device doesn't look like a fingerprint scanner, but the duo working over in bioengineering won't comment at all.\n\nI can't say I like it.</indent>"
-msgstr "<indent=5%>因此，公司引進了新的安檢系統，當它們掃描了你的手後門會打開。我的問題是，他們到底掃描的是什麼？\n\n工程部的人說那個門上的裝置不像指紋掃描器，但生物工程部的兩位人員完全不願評論。\n\n我對它沒有好感。</indent>"
+msgstr "<indent=5%>所以，設施正在引進這套新的保全系統，掃描你的手就能解鎖大門。我的問題是，他們究竟在掃描什麼？\n\n工程部門的同事說門上的裝置看起來不像指紋掃描器，但生物工程部的兩位老兄完全不願對此發表任何評論。\n\n我可是一點都不喜歡這玩意兒。</indent>"
 
 #. STRINGS.CODEX.A6_NEWSECURITY2.BODY.EMAILHEADER1
 msgctxt "STRINGS.CODEX.A6_NEWSECURITY2.BODY.EMAILHEADER1"
@@ -21848,7 +21848,7 @@ msgstr "新的安檢系統？"
 #. STRINGS.CODEX.A7_EMPLOYEEPROCESSING.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A7_EMPLOYEEPROCESSING.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subjects Identified: A001, A435, B111]</smallcaps>\n\n[LOG BEGINS]\n\nTechnician: Thank you for the fingerprints, doctor. We just need a quick voice sample, then you can be on your way.\n\nDr. Broussard: Wow Jackie, your new security's no joke.\n\nDirector: Please address me as \"Director\" while on Facility grounds.\n\nDr. Broussard: ...R-right.\n\n(clicking)\n\nTechnician: This should only take a moment. Speak clearly and the system will derive a vocal signature for you.\n\nTechnician: When you're ready.\n\n(throat clearing)\n\nDr. Broussard: Security code B111, Dr. Olivia Broussard. Gravitas Facility Bioengineering Department.\n\n(pause)\n\nTechnician: Great.\n\nDr. Broussard: What was that light just now?\n\nDirector: A basic security scan. No need for concern.\n\n(machine printing)\n\nTechnician: Here's your ID. You should have access to all doors in the facility now, Dr. Broussard.\n\nDr. Broussard: Thank you.\n\nDirector: Come along, Doctor.\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：A001、A435、B111]</smallcaps>\n\n[紀錄開始]\n\n技術人員：感謝您提供指紋，博士。現在我們只需要一個快速的語音樣本，你就可以繼續通過了。\n\nBroussard 博士：哇！Jackie，你新的安檢系統不是開玩笑的。\n\n總監：請到「總監室」所在的樓層來見我。\n\nBroussard 博士：…馬上來。\n\n（按鍵聲）\n\n技術人員：這只需要花點時間。發音清楚，然後系統將會記錄您的聲音識別特徵。\n\n技術人員：當你準備好了。\n\n（咳咳咳）\n\nBroussard 博士：安全碼 B111，Olivia Broussard 博士。引力科技生物工程部\n\n（暫停）\n\n技術人員：很好。\n\nBroussard 博士：剛剛那道光是什麼？\n\n總監：一個基本的安全掃描。不需要在意。\n\n（機器列印聲）\n\n技術人員：這是你的識別證。你現在應該能通過這公司內所有的門了，Broussard 博士。\n\nBroussard 博士：謝謝您。\n\n總監：一起來，博士。\n\n[紀錄結束]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：A001、A435、B111]</smallcaps>\n\n[日誌開始]\n\n技術人員：感謝您提供指紋，博士。現在我們只需要一個快速的語音樣本，你就可以繼續通過了。\n\nBroussard 博士：哇！Jackie，你新的安檢系統不是開玩笑的。\n\n總監：請到「總監室」所在的樓層來見我。\n\nBroussard 博士：…馬上來。\n\n（按鍵聲）\n\n技術人員：這只需要花點時間。發音清楚，然後系統將會記錄您的聲音識別特徵。\n\n技術人員：當你準備好了。\n\n（咳咳咳）\n\nBroussard 博士：安全碼 B111，Olivia Broussard 博士。引力科技生物工程部\n\n（暫停）\n\n技術人員：很好。\n\nBroussard 博士：剛剛那道光是什麼？\n\n總監：一個基本的安全掃描。不需要在意。\n\n（機器列印聲）\n\n技術人員：這是你的識別證。你現在應該能通過這公司內所有的門了，Broussard 博士。\n\nBroussard 博士：謝謝您。\n\n總監：一起來，博士。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.A7_EMPLOYEEPROCESSING.SUBTITLE
 msgctxt "STRINGS.CODEX.A7_EMPLOYEEPROCESSING.SUBTITLE"
@@ -21863,7 +21863,7 @@ msgstr "員工處理"
 #. STRINGS.CODEX.A7_NEUTRONIUM.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A7_NEUTRONIUM.BODY.CONTAINER1"
 msgid "[LOG BEGINS]\n\nDirector: I've determined the substance to be metallic in nature. The exact cause of its formation is still unknown, though I believe it to be something of an autoimmune reaction of the natural universe, a quarantining of foreign material to prevent temporal contamination.\n\nDirector: A method has yet to be found that can successfully remove the substance from an affected object, and the larger implication that two molecularly, temporally identical objects cannot coexist at one point in time has dire implications for all time manipulation technology research, not just the Bow.\n\nDirector: For the moment I have dubbed the substance \"Neutronium\", and assigned it a theoretical place on the table of elements. Research continues.\n\n[LOG ENDS]"
-msgstr "[紀錄開始]\n\n總監：我確定該物質本質上是金屬。形成的原因還不清楚，不過我認為這是自然宇宙自身的免疫反應，隔離異物以防止暫時汙染。\n\n總監：還沒有找到方法可以成功的從受影響物品上移除此物質，更確卻的說是兩個分子，時空上相同的物體無法共存在某一個時間點上，對所有操縱時間的科技研究來說都是一種可怕的意義，不只是對弓而言。\n\n總監：我稱這種物質為「0 號元素」，並將其放在元素周期表的理論位置。研究仍在繼續。\n\n[紀錄結束]"
+msgstr "[日誌開始]\n\n總監：我已經確定該物質本質上屬於金屬。其確切的形成原因仍是未知，不過我認為它類似於自然宇宙的一種自體免疫反應，藉由隔離外來物質來防止時間性污染。\n\n總監：目前尚未找到能成功從受影響物體上移除此物質的方法，更嚴重的含義在於，兩個分子結構上、時間上完全相同的物體無法共存於同一個時間點，這對所有時間操控技術研究都造成了嚴峻的影響，不只針對「弓」這項研究。\n\n總監：目前我將此物質命名為「0 號元素」，並在元素週期表中賦予它一個理論位置。研究仍在持續。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.A7_NEUTRONIUM.SUBTITLE
 msgctxt "STRINGS.CODEX.A7_NEUTRONIUM.SUBTITLE"
@@ -21873,12 +21873,12 @@ msgstr "加密等級：三"
 #. STRINGS.CODEX.A7_NEUTRONIUM.TITLE
 msgctxt "STRINGS.CODEX.A7_NEUTRONIUM.TITLE"
 msgid "Byproduct Notes"
-msgstr "副作用筆記"
+msgstr "副產物備註"
 
 #. STRINGS.CODEX.A7_NEWEMPLOYEE.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.A7_NEWEMPLOYEE.BODY.CONTAINER2"
 msgid "<indent=5%>Attention Gravitas Facility personnel;\n\nPlease welcome our newest staff member, Olivia Broussard, PhD.\n\nDr. Broussard will be leading our upcoming genetics project and has been installed in our bioengineering department.\n\nBe sure to offer her our warmest welcome.</indent>"
-msgstr "<indent=5%>請注意，引力科技的員工；\n\n請歡迎我們的新成員，Olivia Broussard 博士。\n\nBroussard 博士已經加入我們的生物工程部，並將會領導我們接下來的幾項計劃。\n\n一定要向她致以最熱烈的歡迎。</indent>"
+msgstr "<indent=5%>引力科技設施全體人員請注意；\n\n歡迎我們的最新成員，Olivia Broussard 博士。\n\nBroussard 博士將領導我們即將展開的基因學專案，並已進駐我們的生物工程部門。\n\n務必向她表達我們最熱烈的歡迎之意。</indent>"
 
 #. STRINGS.CODEX.A7_NEWEMPLOYEE.BODY.EMAILHEADER1
 msgctxt "STRINGS.CODEX.A7_NEWEMPLOYEE.BODY.EMAILHEADER1"
@@ -21903,7 +21903,7 @@ msgstr "歡迎，新同事"
 #. STRINGS.CODEX.A8_CLEANUPTHEMESS.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A8_CLEANUPTHEMESS.BODY.CONTAINER1"
 msgid "I cleaned up a few messes in my time, but ain't nothing like the mess I seen today in that bio lab. Green goop all over the floor, all over the walls. Murky tubes with what look like human shapes floating in them.\n\nThey think old Mr. Gunderson ain't got smarts enough to put two and two together, but I got eyes, don't I?\n\nAin't nobody ever pay attention to the janitor.\n\nBut the janitor pays attention to everybody.\n\n-Mr. Stinky Gunderson"
-msgstr "我在工作時間內清理一些髒汙，但這不像是我今天在生物實驗室看到的那種髒汙。地板與牆壁上到處都是綠色的黏液。模糊的管道裡有著看起來像是人型的東西漂浮著。\n\n他們認為 Gunderson 先生年紀大且不聰明，才會將其兩兩安排為一組，但我有眼睛看，不是嗎？\n\n再一次，沒有任何人注意到清潔工。\n\n－Stinky Gunderson 先生"
+msgstr "我這輩子清過不少爛攤子，但沒有一個像我今天在那個生物實驗室看到的這麼誇張。綠色的黏糊物，地板、牆壁到處都是。那些混濁的管子裡，還漂著看起來像人型的東西。\n\n那些人以為老子 Gunderson 不夠聰明，不會自己把事情兜在一起想，但我眼睛沒瞎，你說是不是？\n\n從來就沒人會注意到清潔工啦。\n\n但清潔工可把每個人都看在眼裡。\n\n－Stinky Gunderson 先生"
 
 #. STRINGS.CODEX.A8_CLEANUPTHEMESS.SUBTITLE
 msgctxt "STRINGS.CODEX.A8_CLEANUPTHEMESS.SUBTITLE"
@@ -21918,7 +21918,7 @@ msgstr "清理混亂"
 #. STRINGS.CODEX.A8_FIRSTSUCCESS.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A8_FIRSTSUCCESS.BODY.CONTAINER1"
 msgid "We've successfully compressed and expanded small portions of time under .03 milliseconds. This proves that time is something that can be physically acted upon, suggesting that our vision is attainable.\n\nAn unintentional consequence of both the expansion and contraction of time is the creation of a \"vacuum\" in the space between the affected portion of time and the much more expansive unaffected portions.\n\nSo far, we are seeing that the unaffected time on either side of the manipulated portion will expand or contract to fill the vacuum, although we are unsure how far-reaching this consequence is or what effect it has on the laws of the natural universe. At the end of all compression and expansion experiments, alterations to time are undone and leave no lasting change."
-msgstr "我們成功在 .03 毫秒內壓縮和延長一小段時間。這證明了時間是可以物理作用的，暗示了我們的願景是可以實現的。\n\n延長與縮短時間的意外結果是，在太空中受影響時間的部分與大多未受影響的部分之間型成了一個「真空」。\n\n到目前為止，我們已觀察到被操縱部的的兩端未受影響的部分會延長或是收縮以填滿真空，儘管我們不確定此結果的影響範圍或是對自然宇宙的法則造成了什麼影響。\n\n在所有的壓縮與延長實驗結束後，對時間的調整都將取消並不會造成持久的影響。"
+msgstr "我們成功地在 .03 毫秒的範圍內壓縮與擴展了一小段時間。這證明了時間是可以被物理作用的，暗示了我們的願景是可以實現的。\n\n時間的擴展與收縮帶來的意外後果是，在受影響的時間區段與更廣大未受影響的時間區段之間，產生了一個「真空」。\n\n到目前為止，我們觀察到被操縱區段兩側未受影響的時間會擴張或收縮來填補這個真空，儘管我們不確定這個後果的影響範圍有多深遠，以及它會對自然宇宙法則造成什麼衝擊。在所有壓縮與擴展實驗結束後，所有對時間的修改都會被撤銷，不留下任何持久的變化。"
 
 #. STRINGS.CODEX.A8_FIRSTSUCCESS.SUBTITLE
 msgctxt "STRINGS.CODEX.A8_FIRSTSUCCESS.SUBTITLE"
@@ -21933,7 +21933,7 @@ msgstr "振奮人心的結果"
 #. STRINGS.CODEX.A8_NEWSECURITY3.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.A8_NEWSECURITY3.BODY.CONTAINER2"
 msgid "<indent=5%>I'm almost certain now that the Facility's stolen our genetic information.\n\nForty-odd employees would make for mighty convenient lab rats, and even if we discovered what Gravitas did, we wouldn't have a lot of legal options. We can't exactly go to the public given the nature of our work.\n\nI can't stop thinking about what sort of experiments they might be conducting on my DNA, but I have to keep my mouth shut.\n\nI can't risk losing my job.</indent>"
-msgstr "<indent=5%>我現在幾乎可以肯定公司竊取了我們的遺傳資訊。\n\n四十多名員工將很快成為實驗室的老鼠，即使我們發現了引力科技做了什麼，我們也沒有很多的法律選項。因為我們的工作性質無法完全公開。\n\n我不禁想到他們可能用我的基因進行什麼樣的實驗，但我必須閉上我的嘴。\n\n我不能冒險而失去工作。</indent>"
+msgstr "<indent=5%>我現在幾乎可以肯定，設施已經竊取了我們的基因資訊。\n\n四十多名員工將會成為極為方便的實驗室白老鼠，而且就算我們發現了引力科技做了什麼，我們也沒有多少法律途徑可以選擇。考慮到我們工作的性質，我們根本無法向公眾公開。\n\n我止不住地猜想他們可能會用我的 DNA 進行什麼樣的實驗，但我必須守口如瓶。\n\n我不能冒險丟掉這份工作。</indent>"
 
 #. STRINGS.CODEX.A8_NEWSECURITY3.BODY.EMAILHEADER1
 msgctxt "STRINGS.CODEX.A8_NEWSECURITY3.BODY.EMAILHEADER1"
@@ -21958,7 +21958,7 @@ msgstr "他們竊取了我們的基因"
 #. STRINGS.CODEX.A9_NEUTRONIUMAPPLICATIONS.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A9_NEUTRONIUMAPPLICATIONS.BODY.CONTAINER1"
 msgid "[LOG BEGINS]\n\nDirector: Temporal energy can be reconfigured to vibrate the matter constituting Neutronium at just the right frequency to break it down and disperse it.\n\nDirector: However, it is difficult to stabilize and maintain this reconfigured energy long enough to effectively remove practical amounts of Neutronium in real-life scenarios.\n\nDirector: I am looking into making this technology more reliable and compact - this data could potentially have uses in the development of some sort of all-purpose disintegration ray.\n\n[END LOG]"
-msgstr "[紀錄開始]\n\n總監：時間能量可以被重新設定，在適當的頻率下震動組成 0 號元素的物質，可以打破並分散它。\n\n總監：無論如何，在現實生活中，它很難穩定並長時間地維持重新設定的能量以有效的消除實際數量的 0 號元素。\n\n總監：我正在使這樣技能變的更可靠與嚴謹ー這些資料可能會在某些通用射線的開發中有些用處。\n\n[紀錄結束]"
+msgstr "[日誌開始]\n\n總監：時間能量可以被重新設定，在適當的頻率下震動組成 0 號元素的物質，可以打破並分散它。\n\n總監：無論如何，在現實生活中，它很難穩定並長時間地維持重新設定的能量以有效的消除實際數量的 0 號元素。\n\n總監：我正在使這樣技能變的更可靠與嚴謹ー這些資料可能會在某些通用射線的開發中有些用處。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.A9_NEUTRONIUMAPPLICATIONS.SUBTITLE
 msgctxt "STRINGS.CODEX.A9_NEUTRONIUMAPPLICATIONS.SUBTITLE"
@@ -21973,7 +21973,7 @@ msgstr "可能的應用"
 #. STRINGS.CODEX.A9_PIPEDREAM.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A9_PIPEDREAM.BODY.CONTAINER1"
 msgid "[LOG BEGINS]\n\nThe Director has suggested implanting artificial memories during print, but despite the great strides made in our research under her direction, such a thing can barely be considered more than a pipe dream.\n\nFor the moment we remain focused on eliminating the remaining glitches in the system, as well as developing effective education and training routines for printed subjects.\n\nSuggest: Omega-3 supplements and mentally stimulating enclosure apparatuses to accompany tutelage.\n\nDr. Broussard signing off.\n\n[LOG ENDS]"
-msgstr "[紀錄開始]\n\n總監建議在列印期間植入人工記憶，儘管我們的研究在她的指導下取得了很大的進步，不會再被認為是一場白日夢。\n\n目前我們仍然專注於消除系統中剩餘的異常狀況，以及為列印出的實驗體開發有效的教育與訓練項目。\n\n建議：Omega 3 補充劑與附有保護裝置的精神刺激設備。\n\nBroussard 博士，簽字。\n\n[紀錄結束]"
+msgstr "[日誌開始]\n\n總監建議在列印期間植入人工記憶，儘管我們的研究在她的指導下取得了巨大的進展，但這件事幾乎只能被視為一場白日夢。\n\n目前，我們仍專注於排除系統中殘存的小故障，以及為列印出的個體開發有效的教育與訓練流程。\n\n建議：搭配指導，提供 Omega 3 補充劑與附有保護裝置的精神刺激設備。\n\nBroussard 博士，日誌簽退。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.A9_PIPEDREAM.SUBTITLE
 msgctxt "STRINGS.CODEX.A9_PIPEDREAM.SUBTITLE"
@@ -22148,7 +22148,7 @@ msgstr "太空中的辦公空間！"
 #. STRINGS.CODEX.B10_AI.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.B10_AI.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subject Identified: B111-1]</smallcaps>\n\n[LOG BEGINS]\n\nI made a horrible discovery today while reviewing work on the artificial intelligence programming. It seems Dr. Ali mixed up a file when uploading a program onto a rudimentary robot and discovered that the device displayed the characteristics of what he called \"a puppy that was lost in a teleportation experiment weeks ago\".\n\nThis is unbelievable! Jackie has been hiding the nature of the teleportation experiments from me. What's worse is I know from previous conversations that she knows I would never approve of pursuing this line of experimentation. The societal benefits of teleportation aside, you <i>cannot</i> kill a living being every time you want to send them to another room. The moral and ethical implications of this are horrendous.\n\nI know she has been keeping this information from me. When I searched through the Gravitas database I found nothing to do with these teleportation experiments. It was only because this reference showed up in Dr. Ali's AI paper that I was able to discover what has been happening.\n\nJackie has to be stopped.\n\nBut I know she is beyond reasonable discussion. I hope this is the only thing she is hiding from me, but I fear it is not.\n\n[LOG ENDS]\n\n[LOG BEGINS]\n\nDespite myself, I can't help thinking of the intriguing possiblities this presents for the AI development. It haunts me.\n\nI fear I may be sliding down a slippery slope, at the bottom of which Jackie is waiting for me with open arms.\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B111-1]</smallcaps>\n\n[紀錄開始]\n\n今天我在重新檢視人工智慧程式時有了一個可怕的發現。看來 Ali 博士將程式上傳到一個初級機器人時弄錯了文件，結果發現該設備表現出他所說的「一隻小狗在上星期的傳送實驗中失蹤了」的特徵。\n\n無法置信！Jackie 向我隱瞞了傳送實驗的性質。更糟糕的是我從以前的談話得知，她知道我絕對不會同意這項實驗。除了傳送技術對社會益處之外，你<b>不能</b>在每次你想將一個活生生的人送到另一個房間就殺死他。這在道德和倫理上都令人髮指。\n\n我知道她一直對我保密此資訊。當我搜尋引力科技的資料庫時，我完全找不到這些這些與傳送實驗有關的資訊。只因為這個線索在 Ali 博士的 AI 文件中顯示，我才能發現正在發生的事。\n\nJackie 必須停止。\n\n但我知道她已經無法合理討論了。我希望這是她對我隱瞞的唯一一件事，但我擔心並不是如此。\n\n[紀錄結束]\n\n[紀錄開始]\n\n僅管我自己不禁想到這對 AI 開發帶來的可能性。它困擾著我。\n\n我擔心滑坡效應，而 Jackie 正在底端張開雙臂等著我。\n\n[紀錄結束]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B111-1]</smallcaps>\n\n[日誌開始]\n\n今天我在重新檢視人工智慧程式時有了一個可怕的發現。看來 Ali 博士將程式上傳到一個初級機器人時弄錯了文件，結果發現該設備表現出他所說的「一隻小狗在上星期的傳送實驗中失蹤了」的特徵。\n\n無法置信！Jackie 向我隱瞞了傳送實驗的性質。更糟糕的是我從以前的談話得知，她知道我絕對不會同意這項實驗。除了傳送技術對社會益處之外，你<b>不能</b>在每次你想將一個活生生的人送到另一個房間就殺死他。這在道德和倫理上都令人髮指。\n\n我知道她一直對我保密此資訊。當我搜尋引力科技的資料庫時，我完全找不到這些這些與傳送實驗有關的資訊。只因為這個線索在 Ali 博士的 AI 文件中顯示，我才能發現正在發生的事。\n\nJackie 必須停止。\n\n但我知道她已經無法合理討論了。我希望這是她對我隱瞞的唯一一件事，但我擔心並不是如此。\n\n[日誌結束]\n\n[日誌開始]\n\n僅管我自己不禁想到這對 AI 開發帶來的可能性。它困擾著我。\n\n我擔心滑坡效應，而 Jackie 正在底端張開雙臂等著我。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.B10_AI.SUBTITLE
 msgctxt "STRINGS.CODEX.B10_AI.SUBTITLE"
@@ -22228,7 +22228,7 @@ msgstr "規格變更"
 #. STRINGS.CODEX.B3_MOVEDRABBITS.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.B3_MOVEDRABBITS.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subjects Identified: A001, B111]</smallcaps>\n\n[LOG BEGINS]\n\nBroussard: Director, do you know where my rabbits have been moved to? I asked around the bioengineering division but I was referred back to you.\n\nDirector: Hm? Oh, yes, they've been removed.\n\nBroussard: \"Removed\"?\n\nDirector: Discarded. I'm sorry, did you still need them? The reports showed your experiments with them were completed.\n\nBroussard: No, I-I... I'd collected all the data I needed, I just --\n\nDirector: -- Doctor. You weren't making pets out of test subjects, were you?\n\nBroussard: Don't be ridiculous, I --\n\nDirector: -- Good.They were horrible to look at anyway. All those red eyes looking at me.\n\nBroussard: In the future, please do not mess with my things. It... disturbs me.\n\nDirector: I will notify you beforehand next time, Doctor.\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：A001、B111]</smallcaps>\n\n[紀錄開始]\n\nBroussard：總監，您知道我的小白兔們被搬到那了嗎？我詢問了生物工程部，但是我被轉介給了您。\n\n總監：恩？哦，是的，牠們被清除了。\n\nBroussard：「清除」？\n\n總監：丟棄了。我很抱歉，你還需要牠們？報告顯示你對牠們的實驗完成了。\n\nBroussard：不，我…我是收集了全部所需的資料，我只是──\n\n總監：——博士。你不會拿實驗對象當作寵物，是嗎？\n\nBroussard：別笑了，我——\n\n總監：——很好。不管怎樣牠們看起來都很可怕。那些紅色眼睛望著我時。\n\nBroussard：未來，請不要亂動我的東西。這會…擾亂我。\n\n總監：我下次會提先通知你的，博士。\n\n[紀錄結束]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：A001、B111]</smallcaps>\n\n[日誌開始]\n\nBroussard：總監，您知道我的小白兔們被搬到那了嗎？我詢問了生物工程部，但是我被轉介給了您。\n\n總監：恩？哦，是的，牠們被清除了。\n\nBroussard：「清除」？\n\n總監：丟棄了。我很抱歉，你還需要牠們？報告顯示你對牠們的實驗完成了。\n\nBroussard：不，我…我是收集了全部所需的資料，我只是──\n\n總監：——博士。你不會拿實驗對象當作寵物，是嗎？\n\nBroussard：別笑了，我——\n\n總監：——很好。不管怎樣牠們看起來都很可怕。那些紅色眼睛望著我時。\n\nBroussard：未來，請不要亂動我的東西。這會…擾亂我。\n\n總監：我下次會提先通知你的，博士。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.B3_MOVEDRABBITS.SUBTITLE
 msgctxt "STRINGS.CODEX.B3_MOVEDRABBITS.SUBTITLE"
@@ -22243,7 +22243,7 @@ msgstr "被移走的兔子"
 #. STRINGS.CODEX.B3_MOVEDRACCOONS.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.B3_MOVEDRACCOONS.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subjects Identified: A001, B111]</smallcaps>\n\n[LOG BEGINS]\n\nBroussard: Director, do you know where my raccoons have been moved to? I asked around the bioengineering division but I was referred back to you.\n\nDirector: Hm? Oh, yes, they've been removed.\n\nBroussard: \"Removed\"?\n\nDirector: Discarded. I'm sorry, did you still need them? The reports showed your experiments with them were completed.\n\nBroussard: No, I-I... I'd collected all the data I needed, I just --\n\nDirector: -- Doctor. You weren't making pets out of test subjects, were you?\n\nBroussard: Don't be ridiculous, I --\n\nDirector: -- Good.They were horrible to look at anyway. All that mangy fur.\n\nBroussard: In the future, please do not mess with my things. It... disturbs me.\n\nDirector: I will notify you beforehand next time, Doctor.\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：A001、B111]</smallcaps>\n\n[紀錄開始]\n\nBroussard：總監，您知道我的浣熊被搬到那了嗎？我詢問了生物工程部，但是我被轉介給了您。\n\n總監：恩？哦，是的，牠們被清除了。\n\nBroussard：「清除」？\n\n總監：丟棄了。我很抱歉，你還需要牠們？報告顯示你對牠們的實驗完成了。\n\nBroussard：不，我…我是收集了全部所需的資料，我只是──\n\n總監：——博士。你不會拿實驗對象當作寵物，是嗎？\n\nBroussard：別笑了，我——\n\n總監：——很好。不管怎樣牠們看起來都很可怕。那些髒兮兮的毛髮。\n\nBroussard：未來，請不要亂動我的東西。這會…擾亂我。\n\n總監：我下次會提前通知你的，博士。\n\n[紀錄結束]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：A001、B111]</smallcaps>\n\n[日誌開始]\n\nBroussard：總監，您知道我的浣熊被搬到那了嗎？我詢問了生物工程部，但是我被轉介給了您。\n\n總監：恩？哦，是的，牠們被清除了。\n\nBroussard：「清除」？\n\n總監：丟棄了。我很抱歉，你還需要牠們？報告顯示你對牠們的實驗完成了。\n\nBroussard：不，我…我是收集了全部所需的資料，我只是──\n\n總監：——博士。你不會拿實驗對象當作寵物，是嗎？\n\nBroussard：別笑了，我——\n\n總監：——很好。不管怎樣牠們看起來都很可怕。那些髒兮兮的毛髮。\n\nBroussard：未來，請不要亂動我的東西。這會…擾亂我。\n\n總監：我下次會提前通知你的，博士。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.B3_MOVEDRACCOONS.SUBTITLE
 msgctxt "STRINGS.CODEX.B3_MOVEDRACCOONS.SUBTITLE"
@@ -22258,7 +22258,7 @@ msgstr "被移走的浣熊"
 #. STRINGS.CODEX.B3_MOVEDRATS.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.B3_MOVEDRATS.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subjects Identified: A001, B111]</smallcaps>\n\n[LOG BEGINS]\n\nBroussard: Director, do you know where my rats have been moved to? I asked around the bioengineering division but I was referred back to you.\n\nDirector: Hm? Oh, yes, they've been removed.\n\nBroussard: \"Removed\"?\n\nDirector: Discarded. I'm sorry, did you still need them? The reports showed your experiments with them were completed.\n\nBroussard: No, I-I... I'd collected all the data I needed, I just --\n\nDirector: -- Doctor. You weren't making pets out of test subjects, were you?\n\nBroussard: Don't be ridiculous, I --\n\nDirector: -- Good.They were horrible to look at anyway. All those bumps.\n\nBroussard: In the future, please do not mess with my things. It... disturbs me.\n\nDirector: I will notify you beforehand next time, Doctor.\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：A001、B111]</smallcaps>\n\n[紀錄開始]\n\nBroussard：總監，您知道我的小老鼠被搬到那了嗎？我詢問了生物工程部，但是我被轉介給了您。\n\n總監：恩？哦，是的，牠們被清除了。\n\nBroussard：「清除」？\n\n總監：丟棄了。我很抱歉，你還需要牠們？報告顯示你對它們的實驗完成了。\n\nBroussard：不，我…我是收集了所有的所需的資料，我只是──\n\n總監：——博士。你不會拿實驗對象當作寵物，是嗎？\n\nBroussard：別笑了，我——\n\n總監：——很好。不管怎樣牠們看起來都很可怕。那些碰撞。\n\nBroussard：未來，請不要亂動我的東西。這會…擾亂我。\n\n總監：我下次會提前通知你的，博士。\n\n[紀錄結束]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：A001、B111]</smallcaps>\n\n[日誌開始]\n\nBroussard：總監，您知道我的小老鼠被搬到那了嗎？我詢問了生物工程部，但是我被轉介給了您。\n\n總監：恩？哦，是的，牠們被清除了。\n\nBroussard：「清除」？\n\n總監：丟棄了。我很抱歉，你還需要牠們？報告顯示你對它們的實驗完成了。\n\nBroussard：不，我…我是收集了所有的所需的資料，我只是──\n\n總監：——博士。你不會拿實驗對象當作寵物，是嗎？\n\nBroussard：別笑了，我——\n\n總監：——很好。不管怎樣牠們看起來都很可怕。那些碰撞。\n\nBroussard：未來，請不要亂動我的東西。這會…擾亂我。\n\n總監：我下次會提前通知你的，博士。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.B3_MOVEDRATS.SUBTITLE
 msgctxt "STRINGS.CODEX.B3_MOVEDRATS.SUBTITLE"
@@ -22358,12 +22358,12 @@ msgstr "回覆：我的筆"
 #. STRINGS.CODEX.B4_REVISITEDNUMBERS.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.B4_REVISITEDNUMBERS.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subjects Identified: A001, A435]</smallcaps>\n\n[LOG BEGINS]\n\nDirector: Unacceptable.\n\nJones: I'm just telling you the numbers, Director, I'm not responsible for them.\n\nDirector: In your earlier e-mail you claimed the issue would be solved by the Pod.\n\nJones: Yeah, the weight issue. And it was solved. The problem now is the insane amount of power that big thing eats every time it prints a colonist.\n\nDirector: So how do you suppose we meet these target numbers? Fossil fuels are exhausted, nuclear is outlawed, solar is next to impossible with this smog.\n\nJones: I dunno. That's why you've got researchers, I just crunch numbers. Although you should avoid fossil fuels and nuclear energy anyway. If you have to load the rocket up with a couple tons of fuel then we're back to square one on the weight problem. It's gotta be something clever.\n\nDirector: Thank you, Dr. Jones. You may go.\n\n[LOG ENDS]\n------------------\n"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：A001、B111]</smallcaps>\n\n[紀錄開始]\n\n總監：令人難以接受。\n\nJones：我只是告訴你這個數字，總監，我並不負責。\n\n總監：在你之前的電子郵件中，你聲稱這問題將由列印元解決。\n\nJones：是的，重量問題。它已被解決。現在的問題是它每次列印一個殖民者都會消耗大量的能源。\n\n總監：那麼你認為我們如何達到目標數字？化石燃料已耗盡，核能被禁止，在這種煙霧下幾乎不可能有太陽能。\n\nJones：我不知道。這就是為什麼你有研究人員，我只是缺少能源。無論如何你應該避免使用化石燃料與核能。如果火箭必須載幾噸的燃料，那就又回到重量的問題上了。它必須是某種充滿能量的東西。\n\n總監：謝謝你 Jones 博士，你可以離開了。\n\n[紀錄結束]\n------------------\n"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：A001、B111]</smallcaps>\n\n[日誌開始]\n\n總監：令人難以接受。\n\nJones：我只是告訴你這個數字，總監，我並不負責。\n\n總監：在你之前的電子郵件中，你聲稱這問題將由列印元解決。\n\nJones：是的，重量問題。它已被解決。現在的問題是它每次列印一個殖民者都會消耗大量的能源。\n\n總監：那麼你認為我們如何達到目標數字？化石燃料已耗盡，核能被禁止，在這種煙霧下幾乎不可能有太陽能。\n\nJones：我不知道。這就是為什麼你有研究人員，我只是缺少能源。無論如何你應該避免使用化石燃料與核能。如果火箭必須載幾噸的燃料，那就又回到重量的問題上了。它必須是某種充滿能量的東西。\n\n總監：謝謝你 Jones 博士，你可以離開了。\n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.B4_REVISITEDNUMBERS.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.B4_REVISITEDNUMBERS.BODY.CONTAINER2"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subjects Identified: A001, B111]</smallcaps>\n\n[LOG BEGINS]\n\nJackie: Dr. Jones projects that traditional fuel will be insufficient for the Pod to make the flight.\n\nOlivia: Then we need to change its specs. Use lighter materials, cut weight wherever possible, do widespread optimizations across the whole project.\n\nJackie: We have another option.\n\nOlivia: No. Absolutely not. You needed me and I-I came back, but if you plan to revive our research--\n\nJackie: The world's doomed regardless, Olivia. We need to use any advantage we've got... And just think about it! If we built [REDACTED] technology into the Pod it wouldn't just fix the flight problem, we'd know for a fact it would run uninterrupted for thousands of years, maybe more.\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：A001、B111]</smallcaps>\n\n[紀錄開始]\n\nJackie：Jones 博士，計劃裡的傳統燃料不足以讓列印元飛行。\n\nOlivia：那麼我們需要修改規格。使用更輕的材料，盡可能的減少重量，對整個計劃進行更全面的優化。\n\nJackie：我們還有別的選擇。\n\nOlivia：不行。絕對不行。你需要我，然後－我回來了，但是如果你打算採用我們的研究——\n\nJackie：世界注定會毀滅，Olivia。我們需要利用任何我們擁有的優勢…並考慮一下！如果將我們創造的[受遮蔽]技術應用在列印元上，或許解決的不僅僅是飛行的問題，我們知道它可以持續運轉數千年的時間，也許更久。"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：A001、B111]</smallcaps>\n\n[日誌開始]\n\nJackie：Jones 博士，計劃裡的傳統燃料不足以讓列印元飛行。\n\nOlivia：那麼我們需要修改規格。使用更輕的材料，盡可能的減少重量，對整個計劃進行更全面的優化。\n\nJackie：我們還有別的選擇。\n\nOlivia：不行。絕對不行。你需要我，然後－我回來了，但是如果你打算採用我們的研究——\n\nJackie：世界注定會毀滅，Olivia。我們需要利用任何我們擁有的優勢…並考慮一下！如果將我們創造的[受遮蔽]技術應用在列印元上，或許解決的不僅僅是飛行的問題，我們知道它可以持續運轉數千年的時間，也許更久。"
 
 #. STRINGS.CODEX.B4_REVISITEDNUMBERS.SUBTITLE
 msgctxt "STRINGS.CODEX.B4_REVISITEDNUMBERS.SUBTITLE"
@@ -22378,7 +22378,7 @@ msgstr "重訪號碼"
 #. STRINGS.CODEX.B5_ANTS.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.B5_ANTS.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subjects Identified: A001, B556]</smallcaps>\n\n[LOG BEGINS]\n\nTechnician: <i>Atta cephalotes</i>. What sort of experiment are you doing with these?\n\nDirector: No experiment. I just find them interesting. Don't you?\n\nTech: Not really?\n\nDirector: You ought to. Very efficient. They perfected farming millions of years before humans.\n\n(sound of tapping on glass)\n\nDirector: An entire colony led by and in service to its queen. Each organism knows its role.\n\nTech: I have the results from the power tests, director.\n\nDirector: And?\n\nTech: Negative, ma'am.\n\nDirector: I see. You know, another admirable quality of ants occurs to me. They can pull twenty times their own weight.\n\nTech: I'm not sure I follow, ma'am.\n\nDirector: Are you pulling your weight, Doctor?\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：A001、B556]</smallcaps>\n\n[紀錄開始]\n\n技師：<b>Atta cephalotes</b>。你正在做什麼實驗？\n\n總監：不是實驗。我只是發現它們很迷人。你覺得呢？\n\n技師：我不覺得？\n\n總監：你應該覺得。牠們效率很高。在人類出現前幾百萬年就完善了農業。\n\n（敲打玻璃的聲音）\n\n總監：整個殖民地由蟻后所統治並為其服務。每隻螞蟻都知道牠的角色\n\n技師：總監，能量測試有了結果。\n\n總監：然後？\n\n技師：不夠，女士。\n\n總監：我了解了。你知道，我發現了另一種很棒的螞蟻。牠們可以抬起比牠們本身重 20 倍的東西。\n\n技師：我不確定我知道，女士。\n\n總監：你能抬起和你體重一樣的東西嗎，博士？\n\n[紀錄結束]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：A001、B556]</smallcaps>\n\n[日誌開始]\n\n技師：<b>Atta cephalotes</b>。你正在做什麼實驗？\n\n總監：不是實驗。我只是發現它們很迷人。你覺得呢？\n\n技師：我不覺得？\n\n總監：你應該覺得。牠們效率很高。在人類出現前幾百萬年就完善了農業。\n\n（敲打玻璃的聲音）\n\n總監：整個殖民地由蟻后所統治並為其服務。每隻螞蟻都知道牠的角色\n\n技師：總監，能量測試有了結果。\n\n總監：然後？\n\n技師：不夠，女士。\n\n總監：我了解了。你知道，我發現了另一種很棒的螞蟻。牠們可以抬起比牠們本身重 20 倍的東西。\n\n技師：我不確定我知道，女士。\n\n總監：你能抬起和你體重一樣的東西嗎，博士？\n\n[日誌結束]"
 
 #. STRINGS.CODEX.B5_ANTS.SUBTITLE
 msgctxt "STRINGS.CODEX.B5_ANTS.SUBTITLE"
@@ -22568,7 +22568,7 @@ msgstr "嗨~~~~~!"
 #. STRINGS.CODEX.B7_INSPACE.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.B7_INSPACE.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subjects Identified: B835, B997]</smallcaps>\n\n[LOG BEGINS]\n\nDr.Ansari: Shhhh...\n\nDr. Bubare: What? What are we doing here?\n\nDr. Ansari: I'll show you, just keep your voice down.\n\nDr. Bubare: Are we even allowed to be here?\n\nDr. Ansari: No. Trust me it'll all be worth it once I can find it.\n\nDr. Bubare: Find what?\n\nDr. Ansari: That!\n\nDr. Bubare: ...Video feed from a rat cage? What's so great about -- Wait. Are they--?\n\nDr. Ansari: Floating!\n\nDr. Bubare: You mean they're in--?\n\nDr. Ansari: Space!\n\nDr. Bubare: Our thermal rats are in space?!?!\n\nDr. Ansari: Yep! There's Applecart and Cherrypie and little Bananabread. Look at them, they're so happy. We made ratstronauts!!\n\nDr. Bubare: HAPPY rat-stronauts.\n\nDr. Ansari: WE MADE HAPPY RATSTRONAUTS!!\n\nDr. Bubare: Shhhhhh...Someone's coming.\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B835, B997]</smallcaps>\n\n[紀錄開始]\n\nAnsari 博士：噓…\n\nBubare 博士：什麼？我們在這做什麼？\n\nAnsari 博士：我展示給你看，只要你小聲點。\n\nBubare 博士：這裡允許我們這樣做？\n\nAnsari 博士：不。相信我，一旦我找到它了一切都是值得的。\n\nBubare 博士：找到什麼？\n\nAnsari 博士：那個！\n\nBubare 博士：…老鼠籠的影片？有什麼了不起的…等等。牠們…？\n\nAnsari 博士：漂浮！\n\nBubare 博士：你的意思是牠們在…？\n\nAnsari 博士：太空！\n\nBubare 博士：我們的熱鼠在太空中？！？！\n\nAnsari 博士：是的！這裡有蘋果車，莓果派與小香蕉蛋糕。看看牠們，牠們很開心。我們創造了太空鼠！！\n\nBubare 博士：開心的太空鼠。\n\nAnsari 博士：我們創造了開心的太空鼠！！\n\nBubare 博士：噓…有人來了。\n\n[紀錄結束]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B835, B997]</smallcaps>\n\n[日誌開始]\n\nAnsari 博士：噓…\n\nBubare 博士：什麼？我們在這做什麼？\n\nAnsari 博士：我展示給你看，只要你小聲點。\n\nBubare 博士：這裡允許我們這樣做？\n\nAnsari 博士：不。相信我，一旦我找到它了一切都是值得的。\n\nBubare 博士：找到什麼？\n\nAnsari 博士：那個！\n\nBubare 博士：…老鼠籠的影片？有什麼了不起的…等等。牠們…？\n\nAnsari 博士：漂浮！\n\nBubare 博士：你的意思是牠們在…？\n\nAnsari 博士：太空！\n\nBubare 博士：我們的熱鼠在太空中？！？！\n\nAnsari 博士：是的！這裡有蘋果車，莓果派與小香蕉蛋糕。看看牠們，牠們很開心。我們創造了太空鼠！！\n\nBubare 博士：開心的太空鼠。\n\nAnsari 博士：我們創造了開心的太空鼠！！\n\nBubare 博士：噓…有人來了。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.B7_INSPACE.SUBTITLE
 msgctxt "STRINGS.CODEX.B7_INSPACE.SUBTITLE"
@@ -22643,7 +22643,7 @@ msgstr "禮貌的請求"
 #. STRINGS.CODEX.B9_TELEPORTATION.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.B9_TELEPORTATION.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subject Identified: A001]</smallcaps>\n\n[LOG BEGINS]\n\nDr. Techna's newest notes on Duplicant memories have revealed some interesting discoveries. It seems memories </i>can</i> be transferred to the cloned subject but it requires the host to be subjected to a machine that performs extremely detailed microanalysis. This in-depth dissection of the subject would produce the results we need but at the expense of destroying the host.\n\nOf course this is not ideal for our current situation. The time and energy it took to recruit Gravitas' highly trained staff would be wasted if we were to extirpate these people for the sake of experimentation. But perhaps we can use our Duplicants as experimental subjects until we perfect the process and look into finding volunteers for the future in order to obtain an ideal specimen. I will have to discuss this with Dr. Techna but I'm sure he would be enthusiastic about such an opportunity to continue his work.\n\nI am also very interested in the commercial opportunities this presents. Off the top of my head I can think of applications in genetics, AI development, and teleportation technology. This could be a significant financial windfall for the company.\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：A001]</smallcaps>\n\n[紀錄開始]\n\nTechna 博士關於複製人記憶的最新記錄，揭露了一些有趣的發現。記憶似乎<b>可以</b>移到複製體上，但需要將複製體送入一台機器做非常細微的分析。對複製來源的深入剖析會產生我們需要的結果，但需要以破壞複製來源為代價。\n\n當然，這對於我們目前的狀況來說不是個好方案。如果我們為了實驗而淘汰這些人，那麼引力科技就浪費這些花了時間與精力培養的資深員工。但也許我們可以將複製人當作實驗對象，直到我們完善流程，並找到自願者來完成這個目標。我必須和 Techna 博士討論，但我相信他會因能繼續工作而充滿熱情。\n\n我對這所能創造的商機很感興趣。我想到了遺傳學的應用、AI 開發與傳送技術。這對公司來說可能是個巨大意外收益。\n\n[紀錄結束]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：A001]</smallcaps>\n\n[日誌開始]\n\nTechna 博士關於複製人記憶的最新記錄，揭露了一些有趣的發現。記憶似乎<b>可以</b>移到複製體上，但需要將複製體送入一台機器做非常細微的分析。對複製來源的深入剖析會產生我們需要的結果，但需要以破壞複製來源為代價。\n\n當然，這對於我們目前的狀況來說不是個好方案。如果我們為了實驗而淘汰這些人，那麼引力科技就浪費這些花了時間與精力培養的資深員工。但也許我們可以將複製人當作實驗對象，直到我們完善流程，並找到自願者來完成這個目標。我必須和 Techna 博士討論，但我相信他會因能繼續工作而充滿熱情。\n\n我對這所能創造的商機很感興趣。我想到了遺傳學的應用、AI 開發與傳送技術。這對公司來說可能是個巨大意外收益。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.B9_TELEPORTATION.SUBTITLE
 msgctxt "STRINGS.CODEX.B9_TELEPORTATION.SUBTITLE"
@@ -23183,7 +23183,7 @@ msgstr "存活範圍：<b>{0}</b> 到 <b>{1}</b>"
 #. STRINGS.CODEX.CRITTERDELIVERY.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.CRITTERDELIVERY.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subjects Identified: B482, B759, C094]</smallcaps>\n\n[LOG BEGINS]\n\nSecurity Guard 1: Hey hey! Welcome back.\n\nSecurity Guard 2: Hand on the scanner, please.\n\nCourier: Sure thing, lemme just...\n\nCourier: Whoops-- thanks, Steve. These little fellas are a two-hander for sure.\n\n(sound of furry noses snuffling on cardboard)\n\nSecurity Guard 2: Follow me, please.\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B482、B759、C094]</smallcaps>\n\n[紀錄開始]\n\n保安1：嘿嘿！ 歡迎回來。\n\n保安2：請把手放在掃描儀上。\n\n快遞員：當然，讓我…\n\n快遞員：哎呀——謝謝，Steve。這些小傢伙肯定是一隻手抬不動。\n\n（毛茸茸的鼻子在紙板上抽吸的聲音）\n\n保安2：請跟我來。\n\n[紀錄結束]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B482、B759、C094]</smallcaps>\n\n[日誌開始]\n\n保安1：嘿嘿！ 歡迎回來。\n\n保安2：請把手放在掃描儀上。\n\n快遞員：當然，讓我…\n\n快遞員：哎呀——謝謝，Steve。這些小傢伙肯定是一隻手抬不動。\n\n（毛茸茸的鼻子在紙板上抽吸的聲音）\n\n保安2：請跟我來。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.CRITTERDELIVERY.SUBTITLE
 msgctxt "STRINGS.CODEX.CRITTERDELIVERY.SUBTITLE"
@@ -24733,7 +24733,7 @@ msgstr "院長來信"
 #. STRINGS.CODEX.INVESTIGATIONS.DLC2_GEOTHERMALTESTING.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC2_GEOTHERMALTESTING.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subject Identified: B224]</smallcaps>\n\n[LOG BEGINS]\n\n(throat clearing)\n\nHello? Is this thing on?\n\n(sound of tapping on a microphone)\n\nHere we go. Ahem. Tests are progressing as anticipated and results have exceeded our hopes, particularly in regards to thermal threshold.\n\nComing in \"hot,\" as we used to say!\n\n(cough)\n\nAnyway.\n\nFirst we introduced twelve tons of brackish aquifer water cooled to sixty-five degrees.\n\nThis yielded clean steam, as well as soil, salt and trace minerals. As expected.\n\nOkay, so now we flush the system... Ramp up the temperature in the water tank and run it through at two hundred degrees.\n\n(sound of liquid rushing through pipes)\n\nClear the steam so we can-\n\n(sound of a small clang)\n\nHang on, there's some kind of debris...\n\nWe have to be cautious, one small obstruction in this system could be catastrophi-\n\nWait, are those... <i>oxidized iron</i> nuggets?\n\nBut how...\n\nAll I changed was the tempera-\n\nGet me twelve tons of...uh, oil!\n\nStat!\n\nSorry, <i>please.</i>\n\n[LOG ENDS]\n------------------\n[LOG BEGINS]\n\n(long silence)\n\n(sound of machinery powering down)\n\n...unbelievable.\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B224]</smallcaps>\n\n[紀錄開始]\n\n（清嗓子）\n\n你好？這東西開了嗎？\n\n（敲擊麥克風的聲音）\n\n開始吧。嗯哼。測試按預期進行，結果超出了我們的預期，尤其是在溫度門檻方面。\n\n正如我們過去所說的那樣，「熱」翻天！\n\n（咳嗽）\n\n無論如何。\n\n首先我們引入了 12 噸冷卻至 65 度的地下層鹽水。\n\n這產生了清潔蒸汽，以及土壤、鹽和微量礦物質。和預期一樣。\n\n好的，那麼現在我們重新整理系統…提高水箱的溫度，在 200 度下執行。\n\n（液體流過管道的聲音）\n\n清空蒸汽，這樣一來我們就可以——\n\n（輕微的叮噹聲）\n\n等等，裡面有某些雜物…\n\n我們得小心點，這個系統中稍有堵塞就是災——\n\n等下，那些是…<b>氧化鐵</b>碎塊？\n\n但怎麼會…\n\n我只是改了溫——\n\n給我 12 噸…噢，是油！\n\n快！\n\n<i>真是</i>，對不起。\n\n[紀錄結束]\n------------------\n[紀錄開始]\n\n（長時間的沉默）\n\n（機器斷電的聲音）\n\n…難以置信。\n\n[紀錄結束]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B224]</smallcaps>\n\n[日誌開始]\n\n（清嗓子）\n\n你好？這東西開了嗎？\n\n（敲擊麥克風的聲音）\n\n開始吧。嗯哼。測試按預期進行，結果超出了我們的預期，尤其是在溫度門檻方面。\n\n正如我們過去所說的那樣，「熱」翻天！\n\n（咳嗽）\n\n無論如何。\n\n首先我們引入了 12 噸冷卻至 65 度的地下層鹽水。\n\n這產生了清潔蒸汽，以及土壤、鹽和微量礦物質。和預期一樣。\n\n好的，那麼現在我們重新整理系統…提高水箱的溫度，在 200 度下執行。\n\n（液體流過管道的聲音）\n\n清空蒸汽，這樣一來我們就可以——\n\n（輕微的叮噹聲）\n\n等等，裡面有某些雜物…\n\n我們得小心點，這個系統中稍有堵塞就是災——\n\n等下，那些是…<b>氧化鐵</b>碎塊？\n\n但怎麼會…\n\n我只是改了溫——\n\n給我 12 噸…噢，是油！\n\n快！\n\n<i>真是</i>，對不起。\n\n[日誌結束]\n------------------\n[日誌開始]\n\n（長時間的沉默）\n\n（機器斷電的聲音）\n\n…難以置信。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC2_GEOTHERMALTESTING.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC2_GEOTHERMALTESTING.SUBTITLE"
@@ -24848,7 +24848,7 @@ msgstr "歡迎來到穀神星！"
 #. STRINGS.CODEX.INVESTIGATIONS.DLC2_VOICEMAIL.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC2_VOICEMAIL.BODY.CONTAINER1"
 msgid "<smallcaps>[File fragmentation detected]\n[Voice Recognition unavailable]</smallcaps>\n\n[LOG BEGINS]\n\n...Grandfather? ...one of your cardigan-wearing interns just dropped off a letter saying you're going to SPACE??\n\nHave you gone mad?\n\nIt's dated a week from now... the young fellow went completely red when he realized he'd delivered it early.\n\nI tried Miranda, and she says she hasn't heard from you since the Sustainable Futures summit.\n\nShe said something about some sort of training session. Only no one at the office knows what she's on about.\n\nHow am I meant to explain your absence tomorrow? GEI's going to be absolutely livid. If they back out of this deal, it won't be just the underlings who get laid off.\n\n...What exactly do you think you'll achieve, trapped in space with four strangers for the rest of your miserable existence?\n\nYou're a business man, not a bloody astronaut!\n\nNot to mention there's a <i>war</i> on! Who's to say your ground control team won't be dead within the year?\n\n[Sound of several phones starting to ring off the hook.]\n\nI've got to go. Call me back or I'm going straight to the Board.\n\n[FILE ENDS]"
-msgstr "<smallcaps>[偵測到檔案片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[紀錄開始]\n\n…爺爺？…你的一個穿羊毛衫的實習生剛剛給我寄了一封信，說你已經去太空啦？？\n\n你瘋了嗎？\n\n寫信日期上寫的是一週後…那年輕人意識到他搞錯了的時候完全羞紅了臉。\n\n我試著聯絡 Miranda，她說她在「可持續的未來」峰會之後就再也沒聽到過你的訊息了。\n\n她說了一些關於某種培訓課程的事情。只是辦公室裡沒有人知道她在說什麼。\n\n我該如何解釋你明天的缺席？GEI 絕對要發火的。如果他們要退出這場交易，那被解僱的就不僅僅是幾個下屬了。\n\n…在你悲慘的餘生，還要跟四個陌生人一起困在太空度過，你到底能獲得什麼成就呀？\n\n你是個商人，不是該死的太空人！\n\n更不用說還有<b>戰爭</b>呢！誰能說你的地面指揮小組一年裡會不會覆滅啊？\n\n[嬰兒哭泣聲。]\n\n<i>Andrew，這裡不是托兒所！</i>\n\n我得走了。給我回電話，不然我就直接去找董事會。\n\n[檔案結束]"
+msgstr "<smallcaps>[偵測到檔案片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[日誌開始]\n\n…爺爺？…你的一個穿羊毛衫的實習生剛剛給我寄了一封信，說你已經去太空啦？？\n\n你瘋了嗎？\n\n寫信日期上寫的是一週後…那年輕人意識到他搞錯了的時候完全羞紅了臉。\n\n我試著聯絡 Miranda，她說她在「可持續的未來」峰會之後就再也沒聽到過你的訊息了。\n\n她說了一些關於某種培訓課程的事情。只是辦公室裡沒有人知道她在說什麼。\n\n我該如何解釋你明天的缺席？GEI 絕對要發火的。如果他們要退出這場交易，那被解僱的就不僅僅是幾個下屬了。\n\n…在你悲慘的餘生，還要跟四個陌生人一起困在太空度過，你到底能獲得什麼成就呀？\n\n你是個商人，不是該死的太空人！\n\n更不用說還有<b>戰爭</b>呢！誰能說你的地面指揮小組一年裡會不會覆滅啊？\n\n[嬰兒哭泣聲。]\n\n<i>Andrew，這裡不是托兒所！</i>\n\n我得走了。給我回電話，不然我就直接去找董事會。\n\n[檔案結束]"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC2_VOICEMAIL.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC2_VOICEMAIL.SUBTITLE"
@@ -24863,17 +24863,17 @@ msgstr "語音信箱"
 #. STRINGS.CODEX.INVESTIGATIONS.DLC3_POTATOBATTERY.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC3_POTATOBATTERY.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subject Identified: B577]</smallcaps>\n\n[LOG BEGINS]\n\nA recent conversation with our colleagues over in the electrical engineering department has highlighted exciting potential applications for our crops.\n\nThey're seeking alternative inputs for the new universal power bank prototypes...\n\n...a passing remark about the potato batteries of our youth led to talk of biobatteries and bacterial nanowires.\n\n...tuberous plants are promising candidates for electrochemical batteries. Our lab-grown specimens are distinct from the humble solanum tuberosum in appearance and texture, but some may still function as acidic electrolytes.\n\nThere are so many avenues to investigate, and so little time...\n\n[LOG ENDS]\n------------------\n"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B577]</smallcaps>\n\n[紀錄開始]\n\n最近與我們電氣工程部的同事進行了一次對話，強調了我們的作物令人興奮的潛在應用。\n\n他們正在為新的通用行動電源原型體尋找替代材料……\n\n……幾個年輕人關於馬鈴薯電池的隨口一談，引發了大家對生物電池和細菌奈米導線的討論\n\n……塊莖植物是電化學電池最有可能的候選。我們實驗室培育的樣本在外觀和質地上與普通的馬鈴薯不同，但其中一些仍可能起到酸性電解質的作用。\n\n有太多調查的途徑，但時間又少得可憐……\n\n[紀錄結束]\n------------------\n\n"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B577]</smallcaps>\n\n[日誌開始]\n\n最近與我們電氣工程部的同事進行了一次對話，強調了我們的作物令人興奮的潛在應用。\n\n他們正在為新的通用行動電源原型體尋找替代材料……\n\n……幾個年輕人關於馬鈴薯電池的隨口一談，引發了大家對生物電池和細菌奈米導線的討論\n\n……塊莖植物是電化學電池最有可能的候選。我們實驗室培育的樣本在外觀和質地上與普通的馬鈴薯不同，但其中一些仍可能起到酸性電解質的作用。\n\n有太多調查的途徑，但時間又少得可憐……\n\n[日誌結束]\n------------------\n\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC3_POTATOBATTERY.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC3_POTATOBATTERY.BODY.CONTAINER2"
 msgid "<smallcaps>[Log fragmentation detected]\n[Voice Recognition unavailable]</smallcaps>\n\n[LOG BEGINS]\n\n...is it unethical to ask a hungry colony to choose between using edible crops for sustenance or for power production? Of course not.\n\nOur task is to provide as many options for survival as possible, not to dictate which options are morally superior.\n\nThe real question is whether or not the AI guide will be sufficiently advanced to notify them that the choices exist...\n\n...and whether single-use bio power banks that vaporize due to extreme thermal runaway will truly be the difference between a successful colony and an...<i>unsuccessful</i>...one.\n\n[LOG ENDS]\n------------------\n"
-msgstr "<smallcaps>[偵測到檔案片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[紀錄開始]\n\n……要求飢餓的殖民地，將可食用作物用於維持生計和電力生產之間做出選擇，是否有悖人倫？當然不是。\n\n我們的任務是提供儘可能多的生存選擇，而不是規定哪些選擇在道德上更優越。\n\n真正的問題是人工智慧的指導是否足夠先進，能夠告知他們選擇是存在的……\n\n……以及由於極端熱失控而蒸發的一次性生物行動電源，是否真的會在成功的殖民地和……<b>沒成功的</b>……殖民地之間有實際區別。\n\n[紀錄結束]\n------------------\n"
+msgstr "<smallcaps>[偵測到日誌片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[日誌開始]\n\n……要求飢餓的殖民地，將可食用作物用於維持生計和電力生產之間做出選擇，是否有悖人倫？當然不是。\n\n我們的任務是提供儘可能多的生存選擇，而不是規定哪些選擇在道德上更優越。\n\n真正的問題是人工智慧的指導是否足夠先進，能夠告知他們選擇是存在的……\n\n……以及由於極端熱失控而蒸發的一次性生物行動電源，是否真的會在成功的殖民地和……<b>沒成功的</b>……殖民地之間有實際區別。\n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC3_POTATOBATTERY.BODY.CONTAINER3
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC3_POTATOBATTERY.BODY.CONTAINER3"
 msgid "<smallcaps>[Log fragmentation detected]\n[Voice Recognition unavailable]</smallcaps>\n\n[LOG BEGINS]\n\n...word of our efforts has spread!\n\nThe bioengineers report that some of their creatures' eggs contain phosphorescent albumen that requires only basic processing in order to trigger chemical reactions that produce storable energy. It displays unprecedented biocompatibility with the prosthetics Dr. Gossmann has been developing.\n\nThe Director assigned us a half-dozen new graduates last week. They work the night shift—this generation never sleeps!\n\nNo one has met them yet, but their data is always neatly compiled for us to find in the morning.\n\nThey seem determined to prioritize the use of metallic and radioactive components rather than plant or animal-based ones.\n\nYouthful idealism, perhaps?\n\nNevertheless, their findings <i>are</i> quite compelling.\n\nI admire their mettle.\n\n[LOG ENDS]\n------------------\n"
-msgstr "<smallcaps>[偵測到檔案片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[紀錄開始]\n\n……我們成果的訊息已經傳開了！\n\n生物工程師報告說，他們的一些生物的卵含有磷光蛋白，只需進行基本處理即可引發產生可儲存能量的化學反應。它與 Gossmann 博士正在開發的義肢表現出前所未有的生物相容性。\n\n上週，總監給我們分配了六名應屆畢業生。他們負責夜班——這些年輕人從不睡覺！\n\n還沒有人見過他們，但他們的數據總是整齊地整理好，以便我們早上找到。\n\n他們似乎更傾向於使用金屬和放射性成分，而不是植物或動物成分。\n\n也許是年輕人的理想主義吧？\n\n不過，他們的發現<b>確實</b>很有說服力。\n\n我欽佩他們的勇氣。\n\n[紀錄結束]\n------------------\n"
+msgstr "<smallcaps>[偵測到日誌片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[日誌開始]\n\n……我們成果的訊息已經傳開了！\n\n生物工程師報告說，他們的一些生物的卵含有磷光蛋白，只需進行基本處理即可引發產生可儲存能量的化學反應。它與 Gossmann 博士正在開發的義肢表現出前所未有的生物相容性。\n\n上週，總監給我們分配了六名應屆畢業生。他們負責夜班——這些年輕人從不睡覺！\n\n還沒有人見過他們，但他們的數據總是整齊地整理好，以便我們早上找到。\n\n他們似乎更傾向於使用金屬和放射性成分，而不是植物或動物成分。\n\n也許是年輕人的理想主義吧？\n\n不過，他們的發現<b>確實</b>很有說服力。\n\n我欽佩他們的勇氣。\n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC3_POTATOBATTERY.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC3_POTATOBATTERY.SUBTITLE"
@@ -24943,12 +24943,12 @@ msgstr "不合條件的受扶養者"
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_ALLCOMINGBACK.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_ALLCOMINGBACK.BODY.CONTAINER1"
 msgid "<smallcaps>[Log Fragmentation Detected]\n[Voice Recognition Unavailable]</smallcaps>\n\n[LOG BEGINS]\n\n(sound of a throat being cleared)\n\nThere were times when our tests got so close\nThat my samples waved a claw\nAnd maybe didn't live long but that was a win, though\n\nThere was data that gave us strong clues\nThen over years we lost trust\nAnd knew our hopes of cloning had dried up forever...forever...\n\n(sound of earth rumbling)\n\n...We had exhausted every fellowship and fund\nAnd we couldn't recreate Cretaceous creatures\nAnd we'd got our hands on every single fossil that we could...\n\nBut when I crash-landed here\nAnd saw ...them... grazing so near\nIt's amazing to see that it's all growing back so green\n\nWhen they peer through ferns here\nUnderneath skies so clear\nIt's so hard to believe, but it's all grown back so green\nIt's all growing back, it's all growing back so green now\n\nThere are moments of awe\nAnd there are clashes and fights\nThere are plants I've never seen before\nAnd they don't seem to need light\nTheropods and tillyardembia\nIt is more than any lab could hope\n\nMaybe\n\nMaybe\n\nIf I had a lab here\nA mass spectrometer there\nI could show them back home\nthat it's all growing back so green...\n\n(sound of a twig snapping)\n\n...hello?\n\n[LOG ENDS]\n\n------------------\n\n"
-msgstr "<smallcaps>[偵測到檔案片段]\n[語音辨識系統失效]</smallcaps>\n\n[紀錄開始]\n\n（清嗓子聲）\n\n曾有那麼幾次，我們的實驗如此接近成功\n我的樣本會揮舞爪子\n也許牠們活不長，但那也是一種勝利，不是嗎\n那些數據給了我們強烈的線索\n然後歲月流逝，我們失去了信心\n知道我們複製的希望已經\n永遠枯竭了…永遠…\n\n（大地隆隆作響）\n\n…我們已耗盡了所有的研究經費與贊助\n我們也無法重現的白堊紀生物\n我們也已竭盡所能地取得了每一塊化石…\n\n但當我墜落在這裡\n看到…牠們…近在咫尺地啃食著青草\n真令人驚訝，一切都重新長得如此翠綠\n\n當牠們從蕨類叢中窺視時\n在如此清澈的天空下\n令人難以置信，但這裡的一切都已重新長得如此翠綠\n一切都在重新生長，這裡的一切都已重新長得如此翠綠了\n\n有些時刻令人敬畏\n也有衝突與爭鬥\n有些植物我從未見過\n而且它們似乎不需要光照\n獸腳類恐龍和蒂利亞德葉亞蟲\n這超出了任何實驗室所能期盼的\n\n也許\n也許\n如果我這裡有一個實驗室\n那裡有一台質譜儀\n我就能向家鄉的人們展示\n這裡的一切都重新長得如此翠綠…\n\n（樹枝斷裂聲）\n\n……你好？\n\n[錄音結束]\n\n------------------\n\n"
+msgstr "<smallcaps>[偵測到日誌片段]\n[語音辨識系統失效]</smallcaps>\n\n[日誌開始]\n\n（清嗓子聲）\n\n曾有那麼幾次，我們的實驗如此接近成功\n我的樣本會揮舞爪子\n也許牠們活不長，但那也是一種勝利，不是嗎\n那些數據給了我們強烈的線索\n然後歲月流逝，我們失去了信心\n知道我們複製的希望已經\n永遠枯竭了…永遠…\n\n（大地隆隆作響）\n\n…我們已耗盡了所有的研究經費與贊助\n我們也無法重現的白堊紀生物\n我們也已竭盡所能地取得了每一塊化石…\n\n但當我墜落在這裡\n看到…牠們…近在咫尺地啃食著青草\n真令人驚訝，一切都重新長得如此翠綠\n\n當牠們從蕨類叢中窺視時\n在如此清澈的天空下\n令人難以置信，但這裡的一切都已重新長得如此翠綠\n一切都在重新生長，這裡的一切都已重新長得如此翠綠了\n\n有些時刻令人敬畏\n也有衝突與爭鬥\n有些植物我從未見過\n而且它們似乎不需要光照\n獸腳類恐龍和蒂利亞德葉亞蟲\n這超出了任何實驗室所能期盼的\n\n也許\n也許\n如果我這裡有一個實驗室\n那裡有一台質譜儀\n我就能向家鄉的人們展示\n這裡的一切都重新長得如此翠綠…\n\n（樹枝斷裂聲）\n\n……你好？\n\n[日誌結束]\n\n------------------\n\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_ALLCOMINGBACK.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_ALLCOMINGBACK.BODY.CONTAINER2"
 msgid "[LOG BEGINS]\n\nAmazing...\n\n...it's almost as if they have some distant memory of having been sung to.\n\nPerhaps they have more in common with our own creatures than I thought.\n\n[LOG ENDS]\n\n------------------\n\n"
-msgstr "[紀錄開始]\n\n不可思議…\n\n…牠們幾乎就像還保留著曾被歌唱的遙遠記憶。\n\n或許牠們與我們自己的生物比我想像的還有更多共通之處。\n\n[紀錄結束]\n\n------------------\n\n"
+msgstr "[日誌開始]\n\n不可思議…\n\n…牠們幾乎就像還保留著曾被歌唱的遙遠記憶。\n\n或許牠們與我們自己的生物比我想像的還有更多共通之處。\n\n[日誌結束]\n\n------------------\n\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_ALLCOMINGBACK.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_ALLCOMINGBACK.SUBTITLE"
@@ -25013,7 +25013,7 @@ msgstr "遺著"
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_INCOMINGASTEROID.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_INCOMINGASTEROID.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subjects Identified: A001, B111]</smallcaps>\n\n[LOG BEGINS]\n\nOlivia: So we've...hastened the end of the world?\n\nJackie: By some measures, yes. But this changes nothing.\n\nOlivia: It changes everything, Jackie!\n\nJackie: Even if the [REDACTED] technology has shortened the timeline to the next asteroid impact--\n\nOlivia: It hasn't just shortened it, it's increased its likelihood!\n\nJackie: --it is unlikely to be less than a hundred years.\n\nJackie: That is ample time to develop damage-mitigation strategies.\n\nOlivia: According to this model, the original timeline for a possible recurrence was more than a hundred <i>million</i> years!\n\nJackie: And how many of those years do you think humanity would survive without the advancements we're making here?\n\nOlivia: I-I just don't think we can be certain...\n\nJackie: The only certainty is that without the [REDACTED], there will be no one left to save.\n\n[LOG ENDS]\n\n------------------\n\n"
-msgstr "<smallcaps>[語音辨識系統已啟動]\n[已辨識主體：A001、B111]</smallcaps>\n\n[紀錄開始]\n\nOlivia：所以說……我們加速了世界末日的到來？\n\nJackie：從某些標準看，是的。但這改變不了任何事。\n\nOlivia：這改變了一切，Jackie！\n\nJackie：即使[受遮蔽]科技縮短了下一顆小行星撞擊的時間——\n\nOlivia：那可不止縮短，還提高了撞擊機率！\n\nJackie：——撞擊時間也不可能少於一百年。\n\nJackie：那有充足的時間來開發損害緩解策略。\n\nOlivia：根據這個模型推算，原本的撞擊時間可能超過一<b>億</b>年！\n\nJackie：那你覺得沒有我們現在的研究突破，人類又能存活多少年？\n\nOlivia：我-我就是覺得我們不能確定…\n\nOlivia：唯一能確定的是，要是停止[受遮蔽]的研究，最後將無人生還。\n\n[紀錄結束]\n\n------------------\n\n"
+msgstr "<smallcaps>[語音辨識系統已啟動]\n[已辨識主體：A001、B111]</smallcaps>\n\n[日誌開始]\n\nOlivia：所以說……我們加速了世界末日的到來？\n\nJackie：從某些標準看，是的。但這改變不了任何事。\n\nOlivia：這改變了一切，Jackie！\n\nJackie：即使[受遮蔽]科技縮短了下一顆小行星撞擊的時間——\n\nOlivia：那可不止縮短，還提高了撞擊機率！\n\nJackie：——撞擊時間也不可能少於一百年。\n\nJackie：那有充足的時間來開發損害緩解策略。\n\nOlivia：根據這個模型推算，原本的撞擊時間可能超過一<b>億</b>年！\n\nJackie：那你覺得沒有我們現在的研究突破，人類又能存活多少年？\n\nOlivia：我-我就是覺得我們不能確定…\n\nOlivia：唯一能確定的是，要是停止[受遮蔽]的研究，最後將無人生還。\n\n[日誌結束]\n\n------------------\n\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_INCOMINGASTEROID.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_INCOMINGASTEROID.SUBTITLE"
@@ -25048,17 +25048,17 @@ msgstr "個人日誌：B824"
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_SEEPAGE.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_SEEPAGE.BODY.CONTAINER1"
 msgid "<smallcaps><b>[FILE FRAGMENTATION DETECTED]</b>\n\n[Voice Recognition unavailable]</smallcaps>\n\n[LOG BEGINS]\n\nI've been posted up at the Biowaste Processing and Containment buildings for weeks. Glorified dumpster watch, if I'm honest. Lab techs haul huge steel tanks up the hill once in a while. Nobody stays long. Except the janitor. He comes up twice a week to clean...whatever's behind those doors.\n\nEveryone said private security was easy, safe money. They never mentioned the silent killer: boredom.\n\nNo personal devices allowed on the grounds, so I've been counting things.\n\nThirty-nine leaves on the bush by the sewage sanitation entrance. Seventeen scratches on my CCTV monitor screens. Two paperclips in the drawer.\n\n------------------\n\nThe motion sensors in section 6 went off last night. Everything looked fine on the cameras. I was halfway through counting the ceiling slats. I jogged over to investigate. The area was deserted.\n\nIt felt like I was being watched, but two full sweeps confirmed that I was alone. I reset the sensors and returned to my post.\n\n------------------\n\nThose sensors have gone off every twenty minutes on the past two shifts! I have to get all the way over to section 6 every single time. It's always a false alarm.\n\nI called IT. Nobody answered. Typical.\n\nIn the meantime, I'm stuck running back and forth through the damp smoggy air for nothing.\n\nThe janitor showed up while I was catching my breath. He fished around in his cart and offered me a shirt. He said it was fresh.\n\nI politely declined.\n\n[LOG ENDS]\n\n------------------\n\n"
-msgstr "<smallcaps><b>[偵測到檔案片段]</b>\n\n[語音辨識系統不可用]</smallcaps>\n\n[紀錄開始]\n\n我已經在生化廢物處理與收容大樓駐守好幾個禮拜了。說實話，就是個美化過的垃圾場看守員。實驗室技師偶爾會把巨大的鋼製儲罐拖上山。沒人會久留。除了那個工友。他每週上來兩次，清理…那些門後面的東西。\n\n大家都說私人保全輕鬆，錢又安全。他們從沒提過那個無聲的殺手：無聊。\n\n場地內不允許攜帶個人設備，所以我一直在數東西。\n\n汙水處理入口旁灌木叢上有三十九片葉子。我的閉路電視螢幕上有十七道刮痕。抽屜裡有兩個迴紋針。\n\n------------------\n\n昨晚，第六區的動作感測器觸發了。攝影機上看起來一切正常。我當時正數著天花板的板條數到一半。我慢跑過去調查。那個區域空無一人。\n\n我感覺好像被監視著，但兩次徹底掃描確認我獨自一人。我重置了感測器，回到了我的崗位。\n\n------------------\n\n那些感測器過去兩個班次每二十分鐘就觸發一次！我每次都得一路跑到第六區。永遠都是誤報。\n\n我打給了資訊部門。果然沒人接。\n\n與此同時，我只好在潮溼、煙霧瀰漫的空氣中來回奔波，一無所獲。\n\n我喘口氣的時候，工友出現了。他在他的手推車裡翻找了一下，遞給我一件襯衫。他說那是新的。\n\n我禮貌地拒絕了。\n\n[紀錄結束]\n\n------------------\n\n"
+msgstr "<smallcaps><b>[偵測到檔案片段]</b>\n\n[語音辨識系統不可用]</smallcaps>\n\n[日誌開始]\n\n我已經在生化廢物處理與收容大樓駐守好幾個禮拜了。說實話，就是個美化過的垃圾場看守員。實驗室技師偶爾會把巨大的鋼製儲罐拖上山。沒人會久留。除了那個工友。他每週上來兩次，清理…那些門後面的東西。\n\n大家都說私人保全輕鬆，錢又安全。他們從沒提過那個無聲的殺手：無聊。\n\n場地內不允許攜帶個人設備，所以我一直在數東西。\n\n汙水處理入口旁灌木叢上有三十九片葉子。我的閉路電視螢幕上有十七道刮痕。抽屜裡有兩個迴紋針。\n\n------------------\n\n昨晚，第六區的動作感測器觸發了。攝影機上看起來一切正常。我當時正數著天花板的板條數到一半。我慢跑過去調查。那個區域空無一人。\n\n我感覺好像被監視著，但兩次徹底掃描確認我獨自一人。我重置了感測器，回到了我的崗位。\n\n------------------\n\n那些感測器過去兩個班次每二十分鐘就觸發一次！我每次都得一路跑到第六區。永遠都是誤報。\n\n我打給了資訊部門。果然沒人接。\n\n與此同時，我只好在潮溼、煙霧瀰漫的空氣中來回奔波，一無所獲。\n\n我喘口氣的時候，工友出現了。他在他的手推車裡翻找了一下，遞給我一件襯衫。他說那是新的。\n\n我禮貌地拒絕了。\n\n[日誌結束]\n\n------------------\n\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_SEEPAGE.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_SEEPAGE.BODY.CONTAINER2"
 msgid "<smallcaps><b>[FILE FRAGMENTATION DETECTED]</b>\n\n[Voice Recognition unavailable]</smallcaps>\n\n[LOG BEGINS]\n\nIt's a cat. That's what's been setting off the sensors. A fat orange stray.\n\nIt was drinking out of a puddle when I came around the corner. No collar. It bolted when I tried to pick it up. Good thing, too, since it's probably riddled with disease.\n\nI need to figure out how to lure it away from the sensors so I can stop running laps.\n\n------------------\n\nThe cat followed the trail of fish sticks all the way to my booth at the edge of the lot.\n\nI put a towel on the floor in the corner for him to sleep on. When I turned around, he was watching from my chair. I tried to wave him off, but he just closed his eyes. I tipped the chair until he slid off onto the towel.\n\n------------------\n\nDr. Byron came through a few hours later. She was nice, but looked more haggard than usual.\n\nCat hid until she left. When he popped his head out from under the desk I could tell by the mayo on his whiskers that my lunch was gone.\n\nI grabbed him to throw him out...and he started purring. Man. He really likes me. Or maybe he just likes mayonnaise.\n\nI wonder what else he likes.\n\n------------------\n\nNow I get to count daily gifts from Cat.\n\nSo far: three mice, nine caterpillars and something that might have been a bird wing. It was bigger than any bird I'd expect Cat to catch.\n\nGunderson, that's the janitor, has been here almost every day since Cat showed up. Not much of a conversationalist, but it's nice to have company.\n\nPlus he cleans up Cat's gifts before the smell gets too bad.\n\n------------------\n\nCat is not a he. He's a <i>she!</i> And a <i>mom.</i>\n\nTwo hours ago, Cat gave birth to a litter...on my lap!\n\nAll three kittens are alive. But they're covered in something unnaturally sticky, and there's something...wrong with them. Two of them have little nubs on their heads, like a tiny horn. The third one has a row of ridges down its back. What on earth??\n\nIt's so freaky. But I can't get up to reach the phone without touching them. I really don't want to touch them.\n\nMy legs are falling asleep. Cat has been purring nonstop and bathing her babies. She can't tell they're little aliens!?\n\n\n\n------------------\n\n"
-msgstr "<smallcaps><b>[偵測到檔案片段]</b>\n\n[語音辨識系統不可用]</smallcaps>\n\n[紀錄開始]\n\n是隻貓。就是牠一直在觸發感測器。一隻肥橘色的流浪貓。\n\n我轉過彎的時候，牠正在水坑裡喝水。沒有項圈。我試圖抱起牠時，牠就跑了。還好牠跑了，因為牠可能全身都是病。\n\n我得想辦法把牠引開感測器，這樣我就不用一直跑來跑去了。\n\n------------------\n\n那隻貓跟著炸魚條一路來到我的值班亭。\n\n我把一條毛巾鋪在角落的地板上給牠睡。我一轉身，牠就從我的椅子上盯著我看。我試圖揮手讓牠走開，但牠只是閉上眼睛。我把椅子傾斜，直到牠滑到毛巾上。\n\n------------------\n\n幾個小時後，Byron 博士經過。她人很好，但看起來比平常更憔悴。\n\n那隻貓躲到她離開才從桌子下面冒頭。看到牠鬍鬚上的美乃滋，我就知道我的午餐遭了殃。\n\n我抓住牠想把牠丟出去…然後牠開始發出呼嚕聲。天啊。牠真的很喜歡我。或者也許牠只是喜歡美乃滋。\n\n突然好奇牠還喜歡什麼。\n\n------------------\n\n現在每天清點那隻貓帶來的「禮物」成了我的新日常。\n\n目前為止：三隻老鼠，九隻毛毛蟲，以及一個可能是鳥的翅膀的東西。那比我預計貓咪能抓到的任何鳥都還要大。\n\nGunderson，就是那個工友，自從貓咪出現後，幾乎每天都來這裡。他不怎麼愛說話，但有伴是件好事。\n\n關鍵是他會在我被薰死前清理掉貓的「禮物」。\n\n------------------\n\n原來那隻貓咪不是公的。牠是<b>母貓</b>！而且還是<b>貓媽媽</b>。\n\n兩個小時前，貓咪生了一窩小貓…就在我的腿上！\n\n三隻小貓都活下來了。但渾身都是詭異的黏液，，而且牠們…有點不對勁。其中兩隻頭上長了小小的凸起，像個小角。第三隻背上有一排脊狀物。這到底是什麼鬼東西？？\n\n太嚇人了。但我不能站起來去拿電話，因為會碰到牠們。我真的不想碰到牠們。\n\n我的腿都麻了。那隻貓咪一直不停地發出呼嚕聲，並給牠的孩子們洗澡。牠難道看不出來牠們是小外星人嗎！？\n\n\n\n------------------\n\n"
+msgstr "<smallcaps><b>[偵測到檔案片段]</b>\n\n[語音辨識系統不可用]</smallcaps>\n\n[日誌開始]\n\n是隻貓。就是牠一直在觸發感測器。一隻肥橘色的流浪貓。\n\n我轉過彎的時候，牠正在水坑裡喝水。沒有項圈。我試圖抱起牠時，牠就跑了。還好牠跑了，因為牠可能全身都是病。\n\n我得想辦法把牠引開感測器，這樣我就不用一直跑來跑去了。\n\n------------------\n\n那隻貓跟著炸魚條一路來到我的值班亭。\n\n我把一條毛巾鋪在角落的地板上給牠睡。我一轉身，牠就從我的椅子上盯著我看。我試圖揮手讓牠走開，但牠只是閉上眼睛。我把椅子傾斜，直到牠滑到毛巾上。\n\n------------------\n\n幾個小時後，Byron 博士經過。她人很好，但看起來比平常更憔悴。\n\n那隻貓躲到她離開才從桌子下面冒頭。看到牠鬍鬚上的美乃滋，我就知道我的午餐遭了殃。\n\n我抓住牠想把牠丟出去…然後牠開始發出呼嚕聲。天啊。牠真的很喜歡我。或者也許牠只是喜歡美乃滋。\n\n突然好奇牠還喜歡什麼。\n\n------------------\n\n現在每天清點那隻貓帶來的「禮物」成了我的新日常。\n\n目前為止：三隻老鼠，九隻毛毛蟲，以及一個可能是鳥的翅膀的東西。那比我預計貓咪能抓到的任何鳥都還要大。\n\nGunderson，就是那個工友，自從貓咪出現後，幾乎每天都來這裡。他不怎麼愛說話，但有伴是件好事。\n\n關鍵是他會在我被薰死前清理掉貓的「禮物」。\n\n------------------\n\n原來那隻貓咪不是公的。牠是<b>母貓</b>！而且還是<b>貓媽媽</b>。\n\n兩個小時前，貓咪生了一窩小貓…就在我的腿上！\n\n三隻小貓都活下來了。但渾身都是詭異的黏液，，而且牠們…有點不對勁。其中兩隻頭上長了小小的凸起，像個小角。第三隻背上有一排脊狀物。這到底是什麼鬼東西？？\n\n太嚇人了。但我不能站起來去拿電話，因為會碰到牠們。我真的不想碰到牠們。\n\n我的腿都麻了。那隻貓咪一直不停地發出呼嚕聲，並給牠的孩子們洗澡。牠難道看不出來牠們是小外星人嗎！？\n\n\n\n------------------\n\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_SEEPAGE.BODY.CONTAINER3
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_SEEPAGE.BODY.CONTAINER3"
 msgid "I woke up a few hours later to Gunderson carefully placing the last kitten into a towel-lined bin in his cart. Cat was already inside, nuzzling her babies.\n\nGunderson wasn't fazed by their weird deformities. He glanced meaningfully toward the locked doors. \"They ain't built those tanks to last,\" he said. Then he draped a second towel over the \"cats\" and wheeled the cart away, whistling.\n\n------------------\n\nIt took three washes to get the goo off my uniform. Ugh.\n\nWhatever's behind those doors, it does <i>not</i> belong out in the world.\n\nShould I...report this? Who would I even report it to? <i>What</i> would I report?\n\n[LOG ENDS]"
-msgstr "我幾個小時後醒來，看到 Gunderson 正小心翼翼地把最後一隻小貓放進他手推車裡鋪有毛巾的箱子裡。貓媽媽已經在裡面，輕輕地蹭著牠的孩子們。\n\nGunderson 對牠們奇怪的畸形毫不在意。他意味深長地朝著那些上鎖的門瞥了一眼，說道：「他們那些儲罐可不是為了持久而建造的。」然後他將第二條毛巾蓋在那些「貓」身上，推著手推車吹著口哨離開了。\n\n------------------\n\n我的制服洗了三遍才把那黏液洗掉。噁！\n\n無論那些門後是什麼，牠們都<b>不該</b>出現在這個世界上。\n\n我應該…報告這件事嗎？我要向誰報告？我該報告<b>什麼</b>報告？\n\n[紀錄結束]"
+msgstr "我幾個小時後醒來，看到 Gunderson 正小心翼翼地把最後一隻小貓放進他手推車裡鋪有毛巾的箱子裡。貓媽媽已經在裡面，輕輕地蹭著牠的孩子們。\n\nGunderson 對牠們奇怪的畸形毫不在意。他意味深長地朝著那些上鎖的門瞥了一眼，說道：「他們那些儲罐可不是為了持久而建造的。」然後他將第二條毛巾蓋在那些「貓」身上，推著手推車吹著口哨離開了。\n\n------------------\n\n我的制服洗了三遍才把那黏液洗掉。噁！\n\n無論那些門後是什麼，牠們都<b>不該</b>出現在這個世界上。\n\n我應該…報告這件事嗎？我要向誰報告？我該報告<b>什麼</b>報告？\n\n[日誌結束]"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_SEEPAGE.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_SEEPAGE.SUBTITLE"
@@ -25178,7 +25178,7 @@ msgstr "海梳葉"
 #. STRINGS.CODEX.KELPPLANT.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.KELPPLANT.BODY.CONTAINER1"
 msgid "Seakombs are hyperefficient photosynthesizers. While most plants grow towards the light, this aquatic fern's needs are so low that it can prioritize other survival needs.\n\nIt sprouts on the ceiling of liquid-filled caves, its tendrils reaching down to brush passing critters. This contact encourages critters to consume the plant and excrete the fertilizer that supports its continued growth."
-msgstr "海梳蕨是超高效的光合作用植物。儘管大多數植物向光生長，但這種水生蕨類的能量需求很低，使其能夠優先考慮其他生存需求。\n\n它在充滿液體的洞穴天花板上發芽，其捲鬚向下伸展以輕觸路過的生物。這種接觸鼓勵生物食用這種植物，並排出支持其持續生長的肥料。"
+msgstr "海梳蕨是一種超高效率的光合作用植物。雖然大多數植物都向光生長，但這種水生蕨類的能量需求極低，讓它可以把精力優先放在其他的生存需求上。\n\n它會從充滿液體的洞穴頂部發芽生長，捲鬚向下伸展，輕觸經過的小動物。透過這種接觸，能鼓勵這些小動物食用海梳蕨，並排出支持其持續生長的肥料。"
 
 #. STRINGS.CODEX.KELPPLANT.SUBTITLE
 msgctxt "STRINGS.CODEX.KELPPLANT.SUBTITLE"
@@ -27713,12 +27713,12 @@ msgstr "未經授權的活動"
 #. STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.ICECRITTERDESIGN.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.ICECRITTERDESIGN.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subject Identified: B363]</smallcaps>\n\n[LOG BEGINS]\n\n...Restricting our organism design to specifically target survival in an off-planet polar climate has narrowed our focus significantly, allowing development of this project to rapidly outpace the others.\n\nWe have successfully optimized for adaptive features such as the formation of protective adipose tissue at >40% of the organism's total mass. Dr. Bubare was concerned about the consequences for muscle mass, but results confirm that reductions fall within an acceptable range.\n\nOur next step is to adapt the organism's diet. It would be inadvisable to populate a new colony with carnivorous creatures of this size.\n\n[LOG ENDS]\n------------------\n[LOG BEGINS]\n\n...When I am alone in the lab, I find myself gravitating toward the enclosure to listen to the creature's melodic vocalizations. Sometimes the pitch changes slightly as I approach.\n\nI am not certain what that means.\n\n[LOG ENDS]\n------------------\n"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B363]</smallcaps>\n\n[紀錄開始]\n\n…將我們的生物體設計做出特定目標的限制，使其在外行星極地氣候中生存，以此大大縮小了我們的研究範圍，使本專案的開發進度能迅速超過其他的專案。\n\n我們已經成功最佳化了適應性特徵，例如形成的脂肪組織超過了生物體總質量的 40%。Bubare 博士之前擔心肌肉質量降低的問題，但最終確定減少量處於可接受範圍內。\n\n我們的下一步是調整生物體的飲食。讓這種大小的食肉生物加入新殖民地很不明智。\n\n[紀錄結束]\n------------------\n[紀錄開始]\n\n…當我獨自一人在實驗室時，我發現自己情不自禁地會去圍欄聽這種生物的旋律聲。當我靠近時，牠的音調有時會有稍微的變化。\n\n我不清楚這是什麼意思。\n\n[紀錄結束]\n------------------\n"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B363]</smallcaps>\n\n[日誌開始]\n\n…將我們的生物體設計做出特定目標的限制，使其在外行星極地氣候中生存，以此大大縮小了我們的研究範圍，使本專案的開發進度能迅速超過其他的專案。\n\n我們已經成功最佳化了適應性特徵，例如形成的脂肪組織超過了生物體總質量的 40%。Bubare 博士之前擔心肌肉質量降低的問題，但最終確定減少量處於可接受範圍內。\n\n我們的下一步是調整生物體的飲食。讓這種大小的食肉生物加入新殖民地很不明智。\n\n[日誌結束]\n------------------\n[日誌開始]\n\n…當我獨自一人在實驗室時，我發現自己情不自禁地會去圍欄聽這種生物的旋律聲。當我靠近時，牠的音調有時會有稍微的變化。\n\n我不清楚這是什麼意思。\n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.ICECRITTERDESIGN.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.ICECRITTERDESIGN.BODY.CONTAINER2"
 msgid "[LOG BEGINS]\n\n...Some of the other departments have taken to calling our work here \"Project Meat Popsicle\". It is a crass misnomer. This species is not designed to be a food source: it must survive the Ceres climate long enough to establish a stable population that will enable the subsequent settlement party to access the essential research data stored in its DNA via Dr. Winslow's revolutionary genome-encoding technique.\n\nImagine, countless yottabytes' worth of scientific documentation wandering freely around a new colony...the ultimate self-sustaining archive, providing stable data storage that requires zero technological maintenance.\n\nIt gives new meaning to the term, \"living document.\"\n\n[LOG ENDS]\n------------------\n[LOG BEGINS]\n\n...Today is the day. My sonorous critter and her handful of progeny are ready to be transported to their new home. They are scheduled to arrive three months in the past, to ensure that they are well established before the settlement party's arrival next week.\n\nDr. Techna invited me to assist with the teleportation. I was relieved to be too busy to accept. I have heard rumors about previous shipments going awry. These stories are unsubstantiated, and yet...\n\nThe urgency of our mission sometimes necessitates non-ideal compromises.\n\nThe lab is so very quiet now.\n\n[LOG ENDS]\n------------------\n"
-msgstr "[紀錄開始]\n\n…其他部門的一些人把我們的工作稱為「肉糕計劃」。可以說是用詞不當且十分粗魯。這個物種的目標不是作為食物來源：它必須在穀神星的氣候中生存足夠長時間，建立穩定的群體，隨後透過 Winslow 博士革命性基因編碼技術，安置組可以將儲存在其 DNA 中的基本研究資料取出。\n\n想像一下，無數佑位元組(YB)量的科學文件就在新殖民地周圍自由徘徊…能自我維護的終極檔案，能提供穩定的資料儲存，不需要任何技術維護。\n\n它給予了「活的文件」新的含義。\n\n[紀錄結束]\n------------------\n[紀錄開始]\n\n…今天就是那個大日子了。我的「大嗓門」和其一小部分後代已準備好運送到新家了。它們預計將抵達三個月前，以確保在下週定居組到達前狀態良好。\n\nTechna 博士邀請我協助傳送任務，我因為太忙就沒接受，為此也鬆了一口氣，因為我聽人說以前的貨物出了岔子，雖然這些閒言碎語並沒有得到證實，不過…\n\n在我們任務的急迫性下，有時還是得做一些非理想的妥協。\n\n現在實驗室真是非常非常安靜啊。\n\n[紀錄結束]\n------------------\n"
+msgstr "[日誌開始]\n\n…其他部門的一些人把我們的工作稱為「肉糕計劃」。可以說是用詞不當且十分粗魯。這個物種的目標不是作為食物來源：它必須在穀神星的氣候中生存足夠長時間，建立穩定的群體，隨後透過 Winslow 博士革命性基因編碼技術，安置組可以將儲存在其 DNA 中的基本研究資料取出。\n\n想像一下，無數佑位元組(YB)量的科學文件就在新殖民地周圍自由徘徊…能自我維護的終極檔案，能提供穩定的資料儲存，不需要任何技術維護。\n\n它給予了「活的文件」新的含義。\n\n[日誌結束]\n------------------\n[日誌開始]\n\n…今天就是那個大日子了。我的「大嗓門」和其一小部分後代已準備好運送到新家了。它們預計將抵達三個月前，以確保在下週定居組到達前狀態良好。\n\nTechna 博士邀請我協助傳送任務，我因為太忙就沒接受，為此也鬆了一口氣，因為我聽人說以前的貨物出了岔子，雖然這些閒言碎語並沒有得到證實，不過…\n\n在我們任務的急迫性下，有時還是得做一些非理想的妥協。\n\n現在實驗室真是非常非常安靜啊。\n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.ICECRITTERDESIGN.SUBTITLE
 msgctxt "STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.ICECRITTERDESIGN.SUBTITLE"
@@ -27933,7 +27933,7 @@ msgstr "故事特質：神祕隱士"
 #. STRINGS.CODEX.STORY_TRAITS.LONELYMINION.CREEPYBASEMENTLAB.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.STORY_TRAITS.LONELYMINION.CREEPYBASEMENTLAB.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subjects Identified: B577, B997, B083, A216]</smallcaps>\n\n[LOG BEGINS]\n\nA216: The Director said there were supposed to be three of you on this task force. Where's the geneticist?\n\nB083: In the bathroom-\n\nB997: He went home.\n\n[long pause]\n\nB997: It's the holidays. He has a family.\n\nA216: We all do. That's exactly why this project is so urgent.\n\nB997: It's not our fault this stuff sat in a subterranean ocean for a year, and took another year to get back to Earth! The microbe samples didn't fare well on the journey, and most of the mechanical components are completely corroded. There's not much to-\n\nB083: -we're analyzing it all and salvaging what we can, Jea- ...Dr. Saruhashi.\n\nA216: Good. And take down those ridiculous lights. This is a lab, not a retro \"shopping mall.\"\n\n[LOG ENDS]\n------------------\n[LOG BEGINS]\n\nB577: Thanks for getting all the debris packed up for disposal.\n\nB997: I thought you did that.\n\nB577: No, I-\n\nB083: Who took my sandwich?\n\nB997: Not this again.\n\nB577: Ren, did you load the shipping container?\n\nB083: Seriously, I haven't eaten in thirteen hours. This isn't funny.\n\nB997: It's a little funny.\n\nB577: Can we focus, please?\n\nB997: Nobody took your sandwich, Rock Doc.\n\nB083: Then why does my food keep going missing?\n\nB997: Maybe the lab ghost took it. Or maybe you just shouldn't leave it out overnight. Gunderson probably thought it was garbage.\n\nB083: He doesn't even clean down here!\n\nB997: Right. Because if he did, I wouldn't have to keep sweeping up the magnesium sulfate deposits that <i>someone</i> keeps tracking all over the floor between shifts.\n\nB083: It's not me!\n\nB577: Listen, I know we're all tired and things have been a little strange. But the sooner we get this sent up to the launchpad, the sooner it starts its trip to the sun and we can all get out of this creepy sub-sub-basement.\n\nB083: Fine.\n\nB997: Fine.\n\nB083: Fine!\n\n[LOG ENDS]\n------------------\n"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B577，B997，B083，A216]</smallcaps>\n\n[紀錄開始]\n\nA216：總監說你們工作組應該有三個人的。基因學家呢？\n\nB083：他去廁——\n\nB997：他回家了。\n\n[長時間的停頓]\n\nB997：今天是假期。他也有家庭。\n\nA216：我們都有。這就是為什麼這個項目如此急迫的確切原因。\n\nB997：這東西放深海裡一年，又花了一年才帶回到地球，這又不是我們的錯！微生物樣本在途中表現不佳，大多數機械零件完全被腐蝕。沒什麼好做——\n\nB083：——我們正在完全分析它，盡我們所能，即… Saruhashi 博士。\n\nA216：好。之後把這些可笑的小燈泡拿下來吧。這裡是實驗室，\n又不是復古的「購物中心」。\n\n[紀錄結束]\n------------------\n[紀錄開始]\n\nB577：多謝你把這些雜物打包處理。\n\nB997：我以為是你整理了。\n\nB577：不，我——\n\nB083：誰拿了我的三明治？\n\nB997：哎呀又來了。\n\nB577：Ren，你裝好運輸集貨箱了嗎？\n\nB083：說真的，我已經 13 個小時沒吃東西了。這不好笑。\n\nB997：有點好笑。\n\nB577：我們能不能專心一下？\n\nB997：沒人拿了你的三明治，Rock 博士。\n\nB083：那為什麼我的食物總是失蹤？\n\nB997：也許是給實驗室鬼給拿走了。或者你就不應該放過夜。\nGunderson可能以為是垃圾就收走了。\n\nB083：他不會到這下面打掃的！\n\nB997：對。因為如果是這樣，我就不用繼續清理<b>某人</b>在換班的時候留下一整路的硫酸鎂沉積物了。\n\nB083：那不是我幹的！\n\nB577：聽著，我知道我們都很累，而且事情有點怪。但我們愈快把它送到發射台上去，它就能越快開始前往太陽的旅程，我們也就可以離開這個陰森的地下三樓了。\n\nB083：好吧。\n\nB997：好的。\n\nB083：好吧！\n\n[紀錄結束]\n------------------\n"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B577，B997，B083，A216]</smallcaps>\n\n[日誌開始]\n\nA216：總監說你們工作組應該有三個人的。基因學家呢？\n\nB083：他去廁——\n\nB997：他回家了。\n\n[長時間的停頓]\n\nB997：今天是假期。他也有家庭。\n\nA216：我們都有。這就是為什麼這個項目如此急迫的確切原因。\n\nB997：這東西放深海裡一年，又花了一年才帶回到地球，這又不是我們的錯！微生物樣本在途中表現不佳，大多數機械零件完全被腐蝕。沒什麼好做——\n\nB083：——我們正在完全分析它，盡我們所能，即… Saruhashi 博士。\n\nA216：好。之後把這些可笑的小燈泡拿下來吧。這裡是實驗室，\n又不是復古的「購物中心」。\n\n[日誌結束]\n------------------\n[日誌開始]\n\nB577：多謝你把這些雜物打包處理。\n\nB997：我以為是你整理了。\n\nB577：不，我——\n\nB083：誰拿了我的三明治？\n\nB997：哎呀又來了。\n\nB577：Ren，你裝好運輸集貨箱了嗎？\n\nB083：說真的，我已經 13 個小時沒吃東西了。這不好笑。\n\nB997：有點好笑。\n\nB577：我們能不能專心一下？\n\nB997：沒人拿了你的三明治，Rock 博士。\n\nB083：那為什麼我的食物總是失蹤？\n\nB997：也許是給實驗室鬼給拿走了。或者你就不應該放過夜。\nGunderson可能以為是垃圾就收走了。\n\nB083：他不會到這下面打掃的！\n\nB997：對。因為如果是這樣，我就不用繼續清理<b>某人</b>在換班的時候留下一整路的硫酸鎂沉積物了。\n\nB083：那不是我幹的！\n\nB577：聽著，我知道我們都很累，而且事情有點怪。但我們愈快把它送到發射台上去，它就能越快開始前往太陽的旅程，我們也就可以離開這個陰森的地下三樓了。\n\nB083：好吧。\n\nB997：好的。\n\nB083：好吧！\n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.STORY_TRAITS.LONELYMINION.CREEPYBASEMENTLAB.SUBTITLE
 msgctxt "STRINGS.CODEX.STORY_TRAITS.LONELYMINION.CREEPYBASEMENTLAB.SUBTITLE"
@@ -28158,7 +28158,7 @@ msgstr "夢境合成器"
 #. STRINGS.CODEX.STORY_TRAITS.MEGA_BRAIN_TANK.SEEDSOFEVOLUTION.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.STORY_TRAITS.MEGA_BRAIN_TANK.SEEDSOFEVOLUTION.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subject Identified: B040]</smallcaps>\n\n[LOG BEGINS]\n\nThree days ago, we completed our first non-fatal Duplicant trial of Nikola's comprehensive synapse microanalysis and mirroring process. Five hours from now, Subject #901 will make history as our first human test subject.\n\nEven at the Vertex Institute, which is twice Gravitas's size, I could've spent half my career waiting for approval to advance to human trials for such an invasive process! But Director Stern is too invested in this work to let it stagnate.\n\nMy darling Bruce always said that when you're on the right path, the universe conspires to help you. He'd be so proud of the work we do here.\n\n[LOG ENDS]\n\n[LOG BEGINS]\n\nMy bio-printed multi-cerebral storage chambers (or \"mega minds\" as I've been calling them) are working! Just in time to save my job.\n\nThe Director's been getting increasingly impatient about our struggle to maintain the integrity of our growing datasets during extraction and processing. The other day, she held my report over a Bunsen burner until the flames reached her fingertips.\n\nI can only imagine how much stress she's under.\n\nThe whole world is counting on us.\n\n[LOG ENDS]\n\n[LOG BEGINS]\n\nOn a hunch, I added dream content analysis to the data and...wow. Oneirology may be scientifically \"fluffy\", but integrating subconscious narratives has produced a new type of brainmap - one with more latent potential for complex processing.\n\nIf these results are replicable, we might be on the verge of unlocking the secret to creating synthetic life forms with the capacity to evolve beyond blindly following commands.\n\nNikola says that's irrelevant for our purposes. Surely Director Stern would disagree.\n\n[LOG ENDS]\n\n[LOG BEGINS]\n\nNikola gave me a dataset to plug into the mega minds. He wouldn't say where it came from, but even if he had...nothing could have prepared me for what it contained.\n\nWhen he saw my face, he muttered something about how people should call me \"Tremors,\" not \"Nails\" and sent me on my lunch break.\n\nAll I could think about was those poor souls.\n\nDid they have souls?\n\n...do we?\n\n[LOG ENDS]\n\n[LOG BEGINS]\n\nIt's done. My adjustments to the memory transfer protocol are hardcoded into the machine.\n\nI finished just as Nikola stormed in.\n\nI may be too much of a coward to stand up for those unfortunate creatures, but with these new parameters in place...someday, they might be able to stand up for themselves.\n\n[LOG ENDS]\n------------------\n"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B040]</smallcaps>\n\n[紀錄開始]\n\n三天前，我們完成了我們的第一次非致命性複製人試驗，即 Nikola 主持的綜合突觸微觀分析和反射過程。從現在起五小時後，受測體 #901 將會成為我們的歷史上第一次人體測試項目。\n\n即使是在頂點研究所，那是一個比引力科技規模大一倍的地方，我也可以用我半個職業生涯等待批准，以推進類似這種手術過程的人體試驗！但 Stern 總監在此投入太多了，以至於項目進展始終沒停過。\n\n我親愛的 Bruce 總會說，當你走在正確的路上時，宇宙會幫助你的。他一定會為我們在此的工作感到自豪的。\n\n[紀錄結束]\n\n[紀錄開始]\n\n我的生物打印多腦儲存室（或者我一直將其稱為「超級大腦」）可以動了！剛好及時地拯救了我的工作。\n\n資料集在提取和處理過程中不斷擴大，對於我們艱難地維持其完整性的努力，總監感到越來越不耐煩了。前幾天，她把我的報告放在本生燈上，直到火焰燒到她的指尖。\n\n我只能想像她承受了多大的壓力。\n\n全世界都指望我們了。\n\n[紀錄結束]\n\n[紀錄開始]\n\n我憑直覺將夢境內容分析加入到了資料中，然後…哇。解夢學可能在科學上是「空洞」的，但整合潛意識敘事已經產生了一種新型的腦圖——一種更具有複雜處理潛力的腦圖\n\n如果這些結果是可複製的，我們可能即將揭開創造合成生命形式的祕密，這種生命形式具有超越盲目服從命令的進化能力。\n\nNikola 說這與我們的目的無關。當然 Stern 總監肯定不會同意。\n\n[紀錄結束]\n\n[紀錄開始]\n\nNikola 給了我一個資料集用來插入超級大腦。他沒有透露它是從哪裡來的，但即使他有…也沒有什麼能讓我對它所包含的內容做好準備。\n\n當他看到我的臉時，他嘀咕著，說人們都在叫我「Tremors」而不是「Nails」，然後送我去午休了。\n\n但我所想的只有那些可憐的靈魂。\n\n他們有靈魂嗎？\n\n…我們呢？\n\n[紀錄結束]\n\n[紀錄開始]\n\n完成了。我對記憶傳遞協議的調整已整合到機器中了。\n\n我剛完成 Nikola 就衝了進來。\n\n我可能太膽小了，無法為那些不幸的生物挺身而出，但有了這些新的參數…有一天，他們也許能夠為自己挺身而出。\n\n[紀錄結束]\n------------------\n"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：B040]</smallcaps>\n\n[日誌開始]\n\n三天前，我們完成了我們的第一次非致命性複製人試驗，即 Nikola 主持的綜合突觸微觀分析和反射過程。從現在起五小時後，受測體 #901 將會成為我們的歷史上第一次人體測試項目。\n\n即使是在頂點研究所，那是一個比引力科技規模大一倍的地方，我也可以用我半個職業生涯等待批准，以推進類似這種手術過程的人體試驗！但 Stern 總監在此投入太多了，以至於項目進展始終沒停過。\n\n我親愛的 Bruce 總會說，當你走在正確的路上時，宇宙會幫助你的。他一定會為我們在此的工作感到自豪的。\n\n[日誌結束]\n\n[日誌開始]\n\n我的生物打印多腦儲存室（或者我一直將其稱為「超級大腦」）可以動了！剛好及時地拯救了我的工作。\n\n資料集在提取和處理過程中不斷擴大，對於我們艱難地維持其完整性的努力，總監感到越來越不耐煩了。前幾天，她把我的報告放在本生燈上，直到火焰燒到她的指尖。\n\n我只能想像她承受了多大的壓力。\n\n全世界都指望我們了。\n\n[日誌結束]\n\n[日誌開始]\n\n我憑直覺將夢境內容分析加入到了資料中，然後…哇。解夢學可能在科學上是「空洞」的，但整合潛意識敘事已經產生了一種新型的腦圖——一種更具有複雜處理潛力的腦圖\n\n如果這些結果是可複製的，我們可能即將揭開創造合成生命形式的祕密，這種生命形式具有超越盲目服從命令的進化能力。\n\nNikola 說這與我們的目的無關。當然 Stern 總監肯定不會同意。\n\n[日誌結束]\n\n[日誌開始]\n\nNikola 給了我一個資料集用來插入超級大腦。他沒有透露它是從哪裡來的，但即使他有…也沒有什麼能讓我對它所包含的內容做好準備。\n\n當他看到我的臉時，他嘀咕著，說人們都在叫我「Tremors」而不是「Nails」，然後送我去午休了。\n\n但我所想的只有那些可憐的靈魂。\n\n他們有靈魂嗎？\n\n…我們呢？\n\n[日誌結束]\n\n[日誌開始]\n\n完成了。我對記憶傳遞協議的調整已整合到機器中了。\n\n我剛完成 Nikola 就衝了進來。\n\n我可能太膽小了，無法為那些不幸的生物挺身而出，但有了這些新的參數…有一天，他們也許能夠為自己挺身而出。\n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.STORY_TRAITS.MEGA_BRAIN_TANK.SEEDSOFEVOLUTION.SUBTITLE
 msgctxt "STRINGS.CODEX.STORY_TRAITS.MEGA_BRAIN_TANK.SEEDSOFEVOLUTION.SUBTITLE"
@@ -28393,7 +28393,7 @@ msgstr "分配一名複製人以修復這個建築的功能"
 #. STRINGS.CODEX.STORY_TRAITS.MORB_ROVER_MAKER.UNSAFETRANSFER.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.STORY_TRAITS.MORB_ROVER_MAKER.UNSAFETRANSFER.BODY.CONTAINER1"
 msgid "<smallcaps>[Log Fragmentation Detected]\n[Voice Recognition Unavailable]</smallcaps>\n\n[LOG BEGINS]\n\n...and then the Printing Pod says \"Knock knock, goo's there!\"\n\nUgh. They'll never laugh at <i>that</i> stinker.\n\nWhat if-\n\n(sound of a ding)\n\nHey hey, squishy little buddy! Look who's all grown up. You ready for a big robot ride? Dr. Seyed Ali should be back from his meeting any minute. He'll be so happy to see you.\n\n(sound of a wet slap on glass)\n\nAww yeah, I'd be impatient too.\n\nYou know what, why don't I go ahead and get you into your new home? I've helped him do this more than a dozen times.\n\n\"See one, do one, teach one,\" right?\n\n[LOG ENDS]"
-msgstr "<smallcaps>[偵測到紀錄片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[紀錄開始]\n\n…然後列印元說「敲敲門，糊在家！」\n\n呃。他們不會嘲笑<b>那</b>傢伙的。\n\n如果——\n\n（叮噹聲）\n\n嘿，嘿，黏糊糊的小傢伙！看看你都長多大了。你準備好乘坐大機器人了嗎？Seyed Ali 博士開完會隨時都會回來。他看到你會很高興的。\n\n（潮溼地拍打玻璃聲）\n\n啊是的，我也會不耐煩的。\n\n你知道嗎，我為什麼不直接帶你搬進新家呢？我已經幫他做過十幾次了。\n\n「看一次，做一次，教一次」，對吧？\n\n[紀錄結束]"
+msgstr "<smallcaps>[偵測到日誌片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[日誌開始]\n\n…然後列印元說「敲敲門，糊在家！」\n\n呃。他們不會嘲笑<b>那</b>傢伙的。\n\n如果——\n\n（叮噹聲）\n\n嘿，嘿，黏糊糊的小傢伙！看看你都長多大了。你準備好乘坐大機器人了嗎？Seyed Ali 博士開完會隨時都會回來。他看到你會很高興的。\n\n（潮溼地拍打玻璃聲）\n\n啊是的，我也會不耐煩的。\n\n你知道嗎，我為什麼不直接帶你搬進新家呢？我已經幫他做過十幾次了。\n\n「看一次，做一次，教一次」，對吧？\n\n[日誌結束]"
 
 #. STRINGS.CODEX.STORY_TRAITS.MORB_ROVER_MAKER.UNSAFETRANSFER.TITLE
 msgctxt "STRINGS.CODEX.STORY_TRAITS.MORB_ROVER_MAKER.UNSAFETRANSFER.TITLE"
