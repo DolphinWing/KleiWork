@@ -69713,12 +69713,12 @@ msgstr "用<style=\"KKeyword\">氧氣</style>補充<style=\"KKeyword\">太空衣
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.REFINEMENT_ENERGY_HAS_COOLANT
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.REFINEMENT_ENERGY_HAS_COOLANT"
 msgid "<style=\"produced\">{0}</style> of <style=\"KKeyword\">Heat</style> will be produced to cool off the fabricated item\n\nThis will raise the <style=\"KKeyword\">Temperature</style> of the contained <style=\"KKeyword\">{1}</style> by <b>{2}</b>, and heat the containing building"
-msgstr "冷卻加工品將會產生 <style=\"produced\">{0}</style>的<style=\"KKeyword\">熱</style>\n\n<style=\"KKeyword\">{1}</style>的<style=\"KKeyword\">溫度</style>將會提高 <b>{2}</b>，並使建築物變熱"
+msgstr "冷卻加工品將會產生 <style=\"produced\">{0}</style>的<style=\"KKeyword\">熱量</style>\n\n這會使所含的<style=\"KKeyword\">{1}</style>的<style=\"KKeyword\">溫度</style>提升 <b>{2}</b>，並加熱建築本身"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.REFINEMENT_ENERGY_NO_COOLANT
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.REFINEMENT_ENERGY_NO_COOLANT"
 msgid "<style=\"produced\">{0}</style> of <style=\"KKeyword\">Heat</style> will be produced to cool off the fabricated item\n\nIf <style=\"KKeyword\">{1}</style> is used for coolant, its <style=\"KKeyword\">Temperature</style> will be raised by <b>{2}</b>, and will heat the containing building"
-msgstr "冷卻加工品將會產生 <style=\"produced\">{0}</style>的<style=\"KKeyword\">熱</style>\n\n如果<style=\"KKeyword\">{1}</style>被當作冷卻劑，它的<style=\"KKeyword\">溫度</style>將會提高 <b>{2}</b>，並使建築物變熱"
+msgstr "冷卻加工品將會產生 <style=\"produced\">{0}</style>的<style=\"KKeyword\">熱量</style>\n\n如果<style=\"KKeyword\">{1}</style>被用作冷卻劑，其<style=\"KKeyword\">溫度</style>將會提升 <b>{2}</b>，並加熱建築本身"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.REMOVEDEFFECT
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.REMOVEDEFFECT"
