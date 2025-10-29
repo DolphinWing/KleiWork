@@ -234,7 +234,7 @@ namespace Voidria
                             }
                         }
 
-                        if (rule.ruleId?.StartsWith("temporalTear") == true)
+                        if (rule.ruleId?.StartsWith("temporalTear_opener") == true)
                         {
                             if (options.EnableTearOpener == false)
                             {

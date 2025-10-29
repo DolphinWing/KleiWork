@@ -63,7 +63,7 @@ namespace Voidria
             EnableOilReservoir = true;
             EnableCritters = true;
             SaveCritters = true;
-            EnableTearOpener = false;
+            EnableTearOpener = true;
             EnableBackground = false;
         }
 
