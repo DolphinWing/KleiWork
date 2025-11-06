@@ -59,6 +59,14 @@ class Ini(
     var dstStringMap: String = ""
 
     /**
+     * Window position and size
+     */
+    var windowPosX: Float = 0f
+    var windowPosY: Float = 0f
+    var windowWidth: Float = 0f
+    var windowHeight: Float = 0f
+
+    /**
      * Load ini file
      */
     suspend fun load() = withContext(Dispatchers.IO) {
@@ -78,6 +86,7 @@ class Ini(
                 // do reading, usually loop until end of file reading
                 var line: String? = reader.readLine()
                 while (line != null) {
+                    // println("line: $line")
                     parseIni(line)
                     line = reader.readLine()
                 }
@@ -110,6 +119,10 @@ class Ini(
                 "stringMap" -> dstStringMap = value
                 "workshopDir_oni" -> oniWorkshopDir = value
                 "assetsDir_oni" -> oniAssetsDir = value
+                "windowPosX" -> windowPosX = value.toFloatOrNull() ?: 0f
+                "windowPosY" -> windowPosY = value.toFloatOrNull() ?: 0f
+                "windowWidth" -> windowWidth = value.toFloatOrNull() ?: 0f
+                "windowHeight" -> windowHeight = value.toFloatOrNull() ?: 0f
             }
         } else {
             println("invalid line: $line")
@@ -127,6 +140,10 @@ class Ini(
         builder.append("stringMap=$dstStringMap\n")
         builder.append("workshopDir_oni=$oniWorkshopDir\n")
         builder.append("assetsDir_oni=$oniAssetsDir\n")
+        builder.append("windowPosX=$windowPosX\n")
+        builder.append("windowPosY=$windowPosY\n")
+        builder.append("windowWidth=$windowWidth\n")
+        builder.append("windowHeight=$windowHeight\n")
         val content = builder.toString()
         try { // http://stackoverflow.com/a/1053474
             val writer = BufferedWriter(FileWriter(configFile))

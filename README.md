@@ -25,11 +25,6 @@ This is a personal project that includes my mod work for the games by Klei Enter
 ![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3430682737?logo=steam) 
 ![Steam Favorites](https://img.shields.io/steam/favorites/3430682737?logo=steam) <br />
 [workshop-3430682737](workshop-3430682737) is a map mod for Voidria clusters feat. with [TorchGod](https://github.com/TorchGod531).
-* DST [正體中文包](https://steamcommunity.com/sharedfiles/filedetails/?id=1993780385) (abandoned)<br />
-![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/DolphinWing/KleiWork?filename=workshop-1993780385%2Fpackage.json&logo=github) 
-![Steam Subscriptions](https://img.shields.io/steam/subscriptions/1993780385?logo=steam) 
-![Steam Favorites](https://img.shields.io/steam/favorites/1993780385?logo=steam) <br />
-[workshop-1993780385](workshop-1993780385) is a DST client-side language pack mod. It also supports server-side language update.
 
 * [FontLoader](oni-mods/FontLoader) is the .NET project referenced from [古靈精怪的字型模組](https://github.com/dershiuan/ONI-Mods/tree/v2.0.4/FontLoader)
 * [Niobium_Start](oni-mods/Niobium_Start), [Rime_Extreme_2](oni-mods/Rime_Extreme_2) and [oni-mods/TorchGod_Voidria](TorchGod_Voidria) are for modded maps.
@@ -49,12 +44,6 @@ Thanks those developers who have done brilliant work on these mods
 * Kelth' [MiniBase : Spaced Out Edition !](https://steamcommunity.com/sharedfiles/filedetails/?id=2973000407)
 * qbane [Made a font loader mod available on Linux and macOS](https://www.reddit.com/r/Oxygennotincluded/comments/orijbl/made_a_font_loader_mod_available_on_linux_and/) Reddit Post and [GitHub](https://github.com/qbane/ONI-Mods)
 * miZyind [正體中文字體用語翻譯包](https://steamcommunity.com/sharedfiles/filedetails/?id=2070840646) 的 [討論版](https://steamcommunity.com/workshop/filedetails/discussion/2070840646/3044978964803635873)
-
-#### Don't Starve Together
-
-* [漢化增強Chinese++](https://steamcommunity.com/sharedfiles/filedetails/?id=1418746242)
-* [中文語言包](https://steamcommunity.com/sharedfiles/filedetails/?id=367546858)
-* [中文高清字體](https://steamcommunity.com/sharedfiles/filedetails/?id=678340265)
 
 ### Other Reference
 

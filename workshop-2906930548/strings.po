@@ -18,7 +18,7 @@ msgstr "<link=\"BEACHCHAIR\">甲板摺疊躺椅</link>"
 #. STRINGS.BLUEPRINTS.CEILINGLIGHT_CHANDELIER.DESC
 msgctxt "STRINGS.BLUEPRINTS.CEILINGLIGHT_CHANDELIER.DESC"
 msgid "Designers are not liable for injuries obtained by swinging from this fixture."
-msgstr "設計者不對該燈具擺動造成的受傷負責。"
+msgstr "設計者不對因懸盪或搖擺該燈具而造成的傷害負責。"
 
 #. STRINGS.BLUEPRINTS.CEILINGLIGHT_CHANDELIER.NAME
 msgctxt "STRINGS.BLUEPRINTS.CEILINGLIGHT_CHANDELIER.NAME"

@@ -1,5 +1,9 @@
 package dolphin.desktop.apps.dsttranslate
 
+import androidx.compose.ui.unit.DpSize
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.WindowPosition
+import androidx.compose.ui.window.WindowState
 import dolphin.android.apps.dsttranslate.PoHelper
 import dolphin.android.apps.dsttranslate.WordEntry
 import dolphin.desktop.apps.dsttranslate.compose.Configs
@@ -22,14 +26,28 @@ class PoDataModel(val helper: DesktopPoHelper) {
     /**
      * Load Ini and Po files from disk
      */
-    suspend fun loadIniAndPo(mode: PoHelper.Mode = PoHelper.Mode.ONI) = withContext(Dispatchers.IO) {
-        appMode.emit(mode)
-        helper.loadXml() // setup replacement at launch
-        configs.emit(Configs(helper.ini))
-        helper.runTranslationProcess(mode) // setup replacement at launch
-        refreshDataSource() // loadPo
-        searchList.emit(helper.allValues()) // loadPo
-    }
+    suspend fun loadIniAndPo(mode: PoHelper.Mode = PoHelper.Mode.ONI): Pair<WindowPosition, DpSize> =
+        withContext(Dispatchers.IO) {
+            appMode.emit(mode)
+            helper.loadXml() // setup replacement at launch
+            configs.emit(Configs(helper.ini))
+            helper.runTranslationProcess(mode) // setup replacement at launch
+            refreshDataSource() // loadPo
+            searchList.emit(helper.allValues()) // loadPo
+
+            val position = if (helper.ini.windowPosX > 0 && helper.ini.windowPosY > 0) {
+                WindowPosition.Absolute(helper.ini.windowPosX.dp, helper.ini.windowPosY.dp)
+            } else {
+                WindowPosition.PlatformDefault
+            }
+            val size = if (helper.ini.windowWidth > 0 && helper.ini.windowHeight > 0) {
+                DpSize(helper.ini.windowWidth.dp, helper.ini.windowHeight.dp)
+            } else {
+                DpSize(1200.dp, 800.dp)
+            }
+            println("position = $position, size = $size")
+            return@withContext Pair(position, size)
+        }
 
     /**
      * Save configs to disk
@@ -152,6 +170,19 @@ class PoDataModel(val helper: DesktopPoHelper) {
                 chs = helper.sc2tc(helper.chs(entry.key)?.str ?: ""),
                 cht = helper.cht(entry.key)?.id,
             )
+        }
+    }
+
+    suspend fun rememberLastWindowState(windowState: WindowState) {
+        val pos = windowState.position
+        val size = windowState.size
+        println("close window: $pos, $size")
+        if (pos is WindowPosition.Absolute) {
+            helper.ini.windowPosX = pos.x.value
+            helper.ini.windowPosY = pos.y.value
+            helper.ini.windowWidth = size.width.value
+            helper.ini.windowHeight = size.height.value
+            helper.ini.save()
         }
     }
 }

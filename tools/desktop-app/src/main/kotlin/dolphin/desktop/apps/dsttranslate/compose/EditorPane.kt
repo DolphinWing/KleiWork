@@ -2,6 +2,7 @@ package dolphin.desktop.apps.dsttranslate.compose
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -16,10 +17,12 @@ import androidx.compose.material.Text
 import androidx.compose.material.TextButton
 import androidx.compose.material.TextField
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.ContentCopy
 import androidx.compose.material.icons.rounded.ContentPaste
 import androidx.compose.material.icons.rounded.CopyAll
 import androidx.compose.material.icons.rounded.Link
 import androidx.compose.material.icons.rounded.TextFields
+import androidx.compose.material.icons.rounded.Translate
 import androidx.compose.material.icons.rounded.Visibility
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -56,7 +59,7 @@ fun EditorPane(
     onTranslate: ((String) -> Unit)? = null,
     onCopyFromClipboard: (() -> String)? = null,
     onCancel: (() -> Unit)? = null,
-    mode: PoHelper.Mode = PoHelper.Mode.DST,
+    mode: PoHelper.Mode = PoHelper.Mode.ONI,
 ) {
     var text by remember { mutableStateOf(data.target.string()) }
     var nowVisible by remember { mutableStateOf(true) }
@@ -86,7 +89,10 @@ fun EditorPane(
             }
             if (mode == PoHelper.Mode.DST) {
                 data.dst?.let { // new item has no previous for reference, need to check source
-                    IconButton(onClick = { dstVisible = !dstVisible }) {
+                    TooltipIconButton(
+                        onClick = { dstVisible = !dstVisible },
+                        tooltip = "Source text"
+                    ) {
                         Icon(
                             Icons.Rounded.Visibility,
                             contentDescription = null,
@@ -95,7 +101,10 @@ fun EditorPane(
                     }
                 }
             }
-            IconButton(onClick = { chsVisible = !chsVisible }) {
+            TooltipIconButton(
+                onClick = { chsVisible = !chsVisible },
+                tooltip = "Now text"
+            ) {
                 Icon(
                     Icons.Rounded.Visibility,
                     contentDescription = null,
@@ -103,7 +112,10 @@ fun EditorPane(
                 )
             }
             if (mode == PoHelper.Mode.DST) {
-                IconButton(onClick = { chtVisible = !chtVisible }) {
+                TooltipIconButton(
+                    onClick = { chtVisible = !chtVisible },
+                    tooltip = "Traditional text"
+                ) {
                     Icon(
                         Icons.Rounded.Visibility,
                         contentDescription = null,
@@ -114,8 +126,9 @@ fun EditorPane(
         }
 
         if (chsVisible) {
-            Button(
+            TooltipButton(
                 onClick = { text = data.chs?.dropQuote() ?: "" },
+                tooltip = "Use this text",
                 modifier = Modifier.fillMaxWidth(),
                 enabled = data.chs?.isNotEmpty() == true,
                 colors = ButtonDefaults.buttonColors(
@@ -125,9 +138,11 @@ fun EditorPane(
                 Text(data.chs?.dropQuote() ?: "", fontSize = AppTheme.largerFontSize())
             }
         }
+
         if (mode == PoHelper.Mode.DST && chtVisible) {
-            Button(
+            TooltipButton(
                 onClick = { text = data.cht?.dropQuote() ?: "" },
+                tooltip = "Use this text",
                 modifier = Modifier.fillMaxWidth(),
                 enabled = data.cht?.isNotEmpty() == true,
                 colors = ButtonDefaults.buttonColors(
@@ -142,9 +157,10 @@ fun EditorPane(
         if (mode == PoHelper.Mode.DST) {
             data.dst?.let { old ->
                 if (dstVisible) {
-                    Row {
-                        TextButton(
-                            onClick = { onTranslate?.invoke(old.origin()) },
+                    Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                        TooltipTextButton(
+                            onClick = { onCopyToClipboard?.invoke(old.origin()) },
+                            tooltip = "Copy original text",
                             modifier = Modifier.weight(1f),
                             colors = ButtonDefaults.textButtonColors(
                                 contentColor = AppTheme.AppColor.orange,
@@ -156,12 +172,16 @@ fun EditorPane(
                                 fontSize = AppTheme.largerFontSize(),
                             )
                         }
-                        IconButton(onClick = { onCopyToClipboard?.invoke(old.origin()) }) {
-                            Icon(Icons.Rounded.CopyAll, contentDescription = null)
+                        TooltipIconButton(
+                            onClick = { onTranslate?.invoke(old.origin()) },
+                            tooltip = "Send to Google Translate",
+                        ) {
+                            Icon(Icons.Rounded.Translate, contentDescription = "Translate")
                         }
                     }
-                    Button(
+                    TooltipButton(
                         onClick = { text = old.string() },
+                        tooltip = "Use this text",
                         modifier = Modifier.fillMaxWidth(),
                         colors = ButtonDefaults.buttonColors(
                             backgroundColor = AppTheme.AppColor.orange,
@@ -176,7 +196,7 @@ fun EditorPane(
         if (nowVisible) {
             // use regex to find link content
             // sample: <link=\"DATABANK\">Data Banks</link>
-            val regex = Regex("<link=([^>]+)>([^<]+)</link>")
+            val regex = Regex("<link=([^>]+)>([^<]+)></link>")
             val links = regex.findAll(data.target.origin())
 //            if (links.count() == 0) {
 //                println("No link found")
@@ -195,9 +215,15 @@ fun EditorPane(
                 }
             }
 
-            Row {
-                TextButton(
-                    onClick = { onTranslate?.invoke(data.target.origin()) },
+            Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                TooltipTextButton(
+                    onClick = {
+                        var text = "msgctxt \"${data.target.key()}\"\n"
+                        text += "msgid \"${data.target.origin()}\"\n"
+                        text += "msgstr \"${data.target.string()}\""
+                        onCopyToClipboard?.invoke(text)
+                    },
+                    tooltip = "Copy this text",
                     modifier = Modifier.weight(1f),
                     colors = ButtonDefaults.textButtonColors(
                         contentColor = AppTheme.AppColor.green,
@@ -209,15 +235,30 @@ fun EditorPane(
                         fontSize = AppTheme.largerFontSize(),
                     )
                 }
-                IconButton(onClick = { onCopyToClipboard?.invoke(data.target.origin()) }) {
-                    Icon(Icons.Rounded.CopyAll, contentDescription = null)
+
+                TooltipIconButton(
+                    onClick = { onCopyToClipboard?.invoke(data.target.origin()) },
+                    tooltip = "Copy original text"
+                ) {
+                    Icon(Icons.Rounded.ContentCopy, contentDescription = null)
                 }
-                IconButton(onClick = { linkSelector = true }, enabled = links.count() > 0) {
+                TooltipIconButton(
+                    onClick = { onTranslate?.invoke(data.target.origin()) },
+                    tooltip = "Send to Google Translate"
+                ) {
+                    Icon(Icons.Rounded.Translate, contentDescription = null)
+                }
+                TooltipIconButton(
+                    onClick = { linkSelector = true },
+                    tooltip = "Show link",
+                    enabled = links.count() > 0
+                ) {
                     Icon(Icons.Rounded.TextFields, contentDescription = null)
                 }
             }
-            Button(
+            TooltipButton(
                 onClick = { text = data.target.string() },
+                tooltip = "Use this text",
                 modifier = Modifier.fillMaxWidth(),
                 colors = ButtonDefaults.buttonColors(backgroundColor = AppTheme.AppColor.green),
             ) {
@@ -236,26 +277,29 @@ fun EditorPane(
             // singleLine = true,
         )
 
-        Row(modifier = Modifier.fillMaxWidth()) {
-            IconButton(onClick = { onCopyToClipboard?.invoke(text) }) {
+        Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+            TooltipIconButton(
+                onClick = { onCopyToClipboard?.invoke(text) },
+                tooltip = "Copy all"
+            ) {
                 Icon(Icons.Rounded.CopyAll, contentDescription = null)
             }
-            IconButton(onClick = { onCopyFromClipboard?.invoke()?.let { result -> text = result } }) {
-                Icon(Icons.Rounded.ContentPaste, contentDescription = null)
-            }
-            Spacer(modifier = Modifier.requiredWidth(16.dp))
-            TextButton(
-                onClick = { onCancel?.invoke() },
-                modifier = Modifier.weight(2f),
+            TooltipIconButton(
+                onClick = { onCopyFromClipboard?.invoke()?.let { result -> text = result } },
+                tooltip = "Paste all"
             ) {
-                Text(stringResource("Cancel"))
+                Icon(Icons.Rounded.ContentPaste, contentDescription = null)
             }
             Spacer(modifier = Modifier.requiredWidth(16.dp))
             Button(
                 onClick = { onSave?.invoke(data.target.key, "\"$text\"") },
-                modifier = Modifier.weight(3f),
+                modifier = Modifier.weight(1f),
             ) {
                 Text(stringResource("Apply"))
+            }
+            Spacer(modifier = Modifier.requiredWidth(16.dp))
+            TextButton(onClick = { onCancel?.invoke() }) {
+                Text(stringResource("Cancel"))
             }
         }
     }
@@ -308,7 +352,7 @@ private fun AlertRegexLinkSelector(links: Sequence<MatchResult>, onSelected: (St
                 TextButton(onClick = { onSelected(link) }) {
                     Text(link)
                 }
-                IconButton(onClick = { onSelected("<link=\\\"${link}\\\"></link>") }) {
+                IconButton(onClick = { onSelected("<link=\\\"${link}\\\"</link>") }) {
                     Icon(Icons.Rounded.Link, contentDescription = null)
                 }
             }

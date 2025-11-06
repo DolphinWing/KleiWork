@@ -34,6 +34,7 @@ import androidx.compose.ui.res.useResource
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
+import androidx.compose.ui.window.WindowPosition
 import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
 import dolphin.android.apps.dsttranslate.PoHelper
@@ -63,7 +64,6 @@ import java.awt.datatransfer.DataFlavor
 import java.awt.datatransfer.StringSelection
 import java.io.File
 import java.net.URL
-import kotlin.time.Duration.Companion.milliseconds
 
 enum class UiState {
     Main, Editor, Search, Analysis,
@@ -71,17 +71,13 @@ enum class UiState {
 
 @ExperimentalMaterialApi
 fun main(args: Array<String>) = application {
-    var version = args.find { it.startsWith("v=") }?.drop(2) ?: "x.x.x"
+//    println(args.contentToString())
+    val version = args.find { it.startsWith("v=") }?.drop(2) ?: "x.x.x"
 
 //    val osName: String = System.getProperties().getProperty("os.name")
 //    println("os.name = $osName")
 
-    val workingDir: String = System.getProperties().getProperty("user.dir")
-    println("workingDir = $workingDir")
-
-    val debug = File(workingDir, "build").exists() // has build dir
-    println("debug = $debug")
-    if (debug) version += "D" // check if it is a debug version
+    val debugMode by remember { mutableStateOf(false) }
 
 //    val tempDir: String = System.getProperty("java.io.tmpdir")
 //    println("tempDir = $tempDir")
@@ -89,11 +85,29 @@ fun main(args: Array<String>) = application {
 //    val homeDir: String = System.getProperty("user.home")
 //    println("homeDir = $homeDir")
 
-    val model = PoDataModel(DesktopPoHelper(Ini(workingDir), debug = debug).apply { prepare() })
-    val windowState = rememberWindowState(size = DpSize(1024.dp, 768.dp))
+    val model = remember {
+        val workingDir: String = System.getProperties().getProperty("user.dir")
+        println("workingDir = $workingDir")
+
+        val debug = File(workingDir, "build").exists() // has build dir
+        println("debug = $debug")
+
+        val ini = Ini(workingDir)
+        PoDataModel(DesktopPoHelper(ini, debug = debug).apply { prepare() })
+    }
+    val windowState = rememberWindowState(size = DpSize(0.dp, 0.dp), position = WindowPosition.PlatformDefault)
+    val coroutineScope = rememberCoroutineScope()
 
     Window(
-        onCloseRequest = ::exitApplication,
+        visible = windowState.size.width.value > 0 && windowState.size.height.value > 0,
+        onCloseRequest = {
+            coroutineScope.launch {
+                println("close window: save")
+                model.rememberLastWindowState(windowState)
+                println("close window: exit")
+                exitApplication()
+            }
+        },
         state = windowState,
         title = "ONI/DST PO Helper",
         icon = BitmapPainter(useResource("nisbet_ponder.png", ::loadImageBitmap)),
@@ -102,14 +116,16 @@ fun main(args: Array<String>) = application {
             model,
             onCopyTo = ::copyToSystemClipboard,
             onCopyFrom = ::copyFromSystemClipboard,
-            debug = debug,
+            debug = debugMode,
             appVersion = version,
         )
     }
 
     LaunchedEffect(Unit) {
-        delay(500.milliseconds)
-        model.loadIniAndPo() // LaunchedEffect
+        // delay(500.milliseconds)
+        val (position, size) = model.loadIniAndPo() // LaunchedEffect
+        windowState.position = position
+        windowState.size = size
     }
 }
 
@@ -123,7 +139,7 @@ fun App(
     debug: Boolean = false,
     appVersion: String = "x.x.x",
 ) {
-    val composeScope = rememberCoroutineScope()
+    val coroutineScope = rememberCoroutineScope()
 
     DstTranslatorTheme {
         var uiState by remember { mutableStateOf<Pair<UiState, UiState?>>(Pair(UiState.Main, null)) }
@@ -142,7 +158,7 @@ fun App(
         val toastJob = remember { mutableStateOf<Job?>(null) }
         fun toast(message: String) {
             toastJob.value?.cancel()
-            toastJob.value = composeScope.launch {
+            toastJob.value = coroutineScope.launch {
                 toasted = message
                 delay(2000)
                 toasted = ""
@@ -163,7 +179,7 @@ fun App(
         }
 
         fun saveEntryList(cacheIt: Boolean = false) {
-            composeScope.launch {
+            coroutineScope.launch {
                 cached = false // hide debug dialog
                 val (exported, cost) = model.save(cacheIt)
                 if (cost > 0) {
@@ -177,7 +193,7 @@ fun App(
         val callback = remember {
             object : ToolbarCallback {
                 override fun onRefresh() {
-                    composeScope.launch {
+                    coroutineScope.launch {
                         val cost = model.translate()
                         toast("cost $cost ms")
                     }
@@ -192,7 +208,7 @@ fun App(
                 }
 
                 override fun onAnalyze() {
-                    composeScope.launch {
+                    coroutineScope.launch {
                         val start = System.currentTimeMillis()
                         val result = model.analyze()
                         changeUiState(UiState.Analysis)
@@ -223,9 +239,9 @@ fun App(
                         state = entryListState,
                         onEdit = { entry -> showEntryEditor(entry) },
                         callback = callback,
-                        appVersion = appVersion,
+                        appVersion = if (debug) "${appVersion}D" else appVersion,
                         selectedTab = selectedTab,
-                        onTabChange = { composeScope.launch { selectedTab = it } },
+                        onTabChange = { coroutineScope.launch { selectedTab = it } },
                     )
 
                 UiState.Editor ->
@@ -233,7 +249,7 @@ fun App(
                         data = editorData,
                         modifier = Modifier.fillMaxSize(),
                         onSave = { key, text ->
-                            composeScope.launch {
+                            coroutineScope.launch {
                                 model.edit(key, text)
                                 changeUiState() // hideEntryEditor
                             }
