@@ -1563,7 +1563,7 @@ msgstr "終極飛行頭盔"
 #. STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_BASIC_BLACK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_BASIC_BLACK.DESC"
 msgid "Stain-resistant footwear for flight suits. They'll look new forever!"
-msgstr "搭配飛行服的抗污鞋履。保證它們永遠看起來像新的一樣！"
+msgstr "搭配飛行服的抗汙鞋履。保證它們永遠看起來像新的一樣！"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_BASIC_BLACK.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_BASIC_BLACK.NAME"
@@ -1573,7 +1573,7 @@ msgstr "黑色飛行靴"
 #. STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_BASIC_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_BASIC_WHITE.DESC"
 msgid "Microchannels on the boots' exterior reduce drag and increase dirt accumulation."
-msgstr "靴子外側的微型通道能減少阻力，同時也會增加污垢堆積。"
+msgstr "靴子外側的微型通道能減少阻力，同時也會增加汙垢堆積。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_BASIC_WHITE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_BASIC_WHITE.NAME"
@@ -3093,122 +3093,122 @@ msgstr "亞麻法蘭絨襯衫"
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_ASH_CHARCOAL.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_ASH_CHARCOAL.DESC"
 msgid "How many cycles has it been since someone last washed this undershirt? It's impossible to tell."
-msgstr ""
+msgstr "上次清洗這件打底衣是幾個周期前的事？根本看不出來。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_ASH_CHARCOAL.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_ASH_CHARCOAL.NAME"
 msgid "Ash Base Layer"
-msgstr ""
+msgstr "灰燼打底衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_BASIN_WORTSEED.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_BASIN_WORTSEED.DESC"
 msgid "A sweat-wicking undershirt with extra padding in the underarms to prevent unsightly stains."
-msgstr ""
+msgstr "一件吸濕排汗的打底衣，腋下配有額外的加厚襯墊，可防止產生不雅觀的污漬。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_BASIN_WORTSEED.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_BASIN_WORTSEED.NAME"
 msgid "Basin Base Layer"
-msgstr ""
+msgstr "洗盆打底衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_CANKER_SATSUMA.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_CANKER_SATSUMA.DESC"
 msgid "A sweat-wicking undershirt that smells vaguely acidic. No one's sure whether it's citrus or sweat."
-msgstr ""
+msgstr "一件帶有淡淡酸味的吸濕排汗打底衣，沒人確定那是柑橘味還是汗味。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_CANKER_SATSUMA.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_CANKER_SATSUMA.NAME"
 msgid "Canker Base Layer"
-msgstr ""
+msgstr "潰瘍打底衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_DUSKY_GRAPE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_DUSKY_GRAPE.DESC"
 msgid "A sweat-wicking undershirt in a twilight shade of purple, for colonists who haven't seen the sun in a very long time."
-msgstr ""
+msgstr "一件暮光紫色的吸濕排汗打底衣，專為很久沒見過太陽的殖民者設計。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_DUSKY_GRAPE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_DUSKY_GRAPE.NAME"
 msgid "Dusk Base Layer"
-msgstr ""
+msgstr "夜幕打底衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_ENNUI_FLINT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_ENNUI_FLINT.DESC"
 msgid "It's a relatively functional sweat-wicking undershirt, or whatever."
-msgstr ""
+msgstr "算是件還能正常吸濕排汗的功能性打底衣吧，阿隨便啦。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_ENNUI_FLINT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_ENNUI_FLINT.NAME"
 msgid "Ennui Base Layer"
-msgstr ""
+msgstr "倦怠打底衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_FLATUS_MUCK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_FLATUS_MUCK.DESC"
 msgid "An unremarkable beige undershirt that enables the wearer to avoid attention when they're passing gas at parties."
-msgstr ""
+msgstr "一件毫不起眼的米色打底衣，能讓穿戴者在派對上放屁時避免引人注意。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_FLATUS_MUCK.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_FLATUS_MUCK.NAME"
 msgid "Flatus Base Layer"
-msgstr ""
+msgstr "脹氣打底衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_GLUON_PETAL.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_GLUON_PETAL.DESC"
 msgid "A soft pink undershirt for pastel-loving particle physicists."
-msgstr ""
+msgstr "一件柔粉色打底衣，專為喜愛淡彩調的粒子物理學家準備。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_GLUON_PETAL.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_GLUON_PETAL.NAME"
 msgid "Gluon Base Layer"
-msgstr ""
+msgstr "膠子打底衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_MUSH_PEAGREEN.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_MUSH_PEAGREEN.DESC"
 msgid "A sweat-wicking undershirt that effectively hides mush bar stains."
-msgstr ""
+msgstr "一件能有效掩蓋泥糊糕污漬的吸濕排汗打底衣。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_MUSH_PEAGREEN.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_MUSH_PEAGREEN.NAME"
 msgid "Mush Base Layer"
-msgstr ""
+msgstr "淤泥打底衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_NUKED_QUANTUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_NUKED_QUANTUM.DESC"
 msgid "A sweat-wicking undershirt the color of microwaved slime!"
-msgstr ""
+msgstr "一件與微波過的軟泥同色的吸濕排汗打底衣！"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_NUKED_QUANTUM.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_NUKED_QUANTUM.NAME"
 msgid "Nuked Base Layer"
-msgstr ""
+msgstr "核能打底衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_PUCE_RUSTY.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_PUCE_RUSTY.DESC"
 msgid "A sweat-wicking undershirt the color of sliced Pacu fillet, without the fishy aroma."
-msgstr ""
+msgstr "一件與帕庫魚片同色的吸汗打底衣，但絕無魚腥味。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_PUCE_RUSTY.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_PUCE_RUSTY.NAME"
 msgid "Puce Base Layer"
-msgstr ""
+msgstr "帕庫打底衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_RIVET_ELECTRO.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_RIVET_ELECTRO.DESC"
 msgid "A sweat-wicking undershirt in a really riveting shade of blue."
-msgstr ""
+msgstr "一件驚豔藍色的吸濕排汗打底衣，令人移不開視線。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_RIVET_ELECTRO.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_RIVET_ELECTRO.NAME"
 msgid "Rivet Base Layer"
-msgstr ""
+msgstr "鉚釘打底衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_VITRO_SYMBIO.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_VITRO_SYMBIO.DESC"
 msgid "A sweat-wicking undershirt in a striking glassy-blue hue."
-msgstr ""
+msgstr "一件有著醒目玻璃藍色調的吸濕排汗打底衣。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_VITRO_SYMBIO.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_VITRO_SYMBIO.NAME"
 msgid "Vitro Base Layer"
-msgstr ""
+msgstr "離體打底衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_JERSEY_01.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_JERSEY_01.DESC"
@@ -3613,142 +3613,142 @@ msgstr "<link=\"EXTERIORWALL\">像素劍龍</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_CHARCOAL_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_CHARCOAL_WHITE.DESC"
 msgid "A dark-gray wallpaper with one crisp white corner cut out, for modular styling."
-msgstr ""
+msgstr "一種有著俐落白色凹角的深灰色壁紙，用於模組化風格。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_CHARCOAL_WHITE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_CHARCOAL_WHITE.NAME"
 msgid "<link=\"EXTERIORWALL\">Charcoal Corner</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">木炭凹角</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_CHILLI_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_CHILLI_WHITE.DESC"
 msgid "A chili-red wallpaper with one crisp white corner cut out, for modular styling."
-msgstr ""
+msgstr "一種有著俐落白色凹角的辣椒紅色壁紙，用於模組化風格。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_CHILLI_WHITE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_CHILLI_WHITE.NAME"
 msgid "<link=\"EXTERIORWALL\">Chili Corner</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">辣椒凹角</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_COBALT_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_COBALT_WHITE.DESC"
 msgid "A strong blue wallpaper with one crisp white corner cut out, for modular styling."
-msgstr ""
+msgstr "一種有著俐落白色凹角的濃烈藍色壁紙，用於模組化風格。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_COBALT_WHITE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_COBALT_WHITE.NAME"
 msgid "<link=\"EXTERIORWALL\">Cobalt Corner</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">鈷藍凹角</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_FLAMINGO_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_FLAMINGO_WHITE.DESC"
 msgid "A vivid pink wallpaper with one crisp white corner cut out, for modular styling."
-msgstr ""
+msgstr "一種有著俐落白色凹角的鮮粉色壁紙，用於模組化風格。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_FLAMINGO_WHITE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_FLAMINGO_WHITE.NAME"
 msgid "<link=\"EXTERIORWALL\">Petal Corner</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">花瓣凹角</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_KELLY_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_KELLY_WHITE.DESC"
 msgid "An algae-green wallpaper with one crisp white corner cut out, for modular styling."
-msgstr ""
+msgstr "一種有著俐落白色凹角的藻綠色壁紙，用於模組化風格。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_KELLY_WHITE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_KELLY_WHITE.NAME"
 msgid "<link=\"EXTERIORWALL\">Algae Corner</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">藻類凹角</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_LEMON_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_LEMON_WHITE.DESC"
 msgid "A bright yellow wallpaper with one crisp white corner cut out, for modular styling."
-msgstr ""
+msgstr "一種有著俐落白色凹角的亮黃色壁紙，用於模組化風格。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_LEMON_WHITE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_LEMON_WHITE.NAME"
 msgid "<link=\"EXTERIORWALL\">Brightslug Corner</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">亮蛞蝓凹角</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_SATSUMA_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_SATSUMA_WHITE.DESC"
 msgid "A safety-orange wallpaper with one crisp white corner cut out, for modular styling."
-msgstr ""
+msgstr "一種有著俐落白色凹角的安全橙色壁紙，用於模組化風格。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_SATSUMA_WHITE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_SATSUMA_WHITE.NAME"
 msgid "<link=\"EXTERIORWALL\">Hi-Vis Corner</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">高能見凹角</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_CHARCOAL.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_CHARCOAL.DESC"
 msgid "This wallpaper features a dark-gray triangle pointing into a vast expanse of nothingness."
-msgstr ""
+msgstr "這種壁紙以深灰色三角形為主題，指向無垠的虛空。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_CHARCOAL.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_CHARCOAL.NAME"
 msgid "<link=\"EXTERIORWALL\">Charcoal Point</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">木炭凸尖</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_CHILLI.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_CHILLI.DESC"
 msgid "This wallpaper features a chili-red triangle pointing into a vast expanse of nothingness."
-msgstr ""
+msgstr "這種壁紙以辣椒紅色三角形為主題，指向無垠的虛空。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_CHILLI.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_CHILLI.NAME"
 msgid "<link=\"EXTERIORWALL\">Chili Point</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">辣椒凸尖</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_COBALT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_COBALT.DESC"
 msgid "This wallpaper features a cobalt-blue triangle pointing into a vast expanse of nothingness."
-msgstr ""
+msgstr "這種壁紙以鈷藍色三角形為主題，指向無垠的虛空。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_COBALT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_COBALT.NAME"
 msgid "<link=\"EXTERIORWALL\">Cobalt Point</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">鈷藍凸尖</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_FLAMINGO.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_FLAMINGO.DESC"
 msgid "This wallpaper features a vivid pink triangle pointing into a vast expanse of nothingness."
-msgstr ""
+msgstr "這種壁紙以鮮粉色三角形為主題，指向無垠的虛空。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_FLAMINGO.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_FLAMINGO.NAME"
 msgid "<link=\"EXTERIORWALL\">Petal Point</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">花瓣凸尖</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_KELLY.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_KELLY.DESC"
 msgid "This wallpaper features an algae-green triangle pointing into a vast expanse of nothingness."
-msgstr ""
+msgstr "這種壁紙以藻綠色三角形為主題，指向無垠的虛空。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_KELLY.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_KELLY.NAME"
 msgid "<link=\"EXTERIORWALL\">Algae Point</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">藻類凸尖</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_LEMON.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_LEMON.DESC"
 msgid "This wallpaper features a bright yellow triangle pointing into a vast expanse of nothingness."
-msgstr ""
+msgstr "這種壁紙以亮黃色三角形為主題，指向無垠的虛空。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_LEMON.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_LEMON.NAME"
 msgid "<link=\"EXTERIORWALL\">Brightslug Point</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">亮蛞蝓凸尖</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_SATSUMA.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_SATSUMA.DESC"
 msgid "This wallpaper features a safety-orange triangle pointing into a vast expanse of nothingness."
-msgstr ""
+msgstr "這種壁紙以安全橙色三角形為主題，指向無垠的虛空。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_SATSUMA.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_SATSUMA.NAME"
 msgid "<link=\"EXTERIORWALL\">Hi-Vis Point</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">高能見凸尖</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_WOOD_PANEL.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_WOOD_PANEL.DESC"
@@ -3763,72 +3763,72 @@ msgstr "<link=\"EXTERIORWALL\">木面板</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_X_CHARCOAL_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_CHARCOAL_WHITE.DESC"
 msgid "The dark-gray triangles on this wallpaper look like an X marking the spot...or an hourglass marking the passage of time."
-msgstr ""
+msgstr "這種壁紙上的深灰色三角既像標記地點的「X」，又像記錄時光流逝的沙漏。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_X_CHARCOAL_WHITE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_CHARCOAL_WHITE.NAME"
 msgid "<link=\"EXTERIORWALL\">Charcoal X</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">木炭 X 形</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_X_CHILLI_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_CHILLI_WHITE.DESC"
 msgid "The chili-red triangles on this wallpaper look like an X marking the spot...or an hourglass marking the passage of time."
-msgstr ""
+msgstr "這種壁紙上的辣椒紅色三角既像標記地點的「X」，又像記錄時光流逝的沙漏。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_X_CHILLI_WHITE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_CHILLI_WHITE.NAME"
 msgid "<link=\"EXTERIORWALL\">Chili X</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">辣椒 X 形</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_X_COBALT_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_COBALT_WHITE.DESC"
 msgid "The cobalt-blue triangles on this wallpaper look like an X marking the spot...or an hourglass marking the passage of time."
-msgstr ""
+msgstr "這種壁紙上的鈷藍色三角既像標記地點的「X」，又像記錄時光流逝的沙漏。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_X_COBALT_WHITE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_COBALT_WHITE.NAME"
 msgid "<link=\"EXTERIORWALL\">Cobalt X</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">鈷藍 X 形</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_X_FLAMINGO_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_FLAMINGO_WHITE.DESC"
 msgid "The petal-pink triangles on this wallpaper look like an X marking the spot...or an hourglass marking the passage of time."
-msgstr ""
+msgstr "這種壁紙上的花瓣粉色三角既像標記地點的「X」，又像記錄時光流逝的沙漏。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_X_FLAMINGO_WHITE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_FLAMINGO_WHITE.NAME"
 msgid "<link=\"EXTERIORWALL\">Petal X</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">花瓣 X 形</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_X_KELLY_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_KELLY_WHITE.DESC"
 msgid "The algae-green triangles on this wallpaper look like an X marking the spot...or an hourglass marking the passage of time."
-msgstr ""
+msgstr "這種壁紙上的藻綠色三角既像標記地點的「X」，又像記錄時光流逝的沙漏。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_X_KELLY_WHITE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_KELLY_WHITE.NAME"
 msgid "<link=\"EXTERIORWALL\">Algae X</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">藻類 X 形</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_X_LEMON_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_LEMON_WHITE.DESC"
 msgid "The bright yellow triangles on this wallpaper look like an X marking the spot...or an hourglass marking the passage of time."
-msgstr ""
+msgstr "這種壁紙上的亮黃色三角既像標記地點的「X」，又像記錄時光流逝的沙漏。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_X_LEMON_WHITE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_LEMON_WHITE.NAME"
 msgid "<link=\"EXTERIORWALL\">Brightslug X</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">亮蛞蝓 X 形</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_X_SATSUMA_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_SATSUMA_WHITE.DESC"
 msgid "The safety-orange triangles on this wallpaper look like an X marking the spot...or an hourglass marking the passage of time."
-msgstr ""
+msgstr "這種壁紙上的安全橙色三角既像標記地點的「X」，又像記錄時光流逝的沙漏。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_X_SATSUMA_WHITE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_SATSUMA_WHITE.NAME"
 msgid "<link=\"EXTERIORWALL\">Hi-Vis X</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">高能見 X 形</link>"
 
 #. STRINGS.BUILDING.DETAILS.USE_COUNT
 msgctxt "STRINGS.BUILDING.DETAILS.USE_COUNT"
@@ -7468,7 +7468,7 @@ msgstr "目前狀態：太空衣充氣中"
 #. STRINGS.BUILDING.STATUSITEMS.SUIT_LOCKER.CHARGING.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SUIT_LOCKER.CHARGING.TOOLTIP"
 msgid "This <style=\"KKeyword\">Suit</style> is docked and refueling"
-msgstr "這件<style=\"KKeyword\">太空衣/style>已儲放並在充填中"
+msgstr "這件<style=\"KKeyword\">太空衣</style>已儲放並在充填中"
 
 #. STRINGS.BUILDING.STATUSITEMS.SUIT_LOCKER.FULLY_CHARGED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SUIT_LOCKER.FULLY_CHARGED.NAME"
@@ -13270,10 +13270,10 @@ msgctxt "STRINGS.BUILDINGS.PREFABS.GRAVE.NAME"
 msgid "<link=\"GRAVE\">Tasteful Memorial</link>"
 msgstr "<link=\"GRAVE\">雅緻的紀念碑</link>"
 
-#. STRINGS.BUILDINGS.PREFABS.GRAVITASBATHROOMSTALL.DESC
-msgctxt "STRINGS.BUILDINGS.PREFABS.GRAVITASBATHROOMSTALL.DESC"
+#. STRINGS.BUILDINGS.PREFABS.GRAVITASBATHROOMSTALL.EFFECT
+msgctxt "STRINGS.BUILDINGS.PREFABS.GRAVITASBATHROOMSTALL.EFFECT"
 msgid "A private toilet for senior scientists.\n\nIt was the site of many great scientific breakthroughs."
-msgstr "高級科學家的專用廁所。\n\n它是許多偉大科學突破的誕生地。"
+msgstr "高級科學家專用的私人廁所。\n\n這裡曾是許多偉大科學突破的誕生地。"
 
 #. STRINGS.BUILDINGS.PREFABS.GRAVITASBATHROOMSTALL.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.GRAVITASBATHROOMSTALL.NAME"
@@ -29163,7 +29163,7 @@ msgstr "這個物種可能沒有完整的知覺，但有很強的集體意識。
 #. STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.SPECIES_ENTRIES_EXPANDED.BELLY
 msgctxt "STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.SPECIES_ENTRIES_EXPANDED.BELLY"
 msgid "Specimen produced substantial stool sample directly onto scanner bed.\n\nRemarkably, its white coat remained pristine. Analysis of coat fibers revealed that each follicle is sealed with polytetrafluoroethylene, providing strong stain resistance."
-msgstr "該樣本直接在掃描床上產生了大量的糞便。\n\n值得注意的是，牠的白色皮毛仍然一塵不染。皮毛纖維分析顯示，每個毛囊都使用聚四氟乙烯密封，提供了強大的抗污能力。"
+msgstr "該樣本直接在掃描床上產生了大量的糞便。\n\n值得注意的是，牠的白色皮毛仍然一塵不染。皮毛纖維分析顯示，每個毛囊都使用聚四氟乙烯密封，提供了強大的抗汙能力。"
 
 #. STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.SPECIES_ENTRIES_EXPANDED.CHAMELEON
 msgctxt "STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.SPECIES_ENTRIES_EXPANDED.CHAMELEON"
@@ -29718,7 +29718,7 @@ msgstr "挑戰完成"
 #. STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.END_POPUP.DESCRIPTION
 msgctxt "STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.END_POPUP.DESCRIPTION"
 msgid "Success! This building has printed its first viable organism. It contains zero detectable genetic defects.\n\nWe can now confidently reroute the Printing Pod's power to print the critters and seeds best suited for my colony's purposes. No species need ever be extinct again.\n\nA small personal item shook loose from the frame during use. Perhaps it belonged to the previous operator."
-msgstr "成功！這座建築已印製出第一個可存活的有機體。它不含任何可檢測到的基因缺陷。\n\n我們現在可以自信地重新導向列印元的電力，印製最適合我殖民地目的的生物與種子。沒有任何物種需要再次滅絕了。\n\n使用期間，一個小的個人物品從框架上震落下來。或許它屬於前一個操作員。"
+msgstr "成功！這座建築已印製出第一個可存活的有機體。它不含任何可偵測到的基因缺陷。\n\n我們現在可以自信地重新導向列印元的電力，印製最適合我殖民地目的的生物與種子。沒有任何物種需要再次滅絕了。\n\n使用期間，一個小的個人物品從框架上震落下來。或許它屬於前一個操作員。"
 
 #. STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.END_POPUP.NAME
 msgctxt "STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.END_POPUP.NAME"
@@ -33978,7 +33978,7 @@ msgstr "定期噴發<link=\"STEAM\">蒸氣</link>與非常熱的<link=\"WATER\">
 #. STRINGS.CREATURES.SPECIES.GEYSER.FILTHY_WATER.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.FILTHY_WATER.DESC"
 msgid "A highly pressurized vent that periodically erupts with boiling <link=\"DIRTYWATER\">Polluted Water</link>."
-msgstr "一個高壓排氣口，會週期性地噴發沸騰的<link=\"DIRTYWATER\">污水</link>。"
+msgstr "一個高壓排氣口，會週期性地噴發沸騰的<link=\"DIRTYWATER\">汙水</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.FILTHY_WATER.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.FILTHY_WATER.NAME"
@@ -35003,7 +35003,7 @@ msgstr "<link=\"PACUCLEANER\">寒帶帕庫寶寶</link>"
 #. STRINGS.CREATURES.SPECIES.PACU.VARIANT_CLEANER.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.PACU.VARIANT_CLEANER.DESC"
 msgid "Gulp Fishes are aquatic critters who inhabit cold liquid pools.\n\nTheir gills filter <link=\"DIRTYWATER\">Polluted Water</link> into <link=\"WATER\">Water</link>."
-msgstr "寒帶帕庫是水生生物，牠們棲息在寒冷的液體水池中。\n\n牠們的魚鰓能將<link=\"DIRTYWATER\">污水</link>過濾成<link=\"WATER\">水</link>。"
+msgstr "寒帶帕庫是水生生物，牠們棲息在寒冷的液體水池中。\n\n牠們的魚鰓能將<link=\"DIRTYWATER\">汙水</link>過濾成<link=\"WATER\">水</link>。"
 
 #. STRINGS.CREATURES.SPECIES.PACU.VARIANT_CLEANER.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.PACU.VARIANT_CLEANER.EGG_NAME"
@@ -39493,7 +39493,7 @@ msgstr "緊急補充氧氣罐中"
 #. STRINGS.DUPLICANTS.CHORES.BIONICABSORBOXYGENCRITICAL.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.CHORES.BIONICABSORBOXYGENCRITICAL.TOOLTIP"
 msgid "This Duplicant is refilling their depleted <style=\"KKeyword\">Oxygen</style> tank in the nearest breathable area: {0} O<sub>2</sub>\n\nImproving colony breathability and scheduling regular <style=\"KKeyword\">Downtime</style> will prevent future emergencies"
-msgstr "這名複製人正在最近的可呼吸區域補充其耗盡的<style=\"KKeyword\">氧氣</style>罐：{0} O<sub>2</sub>\n\n改善殖民地的呼吸能力並安排定期<style =\"KKeyword\">休息時間</style>以防止將來發生緊急情況"
+msgstr "這名複製人正在最近的可呼吸區域補充其耗盡的<style=\"KKeyword\">氧氣</style>罐：{0} O<sub>2</sub>\n\n改善殖民地的呼吸能力並安排定期<style=\"KKeyword\">休息時間</style>以防止將來發生緊急情況"
 
 #. STRINGS.DUPLICANTS.CHORES.BIONICBEDTIMEMODE.NAME
 msgctxt "STRINGS.DUPLICANTS.CHORES.BIONICBEDTIMEMODE.NAME"
@@ -58810,6 +58810,11 @@ msgctxt "STRINGS.INPUT_BINDINGS.ROOT.EMPTYPIPE"
 msgid "Empty Pipe"
 msgstr "清空管道"
 
+#. STRINGS.INPUT_BINDINGS.ROOT.FIND
+msgctxt "STRINGS.INPUT_BINDINGS.ROOT.FIND"
+msgid "Find"
+msgstr "尋找"
+
 #. STRINGS.INPUT_BINDINGS.ROOT.HARVEST
 msgctxt "STRINGS.INPUT_BINDINGS.ROOT.HARVEST"
 msgid "Harvest"
@@ -66403,7 +66408,7 @@ msgstr "Ardent"
 #. STRINGS.NAMEGEN.ROCKET.ADJECTIVE.BOLD
 msgctxt "STRINGS.NAMEGEN.ROCKET.ADJECTIVE.BOLD"
 msgid "Bold"
-msgstr ""
+msgstr "大膽"
 
 #. STRINGS.NAMEGEN.ROCKET.ADJECTIVE.BRAVE
 msgctxt "STRINGS.NAMEGEN.ROCKET.ADJECTIVE.BRAVE"
@@ -75973,7 +75978,7 @@ msgstr "{0}病菌"
 #. STRINGS.UI.DETAILTABS.TEXTICONDATA.GERMS.TOOLTIP
 msgctxt "STRINGS.UI.DETAILTABS.TEXTICONDATA.GERMS.TOOLTIP"
 msgid "Contaminated with {0} germs"
-msgstr "被{0}病菌污染"
+msgstr "被{0}病菌汙染"
 
 #. STRINGS.UI.DETAILTABS.TEXTICONDATA.REFRIGERATED.NAME
 msgctxt "STRINGS.UI.DETAILTABS.TEXTICONDATA.REFRIGERATED.NAME"
@@ -78883,7 +78888,7 @@ msgstr "我們修改了存檔的結構！\n請(ClickType/click)下方的按鈕�
 #. STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_RESULT
 msgctxt "STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_RESULT"
 msgid "<style=\"KKeyword\">SUCCESS!</style>\nMigration moved <style=\"KKeyword\">{0}/{1}</style> saves and <style=\"KKeyword\">{2}/{3}</style> autosaves</style>."
-msgstr "<style=\"KKeyword\">成功！</style>\n已轉換 <style=\"KKeyword\">{0}/{1}</style> 存檔與 <style=\"KKeyword\">{2}/{3}</style> 自動存檔</style>。"
+msgstr "<style=\"KKeyword\">成功！</style>\n已轉換 <style=\"KKeyword\">{0}/{1}</style> 存檔與 <style=\"KKeyword\">{2}/{3}</style> 自動存檔。"
 
 #. STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_RESULT_FAILURES
 msgctxt "STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_RESULT_FAILURES"
@@ -97993,7 +97998,7 @@ msgstr "我在機器上找到來自一位心懷不滿的員工的簡短電子郵
 #. STRINGS.UI.USERMENUACTIONS.READLORE.SEARCH_MIRROR_FAIL.SEARCH1
 msgctxt "STRINGS.UI.USERMENUACTIONS.READLORE.SEARCH_MIRROR_FAIL.SEARCH1"
 msgid "There's nothing to see here but the streaks left by a distracted cleaner."
-msgstr "這裡沒什麼好看的，只有分心的清潔工留下的污痕。"
+msgstr "這裡沒什麼好看的，只有分心的清潔工留下的汙痕。"
 
 #. STRINGS.UI.USERMENUACTIONS.READLORE.SEARCH_MIRROR_SUCCESS.SEARCH1
 msgctxt "STRINGS.UI.USERMENUACTIONS.READLORE.SEARCH_MIRROR_SUCCESS.SEARCH1"
