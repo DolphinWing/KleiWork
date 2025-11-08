@@ -50,8 +50,6 @@ Thanks those developers who have done brilliant work on these mods
 * [Creating/Using Translation Files](https://forums.kleientertainment.com/forums/topic/74765-creatingusing-translation-files-updated-august-22nd-2017/) for Oxygen Not Included
 * [Cairath's Unofficial Modding Guide](https://github.com/Cairath/Oxygen-Not-Included-Modding/wiki)
 * [PLib](https://github.com/peterhaneve/ONIMods/tree/main/PLib) is Peter's library for making ONI mods.
-* [图文教程 - 如何自建MOD](https://steamcommunity.com/sharedfiles/filedetails/?id=676286328) for Don't Starve Together
-* [BmFont 製作字體檔](https://cwa1022.pixnet.net/blog/post/15527479)
 
 ### Internal work
 

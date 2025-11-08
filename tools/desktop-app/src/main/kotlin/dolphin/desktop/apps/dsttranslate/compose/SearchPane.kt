@@ -153,15 +153,15 @@ fun SearchPane(
             }
         }
         Row(horizontalArrangement = Arrangement.End, modifier = Modifier.fillMaxWidth()) {
-            TextButton(onClick = { onCancel?.invoke() }, modifier = Modifier.weight(1f)) {
-                Text(stringResource("Cancel"))
-            }
             Button(onClick = {
                 val entry =
                     currentEntry ?: model.helper.allValues().find { entry -> entry.toSearchText() == data.value }
                 onSelect?.invoke(entry?.key() ?: "")
             }, modifier = Modifier.weight(1f)) {
                 Text(stringResource("Edit"))
+            }
+            TextButton(onClick = { onCancel?.invoke() }, modifier = Modifier.weight(1f)) {
+                Text(stringResource("Cancel"))
             }
         }
     }

@@ -3103,7 +3103,7 @@ msgstr "灰燼打底衣"
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_BASIN_WORTSEED.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_BASIN_WORTSEED.DESC"
 msgid "A sweat-wicking undershirt with extra padding in the underarms to prevent unsightly stains."
-msgstr "一件吸濕排汗的打底衣，腋下配有額外的加厚襯墊，可防止產生不雅觀的污漬。"
+msgstr "一件吸濕排汗的打底衣，腋下配有額外的加厚襯墊，可防止產生不雅觀的汙漬。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_BASIN_WORTSEED.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_BASIN_WORTSEED.NAME"
@@ -3163,7 +3163,7 @@ msgstr "膠子打底衣"
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_MUSH_PEAGREEN.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_MUSH_PEAGREEN.DESC"
 msgid "A sweat-wicking undershirt that effectively hides mush bar stains."
-msgstr "一件能有效掩蓋泥糊糕污漬的吸濕排汗打底衣。"
+msgstr "一件能有效掩蓋泥糊糕汙漬的吸濕排汗打底衣。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_MUSH_PEAGREEN.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_GOTCH_MUSH_PEAGREEN.NAME"
@@ -14167,7 +14167,7 @@ msgstr "供火箭升空及降落的平台。"
 
 #. STRINGS.BUILDINGS.PREFABS.LAUNCHPAD.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LAUNCHPAD.EFFECT"
-msgid "Precursor to construction of all other Rocket modules.\n\nAllows Rockets to launch from or land on the host Planetoid.\n\nAutomatically links up to <link=\"MODULARLAUNCHPADPORTSOLID\">Rocket Ports</link> built to either side of the platform."
+msgid "Precursor to construction of all other Rocket modules.\n\nAllows Rockets to launch from or land on the host Planetoid.\n\nAutomatically links up to <link=\"MODULARLAUNCHPADPORTSOLID\">Rocket Port</link><link=\"MODULARLAUNCHPADPORTSOLID\">s</link> built to either side of the platform."
 msgstr "這是建造所有其他火箭模組的先決條件。\n\n允許火箭從所屬的小行星上發射或著陸。\n\n會自動連線到建在平台兩側的<link=\"MODULARLAUNCHPADPORTSOLID\">火箭貨港</link>。"
 
 #. STRINGS.BUILDINGS.PREFABS.LAUNCHPAD.LOGIC_PORT_LANDED_ROCKET
@@ -23657,7 +23657,7 @@ msgstr "<indent=%5>自幼時起，Johannsen 隊長就夢想著能飛上天空。
 
 #. STRINGS.CODEX.B2_MEETTHEPILOT.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.B2_MEETTHEPILOT.BODY.CONTAINER2"
-msgid "<indent=%10><smallcaps>\n\nBrought to you by the Gravitas Facility.</smallcaps></indent>"
+msgid "<indent=%10><smallcaps>\n\nBrought to you by the Gravitas Facility.</indent>"
 msgstr "<indent=%10><smallcaps>\n\n引力科技，領導未來。</smallcaps></indent>"
 
 #. STRINGS.CODEX.B2_MEETTHEPILOT.SUBTITLE
@@ -63917,8 +63917,8 @@ msgstr "有機材料是有用的成分，可從環境中收集、從<link=\"PLAN
 
 #. STRINGS.MISC.TAGS.ORNAMENT
 msgctxt "STRINGS.MISC.TAGS.ORNAMENT"
-msgid "<link=\"TECHCOMPONENTS\">Ornament</link>"
-msgstr "<link=\"TECHCOMPONENTS\">裝飾品</link>"
+msgid "<link=\"ORNAMENT\">Ornament</link>"
+msgstr "<link=\"ORNAMENT\">裝飾品</link>"
 
 #. STRINGS.MISC.TAGS.ORNAMENTDISPLAYED
 msgctxt "STRINGS.MISC.TAGS.ORNAMENTDISPLAYED"
@@ -70848,7 +70848,7 @@ msgstr "輻射生態"
 #. STRINGS.SUBWORLDS.RADIOACTIVE.UTILITY
 msgctxt "STRINGS.SUBWORLDS.RADIOACTIVE.UTILITY"
 msgid "<link=\"LEADSUIT\">Lead Suits</link> are imperative if my Duplicants are going to start exploring this biome as <link=\"RADIATIONSICKNESS\">Radioactive Contaminants</link> are a constant danger here.\n\n<link=\"BEE\">Beetas</link> pose a double threat as they are both highly radioactive and very aggressive. If they can be subdued, <link=\"BEEHIVE\">Beeta Hives</link> provide a great service turning <link=\"URANIUMORE\">Uranium Ore</link> into <link=\"ENRICHEDURANIUM\">Enriched Uranium</link>.\n\nWhile the Radioactive Biome, and the Beetas contained within it, should be avoided at all costs if my Duplicants do not have the correct protection, my colony will need to trek into this dangerous biome if we are going to build any higher-tier nuclear technologies."
-msgstr "如果複製人要開始探索這個生態區，<link=\"LEADSUIT\">輻射防護衣</link>是必要的，因為<link=\"RADIATIONSICKNESS\">放射性污染物</link>在此地是一個持續的危險。\n\n<link=\"BEE\">輻射蜂</link>構成雙重威脅，因為牠們不僅具有高放射性，而且非常具攻擊性。如果能將其制服，<link=\"BEEHIVE\">輻射蜂巢</link>就能提供將<link=\"URANIUMORE\">鈾礦</link>轉化為<link=\"ENRICHEDURANIUM\">濃縮鈾</link>的出色服務。\n\n儘管在複製人沒有適當防護的情況下，應不惜一切代價避免進入此放射性生態區及其內含的輻射蜂；但若要建造任何更高級的核能科技，殖民地仍需要涉足這個危險的生態區。"
+msgstr "如果複製人要開始探索這個生態區，<link=\"LEADSUIT\">輻射防護衣</link>是必要的，因為<link=\"RADIATIONSICKNESS\">放射性汙染物</link>在此地是一個持續的危險。\n\n<link=\"BEE\">輻射蜂</link>構成雙重威脅，因為牠們不僅具有高放射性，而且非常具攻擊性。如果能將其制服，<link=\"BEEHIVE\">輻射蜂巢</link>就能提供將<link=\"URANIUMORE\">鈾礦</link>轉化為<link=\"ENRICHEDURANIUM\">濃縮鈾</link>的出色服務。\n\n儘管在複製人沒有適當防護的情況下，應不惜一切代價避免進入此放射性生態區及其內含的輻射蜂；但若要建造任何更高級的核能科技，殖民地仍需要涉足這個危險的生態區。"
 
 #. STRINGS.SUBWORLDS.RAPTOR.DESC
 msgctxt "STRINGS.SUBWORLDS.RAPTOR.DESC"

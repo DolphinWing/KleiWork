@@ -54,6 +54,11 @@ msgctxt "STRINGS.BLUEPRINTS.MANUALGENERATOR_ELLIPTICAL.NAME"
 msgid "<link=\"MANUALGENERATOR\">Elliptical Generator</link>"
 msgstr "<link=\"MANUALGENERATOR\">椭圆发电机</link>"
 
+#. STRINGS.BLUEPRINTS.NEUTRONIUM_ATMO_OUTFIT.NAME
+msgctxt "STRINGS.BLUEPRINTS.NEUTRONIUM_ATMO_OUTFIT.NAME"
+msgid "Regal Neutronium Atmo Outfit"
+msgstr ""
+
 #. STRINGS.BLUEPRINTS.OUTFIT_AERODYNAMIC_FLIGHTSUIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_AERODYNAMIC_FLIGHTSUIT.NAME"
 msgid "Aerodynamic Outfit"
@@ -399,6 +404,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_CIRCUIT.NAME"
 msgid "Bionic Atmo Belt"
 msgstr "仿生气压服腰带"
 
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_NEUTRONIUM.DESC"
+msgid "The only acceptable atmo belt for exalted space explorers."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_NEUTRONIUM.NAME"
+msgid "Regal Neutronium Atmo Belt"
+msgstr ""
+
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_PACULACANTH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_PACULACANTH.DESC"
 msgid "An atmo belt inspired by an aquatic behemoth."
@@ -458,6 +473,16 @@ msgstr "对某些人来说，新增的指尖接缝简直是触觉噩梦。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_CHAMELEO.NAME"
 msgid "Dartle Atmo Gloves"
 msgstr "逸蜥气压服手套"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_NEUTRONIUM.DESC"
+msgid "Thick engineered \"leather\" hand protectors and polished Neutronium cuffs keep little Duplicant fingers safe, no matter what they're tempted to touch."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_NEUTRONIUM.NAME"
+msgid "Regal Neutronium Atmo Gloves"
+msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_PACULACANTH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_PACULACANTH.DESC"
@@ -539,6 +564,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_GAUDYSWEATER_PURPLE.NAME"
 msgid "Deepset Atmo Helmet"
 msgstr "深邃气压服头盔"
 
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_NEUTRONIUM.DESC"
+msgid "A truly magnificent noggin protector that makes every errand feel like an epic expedition."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_NEUTRONIUM.NAME"
+msgid "Regal Neutronium Atmo Helmet"
+msgstr ""
+
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_PACULACANTH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_PACULACANTH.DESC"
 msgid "The official helmet of the hangry space explorer."
@@ -609,6 +644,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_CHAMELEO.NAME"
 msgid "Dartle Atmo Boots"
 msgstr "逸蜥气压服靴子"
 
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_NEUTRONIUM.DESC"
+msgid "Protective footwear that shines with the promise of safety and new adventures."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_NEUTRONIUM.NAME"
+msgid "Regal Atmo Boots"
+msgstr ""
+
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_PACULACANTH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_PACULACANTH.DESC"
 msgid "They're always a bit damp. But they work!"
@@ -678,6 +723,16 @@ msgstr "慢而稳者赢（太空）竞赛，对吧？"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_CHAMELEO.NAME"
 msgid "Dartle Atmo Suit"
 msgstr "逸蜥气压服"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_NEUTRONIUM.DESC"
+msgid "Understated elegance topped with a solid-gold turtleneck to protect against sharp space objects and surprise tickle attacks."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_NEUTRONIUM.NAME"
+msgid "Regal Neutronium Atmo Suit"
+msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_PACULACANTH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_PACULACANTH.DESC"
@@ -758,6 +813,16 @@ msgstr "是谁订购了超-超-超硬床垫？"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_ROCK.NAME"
 msgid "<link=\"BED\">Stone Cot</link>"
 msgstr "<link=\"BED\">石板床铺</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_BOILER_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_BOILER_NEUTRONIUM.DESC"
+msgid "An ostentatious immersion heater that gives cool liquids the royal treatment."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_BOILER_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_BOILER_NEUTRONIUM.NAME"
+msgid "<link=\"LIQUIDHEATER\">Regal Neutronium Liquid Tepidizer</link>"
+msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_BOTTOM_GOTCH_CHARCOAL_OBELUS.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BOTTOM_GOTCH_CHARCOAL_OBELUS.DESC"
@@ -879,6 +944,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_BOTTOM_GOTCH_WORTSEED_CHROMO.NAME"
 msgid "Wortseed Skivvies"
 msgstr "冰萝打底裤"
 
+#. STRINGS.BLUEPRINTS.PERMIT_CO2SCRUBBER_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_CO2SCRUBBER_NEUTRONIUM.DESC"
+msgid "Swiftly and discreetly pulls carbon dioxide out of the air, like a butler pulling an uninvited guest out of a gala."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_CO2SCRUBBER_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_CO2SCRUBBER_NEUTRONIUM.NAME"
+msgid "<link=\"CO2SCRUBBER\">Regal Neutronium Carbon Skimmer</link>"
+msgstr ""
+
 #. STRINGS.BLUEPRINTS.PERMIT_COOKINGSTATION_COTTAGE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_COOKINGSTATION_COTTAGE.DESC"
 msgid "The smoky flavor is intentional."
@@ -918,6 +993,16 @@ msgstr "由退役火箭的材料手工制作。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_DRESS_FUTURESPACE_BLUE.NAME"
 msgid "Sculpted Steel Dress"
 msgstr "雕刻钢制连衣裙"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ELECTROLYZER_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELECTROLYZER_NEUTRONIUM.DESC"
+msgid "The oxygenated air produced by this building smells...superior, somehow."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_ELECTROLYZER_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELECTROLYZER_NEUTRONIUM.NAME"
+msgid "<link=\"ELECTROLYZER\">Regal Neutronium Electrolyzer</link>"
+msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_HATCH.DESC"
@@ -989,6 +1074,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_FOSSILSCULPTURE_IDLE_STEGO.NAME"
 msgid "Pointy Plates"
 msgstr "《尖板》"
 
+#. STRINGS.BLUEPRINTS.PERMIT_FRIDGE_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_NEUTRONIUM.DESC"
+msgid "It's so polished that there's a chance Duplicants might get lost in their own reflection."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_FRIDGE_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_NEUTRONIUM.NAME"
+msgid "<link=\"REFRIGERATOR\">Regal Neutronium Refrigerator</link>"
+msgstr ""
+
 #. STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_DARTLE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_DARTLE.DESC"
 msgid "The splotchy parts have an unsettlingly leather-like texture."
@@ -1039,6 +1134,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_CYBERPUNK.NAME"
 msgid "<link=\"MANUALGENERATOR\">Retro LED Manual Generator</link>"
 msgstr "<link=\"MANUALGENERATOR\">复古LED人力发电机</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_NEUTRONIUM.DESC"
+msgid "Manual labor gets a majestic makeover with this stately power generator, designed for Duplicants with aristocratic aspirations."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_NEUTRONIUM.NAME"
+msgid "<link=\"MANUALGENERATOR\">Regal Neutronium Manual Generator</link>"
+msgstr ""
+
 #. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_ROCK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_ROCK.DESC"
 msgid "It gets off to a rocky start, but it works so well that there's no point reinventing it."
@@ -1048,6 +1153,16 @@ msgstr "一开始虽显笨拙，但运行良好，所以没必要再重新发明
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_ROCK.NAME"
 msgid "<link=\"MANUALGENERATOR\">Rustic Manual Generator</link>"
 msgstr "<link=\"MANUALGENERATOR\">淳朴人力发电机</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GENERATORPHOS_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORPHOS_NEUTRONIUM.DESC"
+msgid "This building's high-gloss finish never loses its shine, no matter how many layers of coal dust it's coated in."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_GENERATORPHOS_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORPHOS_NEUTRONIUM.NAME"
+msgid "<link=\"GENERATOR\">Regal Neutronium Coal Generator</link>"
+msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_BASIC_BLUE_WHEEZEWORT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_BASIC_BLUE_WHEEZEWORT.DESC"
@@ -1339,6 +1454,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_METAL_GREY.NAME"
 msgid "Steel Gloves"
 msgstr "钢制手套"
 
+#. STRINGS.BLUEPRINTS.PERMIT_GLOVES_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_NEUTRONIUM.DESC"
+msgid "Manufacturer's note: These gloves will not transform touched objects into gold or neutronium."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_GLOVES_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_NEUTRONIUM.NAME"
+msgid "Regal Neutronium Gloves"
+msgstr ""
+
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_PUFFER_ORANGE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_PUFFER_ORANGE.DESC"
 msgid "A cozy little orange puffer jacket for every finger."
@@ -1398,6 +1523,16 @@ msgstr "经过几个世纪被大自然改造之后还能用，真是个奇迹。
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_DINO.NAME"
 msgid "<link=\"HEADQUARTERS\">Forgotten Printing Pod</link>"
 msgstr "<link=\"HEADQUARTERS\">遗忘打印舱</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.DESC"
+msgid "A grandiose machine that makes even the most haphazard colony feel like a distinguished outpost."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.NAME"
+msgid "<link=\"HEADQUARTERS\">Regal Neutronium Printing Pod</link>"
+msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_ICESCULPTURE_AMAZING_IDLE_BAMMOTH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ICESCULPTURE_AMAZING_IDLE_BAMMOTH.DESC"
@@ -2119,6 +2254,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_MASSEUR_PREHISTORIC.NAME"
 msgid "<link=\"MASSAGETABLE\">Foot Massage Table</link>"
 msgstr "<link=\"MASSAGETABLE\">足部按摩床</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_METALREFINERY_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_METALREFINERY_NEUTRONIUM.DESC"
+msgid "Some say it's the most refined-looking metal refinery that ever refined metal."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_METALREFINERY_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_METALREFINERY_NEUTRONIUM.NAME"
+msgid "<link=\"METALREFINERY\">Regal Neutronium Metal Refinery</link>"
+msgstr ""
+
 #. STRINGS.BLUEPRINTS.PERMIT_MILKPRESS_STEGO.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MILKPRESS_STEGO.DESC"
 msgid "Industrial equipment inspired by nature."
@@ -2128,6 +2273,16 @@ msgstr "灵感源自大自然的工业设备。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MILKPRESS_STEGO.NAME"
 msgid "<link=\"MILKPRESS\">Lumb Plant Pulverizer</link>"
 msgstr "<link=\"MILKPRESS\">尖块兽植物粉碎机</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_NEUTRONIUM.DESC"
+msgid "Enhances breathability by lending an air of affluence to its surroundings."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_NEUTRONIUM.NAME"
+msgid "<link=\"MINERALDEOXIDIZER\">Regal Neutronium Oxygen Diffuser</link>"
+msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_MITTENS_KNIT_BLACK_SMOG.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MITTENS_KNIT_BLACK_SMOG.DESC"
@@ -2529,6 +2684,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_PEDESTAL_COTTAGE.NAME"
 msgid "<link=\"ITEMPEDESTAL\">Handcrafted Pedestal</link>"
 msgstr "<link=\"ITEMPEDESTAL\">手工基座</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_PEDESTAL_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_PEDESTAL_NEUTRONIUM.DESC"
+msgid "This signet ring-style pedestal makes an opulent home for everything from crown jewels to colony detritus."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_PEDESTAL_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_PEDESTAL_NEUTRONIUM.NAME"
+msgid "<link=\"ITEMPEDESTAL\">Regal Neutronium Pedestal</link>"
+msgstr ""
+
 #. STRINGS.BLUEPRINTS.PERMIT_PEDESTAL_SCREW_BRASS.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PEDESTAL_SCREW_BRASS.DESC"
 msgid "A display stand with a warm, brassy industrial aesthetic."
@@ -2619,6 +2784,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_ICE.NAME"
 msgid "<link=\"EXOBASEHEADQUARTERS\">Frosty Mini-Pod</link>"
 msgstr "<link=\"EXOBASEHEADQUARTERS\">寒霜迷你舱</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_NEUTRONIUM.DESC"
+msgid "A monument to the grandiose hopes and dreams of every spacefarer settling in on a new world."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_NEUTRONIUM.NAME"
+msgid "<link=\"EXOBASEHEADQUARTERS\">Regal Neutronium Mini-Pod</link>"
+msgstr ""
+
 #. STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_COTTAGE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_COTTAGE.DESC"
 msgid "Some ranchers believe that a woodsy aesthetic puts critters at ease."
@@ -2639,6 +2814,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_DINO.NAME"
 msgid "<link=\"RANCHSTATION\">Overgrown Grooming Station</link>"
 msgstr "<link=\"RANCHSTATION\">丛生梳理站</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_NEUTRONIUM.DESC"
+msgid "Mirror, mirror, on the wall...who's the best-groomed of them all?"
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_NEUTRONIUM.NAME"
+msgid "<link=\"RANCHSTATION\">Regal Neutronium Grooming Station</link>"
+msgstr ""
+
 #. STRINGS.BLUEPRINTS.PERMIT_RESEARCH_CENTER_CYBERPUNK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_RESEARCH_CENTER_CYBERPUNK.DESC"
 msgid "Doin' research for the future, while diggin' the vibes of the past."
@@ -2658,6 +2843,16 @@ msgstr "老派而新奇的事实调查。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_RESEARCH_CENTER2_CYBERPUNK.NAME"
 msgid "<link=\"ADVANCEDRESEARCHCENTER\">Retro LED Super Computer</link>"
 msgstr "<link=\"ADVANCEDRESEARCHCENTER\">复古LED超级计算机</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_RESPECCER_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_RESPECCER_NEUTRONIUM.DESC"
+msgid "Duplicants come out feeling very, very fancy, and knowing very, very little."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_RESPECCER_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_RESPECCER_NEUTRONIUM.NAME"
+msgid "<link=\"RESETSKILLSSTATION\">Regal Neutronium Skill Scrubber</link>"
+msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_WOOD_AMAZING_ACTION_GULP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_WOOD_AMAZING_ACTION_GULP.DESC"
@@ -3008,6 +3203,26 @@ msgstr "为非标准复制人准备的标准制服衬衫。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_STANDARD_BIONIC_TOP.NAME"
 msgid "Bionic Uniform Shirt"
 msgstr "仿生制服衬衫"
+
+#. STRINGS.BLUEPRINTS.PERMIT_STEAMTURBINE2_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_STEAMTURBINE2_NEUTRONIUM.DESC"
+msgid "It exudes power, literally and figuratively."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_STEAMTURBINE2_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_STEAMTURBINE2_NEUTRONIUM.NAME"
+msgid "<link=\"STEAMTURBINE2\">Regal Neutronium Steam Turbine</link>"
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_NEUTRONIUM.DESC"
+msgid "When the outside is this extravagant, who cares what's inside?"
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_NEUTRONIUM.NAME"
+msgid "<link=\"STORAGELOCKER\">Regal Neutronium Storage Bin</link>"
+msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_FLANNEL_BLACK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_FLANNEL_BLACK.DESC"
@@ -3619,6 +3834,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STEGO.NAME"
 msgid "<link=\"EXTERIORWALL\">Pixel Lumb</link>"
 msgstr "<link=\"EXTERIORWALL\">像素尖块兽壁纸</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_NEUTRONIUM.DESC"
+msgid "This sumptuously tufted wall panel transforms basic colony spaces into palatial throne rooms."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_NEUTRONIUM.NAME"
+msgid "<link=\"EXTERIORWALL\">Regal Neutronium Tuft</link>"
+msgstr ""
+
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_CHARCOAL_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_CHARCOAL_WHITE.DESC"
 msgid "A dark-gray wallpaper with one crisp white corner cut out, for modular styling."
@@ -3838,6 +4063,26 @@ msgstr "这种壁纸上的安全橙色三角既像标记宝藏的“X”，又�
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_SATSUMA_WHITE.NAME"
 msgid "<link=\"EXTERIORWALL\">Hi-Vis X</link>"
 msgstr "<link=\"EXTERIORWALL\">高能见度X形壁纸</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WATERPUMP_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WATERPUMP_NEUTRONIUM.DESC"
+msgid "Some Duplicants dream of stealing the wrought gold pump handle to use as a fancy walking cane."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_WATERPUMP_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WATERPUMP_NEUTRONIUM.NAME"
+msgid "<link=\"LIQUIDPUMPINGSTATION\">Regal Neutronium Water Pump</link>"
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_WATERPURIFIER_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WATERPURIFIER_NEUTRONIUM.DESC"
+msgid "The clean water produced by this gilded filtration system has an unmistakably rich flavor."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_WATERPURIFIER_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WATERPURIFIER_NEUTRONIUM.NAME"
+msgid "<link=\"WATERPURIFIER\">Regal Neutronium Water Sieve</link>"
+msgstr ""
 
 #. STRINGS.BUILDING.DETAILS.USE_COUNT
 msgctxt "STRINGS.BUILDING.DETAILS.USE_COUNT"
@@ -14724,13 +14969,15 @@ msgstr "<link=\"GRAVE\">雅致的纪念碑</link>"
 #. STRINGS.BUILDINGS.PREFABS.GRAVITASBATHROOMSTALL.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.GRAVITASBATHROOMSTALL.DESC"
 msgid ""
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.GRAVITASBATHROOMSTALL.EFFECT
+msgctxt "STRINGS.BUILDINGS.PREFABS.GRAVITASBATHROOMSTALL.EFFECT"
+msgid ""
 "A private toilet for senior scientists.\n"
 "\n"
 "It was the site of many great scientific breakthroughs."
 msgstr ""
-"高级科学家的私人马桶。\n"
-"\n"
-"这是许多伟大科学突破的场所。"
 
 #. STRINGS.BUILDINGS.PREFABS.GRAVITASBATHROOMSTALL.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.GRAVITASBATHROOMSTALL.NAME"
@@ -74195,6 +74442,11 @@ msgctxt "STRINGS.INPUT_BINDINGS.ROOT.EMPTYPIPE"
 msgid "Empty Pipe"
 msgstr "清空管道"
 
+#. STRINGS.INPUT_BINDINGS.ROOT.FIND
+msgctxt "STRINGS.INPUT_BINDINGS.ROOT.FIND"
+msgid "Find"
+msgstr ""
+
 #. STRINGS.INPUT_BINDINGS.ROOT.HARVEST
 msgctxt "STRINGS.INPUT_BINDINGS.ROOT.HARVEST"
 msgid "Harvest"
@@ -80602,7 +80854,7 @@ msgstr ""
 
 #. STRINGS.MISC.TAGS.ORNAMENT
 msgctxt "STRINGS.MISC.TAGS.ORNAMENT"
-msgid "<link=\"TECHCOMPONENTS\">Ornament</link>"
+msgid "<link=\"ORNAMENT\">Ornament</link>"
 msgstr ""
 
 #. STRINGS.MISC.TAGS.ORNAMENTDISPLAYED
@@ -89036,16 +89288,6 @@ msgctxt "STRINGS.UI.BUILDCATEGORIES.FURNITURE.TOOLTIP"
 msgid "Amenities to keep my Duplicants happy, comfy and efficient. {Hotkey}"
 msgstr "用于保持我的复制人快乐、舒适、高效的生活设施。{Hotkey}"
 
-#. STRINGS.UI.BUILDCATEGORIES.GRAVITAS.NAME
-msgctxt "STRINGS.UI.BUILDCATEGORIES.GRAVITAS.NAME"
-msgid "<link=\"GRAVITAS\">Gravitas</link>"
-msgstr "<link=\"GRAVITAS\">庄严科技</link>"
-
-#. STRINGS.UI.BUILDCATEGORIES.GRAVITAS.TOOLTIP
-msgctxt "STRINGS.UI.BUILDCATEGORIES.GRAVITAS.TOOLTIP"
-msgid "Debug buildings. {Hotkey}"
-msgstr "调试建筑。{Hotkey}"
-
 #. STRINGS.UI.BUILDCATEGORIES.HEP.NAME
 msgctxt "STRINGS.UI.BUILDCATEGORIES.HEP.NAME"
 msgid "<link=\"BUILDCATEGORYHEP\">Radiation</link>"
@@ -92893,6 +93135,21 @@ msgstr "复制"
 msgctxt "STRINGS.UI.COPY_BUILDING_TOOLTIP"
 msgid "Create new build orders using the most recent building selection as a template. {Hotkey}"
 msgstr "使用最近选择的建筑作为模板创建新的建造命令。{Hotkey}"
+
+#. STRINGS.UI.COSMETIC1.MIXING_TOOLTIP
+msgctxt "STRINGS.UI.COSMETIC1.MIXING_TOOLTIP"
+msgid "<i>The Regal Neutronium Cosmetics</i> features cosmetic blueprints fit for royalty"
+msgstr ""
+
+#. STRINGS.UI.COSMETIC1.NAME
+msgctxt "STRINGS.UI.COSMETIC1.NAME"
+msgid "The Regal Neutronium Cosmetics"
+msgstr ""
+
+#. STRINGS.UI.COSMETIC1.NAME_ITAL
+msgctxt "STRINGS.UI.COSMETIC1.NAME_ITAL"
+msgid "<i>The Regal Neutronium Cosmetics</i>"
+msgstr ""
 
 #. STRINGS.UI.CRAFT
 msgctxt "STRINGS.UI.CRAFT"
@@ -122369,6 +122626,24 @@ msgstr ""
 msgctxt "STRINGS.WORLDS.WATERMOONLET.NAME"
 msgid "Water Asteroid"
 msgstr "水域小行星"
+
+#~ msgctxt "STRINGS.BUILDINGS.PREFABS.GRAVITASBATHROOMSTALL.DESC"
+#~ msgid ""
+#~ "A private toilet for senior scientists.\n"
+#~ "\n"
+#~ "It was the site of many great scientific breakthroughs."
+#~ msgstr ""
+#~ "高级科学家的私人马桶。\n"
+#~ "\n"
+#~ "这是许多伟大科学突破的场所。"
+
+#~ msgctxt "STRINGS.UI.BUILDCATEGORIES.GRAVITAS.NAME"
+#~ msgid "<link=\"GRAVITAS\">Gravitas</link>"
+#~ msgstr "<link=\"GRAVITAS\">庄严科技</link>"
+
+#~ msgctxt "STRINGS.UI.BUILDCATEGORIES.GRAVITAS.TOOLTIP"
+#~ msgid "Debug buildings. {Hotkey}"
+#~ msgstr "调试建筑。{Hotkey}"
 
 #~ msgctxt "STRINGS.BLUEPRINTS.OUTFIT_JETSUIT_1.NAME"
 #~ msgid "Zoomie Jet Outfit"

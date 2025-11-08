@@ -64375,7 +64375,7 @@ msgstr ""
 
 #. STRINGS.MISC.TAGS.ORNAMENT
 msgctxt "STRINGS.MISC.TAGS.ORNAMENT"
-msgid "<link=\"TECHCOMPONENTS\">Ornament</link>"
+msgid "<link=\"ORNAMENT\">Ornament</link>"
 msgstr ""
 
 #. STRINGS.MISC.TAGS.ORNAMENTDISPLAYED

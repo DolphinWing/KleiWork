@@ -196,15 +196,16 @@ fun EditorPane(
         if (nowVisible) {
             // use regex to find link content
             // sample: <link=\"DATABANK\">Data Banks</link>
-            val regex = Regex("<link=([^>]+)>([^<]+)></link>")
+            val regex = Regex("<link=([^>]+)>([^<]+)</link>")
             val links = regex.findAll(data.target.origin())
-//            if (links.count() == 0) {
-//                println("No link found")
-//            } else {
-//                links.forEach {
-//                    println("${it.groupValues[1]}: ${it.groupValues[2]}")
-//                }
-//            }
+            println(data.target.origin())
+            if (links.count() == 0) {
+                println("  No link found.")
+            } else {
+                links.forEach {
+                    println("  ${it.groupValues[1]}: ${it.groupValues[2]}")
+                }
+            }
 
             if (linkSelector) {
                 Dialog(onDismissRequest = { linkSelector = false }) {
