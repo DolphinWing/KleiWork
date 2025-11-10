@@ -13363,7 +13363,7 @@ msgstr "複製人可以在太空旅行中生存…希望。"
 #. STRINGS.BUILDINGS.PREFABS.HABITATMODULEMEDIUM.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.HABITATMODULEMEDIUM.EFFECT"
 msgid "Functions as a Command Module.\n\nHolds up to 10 Duplicant travellers.\n\nOne Command Module may be installed per rocket. \n\nEngine must be built via <link=\"LAUNCHPAD\">Rocket Platform</link>."
-msgstr "用作指揮艙。\n\n最多可容納十位複製人。\n\n一艘火箭只能安裝一個指揮艙。\n\n該模組必須透過<link=\"LAUNCHPAD\">火箭平台</link>建造。"
+msgstr "用作指揮艙。\n\n最多可容納 10 位複製人。\n\n一艘火箭只能安裝一個指揮艙。\n\n該模組必須透過<link=\"LAUNCHPAD\">火箭平台</link>建造。"
 
 #. STRINGS.BUILDINGS.PREFABS.HABITATMODULEMEDIUM.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.HABITATMODULEMEDIUM.NAME"
@@ -13568,7 +13568,7 @@ msgstr "輻射粒子是進行材料科學研究的必要條件。"
 #. STRINGS.BUILDINGS.PREFABS.HIGHENERGYPARTICLESPAWNER.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.HIGHENERGYPARTICLESPAWNER.EFFECT"
 msgid "Attracts nearby <link=\"RADIATION\">Radiation</link> to generate Radbolts.\n\nEmits generated Radbolts in the direction of your choosing when the set Radbolt threshold is reached.\n\nRadbolts collected will gradually decay while this building is disabled."
-msgstr "吸引附近的 <link=\"RADIATION\">輻射</link>，以產生輻射子。\n\n當達到設定的輻射粒子臨界值時，會朝選定的方向發射生成的輻射粒子。\n\n當此建築物停用時，收集到的輻射粒子將會逐漸衰減。"
+msgstr "吸引附近的<link=\"RADIATION\">輻射</link>，以產生輻射子。\n\n當達到設定的輻射粒子臨界值時，會朝選定的方向發射生成的輻射粒子。\n\n當此建築物停用時，收集到的輻射粒子將會逐漸衰減。"
 
 #. STRINGS.BUILDINGS.PREFABS.HIGHENERGYPARTICLESPAWNER.LOGIC_PORT
 msgctxt "STRINGS.BUILDINGS.PREFABS.HIGHENERGYPARTICLESPAWNER.LOGIC_PORT"
@@ -24293,12 +24293,12 @@ msgstr "多孔蘆薈"
 #. STRINGS.CODEX.BLUFFBRIAR.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.BLUFFBRIAR.BODY.CONTAINER1"
 msgid "Bluff Briars have formed a symbiotic relationship with a closely related plant strain, the <link=\"PRICKLEFLOWER\">Bristle Blossom</link>.\n\nThey tend to thrive in areas where the Bristle Blossom is present, as the berry it produces emits a rare chemical while decaying that the Briar is capable of absorbing to supplement its own pheromone production."
-msgstr "誘人荊棘與其相關品種<link=\"PRICKLEFLOWER\">鬃花</link>形成共生關係。\n\n它們常出現在鬃果繁植的區域，因為鬃花會散發一種化學物質，同時誘人荊棘能吸收以補充它們的費洛蒙。"
+msgstr "魅惑棘與其相關品種<link=\"PRICKLEFLOWER\">鬃花</link>形成共生關係。\n\n它們常出現在鬃果繁植的區域，因為鬃花會散發一種化學物質，同時魅惑棘能吸收以補充它們的費洛蒙。"
 
 #. STRINGS.CODEX.BLUFFBRIAR.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.BLUFFBRIAR.BODY.CONTAINER2"
 msgid "Due to the Bluff Briar's unique pheromonal \"charm\" defense, animals are extremely unlikely to eat it in the wild.\n\nAs a result, the Briar's barbs have become ineffectual over time and are unlikely to cause injury, unlike the Bristle Blossom, which possesses barbs that are exceedingly sharp and require careful handling."
-msgstr "由於誘人荊棘獨特的費洛蒙「迷惑」的保護，在野外動物極度不喜歡吃它。\n\n結果，隨著時間過去，誘人荊棘上的倒刺變得沒什麼殺傷力，不像鬃花它的倒刺非常鋒利需要小心處理。"
+msgstr "由於魅惑棘獨特的費洛蒙「迷惑」的保護，在野外動物極度不喜歡吃它。\n\n結果，隨著時間過去，魅惑棘上的倒刺變得沒什麼殺傷力，不像鬃花它的倒刺非常鋒利需要小心處理。"
 
 #. STRINGS.CODEX.BLUFFBRIAR.SUBTITLE
 msgctxt "STRINGS.CODEX.BLUFFBRIAR.SUBTITLE"
@@ -24308,7 +24308,7 @@ msgstr "裝飾植物"
 #. STRINGS.CODEX.BLUFFBRIAR.TITLE
 msgctxt "STRINGS.CODEX.BLUFFBRIAR.TITLE"
 msgid "Bluff Briar"
-msgstr "誘人荊棘"
+msgstr "魅惑棘"
 
 #. STRINGS.CODEX.BOGBUCKET.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.BOGBUCKET.BODY.CONTAINER1"
@@ -25093,7 +25093,7 @@ msgstr "低裝飾會增加複製人的<link=\"STRESS\">壓力</link>。值得慶
 #. STRINGS.CODEX.DECORSYSTEM.PARAGRAPH_2
 msgctxt "STRINGS.CODEX.DECORSYSTEM.PARAGRAPH_2"
 msgid "Many things have an effect on the Decor value of a tile. A building's effect is expressed as a strength value and a radius. Often that effect is positive, but many buildings also lower the decor value of an area too. <link=\"PLANTS\">Plants</link>, <link=\"CREATURES\">Critters</link>, and <link=\"BUILDCATEGORYFURNITURE\">Furniture</link> often increase decor while industrial buildings, debris, and rot often decrease it. Duplicants experience the combined decor of all objects affecting a tile.\n\nThe <link=\"PRICKLEGRASS\">Bluff Briar</link> has a decor value of 25 and a radius of 4 tiles. \nThe <link=\"MICROBEMUSHER\">Microbe Musher</link> has a decor value of -15 and a radius of 3 tiles. \nThe result of placing a <link=\"MICROBEMUSHER\">Microbe Musher</link> next to a <link=\"PRICKLEGRASS\">Bluff Briar</link> would be a combined decor value of 10.\n\n"
-msgstr "許多事物都會對格子的裝飾值產生影響。建築物的影響以強度值和範圍來表示。通常這個影響是正向的，但許多建築也會降低該區域的裝飾值。<link=\"PLANTS\">植物</link>、<link=\"CREATURES\">動物</link>與<link=\"BUILDCATEGORYFURNITURE\">家具</link>通常會增加裝飾，而工業建築、掉落物與腐壞物通常會減少裝飾。複製人的感受是格子內所有物件效果的總和。\n\n<link=\"PRICKLEGRASS\">誘人荊棘</link>的裝飾值 25，影響範圍 4 格。\n<link=\"MICROBEMUSHER\">食物壓製器</link> 的裝飾值 -15，影響範圍 3 格。\n如果<link=\"MICROBEMUSHER\">食物壓製器</link>旁，擺放著<link=\"PRICKLEGRASS\">誘人荊棘</link>，那麼最後的裝飾值總和為 10 的裝飾值。\n\n"
+msgstr "許多事物都會對格子的裝飾值產生影響。建築物的影響以強度值和範圍來表示。通常這個影響是正向的，但許多建築也會降低該區域的裝飾值。<link=\"PLANTS\">植物</link>、<link=\"CREATURES\">動物</link>與<link=\"BUILDCATEGORYFURNITURE\">家具</link>通常會增加裝飾，而工業建築、掉落物與腐壞物通常會減少裝飾。複製人的感受是格子內所有物件效果的總和。\n\n<link=\"PRICKLEGRASS\">魅惑棘</link>的裝飾值 25，影響範圍 4 格。\n<link=\"MICROBEMUSHER\">食物壓製器</link> 的裝飾值 -15，影響範圍 3 格。\n如果<link=\"MICROBEMUSHER\">食物壓製器</link>旁，擺放著<link=\"PRICKLEGRASS\">魅惑棘</link>，那麼最後的裝飾值總和為 10 的裝飾值。\n\n"
 
 #. STRINGS.CODEX.DECORSYSTEM.PARAGRAPH_3
 msgctxt "STRINGS.CODEX.DECORSYSTEM.PARAGRAPH_3"
@@ -26888,7 +26888,7 @@ msgstr "<link=\"DIRT\">照明</link>"
 #. STRINGS.CODEX.LILYPAD.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.LILYPAD.BODY.CONTAINER1"
 msgid "Cura Lotuses are adaptable aquatic plants that have inspired artists since their blossoms were first spotted bobbing on the surface of a quiet pond.\n\nThese ethereal beauties are a panacea for both the mind and the body - their delicate spores are highly sought-after for their natural antihistamine properties."
-msgstr "治癒蓮是一種觀賞性水生植物，自其花朵在靜謐的池塘中搖曳的身姿首次被發現以來，便成為藝術家們不竭的靈感源泉。\n\n這些超凡脫俗的美麗之物是身心靈的萬靈丹——牠們細膩的孢子因其天然抗組織胺特性而備受追捧。"
+msgstr "心悅蓮是一種適應性強的水生植物，自其花朵在靜謐的池塘中搖曳的身姿首次被發現以來，便成為藝術家們不竭的靈感源泉。\n\n這些超凡脫俗的美麗之物是身心靈的萬靈丹——牠們細膩的孢子因其天然抗組織胺特性而備受追捧。"
 
 #. STRINGS.CODEX.LILYPAD.SUBTITLE
 msgctxt "STRINGS.CODEX.LILYPAD.SUBTITLE"
@@ -26898,7 +26898,7 @@ msgstr "裝飾植物"
 #. STRINGS.CODEX.LILYPAD.TITLE
 msgctxt "STRINGS.CODEX.LILYPAD.TITLE"
 msgid "Cura Lotus"
-msgstr "治癒蓮"
+msgstr "心悅蓮"
 
 #. STRINGS.CODEX.LOCKS.NEURALVACILLATOR
 msgctxt "STRINGS.CODEX.LOCKS.NEURALVACILLATOR"
@@ -26938,7 +26938,7 @@ msgstr "米虱木"
 #. STRINGS.CODEX.MELLOWMALLOW.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.MELLOWMALLOW.BODY.CONTAINER1"
 msgid "The Mellow Mallow is a type of fungus that is known for its ease of propagation when cut.\n\nIt is deadly when consumed, however creatures that mistakenly eat it are said to experience a state of extreme calm before death."
-msgstr "錦葵是一種真菌，因切開後易於繁殖而聞名。\n\n食用會致死，據說誤食它的動物在死亡前會經歷一種極為平靜的狀態。"
+msgstr "錦醇菇是一種真菌，因切開後易於繁殖而聞名。\n\n食用會致死，據說誤食它的動物在死亡前會經歷一種極為平靜的狀態。"
 
 #. STRINGS.CODEX.MELLOWMALLOW.SUBTITLE
 msgctxt "STRINGS.CODEX.MELLOWMALLOW.SUBTITLE"
@@ -26948,7 +26948,7 @@ msgstr "裝飾植物"
 #. STRINGS.CODEX.MELLOWMALLOW.TITLE
 msgctxt "STRINGS.CODEX.MELLOWMALLOW.TITLE"
 msgid "Mellow Mallow"
-msgstr "錦葵"
+msgstr "錦醇菇"
 
 #. STRINGS.CODEX.MIRTHLEAF.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.MIRTHLEAF.BODY.CONTAINER1"
@@ -35118,7 +35118,7 @@ msgstr "<link=\"PRICKLEFLOWER\">鬃花</link>"
 #. STRINGS.CREATURES.SPECIES.PRICKLEGRASS.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.PRICKLEGRASS.DESC"
 msgid "Bluff Briars exude pheromones causing critters to view them as especially beautiful."
-msgstr "誘人荊棘散發費洛蒙，使生物將它們視為特別美麗。"
+msgstr "魅惑棘散發費洛蒙，使生物將它們視為特別美麗。"
 
 #. STRINGS.CREATURES.SPECIES.PRICKLEGRASS.DOMESTICATEDDESC
 msgctxt "STRINGS.CREATURES.SPECIES.PRICKLEGRASS.DOMESTICATEDDESC"
@@ -35133,7 +35133,7 @@ msgstr "生長加成"
 #. STRINGS.CREATURES.SPECIES.PRICKLEGRASS.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.PRICKLEGRASS.NAME"
 msgid "<link=\"PRICKLEGRASS\">Bluff Briar</link>"
-msgstr "<link=\"PRICKLEGRASS\">誘人荊棘</link>"
+msgstr "<link=\"PRICKLEGRASS\">魅惑棘</link>"
 
 #. STRINGS.CREATURES.SPECIES.PRICKLEGRASS.WILT_PENALTY
 msgctxt "STRINGS.CREATURES.SPECIES.PRICKLEGRASS.WILT_PENALTY"
@@ -35623,12 +35623,12 @@ msgstr "<link=\"PRICKLEFLOWER\">鬃花種子</link>"
 #. STRINGS.CREATURES.SPECIES.SEEDS.PRICKLEGRASS.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.PRICKLEGRASS.DESC"
 msgid "The <link=\"PLANTS\">Seed</link> of a <link=\"PRICKLEGRASS\">Bluff Briar</link>.\n\nDigging up Buried Objects may uncover a Briar Seed."
-msgstr "<link=\"PRICKLEGRASS\">誘人荊棘</link>的<link=\"PLANTS\">種子</link>。\n\n挖掘埋住的物件可能會發現荊棘種子。"
+msgstr "<link=\"PRICKLEGRASS\">魅惑棘</link>的<link=\"PLANTS\">種子</link>。\n\n挖掘埋住的物件可能會發現魅惑棘種子。"
 
 #. STRINGS.CREATURES.SPECIES.SEEDS.PRICKLEGRASS.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.PRICKLEGRASS.NAME"
 msgid "<link=\"PRICKLEGRASS\">Briar Seed</link>"
-msgstr "<link=\"PRICKLEGRASS\">荊棘種子</link>"
+msgstr "<link=\"PRICKLEGRASS\">魅惑棘種子</link>"
 
 #. STRINGS.CREATURES.SPECIES.SEEDS.SALTPLANT.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.SALTPLANT.DESC"
@@ -35663,12 +35663,12 @@ msgstr "<link=\"SPACETREE\">糖心樹種子</link>"
 #. STRINGS.CREATURES.SPECIES.SEEDS.SPICE_VINE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.SPICE_VINE.DESC"
 msgid "The <link=\"PLANTS\">Seed</link> of a <link=\"SPICEVINE\">Pincha Pepperplant</link>.\n\nDigging up Buried Objects may uncover a Pincha Pepper Seed."
-msgstr "<link=\"SPICEVINE\">胡椒藤</link>的<link=\"PLANTS\">種子</link>。\n\n挖掘埋住的物件可能會發現胡椒種子。"
+msgstr "<link=\"SPICEVINE\">胡椒藤</link>的<link=\"PLANTS\">種子</link>。\n\n挖掘埋住的物件可能會發現胡椒藤種子。"
 
 #. STRINGS.CREATURES.SPECIES.SEEDS.SPICE_VINE.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.SPICE_VINE.NAME"
 msgid "<link=\"SPICEVINE\">Pincha Pepper Seed</link>"
-msgstr "<link=\"SPICEVINE\">胡椒種子</link>"
+msgstr "<link=\"SPICEVINE\">胡椒藤種子</link>"
 
 #. STRINGS.CREATURES.SPECIES.SEEDS.SWAMPHARVESTPLANT.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.SWAMPHARVESTPLANT.DESC"
@@ -35713,12 +35713,12 @@ msgstr "<link=\"VINEMOTHER\">蔓殖母藤種子</link>"
 #. STRINGS.CREATURES.SPECIES.SEEDS.WINECUPS.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.WINECUPS.DESC"
 msgid "The <link=\"PLANTS\">Seed</link> of a <link=\"WINECUPS\">Mellow Mallow</link>.\n\nDigging up Buried Objects may uncover a Mallow Seed."
-msgstr "<link=\"WINECUPS\">錦葵</link>的<link=\"PLANTS\">種子</link>。\n\n挖掘埋住的物件可能會發現錦葵種子。"
+msgstr "<link=\"WINECUPS\">錦醇菇</link>的<link=\"PLANTS\">種子</link>。\n\n挖掘埋住的物件可能會發現錦醇菇種子。"
 
 #. STRINGS.CREATURES.SPECIES.SEEDS.WINECUPS.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.WINECUPS.NAME"
 msgid "<link=\"WINECUPS\">Mallow Seed</link>"
-msgstr "<link=\"WINECUPS\">錦葵種子</link>"
+msgstr "<link=\"WINECUPS\">錦醇菇種子</link>"
 
 #. STRINGS.CREATURES.SPECIES.SEEDS.WOOD_TREE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.WOOD_TREE.DESC"
@@ -36048,7 +36048,7 @@ msgstr "<link=\"VINEMOTHER\">蔓殖母藤</link>"
 #. STRINGS.CREATURES.SPECIES.WINECUPS.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.WINECUPS.DESC"
 msgid "Mellow Mallows heighten <link=\"DECOR\">Decor</link> and alleviate <link=\"STRESS\">Stress</link> with their calming color and cradle shape."
-msgstr "錦葵令人平靜的顏色與像搖籃的外觀，可提高<link=\"DECOR\">裝飾</link>與減少<link=\"STRESS\">壓力</link>。"
+msgstr "錦醇菇令人平靜的顏色與像搖籃的外觀，可提高<link=\"DECOR\">裝飾</link>與減少<link=\"STRESS\">壓力</link>。"
 
 #. STRINGS.CREATURES.SPECIES.WINECUPS.DOMESTICATEDDESC
 msgctxt "STRINGS.CREATURES.SPECIES.WINECUPS.DOMESTICATEDDESC"
@@ -36063,7 +36063,7 @@ msgstr "生長加成"
 #. STRINGS.CREATURES.SPECIES.WINECUPS.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.WINECUPS.NAME"
 msgid "<link=\"WINECUPS\">Mellow Mallow</link>"
-msgstr "<link=\"WINECUPS\">錦葵</link>"
+msgstr "<link=\"WINECUPS\">錦醇菇</link>"
 
 #. STRINGS.CREATURES.SPECIES.WINECUPS.WILT_PENALTY
 msgctxt "STRINGS.CREATURES.SPECIES.WINECUPS.WILT_PENALTY"
@@ -36658,7 +36658,7 @@ msgstr "    • 枯萎"
 #. STRINGS.CREATURES.STATUSITEMS.CROP_BLIGHTED.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.CROP_BLIGHTED.TOOLTIP"
 msgid "This plant has been struck by blight and will need to be replaced"
-msgstr "這株植物枯萎了需要重新栽種"
+msgstr "這株植物枯萎了，需要被替換"
 
 #. STRINGS.CREATURES.STATUSITEMS.CROP_SLEEPING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.CROP_SLEEPING.NAME"

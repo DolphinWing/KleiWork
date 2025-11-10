@@ -18,7 +18,7 @@ msgstr "<link=\"BEACHCHAIR\">甲板摺疊躺椅</link>"
 #. STRINGS.BLUEPRINTS.CEILINGLIGHT_CHANDELIER.DESC
 msgctxt "STRINGS.BLUEPRINTS.CEILINGLIGHT_CHANDELIER.DESC"
 msgid "Designers are not liable for injuries obtained by swinging from this fixture."
-msgstr "設計者不對該燈具擺動造成的受傷負責。"
+msgstr "設計者不對因懸盪或搖擺該燈具而造成的傷害負責。"
 
 #. STRINGS.BLUEPRINTS.CEILINGLIGHT_CHANDELIER.NAME
 msgctxt "STRINGS.BLUEPRINTS.CEILINGLIGHT_CHANDELIER.NAME"
@@ -978,7 +978,7 @@ msgstr "有些冒險家有點鹹，這是可以預料的。"
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SNAPJACKET_BRINE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SNAPJACKET_BRINE.NAME"
 msgid "Brine Gloves"
-msgstr "濃鹽手套"
+msgstr "鹵水手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_VSUIT_STELLAR.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_VSUIT_STELLAR.DESC"
@@ -3858,7 +3858,7 @@ msgstr "這個建築物接受變異種子"
 #. STRINGS.BUILDING.STATUSITEMS.FABRICATORACCEPTSMUTANTSEEDS.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.FABRICATORACCEPTSMUTANTSEEDS.TOOLTIP"
 msgid "This fabricator is allowed to use <style=\"KKeyword\">Mutant Seeds</style> as recipe ingredients"
-msgstr "這個建築物允許使用變異種子作為配方成分"
+msgstr "這個建築物允許使用<style=\"KKeyword\">變異種子</style>作為配方成分"
 
 #. STRINGS.BUILDING.STATUSITEMS.FABRICATOREMPTY.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.FABRICATOREMPTY.NAME"
@@ -4058,7 +4058,7 @@ msgstr "排氣口阻塞"
 #. STRINGS.BUILDING.STATUSITEMS.GASVENTOBSTRUCTED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.GASVENTOBSTRUCTED.TOOLTIP"
 msgid "A <style=\"KKeyword\">Pipe</style> has been obstructed and is preventing <style=\"KKeyword\">Gas</style> flow to this vent"
-msgstr "<style=\"KKeyword\">管道</style>已阻塞，並阻礙氣體流出這個排氣口"
+msgstr "<style=\"KKeyword\">管道</style>已阻塞，並阻礙<style=\"KKeyword\">氣體</style>流出這個排氣口"
 
 #. STRINGS.BUILDING.STATUSITEMS.GASVENTOVERPRESSURE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.GASVENTOVERPRESSURE.NAME"
@@ -4603,7 +4603,7 @@ msgstr "排水口阻塞"
 #. STRINGS.BUILDING.STATUSITEMS.LIQUIDVENTOBSTRUCTED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.LIQUIDVENTOBSTRUCTED.TOOLTIP"
 msgid "A <style=\"KKeyword\">Pipe</style> has been obstructed and is preventing <style=\"KKeyword\">Liquid</style> flow to this vent"
-msgstr "<style=\"KKeyword\">管道</style>已阻塞，並正阻礙液體流出這個排水口"
+msgstr "<style=\"KKeyword\">管道</style>已阻塞，並正阻礙<style=\"KKeyword\">液體</style>流出這個排水口"
 
 #. STRINGS.BUILDING.STATUSITEMS.LIQUIDVENTOVERPRESSURE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.LIQUIDVENTOVERPRESSURE.NAME"
@@ -5358,12 +5358,12 @@ msgstr "未選擇<link=\"TECH\">研究重點</link>或星圖上的目的地"
 #. STRINGS.BUILDING.STATUSITEMS.NORESEARCHORDESTINATIONSELECTED.NOTIFICATION_TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NORESEARCHORDESTINATIONSELECTED.NOTIFICATION_TOOLTIP"
 msgid "Select a <link=\"TECH\">Research</link> project in the <b>Research Tree</b> <b><color=#F44A4A>[R]</b></color> or a Destination in the <b>Starmap</b> <b><color=#F44A4A>[Z]</b></color>"
-msgstr "在<style=\"KKeyword\">研究</style> <b><color=#F44A4A>[R]</b></color> 選擇一項<link=\"TECH\">研究</link>計劃，或在<style=\"KKeyword\">星圖</style> <b><color=#F44A4A>[Z]</b></color> 中選擇一個目的地"
+msgstr "選擇一項在<b>研究樹</b> <b><color=#F44A4A>[R]</b></color> 的<link=\"TECH\">研究</link>項目，或在<b>星圖</b> <b><color=#F44A4A>[Z]</b></color> 中選擇一個目的地"
 
 #. STRINGS.BUILDING.STATUSITEMS.NORESEARCHORDESTINATIONSELECTED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NORESEARCHORDESTINATIONSELECTED.TOOLTIP"
 msgid "Select a <link=\"TECH\">Research</link> project in the <b>Research Tree</b> {Hotkey/ManageResearch} or a Destination in the <b>Starmap</b> {Hotkey/ManageStarmap}"
-msgstr "從<style=\"KKeyword\">研究</style> {Hotkey/ManageResearch} 選擇一項研究計畫，或者在<b>星圖</b> {Hotkey/ManageStarmap} 中選擇一個目的地"
+msgstr "選擇一項在<b>研究樹</b> {Hotkey/ManageResearch} 的<link=\"TECH\">研究</link>項目，或在<b>星圖</b> {Hotkey/ManageStarmap} 中選擇一個目的地"
 
 #. STRINGS.BUILDING.STATUSITEMS.NORESEARCHSELECTED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.NORESEARCHSELECTED.NAME"
@@ -6288,7 +6288,7 @@ msgstr "目前狀態：太空衣充氣中"
 #. STRINGS.BUILDING.STATUSITEMS.SUIT_LOCKER.CHARGING.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SUIT_LOCKER.CHARGING.TOOLTIP"
 msgid "This <style=\"KKeyword\">Suit</style> is docked and refueling"
-msgstr "這件<style=\"KKeyword\">太空衣/style>已儲放並在充填中"
+msgstr "這件<style=\"KKeyword\">太空衣</style>已儲放並在充填中"
 
 #. STRINGS.BUILDING.STATUSITEMS.SUIT_LOCKER.FULLY_CHARGED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SUIT_LOCKER.FULLY_CHARGED.NAME"
@@ -9618,7 +9618,7 @@ msgstr "乙醇蒸餾器將<link=\"WOOD\">木材</link>轉化為可燃的<link=\"
 #. STRINGS.BUILDINGS.PREFABS.ETHANOLDISTILLERY.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.ETHANOLDISTILLERY.EFFECT"
 msgid "Refines <link=\"WOOD\">Wood</link> into <link=\"ETHANOL\">Ethanol</link>."
-msgstr "將木材精煉成<link=\"ETHANOL\">乙醇</link>。"
+msgstr "將<link=\"WOOD\">木材</link>精煉成<link=\"ETHANOL\">乙醇</link>。"
 
 #. STRINGS.BUILDINGS.PREFABS.ETHANOLDISTILLERY.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.ETHANOLDISTILLERY.NAME"
@@ -12358,7 +12358,7 @@ msgstr "用於避免電力過載的高功率電線，特別適用於高強度發
 #. STRINGS.BUILDINGS.PREFABS.HIGHWATTAGEWIRE.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.HIGHWATTAGEWIRE.EFFECT"
 msgid "Carries more <link=\"POWER\">Wattage</link> than regular <link=\"WIRE\">Wire</link> without overloading.\n\nCannot be run through wall and floor tile."
-msgstr "承載的<link="POWER">功率</link>高於一般<link="WIRE">電線</link>，且不會發生過載。\n\n無法穿過牆體和地磚。"
+msgstr "承載的<link=\"POWER\">功率</link>高於一般<link=\"WIRE\">電線</link>，且不會發生過載。\n\n無法穿過牆體和地磚。"
 
 #. STRINGS.BUILDINGS.PREFABS.HIGHWATTAGEWIRE.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.HIGHWATTAGEWIRE.NAME"
@@ -12888,7 +12888,7 @@ msgstr "供火箭升空及降落的平台。"
 #. STRINGS.BUILDINGS.PREFABS.LAUNCHPAD.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LAUNCHPAD.EFFECT"
 msgid "Precursor to construction of all other Rocket modules.\n\nAllows Rockets to launch from or land on the host Planetoid.\n\nAutomatically links up to <link=\"MODULARLAUNCHPADPORTSOLID\">Rocket Port</link><link=\"MODULARLAUNCHPADPORTSOLID\">s</link> built to either side of the platform."
-msgstr "是建造所有其他火箭模組的先決條件。\n\n讓火箭可以從所屬的小行星上發射或著陸。\n\n會自動連線到建在平台兩側的<link=\"MODULARLAUNCHPADPORTSOLID\">火箭貨港</link>。"
+msgstr "這是建造所有其他火箭模組的先決條件。\n\n允許火箭從所屬的小行星上發射或著陸。\n\n會自動連線到建在平台兩側的<link=\"MODULARLAUNCHPADPORTSOLID\">火箭貨港</link>。"
 
 #. STRINGS.BUILDINGS.PREFABS.LAUNCHPAD.LOGIC_PORT_LANDED_ROCKET
 msgctxt "STRINGS.BUILDINGS.PREFABS.LAUNCHPAD.LOGIC_PORT_LANDED_ROCKET"
@@ -13263,7 +13263,7 @@ msgstr "儲存的燃料愈多，火箭可飛行的距離愈遠。"
 #. STRINGS.BUILDINGS.PREFABS.LIQUIDFUELTANKCLUSTER.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LIQUIDFUELTANKCLUSTER.EFFECT"
 msgid "Stores the <link=\"ELEMENTSLIQUID\">Liquid</link> fuel piped into it to supply rocket engines.\n\nThe stored fuel type is determined by the rocket engine it is built upon. \n\nMust be built via <link=\"LAUNCHPAD\">Rocket Platform</link>."
-msgstr "儲存<link=\"ELEMENTSLIQUID\">液體</link>燃料，供應給火箭使用。\n\n使用的燃料類型由火箭引擎的種類而定。"
+msgstr "儲存輸送到其中的<link=\"ELEMENTSLIQUID\">液體</link>燃料，以供應火箭引擎。\n\n儲存的燃料類型由其建造所在的火箭引擎決定。\n\n必須透過<link=\"LAUNCHPAD\">火箭平台</link>建造。"
 
 #. STRINGS.BUILDINGS.PREFABS.LIQUIDFUELTANKCLUSTER.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LIQUIDFUELTANKCLUSTER.NAME"
@@ -14148,7 +14148,7 @@ msgstr "這個記憶體會儲存來自設定端（S）收到的綠色訊號，�
 #. STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.EFFECT"
 msgid "Contains an internal Memory, and will output whatever signal is stored in that Memory.\n\nSignals sent to the Inputs <i>only</i> affect the Memory, and do not pass through to the Output. \n\nSending a <b><style=\"logic_on\">Green Signal</style></b> to the Set Port (S) will set the memory to <b><style=\"logic_on\">Green</style></b>. \n\nSending a <b><style=\"logic_on\">Green Signal</style></b> to the Reset Port (R) will reset the memory back to <b><style=\"logic_off\">Red</style></b>."
-msgstr "元件內含一個記憶體，並會輸出儲存在該記憶體中的訊號。\n\n傳送至輸入端的訊號<style=\"emphasis\">只會</style>影響記憶體，而不會傳到輸出端。\n\n傳送<b><style=\"logic_on\">綠色訊號</style></b>到設定端（S），會將記憶體設定為<b><style=\"logic_on\">綠色訊號</style></b>。\n\n傳送<b><style=\"logic_on\">綠色訊號</style></b>到重設端（R），會將記憶體重設為<b><style=\"logic_off\">紅色訊號</style></b>。""
+msgstr "元件內含一個記憶體，並會輸出儲存在該記憶體中的訊號。\n\n傳送至輸入端的訊號<b>僅會</b>影響記憶體，而不會傳到輸出端。\n\n傳送<b><style=\"logic_on\">綠色訊號</style></b>到設定端（S），會將記憶體設定為<b><style=\"logic_on\">綠色</style></b>。\n\n傳送<b><style=\"logic_on\">綠色訊號</style></b>到重設端（R），會將記憶體重設為<b><style=\"logic_off\">紅色</style></b>。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.NAME"
@@ -16413,7 +16413,7 @@ msgstr "允許有相應技能的複製人穩定供應黏糊糊但很有效的機
 #. STRINGS.BUILDINGS.PREFABS.MORBROVERMAKER.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.MORBROVERMAKER.EFFECT"
 msgid "Uses <link=\"ZOMBIESPORES\">Zombie Spores</link> and <link=\"STEEL\">Steel</link> to craft biofueled machines that can be sent into hostile environments.\n\nDefunct <link=\"STORYTRAITMORBROVER\">Biobots</link> drop harvestable <link=\"STEEL\">Steel</link>."
-msgstr "使用<link=\"ZOMBIESPORES\">殭屍孢子</link>和<link=\"STEEL\">鋼</link>製造可以送至危險環境中的生物燃料機器。\n\n失效的生物機器人會掉落可收集的<link=\"STEEL\">鋼</link>。"
+msgstr "使用<link=\"ZOMBIESPORES\">殭屍孢子</link>和<link=\"STEEL\">鋼</link>製造可以送至危險環境中的生物燃料機器。\n\n失效的<link=\"STORYTRAITMORBROVER\">生物機器人</link>會掉落可收集的<link=\"STEEL\">鋼</link>。"
 
 #. STRINGS.BUILDINGS.PREFABS.MORBROVERMAKER.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.MORBROVERMAKER.NAME"
@@ -16883,7 +16883,7 @@ msgstr "對複製人而言只是一小步。"
 #. STRINGS.BUILDINGS.PREFABS.PIONEERMODULE.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.PIONEERMODULE.EFFECT"
 msgid "Enables travel to Planetoids that do not yet have a <link=\"LAUNCHPAD\">Rocket Platform</link>.\n\nCan hold one Duplicant traveller.\n\nDeployment is available while in a Starmap hex adjacent to a Planetoid. \n\nMust be built via Rocket Platform."
-msgstr "可前往沒有<link=\"LAUNCHPAD\">火箭平台</link>的小行星。\n\n可容納一名複製人。\n\n當星圖上的區塊有小行星時可以部署。\n\n必須透過火箭平台建造。"
+msgstr "可前往沒有<link=\"LAUNCHPAD\">火箭平台</link>的小行星。\n\n可容納一名複製人。\n\n在與小行星相鄰的星圖格中即可部署。\n\n必須透過火箭平台建造。"
 
 #. STRINGS.BUILDINGS.PREFABS.PIONEERMODULE.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.PIONEERMODULE.NAME"
@@ -18608,7 +18608,7 @@ msgstr "漫游者可以在沒有建造火箭平台的小行星上進行探測任
 #. STRINGS.BUILDINGS.PREFABS.SCOUTMODULE.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.SCOUTMODULE.EFFECT"
 msgid "Deploys one <link=\"SCOUT\">Rover Bot</link> for remote Planetoid exploration.\n\nDeployment is available while in a Starmap hex adjacent to a Planetoid. \n\nMust be built via <link=\"LAUNCHPAD\">Rocket Platform</link>."
-msgstr "部署一台<link=\"SCOUT\">漫遊者</link>遠端探索小行星。\n\n當星圖上的區塊有小行星時可以部署。"
+msgstr "部署一個<link=\"SCOUT\">漫遊者</link>遠端探索小行星。\n\n在與小行星相鄰的星圖格中即可部署。\n\n必須透過<link=\"LAUNCHPAD\">火箭平台</link>建造。"
 
 #. STRINGS.BUILDINGS.PREFABS.SCOUTMODULE.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.SCOUTMODULE.NAME"
@@ -21528,7 +21528,7 @@ msgstr "[日誌開始]\n\n選擇莫布進行開發，是基於其能夠執行健
 #. STRINGS.CODEX.A3_HUSBANDRYNOTES.BODY.CONTAINER3
 msgctxt "STRINGS.CODEX.A3_HUSBANDRYNOTES.BODY.CONTAINER3"
 msgid "[LOG BEGINS]\n\n...The Puft may be suited for serving a sustainable decontamination role.\n\nPotential design must focus on the efficiency of these processes...\n\n[LOG ENDS]\n------------------\n"
-msgstr "[日誌開始]\n\n…帕夫可能適合扮演可持續的除污淨化角色。\n\n潛在的設計方案必須著重於這些流程的效率... \n\n[日誌結束]\n------------------\n"
+msgstr "[日誌開始]\n\n…帕夫可能適合扮演可持續的除汙淨化角色。\n\n潛在的設計方案必須著重於這些流程的效率... \n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.A3_HUSBANDRYNOTES.BODY.CONTAINER4
 msgctxt "STRINGS.CODEX.A3_HUSBANDRYNOTES.BODY.CONTAINER4"
@@ -21863,7 +21863,7 @@ msgstr "員工處理"
 #. STRINGS.CODEX.A7_NEUTRONIUM.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A7_NEUTRONIUM.BODY.CONTAINER1"
 msgid "[LOG BEGINS]\n\nDirector: I've determined the substance to be metallic in nature. The exact cause of its formation is still unknown, though I believe it to be something of an autoimmune reaction of the natural universe, a quarantining of foreign material to prevent temporal contamination.\n\nDirector: A method has yet to be found that can successfully remove the substance from an affected object, and the larger implication that two molecularly, temporally identical objects cannot coexist at one point in time has dire implications for all time manipulation technology research, not just the Bow.\n\nDirector: For the moment I have dubbed the substance \"Neutronium\", and assigned it a theoretical place on the table of elements. Research continues.\n\n[LOG ENDS]"
-msgstr "[日誌開始]\n\n總監：我已經確定該物質本質上屬於金屬。其確切的形成原因仍是未知，不過我認為它類似於自然宇宙的一種自體免疫反應，藉由隔離外來物質來防止時間性污染。\n\n總監：目前尚未找到能成功從受影響物體上移除此物質的方法，更嚴重的含義在於，兩個分子結構上、時間上完全相同的物體無法共存於同一個時間點，這對所有時間操控技術研究都造成了嚴峻的影響，不只針對「弓」這項研究。\n\n總監：目前我將此物質命名為「0 號元素」，並在元素週期表中賦予它一個理論位置。研究仍在持續。\n\n[日誌結束]"
+msgstr "[日誌開始]\n\n總監：我已經確定該物質本質上屬於金屬。其確切的形成原因仍是未知，不過我認為它類似於自然宇宙的一種自體免疫反應，藉由隔離外來物質來防止時間性汙染。\n\n總監：目前尚未找到能成功從受影響物體上移除此物質的方法，更嚴重的含義在於，兩個分子結構上、時間上完全相同的物體無法共存於同一個時間點，這對所有時間操控技術研究都造成了嚴峻的影響，不只針對「弓」這項研究。\n\n總監：目前我將此物質命名為「0 號元素」，並在元素週期表中賦予它一個理論位置。研究仍在持續。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.A7_NEUTRONIUM.SUBTITLE
 msgctxt "STRINGS.CODEX.A7_NEUTRONIUM.SUBTITLE"
@@ -21988,7 +21988,7 @@ msgstr "白日夢"
 #. STRINGS.CODEX.ADVANCEDCURE.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.ADVANCEDCURE.BODY.CONTAINER1"
 msgid "An extremely powerful medication created to treat severe <link=\"DISEASE\">Diseases</link>. <link=\"ADVANCEDCURE\">Serum Vial</link> is very effective against <link=\"ZOMBIESPORES\">Zombie Spores</link>.\n\nMust be administered by a Duplicant with the <link=\"MEDICINE3\">Advanced Medical Care</link> Skill."
-msgstr "一種極其強效的藥物，用於治療嚴重的<link=\"DISEASE\">疾病</link>。\n\n血清瓶用來治療<link=\"ZOMBIESPORES\">殭屍病毒</link>非常有效。\n\n複製人必須有<link=\"MEDICINE3\">進階醫療照顧</link>技能才能製作。"
+msgstr "一種極其強效的藥物，用於治療嚴重的<link=\"DISEASE\">疾病</link>。\n\n<link=\"ADVANCEDCURE\">血清瓶</link>用來治療<link=\"ZOMBIESPORES\">殭屍病毒</link>非常有效。\n\n複製人必須有<link=\"MEDICINE3\">進階醫療照顧</link>技能才能製作。"
 
 #. STRINGS.CODEX.ADVANCEDCURE.SUBTITLE
 msgctxt "STRINGS.CODEX.ADVANCEDCURE.SUBTITLE"
@@ -22823,12 +22823,12 @@ msgstr "多孔蘆薈"
 #. STRINGS.CODEX.BLUFFBRIAR.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.BLUFFBRIAR.BODY.CONTAINER1"
 msgid "Bluff Briars have formed a symbiotic relationship with a closely related plant strain, the <link=\"PRICKLEFLOWER\">Bristle Blossom</link>.\n\nThey tend to thrive in areas where the Bristle Blossom is present, as the berry it produces emits a rare chemical while decaying that the Briar is capable of absorbing to supplement its own pheromone production."
-msgstr "誘人荊棘與其相關品種<link=\"PRICKLEFLOWER\">鬃花</link>形成共生關係。\n\n它們常出現在鬃果繁植的區域，因為鬃花會散發一種化學物質，同時誘人荊棘能吸收以補充它們的費洛蒙。"
+msgstr "魅惑棘與其相關品種<link=\"PRICKLEFLOWER\">鬃花</link>形成共生關係。\n\n它們常出現在鬃果繁植的區域，因為鬃花會散發一種化學物質，同時魅惑棘能吸收以補充它們的費洛蒙。"
 
 #. STRINGS.CODEX.BLUFFBRIAR.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.BLUFFBRIAR.BODY.CONTAINER2"
 msgid "Due to the Bluff Briar's unique pheromonal \"charm\" defense, animals are extremely unlikely to eat it in the wild.\n\nAs a result, the Briar's barbs have become ineffectual over time and are unlikely to cause injury, unlike the Bristle Blossom, which possesses barbs that are exceedingly sharp and require careful handling."
-msgstr "由於誘人荊棘獨特的費洛蒙「迷惑」的保護，在野外動物極度不喜歡吃它。\n\n結果，隨著時間過去，誘人荊棘上的倒刺變得沒什麼殺傷力，不像鬃花它的倒刺非常鋒利需要小心處理。"
+msgstr "由於魅惑棘獨特的費洛蒙「迷惑」的保護，在野外動物極度不喜歡吃它。\n\n結果，隨著時間過去，魅惑棘上的倒刺變得沒什麼殺傷力，不像鬃花它的倒刺非常鋒利需要小心處理。"
 
 #. STRINGS.CODEX.BLUFFBRIAR.SUBTITLE
 msgctxt "STRINGS.CODEX.BLUFFBRIAR.SUBTITLE"
@@ -22838,7 +22838,7 @@ msgstr "裝飾植物"
 #. STRINGS.CODEX.BLUFFBRIAR.TITLE
 msgctxt "STRINGS.CODEX.BLUFFBRIAR.TITLE"
 msgid "Bluff Briar"
-msgstr "誘人荊棘"
+msgstr "魅惑棘"
 
 #. STRINGS.CODEX.BOGBUCKET.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.BOGBUCKET.BODY.CONTAINER1"
@@ -23613,7 +23613,7 @@ msgstr "低裝飾會增加複製人的<link=\"STRESS\">壓力</link>。值得慶
 #. STRINGS.CODEX.DECORSYSTEM.PARAGRAPH_2
 msgctxt "STRINGS.CODEX.DECORSYSTEM.PARAGRAPH_2"
 msgid "Many things have an effect on the Decor value of a tile. A building's effect is expressed as a strength value and a radius. Often that effect is positive, but many buildings also lower the decor value of an area too. <link=\"PLANTS\">Plants</link>, <link=\"CREATURES\">Critters</link>, and <link=\"BUILDCATEGORYFURNITURE\">Furniture</link> often increase decor while industrial buildings, debris, and rot often decrease it. Duplicants experience the combined decor of all objects affecting a tile.\n\nThe <link=\"PRICKLEGRASS\">Bluff Briar</link> has a decor value of 25 and a radius of 4 tiles. \nThe <link=\"MICROBEMUSHER\">Microbe Musher</link> has a decor value of -15 and a radius of 3 tiles. \nThe result of placing a <link=\"MICROBEMUSHER\">Microbe Musher</link> next to a <link=\"PRICKLEGRASS\">Bluff Briar</link> would be a combined decor value of 10."
-msgstr "許多事物都會影響格子內的裝飾值。建築物的影響效果與範圍較為明顯。通常影響是正向的，但許多建築也會降低區域的裝飾值。<link=\"PLANTS\">植物</link>、<link=\"CREATURES\">動物</link>與<link=\"BUILDCATEGORYFURNITURE\">家具</link>通常會增加裝飾，而工業建築、掉落物與腐壞物通常會減少裝飾。複製人的感受是格子內所有物件效果的加總。\n\n<link=\"PRICKLEGRASS\">誘人荊棘</link>的裝飾值 25，範圍 4 格。\n<link=\"MICROBEMUSHER\">食物壓製器</link> 的裝飾值 -15，範圍 3 格。\n如果<link=\"MICROBEMUSHER\">食物壓製器</link>旁，擺放著<link=\"PRICKLEGRASS\">誘人荊棘</link>，那麼最後的裝飾值總和為 10"
+msgstr "許多事物都會影響格子內的裝飾值。建築物的影響效果與範圍較為明顯。通常影響是正向的，但許多建築也會降低區域的裝飾值。<link=\"PLANTS\">植物</link>、<link=\"CREATURES\">動物</link>與<link=\"BUILDCATEGORYFURNITURE\">家具</link>通常會增加裝飾，而工業建築、掉落物與腐壞物通常會減少裝飾。複製人的感受是格子內所有物件效果的加總。\n\n<link=\"PRICKLEGRASS\">誘人荊棘</link>的裝飾值 25，範圍 4 格。\n<link=\"MICROBEMUSHER\">食物壓製器</link> 的裝飾值 -15，範圍 3 格。\n如果<link=\"MICROBEMUSHER\">食物壓製器</link>旁，擺放著<link=\"PRICKLEGRASS\">魅惑棘</link>，那麼最後的裝飾值總和為 10"
 
 #. STRINGS.CODEX.DECORSYSTEM.TITLE
 msgctxt "STRINGS.CODEX.DECORSYSTEM.TITLE"
@@ -25228,7 +25228,7 @@ msgstr "<link=\"DIRT\">照明</link>"
 #. STRINGS.CODEX.LILYPAD.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.LILYPAD.BODY.CONTAINER1"
 msgid "Cura Lotuses are ornamental aquatic plants that have inspired artists since their blossoms were first spotted bobbing on the surface of a quiet pond.\n\nThese ethereal beauties are a panacea for both the mind and the body - their delicate spores are highly sought-after for their natural antihistamine properties."
-msgstr "治癒蓮是一種觀賞性水生植物，自其花朵在靜謐的池塘中搖曳的身姿首次被發現以來，便成為藝術家們不竭的靈感源泉。\n\n這些超凡脫俗的美麗之物是身心靈的萬靈丹——牠們細膩的孢子因其天然抗組織胺特性而備受追捧。"
+msgstr "心悅蓮是一種觀賞性水生植物，自其花朵在靜謐的池塘中搖曳的身姿首次被發現以來，便成為藝術家們不竭的靈感源泉。\n\n這些超凡脫俗的美麗之物是身心靈的萬靈丹——牠們細膩的孢子因其天然抗組織胺特性而備受追捧。"
 
 #. STRINGS.CODEX.LILYPAD.SUBTITLE
 msgctxt "STRINGS.CODEX.LILYPAD.SUBTITLE"
@@ -25238,7 +25238,7 @@ msgstr "裝飾植物"
 #. STRINGS.CODEX.LILYPAD.TITLE
 msgctxt "STRINGS.CODEX.LILYPAD.TITLE"
 msgid "Cura Lotus"
-msgstr "治癒蓮"
+msgstr "心悅蓮"
 
 #. STRINGS.CODEX.LOCKS.NEURALVACILLATOR
 msgctxt "STRINGS.CODEX.LOCKS.NEURALVACILLATOR"
@@ -25278,7 +25278,7 @@ msgstr "米虱木"
 #. STRINGS.CODEX.MELLOWMALLOW.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.MELLOWMALLOW.BODY.CONTAINER1"
 msgid "The Mellow Mallow is a type of fungus that is known for its ease of propagation when cut.\n\nIt is deadly when consumed, however creatures that mistakenly eat it are said to experience a state of extreme calm before death."
-msgstr "錦葵是一種真菌，因切開後易於繁殖而聞名。\n\n食用會致死，據說誤食它的動物在死亡前會經歷一種極為平靜的狀態。"
+msgstr "錦醇菇是一種真菌，因切開後易於繁殖而聞名。\n\n食用會致死，據說誤食它的動物在死亡前會經歷一種極為平靜的狀態。"
 
 #. STRINGS.CODEX.MELLOWMALLOW.SUBTITLE
 msgctxt "STRINGS.CODEX.MELLOWMALLOW.SUBTITLE"
@@ -25288,7 +25288,7 @@ msgstr "裝飾植物"
 #. STRINGS.CODEX.MELLOWMALLOW.TITLE
 msgctxt "STRINGS.CODEX.MELLOWMALLOW.TITLE"
 msgid "Mellow Mallow"
-msgstr "錦葵"
+msgstr "錦醇菇"
 
 #. STRINGS.CODEX.MIRTHLEAF.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.MIRTHLEAF.BODY.CONTAINER1"
@@ -26663,7 +26663,7 @@ msgstr "發電機"
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.INDUSTRIALMACHINERY.CONFLICTINGROOMS
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.INDUSTRIALMACHINERY.CONFLICTINGROOMS"
 msgid "    • <link=\"LATRINE\">Latrine</link>\n    • <link=\"PLUMBEDBATHROOM\">Washroom</link>\n    • <link=\"BARRACKS\">Barracks</link>\n    • <link=\"BEDROOM\">Luxury Barracks</link>\n    • <link=\"PRIVATE BEDROOM\">Private Bedroom</link>\n    • <link=\"MESSHALL\">Mess Hall</link>\n    • <link=\"GREATHALL\">Great Hall</link>\n    • <link=\"MASSAGECLINIC\">Massage Clinic</link>\n    • <link=\"HOSPITAL\">Hospital</link>\n    • <link=\"LABORATORY\">Laboratory</link>\n    • <link=\"RECROOM\">Recreation Room</link>"
-msgstr "    • <link=\"LATRINE\">廁所</link>\n • <link=\"PLUMBEDBATHROOM\">洗手間</link>\n • <link=\"BARRACKS\">臥室</link>\n • <link=\"BEDROOM\">高級臥室</link>\n • <link=\"PRIVATE BEDROOM\">私人臥室</link>\n • <link=\"MESSHALL\">餐廳</link>\n • <link=\"GREATHALL\">高級餐廳</link>\n • <link=\"MASSAGECLINIC\">按摩間</link>\n • <link=\"HOSPITAL\ ">醫院</link>\n • <link=\"LABORATORY\">實驗室</link>\n • <link=\"RECROOM\">娛樂室</link>"
+msgstr "    • <link=\"LATRINE\">廁間</link>\n • <link=\"PLUMBEDBATHROOM\">洗手間</link>\n • <link=\"BARRACKS\">臥室</link>\n • <link=\"BEDROOM\">高級臥室</link>\n • <link=\"PRIVATE BEDROOM\">私人臥室</link>\n • <link=\"MESSHALL\">餐廳</link>\n • <link=\"GREATHALL\">高級餐廳</link>\n • <link=\"MASSAGECLINIC\">按摩間</link>\n • <link=\"HOSPITAL\ ">醫院</link>\n • <link=\"LABORATORY\">實驗室</link>\n • <link=\"RECROOM\">娛樂室</link>"
 
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.INDUSTRIALMACHINERY.DESCRIPTION
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.INDUSTRIALMACHINERY.DESCRIPTION"
@@ -26788,7 +26788,7 @@ msgstr "給予複製人一個衛生而莊重的地方「方便」的建築物。
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.TOILETTYPE.ROOMSREQUIRING
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.TOILETTYPE.ROOMSREQUIRING"
 msgid "    • <link=\"LATRINE\">Latrine</link>\n    • <link=\"HOSPITAL\">Hospital</link>"
-msgstr "    • <link=\"LATRINE\">廁所</link>\n    • <link=\"HOSPITAL\">醫院</link>"
+msgstr "    • <link=\"LATRINE\">廁間</link>\n    • <link=\"HOSPITAL\">醫院</link>"
 
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.TOILETTYPE.TITLE
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.TOILETTYPE.TITLE"
@@ -26813,7 +26813,7 @@ msgstr "能移除複製人身上傳播<link=\"DISEASE\">疾病</link>的病菌�
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.WASHSTATION.ROOMSREQUIRING
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.WASHSTATION.ROOMSREQUIRING"
 msgid "    • <link=\"LATRINE\">Latrine</link>"
-msgstr "    • <link=\"LATRINE\">廁所</link>"
+msgstr "    • <link=\"LATRINE\">廁間</link>"
 
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.WASHSTATION.TITLE
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.WASHSTATION.TITLE"
@@ -27053,7 +27053,7 @@ msgstr "眼冒金星！預告"
 #. STRINGS.CODEX.SPACETREE.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.SPACETREE.BODY.CONTAINER1"
 msgid "The Bonbon Tree is a towering plant developed to thrive in below-freezing temperatures. It features multiple independently functioning branches that synthesize bright light to funnel nutrients into a hollow central core.\n\nOnce the tree is fully grown, the core secretes digestive enzymes that break down surplus nutrients and store them as thick, sweet fluid. This can be refined into <link=\"SUCROSE\">Sucrose</link> for the production of higher-tier foods, or used as-is to sustain Spigot Seal ranches.\n\nBonbon Trees are generally considered an eyesore, and would likely be eradicated if not for their delicious output."
-msgstr "糖心樹是一種高聳的植物，可以在零下溫度中茁壯成長。其具有多個獨立的功能莖，透過明亮的光照將營養物質彙集到中空的中心核中。\n\n這種植物完全成熟後，核心部位就會分泌消化酵素，能將多餘的營養物質分解並以黏稠、甜蜜的液體形態儲存。這種液體可以提煉以供高階食物的生產使用，或者用於維持栓角海豹養殖。\n\n糖心樹通常被認為是礙事的東西，如果沒有美味的產出物，很有可能會被根除。"
+msgstr "糖心樹是一種高聳的植物，可以在零下溫度中茁壯成長。它具有多個獨立運作的分枝，透過合成光線將營養物質彙集到中空的中心核中。\n\n這種植物完全成熟後，核心部位就會分泌消化酵素，能將多餘的營養物質分解並以黏稠、甜蜜的液體形態儲存。這種液體可以提煉成<link=\"SUCROSE\">蔗糖</link>，用於生產更高階的食物，或直接用於維持栓角海豹養殖。\n\n糖心樹通常被認為是有礙觀瞻，如果沒有美味的產出物，很有可能會被根除。"
 
 #. STRINGS.CODEX.SPACETREE.SUBTITLE
 msgctxt "STRINGS.CODEX.SPACETREE.SUBTITLE"
@@ -27593,7 +27593,7 @@ msgstr "似乎這種生物的 DNA 曾用作一種基因儲存單元。"
 #. STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.DNADATA_ENTRY_EXPANDED.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.DNADATA_ENTRY_EXPANDED.BODY.CONTAINER1"
 msgid "<indent=5%>Dear [REDACTED]\n\nWe are pleased to announce that research objectives for Operation Piazzi's Planet are nearing completion. Thank you all for your patience as we navigated the unprecedented obstacles that such groundbreaking work entails.\n\nWe are aware of rumors regarding documents leaked from Dr. [REDACTED]'s files.\n\nRest assured that the contents of this supposed \"whistleblower\" effort are entirely fabricated—our technology is far too advanced to allow for the type of miscalculation that would result in OPP shipments arriving at their destination some 10,000 years prior to the targeted date.\n\nOur IT security team is currently investigating the document's digital footprint to determine its origin.\n\nTo express our gratitude for your continued support, we would like to invite key stakeholders to a private launch party held at the Gravitas Facility. The evening will be emceed by Dr. Olivia Broussard, who will present our groundbreaking prototypes along with a five-course meal featuring lab-crafted ingredients.\n\nDue to the sensitive nature of our work, we regret that no additional guests or dietary restrictions can be accommodated at this time.\n\nDirector Stern will be hosting a 30-minute Q&A session after dinner. Questions must be submitted at least 24 hours in advance.\n\nQueries about the [REDACTED] papers will be disregarded.\n\nPlease be advised that the contents of this e-mail will expire three minutes from the time of opening.</indent>"
-msgstr "<indent=5%>親愛的[受遮蔽]\n\n我們很高興地宣佈，在 Piazzi 行星行動上的研究目標已接近尾聲。感謝各位在我們應對此等開創性工作所伴隨而來的空前挑戰時所展現的耐心。\n\n我們知道有關[受遮蔽]博士檔案文件洩漏的傳聞。\n\n敬請諸位放心，所謂的「告密者」所為純屬捏造——我們的技術遠比現有技術先進，絕不可能發生導致 OPP 貨物提早萬年抵達目的地的此類誤算。\n\n我方資安團隊目前正針對該文件的數位足跡展開調查，以釐清其來源。\n\n為表達對諸位持續支持的謝意，謹此誠邀主要利害關係人蒞臨引力科技設施舉辦的私人發表會。當晚將由 Olivia Broussard 博士主持，她將展示我們劃時代的原型，並搭配由實驗室精心打造食材的五道式晚宴。\n\n鑒於我方業務性質敏感，現階段恕無法接待額外賓客，亦不接受特殊飲食要求，敬請見諒。\n\n晚宴後，Stern 總監將主持一場三十分鐘的問答環節。所有問題務必提前至少二十四小時提交。\n\n有關[受遮蔽]文件的提問將一概不予理會。\n\n敬請留意，此電子郵件內容將於開啟後三分鐘自動失效。</indent>"
+msgstr "<indent=5%>親愛的[受遮蔽]\n\n我們很高興地宣佈，在 Piazzi 行星行動上的研究目標已接近尾聲。感謝各位在我們應對此等開創性工作所伴隨而來的空前挑戰時所展現的耐心。\n\n我們知道有關[受遮蔽]博士檔案文件泄漏的傳聞。\n\n敬請諸位放心，所謂的「告密者」所為純屬捏造——我們的技術遠比現有技術先進，絕不可能發生導致 OPP 貨物提早萬年抵達目的地的此類誤算。\n\n我方資安團隊目前正針對該文件的數位足跡展開調查，以釐清其來源。\n\n為表達對諸位持續支持的謝意，謹此誠邀主要利害關係人蒞臨引力科技設施舉辦的私人發表會。當晚將由 Olivia Broussard 博士主持，她將展示我們劃時代的原型，並搭配由實驗室精心打造食材的五道式晚宴。\n\n鑒於我方業務性質敏感，現階段恕無法接待額外賓客，亦不接受特殊飲食要求，敬請見諒。\n\n晚宴後，Stern 總監將主持一場三十分鐘的問答環節。所有問題務必提前至少二十四小時提交。\n\n有關[受遮蔽]文件的提問將一概不予理會。\n\n敬請留意，此電子郵件內容將於開啟後三分鐘自動失效。</indent>"
 
 #. STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.DNADATA_ENTRY_EXPANDED.BODY.EMAILHEADER
 msgctxt "STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.DNADATA_ENTRY_EXPANDED.BODY.EMAILHEADER"
@@ -29108,7 +29108,7 @@ msgstr "壓力過大"
 #. STRINGS.COLONY_ACHIEVEMENTS.ACTIVATEGEOTHERMALPLANT.STATUSITEMS.VENT.OVERPRESSURE_TOOLTIP
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.ACTIVATEGEOTHERMALPLANT.STATUSITEMS.VENT.OVERPRESSURE_TOOLTIP"
 msgid "High <style=\"KKeyword\">Liquid</style> or <style=\"KKeyword\">Gas</style> pressure in this area is preventing further emissions\n\nReduce pressure by pumping <style=\"KKeyword\">Liquids</style> or <style=\"KKeyword\">Gases</style> away or clearing more space\n\nClick here to show this vent"
-msgstr "這片區域的<style=\"KKeyword\">氣體</style>或<style=\"KKeyword\">液體</style>壓力過高，無法排放更多<style=\"KKeyword\">液體</style>\n\n透過抽出<style=\"KKeyword\">液體</style>或<style=\"KKeyword\">氣體</style>，或者清理出更多空間以減小壓力\n\n點選此處以顯示該排氣口"
+msgstr "這片區域的<style=\"KKeyword\">氣體</style>或<style=\"KKeyword\">液體</style>壓力過高，阻止了進一步的排放。\n\n透過抽出<style=\"KKeyword\">液體</style>或<style=\"KKeyword\">氣體</style>，或騰出更多空間以減小壓力。\n\n點選此處以顯示該排氣口"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.ACTIVATEGEOTHERMALPLANT.STATUSITEMS.VENT.PENDING_REVEAL_NAME
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.ACTIVATEGEOTHERMALPLANT.STATUSITEMS.VENT.PENDING_REVEAL_NAME"
@@ -33063,7 +33063,7 @@ msgstr "<link=\"PRICKLEFLOWER\">鬃花</link>"
 #. STRINGS.CREATURES.SPECIES.PRICKLEGRASS.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.PRICKLEGRASS.DESC"
 msgid "Bluff Briars exude pheromones causing critters to view them as especially beautiful."
-msgstr "誘人荊棘散發費洛蒙，使生物將它們視為特別美麗。"
+msgstr "魅惑棘散發費洛蒙，使生物將它們視為特別美麗。"
 
 #. STRINGS.CREATURES.SPECIES.PRICKLEGRASS.DOMESTICATEDDESC
 msgctxt "STRINGS.CREATURES.SPECIES.PRICKLEGRASS.DOMESTICATEDDESC"
@@ -33078,7 +33078,7 @@ msgstr "生長加成"
 #. STRINGS.CREATURES.SPECIES.PRICKLEGRASS.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.PRICKLEGRASS.NAME"
 msgid "<link=\"PRICKLEGRASS\">Bluff Briar</link>"
-msgstr "<link=\"PRICKLEGRASS\">誘人荊棘</link>"
+msgstr "<link=\"PRICKLEGRASS\">魅惑棘</link>"
 
 #. STRINGS.CREATURES.SPECIES.PRICKLEGRASS.WILT_PENALTY
 msgctxt "STRINGS.CREATURES.SPECIES.PRICKLEGRASS.WILT_PENALTY"
@@ -33208,7 +33208,7 @@ msgstr "<link=\"RAPTOR\">霸王鸚寶寶</link>"
 #. STRINGS.CREATURES.SPECIES.RAPTOR.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.RAPTOR.DESC"
 msgid "Rhexes are carnivorous critters that feed on smaller <link=\"CREATURES\">Critters</link> and produce <link=\"BRINEICE\">Brine Ice</link>.\n\nTheir tailfeathers can be shorn for <link=\"FEATHERFABRIC\">Feather Fiber</link>."
-msgstr "霸王鸚是一種食肉小動物，以更小型的<link=\"CREATURES\">小動物</link>為食，並會產生<link=\"BRINEICE\">濃鹽水冰</link>。\n\n儘管霸王鸚在飢餓時很嚇人，但它們對複製人沒有敵意。"
+msgstr "霸王鸚是一種食肉小動物，以更小型的<link=\"CREATURES\">小動物</link>為食，並會產生<link=\"BRINEICE\">濃鹽水冰</link>。\n\n牠們的尾羽可以剪下用來生產<link=\"FEATHERFABRIC\">羽毛纖維</link>。"
 
 #. STRINGS.CREATURES.SPECIES.RAPTOR.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.RAPTOR.EGG_NAME"
@@ -33568,12 +33568,12 @@ msgstr "<link=\"PRICKLEFLOWER\">鬃花種子</link>"
 #. STRINGS.CREATURES.SPECIES.SEEDS.PRICKLEGRASS.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.PRICKLEGRASS.DESC"
 msgid "The <link=\"PLANTS\">Seed</link> of a <link=\"PRICKLEGRASS\">Bluff Briar</link>.\n\nDigging up Buried Objects may uncover a Briar Seed."
-msgstr "<link=\"PRICKLEGRASS\">誘人荊棘</link>的<link=\"PLANTS\">種子</link>。\n\n挖掘埋住的物件可能會發現荊棘種子。"
+msgstr "<link=\"PRICKLEGRASS\">魅惑棘</link>的<link=\"PLANTS\">種子</link>。\n\n挖掘埋住的物件可能會發現魅惑棘種子。"
 
 #. STRINGS.CREATURES.SPECIES.SEEDS.PRICKLEGRASS.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.PRICKLEGRASS.NAME"
 msgid "<link=\"PRICKLEGRASS\">Briar Seed</link>"
-msgstr "<link=\"PRICKLEGRASS\">荊棘種子</link>"
+msgstr "<link=\"PRICKLEGRASS\">魅惑棘種子</link>"
 
 #. STRINGS.CREATURES.SPECIES.SEEDS.SALTPLANT.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.SALTPLANT.DESC"
@@ -33608,12 +33608,12 @@ msgstr "<link=\"SPACETREE\">糖心樹種子</link>"
 #. STRINGS.CREATURES.SPECIES.SEEDS.SPICE_VINE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.SPICE_VINE.DESC"
 msgid "The <link=\"PLANTS\">Seed</link> of a <link=\"SPICEVINE\">Pincha Pepperplant</link>.\n\nDigging up Buried Objects may uncover a Pincha Pepper Seed."
-msgstr "<link=\"SPICEVINE\">胡椒藤</link>的<link=\"PLANTS\">種子</link>。\n\n挖掘埋住的物件可能會發現胡椒種子。"
+msgstr "<link=\"SPICEVINE\">胡椒藤</link>的<link=\"PLANTS\">種子</link>。\n\n挖掘埋住的物件可能會發現胡椒藤種子。"
 
 #. STRINGS.CREATURES.SPECIES.SEEDS.SPICE_VINE.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.SPICE_VINE.NAME"
 msgid "<link=\"SPICEVINE\">Pincha Pepper Seed</link>"
-msgstr "<link=\"SPICEVINE\">胡椒種子</link>"
+msgstr "<link=\"SPICEVINE\">胡椒藤種子</link>"
 
 #. STRINGS.CREATURES.SPECIES.SEEDS.SWAMPHARVESTPLANT.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.SWAMPHARVESTPLANT.DESC"
@@ -33658,12 +33658,12 @@ msgstr "<link=\"VINEMOTHER\">蔓殖母藤種子</link>"
 #. STRINGS.CREATURES.SPECIES.SEEDS.WINECUPS.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.WINECUPS.DESC"
 msgid "The <link=\"PLANTS\">Seed</link> of a <link=\"WINECUPS\">Mellow Mallow</link>.\n\nDigging up Buried Objects may uncover a Mallow Seed."
-msgstr "<link=\"WINECUPS\">錦葵</link>的<link=\"PLANTS\">種子</link>。\n\n挖掘埋住的物件可能會發現錦葵種子。"
+msgstr "<link=\"WINECUPS\">錦醇菇</link>的<link=\"PLANTS\">種子</link>。\n\n挖掘埋住的物件可能會發現錦醇菇種子。"
 
 #. STRINGS.CREATURES.SPECIES.SEEDS.WINECUPS.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.WINECUPS.NAME"
 msgid "<link=\"WINECUPS\">Mallow Seed</link>"
-msgstr "<link=\"WINECUPS\">錦葵種子</link>"
+msgstr "<link=\"WINECUPS\">錦醇菇種子</link>"
 
 #. STRINGS.CREATURES.SPECIES.SEEDS.WOOD_TREE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.WOOD_TREE.DESC"
@@ -33993,7 +33993,7 @@ msgstr "<link=\"VINEMOTHER\">蔓殖母藤</link>"
 #. STRINGS.CREATURES.SPECIES.WINECUPS.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.WINECUPS.DESC"
 msgid "Mellow Mallows heighten <link=\"DECOR\">Decor</link> and alleviate <link=\"STRESS\">Stress</link> with their calming color and cradle shape."
-msgstr "錦葵令人平靜的顏色與像搖籃的外觀，可提高<link=\"DECOR\">裝飾</link>與減少<link=\"STRESS\">壓力</link>。"
+msgstr "錦醇菇令人平靜的顏色與像搖籃的外觀，可提高<link=\"DECOR\">裝飾</link>與減少<link=\"STRESS\">壓力</link>。"
 
 #. STRINGS.CREATURES.SPECIES.WINECUPS.DOMESTICATEDDESC
 msgctxt "STRINGS.CREATURES.SPECIES.WINECUPS.DOMESTICATEDDESC"
@@ -34008,7 +34008,7 @@ msgstr "生長加成"
 #. STRINGS.CREATURES.SPECIES.WINECUPS.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.WINECUPS.NAME"
 msgid "<link=\"WINECUPS\">Mellow Mallow</link>"
-msgstr "<link=\"WINECUPS\">錦葵</link>"
+msgstr "<link=\"WINECUPS\">錦醇菇</link>"
 
 #. STRINGS.CREATURES.SPECIES.WINECUPS.WILT_PENALTY
 msgctxt "STRINGS.CREATURES.SPECIES.WINECUPS.WILT_PENALTY"
@@ -34598,7 +34598,7 @@ msgstr "    • 枯萎"
 #. STRINGS.CREATURES.STATUSITEMS.CROP_BLIGHTED.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.CROP_BLIGHTED.TOOLTIP"
 msgid "This plant has been struck by blight and will need to be replaced"
-msgstr "這株植物枯萎了需要重新栽種"
+msgstr "這株植物枯萎了，需要被替換"
 
 #. STRINGS.CREATURES.STATUSITEMS.CROP_SLEEPING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.CROP_SLEEPING.NAME"
@@ -35178,7 +35178,7 @@ msgstr "周圍環境太熱"
 #. STRINGS.CREATURES.STATUSITEMS.HOT.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HOT.TOOLTIP"
 msgid "This critter cannot let off enough <style=\"KKeyword\">Heat</style> to keep cool in this environment\n\nIt prefers <style=\"KKeyword\">Temperatures</style> between <b>{0}</b> and <b>{1}</b>"
-msgstr "在這個環境中這隻小動物無法散熱以保持涼爽\n\n牠喜歡的<style=\"KKeyword\">溫度</style>介於 <b>{0}</b> 和 <b>{1}</b> 之間"
+msgstr "在這個環境中這隻小動物無法<style=\"KKeyword\">散熱</style>以保持涼爽\n\n牠喜歡的<style=\"KKeyword\">溫度</style>介於 <b>{0}</b> 和 <b>{1}</b> 之間"
 
 #. STRINGS.CREATURES.STATUSITEMS.HOT_CROP.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HOT_CROP.NAME"
@@ -37433,7 +37433,7 @@ msgstr "緊急補充氧氣罐中"
 #. STRINGS.DUPLICANTS.CHORES.BIONICABSORBOXYGENCRITICAL.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.CHORES.BIONICABSORBOXYGENCRITICAL.TOOLTIP"
 msgid "This Duplicant is refilling their depleted <style=\"KKeyword\">Oxygen</style> tank in the nearest breathable area: {0} O<sub>2</sub>\n\nImproving colony breathability and scheduling regular <style=\"KKeyword\">Downtime</style> will prevent future emergencies"
-msgstr "這名複製人正在最近的可呼吸區域補充其耗盡的<style=\"KKeyword\">氧氣</style>罐：{0} O<sub>2</sub>\n\n改善殖民地的呼吸能力並安排定期<style =\"KKeyword\">休息時間</style>以防止將來發生緊急情況"
+msgstr "這名複製人正在最近的可呼吸區域補充其耗盡的<style=\"KKeyword\">氧氣</style>罐：{0} O<sub>2</sub>\n\n改善殖民地的呼吸能力並安排定期<style=\"KKeyword\">休息時間</style>以防止將來發生緊急情況"
 
 #. STRINGS.DUPLICANTS.CHORES.BIONICBEDTIMEMODE.NAME
 msgctxt "STRINGS.DUPLICANTS.CHORES.BIONICBEDTIMEMODE.NAME"
@@ -41208,7 +41208,7 @@ msgstr "小又奢華"
 #. STRINGS.DUPLICANTS.MODIFIERS.BONUSTOILET3.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.BONUSTOILET3.TOOLTIP"
 msgid "This Duplicant visited a Latrine and feels they could get used to this luxury"
-msgstr "這名複製人訪問了廁所並感覺可以習慣這種奢華"
+msgstr "這名複製人訪問了廁間並感覺可以習慣這種奢華"
 
 #. STRINGS.DUPLICANTS.MODIFIERS.BONUSTOILET4.NAME
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.BONUSTOILET4.NAME"
@@ -42693,12 +42693,12 @@ msgstr "這名複製人最近到<style=\"KKeyword\">高級餐廳</style>用餐"
 #. STRINGS.DUPLICANTS.MODIFIERS.ROOMLATRINE.NAME
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ROOMLATRINE.NAME"
 msgid "Latrine"
-msgstr "廁所"
+msgstr "廁間"
 
 #. STRINGS.DUPLICANTS.MODIFIERS.ROOMLATRINE.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ROOMLATRINE.TOOLTIP"
 msgid "This Duplicant used an <link=\"OUTHOUSE\">Outhouse</link> in a <style=\"KKeyword\">Latrine</style>"
-msgstr "這名複製人在<style=\"KKeyword\">廁所</style>使用<link=\"OUTHOUSE\">茅廁</link>"
+msgstr "這名複製人在<style=\"KKeyword\">廁間</style>使用<link=\"OUTHOUSE\">茅廁</link>"
 
 #. STRINGS.DUPLICANTS.MODIFIERS.ROOMMESSHALL.NAME
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ROOMMESSHALL.NAME"
@@ -49638,7 +49638,7 @@ msgstr "<link=\"ALUMINUMORE\">鋁礦</link>"
 #. STRINGS.ELEMENTS.AMBER.DESC
 msgctxt "STRINGS.ELEMENTS.AMBER.DESC"
 msgid "Amber is a <link=\"ELEMENTSSOLID\">Solid</link> organic composite of <link=\"NATURALRESIN\">Resin</link> and <link=\"FOSSIL\">Fossil</link>."
-msgstr "琥珀是一種由<link=\"NATURALRESIN\">樹脂</link>和<link=\"FOSSIL\">化石</link>組成的有機物。"
+msgstr "琥珀是一種由<link=\"NATURALRESIN\">樹脂</link>和<link=\"FOSSIL\">化石</link>組成的<link=\"ELEMENTSSOLID\">固體</link>有機物。"
 
 #. STRINGS.ELEMENTS.AMBER.NAME
 msgctxt "STRINGS.ELEMENTS.AMBER.NAME"
@@ -50048,7 +50048,7 @@ msgstr "<link=\"ENRICHEDURANIUM\">濃縮鈾</link>"
 #. STRINGS.ELEMENTS.ETHANOL.DESC
 msgctxt "STRINGS.ELEMENTS.ETHANOL.DESC"
 msgid "(C<sub>2</sub>H<sub>6</sub>O) Ethanol is an advanced chemical compound in a <link=\"ELEMENTSLIQUID\">Liquid</link> state.\n\nIt can be used as a highly effective fuel source when burned."
-msgstr "(C<sub>2</sub>H<sub>6</sub>O) 乙醇是一種高級化合物。\n\n它可以用來作為一種高效率的燃料。"
+msgstr "(C<sub>2</sub>H<sub>6</sub>O) 乙醇是一種高級化學化合物，處於<link=\"ELEMENTSLIQUID\">液體</link>狀態。\n\n它可以用來作為一種高效率的燃料。"
 
 #. STRINGS.ELEMENTS.ETHANOL.NAME
 msgctxt "STRINGS.ELEMENTS.ETHANOL.NAME"
@@ -51513,7 +51513,7 @@ msgstr "<link=\"SUGARWATER\">花蜜</link>"
 #. STRINGS.ELEMENTS.SULFUR.DESC
 msgctxt "STRINGS.ELEMENTS.SULFUR.DESC"
 msgid "(S) Sulfur is a common chemical element and byproduct of <link=\"METHANE\">Natural Gas</link> production.\n\nThis selection is in a <link=\"ELEMENTSSOLID\">Solid</link> state."
-msgstr "(S) 硫是一種常見化學元素，通常是生產<link=\"METHANE\">天然氣</link>的副產品。"
+msgstr "(S) 硫是一種常見化學元素，通常是生產<link=\"METHANE\">天然氣</link>的副產品。目前處於<link=\"ELEMENTSGAS\">固體</link>狀態。"
 
 #. STRINGS.ELEMENTS.SULFUR.NAME
 msgctxt "STRINGS.ELEMENTS.SULFUR.NAME"
@@ -51533,7 +51533,7 @@ msgstr "<link=\"SULFURGAS\">硫</link>"
 #. STRINGS.ELEMENTS.SUPERCOOLANT.DESC
 msgctxt "STRINGS.ELEMENTS.SUPERCOOLANT.DESC"
 msgid "Super Coolant is an industrial-grade coolant that utilizes the unusual energy states of <link=\"FULLERENE\">Fullerene</link>.\n\nThis selection is in a <link=\"ELEMENTSLIQUID\">Liquid</link> state."
-msgstr "超級冷卻液是一種工業級的冷卻液，利用了<link=\"FULLERENE\">富勒烯</link>的特殊能量狀態。"
+msgstr "超級冷卻液是一種工業級的冷卻液，利用了<link=\"FULLERENE\">富勒烯</link>的特殊能量狀態。目前處於<link=\"ELEMENTSGAS\">液體</link>狀態。"
 
 #. STRINGS.ELEMENTS.SUPERCOOLANT.NAME
 msgctxt "STRINGS.ELEMENTS.SUPERCOOLANT.NAME"
@@ -51748,7 +51748,7 @@ msgstr "<link=\"WOOD\">木材</link>"
 #. STRINGS.ELEMENTS.YELLOWCAKE.DESC
 msgctxt "STRINGS.ELEMENTS.YELLOWCAKE.DESC"
 msgid "(U<sub>3</sub>O<sub>8</sub>) Yellowcake is a byproduct of <link=\"URANIUM\">Uranium</link> mining.\n\nIt is useful in preparing fuel for <link=\"NUCLEARREACTOR\">Research Reactors</link>.\n\nNote: Do not eat."
-msgstr "(U<sub>3</sub>O<sub>8</sub>) 黃餅是挖掘<link=\"URANIUM\">鈾礦</link>的副產品。\n\n它是研究反應爐的燃料。\n\n注意：別吃它。"
+msgstr "(U<sub>3</sub>O<sub>8</sub>) 黃餅是挖掘<link=\"URANIUM\">鈾礦</link>的副產品。\n\n它是<link=\"NUCLEARREACTOR\">研究反應爐</link>的燃料。\n\n注意：別吃它。"
 
 #. STRINGS.ELEMENTS.YELLOWCAKE.NAME
 msgctxt "STRINGS.ELEMENTS.YELLOWCAKE.NAME"
@@ -51763,7 +51763,7 @@ msgstr "因為能在水下呼吸好過…不能。"
 #. STRINGS.EQUIPMENT.PREFABS.AQUA_SUIT.EFFECT
 msgctxt "STRINGS.EQUIPMENT.PREFABS.AQUA_SUIT.EFFECT"
 msgid "Supplies Duplicants with <style=\"oxygen\">Oxygen</style> in underwater environments.\n\nMust be refilled with <link=\"OXYGEN\">Oxygen</link> at an <link=\"SUITLOCKER\">Atmo Suit Dock</link> when depleted."
-msgstr "提供<style=\"oxygen\">氧氣</style>讓複製人在水下環境呼吸。\n\n<style=\"oxygen\">氧氣</style>耗盡時，必須在<link=\"SUITLOCKER\">潛水衣存放櫃</link>重新補充。"
+msgstr "在水下環境中為複製人提供<style=\"oxygen\">氧氣</style>。\n\n當耗盡時，必須在<link=\"SUITLOCKER\">潛水衣存放櫃</link>補充<link=\"OXYGEN\">氧氣</link>。"
 
 #. STRINGS.EQUIPMENT.PREFABS.AQUA_SUIT.NAME
 msgctxt "STRINGS.EQUIPMENT.PREFABS.AQUA_SUIT.NAME"
@@ -51793,7 +51793,7 @@ msgstr "確保複製人可以在任何時間，任何地點輕鬆的呼吸。"
 #. STRINGS.EQUIPMENT.PREFABS.ATMO_SUIT.EFFECT
 msgctxt "STRINGS.EQUIPMENT.PREFABS.ATMO_SUIT.EFFECT"
 msgid "Supplies Duplicants with <link=\"OXYGEN\">Oxygen</link> in toxic and low breathability environments, and protects against extreme temperatures.\n\nMust be refilled with oxygen at an <link=\"SUITLOCKER\">Atmo Suit Dock</link> when depleted."
-msgstr "提供複製人<style=\"oxygen\">氧氣</style>在有毒與低氧的環境中呼吸。\n\n氧氣耗盡時，必須在<link=\"SUITLOCKER\">太空衣存放櫃</link>重新補充。"
+msgstr "在有毒和低通氣性的環境中為複製人提供<link=\"OXYGEN\">氧氣</link>，並提供極端溫度保護。\n\n當氧氣耗盡時，必須在<link=\"SUITLOCKER\">太空衣存放櫃</link>補充氧氣。"
 
 #. STRINGS.EQUIPMENT.PREFABS.ATMO_SUIT.GENERICNAME
 msgctxt "STRINGS.EQUIPMENT.PREFABS.ATMO_SUIT.GENERICNAME"
@@ -51808,7 +51808,7 @@ msgstr "<link=\"ATMOSUIT\">太空衣</link>"
 #. STRINGS.EQUIPMENT.PREFABS.ATMO_SUIT.RECIPE_DESC
 msgctxt "STRINGS.EQUIPMENT.PREFABS.ATMO_SUIT.RECIPE_DESC"
 msgid "Supplies Duplicants with <link=\"OXYGEN\">Oxygen</link> in toxic and low breathability environments."
-msgstr "提供複製人<style=\"oxygen\">氧氣</style>在有毒與低氧的環境中呼吸。"
+msgstr "提供複製人<link=\"OXYGEN\">氧氣</link>在有毒與低氧的環境中呼吸。"
 
 #. STRINGS.EQUIPMENT.PREFABS.ATMO_SUIT.REPAIR_WORN_DESC
 msgctxt "STRINGS.EQUIPMENT.PREFABS.ATMO_SUIT.REPAIR_WORN_DESC"
@@ -52543,7 +52543,7 @@ msgstr "它們讓佩戴者感覺自己被真實地看到了。"
 #. STRINGS.EQUIPMENT.PREFABS.CLOTHING_BOTTOMS.FACADES.BASIC_ORANGE_SATSUMA.NAME
 msgctxt "STRINGS.EQUIPMENT.PREFABS.CLOTHING_BOTTOMS.FACADES.BASIC_ORANGE_SATSUMA.NAME"
 msgid "Hi-Vis Pants"
-msgstr "高能見度長褲"
+msgstr "高能見長褲"
 
 #. STRINGS.EQUIPMENT.PREFABS.CLOTHING_BOTTOMS.FACADES.BASIC_PINK_ORCHID.DESC
 msgctxt "STRINGS.EQUIPMENT.PREFABS.CLOTHING_BOTTOMS.FACADES.BASIC_PINK_ORCHID.DESC"
@@ -54203,7 +54203,7 @@ msgstr "高安全意識者不容錯過的風格。"
 #. STRINGS.EQUIPMENT.PREFABS.CLOTHING_TOPS.FACADES.BUILDER.NAME
 msgctxt "STRINGS.EQUIPMENT.PREFABS.CLOTHING_TOPS.FACADES.BUILDER.NAME"
 msgid "Hi-Vis Jacket"
-msgstr "高能見度夾克"
+msgstr "高能見夾克"
 
 #. STRINGS.EQUIPMENT.PREFABS.CLOTHING_TOPS.FACADES.CIRCUIT_GREEN.DESC
 msgctxt "STRINGS.EQUIPMENT.PREFABS.CLOTHING_TOPS.FACADES.CIRCUIT_GREEN.DESC"
@@ -55213,7 +55213,7 @@ msgstr "暴露在輻射環境中不會使複製人得到超能力。"
 #. STRINGS.EQUIPMENT.PREFABS.LEAD_SUIT.EFFECT
 msgctxt "STRINGS.EQUIPMENT.PREFABS.LEAD_SUIT.EFFECT"
 msgid "Supplies Duplicants with <link=\"OXYGEN\">Oxygen</link> and protection in areas with <link=\"RADIATION\">Radiation</link>.\n\nMust be refilled with <link=\"OXYGEN\">Oxygen</link> at a <link=\"LEADSUITLOCKER\">Lead Suit Dock</link> when depleted."
-msgstr "供應複製人<style=\"oxygen\">氧氣</style>並能在<link=\"RADIATION\">輻射</link>環境提供保護。\n\n<style=\"oxygen\">氧氣</style>耗盡時，必須在<link=\"LEADSUITLOCKER\">輻射防護衣存放櫃</link>重新補充。"
+msgstr "在<link=\"RADIATION\">輻射</link>區域中，為複製人提供<link=\"OXYGEN\">氧氣</link>和防護。\n\n當耗盡時，必須在<link=\"LEADSUITLOCKER\">輻射防護衣存放櫃</link>補充<link=\"OXYGEN\">氧氣</link>。"
 
 #. STRINGS.EQUIPMENT.PREFABS.LEAD_SUIT.GENERICNAME
 msgctxt "STRINGS.EQUIPMENT.PREFABS.LEAD_SUIT.GENERICNAME"
@@ -55583,7 +55583,7 @@ msgstr "非常舒適"
 #. STRINGS.GAMEPLAY_EVENTS.BONUS.BONUSTOILET3.DESCRIPTION
 msgctxt "STRINGS.GAMEPLAY_EVENTS.BONUS.BONUSTOILET3.DESCRIPTION"
 msgid "{dupe} visited a Latrine and experienced luxury unlike they anything this Duplicant had previously experienced as analysis has revealed yet another boost to their <link=\"MORALE\">Morale</link>.\n\nIt is unclear whether this development is a result of increased hygiene or whether there is something else inherently about working plumbing which would improve <link=\"MORALE\">Morale</link> in this way. Further analysis is needed."
-msgstr "{dupe} 訪問了一間浴室並體驗了前所未有的奢華，分析顯示這對他們的<link=\"MORALE\">士氣</link>有著另一種加成。\n\n目前不清楚此發展是因為衛生條件的改善所導致，還是現有沖水馬桶在這方面所提升的<link=\"MORALE\">Morale</link>。需要進一步分析。"
+msgstr "{dupe} 訪問了一間廁間並體驗了前所未有的奢華，分析顯示這對他們的<link=\"MORALE\">士氣</link>有著另一種加成。\n\n目前不清楚此發展是因為衛生條件的改善所導致，還是現有沖水馬桶在這方面所提升的<link=\"MORALE\">Morale</link>。需要進一步分析。"
 
 #. STRINGS.GAMEPLAY_EVENTS.BONUS.BONUSTOILET3.NAME
 msgctxt "STRINGS.GAMEPLAY_EVENTS.BONUS.BONUSTOILET3.NAME"
@@ -58533,7 +58533,7 @@ msgstr "只有學會<link=\"TECHNICALS2\">電氣工程</link>的複製人，能�
 #. STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.REFINED_SUGAR.DESC
 msgctxt "STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.REFINED_SUGAR.DESC"
 msgid "A seasoning that Duplicants can add to their <link=\"FOOD\">Food</link> to boost <link=\"MORALE\">Morale</link>.\n\nDuplicants will automatically use Refined Sugar while sitting at a <link=\"DININGTABLE\">Mess Table</link> during mealtime.\n\n<i>Only the finest grains are chosen.</i>"
-msgstr "一種調味料，複製人可加到他們的<link=\"FOOD\">食物</link>中，可提升<link=\"MORALE\">士氣</link>。\n\n複製人在<link=\"DININGTABLE\">餐桌</link>用餐時會使用精製糖。\n\n<b>精選最好的顆粒。</b>"
+msgstr "一種調味料，複製人可加到他們的<link=\"FOOD\">食物</link>中，可提升<link=\"MORALE\">士氣</link>。\n\n複製人在<link=\"DININGTABLE\">單人餐桌</link>用餐時會使用精製糖。\n\n<b>精選最好的顆粒。</b>"
 
 #. STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.REFINED_SUGAR.NAME
 msgctxt "STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.REFINED_SUGAR.NAME"
@@ -58678,7 +58678,7 @@ msgstr "<link=\"ADVANCEDCURE\">血清瓶</link>"
 #. STRINGS.ITEMS.PILLS.ADVANCEDCURE.RECIPEDESC
 msgctxt "STRINGS.ITEMS.PILLS.ADVANCEDCURE.RECIPEDESC"
 msgid "An extremely powerful medication created to treat severe <link=\"DISEASE\">Diseases</link>. <link=\"ADVANCEDCURE\">Serum Vial</link> is very effective against <link=\"ZOMBIESPORES\">Zombie Spores</link>.\n\nMust be administered by a Duplicant with the <link=\"MEDICINE3\">Advanced Medical Care</link> Skill."
-msgstr "一種極其強效的藥物，用於治療嚴重的<link=\"DISEASE\">疾病</link>。\n\n血清瓶用來治療<link=\"ZOMBIESPORES\">殭屍病毒</link>非常有效。\n\n複製人必須有<link=\"MEDICINE3\">進階醫療照顧</link>技能才能製作。"
+msgstr "一種極其強效的藥物，用於治療嚴重的<link=\"DISEASE\">疾病</link>。<link=\"ADVANCEDCURE\">血清瓶</link>用來治療<link=\"ZOMBIESPORES\">殭屍病毒</link>非常有效。\n\n複製人必須有<link=\"MEDICINE3\">進階醫療照顧</link>技能才能製作。"
 
 #. STRINGS.ITEMS.PILLS.ANTIHISTAMINE.DESC
 msgctxt "STRINGS.ITEMS.PILLS.ANTIHISTAMINE.DESC"
@@ -60148,7 +60148,7 @@ msgstr "沒有太空存放櫃可用，有一件太空衣被丟在地上"
 #. STRINGS.MISC.NOTIFICATIONS.SUITS.MESSAGEBODY
 msgctxt "STRINGS.MISC.NOTIFICATIONS.SUITS.MESSAGEBODY"
 msgid "<link=\"ATMOSUIT\">Atmo Suits</link> can be equipped to protect my Duplicants from environmental hazards like extreme <link=\"HEAT\">Heat</link>, airborne <link=\"DISEASE\">Germs</link>, or unbreathable <link=\"ELEMENTSGAS\">Gas</link>. In order to utilize these suits, I'll need to hook up an <link=\"SUITLOCKER\">Atmo Suit Dock</link> to an <link=\"SUITMARKER\">Atmo Suit Checkpoint</link> , then store one of the suits inside.\n\nDuplicants will equip a suit when they walk past the checkpoint in the chosen direction, and will unequip their suit when walking back the opposite way."
-msgstr "<link=\"ATMOSUIT\">太空衣</link>可保護複製人免於環境危害的影響，像是<link=\"HEAT\">高溫</link>、空氣傳播的<link=\"DISEASE\">病菌</link>與不能呼吸的<link=\"ELEMENTSGAS\">氣體</link>。\n\n為了使用太空衣，需要將它們存放在太空衣存放櫃，並且將存放櫃跟太空衣檢查點連結在一起。\n\n複製人在通過檢查點時會穿上太空衣，而在返回時會脫下太空衣。"
+msgstr "<link=\"ATMOSUIT\">太空衣</link>可裝備起來，以保護複製人免受環境危害的影響，例如極端<link=\"HEAT\">高溫</link>、空氣傳播的<link=\"DISEASE\">病菌</link>或不可呼吸的<link=\"ELEMENTSGAS\">氣體</link>。\n\n為了使用這些服裝，需要將一個<link=\"SUITLOCKER\">太空衣存放櫃</link>連接到一個<link=\"SUITMARKER\">太空衣檢查點</link>，然後將一件服裝存放在存放櫃中。\n\n複製人以選定的方向通過檢查點時會穿上服裝，並以相反的方向返回時會脫下服裝。"
 
 #. STRINGS.MISC.NOTIFICATIONS.SUITS.NAME
 msgctxt "STRINGS.MISC.NOTIFICATIONS.SUITS.NAME"
@@ -61203,7 +61203,7 @@ msgstr "煤炭"
 #. STRINGS.MISC.TAGS.COMBUSTIBLEGAS
 msgctxt "STRINGS.MISC.TAGS.COMBUSTIBLEGAS"
 msgid "<link=\"COMBUSTIBLEGAS\">Combustible Gas</link>"
-msgstr "氣體燃料"
+msgstr "<link=\"COMBUSTIBLEGAS\">氣體燃料</link>"
 
 #. STRINGS.MISC.TAGS.COMBUSTIBLEGAS_DESC
 msgctxt "STRINGS.MISC.TAGS.COMBUSTIBLEGAS_DESC"
@@ -61223,7 +61223,7 @@ msgstr "可燃液體是能夠用來作為燃料產生能源的液體，例如用
 #. STRINGS.MISC.TAGS.COMBUSTIBLESOLID
 msgctxt "STRINGS.MISC.TAGS.COMBUSTIBLESOLID"
 msgid "<link=\"COMBUSTIBLESOLID\">Combustible Solid</link>"
-msgstr "固體燃料"
+msgstr "<link=\"COMBUSTIBLESOLID\">固體燃料</link>"
 
 #. STRINGS.MISC.TAGS.COMBUSTIBLESOLID_DESC
 msgctxt "STRINGS.MISC.TAGS.COMBUSTIBLESOLID_DESC"
@@ -67513,12 +67513,12 @@ msgstr "- 士氣加成"
 #. STRINGS.ROOMS.TYPES.LATRINE.NAME
 msgctxt "STRINGS.ROOMS.TYPES.LATRINE.NAME"
 msgid "Latrine"
-msgstr "浴室"
+msgstr "廁間"
 
 #. STRINGS.ROOMS.TYPES.LATRINE.TOOLTIP
 msgctxt "STRINGS.ROOMS.TYPES.LATRINE.TOOLTIP"
 msgid "Using a toilet in an enclosed room will improve Duplicants' Morale"
-msgstr "在一個完整的房間內使用廁所會提升複製人的士氣"
+msgstr "在一個完整的房間內使用廁間會提升複製人的士氣"
 
 #. STRINGS.ROOMS.TYPES.MACHINE_SHOP.DESCRIPTION
 msgctxt "STRINGS.ROOMS.TYPES.MACHINE_SHOP.DESCRIPTION"
@@ -67683,7 +67683,7 @@ msgstr "建在發電廠中的重型發電機，可以用電力控制站的微晶
 #. STRINGS.ROOMS.TYPES.PRIVATE_BATHROOM.DESCRIPTION
 msgctxt "STRINGS.ROOMS.TYPES.PRIVATE_BATHROOM.DESCRIPTION"
 msgid "Finally, a place to truly be alone with one's thoughts.\n\nDuplicants relieve even more Stress when using the toilet in a Private Bathroom than in a Latrine."
-msgstr "終於，一個真正能讓人單獨思考的地方。\n\n複製人在私人廁所內比在公共廁所更能釋放壓力。"
+msgstr "終於，一個真正能讓人單獨思考的地方。\n\n複製人在私人廁所內比在廁間更能釋放壓力。"
 
 #. STRINGS.ROOMS.TYPES.PRIVATE_BATHROOM.EFFECT
 msgctxt "STRINGS.ROOMS.TYPES.PRIVATE_BATHROOM.EFFECT"
@@ -67698,7 +67698,7 @@ msgstr "私人浴室"
 #. STRINGS.ROOMS.TYPES.PRIVATE_BATHROOM.TOOLTIP
 msgctxt "STRINGS.ROOMS.TYPES.PRIVATE_BATHROOM.TOOLTIP"
 msgid "Duplicants relieve even more stress when using the toilet in a Private Bathroom than in a Latrine"
-msgstr "在私人浴室內使用廁所時，複製人會比在洗手間中減輕更多壓力"
+msgstr "在私人浴室內使用廁所時，複製人會比在廁間中減輕更多壓力"
 
 #. STRINGS.ROOMS.TYPES.PRIVATE_BEDROOM.DESCRIPTION
 msgctxt "STRINGS.ROOMS.TYPES.PRIVATE_BEDROOM.DESCRIPTION"
@@ -67908,7 +67908,7 @@ msgstr "磚塊"
 #. STRINGS.SEARCH_TERMS.TOILET
 msgctxt "STRINGS.SEARCH_TERMS.TOILET"
 msgid "Toilet, Lavatory"
-msgstr "廁所, 浴室"
+msgstr "廁所, 廁間"
 
 #. STRINGS.SEARCH_TERMS.TRANSPORT
 msgctxt "STRINGS.SEARCH_TERMS.TRANSPORT"
@@ -68083,7 +68083,7 @@ msgstr "森林生態"
 #. STRINGS.SUBWORLDS.FOREST.UTILITY
 msgctxt "STRINGS.SUBWORLDS.FOREST.UTILITY"
 msgid "Small pockets of <link=\"OXYROCK\">Oxylite</link> and <link=\"WATER\">Water</link> are present in the Forest Biome, but calculations reveal they will only sustain the colony for a limited time.\n\nAnalysis shows two native plants which should be prioritized for cultivation: The <link=\"OXYFERN\">Oxyfern</link>, which releases <link=\"OXYGEN\">Oxygen</link> but requires <link=\"WATER\">Water</link>; and the <link=\"FORESTTREE\">Arbor Tree</link> which provides <link=\"WOOD\">Wood</link> as a fuel source.\n\nA symbiotic relationship exists with the <link=\"FORESTTREE\">Arbor Tree</link> and the native <link=\"SQUIRRELSPECIES\">Pips</link> which appear to be the only critter that can find the elusive <link=\"PLANTS\">Arbor Acorns</link>.\n\nThis biome is really quite beautiful. I've noted that <link=\"LIGHTBUGSPECIES\">Shine Bugs</link> and <link=\"LEAFYPLANT\">Mirth Leaf</link> both evoke feelings of serenity in my Duplicants."
-msgstr "這個森林生態系中存在一些<link=\"OXYROCK\">氧石</link>與<link=\"WATER\">水</link>，但計算顯示只能維持殖民地運作一小段時間。\n\n分析顯示應該優先種植兩種原生植物：<link=\"OXYFERN\">氧氣蕨</link>，會釋放<link=\"OXYGEN\">氧氣</link>但需要<link=\"WATER\">水</link>；而<link=\"FORESTTREE\">喬木樹</link>可提供木材作為燃料來源。\n\n<link=\"FORESTTREE\">喬木樹</link>與原生的<link=\"SQUIRRELSPECIES\">樹鼠</link>存在著共生關係，它似乎是唯一可以找到難以捉摸的<link=\"PLANTS\">喬木橡實</link>的動物。\n\n這裡的生態系相當漂亮。我注意到<link=\"LIGHTBUGSPECIES\">發光蟲</link>與<link=\"LEAFYPLANT\">合歡葉</link>都帶給了複製人寧靜的感覺。"
+msgstr "這個森林生態系中存在一些<link=\"OXYROCK\">氧石</link>與<link=\"WATER\">水</link>，但計算顯示只能維持殖民地運作一小段時間。\n\n分析顯示應該優先種植兩種原生植物：<link=\"OXYFERN\">氧氣蕨</link>，會釋放<link=\"OXYGEN\">氧氣</link>但需要<link=\"WATER\">水</link>；而<link=\"FORESTTREE\">喬木樹</link>可提供<link=\"WOOD\">木材</link>作為燃料來源。\n\n<link=\"FORESTTREE\">喬木樹</link>與原生的<link=\"SQUIRRELSPECIES\">樹鼠</link>存在著共生關係，它似乎是唯一可以找到難以捉摸的<link=\"PLANTS\">喬木橡實</link>的動物。\n\n這裡的生態系相當漂亮。我注意到<link=\"LIGHTBUGSPECIES\">發光蟲</link>與<link=\"LEAFYPLANT\">合歡葉</link>都帶給了複製人寧靜的感覺。"
 
 #. STRINGS.SUBWORLDS.FROZEN.DESC
 msgctxt "STRINGS.SUBWORLDS.FROZEN.DESC"
@@ -68113,7 +68113,7 @@ msgstr "花園生態"
 #. STRINGS.SUBWORLDS.GARDEN.UTILITY
 msgctxt "STRINGS.SUBWORLDS.GARDEN.UTILITY"
 msgid "This biome is home to <link=\"STEGOSPECIES\">Lumbs</link>, which assist in harvesting edible plants, and pollinator <link=\"BUTTERFLYSPECIES\">Mimikas</link> which boost plant growth speeds.\n\n<link=\"POWER\">Power</link> systems built in this biome will benefit from <link=\"NICKELORE\">Nickel Ore</link> and <link=\"PEAT\">Peat</link> deposits, and with plenty of <link=\"SHALE\">Shale</link> available, there is no lack of construction materials.\n\nColonists can rely on <link=\"GARDENFORAGEPLANTPLANTED\">Snactus</link> plants for life-sustaining calories in their early days. <link=\"VINEMOTHER\">Ovagro Nodes</link> become efficient <link=\"FOOD\">Food</link> crops when permitted to grow to their full extent, as their <link=\"WATER\">Water</link> requirements do not increase with the number of <link=\"VINEFRUIT\">Ovagro Fig</link>-bearing vines.\n\nNew colonies should be able to survive here with relative ease."
-msgstr "這種生態對以農場為中心的殖民地特別有益。<link=\"STEGOSPECIES\">豐足劍龍</link>能夠幫助收穫可食用植物，同時<link=\"BUTTERFLYSPECIES\">擬葉蛾</link>可加速植物生長。\n\n在這種生態中<link=\"POWER\">電力</link>系統可以用<link=\"NICKELORE\">鎳礦</link>建造，並且有大量的<link=\"SHALE\">頁岩</link>可用，所以並不缺乏建造材料。\n\n殖民地早期可以依靠<link=\"GARDENFORAGEPLANTPLANTED\">食仙掌</link>維持生存。<link=\"VINEMOTHER\">蔓殖母藤</link>在充分生長後會是一種高效的<link=\"FOOD\">食物</link>作物，因為結出<link=\"VINEFRUIT\">蔓殖燈籠果</link>的藤蔓數量變多並不會提高其對<link=\"WATER\">水</link>的需求。\n\n在此地建造新殖民地應當能相對容易地生存。"
+msgstr "這種生態區是<link=\"STEGOSPECIES\">豐足劍龍</link>的家園，它能夠幫助收穫可食用植物，同時傳粉者<link=\"BUTTERFLYSPECIES\">擬葉蛾</link>可加速植物生長。\n\n在這個生態區建造的<link=\"POWER\">電力</link>系統將受益於<link=\"NICKELORE\">鎳礦</link>與<link=\"PEAT\">泥炭</link>礦床，且因有大量的<link=\"SHALE\">頁岩</link>可用，建造材料並不缺乏。\n\n殖民者在早期可以依靠<link=\"GARDENFORAGEPLANTPLANTED\">食仙掌</link>植物維持生存所需的熱量。<link=\"VINEMOTHER\">蔓殖母藤</link>在充分生長後會是一種高效的<link=\"FOOD\">食物</link>作物，因為結出<link=\"VINEFRUIT\">蔓殖燈籠果</link>的藤蔓數量並不會提高其對<link=\"WATER\">水</link>的需求。\n\n在此地建造新殖民地應當能相對容易地生存。"
 
 #. STRINGS.SUBWORLDS.ICECAVES.DESC
 msgctxt "STRINGS.SUBWORLDS.ICECAVES.DESC"
@@ -68223,7 +68223,7 @@ msgstr "<link=\"NIOBIUM\">鈮</link>本身並不是特別有用的資源，但�
 #. STRINGS.SUBWORLDS.OCEAN.DESC
 msgctxt "STRINGS.SUBWORLDS.OCEAN.DESC"
 msgid "<link=\"SAND\">Sand</link>, <link=\"SALT\">Salt</link> and <link=\"BLEACHSTONE\">Bleachstone</link> abound in this unique <link=\"BRINE\">briny</link> biome."
-msgstr "這種生態系中到處都是<link=\"SAND\">沙子</link>、<link=\"SALT\">鹽</link>和<link=\"BLEACHSTONE\">漂白石</link>。"
+msgstr "這種獨特的<link=\"BRINE\">鹽水</link>生態系中，<link=\"SAND\">沙子</link>、<link=\"SALT\">鹽</link>和<link=\"BLEACHSTONE\">漂白石</link>到處都是。"
 
 #. STRINGS.SUBWORLDS.OCEAN.NAME
 msgctxt "STRINGS.SUBWORLDS.OCEAN.NAME"
@@ -68233,7 +68233,7 @@ msgstr "海洋生態"
 #. STRINGS.SUBWORLDS.OCEAN.UTILITY
 msgctxt "STRINGS.SUBWORLDS.OCEAN.UTILITY"
 msgid "<link=\"CRABSPECIES\">Pokeshell</link> molt is an excellent source of <link=\"LIME\">Lime</link> but much care must be taken with domesticating this species as it can get aggressive around its eggs.\n\nHarvesting <link=\"SEALETTUCE\">Waterweed</link> provides <link=\"LETTUCE\">Lettuce</link> for many higher-tier <link=\"FOOD\">foods</link>.\n\nAny <link=\"WATER\">Water</link> will need to be filtered through a <link=\"DESALINATOR\">Desalinator</link> to remove the <link=\"SALT\">Salt</link> in order to make it useful for my Duplicants. Luckily <link=\"SALT\">Table Salt</link> can be produced using a <link=\"ROCKCRUSHER\">Rock Crusher</link> which, when combined with a <link=\"DININGTABLE\">Mess Table</link>, gives my Duplicants a <link=\"MORALE\">Morale</link> boost."
-msgstr "<link=\"CRABSPECIES\">拋殼蟹</link>殼是<link=\"LIME\">石灰</link>極佳的來源，但馴化這個物種必須格外小心，因為牠們在蛋的附近會變得有侵略性。\n\n收成<link=\"SEALETTUCE\">水草</link>提供<link=\"LETTUCE\">生菜</link>用來製作許多高級的<link=\"FOOD\">食物</link>。\n\n任何<link=\"WATER\">水</link>都需要經過<link=\"DESALINATOR\">海水淡化機</link>去除<link=\"SALT\">鹽</link>才能供給複製人使用。\n幸運的是可以使用<link=\"ROCKCRUSHER\">碎石機</link>生產<link=\"SALT\">食鹽</link>，當與<link=\"DININGTABLE\">餐桌</link>結合使用，會給予複製人士氣加成。"
+msgstr "<link=\"CRABSPECIES\">拋殼蟹</link>蛻下的殼是<link=\"LIME\">石灰</link>極佳的來源，但馴化這個物種必須格外小心，因為牠們在蛋的附近會變得有侵略性。\n\n收成<link=\"SEALETTUCE\">水草</link>提供<link=\"LETTUCE\">生菜</link>用來製作許多高級的<link=\"FOOD\">食物</link>。\n\n任何<link=\"WATER\">水</link>都需要經過<link=\"DESALINATOR\">海水淡化機</link>去除<link=\"SALT\">鹽</link>才能供給複製人使用。\n幸運的是可以使用<link=\"ROCKCRUSHER\">碎石機</link>生產<link=\"SALT\">食鹽</link>，當與<link=\"DININGTABLE\">單人餐桌</link>結合使用，會給予複製人<link=\"MORALE\">士氣</link>加成。"
 
 #. STRINGS.SUBWORLDS.OIL.DESC
 msgctxt "STRINGS.SUBWORLDS.OIL.DESC"
@@ -68248,7 +68248,7 @@ msgstr "原油生態"
 #. STRINGS.SUBWORLDS.OIL.UTILITY
 msgctxt "STRINGS.SUBWORLDS.OIL.UTILITY"
 msgid "Though <link=\"OXYGEN\">Oxygen</link> is more scarce in this biome, it's the perfect place to cultivate flora and fauna that thrive in CO2, such as <link=\"OILFLOATERSPECIES\">Slicksters</link>. These critters can be domesticated as a renewable source of <link=\"CRUDEOIL\">Crude Oil</link>.\n\n<link=\"DIAMOND\">Diamond</link> deposits can occasionally be found in the Oily biome, which will require a Duplicant with the <link=\"MINING3\">Super-Duperhard Digging</link> skill to explore properly.\n\n<link=\"EVILFLOWER\">Sporechids</link> are beautiful, but should only be approached if a Duplicant is properly <link=\"EQUIPMENT\">equipped</link>.\n\nWhile the dangers of this biome should not be underestimated, the benefits <link=\"CRUDEOIL\">Crude Oil</link> and <link=\"PETROLEUM\">Petroleum</link> will bring to my colony far outweigh the risks."
-msgstr "雖然<link=\"OXYGEN\">氧氣</link>在這種生態系中相當稀少，但它是培育可在二氧化碳中繁衍的植物群與動物群的完美地點，像是馴服<link=\"OILFLOATERSPECIES\">小油怪</link>可以製造再生的原油。\n\n<link=\"DIAMOND\">鑽石</link>有時可以在原油生態系中發現，複製人需要有<link=\"SENIORMINER\">極硬物挖掘</link>技能才能探索。\n\n<link=\"EVILFLOWER\">惡魔花</link>很漂亮，但複製人只能在有合適<link=\"EQUIPMENT\">裝備</link>的情況下才能接觸。\n\n僅管不該低估這種生態系的危險，但<link=\"CRUDEOIL\">原油</link>與<link=\"PETROLEUM\">石油</link>帶給殖民地的好處遠大於風險。"
+msgstr "儘管<link=\"OXYGEN\">氧氣</link>在這個生態系中相當稀少，但它是培育在二氧化碳中茁壯成長的動植物群的完美地點，例如<link=\"OILFLOATERSPECIES\">小油怪</link>可以被馴化為可再生的<link=\"CRUDEOIL\">原油</link>來源。\n\n<link=\"DIAMOND\">鑽石</link>礦床偶爾可以在原油生態系中發現，需要複製人具備<link=\"MINING3\">極硬物挖掘</link>技能才能妥善勘探。\n\n<link=\"EVILFLOWER\">惡魔花</link>很漂亮，但複製人只能在有合適<link=\"EQUIPMENT\">裝備</link>的情況下才能接觸。\n\n儘管不該低估這個生態系的危險，但<link=\"CRUDEOIL\">原油</link>與<link=\"PETROLEUM\">石油</link>帶給殖民地的好處遠大於風險。"
 
 #. STRINGS.SUBWORLDS.RADIOACTIVE.DESC
 msgctxt "STRINGS.SUBWORLDS.RADIOACTIVE.DESC"
@@ -68263,7 +68263,7 @@ msgstr "輻射生態"
 #. STRINGS.SUBWORLDS.RADIOACTIVE.UTILITY
 msgctxt "STRINGS.SUBWORLDS.RADIOACTIVE.UTILITY"
 msgid "<link=\"LEADSUIT\">Lead Suits</link> are imperative if my Duplicants are going to start exploring this biome as <link=\"RADIATIONSICKNESS\">Radioactive Contaminants</link> are a constant danger here.\n\n<link=\"BEE\">Beetas</link> pose a double threat as they are both highly radioactive and very aggressive. If they can be subdued, <link=\"BEEHIVE\">Beeta Hives</link> provide a great service turning <link=\"URANIUMORE\">Uranium Ore</link> into <link=\"ENRICHEDURANIUM\">Enriched Uranium</link>.\n\nWhile the Radioactive Biome, and the Beetas contained within it, should be avoided at all costs if my Duplicants do not have the correct protection, my colony will need to trek into this dangerous biome if we are going to build any higher-tier nuclear technologies."
-msgstr "如果複製人要開始探索這種生態系，<link=\"LEADSUIT\">輻射防護衣</link>是必要的，<link=\"RADIATIONSICKNESS\">輻射汙染</link>一直是危險的。\n\n<link=\"BEE\">輻射蜂</link>有雙重的危脅，因為同時具有高輻射與攻擊性。如果你能馴化牠們，可以提供將<link=\"URANIUMORE\">鈾礦</link>轉變成<link=\"ENRICHEDURANIUM\">濃縮鈾</link>的出色的服務。\n\n複製人在沒有足夠的防護的情況下，應該不惜一切代價避免進入含有輻射與輻射蜂的生態系。不過如果殖民地想要建造任何更高級的核能科技，將需要進入這種危險的生態系。"
+msgstr "如果複製人要開始探索這個生態區，<link=\"LEADSUIT\">輻射防護衣</link>是必要的，因為<link=\"RADIATIONSICKNESS\">放射性汙染物</link>在此地是一個持續的危險。\n\n<link=\"BEE\">輻射蜂</link>構成雙重威脅，因為牠們不僅具有高放射性，而且非常具攻擊性。如果能將其制服，<link=\"BEEHIVE\">輻射蜂巢</link>就能提供將<link=\"URANIUMORE\">鈾礦</link>轉化為<link=\"ENRICHEDURANIUM\">濃縮鈾</link>的出色服務。\n\n儘管在複製人沒有適當防護的情況下，應不惜一切代價避免進入此放射性生態區及其內含的輻射蜂；但若要建造任何更高級的核能科技，殖民地仍需要涉足這個危險的生態區。"
 
 #. STRINGS.SUBWORLDS.RAPTOR.DESC
 msgctxt "STRINGS.SUBWORLDS.RAPTOR.DESC"
@@ -68308,7 +68308,7 @@ msgstr "鐵鏽生態"
 #. STRINGS.SUBWORLDS.RUST.UTILITY
 msgctxt "STRINGS.SUBWORLDS.RUST.UTILITY"
 msgid "When combined with the <link=\"RUSTDEOXIDIZER\">Rust Deoxidizer</link>, <link=\"RUST\">Rust</link> can produce many of a colony's basic needs.\n\nThe <link=\"PUFTBLEACHSTONE\">Squeaky Puft</link>, a frequent resident of the Rust biome, is a renewable source of <link=\"BLEACHSTONE\">Bleachstone</link> and can be domesticated for such purposes.\n\n<link=\"DRECKOS\">Dreckos</link> can also sometimes be found in these biomes, which are a great source of <link=\"PHOSPHORITE\">Phosphorite</link> and fibre for making <link=\"CLOTHING\">Textile Production</link>.\n\nTwo plants found in this biome, the <link=\"BEANPLANTSEED\">Nosh Bean</link> and the <link=\"SALTPLANT\">Dasha Saltvine</link>, can both produce food that will add significant <link=\"MORALE\">Morale</link> value for my Duplicants."
-msgstr "<link=\"RUSTDEOXIDIZER\">鐵鏽脫氧機</link>、<link=\"RUST\">鐵鏽</link>組合使用可以生產許多殖民地的基地需求物品。\n\n<link=\"PUFTBLEACHSTONE\">氯氣帕夫</link>為鐵鏽生態的常住居民，是<link=\"BLEACHSTONE\">漂白石</link>的再生來源，可以此為目的進行馴化。\n\n<link=\"DRECKOS\">龍鱗蜥</link>有時也可在這種生態系中發現，是<link=\"PHOSPHORITE\">磷礦</link>與<link=\"CLOTHING\">紡織品</link>纖維的良好來源\n\n在這種生態系發現兩種植物：<link=\"BEANPLANTSEED\">小吃豆</link>與<link=\"SALTPLANT\">沙鹽藤</link>都可以用來製作食物，大大提升複製人的士氣。"
+msgstr "<link=\"RUST\">鐵鏽</link>與<link=\"RUSTDEOXIDIZER\">鐵鏽脫氧機</link>組合使用時，可以生產殖民地的許多基本需求物品。\n\n<link=\"PUFTBLEACHSTONE\">氯氣帕夫</link>為鐵鏽生態的常住居民，是<link=\"BLEACHSTONE\">漂白石</link>的再生來源，可以此為目的進行馴化。\n\n<link=\"DRECKOS\">龍鱗蜥</link>有時也可在這種生態系中發現，是<link=\"PHOSPHORITE\">磷礦</link>和用於<link=\"CLOTHING\">紡織品生產</link>的纖維的良好來源。\n\n在這個生態區發現兩種植物：<link=\"BEANPLANTSEED\">小吃豆</link>與<link=\"SALTPLANT\">沙鹽藤</link>，它們都能生產食物，為複製人增加顯著的<link=\"MORALE\">士氣</link>價值。"
 
 #. STRINGS.SUBWORLDS.SANDSTONE.DESC
 msgctxt "STRINGS.SUBWORLDS.SANDSTONE.DESC"
@@ -68323,7 +68323,7 @@ msgstr "沙岩生態"
 #. STRINGS.SUBWORLDS.SANDSTONE.UTILITY
 msgctxt "STRINGS.SUBWORLDS.SANDSTONE.UTILITY"
 msgid "<link=\"OXYROCK\">Oxylite</link> and <link=\"BASICFORAGEPLANTPLANTED\">Buried Muckroot</link> are in sufficient supply to sustain your colony while you gather more resources.\n\n<link=\"DIRT\">Dirt</link>, <link=\"ALGAE\">Algae</link>, <link=\"COPPER\">Copper</link> and, of course, <link=\"SANDSTONE\">Sandstone</link> provide all the materials to get basic colony essentials built.\n\nRandom <link=\"LIGHTBUGSPECIES\">Shine Bugs</link> provide <link=\"MORALE\">Morale</link> boosts for my Duplicants but are not a reliable light source.\n\n<link=\"HATCHSPECIES\">Hatches</link> can be domesticated for food or <link=\"CARBON\">Coal</link>, which will be useful if using a <link=\"GENERATOR\">Coal Generator</link> for power.\n\nAll in all, this biome is the perfect starting spot for my colony to establish a base full of essentials, from which they can then venture out and explore."
-msgstr "當你在收集更多資源時，<link=\"OXYROCK\">氧石</link>與<link=\"BASICFORAGEPLANTPLANTED\">塊根</link>足夠供應殖民地所需。\n\n<link=\"DIRT\">泥土</link>、<link=\"ALGAE\">藻類</link>、<link=\"COPPER\">銅礦</link>當然還有<link=\"SANDSTONE\">沙岩</link>提供建立基本的殖民地的所有材料。\n\n<link=\"LIGHTBUGSPECIES\">發光蟲</link>提供複製人士氣加成，但不是可靠的光源。\n\n<link=\"HATCHSPECIES\">哈奇</link>可以馴服作為食物，或生產<link=\"CARBON\">煤炭</link>用於<link=\"GENERATOR\">燃煤發電機</link>發電。\n\n總之這種生態系是一個建立穩定殖民地的完全地點，然後他們可以外出探索。"
+msgstr "<link=\"OXYROCK\">氧石</link>與<link=\"BASICFORAGEPLANTPLANTED\">埋住的塊根</link>供應充足，可在你收集更多資源時維持殖民地所需。\n\n<link=\"DIRT\">泥土</link>、<link=\"ALGAE\">藻類</link>、<link=\"COPPER\">銅</link>，當然還有<link=\"SANDSTONE\">沙岩</link>，提供了建造殖民地所有基本必需品的材料。\n\n隨機出現的<link=\"LIGHTBUGSPECIES\">發光蟲</link>為複製人提供<link=\"MORALE\">士氣</link>加成，但不是可靠的光源。\n\n<link=\"HATCHSPECIES\">哈奇</link>可以馴服作為食物，或生產<link=\"CARBON\">煤炭</link>，這對使用<link=\"GENERATOR\">燃煤發電機</link>供電很有用。\n\n總而言之，這個生態區是一個建立充滿必需品的基地的完美起點，複製人可以從此處出發，冒險探索。"
 
 #. STRINGS.SUBWORLDS.SPACE.DESC
 msgctxt "STRINGS.SUBWORLDS.SPACE.DESC"
@@ -69838,7 +69838,7 @@ msgstr "每 <b>{Time}</b>可修剪這隻小動物，產生 <style=\"produced\">{
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SCALE_GROWTH_FED
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SCALE_GROWTH_FED"
 msgid "This critter can be sheared every <b>{Time}</b> to produce <b>{Amount}</b> of <style=\"KKeyword\">{Item}</style>\n\nIt must be well fed to grow shearable <style=\"KKeyword\">{Item}</style>"
-msgstr "每 <b>{Time}</b>可修剪這隻小動物，產生 <style=\"produced\">{Amount}</style><style=\"KKeyword\">{Item}</style>\n\n牠必須吃得飽才能重新長回被剃掉的<style=\"KKeyword\">{Item}</style>"
+msgstr "每 <b>{Time}</b>可修剪這隻小動物，產生 <b>{Amount}</b> <style=\"KKeyword\">{Item}</style>\n\n牠必須吃得飽才能重新長回被剃掉的<style=\"KKeyword\">{Item}</style>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SCALE_GROWTH_TEMP
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SCALE_GROWTH_TEMP"
@@ -74518,7 +74518,7 @@ msgstr "生態混合會修改星圖上多個的小行星將包含哪些生物群
 #. STRINGS.UI.FRONTEND.COLONYDESTINATIONSCREEN.MIXING_WARNING
 msgctxt "STRINGS.UI.FRONTEND.COLONYDESTINATIONSCREEN.MIXING_WARNING"
 msgid "Choose additional content to remix into the game. Scrambling realities may cause cosmic collapse."
-msgstr "選擇額外內容融入遊戲。混搭的現實可能會導致宇宙的崩塌。"
+msgstr "選擇額外內容融入遊戲。混搭多個現實可能會導致宇宙的崩塌。"
 
 #. STRINGS.UI.FRONTEND.COLONYDESTINATIONSCREEN.MIXING_WORLDMIXING_HEADER
 msgctxt "STRINGS.UI.FRONTEND.COLONYDESTINATIONSCREEN.MIXING_WORLDMIXING_HEADER"
@@ -74543,7 +74543,7 @@ msgstr "隨機"
 #. STRINGS.UI.FRONTEND.COLONYDESTINATIONSCREEN.SHUFFLE_STORY_TRAITS_TOOLTIP
 msgctxt "STRINGS.UI.FRONTEND.COLONYDESTINATIONSCREEN.SHUFFLE_STORY_TRAITS_TOOLTIP"
 msgid "Randomize Story Traits\n\nThis will select a comfortable number of story traits for the starting asteroid"
-msgstr "隨機化故事特質\n\n這將自動為選擇的初始小行星套用合適數量的故事特質"
+msgstr "隨機化故事特質\n\n這將自動為起始小行星選擇合適數量的故事特質"
 
 #. STRINGS.UI.FRONTEND.COLONYDESTINATIONSCREEN.SHUFFLETOOLTIP
 msgctxt "STRINGS.UI.FRONTEND.COLONYDESTINATIONSCREEN.SHUFFLETOOLTIP"
@@ -76138,7 +76138,7 @@ msgstr "我們修改了存檔的結構！\n請(ClickType/click)下方的按鈕�
 #. STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_RESULT
 msgctxt "STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_RESULT"
 msgid "<style=\"KKeyword\">SUCCESS!</style>\nMigration moved <style=\"KKeyword\">{0}/{1}</style> saves and <style=\"KKeyword\">{2}/{3}</style> autosaves</style>."
-msgstr "<style=\"KKeyword\">成功！</style>\n已轉換 <style=\"KKeyword\">{0}/{1}</style> 存檔與 <style=\"KKeyword\">{2}/{3}</style> 自動存檔</style>。"
+msgstr "<style=\"KKeyword\">成功！</style>\n已轉換 <style=\"KKeyword\">{0}/{1}</style> 存檔與 <style=\"KKeyword\">{2}/{3}</style> 自動存檔。"
 
 #. STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_RESULT_FAILURES
 msgctxt "STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_RESULT_FAILURES"
@@ -78648,7 +78648,7 @@ msgstr "{Name} 的<style=\"KKeyword\">{Attribute}</style>技能："
 #. STRINGS.UI.JOBSSCREEN.NEW_MINION_ITEM_TOOLTIP
 msgctxt "STRINGS.UI.JOBSSCREEN.NEW_MINION_ITEM_TOOLTIP"
 msgid "The <style=\"KKeyword\">{Job}</style> Errand Type is automatically a {Priority} <style=\"KKeyword\">Priority</style> for <b>Arriving Duplicants</b>"
-msgstr "為<b>到職的複製人</b>自動將<style=\"KKeyword\">{Job}</style>任務類型的優先度調整為 {Priority}"
+msgstr "為<b>到職的複製人</b>自動將<style=\"KKeyword\">{Job}</style>任務類型的<style=\"KKeyword\">優先度</style>調整為 {Priority}"
 
 #. STRINGS.UI.JOBSSCREEN.OPTIONS
 msgctxt "STRINGS.UI.JOBSSCREEN.OPTIONS"
@@ -81383,7 +81383,7 @@ msgstr "協作內衣套裝"
 #. STRINGS.UI.OUTFITS.HIVIS.NAME
 msgctxt "STRINGS.UI.OUTFITS.HIVIS.NAME"
 msgid "Hi-Vis Outfit"
-msgstr "高能見度套裝"
+msgstr "高能見套裝"
 
 #. STRINGS.UI.OUTFITS.JELLYPUFF_BLUEBERRY.NAME
 msgctxt "STRINGS.UI.OUTFITS.JELLYPUFF_BLUEBERRY.NAME"
@@ -83963,7 +83963,7 @@ msgstr "<link=\"SHEARINGSTATION\">擠奶站</link>的使用"
 #. STRINGS.UI.ROLES_SCREEN.PERKS.CAN_USE_RANCH_STATION.DESCRIPTION
 msgctxt "STRINGS.UI.ROLES_SCREEN.PERKS.CAN_USE_RANCH_STATION.DESCRIPTION"
 msgid "<link=\"RANCHSTATION\">Grooming Station</link> Usage"
-msgstr "使用畜牧站"
+msgstr "使用<link=\"RANCHSTATION\">畜牧站</link>"
 
 #. STRINGS.UI.ROLES_SCREEN.PERKS.CAN_USE_ROCKETS.DESCRIPTION
 msgctxt "STRINGS.UI.ROLES_SCREEN.PERKS.CAN_USE_ROCKETS.DESCRIPTION"
@@ -87548,7 +87548,7 @@ msgstr "<style=\"KKeyword\">自動飛行員</style>有足夠的<style=\"KKeyword
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.ROBOT_PILOT_DATA_REQUIREMENTS.TOOLTIP.WARNING
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.ROBOT_PILOT_DATA_REQUIREMENTS.TOOLTIP.WARNING"
 msgid "<style=\"KKeyword\">Robo-Pilot</style> has insufficient <style=\"KKeyword\">Data Banks</style> for a roundtrip to its destination and back\n    • <style=\"KKeyword\">Data Banks</style>stored: {0}/{1}"
-msgstr "<style=\"KKeyword\">自動飛行員</style>往返目的地所需的<style=\"KKeyword\">資料磁片</style>不足\n    • {0} / {1} 已儲存"
+msgstr "<style=\"KKeyword\">自動飛行員</style>往返目的地所需的<style=\"KKeyword\">資料磁片</style>不足\n    • <style=\"KKeyword\">資料磁片</style> {0} / {1} 已儲存"
 
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.ROBOT_PILOT_DATA_REQUIREMENTS.TOOLTIP.WARNING_NO_DATA_BANKS_HUMAN_PILOT
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.ROBOT_PILOT_DATA_REQUIREMENTS.TOOLTIP.WARNING_NO_DATA_BANKS_HUMAN_PILOT"
@@ -91258,7 +91258,7 @@ msgstr "選取一個已分析的間歇泉來傳送放大資料。"
 #. STRINGS.UI.UISIDESCREENS.GEOTUNERSIDESCREEN.GEOTUNER_LIMIT_TOOLTIP
 msgctxt "STRINGS.UI.UISIDESCREENS.GEOTUNERSIDESCREEN.GEOTUNER_LIMIT_TOOLTIP"
 msgid "This geyser cannot be targeted by more <style=\"KKeyword\">Geotuners</style>"
-msgstr "這個間歇泉不能被更多的地理調諧儀調整。"
+msgstr "這個間歇泉不能被更多的<style=\"KKeyword\">地理調諧儀</style>調整。"
 
 #. STRINGS.UI.UISIDESCREENS.GEOTUNERSIDESCREEN.NOTHING
 msgctxt "STRINGS.UI.UISIDESCREENS.GEOTUNERSIDESCREEN.NOTHING"
@@ -95298,7 +95298,7 @@ msgstr "士氣"
 #. STRINGS.UI.VITALSSCREEN.QUALITYOFLIFE_EXPECTATIONS_TOOLTIP
 msgctxt "STRINGS.UI.VITALSSCREEN.QUALITYOFLIFE_EXPECTATIONS_TOOLTIP"
 msgid "This Duplicant requires <link=\"MORALE\">{0} Morale</link>.\n\nCurrent Morale:"
-msgstr "這名複製人需要 {0} 士氣值。\n\n目前士氣："
+msgstr "這名複製人需要<link=\"MORALE\"> {0} 士氣</link>。\n\n目前士氣："
 
 #. STRINGS.UI.VITALSSCREEN.SICKNESS
 msgctxt "STRINGS.UI.VITALSSCREEN.SICKNESS"
@@ -96073,7 +96073,7 @@ msgstr "大型冰川"
 #. STRINGS.WORLD_TRAITS.IRREGULAR_OIL.DESCRIPTION
 msgctxt "STRINGS.WORLD_TRAITS.IRREGULAR_OIL.DESCRIPTION"
 msgid "The <style=\"KKeyword\">Oil</style> on this asteroid is anything but regular!"
-msgstr "此小行星有原油，但不尋常！"
+msgstr "此小行星有<style=\"KKeyword\">原油</style>，但不尋常！"
 
 #. STRINGS.WORLD_TRAITS.IRREGULAR_OIL.NAME
 msgctxt "STRINGS.WORLD_TRAITS.IRREGULAR_OIL.NAME"
@@ -96653,7 +96653,7 @@ msgstr "冰霜行星"
 #. STRINGS.WORLDS.STRANGE_ASTEROID_KF23.DESCRIPTION
 msgctxt "STRINGS.WORLDS.STRANGE_ASTEROID_KF23.DESCRIPTION"
 msgid "A tilted world, at once strange and...strangely familiar. Its singular terrain is consistent across all universes.\n\nThis resistance to the fluidity of temporal shifts has the cosmos buzzing, as individual colonies compare notes on successes, failures and the bizarre redistribution of resources.\n\n<smallcaps>Released for Klei Fest 2023."
-msgstr "一顆傾斜的星球，既陌生…又有種奇怪的熟悉感。它奇異的地形在所有宇宙中都是一致的。\n\n這種對時間偏移流動性的抵抗使整個宇宙嗡嗡作響，產生了各個殖民地對於成功案例、失敗案例和稀奇古怪的資源重新分配方案的對比記錄。\n\n<smallcaps>為 2023 年科雷節釋出。"
+msgstr "一顆傾斜的星球，既陌生…又有種奇怪的熟悉感。它奇異的地形在所有宇宙中都是一致的。\n\n<smallcaps>這種對時間偏移流動性的抵抗使整個宇宙嗡嗡作響，產生了各個殖民地對於成功案例、失敗案例和稀奇古怪的資源重新分配方案的對比記錄。</smallcaps>\n\n為 2023 年科雷節釋出。"
 
 #. STRINGS.WORLDS.STRANGE_ASTEROID_KF23.NAME
 msgctxt "STRINGS.WORLDS.STRANGE_ASTEROID_KF23.NAME"
