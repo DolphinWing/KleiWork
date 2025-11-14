@@ -1418,16 +1418,6 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ICESCULPTURE_AMAZING_IDLE_WOOD_DEER.NAME"
 msgid "Glam Guardian"
 msgstr ""
 
-#. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_COSMIC.DESC
-msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_COSMIC.DESC"
-msgid "This color really pops against the endless abyss of life in space."
-msgstr ""
-
-#. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_COSMIC.NAME
-msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_COSMIC.NAME"
-msgid "Cosmic Jet Gloves"
-msgstr ""
-
 #. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_GLOOM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_GLOOM.DESC"
 msgid "Gray technical gloves for jet-setting Duplicants."
@@ -1436,16 +1426,6 @@ msgstr ""
 #. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_GLOOM.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_GLOOM.NAME"
 msgid "Gloom Jet Gloves"
-msgstr ""
-
-#. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_NOSHLEAF.DESC
-msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_NOSHLEAF.DESC"
-msgid "Green-blue technical gloves for jet-setting Duplicants."
-msgstr ""
-
-#. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_NOSHLEAF.NAME
-msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_NOSHLEAF.NAME"
-msgid "Noshleaf Jet Gloves"
 msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_OBELUS.DESC
@@ -1466,16 +1446,6 @@ msgstr ""
 #. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_ORANGE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_ORANGE.NAME"
 msgid "Cadmium Jet Gloves"
-msgstr ""
-
-#. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_REDCLAY.DESC
-msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_REDCLAY.DESC"
-msgid "These gloves were caught red-handed going over the speed limit."
-msgstr ""
-
-#. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_REDCLAY.NAME
-msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_REDCLAY.NAME"
-msgid "Clay Jet Gloves"
 msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_00_ATOMIC_GLOOM.DESC
@@ -46568,16 +46538,6 @@ msgctxt "STRINGS.DUPLICANTS.PERSONALITIES.RUBY.NAME"
 msgid "Ruby"
 msgstr ""
 
-#. STRINGS.DUPLICANTS.PERSONALITIES.SENA.DESC
-msgctxt "STRINGS.DUPLICANTS.PERSONALITIES.SENA.DESC"
-msgid "{0}s only care about three things: gold accents, true crime, and the advancement of nuclear physics."
-msgstr ""
-
-#. STRINGS.DUPLICANTS.PERSONALITIES.SENA.NAME
-msgctxt "STRINGS.DUPLICANTS.PERSONALITIES.SENA.NAME"
-msgid "Sena"
-msgstr ""
-
 #. STRINGS.DUPLICANTS.PERSONALITIES.SONYAR.DESC
 msgctxt "STRINGS.DUPLICANTS.PERSONALITIES.SONYAR.DESC"
 msgid "{0}s would sooner burn down the colony than read an instruction manual."
@@ -53456,16 +53416,6 @@ msgstr ""
 #. STRINGS.ELEMENTS.NUCLEARWASTE.NAME
 msgctxt "STRINGS.ELEMENTS.NUCLEARWASTE.NAME"
 msgid "<link=\"NUCLEARWASTE\">Liquid Nuclear Waste</link>"
-msgstr ""
-
-#. STRINGS.ELEMENTS.NUTRIENTSOUP.DESC
-msgctxt "STRINGS.ELEMENTS.NUTRIENTSOUP.DESC"
-msgid "A nutrient and enzyme-rich <link=\"ELEMENTSLIQUID\">Liquid</link> growth medium with a stable pH.\n\nIt's an essential ingredient for lab-crafted living organisms."
-msgstr ""
-
-#. STRINGS.ELEMENTS.NUTRIENTSOUP.NAME
-msgctxt "STRINGS.ELEMENTS.NUTRIENTSOUP.NAME"
-msgid "<link=\"NUTRIENTSOUP\">Cell Binder</link>"
 msgstr ""
 
 #. STRINGS.ELEMENTS.OBSIDIAN.DESC
@@ -82828,6 +82778,16 @@ msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.YAML"
 msgid "YAML"
 msgstr ""
 
+#. STRINGS.UI.KLEI_INVENTORY_SCREEN.TOOLTIP_DLC_FILTER
+msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.TOOLTIP_DLC_FILTER"
+msgid "{0}\n\nClick to filter displayed content by DLC Pack"
+msgstr ""
+
+#. STRINGS.UI.KLEI_INVENTORY_SCREEN.TOOLTIP_DLC_FILTER_ALL
+msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.TOOLTIP_DLC_FILTER_ALL"
+msgid "<b>Showing all content</b>"
+msgstr ""
+
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.TOOLTIP_VIEW_ALL_ITEMS
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.TOOLTIP_VIEW_ALL_ITEMS"
 msgid "Filter: Showing all items\n\n(ClickType/Click) to toggle"
@@ -90195,7 +90155,7 @@ msgstr ""
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ROCKYASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ROCKYASTEROIDFIELD.DESC"
-msgid "An asteroid field containing <link=\"CUPRITE\">Copper Ore</link>, <link=\"SEDIMENTARYROCK\">Sedimentary Rock</link> and <link=\"IGNEOUSROCK\">Igneous Rock</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
+msgid "An asteroid field containing <link=\"GRANITE\">Granite</link>, <link=\"KATAIRITE\">Abyssalite</link>, <link=\"SEDIMENTARYROCK\">Sedimentary Rock</link>, and <link=\"IGNEOUSROCK\">Igneous Rock</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
 msgstr ""
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ROCKYASTEROIDFIELD.NAME
@@ -97255,7 +97215,7 @@ msgstr ""
 
 #. STRINGS.UI.UISIDESCREENS.SUMMON_CREW_SIDESCREEN.SUMMON_CREW_BUTTON_LABEL
 msgctxt "STRINGS.UI.UISIDESCREENS.SUMMON_CREW_SIDESCREEN.SUMMON_CREW_BUTTON_LABEL"
-msgid "Set to Crew Only"
+msgid "Summon Crew"
 msgstr ""
 
 #. STRINGS.UI.UISIDESCREENS.SUMMON_CREW_SIDESCREEN.SUMMON_CREW_BUTTON_TOOLTIP

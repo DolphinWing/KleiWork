@@ -1420,16 +1420,6 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ICESCULPTURE_AMAZING_IDLE_WOOD_DEER.NAME"
 msgid "Glam Guardian"
 msgstr "華麗的守護者"
 
-#. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_COSMIC.DESC
-msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_COSMIC.DESC"
-msgid "This color really pops against the endless abyss of life in space."
-msgstr "在太空那無垠的黑暗之中，這顏色超跳！"
-
-#. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_COSMIC.NAME
-msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_COSMIC.NAME"
-msgid "Cosmic Jet Gloves"
-msgstr "宇宙噴射手套"
-
 #. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_GLOOM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_GLOOM.DESC"
 msgid "Gray technical gloves for jet-setting Duplicants."
@@ -1439,16 +1429,6 @@ msgstr "為那些愛噴射飛行的複製人準備的灰色技術手套。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_GLOOM.NAME"
 msgid "Gloom Jet Gloves"
 msgstr "幽暗噴射手套"
-
-#. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_NOSHLEAF.DESC
-msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_NOSHLEAF.DESC"
-msgid "Green-blue technical gloves for jet-setting Duplicants."
-msgstr "為那些愛噴射飛行的複製人準備的青綠色技術手套。"
-
-#. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_NOSHLEAF.NAME
-msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_NOSHLEAF.NAME"
-msgid "Noshleaf Jet Gloves"
-msgstr "小吃葉飛行手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_OBELUS.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_OBELUS.DESC"
@@ -1469,16 +1449,6 @@ msgstr "為那些愛噴射飛行的複製人準備的橘色技術手套。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_ORANGE.NAME"
 msgid "Cadmium Jet Gloves"
 msgstr "鎘噴射手套"
-
-#. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_REDCLAY.DESC
-msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_REDCLAY.DESC"
-msgid "These gloves were caught red-handed going over the speed limit."
-msgstr "這雙手套因為超速行駛，當場被抓個正著。"
-
-#. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_REDCLAY.NAME
-msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_REDCLAY.NAME"
-msgid "Clay Jet Gloves"
-msgstr "黏土噴射手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_00_ATOMIC_GLOOM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_00_ATOMIC_GLOOM.DESC"
@@ -37018,27 +36988,27 @@ msgstr "外部溫度\n\n這隻小動物所在的環境溫度是 {0}"
 #. STRINGS.CREATURES.STATUSITEMS.FALLING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.FALLING.NAME"
 msgid "Falling"
-msgstr "墜落"
+msgstr "墜落中"
 
 #. STRINGS.CREATURES.STATUSITEMS.FALLING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.FALLING.TOOLTIP"
 msgid "AHHHH!"
-msgstr "阿~~~~!"
+msgstr "啊~~~~！"
 
 #. STRINGS.CREATURES.STATUSITEMS.FLEEING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.FLEEING.NAME"
 msgid "Fleeing"
-msgstr "逃跑"
+msgstr "逃跑中"
 
 #. STRINGS.CREATURES.STATUSITEMS.FLEEING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.FLEEING.TOOLTIP"
 msgid "This critter is trying to escape\nGet'em!"
-msgstr "這隻小動物試圖逃跑\n抓住牠！"
+msgstr "這隻小動物正在試圖逃跑\n快抓住牠！"
 
 #. STRINGS.CREATURES.STATUSITEMS.FLOPPING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.FLOPPING.NAME"
 msgid "Flopping"
-msgstr "翻倒"
+msgstr "翻倒中"
 
 #. STRINGS.CREATURES.STATUSITEMS.FLOPPING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.FLOPPING.TOOLTIP"
@@ -37048,12 +37018,12 @@ msgstr "魚不在水中！"
 #. STRINGS.CREATURES.STATUSITEMS.FORAGINGMATERIAL.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.FORAGINGMATERIAL.NAME"
 msgid "Foraging for Materials"
-msgstr "覓食"
+msgstr "正在覓食材料"
 
 #. STRINGS.CREATURES.STATUSITEMS.FORAGINGMATERIAL.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.FORAGINGMATERIAL.TOOLTIP"
 msgid "This critter is stocking up on supplies for later use"
-msgstr "這隻小動物正在積存補給品供之後使用"
+msgstr "這隻小動物正在積存補給品，以供之後使用"
 
 #. STRINGS.CREATURES.STATUSITEMS.FRESH.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.FRESH.NAME"
@@ -37073,22 +37043,22 @@ msgstr "被擠乳"
 #. STRINGS.CREATURES.STATUSITEMS.GETTING_MILKED.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.GETTING_MILKED.TOOLTIP"
 msgid "This critter's going to be so relieved when they're done"
-msgstr "這隻小動物擠完乳後會如釋重負"
+msgstr "這隻小動物在擠乳完畢後會如釋重負"
 
 #. STRINGS.CREATURES.STATUSITEMS.GETTING_RANCHED.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.GETTING_RANCHED.NAME"
 msgid "Being Groomed"
-msgstr "正在梳理中"
+msgstr "被梳理"
 
 #. STRINGS.CREATURES.STATUSITEMS.GETTING_RANCHED.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.GETTING_RANCHED.TOOLTIP"
 msgid "This critter's going to look so good when they're done"
-msgstr "這隻小動物整理後看起來很棒"
+msgstr "這隻小動物在梳理完成後，看起來會非常棒"
 
 #. STRINGS.CREATURES.STATUSITEMS.GETTING_WRANGLED.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.GETTING_WRANGLED.NAME"
 msgid "Being Wrangled"
-msgstr "開始捕捉"
+msgstr "被捕捉"
 
 #. STRINGS.CREATURES.STATUSITEMS.GETTING_WRANGLED.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.GETTING_WRANGLED.TOOLTIP"
@@ -37158,12 +37128,12 @@ msgstr "下次收成：<b>{TimeUntilNextHarvest}</b>"
 #. STRINGS.CREATURES.STATUSITEMS.GROWINGUP.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.GROWINGUP.NAME"
 msgid "Maturing"
-msgstr "成熟"
+msgstr "成熟中"
 
 #. STRINGS.CREATURES.STATUSITEMS.GROWINGUP.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.GROWINGUP.TOOLTIP"
 msgid "This baby critter is about to reach adulthood"
-msgstr "這隻動物寶寶即將成年"
+msgstr "這隻小動物寶寶即將成年"
 
 #. STRINGS.CREATURES.STATUSITEMS.HARVESTING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HARVESTING.NAME"
@@ -37173,17 +37143,17 @@ msgstr "收成中"
 #. STRINGS.CREATURES.STATUSITEMS.HARVESTING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HARVESTING.TOOLTIP"
 msgid "This critter is removing food from a plant in the only way it knows how"
-msgstr "這隻小動物正在用它唯一知道的方式從植物上獲取食物"
+msgstr "這隻小動物正在以牠唯一知道的方式從植物上獲取食物"
 
 #. STRINGS.CREATURES.STATUSITEMS.HATCHING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HATCHING.NAME"
 msgid "Hatching"
-msgstr "孵化"
+msgstr "孵化中"
 
 #. STRINGS.CREATURES.STATUSITEMS.HATCHING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HATCHING.TOOLTIP"
 msgid "Here it comes!"
-msgstr "它來了！"
+msgstr "牠來了！"
 
 #. STRINGS.CREATURES.STATUSITEMS.HEALTHSTATUS.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HEALTHSTATUS.NAME"
@@ -37263,7 +37233,7 @@ msgstr "這個小動物正在擁抱一個<style=\"KKeyword\">蛋</style>"
 #. STRINGS.CREATURES.STATUSITEMS.HUGMINION.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HUGMINION.NAME"
 msgid "Hugging"
-msgstr "抱抱"
+msgstr "抱抱中"
 
 #. STRINGS.CREATURES.STATUSITEMS.HUGMINION.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HUGMINION.TOOLTIP"
@@ -37353,7 +37323,7 @@ msgstr "舒適地準備與世界見面"
 #. STRINGS.CREATURES.STATUSITEMS.INHALING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.INHALING.NAME"
 msgid "Inhaling"
-msgstr "吸入"
+msgstr "吸入中"
 
 #. STRINGS.CREATURES.STATUSITEMS.INHALING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.INHALING.TOOLTIP"
@@ -37363,7 +37333,7 @@ msgstr "這隻小動物正在深呼吸"
 #. STRINGS.CREATURES.STATUSITEMS.LAYINGANEGG.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.LAYINGANEGG.NAME"
 msgid "Laying egg"
-msgstr "下蛋"
+msgstr "下蛋中"
 
 #. STRINGS.CREATURES.STATUSITEMS.LAYINGANEGG.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.LAYINGANEGG.TOOLTIP"
@@ -37373,7 +37343,7 @@ msgstr "見證生命的奇蹟！"
 #. STRINGS.CREATURES.STATUSITEMS.LOOKINGFORGAS.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.LOOKINGFORGAS.NAME"
 msgid "Seeking Gas"
-msgstr "尋找氣體"
+msgstr "尋找氣體中"
 
 #. STRINGS.CREATURES.STATUSITEMS.LOOKINGFORGAS.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.LOOKINGFORGAS.TOOLTIP"
@@ -37383,7 +37353,7 @@ msgstr "這隻小動物正在尋找不可呼吸的<style=\"KKeyword\">氣體</st
 #. STRINGS.CREATURES.STATUSITEMS.LOOKINGFORLIQUID.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.LOOKINGFORLIQUID.NAME"
 msgid "Parched"
-msgstr "乾燥"
+msgstr "乾渴"
 
 #. STRINGS.CREATURES.STATUSITEMS.LOOKINGFORLIQUID.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.LOOKINGFORLIQUID.TOOLTIP"
@@ -37433,7 +37403,7 @@ msgstr "這隻小動物正在努力生產鹹乳"
 #. STRINGS.CREATURES.STATUSITEMS.MOLTING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.MOLTING.NAME"
 msgid "Molting"
-msgstr "蛻皮"
+msgstr "蛻皮中"
 
 #. STRINGS.CREATURES.STATUSITEMS.MOLTING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.MOLTING.TOOLTIP"
@@ -46195,16 +46165,6 @@ msgctxt "STRINGS.DUPLICANTS.PERSONALITIES.RUBY.NAME"
 msgid "Ruby"
 msgstr "Ruby"
 
-#. STRINGS.DUPLICANTS.PERSONALITIES.SENA.DESC
-msgctxt "STRINGS.DUPLICANTS.PERSONALITIES.SENA.DESC"
-msgid "{0}s only care about three things: gold accents, true crime, and the advancement of nuclear physics."
-msgstr "{0} 們只關心三件事：金色飾邊、真實犯罪，以及核物理學的發展。"
-
-#. STRINGS.DUPLICANTS.PERSONALITIES.SENA.NAME
-msgctxt "STRINGS.DUPLICANTS.PERSONALITIES.SENA.NAME"
-msgid "Sena"
-msgstr "Sena"
-
 #. STRINGS.DUPLICANTS.PERSONALITIES.SONYAR.DESC
 msgctxt "STRINGS.DUPLICANTS.PERSONALITIES.SONYAR.DESC"
 msgid "{0}s would sooner burn down the colony than read an instruction manual."
@@ -53079,16 +53039,6 @@ msgstr "高度有害且充滿<link=\"RADIATION\">輻射汙染</link>的液體，
 msgctxt "STRINGS.ELEMENTS.NUCLEARWASTE.NAME"
 msgid "<link=\"NUCLEARWASTE\">Liquid Nuclear Waste</link>"
 msgstr "<link=\"NUCLEARWASTE\">核廢料</link>"
-
-#. STRINGS.ELEMENTS.NUTRIENTSOUP.DESC
-msgctxt "STRINGS.ELEMENTS.NUTRIENTSOUP.DESC"
-msgid "A nutrient and enzyme-rich <link=\"ELEMENTSLIQUID\">Liquid</link> growth medium with a stable pH.\n\nIt's an essential ingredient for lab-crafted living organisms."
-msgstr "一種營養和酶含量豐富、pH 值穩定的<link=\"ELEMENTSLIQUID\">液態</link>生長培養基。\n\n它是實驗室製造的生物體所必需的重要成分。"
-
-#. STRINGS.ELEMENTS.NUTRIENTSOUP.NAME
-msgctxt "STRINGS.ELEMENTS.NUTRIENTSOUP.NAME"
-msgid "<link=\"NUTRIENTSOUP\">Cell Binder</link>"
-msgstr "<link=\"NUTRIENTSOUP\">細胞結合劑</link>"
 
 #. STRINGS.ELEMENTS.OBSIDIAN.DESC
 msgctxt "STRINGS.ELEMENTS.OBSIDIAN.DESC"
@@ -82285,6 +82235,16 @@ msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.YAML"
 msgid "YAML"
 msgstr "YAML"
 
+#. STRINGS.UI.KLEI_INVENTORY_SCREEN.TOOLTIP_DLC_FILTER
+msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.TOOLTIP_DLC_FILTER"
+msgid "{0}\n\nClick to filter displayed content by DLC Pack"
+msgstr "{0}\n\n點擊以根據 DLC 擴展包篩選顯示內容"
+
+#. STRINGS.UI.KLEI_INVENTORY_SCREEN.TOOLTIP_DLC_FILTER_ALL
+msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.TOOLTIP_DLC_FILTER_ALL"
+msgid "<b>Showing all content</b>"
+msgstr "<b>正在顯示所有內容</b>"
+
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.TOOLTIP_VIEW_ALL_ITEMS
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.TOOLTIP_VIEW_ALL_ITEMS"
 msgid "Filter: Showing all items\n\n(ClickType/Click) to toggle"
@@ -89362,8 +89322,8 @@ msgstr "輻射氣體星雲"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ROCKYASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ROCKYASTEROIDFIELD.DESC"
-msgid "An asteroid field containing <link=\"CUPRITE\">Copper Ore</link>, <link=\"SEDIMENTARYROCK\">Sedimentary Rock</link> and <link=\"IGNEOUSROCK\">Igneous Rock</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "含有<link=\"CUPRITE\">銅礦</link>、<link=\"SEDIMENTARYROCK\">沉積岩</link>與<link=\"IGNEOUSROCK\">火成岩</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgid "An asteroid field containing <link=\"GRANITE\">Granite</link>, <link=\"KATAIRITE\">Abyssalite</link>, <link=\"SEDIMENTARYROCK\">Sedimentary Rock</link>, and <link=\"IGNEOUSROCK\">Igneous Rock</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
+msgstr "含有<link=\"GRANITE\">花崗岩</link>、<link=\"KATAIRITE\">深淵水晶</link>、<link=\"SEDIMENTARYROCK\">沉積岩</link>與<link=\"IGNEOUSROCK\">火成岩</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ROCKYASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ROCKYASTEROIDFIELD.NAME"
@@ -96317,8 +96277,8 @@ msgstr "所有複製人都可以存取這艘火箭，無論乘員指派情況如
 
 #. STRINGS.UI.UISIDESCREENS.SUMMON_CREW_SIDESCREEN.SUMMON_CREW_BUTTON_LABEL
 msgctxt "STRINGS.UI.UISIDESCREENS.SUMMON_CREW_SIDESCREEN.SUMMON_CREW_BUTTON_LABEL"
-msgid "Set to Crew Only"
-msgstr "設為僅限機組人員"
+msgid "Summon Crew"
+msgstr "召喚機組人員"
 
 #. STRINGS.UI.UISIDESCREENS.SUMMON_CREW_SIDESCREEN.SUMMON_CREW_BUTTON_TOOLTIP
 msgctxt "STRINGS.UI.UISIDESCREENS.SUMMON_CREW_SIDESCREEN.SUMMON_CREW_BUTTON_TOOLTIP"
