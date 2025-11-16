@@ -45,290 +45,300 @@ msgctxt "STRINGS.BLUEPRINTS.MANUALGENERATOR_ELLIPTICAL.NAME"
 msgid "<link=\"MANUALGENERATOR\">Elliptical Generator</link>"
 msgstr "<link=\"MANUALGENERATOR\">橢圓發電機</link>"
 
+#. STRINGS.BLUEPRINTS.NEUTRONIUM_ATMO_OUTFIT.NAME
+msgctxt "STRINGS.BLUEPRINTS.NEUTRONIUM_ATMO_OUTFIT.NAME"
+msgid "Regal Neutronium Atmo Outfit"
+msgstr "帝王 0 號太空外觀"
+
+#. STRINGS.BLUEPRINTS.NEUTRONIUM_JET_OUTFIT.NAME
+msgctxt "STRINGS.BLUEPRINTS.NEUTRONIUM_JET_OUTFIT.NAME"
+msgid "Regal Neutronium Jet Outfit"
+msgstr "帝王 0 號飛行衣外觀"
+
 #. STRINGS.BLUEPRINTS.OUTFIT_AERODYNAMIC_FLIGHTSUIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_AERODYNAMIC_FLIGHTSUIT.NAME"
 msgid "Aerodynamic Outfit"
-msgstr "空氣力學套裝"
+msgstr "空氣力學外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ALL_METAL_JACKET.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ALL_METAL_JACKET.NAME"
 msgid "All-Metal Jacket Outfit"
-msgstr "全金屬夾克套裝"
+msgstr "全金屬夾克外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ATMO_SUIT_80S.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMO_SUIT_80S.NAME"
 msgid "Radical Atmo Outfit"
-msgstr "激進太空套裝"
+msgstr "激進太空外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_BIONIC.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_BIONIC.NAME"
 msgid "Bionic Atmo Outfit"
-msgstr "仿生太空套裝"
+msgstr "仿生太空外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_CHAMELEO.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_CHAMELEO.NAME"
 msgid "Dartle Atmo Outfit"
-msgstr "逸蜥太空套裝"
+msgstr "逸蜥太空外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_GAUDY.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_GAUDY.NAME"
 msgid "Gaudy Atmo Outfit"
-msgstr "浮誇太空套裝"
+msgstr "浮誇太空外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_PACULACANTH.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_PACULACANTH.NAME"
 msgid "Jawbo Atmo Outfit"
-msgstr "顎魚太空套裝"
+msgstr "顎魚太空外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_RAPTOR.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_RAPTOR.NAME"
 msgid "Rhex Atmo Outfit"
-msgstr "霸王鸚太空套裝"
+msgstr "霸王鸚太空外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_STEGO.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_STEGO.NAME"
 msgid "Lumb Atmo Outfit"
-msgstr "劍龍太空套裝"
+msgstr "劍龍太空外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_BIOCIRCUIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_BIOCIRCUIT.NAME"
 msgid "Bionic Jammies Outfit"
-msgstr "仿生睡衣套裝"
+msgstr "仿生睡衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_CADMIUM_VEST.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_CADMIUM_VEST.NAME"
 msgid "Cadmium Vest Outfit"
-msgstr "鎘背心套裝"
+msgstr "鎘背心外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_BLACK.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_BLACK.NAME"
 msgid "Charcoal Skivvies Outfit"
-msgstr "木炭內衣套裝"
+msgstr "木炭內衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_BLUE.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_BLUE.NAME"
 msgid "Electro Skivvies Outfit"
-msgstr "靜電內衣套裝"
+msgstr "靜電內衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_BLUE_2.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_BLUE_2.NAME"
 msgid "Wortseed Skivvies Outfit"
-msgstr "冰種內衣套裝"
+msgstr "冰種內衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_BROWN.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_BROWN.NAME"
 msgid "Muck Skivvies Outfit"
-msgstr "爛泥內衣套裝"
+msgstr "爛泥內衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_GREEN.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_GREEN.NAME"
 msgid "Greenpeas Skivvies Outfit"
-msgstr "青豆內衣套裝"
+msgstr "青豆內衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_GREEN_RADIOACTIVE.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_GREEN_RADIOACTIVE.NAME"
 msgid "Quantum Skivvies Outfit"
-msgstr "量子內衣套裝"
+msgstr "量子內衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_GREY.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_GREY.NAME"
 msgid "Flint Skivvies Outfit"
-msgstr "燧石內衣套裝"
+msgstr "燧石內衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_ORANGE.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_ORANGE.NAME"
 msgid "Hi-Vis Skivvies Outfit"
-msgstr "高能見內衣套裝"
+msgstr "高能見內衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_PINK.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_PINK.NAME"
 msgid "Petal Skivvies Outfit"
-msgstr "花瓣內衣套裝"
+msgstr "花瓣內衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_PURPLE.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_PURPLE.NAME"
 msgid "Cerebra Skivvies Outfit"
-msgstr "思維內衣套裝"
+msgstr "思維內衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_RED.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_RED.NAME"
 msgid "Rusty Skivvies Outfit"
-msgstr "鏽蝕內衣套裝"
+msgstr "鏽蝕內衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_TEAL.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_GOTCHIES_TEAL.NAME"
 msgid "Symbio Skivvies Outfit"
-msgstr "共生內衣套裝"
+msgstr "共生內衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_JETSUIT_001.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_JETSUIT_001.NAME"
 msgid "Torpor Jet Outfit"
-msgstr "遲鈍飛行套裝"
+msgstr "遲鈍飛行外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_JETSUIT_002.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_JETSUIT_002.NAME"
 msgid "Hornet Jet Outfit"
-msgstr "黃蜂飛行套裝"
+msgstr "黃蜂飛行外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_JETSUIT_003.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_JETSUIT_003.NAME"
 msgid "Therma Jet Outfit"
-msgstr "熱能飛行套裝"
+msgstr "熱能飛行外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_JETSUIT_004.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_JETSUIT_004.NAME"
 msgid "Garnet Jet Outfit"
-msgstr "石榴飛行套裝"
+msgstr "石榴飛行外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_JETSUIT_005.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_JETSUIT_005.NAME"
 msgid "Atomic Jet Outfit"
-msgstr "原子飛行套裝"
+msgstr "原子飛行外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_JETSUIT_006.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_JETSUIT_006.NAME"
 msgid "Algae Jet Outfit"
-msgstr "藻綠飛行套裝"
+msgstr "藻綠飛行外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_JETSUIT_007.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_JETSUIT_007.NAME"
 msgid "Hatchstone Jet Outfit"
-msgstr "哈奇石飛行套裝"
+msgstr "哈奇石飛行外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_JETSUIT_008.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_JETSUIT_008.NAME"
 msgid "Ultra Jet Outfit"
-msgstr "終極飛行套裝"
+msgstr "終極飛行外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_PJ_DINO.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_PJ_DINO.NAME"
 msgid "Jurassic Jammies Outfit"
-msgstr "侏羅紀睡衣套裝"
+msgstr "侏羅紀睡衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_PJ_DINO2.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_PJ_DINO2.NAME"
 msgid "Pangaea Jammies Outfit"
-msgstr "盤古大陸睡衣套裝"
+msgstr "盤古大陸睡衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_PJ_DINO3.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_PJ_DINO3.NAME"
 msgid "Triassic Jammies Outfit"
-msgstr "三疊紀睡衣套裝"
+msgstr "三疊紀睡衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ROMPER_TAN.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ROMPER_TAN.NAME"
 msgid "Fieldwork Outfit"
-msgstr "實地考察套裝"
+msgstr "實地考察外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_SCOUT.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_SCOUT.NAME"
 msgid "Explorer Outfit"
-msgstr "探險家套裝"
+msgstr "探險家外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_SCULPTED_STEEL.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_SCULPTED_STEEL.NAME"
 msgid "Sculpted Steel Outfit"
-msgstr "雕刻鋼套裝"
+msgstr "雕刻鋼外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_SPACE_EXPO.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_SPACE_EXPO.NAME"
 msgid "Space Expo Outfit"
-msgstr "太空博覽套裝"
+msgstr "太空博覽外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_STARCHED_BLAZER.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_STARCHED_BLAZER.NAME"
 msgid "Starched Blazer Outfit"
-msgstr "漿洗西裝套裝"
+msgstr "漿洗西裝外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_SUSPENDERS.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_SUSPENDERS.NAME"
 msgid "Arbor Hugger Outfit"
-msgstr "擁抱喬木套裝"
+msgstr "擁抱喬木外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_BLACK.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_BLACK.NAME"
 msgid "Monochrome Flannel Outfit"
-msgstr "單色法蘭絨套裝"
+msgstr "單色法蘭絨外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_BLUE_MIDDLE.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_BLUE_MIDDLE.NAME"
 msgid "Scrub Flannel Outfit"
-msgstr "磨砂法蘭絨套裝"
+msgstr "磨砂法蘭絨外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_GREEN.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_GREEN.NAME"
 msgid "Swampy Flannel Outfit"
-msgstr "沼澤法蘭絨套裝"
+msgstr "沼澤法蘭絨外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_ORANGE.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_ORANGE.NAME"
 msgid "Cadmium Flannel Outfit"
-msgstr "銀灰法蘭絨套裝"
+msgstr "銀灰法蘭絨外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_PINK_ORCHID.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_PINK_ORCHID.NAME"
 msgid "Flare Flannel Outfit"
-msgstr "火光法蘭絨套裝"
+msgstr "火光法蘭絨外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_PURPLE.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_PURPLE.NAME"
 msgid "Fusion Flannel Outfit"
-msgstr "融合法蘭絨套裝"
+msgstr "融合法蘭絨外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_RED.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_RED.NAME"
 msgid "Classic Flannel Outfit"
-msgstr "經典法蘭絨套裝"
+msgstr "經典法蘭絨外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_WHITE.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_WHITE.NAME"
 msgid "White Flannel Outfit"
-msgstr "純白法蘭絨套裝"
+msgstr "純白法蘭絨外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_YELLOW.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_YELLOW.NAME"
 msgid "Flax Flannel Outfit"
-msgstr "亞麻法蘭絨套裝"
+msgstr "亞麻法蘭絨外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_01.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_01.NAME"
 msgid "Slapshot Outfit"
-msgstr "猛擊套裝"
+msgstr "猛擊外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_02.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_02.NAME"
 msgid "Blocker Outfit"
-msgstr "阻擋者套裝"
+msgstr "阻擋者外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_03.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_03.NAME"
 msgid "High-Stick Outfit"
-msgstr "高棍套裝"
+msgstr "高棍外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_04.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_04.NAME"
 msgid "Faceoff Outfit"
-msgstr "開球套裝"
+msgstr "開球外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_05.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_05.NAME"
 msgid "MVP Outfit"
-msgstr "MVP 套裝"
+msgstr "MVP 外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_07.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_07.NAME"
 msgid "Hat-Trick Outfit"
-msgstr "三連套裝"
+msgstr "三連外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_08.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_08.NAME"
 msgid "Overtime Outfit"
-msgstr "延長賽套裝"
+msgstr "延長賽外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_09.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_09.NAME"
 msgid "Penalty Box Outfit"
-msgstr "受罰席套裝"
+msgstr "受罰席外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_10.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_10.NAME"
@@ -338,12 +348,12 @@ msgstr "執法者服裝"
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_11.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_11.NAME"
 msgid "Hoser Outfit"
-msgstr "失敗者套裝"
+msgstr "失敗者外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_12.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_12.NAME"
 msgid "Rookie Outfit"
-msgstr "菜鳥套裝"
+msgstr "菜鳥外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_WADER.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_WADER.NAME"
@@ -389,6 +399,16 @@ msgstr "腰帶本身不是仿生的，但穿著它的複製人可能是仿生的
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_CIRCUIT.NAME"
 msgid "Bionic Atmo Belt"
 msgstr "仿生太空腰帶"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_NEUTRONIUM.DESC"
+msgid "The only acceptable atmo belt for exalted space explorers."
+msgstr "這是尊貴的太空探險家唯一能接受的太空衣腰帶。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_NEUTRONIUM.NAME"
+msgid "Regal Neutronium Atmo Belt"
+msgstr "帝王 0 號太空衣腰帶"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_PACULACANTH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_PACULACANTH.DESC"
@@ -449,6 +469,16 @@ msgstr "額外增加的指尖縫線對某些人來說簡直是感官上的夢魘
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_CHAMELEO.NAME"
 msgid "Dartle Atmo Gloves"
 msgstr "逸蜥太空手套"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_NEUTRONIUM.DESC"
+msgid "Thick engineered \"leather\" hand protectors and polished Neutronium cuffs keep little Duplicant fingers safe, no matter what they're tempted to touch."
+msgstr "厚實的人造「皮革」手部護具，配上拋光的 0 號元素護腕，能保護複製人小小的手指，無論他們多想碰觸什麼。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_NEUTRONIUM.NAME"
+msgid "Regal Neutronium Atmo Gloves"
+msgstr "帝王 0 號太空手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_PACULACANTH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_PACULACANTH.DESC"
@@ -530,6 +560,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_GAUDYSWEATER_PURPLE.NAME"
 msgid "Deepset Atmo Helmet"
 msgstr "深眼太空頭盔"
 
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_NEUTRONIUM.DESC"
+msgid "A truly magnificent noggin protector that makes every errand feel like an epic expedition."
+msgstr "一個真正壯麗的頭部防護罩，讓每一次跑腿任務都感覺像是一場史詩般的遠征。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_NEUTRONIUM.NAME"
+msgid "Regal Neutronium Atmo Helmet"
+msgstr "帝王 0 號太空頭盔"
+
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_PACULACANTH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_PACULACANTH.DESC"
 msgid "The official helmet of the hangry space explorer."
@@ -600,6 +640,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_CHAMELEO.NAME"
 msgid "Dartle Atmo Boots"
 msgstr "逸蜥太空靴"
 
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_NEUTRONIUM.DESC"
+msgid "Protective footwear that shines with the promise of safety and new adventures."
+msgstr "閃耀著安全與全新冒險希望的防護性鞋具。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_NEUTRONIUM.NAME"
+msgid "Regal Atmo Boots"
+msgstr "帝王 0 號太空靴"
+
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_PACULACANTH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_PACULACANTH.DESC"
 msgid "They're always a bit damp. But they work!"
@@ -648,7 +698,7 @@ msgstr "用華麗飽和的有毒顏料染色！"
 #. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_BASIC_ORANGE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_BASIC_ORANGE.NAME"
 msgid "Crisp Cadmium Atmo Suit"
-msgstr "鮮鎘太空套裝"
+msgstr "鮮鎘太空外觀"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_BASIC_PURPLE_WILDBERRY.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_BASIC_PURPLE_WILDBERRY.DESC"
@@ -669,6 +719,16 @@ msgstr "穩紮穩打贏得（太空）競賽，對吧？"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_CHAMELEO.NAME"
 msgid "Dartle Atmo Suit"
 msgstr "逸蜥太空衣"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_NEUTRONIUM.DESC"
+msgid "Understated elegance topped with a solid-gold collar that protects against sharp space objects and surprise tickle attacks."
+msgstr "低調優雅，頂部配有一圈純金領口，可以防禦鋒利的太空物體和突如其來的搔癢攻擊。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_NEUTRONIUM.NAME"
+msgid "Regal Neutronium Atmo Suit"
+msgstr "帝王 0 號太空衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_PACULACANTH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_PACULACANTH.DESC"
@@ -749,6 +809,16 @@ msgstr "誰訂了特特特硬的床墊？"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_ROCK.NAME"
 msgid "<link=\"BED\">Stone Cot</link>"
 msgstr "<link=\"BED\">石頭床</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_BOILER_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_BOILER_NEUTRONIUM.DESC"
+msgid "An ostentatious immersion heater that gives cool liquids the royal treatment."
+msgstr "一個華麗的浸入式加熱器，給予低溫液體皇家級的加熱待遇。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_BOILER_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_BOILER_NEUTRONIUM.NAME"
+msgid "<link=\"LIQUIDHEATER\">Regal Neutronium Liquid Tepidizer</link>"
+msgstr "<link=\"LIQUIDHEATER\">帝王 0 號液體加溫器</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_BOTTOM_GOTCH_CHARCOAL_OBELUS.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BOTTOM_GOTCH_CHARCOAL_OBELUS.DESC"
@@ -870,6 +940,26 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_BOTTOM_GOTCH_WORTSEED_CHROMO.NAME"
 msgid "Wortseed Skivvies"
 msgstr "冰種內衣"
 
+#. STRINGS.BLUEPRINTS.PERMIT_BOTTOM_REGAL_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_BOTTOM_REGAL_NEUTRONIUM.DESC"
+msgid "These tailored uniform pants come in a rich, deep neutronium-inspired hue that pairs well with gold."
+msgstr "這些量身訂製的制服褲帶有一種濃郁深沉的 0 號元素色調，與黃金色搭配得很好。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_BOTTOM_REGAL_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_BOTTOM_REGAL_NEUTRONIUM.NAME"
+msgid "Regal Neutronium Uniform Pants"
+msgstr "帝王 0 號制服褲"
+
+#. STRINGS.BLUEPRINTS.PERMIT_CO2SCRUBBER_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_CO2SCRUBBER_NEUTRONIUM.DESC"
+msgid "Swiftly and discreetly pulls carbon dioxide out of the air, like a butler pulling an uninvited guest out of a gala."
+msgstr "迅速且謹慎地將二氧化碳從空氣中抽離，就像管家將不速之客拉出盛大晚宴一樣。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_CO2SCRUBBER_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_CO2SCRUBBER_NEUTRONIUM.NAME"
+msgid "<link=\"CO2SCRUBBER\">Regal Neutronium Carbon Skimmer</link>"
+msgstr "<link=\"CO2SCRUBBER\">帝王 0 號除碳機</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_COOKINGSTATION_COTTAGE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_COOKINGSTATION_COTTAGE.DESC"
 msgid "The smoky flavor is intentional."
@@ -890,6 +980,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_COOKINGSTATION_GOURMET_COTTAGE.NAME"
 msgid "<link=\"GOURMETCOOKINGSTATION\">Rustic Gas Range</link>"
 msgstr "<link=\"GOURMETCOOKINGSTATION\">淳樸烤箱</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_NEUTRONIUM.DESC"
+msgid "Someone once suggested that ornate corner trim tiles be called \"cornate\" tiles. Thankfully, they were overruled."
+msgstr "有人曾建議將華麗的邊角修飾磚稱為「角飾」磚。幸好，這個提議被否決了。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_NEUTRONIUM.NAME"
+msgid "<link=\"CORNERMOULDING\">Regal Neutronium Corner Trim</link>"
+msgstr "<link=\"CORNERMOULDING\">帝王 0 號邊角飾件</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_CRAFTINGSTATION_CYBERPUNK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CRAFTINGSTATION_CYBERPUNK.DESC"
 msgid "Building a better tomorrow, today."
@@ -900,6 +1000,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_CRAFTINGSTATION_CYBERPUNK.NAME"
 msgid "Retro LED Crafting Table"
 msgstr "復古 LED 工藝台"
 
+#. STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_NEUTRONIUM.DESC"
+msgid "Installing elegant crown moulding is a clever way to distract visitors from unswept tunnel floors."
+msgstr "安裝優雅的冠狀飾條是一種高明的方法，可以分散訪客對未清掃通道地面的注意力。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_NEUTRONIUM.NAME"
+msgid "<link=\"CROWNMOULDING\">Regal Neutronium Ceiling Trim</link>"
+msgstr "<link=\"CROWNMOULDING\">帝王 0 號天花板飾件</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_DRESS_FUTURESPACE_BLUE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_DRESS_FUTURESPACE_BLUE.DESC"
 msgid "Handcrafted from decommissioned rockets."
@@ -909,6 +1019,16 @@ msgstr "由退役火箭手工製作而成。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_DRESS_FUTURESPACE_BLUE.NAME"
 msgid "Sculpted Steel Dress"
 msgstr "雕刻鋼連身裙"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ELECTROLYZER_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELECTROLYZER_NEUTRONIUM.DESC"
+msgid "The oxygenated air produced by this building smells...superior, somehow."
+msgstr "這座建築生產的含氧空氣聞起來...不知怎地，就是更優越。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ELECTROLYZER_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELECTROLYZER_NEUTRONIUM.NAME"
+msgid "<link=\"ELECTROLYZER\">Regal Neutronium Electrolyzer</link>"
+msgstr "<link=\"ELECTROLYZER\">帝王 0 號電解器</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_HATCH.DESC"
@@ -980,6 +1100,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_FOSSILSCULPTURE_IDLE_STEGO.NAME"
 msgid "Pointy Plates"
 msgstr "尖板"
 
+#. STRINGS.BLUEPRINTS.PERMIT_FRIDGE_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_NEUTRONIUM.DESC"
+msgid "It's so polished that there's a chance Duplicants might get lost in their own reflection."
+msgstr "它被拋光得如此閃亮，以至於複製人可能會迷失在自己的倒影。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_FRIDGE_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_NEUTRONIUM.NAME"
+msgid "<link=\"REFRIGERATOR\">Regal Neutronium Refrigerator</link>"
+msgstr "<link=\"REFRIGERATOR\">帝王 0 號冰箱</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_DARTLE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_DARTLE.DESC"
 msgid "The splotchy parts have an unsettlingly leather-like texture."
@@ -1030,6 +1160,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_CYBERPUNK.NAME"
 msgid "<link=\"MANUALGENERATOR\">Retro LED Manual Generator</link>"
 msgstr "<link=\"MANUALGENERATOR\">復古 LED 人力發電機</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_NEUTRONIUM.DESC"
+msgid "Some folks climb up the corporate ladder, others race on the aristocratic wheel."
+msgstr "有人攀爬企業的階梯，有人則在貴族的輪子上奔跑。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_NEUTRONIUM.NAME"
+msgid "<link=\"MANUALGENERATOR\">Regal Neutronium Manual Generator</link>"
+msgstr "<link=\"MANUALGENERATOR\">帝王 0 號人力發電機</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_ROCK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_ROCK.DESC"
 msgid "It gets off to a rocky start, but it works so well that there's no point reinventing it."
@@ -1039,6 +1179,16 @@ msgstr "它起步艱難，但運作得非常好，根本沒必要重新設計。
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_ROCK.NAME"
 msgid "<link=\"MANUALGENERATOR\">Rustic Manual Generator</link>"
 msgstr "<link=\"MANUALGENERATOR\">淳樸人力發電機</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GENERATORPHOS_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORPHOS_NEUTRONIUM.DESC"
+msgid "This building's high-gloss finish never loses its shine, no matter how many layers of coal dust it's coated in."
+msgstr "這座建築的高光澤飾面永不失色，無論它被多少層煤塵覆蓋。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GENERATORPHOS_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORPHOS_NEUTRONIUM.NAME"
+msgid "<link=\"GENERATOR\">Regal Neutronium Coal Generator</link>"
+msgstr "<link=\"GENERATOR\">帝王 0 號燃煤發電機</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_BASIC_BLUE_WHEEZEWORT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_BASIC_BLUE_WHEEZEWORT.DESC"
@@ -1330,6 +1480,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_METAL_GREY.NAME"
 msgid "Steel Gloves"
 msgstr "鋼色手套"
 
+#. STRINGS.BLUEPRINTS.PERMIT_GLOVES_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_NEUTRONIUM.DESC"
+msgid "Manufacturer's note: These gloves will not transform touched objects into gold or neutronium."
+msgstr "製造商註記：這雙手套不會將碰觸到的物體變成黃金或 0 號元素。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GLOVES_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_NEUTRONIUM.NAME"
+msgid "Regal Golden Gloves"
+msgstr "帝王黃金手套"
+
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_PUFFER_ORANGE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_PUFFER_ORANGE.DESC"
 msgid "A cozy little orange puffer jacket for every finger."
@@ -1390,6 +1550,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_DINO.NAME"
 msgid "<link=\"HEADQUARTERS\">Forgotten Printing Pod</link>"
 msgstr "<link=\"HEADQUARTERS\">遺忘列印元</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.DESC"
+msgid "A grandiose machine that makes even the most haphazard colony feel like a distinguished outpost."
+msgstr "一台宏偉的機器，能讓即使是最雜亂無章的殖民地，也感覺像是一個卓越的前哨站。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.NAME"
+msgid "<link=\"HEADQUARTERS\">Regal Neutronium Printing Pod</link>"
+msgstr "<link=\"HEADQUARTERS\">帝王 0 號列印元</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_ICESCULPTURE_AMAZING_IDLE_BAMMOTH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ICESCULPTURE_AMAZING_IDLE_BAMMOTH.DESC"
 msgid "It's not a real party until someone tries to feed the sculpture a Frost Bun."
@@ -1429,6 +1599,16 @@ msgstr "為那些愛噴射飛行的複製人準備的灰色技術手套。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_GLOOM.NAME"
 msgid "Gloom Jet Gloves"
 msgstr "幽暗噴射手套"
+
+#. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_NEUTRONIUM.DESC"
+msgid "These gloves feature heavy neutronium-inspired cuffs that keep them securely attached no matter how fast the wearer is jettin' around."
+msgstr "這雙手套配有厚重且受到 0 號元素啟發的護腕，無論穿戴者噴射移動得多快，都能保持牢固地附著在手上。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_NEUTRONIUM.NAME"
+msgid "Regal Neutronium Jet Gloves"
+msgstr "帝王 0 號飛行手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_OBELUS.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_OBELUS.DESC"
@@ -1530,6 +1710,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_00_ULTRA_OBELUS.NAME"
 msgid "Ultra Jet Helmet"
 msgstr "終極飛行頭盔"
 
+#. STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_NEUTRONIUM.DESC"
+msgid "This showstopper of a helmet really makes Duplicants feel like jet-settin' legends."
+msgstr "這個引人注目的頭盔讓複製人感覺自己像是噴射機時代的傳奇人物。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_NEUTRONIUM.NAME"
+msgid "Regal Neutronium Jet Helmet"
+msgstr "帝王 0 號飛行頭盔"
+
 #. STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_BASIC_BLACK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_BASIC_BLACK.DESC"
 msgid "Stain-resistant footwear for flight suits. They'll look new forever!"
@@ -1549,6 +1739,16 @@ msgstr "靴子外側的微型通道能減少阻力，同時也會增加汙垢堆
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_BASIC_WHITE.NAME"
 msgid "White Jet Boots"
 msgstr "白色飛行靴"
+
+#. STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_NEUTRONIUM.DESC"
+msgid "A pair of flight boots designed to be as durable as the mysterious substance that clings to space artifacts."
+msgstr "這雙飛行靴的耐用程度，與附著在太空文物上的神秘物質一樣持久。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_NEUTRONIUM.NAME"
+msgid "Regal Neutronium Jet Boots"
+msgstr "帝王 0 號飛行靴"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JETSUIT_BLACK_HATCHSTONE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_BLACK_HATCHSTONE.DESC"
@@ -1600,6 +1800,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_BLACK_ULTRA.NAME"
 msgid "Ultra Stealth Jet Suit"
 msgstr "終極隱形飛行衣"
 
+#. STRINGS.BLUEPRINTS.PERMIT_JETSUIT_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_NEUTRONIUM.DESC"
+msgid "In the event of a formal-attire emergency, the golden starburst belt buckle can double as an avant-garde monocle."
+msgstr "如果發生了需要穿正式服裝的緊急情況，黃金星爆狀皮帶扣可以兼作一個前衛的單片眼鏡。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_JETSUIT_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_NEUTRONIUM.NAME"
+msgid "Regal Neutronium Jet Suit"
+msgstr "帝王 0 號飛行衣"
+
 #. STRINGS.BLUEPRINTS.PERMIT_JETSUIT_WHITE_ATOMIC.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_WHITE_ATOMIC.DESC"
 msgid "A white jet suit with a hazard-orange sternum protector."
@@ -1649,6 +1859,16 @@ msgstr "雙 V 口音上的平式鎖縫可減少阻力。它們看起來也不錯
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JUMPSUIT_VSUIT_STELLAR.NAME"
 msgid "Aerodynamic Flightsuit"
 msgstr "空氣動力學飛行衣"
+
+#. STRINGS.BLUEPRINTS.PERMIT_LIQUIDCONDITIONER_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_LIQUIDCONDITIONER_NEUTRONIUM.DESC"
+msgid "Duplicants who <i>can</i> say this building's name three times fast are too undignified to use it."
+msgstr "能<b>快速</b>唸出這座建築名稱三次的複製人，反而過於不得體而不配使用它。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_LIQUIDCONDITIONER_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_LIQUIDCONDITIONER_NEUTRONIUM.NAME"
+msgid "<link=\"LIQUIDCONDITIONER\">Regal Neutronium Thermo Aquatuner</link>"
+msgstr "<link=\"LIQUIDCONDITIONER\">帝王 0 號冷水機</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_LOGIC_AND_FLAMINGO.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_LOGIC_AND_FLAMINGO.DESC"
@@ -2080,6 +2300,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_MASSEUR_PREHISTORIC.NAME"
 msgid "<link=\"MASSAGETABLE\">Foot Massage Table</link>"
 msgstr "<link=\"MASSAGETABLE\">足部按摩床</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_METALREFINERY_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_METALREFINERY_NEUTRONIUM.DESC"
+msgid "Some say it's the most refined-looking metal refinery that ever refined metal."
+msgstr "有人說這是外觀最精緻的金屬精煉機，精煉過所有精煉的金屬。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_METALREFINERY_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_METALREFINERY_NEUTRONIUM.NAME"
+msgid "<link=\"METALREFINERY\">Regal Neutronium Metal Refinery</link>"
+msgstr "<link=\"METALREFINERY\">帝王 0 號冶煉廠</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_MILKPRESS_STEGO.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MILKPRESS_STEGO.DESC"
 msgid "Industrial equipment inspired by nature."
@@ -2089,6 +2319,16 @@ msgstr "受到大自然啟發的工業設備。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MILKPRESS_STEGO.NAME"
 msgid "<link=\"MILKPRESS\">Lumb Plant Pulverizer</link>"
 msgstr "<link=\"MILKPRESS\">劍龍植物粉碎機</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_NEUTRONIUM.DESC"
+msgid "Enhances breathability by lending an air of affluence to its surroundings."
+msgstr "透過為周遭環境增添一股富裕的氣息，來增強呼吸性。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_NEUTRONIUM.NAME"
+msgid "<link=\"MINERALDEOXIDIZER\">Regal Neutronium Oxygen Diffuser</link>"
+msgstr "<link=\"MINERALDEOXIDIZER\">帝王 0 號氧氣擴散機</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_MITTENS_KNIT_BLACK_SMOG.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MITTENS_KNIT_BLACK_SMOG.DESC"
@@ -2490,6 +2730,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_PEDESTAL_COTTAGE.NAME"
 msgid "<link=\"ITEMPEDESTAL\">Handcrafted Pedestal</link>"
 msgstr "<link=\"ITEMPEDESTAL\">手工基座</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_PEDESTAL_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_PEDESTAL_NEUTRONIUM.DESC"
+msgid "This signet ring-style pedestal makes an opulent home for everything from crown jewels to knickknacks."
+msgstr "這個戒指風格的展示台，為從皇冠珠寶到小擺設的一切物品提供一個奢華的歸宿。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_PEDESTAL_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_PEDESTAL_NEUTRONIUM.NAME"
+msgid "<link=\"ITEMPEDESTAL\">Regal Neutronium Pedestal</link>"
+msgstr "<link=\"ITEMPEDESTAL\">帝王 0 號底座</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_PEDESTAL_SCREW_BRASS.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PEDESTAL_SCREW_BRASS.DESC"
 msgid "A display stand with a warm, brassy industrial aesthetic."
@@ -2580,6 +2830,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_ICE.NAME"
 msgid "<link=\"EXOBASEHEADQUARTERS\">Frosty Mini-Pod</link>"
 msgstr "<link=\"EXOBASEHEADQUARTERS\">冰霜小型列印元</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_NEUTRONIUM.DESC"
+msgid "A monument to the highfalutin' hopes and dreams of every spacefarer settling in on a new world."
+msgstr "這是一個象徵著所有在新世界定居的太空旅行者，那些浮誇的希望與夢想的紀念碑。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_NEUTRONIUM.NAME"
+msgid "<link=\"EXOBASEHEADQUARTERS\">Regal Neutronium Mini-Pod</link>"
+msgstr "<link=\"EXOBASEHEADQUARTERS\">帝王 0 號小型列印元</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_COTTAGE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_COTTAGE.DESC"
 msgid "Some ranchers believe that a woodsy aesthetic puts critters at ease."
@@ -2600,6 +2860,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_DINO.NAME"
 msgid "<link=\"RANCHSTATION\">Overgrown Grooming Station</link>"
 msgstr "<link=\"RANCHSTATION\">茂盛畜牧站</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_NEUTRONIUM.DESC"
+msgid "Mirror, mirror, on the wall...who's the best-groomed of them all?"
+msgstr "魔鏡，魔鏡，請你告訴我...誰是馴養得最好看的？"
+
+#. STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_NEUTRONIUM.NAME"
+msgid "<link=\"RANCHSTATION\">Regal Neutronium Grooming Station</link>"
+msgstr "<link=\"RANCHSTATION\">帝王 0 號畜牧站</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_RESEARCH_CENTER_CYBERPUNK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_RESEARCH_CENTER_CYBERPUNK.DESC"
 msgid "Doin' research for the future, while diggin' the vibes of the past."
@@ -2619,6 +2889,16 @@ msgstr "老派的酷炫、新奇的事實調查。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_RESEARCH_CENTER2_CYBERPUNK.NAME"
 msgid "<link=\"ADVANCEDRESEARCHCENTER\">Retro LED Super Computer</link>"
 msgstr "<link=\"ADVANCEDRESEARCHCENTER\">復古 LED 超級電腦</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_RESPECCER_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_RESPECCER_NEUTRONIUM.DESC"
+msgid "Duplicants come out feeling very, very fancy, and knowing very, very little."
+msgstr "複製人出來後感覺非常、非常華麗，但知道得非常、非常少。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_RESPECCER_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_RESPECCER_NEUTRONIUM.NAME"
+msgid "<link=\"RESETSKILLSSTATION\">Regal Neutronium Skill Scrubber</link>"
+msgstr "<link=\"RESETSKILLSSTATION\">帝王 0 號技能重置機</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_WOOD_AMAZING_ACTION_GULP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_WOOD_AMAZING_ACTION_GULP.DESC"
@@ -2749,6 +3029,16 @@ msgstr "即使它們還不夠時尚，但總有一天會是的。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_FUTURESPACE_BLUE.NAME"
 msgid "Future Chic Booties"
 msgstr "未來別緻短靴"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_REGAL_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_REGAL_NEUTRONIUM.DESC"
+msgid "Classic black work shoes with a lavish gold ankle band."
+msgstr "經典黑色工作鞋，配有奢華的金色腳踝帶。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_REGAL_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_REGAL_NEUTRONIUM.NAME"
+msgid "Regal Shoes"
+msgstr "帝王鞋"
 
 #. STRINGS.BLUEPRINTS.PERMIT_SHOES_ROMPER_FRASS_TAN.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_ROMPER_FRASS_TAN.DESC"
@@ -2969,6 +3259,26 @@ msgstr "為非標準複製人發放的標準制服襯衫。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_STANDARD_BIONIC_TOP.NAME"
 msgid "Bionic Uniform Shirt"
 msgstr "仿生制服襯衫"
+
+#. STRINGS.BLUEPRINTS.PERMIT_STEAMTURBINE2_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_STEAMTURBINE2_NEUTRONIUM.DESC"
+msgid "It exudes power, literally and figuratively."
+msgstr "它散發出力量，無論是從字面上還是比喻上來說。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_STEAMTURBINE2_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_STEAMTURBINE2_NEUTRONIUM.NAME"
+msgid "<link=\"STEAMTURBINE2\">Regal Neutronium Steam Turbine</link>"
+msgstr "<link=\"STEAMTURBINE2\">帝王 0 號蒸汽渦輪機</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_NEUTRONIUM.DESC"
+msgid "When the outside is this extravagant, who cares what's inside?"
+msgstr "當外觀如此奢華時，誰還會在乎裡面裝了什麼？"
+
+#. STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_NEUTRONIUM.NAME"
+msgid "<link=\"STORAGELOCKER\">Regal Neutronium Storage Bin</link>"
+msgstr "<link=\"STORAGELOCKER\">帝王 0 號儲存箱</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_FLANNEL_BLACK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_FLANNEL_BLACK.DESC"
@@ -3300,6 +3610,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_METAL_GREY.NAME"
 msgid "All-Metal Jacket"
 msgstr "全金屬外套"
 
+#. STRINGS.BLUEPRINTS.PERMIT_TOP_REGAL_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_REGAL_NEUTRONIUM.DESC"
+msgid "The unofficial dress uniform of the super-regal, with a solid gold belt and collar. It's not comfortable, but wow, does it ever look good."
+msgstr "這件超級帝王的非官方禮服，配有純金皮帶和衣領。它穿起來不舒服，但是天啊，它看起來太棒了。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_TOP_REGAL_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_REGAL_NEUTRONIUM.NAME"
+msgid "Regal Neutronium Uniform Shirt"
+msgstr "帝王 0 號制服上衣"
+
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_SCOUT_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SCOUT_WHITE.DESC"
 msgid "A well-tied neckerchief prevents tiny critters from wandering down the back of one's neck."
@@ -3580,6 +3900,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STEGO.NAME"
 msgid "<link=\"EXTERIORWALL\">Pixel Lumb</link>"
 msgstr "<link=\"EXTERIORWALL\">像素劍龍</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_NEUTRONIUM.DESC"
+msgid "This sumptuously tufted wall panel transforms basic colony spaces into palatial throne rooms."
+msgstr "這款豪華的嵌飾牆板，能將基礎的殖民地空間轉變為宮殿般的王座室。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_NEUTRONIUM.NAME"
+msgid "<link=\"EXTERIORWALL\">Regal Neutronium Tuft</link>"
+msgstr "<link=\"EXTERIORWALL\">帝王 0 號嵌飾</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_CHARCOAL_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_CHARCOAL_WHITE.DESC"
 msgid "A dark-gray wallpaper with one crisp white corner cut out, for modular styling."
@@ -3799,6 +4129,26 @@ msgstr "這種壁紙上的安全橙色三角既像標記地點的「X」，又�
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_SATSUMA_WHITE.NAME"
 msgid "<link=\"EXTERIORWALL\">Hi-Vis X</link>"
 msgstr "<link=\"EXTERIORWALL\">高能見 X 形</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WATERPUMP_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WATERPUMP_NEUTRONIUM.DESC"
+msgid "Some Duplicants dream of stealing the wrought gold pump handle to use as a fancy walking cane."
+msgstr "有些複製人夢想偷走這個鍛造黃金的幫浦把手，將它用作一根華麗的手杖。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WATERPUMP_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WATERPUMP_NEUTRONIUM.NAME"
+msgid "<link=\"LIQUIDPUMPINGSTATION\">Regal Neutronium Water Pump</link>"
+msgstr "<link=\"LIQUIDPUMPINGSTATION\">帝王 0 號水幫浦</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WATERPURIFIER_NEUTRONIUM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WATERPURIFIER_NEUTRONIUM.DESC"
+msgid "The clean water produced by this gilded filtration system has an unmistakably rich flavor."
+msgstr "這個鍍金過濾系統所生產的乾淨水帶有一種絕對濃郁的醇厚風味。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WATERPURIFIER_NEUTRONIUM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WATERPURIFIER_NEUTRONIUM.NAME"
+msgid "<link=\"WATERPURIFIER\">Regal Neutronium Water Sieve</link>"
+msgstr "<link=\"WATERPURIFIER\">帝王 0 號淨水器</link>"
 
 #. STRINGS.BUILDING.DETAILS.USE_COUNT
 msgctxt "STRINGS.BUILDING.DETAILS.USE_COUNT"
@@ -8792,8 +9142,8 @@ msgstr "更強力的火箭引擎能夠推動更重的負載。"
 
 #. STRINGS.BUILDINGS.PREFABS.BIODIESELENGINECLUSTER.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.BIODIESELENGINECLUSTER.EFFECT"
-msgid "Burns <link=\"REFINEDLIPID\">Biodiesel</link> to propel rockets for mid-range space exploration.\n\nBiodiesel Engines have generous height restrictions, ideal for hauling many modules.\n\nEngine must be built via <link=\"LAUNCHPAD\">Rocket Platform</link>, and requires a <link=\"OXIDIZERTANKLIQUID\">Liquid Oxidizer Tank</link>.\n\nOnce the engine has been built, more rocket modules can be added."
-msgstr "燃燒<link=\"REFINEDLIPID\">生質柴油</link>來推動火箭，進行中程太空探索。\n\n生質柴油引擎擁有寬鬆的高度限制，非常適合運載許多模組。\n\n引擎必須透過<link=\"LAUNCHPAD\">火箭平台</link>建造，並需要一個<link=\"OXIDIZERTANKLIQUID\">液態氧化劑儲罐</link>。\n\n引擎建造完成後，即可加入更多火箭模組。"
+msgid "Burns <link=\"REFINEDLIPID\">Biodiesel</link> to propel rockets for mid-range space exploration.\n\nBiodiesel Engines have generous height restrictions, ideal for hauling many modules.\n\nEngine must be built via <link=\"LAUNCHPAD\">Rocket Platform</link>, and requires an oxidizer tank.\n\nOnce the engine has been built, more rocket modules can be added."
+msgstr "燃燒<link=\"REFINEDLIPID\">生質柴油</link>來推動火箭，進行中程太空探索。\n\n生質柴油引擎擁有寬鬆的高度限制，非常適合運載許多模組。\n\n引擎必須透過<link=\"LAUNCHPAD\">火箭平台</link>建造，並需要一個氧化劑艙。\n\n引擎建造完成後，即可加入更多火箭模組。"
 
 #. STRINGS.BUILDINGS.PREFABS.BIODIESELENGINECLUSTER.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.BIODIESELENGINECLUSTER.NAME"
@@ -13657,8 +14007,8 @@ msgstr "氫氣引擎可以比蒸氣或石油引擎，讓火箭飛到更遠的地
 
 #. STRINGS.BUILDINGS.PREFABS.HYDROGENENGINECLUSTER.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.HYDROGENENGINECLUSTER.EFFECT"
-msgid "Burns <link=\"LIQUIDHYDROGEN\">Liquid Hydrogen</link> to propel rockets for long-range space exploration.\n\nHydrogen Engines have the same generous height restrictions as <link=\"KEROSENEENGINE\">Petroleum Engines</link> but are slightly faster.\n\nEngine must be built via <link=\"LAUNCHPAD\">Rocket Platform</link>, and requires a <link=\"OXIDIZERTANKLIQUID\">Liquid Oxidizer Tank</link>.\n\nOnce the engine has been built, more rocket modules can be added."
-msgstr "燃燒<link=\"LIQUIDHYDROGEN\">液態氫</link>來推動火箭，進行長程太空探索。\n\n氫引擎與<link=\"KEROSENEENGINE\">石油引擎</link>具有相同寬鬆的高度限制，但速度稍快。\n\n引擎必須透過<link=\"LAUNCHPAD\">火箭平台</link>建造，並需要一個<link=\"OXIDIZERTANKLIQUID\">液體氧化劑艙</link>。\n\n一旦引擎建造好了，可以加裝更多的火箭模組。"
+msgid "Burns <link=\"LIQUIDHYDROGEN\">Liquid Hydrogen</link> to propel rockets for long-range space exploration.\n\nHydrogen Engines have the same generous height restrictions as <link=\"KEROSENEENGINE\">Petroleum Engines</link> but are slightly faster.\n\nEngine must be built via <link=\"LAUNCHPAD\">Rocket Platform</link>, and requires an oxidizer tank.\n\nOnce the engine has been built, more rocket modules can be added."
+msgstr "燃燒<link=\"LIQUIDHYDROGEN\">液態氫</link>來推動火箭，進行長程太空探索。\n\n氫引擎與<link=\"KEROSENEENGINE\">石油引擎</link>具有相同寬鬆的高度限制，但速度稍快。\n\n引擎必須透過<link=\"LAUNCHPAD\">火箭平台</link>建造，並需要一個氧化劑艙。\n\n一旦引擎建造好了，可以加裝更多的火箭模組。"
 
 #. STRINGS.BUILDINGS.PREFABS.HYDROGENENGINECLUSTER.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.HYDROGENENGINECLUSTER.NAME"
@@ -14002,8 +14352,8 @@ msgstr "更強大的火箭引擎可以推動更重的負載。"
 
 #. STRINGS.BUILDINGS.PREFABS.KEROSENEENGINECLUSTER.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.KEROSENEENGINECLUSTER.EFFECT"
-msgid "Burns <link=\"PETROLEUM\">Petroleum</link> to propel rockets for mid-range space exploration.\n\nPetroleum Engines have generous height restrictions, ideal for hauling many modules.\n\nEngine must be built via <link=\"LAUNCHPAD\">Rocket Platform</link>, and requires a <link=\"OXIDIZERTANKLIQUIDCLUSTER\">Liquid Oxidizer Tank</link>. \n\nOnce the engine has been built, more rocket modules can be added."
-msgstr "燃燒<link=\"PETROLEUM\">石油</link>來推動火箭，進行中程太空探索。\n\n石油引擎擁有寬鬆的高度限制，非常適合運載許多模組。\n\n引擎必須透過<link=\"LAUNCHPAD\">火箭平台</link>建造，並需要一個<link=\"OXIDIZERTANKLIQUIDCLUSTER\">液體氧化劑艙</link>。\n\n一旦引擎建造好了，可以加裝更多的火箭模組。"
+msgid "Burns <link=\"PETROLEUM\">Petroleum</link> to propel rockets for mid-range space exploration.\n\nPetroleum Engines have generous height restrictions, ideal for hauling many modules.\n\nEngine must be built via <link=\"LAUNCHPAD\">Rocket Platform</link>, and requires an oxidizer tank. \n\nOnce the engine has been built, more rocket modules can be added."
+msgstr "燃燒<link=\"PETROLEUM\">石油</link>來推動火箭，進行中程太空探索。\n\n石油引擎擁有寬鬆的高度限制，非常適合運載許多模組。\n\n引擎必須透過<link=\"LAUNCHPAD\">火箭平台</link>建造，並需要一個氧化劑艙。\n\n一旦引擎建造好了，可以加裝更多的火箭模組。"
 
 #. STRINGS.BUILDINGS.PREFABS.KEROSENEENGINECLUSTER.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.KEROSENEENGINECLUSTER.NAME"
@@ -14017,8 +14367,8 @@ msgstr "火箭可以載著複製人進入太空並帶回稀有的資源。"
 
 #. STRINGS.BUILDINGS.PREFABS.KEROSENEENGINECLUSTERSMALL.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.KEROSENEENGINECLUSTERSMALL.EFFECT"
-msgid "Burns <link=\"PETROLEUM\">Petroleum</link> to propel rockets for mid-range space exploration.\n\nSmall Petroleum Engines possess the same speed as a <link=\"KEROSENEENGINE\">Petroleum Engines</link> but have smaller height restrictions.\n\nEngine must be built via <link=\"LAUNCHPAD\">Rocket Platform</link>, and requires a <link=\"OXIDIZERTANKLIQUIDCLUSTER\">Liquid Oxidizer Tank</link>.\n\nOnce the engine has been built, more rocket modules can be added."
-msgstr "燃燒<link=\"PETROLEUM\">石油</link>來推動火箭，進行中程太空探索。\n\n小型石油引擎與<link=\"KEROSENEENGINE\">石油引擎</link>的速度一樣，但高度限制較小。\n\n引擎必須透過<link=\"LAUNCHPAD\">火箭平台</link>建造，並需要一個<link=\"OXIDIZERTANKLIQUIDCLUSTER\">液體氧化劑艙</link>。\n\n一旦引擎建造好了，可以加裝更多的火箭模組。"
+msgid "Burns <link=\"PETROLEUM\">Petroleum</link> to propel rockets for mid-range space exploration.\n\nSmall Petroleum Engines possess the same speed as a <link=\"KEROSENEENGINE\">Petroleum Engines</link> but have smaller height restrictions.\n\nEngine must be built via <link=\"LAUNCHPAD\">Rocket Platform</link>, and requires an oxidizer tank.\n\nOnce the engine has been built, more rocket modules can be added."
+msgstr "燃燒<link=\"PETROLEUM\">石油</link>來推動火箭，進行中程太空探索。\n\n小型石油引擎與<link=\"KEROSENEENGINE\">石油引擎</link>的速度一樣，但高度限制較小。\n\n引擎必須透過<link=\"LAUNCHPAD\">火箭平台</link>建造，並需要一個氧化劑艙。\n\n一旦引擎建造好了，可以加裝更多的火箭模組。"
 
 #. STRINGS.BUILDINGS.PREFABS.KEROSENEENGINECLUSTERSMALL.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.KEROSENEENGINECLUSTERSMALL.NAME"
@@ -25228,7 +25578,7 @@ msgstr "龍鱗蜥"
 #. STRINGS.CODEX.DUPLICANT.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.DUPLICANT.BODY.CONTAINER1"
 msgid "Duplicants are printed at the <link=\"HEADQUARTERS\">Printing Pod</link>, emerging fully formed and clothed in standard-issue uniforms. Unique outfits can be found in the Supply Closet.\n"
-msgstr "從<link=\"HEADQUARTERS\">列印元</link>中列印出來的複製人，完全成型並穿著標準制服。可以在供應櫃中找到獨特的服裝。\n"
+msgstr "從<link=\"HEADQUARTERS\">列印元</link>中列印出來的複製人，完全成型並穿著標準制服。可以在供應櫃中找到獨特的外觀。\n"
 
 #. STRINGS.CODEX.DUPLICANT.CODEXCATEGORYNAME
 msgctxt "STRINGS.CODEX.DUPLICANT.CODEXCATEGORYNAME"
@@ -38577,8 +38927,8 @@ msgstr "{0} 研究速度"
 
 #. STRINGS.DUPLICANTS.ATTRIBUTES.LEARNING.SPEEDMODIFIER
 msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.LEARNING.SPEEDMODIFIER"
-msgid "{0} Skill Leveling"
-msgstr "{0} 技能等級"
+msgid "{0} Attribute Leveling Speed"
+msgstr "{0} 屬性升級速度"
 
 #. STRINGS.DUPLICANTS.ATTRIBUTES.LIFESUPPORT.DESC
 msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.LIFESUPPORT.DESC"
@@ -46165,6 +46515,16 @@ msgctxt "STRINGS.DUPLICANTS.PERSONALITIES.RUBY.NAME"
 msgid "Ruby"
 msgstr "Ruby"
 
+#. STRINGS.DUPLICANTS.PERSONALITIES.SENA.DESC
+msgctxt "STRINGS.DUPLICANTS.PERSONALITIES.SENA.DESC"
+msgid "{0}s only care about three things: gold accents, true crime, and the advancement of nuclear physics."
+msgstr "{0}只關心三件事：金色點綴、真實犯罪和核物理的進展。"
+
+#. STRINGS.DUPLICANTS.PERSONALITIES.SENA.NAME
+msgctxt "STRINGS.DUPLICANTS.PERSONALITIES.SENA.NAME"
+msgid "Sena"
+msgstr "Sena"
+
 #. STRINGS.DUPLICANTS.PERSONALITIES.SONYAR.DESC
 msgctxt "STRINGS.DUPLICANTS.PERSONALITIES.SONYAR.DESC"
 msgid "{0}s would sooner burn down the colony than read an instruction manual."
@@ -49973,7 +50333,7 @@ msgstr "邋遢的衣著"
 #. STRINGS.DUPLICANTS.TRAITS.DECORUP.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.DECORUP.DESC"
 msgid "This Duplicant's radiant self-confidence makes even the rattiest outfits look trendy"
-msgstr "這名複製人散發強烈的自信，即使是最棘手的服裝也顯得時尚"
+msgstr "這名複製人散發強烈的自信，即使是最棘手的外觀也顯得時尚"
 
 #. STRINGS.DUPLICANTS.TRAITS.DECORUP.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.DECORUP.NAME"
@@ -57008,7 +57368,7 @@ msgstr "<link=\"CUSTOMCLOTHING\">工作服</link>"
 #. STRINGS.EQUIPMENT.PREFABS.CUSTOMCLOTHING.FACADES.TRIANGLES
 msgctxt "STRINGS.EQUIPMENT.PREFABS.CUSTOMCLOTHING.FACADES.TRIANGLES"
 msgid "<link=\"CUSTOMCLOTHING\">Confetti Suit</link>"
-msgstr "<link=\"CUSTOMCLOTHING\">斑點服裝</link>"
+msgstr "<link=\"CUSTOMCLOTHING\">斑點西裝</link>"
 
 #. STRINGS.EQUIPMENT.PREFABS.CUSTOMCLOTHING.FACADES.WORKOUT
 msgctxt "STRINGS.EQUIPMENT.PREFABS.CUSTOMCLOTHING.FACADES.WORKOUT"
@@ -72608,7 +72968,7 @@ msgstr "增加<b>{0}</b>"
 #. STRINGS.UI.CHARACTERCONTAINER_CONFIRM_OUTFIT_SELECTION_TOOLTIP
 msgctxt "STRINGS.UI.CHARACTERCONTAINER_CONFIRM_OUTFIT_SELECTION_TOOLTIP"
 msgid "Click to confirm this outfit selection."
-msgstr "點擊以確認此套服裝選擇。"
+msgstr "點擊以確認此套外觀選擇。"
 
 #. STRINGS.UI.CHARACTERCONTAINER_CONGENITALTRAIT
 msgctxt "STRINGS.UI.CHARACTERCONTAINER_CONGENITALTRAIT"
@@ -72618,7 +72978,7 @@ msgstr "基因特徵：{0}"
 #. STRINGS.UI.CHARACTERCONTAINER_EXPAND_OUTFIT_SELECTOR_BUTTON
 msgctxt "STRINGS.UI.CHARACTERCONTAINER_EXPAND_OUTFIT_SELECTOR_BUTTON"
 msgid "<b>Current Outfit:</b> {0}\n\nClick to toggle between different outfits owned by this colony\n\nVisit the <style=\"KKeyword\">Supply Closet</style> to create new outfits"
-msgstr "<b>目前外觀：</b> {0}\n\n點擊可切換此殖民地擁有的不同服裝\n\n造訪<style=\"KKeyword\">供應櫃</style>以創造新外觀"
+msgstr "<b>目前外觀：</b> {0}\n\n點擊可切換此殖民地擁有的不同外觀\n\n造訪<style=\"KKeyword\">供應櫃</style>以創造新外觀"
 
 #. STRINGS.UI.CHARACTERCONTAINER_EXPECTATIONS_TITLE
 msgctxt "STRINGS.UI.CHARACTERCONTAINER_EXPECTATIONS_TITLE"
@@ -74614,6 +74974,21 @@ msgstr "複製"
 msgctxt "STRINGS.UI.COPY_BUILDING_TOOLTIP"
 msgid "Create new build orders using the most recent building selection as a template. {Hotkey}"
 msgstr "複製選取的建築，以便建造一個新的。 {Hotkey}"
+
+#. STRINGS.UI.COSMETIC1.MIXING_TOOLTIP
+msgctxt "STRINGS.UI.COSMETIC1.MIXING_TOOLTIP"
+msgid "<i>The Regal Neutronium Cosmetics</i> features cosmetic blueprints fit for royalty"
+msgstr "<b>帝王 0 號外觀套件</b>包含適合皇室使用的外觀藍圖"
+
+#. STRINGS.UI.COSMETIC1.NAME
+msgctxt "STRINGS.UI.COSMETIC1.NAME"
+msgid "The Regal Neutronium Cosmetics"
+msgstr "帝王 0 號外觀套件"
+
+#. STRINGS.UI.COSMETIC1.NAME_ITAL
+msgctxt "STRINGS.UI.COSMETIC1.NAME_ITAL"
+msgid "<i>The Regal Neutronium Cosmetics</i>"
+msgstr "<i>帝王 0 號外觀套件</b>"
 
 #. STRINGS.UI.CRAFT
 msgctxt "STRINGS.UI.CRAFT"
@@ -81517,8 +81892,8 @@ msgstr "閃光便便化石"
 
 #. STRINGS.UI.KEEPSAKES.HIJACK_HEADQUARTERS.DESCRIPTION
 msgctxt "STRINGS.UI.KEEPSAKES.HIJACK_HEADQUARTERS.DESCRIPTION"
-msgid "A handheld hairstyling tool.\n\nThe handle bears a small engraving that reads: \"To N.T., from N.T.\""
-msgstr "一個手持式的髮型設計工具。\n\n手柄上帶有一個小小的雕刻，上面寫著：「致 N.T.，來自 N.T.」"
+msgid "A vintage follicle styling tool.\n\nThe handle bears a small engraving that reads: \"To N.T., from N.T.\""
+msgstr "一件老式的毛髮造型工具。\n\n手柄上帶有一個小小的雕刻，上面寫著：「致 N.T.，來自 N.T.」"
 
 #. STRINGS.UI.KEEPSAKES.HIJACK_HEADQUARTERS.NAME
 msgctxt "STRINGS.UI.KEEPSAKES.HIJACK_HEADQUARTERS.NAME"
@@ -82368,7 +82743,7 @@ msgstr "衣櫃"
 #. STRINGS.UI.LOCKER_MENU.BUTTON_OUTFITS_DESCRIPTION
 msgctxt "STRINGS.UI.LOCKER_MENU.BUTTON_OUTFITS_DESCRIPTION"
 msgid "Manage my colony's collection of outfits"
-msgstr "管理我的殖民地的服裝收藏"
+msgstr "管理我的殖民地的外觀收藏"
 
 #. STRINGS.UI.LOCKER_MENU.DEFAULT_DESCRIPTION
 msgctxt "STRINGS.UI.LOCKER_MENU.DEFAULT_DESCRIPTION"
@@ -83873,77 +84248,77 @@ msgstr "{OutfitName} ({ConflictNumber})"
 #. STRINGS.UI.OUTFITS.ATHLETE.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATHLETE.NAME"
 msgid "Racing Outfit"
-msgstr "賽車服裝"
+msgstr "賽車外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_BASIC_PURPLE.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_BASIC_PURPLE.NAME"
 msgid "Eggplant Atmo Outfit"
-msgstr "紫茄太空套裝"
+msgstr "紫茄太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_CANTALOUPE.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_CANTALOUPE.NAME"
 msgid "Rocketmelon Atmo Outfit"
-msgstr "火箭香瓜太空套裝"
+msgstr "火箭香瓜太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_CONFETTI.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_CONFETTI.NAME"
 msgid "Confetti Atmo Outfit"
-msgstr "彩屑太空套裝"
+msgstr "彩屑太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_CUBIST.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_CUBIST.NAME"
 msgid "Cubist Atmo Outfit"
-msgstr "立體主義太空套裝"
+msgstr "立體主義太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_LIMONE.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_LIMONE.NAME"
 msgid "Citrus Atmo Outfit"
-msgstr "柑橘太空套裝"
+msgstr "柑橘太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_PINK_PURPLE.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_PINK_PURPLE.NAME"
 msgid "Pink Punch Atmo Outfit"
-msgstr "粉孔太空套裝"
+msgstr "粉孔太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_PUFT.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_PUFT.NAME"
 msgid "Puft Atmo Outfit"
-msgstr "帕夫太空套裝"
+msgstr "帕夫太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_RED_GREY.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_RED_GREY.NAME"
 msgid "Blastoff Atmo Outfit"
-msgstr "升空太空套裝"
+msgstr "升空太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_SPARKLE_BLUE.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_SPARKLE_BLUE.NAME"
 msgid "Blue Glitter Atmo Outfit"
-msgstr "藍色亮片太空套裝"
+msgstr "藍色亮片太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_SPARKLE_GREEN.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_SPARKLE_GREEN.NAME"
 msgid "Green Glitter Atmo Outfit"
-msgstr "綠色亮片太空套裝"
+msgstr "綠色亮片太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_SPARKLE_LAVENDER.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_SPARKLE_LAVENDER.NAME"
 msgid "Violet Glitter Atmo Outfit"
-msgstr "紫色亮片太空套裝"
+msgstr "紫色亮片太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_SPARKLE_RED.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_SPARKLE_RED.NAME"
 msgid "Red Glitter Atmo Outfit"
-msgstr "紅色亮片太空套裝"
+msgstr "紅色亮片太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_SPIFFY.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_SPIFFY.NAME"
 msgid "Spiffy Atmo Outfit"
-msgstr "時尚太空套裝"
+msgstr "時尚太空外觀"
 
 #. STRINGS.UI.OUTFITS.BALLET.NAME
 msgctxt "STRINGS.UI.OUTFITS.BALLET.NAME"
 msgid "Ballet Outfit"
-msgstr "芭蕾舞套裝"
+msgstr "芭蕾舞外觀"
 
 #. STRINGS.UI.OUTFITS.BASIC_AQUA.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_AQUA.NAME"
@@ -83958,12 +84333,12 @@ msgstr "基本黑色外觀"
 #. STRINGS.UI.OUTFITS.BASIC_BLUE_COBALT.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_BLUE_COBALT.NAME"
 msgid "True Blue Outfit"
-msgstr "忠藍服裝"
+msgstr "忠藍外觀"
 
 #. STRINGS.UI.OUTFITS.BASIC_DEEPRED.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_DEEPRED.NAME"
 msgid "Team Captain Outfit"
-msgstr "隊長服裝"
+msgstr "隊長外觀"
 
 #. STRINGS.UI.OUTFITS.BASIC_GREEN.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_GREEN.NAME"
@@ -83973,17 +84348,17 @@ msgstr "基本綠色外觀"
 #. STRINGS.UI.OUTFITS.BASIC_GREEN_KELLY.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_GREEN_KELLY.NAME"
 msgid "Go Team! Outfit"
-msgstr "加油服裝"
+msgstr "加油外觀"
 
 #. STRINGS.UI.OUTFITS.BASIC_GREY_CHARCOAL.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_GREY_CHARCOAL.NAME"
 msgid "Underdog Outfit"
-msgstr "弱勢服裝"
+msgstr "弱勢外觀"
 
 #. STRINGS.UI.OUTFITS.BASIC_LEMON.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_LEMON.NAME"
 msgid "Team Hype Outfit"
-msgstr "團隊激情服裝"
+msgstr "團隊激情外觀"
 
 #. STRINGS.UI.OUTFITS.BASIC_ORANGE.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_ORANGE.NAME"
@@ -83993,7 +84368,7 @@ msgstr "基本橘色外觀"
 #. STRINGS.UI.OUTFITS.BASIC_PINK_FLAMINGO.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_PINK_FLAMINGO.NAME"
 msgid "Pep Rally Outfit"
-msgstr "動員會服裝"
+msgstr "動員會外觀"
 
 #. STRINGS.UI.OUTFITS.BASIC_PINK_ORCHID.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_PINK_ORCHID.NAME"
@@ -84013,7 +84388,7 @@ msgstr "基礎紅色外觀"
 #. STRINGS.UI.OUTFITS.BASIC_SATSUMA.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_SATSUMA.NAME"
 msgid "Superfan Outfit"
-msgstr "忠實粉絲服裝"
+msgstr "忠實粉絲外觀"
 
 #. STRINGS.UI.OUTFITS.BASIC_WHITE.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_WHITE.NAME"
@@ -84028,197 +84403,197 @@ msgstr "基本黃色外觀"
 #. STRINGS.UI.OUTFITS.CANUXTUX.NAME
 msgctxt "STRINGS.UI.OUTFITS.CANUXTUX.NAME"
 msgid "Canadian Tuxedo Outfit"
-msgstr "加拿大燕尾服套裝"
+msgstr "加拿大燕尾服外觀"
 
 #. STRINGS.UI.OUTFITS.CIRCUIT.NAME
 msgctxt "STRINGS.UI.OUTFITS.CIRCUIT.NAME"
 msgid "LED Party Outfit"
-msgstr "LED 派對套裝"
+msgstr "LED 派對外觀"
 
 #. STRINGS.UI.OUTFITS.DONOR.NAME
 msgctxt "STRINGS.UI.OUTFITS.DONOR.NAME"
 msgid "Donor Outfit"
-msgstr "捐贈者套裝"
+msgstr "捐贈者外觀"
 
 #. STRINGS.UI.OUTFITS.DOWNTIME.NAME
 msgctxt "STRINGS.UI.OUTFITS.DOWNTIME.NAME"
 msgid "Downtime Outfit"
-msgstr "休息套裝"
+msgstr "休息外觀"
 
 #. STRINGS.UI.OUTFITS.FLANNEL_BLACK.NAME
 msgctxt "STRINGS.UI.OUTFITS.FLANNEL_BLACK.NAME"
 msgid "Monochrome Flannel Outfit"
-msgstr "黑白法蘭絨套裝"
+msgstr "黑白法蘭絨外觀"
 
 #. STRINGS.UI.OUTFITS.FLANNEL_BLUE_MIDDLE.NAME
 msgctxt "STRINGS.UI.OUTFITS.FLANNEL_BLUE_MIDDLE.NAME"
 msgid "Scrub Flannel Outfit"
-msgstr "磨砂法蘭絨套裝"
+msgstr "磨砂法蘭絨外觀"
 
 #. STRINGS.UI.OUTFITS.FLANNEL_GREEN.NAME
 msgctxt "STRINGS.UI.OUTFITS.FLANNEL_GREEN.NAME"
 msgid "Swampy Flannel Outfit"
-msgstr "沼澤法蘭絨套裝"
+msgstr "沼澤法蘭絨外觀"
 
 #. STRINGS.UI.OUTFITS.FLANNEL_ORANGE.NAME
 msgctxt "STRINGS.UI.OUTFITS.FLANNEL_ORANGE.NAME"
 msgid "Cadmium Flannel Outfit"
-msgstr "銀灰法蘭絨套裝"
+msgstr "銀灰法蘭絨外觀"
 
 #. STRINGS.UI.OUTFITS.FLANNEL_PINK_ORCHID.NAME
 msgctxt "STRINGS.UI.OUTFITS.FLANNEL_PINK_ORCHID.NAME"
 msgid "Flare Flannel Outfit"
-msgstr "火光法蘭絨套裝"
+msgstr "火光法蘭絨外觀"
 
 #. STRINGS.UI.OUTFITS.FLANNEL_PURPLE.NAME
 msgctxt "STRINGS.UI.OUTFITS.FLANNEL_PURPLE.NAME"
 msgid "Fusion Flannel Outfit"
-msgstr "融合法蘭絨套裝"
+msgstr "融合法蘭絨外觀"
 
 #. STRINGS.UI.OUTFITS.FLANNEL_RED.NAME
 msgctxt "STRINGS.UI.OUTFITS.FLANNEL_RED.NAME"
 msgid "Classic Flannel Outfit"
-msgstr "經典法蘭絨套裝"
+msgstr "經典法蘭絨外觀"
 
 #. STRINGS.UI.OUTFITS.FLANNEL_WHITE.NAME
 msgctxt "STRINGS.UI.OUTFITS.FLANNEL_WHITE.NAME"
 msgid "White Flannel Outfit"
-msgstr "純白法蘭絨套裝"
+msgstr "純白法蘭絨外觀"
 
 #. STRINGS.UI.OUTFITS.FLANNEL_YELLOW.NAME
 msgctxt "STRINGS.UI.OUTFITS.FLANNEL_YELLOW.NAME"
 msgid "Flax Flannel Outfit"
-msgstr "亞麻法蘭絨套裝"
+msgstr "亞麻法蘭絨外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_BILE.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_BILE.NAME"
 msgid "Yellowcake Undies Outfit"
-msgstr "黃餅內衣套裝"
+msgstr "黃餅內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_CORTEX.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_CORTEX.NAME"
 msgid "Dusk Undies Outfit"
-msgstr "夜幕內衣套裝"
+msgstr "夜幕內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_FROSTY.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_FROSTY.NAME"
 msgid "Frostbasin Undies Outfit"
-msgstr "冰盆內衣套裝"
+msgstr "冰盆內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_GLUON.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_GLUON.NAME"
 msgid "Frilly Saltrock Outfit"
-msgstr "鹽岩飾邊套裝"
+msgstr "鹽岩飾邊外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_GOOP.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_GOOP.NAME"
 msgid "Leachy Undies Outfit"
-msgstr "滲透內衣套裝"
+msgstr "滲透內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_IRONBOW.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_IRONBOW.NAME"
 msgid "Magma Undies Outfit"
-msgstr "岩漿內衣套裝"
+msgstr "岩漿內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_LOCUS.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_LOCUS.NAME"
 msgid "Balmy Undies Outfit"
-msgstr "芳香內衣套裝"
+msgstr "芳香內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_NYBBLE.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_NYBBLE.NAME"
 msgid "Atomic Undies Outfit"
-msgstr "原子內衣套裝"
+msgstr "原子內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_OBELUS.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_OBELUS.NAME"
 msgid "Charcoal Undies Outfit"
-msgstr "木炭內衣套裝"
+msgstr "木炭內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_PHLEGM.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_PHLEGM.NAME"
 msgid "Slate Undies Outfit"
-msgstr "板岩內衣套裝"
+msgstr "板岩內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GONCHIES_BLUEBERRY.NAME
 msgctxt "STRINGS.UI.OUTFITS.GONCHIES_BLUEBERRY.NAME"
 msgid "Admin Undies Outfit"
-msgstr "管理員內衣套裝"
+msgstr "管理員內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GONCHIES_GRAPE.NAME
 msgctxt "STRINGS.UI.OUTFITS.GONCHIES_GRAPE.NAME"
 msgid "Buzzword Undies Outfit"
-msgstr "流行語內衣套裝"
+msgstr "流行語內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GONCHIES_LEMON.NAME
 msgctxt "STRINGS.UI.OUTFITS.GONCHIES_LEMON.NAME"
 msgid "Groupthink Undies Outfit"
-msgstr "群體思維內衣套裝"
+msgstr "群體思維內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GONCHIES_LIME.NAME
 msgctxt "STRINGS.UI.OUTFITS.GONCHIES_LIME.NAME"
 msgid "Stakeholder Undies Outfit"
-msgstr "股東內衣套裝"
+msgstr "股東內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GONCHIES_SATSUMA.NAME
 msgctxt "STRINGS.UI.OUTFITS.GONCHIES_SATSUMA.NAME"
 msgid "Underling Undies Outfit"
-msgstr "下屬內衣套裝"
+msgstr "下屬內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GONCHIES_STRAWBERRY.NAME
 msgctxt "STRINGS.UI.OUTFITS.GONCHIES_STRAWBERRY.NAME"
 msgid "Executive Undies Outfit"
-msgstr "管理內衣套裝"
+msgstr "管理內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GONCHIES_WATERMELON.NAME
 msgctxt "STRINGS.UI.OUTFITS.GONCHIES_WATERMELON.NAME"
 msgid "Synergy Undies Outfit"
-msgstr "協作內衣套裝"
+msgstr "協作內衣外觀"
 
 #. STRINGS.UI.OUTFITS.HIVIS.NAME
 msgctxt "STRINGS.UI.OUTFITS.HIVIS.NAME"
 msgid "Hi-Vis Outfit"
-msgstr "高能見套裝"
+msgstr "高能見外觀"
 
 #. STRINGS.UI.OUTFITS.JELLYPUFF_BLUEBERRY.NAME
 msgctxt "STRINGS.UI.OUTFITS.JELLYPUFF_BLUEBERRY.NAME"
 msgid "Blueberry Jelly Outfit"
-msgstr "藍莓果凍服裝"
+msgstr "藍莓果凍外觀"
 
 #. STRINGS.UI.OUTFITS.JELLYPUFF_GRAPE.NAME
 msgctxt "STRINGS.UI.OUTFITS.JELLYPUFF_GRAPE.NAME"
 msgid "Grape Jelly Outfit"
-msgstr "葡萄果凍服裝"
+msgstr "葡萄果凍外觀"
 
 #. STRINGS.UI.OUTFITS.JELLYPUFF_LEMON.NAME
 msgctxt "STRINGS.UI.OUTFITS.JELLYPUFF_LEMON.NAME"
 msgid "Lemon Jelly Outfit"
-msgstr "檸檬果凍服裝"
+msgstr "檸檬果凍外觀"
 
 #. STRINGS.UI.OUTFITS.JELLYPUFF_LIME.NAME
 msgctxt "STRINGS.UI.OUTFITS.JELLYPUFF_LIME.NAME"
 msgid "Lime Jelly Outfit"
-msgstr "萊姆果凍服裝"
+msgstr "萊姆果凍外觀"
 
 #. STRINGS.UI.OUTFITS.JELLYPUFF_SATSUMA.NAME
 msgctxt "STRINGS.UI.OUTFITS.JELLYPUFF_SATSUMA.NAME"
 msgid "Satsuma Jelly Outfit"
-msgstr "蜜橘果凍服裝"
+msgstr "蜜橘果凍外觀"
 
 #. STRINGS.UI.OUTFITS.JELLYPUFF_STRAWBERRY.NAME
 msgctxt "STRINGS.UI.OUTFITS.JELLYPUFF_STRAWBERRY.NAME"
 msgid "Strawberry Jelly Outfit"
-msgstr "草莓果凍服裝"
+msgstr "草莓果凍外觀"
 
 #. STRINGS.UI.OUTFITS.JELLYPUFF_WATERMELON.NAME
 msgctxt "STRINGS.UI.OUTFITS.JELLYPUFF_WATERMELON.NAME"
 msgid "Watermelon Jelly Outfit"
-msgstr "西瓜果凍服裝"
+msgstr "西瓜果凍外觀"
 
 #. STRINGS.UI.OUTFITS.LUCKY.NAME
 msgctxt "STRINGS.UI.OUTFITS.LUCKY.NAME"
 msgid "Lucky Jammies Outfit"
-msgstr "幸運睡衣套裝"
+msgstr "幸運睡衣外觀"
 
 #. STRINGS.UI.OUTFITS.MECHANIC.NAME
 msgctxt "STRINGS.UI.OUTFITS.MECHANIC.NAME"
@@ -84228,7 +84603,7 @@ msgstr "工程師工作服"
 #. STRINGS.UI.OUTFITS.NERD.NAME
 msgctxt "STRINGS.UI.OUTFITS.NERD.NAME"
 msgid "Research Outfit"
-msgstr "研究套裝"
+msgstr "研究外觀"
 
 #. STRINGS.UI.OUTFITS.PAJAMAS_SNOW.NAME
 msgctxt "STRINGS.UI.OUTFITS.PAJAMAS_SNOW.NAME"
@@ -84243,22 +84618,22 @@ msgstr "波點裙運動裝"
 #. STRINGS.UI.OUTFITS.POMPOM_SHINEBUGS_PINK_PEPPERNUT.NAME
 msgctxt "STRINGS.UI.OUTFITS.POMPOM_SHINEBUGS_PINK_PEPPERNUT.NAME"
 msgid "Pom Bug Outfit"
-msgstr "絨蟲套裝"
+msgstr "絨蟲外觀"
 
 #. STRINGS.UI.OUTFITS.REBELGI.NAME
 msgctxt "STRINGS.UI.OUTFITS.REBELGI.NAME"
 msgid "Rebel Gi Outfit"
-msgstr "叛逆套裝"
+msgstr "叛逆外觀"
 
 #. STRINGS.UI.OUTFITS.SLEEVELESS_BOW_BW.NAME
 msgctxt "STRINGS.UI.OUTFITS.SLEEVELESS_BOW_BW.NAME"
 msgid "PhD Dress Outfit"
-msgstr "博士連身裙套裝"
+msgstr "博士連身裙外觀"
 
 #. STRINGS.UI.OUTFITS.SNOWFLAKE_BLUE.NAME
 msgctxt "STRINGS.UI.OUTFITS.SNOWFLAKE_BLUE.NAME"
 msgid "Crystal-Iced Outfit"
-msgstr "冰晶套裝"
+msgstr "冰晶外觀"
 
 #. STRINGS.UI.OUTFITS.STANDARD_BLUE.NAME
 msgctxt "STRINGS.UI.OUTFITS.STANDARD_BLUE.NAME"
@@ -84283,37 +84658,37 @@ msgstr "標準黃色制服"
 #. STRINGS.UI.OUTFITS.SUPERSTAR.NAME
 msgctxt "STRINGS.UI.OUTFITS.SUPERSTAR.NAME"
 msgid "Superstar Outfit"
-msgstr "超級明星套裝"
+msgstr "超級明星外觀"
 
 #. STRINGS.UI.OUTFITS.SWEETHEART.NAME
 msgctxt "STRINGS.UI.OUTFITS.SWEETHEART.NAME"
 msgid "Sweetheart Jammies Outfit"
-msgstr "甜心睡衣套裝"
+msgstr "甜心睡衣外觀"
 
 #. STRINGS.UI.OUTFITS.TWEED_PINK_ORCHID.NAME
 msgctxt "STRINGS.UI.OUTFITS.TWEED_PINK_ORCHID.NAME"
 msgid "Power Brunch Outfit"
-msgstr "午宴套裝"
+msgstr "午宴外觀"
 
 #. STRINGS.UI.OUTFITS.VELOUR_BLACK.NAME
 msgctxt "STRINGS.UI.OUTFITS.VELOUR_BLACK.NAME"
 msgid "PhD Velour Outfit"
-msgstr "博士絲絨套裝"
+msgstr "博士絲絨外觀"
 
 #. STRINGS.UI.OUTFITS.VELOUR_BLUE.NAME
 msgctxt "STRINGS.UI.OUTFITS.VELOUR_BLUE.NAME"
 msgid "Shortwave Velour Outfit"
-msgstr "短波絲絨套裝"
+msgstr "短波絲絨外觀"
 
 #. STRINGS.UI.OUTFITS.VELOUR_PINK.NAME
 msgctxt "STRINGS.UI.OUTFITS.VELOUR_PINK.NAME"
 msgid "Gamma Velour Outfit"
-msgstr "伽瑪絲絨套裝"
+msgstr "伽瑪絲絨外觀"
 
 #. STRINGS.UI.OUTFITS.WAISTCOAT_PINSTRIPE_SLATE.NAME
 msgctxt "STRINGS.UI.OUTFITS.WAISTCOAT_PINSTRIPE_SLATE.NAME"
 msgid "Nobel Pinstripe Outfit"
-msgstr "諾貝爾條紋套裝"
+msgstr "諾貝爾條紋外觀"
 
 #. STRINGS.UI.OUTFITS.WATER.NAME
 msgctxt "STRINGS.UI.OUTFITS.WATER.NAME"
@@ -84323,12 +84698,12 @@ msgstr "暖通空調工作服"
 #. STRINGS.UI.OUTFITS.X_SPORCHID.NAME
 msgctxt "STRINGS.UI.OUTFITS.X_SPORCHID.NAME"
 msgid "Sporefest Outfit"
-msgstr "孢子節日套裝"
+msgstr "孢子節日外觀"
 
 #. STRINGS.UI.OUTFITS.X1_PINCHAPEPPERNUTBELLS.NAME
 msgctxt "STRINGS.UI.OUTFITS.X1_PINCHAPEPPERNUTBELLS.NAME"
 msgid "Pinchabell Outfit"
-msgstr "椒鈴套裝"
+msgstr "椒鈴外觀"
 
 #. STRINGS.UI.OVERLAYS.CONVEYOR.BUTTON
 msgctxt "STRINGS.UI.OVERLAYS.CONVEYOR.BUTTON"
@@ -94722,8 +95097,8 @@ msgstr "頻道選擇"
 
 #. STRINGS.UI.UISIDESCREENS.LOREBEARERSIDESCREEN.TITLE
 msgctxt "STRINGS.UI.UISIDESCREENS.LOREBEARERSIDESCREEN.TITLE"
-msgid "Lore Unlock"
-msgstr "故事解鎖"
+msgid "Read Files"
+msgstr "閱讀檔案"
 
 #. STRINGS.UI.UISIDESCREENS.LURE.ATTRACTS
 msgctxt "STRINGS.UI.UISIDESCREENS.LURE.ATTRACTS"
