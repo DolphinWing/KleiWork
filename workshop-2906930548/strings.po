@@ -88183,7 +88183,7 @@ msgstr "{0} 已指派"
 #. STRINGS.UI.SKILLS_SCREEN.ASSIGNMENT_REQUIREMENTS.EXPECTATION_ALERT_DESC_EXPECTATION
 msgctxt "STRINGS.UI.SKILLS_SCREEN.ASSIGNMENT_REQUIREMENTS.EXPECTATION_ALERT_DESC_EXPECTATION"
 msgid "This Duplicant's Morale is too low to handle the rigors of this position, which will cause them Stress over time."
-msgstr "這名複製人的士氣太低，無法應對這個位置的嚴峻考驗，壓力將會隨著時間上升。"
+msgstr "這名複製人的士氣太低，無法應付這份工作的苦差事，長期下來壓力會不斷累積。"
 
 #. STRINGS.UI.SKILLS_SCREEN.ASSIGNMENT_REQUIREMENTS.EXPECTATION_ALERT_TARGET_SKILL
 msgctxt "STRINGS.UI.SKILLS_SCREEN.ASSIGNMENT_REQUIREMENTS.EXPECTATION_ALERT_TARGET_SKILL"
@@ -90608,7 +90608,7 @@ msgstr "可用資源 {0}"
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.MISSING_TOOLTIP
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.MISSING_TOOLTIP"
 msgid "No {0} installed\n\nThis rocket cannot launch without a completed {0}"
-msgstr "未安裝{0}\n\n這艘火箭未安裝{0}無法發射"
+msgstr "尚未安裝{0}\n\n缺少這個完整的{0}，火箭無法升空"
 
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.NO_DESTINATION
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.NO_DESTINATION"
@@ -90693,7 +90693,7 @@ msgstr "副駕駛已登機"
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PILOT_BOARDED.TOOLTIP.FAILURE
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PILOT_BOARDED.TOOLTIP.FAILURE"
 msgid "At least one crew member aboard the rocket must possess the <link=\"ROCKETPILOTING1\">Rocket Piloting</link> skill to launch\n\nQualified Duplicants must be assigned to the rocket crew, and have access to the module's hatch"
-msgstr "火箭上至少需有一名機組人員具備<link=\"ROCKETPILOTING1\">火箭駕駛</link>技能才能發射\n\n必須指派合格的複製人成為這艘火箭的機組人員，並且可訪問這個模組的艙門"
+msgstr "火箭上至少需有一名機組人員具備<link=\"ROCKETPILOTING1\">火箭駕駛</link>技能才能發射\n\n合格的複製人必須指派為機組人員，並能進入模組的艙口"
 
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PILOT_BOARDED.TOOLTIP.READY
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PILOT_BOARDED.TOOLTIP.READY"
@@ -90703,7 +90703,7 @@ msgstr "具備<link=\"ROCKETPILOTING1\">火箭駕駛</link>技能的複製人已
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PILOT_BOARDED.TOOLTIP.ROBO_PILOT_WARNING
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PILOT_BOARDED.TOOLTIP.ROBO_PILOT_WARNING"
 msgid "This rocket is being piloted by a <style=\"KKeyword\">Robo-Pilot</style>\n\nThere are no Duplicants with the <link=\"ROCKETPILOTING1\">Rocket Piloting</link> skill currently onboard\n\nQualified Duplicants must be assigned to the rocket crew, and have access to the module's hatch"
-msgstr "這艘火箭正被<style=\"KKeyword\">自動飛行員</style>給操控\n\n目前沒有具有<link=\"ROCKETPILOTING1\">火箭駕駛</link>技能的複製人登上火箭\n\n合格的複製人必須被分配給火箭機組人員，並有權進入模組的艙口"
+msgstr "這艘火箭正被<style=\"KKeyword\">自動飛行員</style>駕駛\n\n目前沒有具備<link=\"ROCKETPILOTING1\">火箭駕駛</link>技能的複製人登機\n\n合格的複製人必須指派為機組人員，並能進入模組的艙口"
 
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PILOT_BOARDED.TOOLTIP.WARNING
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PILOT_BOARDED.TOOLTIP.WARNING"
@@ -90738,7 +90738,7 @@ msgstr "這艘火箭沒有足夠的燃料到達目的地\n\n如果燃料艙已�
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PROPERLY_FUELED.TOOLTIP.READY
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PROPERLY_FUELED.TOOLTIP.READY"
 msgid "The rocket is sufficiently fueled for a roundtrip to its destination and back"
-msgstr "這艘火箭有足夠的氧化劑往返目的地"
+msgstr "這艘火箭燃料充足，足以往返目的地"
 
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PROPERLY_FUELED.TOOLTIP.READY_NO_DESTINATION
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PROPERLY_FUELED.TOOLTIP.READY_NO_DESTINATION"
@@ -90868,12 +90868,12 @@ msgstr "這艘火箭沒有足夠的氧化劑到達目的地\n\n如果氧化劑�
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.SUFFICIENT_OXIDIZER.TOOLTIP.READY
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.SUFFICIENT_OXIDIZER.TOOLTIP.READY"
 msgid "This rocket has sufficient oxidizer for a roundtrip to its destination and back"
-msgstr "這艘火箭有足夠的氧化劑往返目的地"
+msgstr "這艘火箭氧化劑充足，足以往返目的地"
 
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.SUFFICIENT_OXIDIZER.TOOLTIP.WARNING
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.SUFFICIENT_OXIDIZER.TOOLTIP.WARNING"
 msgid "The rocket has enough oxidizer for a one-way trip to its destination, but will not be able to make it back"
-msgstr "這艘火箭有足夠的燃料抵達目的地，但不能返航"
+msgstr "這艘火箭有足夠的氧化劑抵達目的地，但不能返航"
 
 #. STRINGS.UI.STARMAP.LISTTITLES.ANALYSIS
 msgctxt "STRINGS.UI.STARMAP.LISTTITLES.ANALYSIS"
@@ -92888,7 +92888,7 @@ msgstr "1 倍速 {Hotkey}"
 #. STRINGS.UI.TOOLTIPS.STATSPANEL
 msgctxt "STRINGS.UI.TOOLTIPS.STATSPANEL"
 msgid "The Stats Panel gives me an overview of my Duplicant's individual stats"
-msgstr "統計面板，提供所有複製人的個人統計概況"
+msgstr "統計面板，提供複製人個別數據的概覽"
 
 #. STRINGS.UI.TOOLTIPS.STRESSDESCRIPTION
 msgctxt "STRINGS.UI.TOOLTIPS.STRESSDESCRIPTION"
@@ -92898,7 +92898,7 @@ msgstr "滿足複製人的需求以管理他們的<link=\"STRESS\">壓力</link>
 #. STRINGS.UI.TOOLTIPS.STRESSPANEL
 msgctxt "STRINGS.UI.TOOLTIPS.STRESSPANEL"
 msgid "The Stress Panel offers a detailed look at what is affecting my Duplicant psychologically"
-msgstr "壓力面版，通常可以詳細地看出是什麼在影響複製人的心理"
+msgstr "壓力面板，詳細顯示影響複製人心理層面的各種因素"
 
 #. STRINGS.UI.TOOLTIPS.SUITOVERLAYSTRING
 msgctxt "STRINGS.UI.TOOLTIPS.SUITOVERLAYSTRING"
@@ -93033,7 +93033,7 @@ msgstr "這株植物必須由<style=\"KKeyword\">小動物</style>{0}授粉"
 #. STRINGS.UI.TOOLTIPS.VITALSPANEL
 msgctxt "STRINGS.UI.TOOLTIPS.VITALSPANEL"
 msgid "The Vitals Panel monitors the status and well being of my Duplicant"
-msgstr "健康面板，監控複製人的身心狀態"
+msgstr "健康面板，監控複製人的身心健康"
 
 #. STRINGS.UI.TRACKERS.BREATHABILITY
 msgctxt "STRINGS.UI.TRACKERS.BREATHABILITY"
