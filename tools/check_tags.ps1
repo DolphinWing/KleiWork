@@ -1,5 +1,13 @@
+param(
+    [string]$InPath
+)
 $OutputEncoding = [System.Text.Encoding]::UTF8
-$filePath = "D:\\work\\misc\\KleiWork\\workshop-2906930548\\strings.po"
+
+$filePath = $InPath
+if ([string]::IsNullOrEmpty($filePath)) {
+    # If no path is provided, construct the default path relative to the script's location.
+    $filePath = Join-Path $PSScriptRoot "..\workshop-2906930548\strings.po"
+}
 $entryLines = New-Object System.Collections.Generic.List[string]
 $entryStartLine = 0
 $currentLine = 0

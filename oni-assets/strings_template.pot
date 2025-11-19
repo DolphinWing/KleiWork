@@ -48,8 +48,8 @@ msgctxt "STRINGS.BLUEPRINTS.NEUTRONIUM_ATMO_OUTFIT.NAME"
 msgid "Regal Neutronium Atmo Outfit"
 msgstr ""
 
-#. STRINGS.BLUEPRINTS.NEUTRONIUM_JET_OUTFIT.NAME
-msgctxt "STRINGS.BLUEPRINTS.NEUTRONIUM_JET_OUTFIT.NAME"
+#. STRINGS.BLUEPRINTS.NEUTRONIUM_JETSUIT_OUTFIT.NAME
+msgctxt "STRINGS.BLUEPRINTS.NEUTRONIUM_JETSUIT_OUTFIT.NAME"
 msgid "Regal Neutronium Jet Outfit"
 msgstr ""
 
@@ -13735,7 +13735,7 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.HABITATMODULEMEDIUM.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.HABITATMODULEMEDIUM.EFFECT"
-msgid "Functions as a Command Module.\n\nHolds up to 10 Duplicant travellers.\n\nOne Command Module may be installed per rocket. \n\nEngine must be built via <link=\"LAUNCHPAD\">Rocket Platform</link>."
+msgid "Functions as a Command Module.\n\nHolds up to 10 Duplicant travellers.\n\nOne Command Module may be installed per rocket. \n\nMust be built via <link=\"LAUNCHPAD\">Rocket Platform</link>."
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.HABITATMODULEMEDIUM.NAME
@@ -18125,7 +18125,7 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.NOSECONEBASIC.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.NOSECONEBASIC.EFFECT"
-msgid "Protects a rocket during takeoff and entry, enabling space travel.\n\nEngine must be built via <link=\"LAUNCHPAD\">Rocket Platform</link>. \n\nMust be built at the top of a rocket."
+msgid "Protects a rocket during takeoff and entry, enabling space travel.\n\nMust be built via <link=\"LAUNCHPAD\">Rocket Platform</link>, and built at the top of a rocket."
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.NOSECONEBASIC.NAME
@@ -24555,7 +24555,7 @@ msgstr ""
 
 #. STRINGS.CODEX.B9_TELEPORTATION.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.B9_TELEPORTATION.BODY.CONTAINER1"
-msgid "<smallcaps>[Voice Recognition Initialized]\n[Subject Identified: A001]</smallcaps>\n\n[LOG BEGINS]\n\nDr. Techna's newest notes on Duplicant memories have revealed some interesting discoveries. It seems memories </i>can</i> be transferred to the cloned subject but it requires the host to be subjected to a machine that performs extremely detailed microanalysis. This in-depth dissection of the subject would produce the results we need but at the expense of destroying the host.\n\nOf course this is not ideal for our current situation. The time and energy it took to recruit Gravitas' highly trained staff would be wasted if we were to extirpate these people for the sake of experimentation. But perhaps we can use our Duplicants as experimental subjects until we perfect the process and look into finding volunteers for the future in order to obtain an ideal specimen. I will have to discuss this with Dr. Techna but I'm sure he would be enthusiastic about such an opportunity to continue his work.\n\nI am also very interested in the commercial opportunities this presents. Off the top of my head I can think of applications in genetics, AI development, and teleportation technology. This could be a significant financial windfall for the company.\n\n[LOG ENDS]"
+msgid "<smallcaps>[Voice Recognition Initialized]\n[Subject Identified: A001]</smallcaps>\n\n[LOG BEGINS]\n\nDr. Techna's newest notes on Duplicant memories have revealed some interesting discoveries. It seems memories <i>can</i> be transferred to the cloned subject but it requires the host to be subjected to a machine that performs extremely detailed microanalysis. This in-depth dissection of the subject would produce the results we need but at the expense of destroying the host.\n\nOf course this is not ideal for our current situation. The time and energy it took to recruit Gravitas' highly trained staff would be wasted if we were to extirpate these people for the sake of experimentation. But perhaps we can use our Duplicants as experimental subjects until we perfect the process and look into finding volunteers for the future in order to obtain an ideal specimen. I will have to discuss this with Dr. Techna but I'm sure he would be enthusiastic about such an opportunity to continue his work.\n\nI am also very interested in the commercial opportunities this presents. Off the top of my head I can think of applications in genetics, AI development, and teleportation technology. This could be a significant financial windfall for the company.\n\n[LOG ENDS]"
 msgstr ""
 
 #. STRINGS.CODEX.B9_TELEPORTATION.SUBTITLE
@@ -45670,7 +45670,7 @@ msgstr ""
 
 #. STRINGS.DUPLICANTS.MODIFIERS.SKILLLEVEL.NAME
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.SKILLLEVEL.NAME"
-msgid "Skill Level"
+msgid "Attribute Level"
 msgstr ""
 
 #. STRINGS.DUPLICANTS.MODIFIERS.SLEEP.NAME
@@ -61610,7 +61610,7 @@ msgstr ""
 
 #. STRINGS.ITEMS.INGREDIENTS.KELP.DESC
 msgctxt "STRINGS.ITEMS.INGREDIENTS.KELP.DESC"
-msgid "The leaf of a <link=\"KELPPLANT\">Seakomb</link>.\n\nIt can be processed into <link=\"PHYTOOIL\">Phyto Oil</link> or used as an ingredient in <link=\"ANTIHISTAMINE \">Allergy Medication</link>."
+msgid "The leaf of a <link=\"KELPPLANT\">Seakomb</link>.\n\nIt can be processed into <link=\"PHYTOOIL\">Phyto Oil</link> or used as an ingredient in <link=\"ANTIHISTAMINE\">Allergy Medication</link>."
 msgstr ""
 
 #. STRINGS.ITEMS.INGREDIENTS.KELP.NAME
@@ -62720,7 +62720,7 @@ msgstr ""
 
 #. STRINGS.MISC.NOTIFICATIONS.LEVELUP.SUFFIX
 msgctxt "STRINGS.MISC.NOTIFICATIONS.LEVELUP.SUFFIX"
-msgid " - {0} Skill Level modifier raised to +{1}"
+msgid " - {0} Attribute Level modifier raised to +{1}"
 msgstr ""
 
 #. STRINGS.MISC.NOTIFICATIONS.LEVELUP.TOOLTIP
@@ -75505,17 +75505,17 @@ msgstr ""
 
 #. STRINGS.UI.COSMETIC1.MIXING_TOOLTIP
 msgctxt "STRINGS.UI.COSMETIC1.MIXING_TOOLTIP"
-msgid "<i>The Regal Neutronium Cosmetics</i> features cosmetic blueprints fit for royalty"
+msgid "<i>Neutronium Cosmetics Pack</i> features cosmetic blueprints fit for royalty"
 msgstr ""
 
 #. STRINGS.UI.COSMETIC1.NAME
 msgctxt "STRINGS.UI.COSMETIC1.NAME"
-msgid "The Regal Neutronium Cosmetics"
+msgid "Neutronium Cosmetics Pack"
 msgstr ""
 
 #. STRINGS.UI.COSMETIC1.NAME_ITAL
 msgctxt "STRINGS.UI.COSMETIC1.NAME_ITAL"
-msgid "<i>The Regal Neutronium Cosmetics</i>"
+msgid "<i>Neutronium Cosmetics Pack</i>"
 msgstr ""
 
 #. STRINGS.UI.CRAFT
@@ -77540,12 +77540,12 @@ msgstr ""
 
 #. STRINGS.UI.ENDOFDAYREPORT.LEVEL_UP.NAME
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.LEVEL_UP.NAME"
-msgid "Skill Increases:"
+msgid "Attribute Increases:"
 msgstr ""
 
 #. STRINGS.UI.ENDOFDAYREPORT.LEVEL_UP.TOOLTIP
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.LEVEL_UP.TOOLTIP"
-msgid "Today {1} gained a total of {0} skill levels"
+msgid "Today {1} gained a total of {0} attribute levels"
 msgstr ""
 
 #. STRINGS.UI.ENDOFDAYREPORT.MY_COLONY
@@ -79971,6 +79971,11 @@ msgstr ""
 #. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_OWNED_NOTINSTALLED_TOOLTIP
 msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_OWNED_NOTINSTALLED_TOOLTIP"
 msgid "This DLC is owned but not currently installed"
+msgstr ""
+
+#. STRINGS.UI.FRONTEND.MAINMENU.DLC.COSMETIC_CONTENT_ACTIVE_TOOLTIP
+msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.COSMETIC_CONTENT_ACTIVE_TOOLTIP"
+msgid "<b>This DLC is enabled</b>\n\nFind it in the supply closet screen."
 msgstr ""
 
 #. STRINGS.UI.FRONTEND.MAINMENU.DLC.DEACTIVATE_EXPANSION1
@@ -82763,6 +82768,11 @@ msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.COLLECTION_COMING_SOON"
 msgid "Part of {Collection} collection. Coming soon!"
 msgstr ""
 
+#. STRINGS.UI.KLEI_INVENTORY_SCREEN.COLLECTION_THE
+msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.COLLECTION_THE"
+msgid "Part of the {Collection} collection."
+msgstr ""
+
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.COLUMN_HEADERS.CATEGORY_HEADER
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.COLUMN_HEADERS.CATEGORY_HEADER"
 msgid "BLUEPRINTS"
@@ -83661,6 +83671,16 @@ msgstr ""
 #. STRINGS.UI.MINION_BROWSER_SCREEN.OUTFIT_TYPE_JOY_RESPONSE
 msgctxt "STRINGS.UI.MINION_BROWSER_SCREEN.OUTFIT_TYPE_JOY_RESPONSE"
 msgid "OVERJOYED RESPONSE"
+msgstr ""
+
+#. STRINGS.UI.MINION_BROWSER_SCREEN.TOOLTIP_CYCLE_NEXT_OUTFIT_TYPE
+msgctxt "STRINGS.UI.MINION_BROWSER_SCREEN.TOOLTIP_CYCLE_NEXT_OUTFIT_TYPE"
+msgid "Next Restylable\n\nClick to restyle this Duplicant's other outfit types and Overjoyed response"
+msgstr ""
+
+#. STRINGS.UI.MINION_BROWSER_SCREEN.TOOLTIP_CYCLE_PREVIOUS_OUTFIT_TYPE
+msgctxt "STRINGS.UI.MINION_BROWSER_SCREEN.TOOLTIP_CYCLE_PREVIOUS_OUTFIT_TYPE"
+msgid "Previous Restylable\n\nClick to restyle this Duplicant's other outfit types and Overjoyed response"
 msgstr ""
 
 #. STRINGS.UI.MINION_BROWSER_SCREEN.TOOLTIP_FROM_DLC
@@ -90470,7 +90490,7 @@ msgstr ""
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ORGANICMASSFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ORGANICMASSFIELD.DESC"
-msgid "A mass of harvestable resources containing <link=\"ALGAE\">Algae</link>, <link=\"SLIMEMOLD\">Slime</link>, <link=\"CONTAMINATEDOXYGEN\">Polluted Oxygen</link> and <link=\"DIRT\">Dirt</link>.\n\nSpace Mining requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
+msgid "A mass of harvestable resources containing <link=\"ALGAE\">Algae</link>, <link=\"SLIMEMOLD\">Slime</link>, <link=\"CONTAMINATEDOXYGEN\">Polluted Oxygen</link> and <link=\"DIRT\">Dirt</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
 msgstr ""
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ORGANICMASSFIELD.NAME

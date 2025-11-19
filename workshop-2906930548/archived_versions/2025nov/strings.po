@@ -48,187 +48,187 @@ msgstr "<link=\"MANUALGENERATOR\">橢圓發電機</link>"
 #. STRINGS.BLUEPRINTS.OUTFIT_AERODYNAMIC_FLIGHTSUIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_AERODYNAMIC_FLIGHTSUIT.NAME"
 msgid "Aerodynamic Outfit"
-msgstr "空氣力學套裝"
+msgstr "空氣力學外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ALL_METAL_JACKET.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ALL_METAL_JACKET.NAME"
 msgid "All-Metal Jacket Outfit"
-msgstr "全金屬夾克套裝"
+msgstr "全金屬夾克外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ATMO_SUIT_80S.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMO_SUIT_80S.NAME"
 msgid "Radical Atmo Outfit"
-msgstr "激進太空套裝"
+msgstr "激進太空外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_BIONIC.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_BIONIC.NAME"
 msgid "Bionic Atmo Outfit"
-msgstr "仿生太空套裝"
+msgstr "仿生太空外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_CHAMELEO.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_CHAMELEO.NAME"
 msgid "Dartle Atmo Outfit"
-msgstr "逸蜥太空套裝"
+msgstr "逸蜥太空外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_GAUDY.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_GAUDY.NAME"
 msgid "Gaudy Atmo Outfit"
-msgstr "浮誇太空套裝"
+msgstr "浮誇太空外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_PACULACANTH.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_PACULACANTH.NAME"
 msgid "Jawbo Atmo Outfit"
-msgstr "顎魚太空套裝"
+msgstr "顎魚太空外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_RAPTOR.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_RAPTOR.NAME"
 msgid "Rhex Atmo Outfit"
-msgstr "霸王鸚太空套裝"
+msgstr "霸王鸚太空外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_STEGO.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_STEGO.NAME"
 msgid "Lumb Atmo Outfit"
-msgstr "劍龍太空套裝"
+msgstr "劍龍太空外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_BIOCIRCUIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_BIOCIRCUIT.NAME"
 msgid "Bionic Jammies Outfit"
-msgstr "仿生睡衣套裝"
+msgstr "仿生睡衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_CADMIUM_VEST.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_CADMIUM_VEST.NAME"
 msgid "Cadmium Vest Outfit"
-msgstr "鎘背心套裝"
+msgstr "鎘背心外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_PJ_DINO.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_PJ_DINO.NAME"
 msgid "Jurassic Jammies Outfit"
-msgstr "侏羅紀睡衣套裝"
+msgstr "侏羅紀睡衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_PJ_DINO2.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_PJ_DINO2.NAME"
 msgid "Pangaea Jammies Outfit"
-msgstr "盤古大陸睡衣套裝"
+msgstr "盤古大陸睡衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_PJ_DINO3.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_PJ_DINO3.NAME"
 msgid "Triassic Jammies Outfit"
-msgstr "三疊紀睡衣套裝"
+msgstr "三疊紀睡衣外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ROMPER_TAN.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ROMPER_TAN.NAME"
 msgid "Fieldwork Outfit"
-msgstr "實地考察套裝"
+msgstr "實地考察外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_SCOUT.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_SCOUT.NAME"
 msgid "Explorer Outfit"
-msgstr "探險家套裝"
+msgstr "探險家外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_SCULPTED_STEEL.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_SCULPTED_STEEL.NAME"
 msgid "Sculpted Steel Outfit"
-msgstr "雕刻鋼套裝"
+msgstr "雕刻鋼外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_SPACE_EXPO.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_SPACE_EXPO.NAME"
 msgid "Space Expo Outfit"
-msgstr "太空博覽套裝"
+msgstr "太空博覽外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_STARCHED_BLAZER.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_STARCHED_BLAZER.NAME"
 msgid "Starched Blazer Outfit"
-msgstr "漿洗西裝套裝"
+msgstr "漿洗西裝外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_SUSPENDERS.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_SUSPENDERS.NAME"
 msgid "Arbor Hugger Outfit"
-msgstr "擁抱喬木套裝"
+msgstr "擁抱喬木外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_BLACK.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_BLACK.NAME"
 msgid "Monochrome Flannel Outfit"
-msgstr "單色法蘭絨套裝"
+msgstr "單色法蘭絨外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_BLUE_MIDDLE.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_BLUE_MIDDLE.NAME"
 msgid "Scrub Flannel Outfit"
-msgstr "磨砂法蘭絨套裝"
+msgstr "磨砂法蘭絨外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_GREEN.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_GREEN.NAME"
 msgid "Swampy Flannel Outfit"
-msgstr "沼澤法蘭絨套裝"
+msgstr "沼澤法蘭絨外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_ORANGE.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_ORANGE.NAME"
 msgid "Cadmium Flannel Outfit"
-msgstr "銀灰法蘭絨套裝"
+msgstr "銀灰法蘭絨外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_PINK_ORCHID.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_PINK_ORCHID.NAME"
 msgid "Flare Flannel Outfit"
-msgstr "火光法蘭絨套裝"
+msgstr "火光法蘭絨外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_PURPLE.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_PURPLE.NAME"
 msgid "Fusion Flannel Outfit"
-msgstr "融合法蘭絨套裝"
+msgstr "融合法蘭絨外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_RED.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_RED.NAME"
 msgid "Classic Flannel Outfit"
-msgstr "經典法蘭絨套裝"
+msgstr "經典法蘭絨外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_WHITE.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_WHITE.NAME"
 msgid "White Flannel Outfit"
-msgstr "純白法蘭絨套裝"
+msgstr "純白法蘭絨外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_YELLOW.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_YELLOW.NAME"
 msgid "Flax Flannel Outfit"
-msgstr "亞麻法蘭絨套裝"
+msgstr "亞麻法蘭絨外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_01.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_01.NAME"
 msgid "Slapshot Outfit"
-msgstr "猛擊套裝"
+msgstr "猛擊外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_02.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_02.NAME"
 msgid "Blocker Outfit"
-msgstr "阻擋者套裝"
+msgstr "阻擋者外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_03.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_03.NAME"
 msgid "High-Stick Outfit"
-msgstr "高棍套裝"
+msgstr "高棍外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_04.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_04.NAME"
 msgid "Faceoff Outfit"
-msgstr "開球套裝"
+msgstr "開球外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_05.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_05.NAME"
 msgid "MVP Outfit"
-msgstr "MVP 套裝"
+msgstr "MVP 外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_07.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_07.NAME"
 msgid "Hat-Trick Outfit"
-msgstr "三連套裝"
+msgstr "三連外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_08.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_08.NAME"
 msgid "Overtime Outfit"
-msgstr "延長賽套裝"
+msgstr "延長賽外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_09.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_09.NAME"
 msgid "Penalty Box Outfit"
-msgstr "受罰席套裝"
+msgstr "受罰席外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_10.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_10.NAME"
@@ -238,12 +238,12 @@ msgstr "執法者服裝"
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_11.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_11.NAME"
 msgid "Hoser Outfit"
-msgstr "失敗者套裝"
+msgstr "失敗者外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_12.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_HOCKEY_12.NAME"
 msgid "Rookie Outfit"
-msgstr "菜鳥套裝"
+msgstr "菜鳥外觀"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_WADER.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_WADER.NAME"
@@ -548,7 +548,7 @@ msgstr "用華麗飽和的有毒顏料染色！"
 #. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_BASIC_ORANGE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_BASIC_ORANGE.NAME"
 msgid "Crisp Cadmium Atmo Suit"
-msgstr "鮮鎘太空套裝"
+msgstr "鮮鎘太空外觀"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_BASIC_PURPLE_WILDBERRY.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_BASIC_PURPLE_WILDBERRY.DESC"
@@ -17013,7 +17013,7 @@ msgstr "不需維護的花比我們每個人都長壽。"
 #. STRINGS.BUILDINGS.PREFABS.PLASTICFLOWERS.LORE_DLC2
 msgctxt "STRINGS.BUILDINGS.PREFABS.PLASTICFLOWERS.LORE_DLC2"
 msgid "Manufactured by Home Staging Heroes Ltd. as commissioned by the Gravitas Facility, to <i>\"Make Space Feel More Like Home.\"</i>\n\nThis bouquet is designed to smell like freshly baked cookies."
-msgstr "受引力科技委託，由住宅籌劃英雄有限公司製造，以<b>「讓太空更有家的感覺」</b>。\n\n這種花束聞起來就像新鮮出爐的餅乾，是其設計概念。"
+msgstr "受引力科技中心委託，由住宅籌劃英雄有限公司製造，以<b>「讓太空更有家的感覺」</b>。\n\n這種花束聞起來就像新鮮出爐的餅乾，是其設計概念。"
 
 #. STRINGS.BUILDINGS.PREFABS.PLASTICFLOWERS.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.PLASTICFLOWERS.NAME"
@@ -21048,12 +21048,12 @@ msgstr "<indent=5%>總監：\n\n即使進行了大幅度的優化，我們依然
 #. STRINGS.CODEX.A0_PRELIMINARYCALCULATIONS.BODY.EMAILHEADER1
 msgctxt "STRINGS.CODEX.A0_PRELIMINARYCALCULATIONS.BODY.EMAILHEADER1"
 msgid "<smallcaps>To: <b>[REDACTED]</b>\nFrom: <b>[REDACTED]</b></color></smallcaps>\n------------------\n"
-msgstr "<smallcaps>收件者：<b>[受遮蔽]</b>\n寄件者：<b>[受遮蔽]</b></color></smallcaps>\n------------------\n"
+msgstr "<smallcaps>收件者：<b>[資料塗銷]</b>\n寄件者：<b>[資料塗銷]</b></color></smallcaps>\n------------------\n"
 
 #. STRINGS.CODEX.A0_PRELIMINARYCALCULATIONS.BODY.SIGNATURE1
 msgctxt "STRINGS.CODEX.A0_PRELIMINARYCALCULATIONS.BODY.SIGNATURE1"
 msgid "\nXOXO,\n[REDACTED]\n<size=11>Information and Statistics Department\nThe Gravitas Facility</size>\n------------------\n"
-msgstr "\nXOXO，\n[受遮蔽]\n<size=11>資訊與統計部\n引力科技</size>\n------------------\n"
+msgstr "\nXOXO，\n[資料塗銷]\n<size=11>資訊與統計部\n引力科技中心</size>\n------------------\n"
 
 #. STRINGS.CODEX.A0_PRELIMINARYCALCULATIONS.SUBTITLE
 msgctxt "STRINGS.CODEX.A0_PRELIMINARYCALCULATIONS.SUBTITLE"
@@ -21068,12 +21068,12 @@ msgstr "初步計算"
 #. STRINGS.CODEX.A0_PROPFACILITYDISPLAY1.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A0_PROPFACILITYDISPLAY1.BODY.CONTAINER1"
 msgid "Introducing the latest in 3D printing technology:\nThe Gravitas Home Printing Pod\n\nWe are proud to announce that printing advancements developed here in the Gravitas Facility will soon bring new, bio-organic production capabilities to your old home printers.\n\nWhat does that mean for the average household?\n\nDinner frustrations are a thing of the past. Simply select any of the pod's 5398 pre-programmed recipes, and voila! Delicious pot roast ready in only .87 seconds.\n\nPrefer the patented family recipe? Program your own custom meal template for an instant taste of home, or go old school and create fresh, delicious ingredients and prepare your own home cooked meal.\n\nDinnertime has never been easier!"
-msgstr "介紹最新型的 3D 列印科技：\n引力科技家用列印元\n\n我們在此榮幸地宣佈，引力科技開發的全新列印技術，即將為您府上的舊家用列印元帶來嶄新的生物有機物生產能力。\n\n這對普通家庭意味著什麼？\n\n料理的的種種煩惱都將成為過去，只需簡單選擇設備中預先編寫好的 5398 種食譜，瞧！準備好美味的紅燒牛肉只需要 0.87 秒。\n\n偏愛您熟悉的的家傳食譜嗎？編寫您專屬的客製化膳食範本，立即品嚐到家的滋味；或者回歸傳統，自行準備新鮮美味的食材，烹調您的家常菜。\n\n料理從未如此簡單！"
+msgstr "介紹最新型的 3D 列印科技：\n引力科技家用列印元\n\n我們榮幸地宣佈，由引力科技中心開發的列印技術進展，即將為您府上的舊家用列印機帶來嶄新的生物有機物生產能力。\n\n這對一般家庭意味著什麼？\n\n餐飲煩惱都將成為過去。只需簡單選擇設備中預先編寫好的 5398 種食譜，瞧！美味燉肉只需 0.87 秒即可備妥。\n\n偏愛專屬家傳食譜嗎？編寫您客製化的膳食範本，立即品嚐家的滋味；或回歸傳統，列印出新鮮美味的食材，自行烹調家常菜。\n\n晚餐時刻從未如此輕鬆！"
 
 #. STRINGS.CODEX.A0_PROPFACILITYDISPLAY1.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.A0_PROPFACILITYDISPLAY1.BODY.CONTAINER2"
 msgid "\nProjected for commercial availability early next year.\nBrought to you by the Gravitas Facility."
-msgstr "\n預計明年初可商品化。\n引力科技，領導未來。"
+msgstr "\n預計明年初可商品化。\n引力科技，誠摯獻上。"
 
 #. STRINGS.CODEX.A0_PROPFACILITYDISPLAY1.SUBTITLE
 msgctxt "STRINGS.CODEX.A0_PROPFACILITYDISPLAY1.SUBTITLE"
@@ -21093,7 +21093,7 @@ msgstr "帶著你的採礦作進入 23 世紀，新的個人地心採礦機。\n
 #. STRINGS.CODEX.A0_PROPFACILITYDISPLAY2.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.A0_PROPFACILITYDISPLAY2.BODY.CONTAINER2"
 msgid "Brought to you by the Gravitas Facility."
-msgstr "引力科技，領導未來。"
+msgstr "引力科技，誠摯獻上。"
 
 #. STRINGS.CODEX.A0_PROPFACILITYDISPLAY2.SUBTITLE
 msgctxt "STRINGS.CODEX.A0_PROPFACILITYDISPLAY2.SUBTITLE"
@@ -21113,7 +21113,7 @@ msgstr "厭倦了季節性熱浪期間的關閉？希望降低與天氣相關的
 #. STRINGS.CODEX.A0_PROPFACILITYDISPLAY3.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.A0_PROPFACILITYDISPLAY3.BODY.CONTAINER2"
 msgid "Brought to you by the Gravitas Facility.\n<smallcaps>Patent Pending</smallcaps>"
-msgstr "引力科技，領導未來。\n<smallcaps>專利申請中</smallcaps>"
+msgstr "引力科技，誠摯獻上。\n<smallcaps>專利申請中</smallcaps>"
 
 #. STRINGS.CODEX.A0_PROPFACILITYDISPLAY3.SUBTITLE
 msgctxt "STRINGS.CODEX.A0_PROPFACILITYDISPLAY3.SUBTITLE"
@@ -21233,17 +21233,17 @@ msgstr "<indent=10%><color=#F44A47>>[失效的連結]</color> <alpha=#AA><smallc
 #. STRINGS.CODEX.A1_RESEARCHGIANTARTICLE.BODY.EMAILHEADER1
 msgctxt "STRINGS.CODEX.A1_RESEARCHGIANTARTICLE.BODY.EMAILHEADER1"
 msgid "<smallcaps>To: <b>Director Stern</b><size=12><alpha=#AA> <jstern@gravitas.nova></size></color>\nFrom: <b>[REDACTED]</b></smallcaps>\n------------------\n"
-msgstr "<smallcaps>收件者：<b>Stern 總監</b><size=12><alpha=#AA> <jstern@gravitas.nova></size></color>\n寄件者：<b>[受遮蔽]</b></smallcaps>\n------------------\n"
+msgstr "<smallcaps>收件者：<b>Stern 總監</b><size=12><alpha=#AA> <jstern@gravitas.nova></size></color>\n寄件者：<b>[資料塗銷]</b></smallcaps>\n------------------\n"
 
 #. STRINGS.CODEX.A1_RESEARCHGIANTARTICLE.BODY.EMAILHEADER2
 msgctxt "STRINGS.CODEX.A1_RESEARCHGIANTARTICLE.BODY.EMAILHEADER2"
 msgid "<smallcaps>To: <b>[REDACTED]</b>\nFrom: <b>Director Stern</b><size=12><alpha=#AA> <jstern@gravitas.nova></size></color></smallcaps>\n------------------\n"
-msgstr "<smallcaps>收件者：<b>[受遮蔽]</b>\n寄件者：<b>Stern 總監</b><size=12><alpha=#AA> <jstern@gravitas.nova></size></color></smallcaps>\n------------------\n"
+msgstr "<smallcaps>收件者：<b>[資料塗銷]</b>\n寄件者：<b>Stern 總監</b><size=12><alpha=#AA> <jstern@gravitas.nova></size></color></smallcaps>\n------------------\n"
 
 #. STRINGS.CODEX.A1_RESEARCHGIANTARTICLE.BODY.SIGNATURE1
 msgctxt "STRINGS.CODEX.A1_RESEARCHGIANTARTICLE.BODY.SIGNATURE1"
 msgid "\n[REDACTED]\n<size=11>Personnel Coordinator\nThe Gravitas Facility</size>\n------------------\n"
-msgstr "\n[受遮蔽]\n<size=11>人事專員\n引力科技</size>\n------------------\n"
+msgstr "\n[資料塗銷]\n<size=11>人事專員\n引力科技</size>\n------------------\n"
 
 #. STRINGS.CODEX.A1_RESEARCHGIANTARTICLE.BODY.SIGNATURE2
 msgctxt "STRINGS.CODEX.A1_RESEARCHGIANTARTICLE.BODY.SIGNATURE2"
@@ -21563,7 +21563,7 @@ msgstr "手寫筆記"
 #. STRINGS.CODEX.A3_NEWSECURITY.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A3_NEWSECURITY.BODY.CONTAINER1"
 msgid "<smallcaps><b>Subject: New Security Protocol</b>\nFrom: <b>Admin</b> <alpha=#AA><admin@gravitas.nova></color>\nTo: <b>All</b></smallcaps>\n------------------\n\n<indent=5%>NOTICE TO ALL PERSONNEL\n\nWe are currently undergoing critical changes to facility security that may affect your workflow and accessibility.\n\nTo use the system, simply remove all hand coverings and place your hand on the designated scan area, then wait as the system verifies your employee identity.\n\nPLEASE NOTE\n\nAll keycards must be returned to the front desk by [REDACTED]. For questions or rescheduling, please contact security at [REDACTED]@GRAVITAS.NOVA.\n\nThank-you.\n\n-Admin\nThe Gravitas Facility</indent>"
-msgstr "<smallcaps><b>主旨：新的安全協議</b>\n寄件者：<b>管理部</b> <alpha=#AA><admin@gravitas.nova></color>\n收件者：<b>全體</b></smallcaps>\n------------------\n\n<indent=5%>通知所有人員\n\n我們目前正在對公司的安全性實施重大的修改，那可能影響你的工作流程與訪問權限。\n\n要使用這項系統，只需取下所有手套，然後將手放在指定的掃描區域，然後等待系統驗證你的員工身分。\n\n請注意\n\n所有門禁卡必須透過[受遮蔽]繳回前台，如有問題或需重新安排，請連絡保全部門的[受遮蔽]@GRAVITAS.NOVA。\n\n謝謝您。\n\n－管理部\n引力科技</indent>"
+msgstr "<smallcaps><b>主旨：新的安全協議</b>\n寄件者：<b>管理部</b> <alpha=#AA><admin@gravitas.nova></color>\n收件者：<b>全體</b></smallcaps>\n------------------\n\n<indent=5%>通知所有人員\n\n我們目前正在對公司的安全性實施重大的修改，那可能影響你的工作流程與訪問權限。\n\n要使用這項系統，只需取下所有手套，然後將手放在指定的掃描區域，然後等待系統驗證你的員工身分。\n\n請注意\n\n所有門禁卡必須透過[資料塗銷]繳回前台，如有問題或需重新安排，請連絡保全部門的[資料塗銷]@GRAVITAS.NOVA。\n\n謝謝您。\n\n－管理部\n引力科技中心</indent>"
 
 #. STRINGS.CODEX.A3_NEWSECURITY.SUBTITLE
 msgctxt "STRINGS.CODEX.A3_NEWSECURITY.SUBTITLE"
@@ -21828,12 +21828,12 @@ msgstr "<indent=5%>所以，設施正在引進這套新的保全系統，掃描�
 #. STRINGS.CODEX.A6_NEWSECURITY2.BODY.EMAILHEADER1
 msgctxt "STRINGS.CODEX.A6_NEWSECURITY2.BODY.EMAILHEADER1"
 msgid "<smallcaps>To: <b>[REDACTED]</b>\nFrom: <b>[REDACTED]</b></color></smallcaps>\n------------------\n"
-msgstr "<smallcaps>收件者：<b>[受遮蔽]</b>\n寄件者：<b>[受遮蔽]</b></color></smallcaps>\n------------------\n"
+msgstr "<smallcaps>收件者：<b>[資料塗銷]</b>\n寄件者：<b>[資料塗銷]</b></color></smallcaps>\n------------------\n"
 
 #. STRINGS.CODEX.A6_NEWSECURITY2.BODY.SIGNATURE1
 msgctxt "STRINGS.CODEX.A6_NEWSECURITY2.BODY.SIGNATURE1"
 msgid "\n[REDACTED]\n<size=11>The Gravitas Facility</size>\n------------------\n"
-msgstr "\n[受遮蔽]\n<size=11>引力科技</size>\n------------------\n"
+msgstr "\n[資料塗銷]\n<size=11>引力科技中心</size>\n------------------\n"
 
 #. STRINGS.CODEX.A6_NEWSECURITY2.SUBTITLE
 msgctxt "STRINGS.CODEX.A6_NEWSECURITY2.SUBTITLE"
@@ -21878,17 +21878,17 @@ msgstr "副產物備註"
 #. STRINGS.CODEX.A7_NEWEMPLOYEE.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.A7_NEWEMPLOYEE.BODY.CONTAINER2"
 msgid "<indent=5%>Attention Gravitas Facility personnel;\n\nPlease welcome our newest staff member, Olivia Broussard, PhD.\n\nDr. Broussard will be leading our upcoming genetics project and has been installed in our bioengineering department.\n\nBe sure to offer her our warmest welcome.</indent>"
-msgstr "<indent=5%>引力科技設施全體人員請注意；\n\n歡迎我們的最新成員，Olivia Broussard 博士。\n\nBroussard 博士將領導我們即將展開的基因學專案，並已進駐我們的生物工程部門。\n\n務必向她表達我們最熱烈的歡迎之意。</indent>"
+msgstr "<indent=5%>引力科技中心全體人員請注意；\n\n歡迎我們的最新成員，Olivia Broussard 博士。\n\nBroussard 博士將領導我們即將展開的基因學專案，並已進駐我們的生物工程部門。\n\n務必向她表達我們最熱烈的歡迎之意。</indent>"
 
 #. STRINGS.CODEX.A7_NEWEMPLOYEE.BODY.EMAILHEADER1
 msgctxt "STRINGS.CODEX.A7_NEWEMPLOYEE.BODY.EMAILHEADER1"
 msgid "<smallcaps>To: <b>All</b>\nFrom: <b>[REDACTED]</b></smallcaps>\n------------------\n"
-msgstr "<smallcaps>收件者：<b>全體</b>\n寄件者：<b>[受遮蔽]</b></color></smallcaps>\n------------------\n"
+msgstr "<smallcaps>收件者：<b>全體</b>\n寄件者：<b>[資料塗銷]</b></color></smallcaps>\n------------------\n"
 
 #. STRINGS.CODEX.A7_NEWEMPLOYEE.BODY.SIGNATURE1
 msgctxt "STRINGS.CODEX.A7_NEWEMPLOYEE.BODY.SIGNATURE1"
 msgid "\n[REDACTED]\n<size=11>Personnel Coordinator\nThe Gravitas Facility</indent>\n------------------\n"
-msgstr "\n[受遮蔽]\n<size=11>人事專員\n引力科技</indent>\n------------------\n"
+msgstr "\n[資料塗銷]\n<size=11>人事專員\n引力科技中心</indent>\n------------------\n"
 
 #. STRINGS.CODEX.A7_NEWEMPLOYEE.SUBTITLE
 msgctxt "STRINGS.CODEX.A7_NEWEMPLOYEE.SUBTITLE"
@@ -21938,12 +21938,12 @@ msgstr "<indent=5%>我現在幾乎可以肯定，設施已經竊取了我們的�
 #. STRINGS.CODEX.A8_NEWSECURITY3.BODY.EMAILHEADER1
 msgctxt "STRINGS.CODEX.A8_NEWSECURITY3.BODY.EMAILHEADER1"
 msgid "<smallcaps>To: <b>[REDACTED]</b>\nFrom: <b>[REDACTED]</b></smallcaps>\n------------------\n"
-msgstr "<smallcaps>收件者：<b>[受遮蔽]</b>\n寄件者：<b>[受遮蔽]</b></smallcaps>\n------------------\n"
+msgstr "<smallcaps>收件者：<b>[資料塗銷]</b>\n寄件者：<b>[資料塗銷]</b></smallcaps>\n------------------\n"
 
 #. STRINGS.CODEX.A8_NEWSECURITY3.BODY.SIGNATURE1
 msgctxt "STRINGS.CODEX.A8_NEWSECURITY3.BODY.SIGNATURE1"
 msgid "\n[REDACTED]\n<size=11>The Gravitas Facility</size>\n------------------\n"
-msgstr "\n[受遮蔽]\n<size=11>引力科技</size>\n------------------\n"
+msgstr "\n[資料塗銷]\n<size=11>引力科技中心</size>\n------------------\n"
 
 #. STRINGS.CODEX.A8_NEWSECURITY3.SUBTITLE
 msgctxt "STRINGS.CODEX.A8_NEWSECURITY3.SUBTITLE"
@@ -22103,12 +22103,12 @@ msgstr "<smallcaps>收件者：<b>Jones 博士</b><alpha=#AA><size=10> <ejones@g
 #. STRINGS.CODEX.B1_HOLLANDSDOG.BODY.SIGNATURE1
 msgctxt "STRINGS.CODEX.B1_HOLLANDSDOG.BODY.SIGNATURE1"
 msgid "\nXOXO,\nDr. Jones\n<size=11>Information and Statistics Department\nThe Gravitas Facility</size>\n------------------\n"
-msgstr "\nXOXO，\nJones 博士\n<size=11>資訊與統計部\n引力科技</size>\n------------------\n"
+msgstr "\nXOXO，\nJones 博士\n<size=11>資訊與統計部\n引力科技中心</size>\n------------------\n"
 
 #. STRINGS.CODEX.B1_HOLLANDSDOG.BODY.SIGNATURE2
 msgctxt "STRINGS.CODEX.B1_HOLLANDSDOG.BODY.SIGNATURE2"
 msgid "\n-Dr. Summers\n<size=11>Information and Statistics Department\nThe Gravitas Facility</size>\n------------------\n"
-msgstr "\n－ Summers 博士\n<size=11>資訊與統計部\n引力科技</size>\n------------------\n"
+msgstr "\n－ Summers 博士\n<size=11>資訊與統計部\n引力科技中心</size>\n------------------\n"
 
 #. STRINGS.CODEX.B1_HOLLANDSDOG.SUBTITLE
 msgctxt "STRINGS.CODEX.B1_HOLLANDSDOG.SUBTITLE"
@@ -22188,7 +22188,7 @@ msgstr "<indent=%5>自幼時起，Johannsen 隊長就夢想著能飛上天空。
 #. STRINGS.CODEX.B2_MEETTHEPILOT.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.B2_MEETTHEPILOT.BODY.CONTAINER2"
 msgid "<indent=%10><smallcaps>\n\nBrought to you by the Gravitas Facility.</indent>"
-msgstr "<indent=%10><smallcaps>\n\n引力科技，領導未來。</indent>"
+msgstr "<indent=%10><smallcaps>\n\n引力科技，誠摯獻上。</smallcaps></indent>"
 
 #. STRINGS.CODEX.B2_MEETTHEPILOT.SUBTITLE
 msgctxt "STRINGS.CODEX.B2_MEETTHEPILOT.SUBTITLE"
@@ -22208,7 +22208,7 @@ msgstr "Mae Johannsen 隊長"
 #. STRINGS.CODEX.B2_TEMPORALBOWUPDATE.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.B2_TEMPORALBOWUPDATE.BODY.CONTAINER2"
 msgid "Dr. Sklodowska, could I ask you to forward me the new spec changes to the Temporal Bow?\n\nThe Director completely ignored me when I asked for a project update this morning. She walked right past me in the hall - I didn't realize I was that far down on the food chain. :(\n\nMr. Kraus\nPhysics Department\nThe Gravitas Facility"
-msgstr "Sklodowska 博士，我可以請你將時光之弓新的規格變更轉發給我嗎。\n\n今天早上總監完全不理會我詢問一個新計劃的最新內容。在大廳時她從我身邊經過－我沒有意識到我離食物鏈有那麼遠。:(\n\nKraus 先生\n物理部門\n引力科技"
+msgstr "Sklodowska 博士，我可以請您將時光之弓的新規格變更轉發給我嗎\n\n今天早上我詢問專案進度時，總監完全不理我。在大廳她直接從我身邊走過 — 我沒想到我在食物鏈上竟然這麼底層 :(\n\nKraus 先生\n物理部門\n引力科技中心"
 
 #. STRINGS.CODEX.B2_TEMPORALBOWUPDATE.BODY.EMAILHEADER1
 msgctxt "STRINGS.CODEX.B2_TEMPORALBOWUPDATE.BODY.EMAILHEADER1"
@@ -24403,7 +24403,7 @@ msgstr "成分用於"
 #. STRINGS.CODEX.HEADQUARTERS.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.HEADQUARTERS.BODY.CONTAINER1"
 msgid "An advanced 3D printer developed by the Gravitas Facility.\n\nThe Printing Pod is notable for its ability to print living organic material from biological blueprints.\n\nIt is capable of synthesizing its own organic material for printing, and contains an almost unfathomable amount of stored energy, allowing it to autonomously print every 3 cycles."
-msgstr "一種高級的 3D 列印機，由引力科技所開發。\n\n此列印元以使用生物藍圖列印出活的有機物而出名。\n\n它可以自己合成有機材料用來列印，並且儲存了幾乎無限的能量，讓它每 3 周就能自動列印一次。"
+msgstr "一種高級的 3D 列印機，由引力科技中心所開發。\n\n此列印元以使用生物藍圖列印出活的有機物而出名。\n\n它可以自己合成有機材料用來列印，並且儲存了幾乎無限的能量，讓它每 3 周就能自動列印一次。"
 
 #. STRINGS.CODEX.HEADQUARTERS.TITLE
 msgctxt "STRINGS.CODEX.HEADQUARTERS.TITLE"
@@ -24613,12 +24613,12 @@ msgstr "中級輻射藥片"
 #. STRINGS.CODEX.INVESTIGATIONS.DLC2_CLEANUP.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC2_CLEANUP.BODY.CONTAINER1"
 msgid "Submitted by: B. Boson\nEmployee ID: X002\nDepartment: Gravitas Intellectual Property Management\n\nJob Details:\n\nRequire one (1) Robotics Engineer to travel solo to [REDACTED]. Engineer will print, program and maintain a P.E.G.G.Y. crew of eight (8) units.\n\nEngineer will catalog all Project [REDACTED] debris.\n\nAll proprietary equipment to be returned to Facility grounds for investigation. Organic and biohazardous debris may be disposed of onsite at Engineer's discretion.\n\nCandidate: Dr. E. Gossmann\n\nScope of cleanup area: [REDACTED] sq mi.\n*This is an estimate only.\n\nTimeline: 54 Ceres days (equival. 6 days at origin).\n\nOther comments:\n1. Liability waiver, power of attorney and NDA attached.\n2. Allow up to 0.5 hours for signal transmission from [REDACTED], depending on orbital positioning.\n3. All relevant correspondence to be sent directly to bboson@gipm.nova.\n\nSignature: [REDACTED]\n\n"
-msgstr "提交人：B. Boson\n員工編號：X002\n部門：引力科技智慧財產權管理部\n\n工作詳情：\n\n需要一(1)名機器人工程師獨自前往[受遮蔽]。工程師將列印、程式設計並維護一個八(8)個單位的 P.E.G.G.Y. 小隊。\n\n工程師將登記分類所有[受遮蔽]專案碎片。\n\n所有專用裝備應返還引力科技進行調查。有關在現場處理有機及生物危險碎片的問題，交由工程師自行決定。\n\n候選人：E. Gossman 博士\n\n清理區域範圍：[受遮蔽]平方英里。\n*僅估計值。\n\n期限：穀神星 54 天（相當於出發地 6 天）。\n\n其他說明：\n1. 責任豁免書、授權書和保密協議見附件。\n2. 根據軌道定位，從[受遮蔽]進行訊號傳輸時間最多 0.5 小時。\n3. 所有相關通訊直接傳送至 bboson@gipm.nova。\n\n簽名：[受遮蔽]\n\n"
+msgstr "提交人：B. Boson\n員工編號：X002\n部門：引力科技智慧財產權管理部\n\n工作詳情：\n\n需要一(1)名機器人工程師獨自前往[資料塗銷]。工程師將列印、程式設計並維護一個八(8)個單位的 P.E.G.G.Y. 小隊。\n\n工程師將登記分類所有[資料塗銷]專案碎片。\n\n所有專用裝備應返還引力科技進行調查。有關在現場處理有機及生物危險碎片的問題，交由工程師自行決定。\n\n候選人：E. Gossman 博士\n\n清理區域範圍：[資料塗銷]平方英里。\n*僅估計值。\n\n期限：穀神星 54 天（相當於出發地 6 天）。\n\n其他說明：\n1. 責任豁免書、授權書和保密協議見附件。\n2. 根據軌道定位，從[資料塗銷]進行訊號傳輸時間最多 0.5 小時。\n3. 所有相關通訊直接傳送至 bboson@gipm.nova。\n\n簽名：[資料塗銷]\n\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC2_CLEANUP.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC2_CLEANUP.BODY.CONTAINER2"
 msgid "<smallcaps><i>Authorized by Director J. Stern\n\n-----------\n"
-msgstr "<smallcaps><i>由 J. Stern 總監授權\n\n-----------\n"
+msgstr "<smallcaps><i>由 J. Stern 總監授權</i></smallcaps>\n\n-----------\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC2_CLEANUP.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC2_CLEANUP.SUBTITLE"
@@ -24668,22 +24668,22 @@ msgstr "<indent=5%>總監，\n\n我已經處理完第一批預期旅居者了。
 #. STRINGS.CODEX.INVESTIGATIONS.DLC2_ECOTOURISM.BODY.EMAILHEADER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC2_ECOTOURISM.BODY.EMAILHEADER1"
 msgid "<smallcaps>To: <b>Director Stern</b><size=12><alpha=#AA> <jstern@gravitas.nova></size></color>\nFrom: <b>[REDACTED]</b></smallcaps>\n------------------\n"
-msgstr "<smallcaps>收件者：<b> Stern 總監</b><size=12><alpha=#AA> <jstern@gravitas.nova></size></color>\n寄件者：<b>[受遮蔽]</b></smallcaps>\n------------------\n"
+msgstr "<smallcaps>收件者：<b> Stern 總監</b><size=12><alpha=#AA> <jstern@gravitas.nova></size></color>\n寄件者：<b>[資料塗銷]</b></smallcaps>\n------------------\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC2_ECOTOURISM.BODY.EMAILHEADER2
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC2_ECOTOURISM.BODY.EMAILHEADER2"
 msgid "<smallcaps>To: <b>[REDACTED]</b>\nFrom: <b>Director Stern</b><size=12><alpha=#AA> <jstern@gravitas.nova></size></color></smallcaps>\n------------------\n"
-msgstr "<smallcaps>收件者：<b>[受遮蔽]</b>\n寄件者：<b> Stern 總監</b><size=12><alpha=#AA> <jstern@gravitas.nova></size></color></smallcaps>\n------------------\n"
+msgstr "<smallcaps>收件者：<b>[資料塗銷]</b>\n寄件者：<b> Stern 總監</b><size=12><alpha=#AA> <jstern@gravitas.nova></size></color></smallcaps>\n------------------\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC2_ECOTOURISM.BODY.SIGNATURE1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC2_ECOTOURISM.BODY.SIGNATURE1"
 msgid "\n[REDACTED]\n<size=11>Ceres Project Coordinator\nThe Gravitas Facility</size>\n------------------\n"
-msgstr "\n[受遮蔽]\n<size=11>穀神星專案協調員\n引力科技</size>\n------------------\n"
+msgstr "\n[資料塗銷]\n<size=11>穀神星專案協調員\n引力科技中心</size>\n------------------\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC2_ECOTOURISM.BODY.SIGNATURE2
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC2_ECOTOURISM.BODY.SIGNATURE2"
 msgid "\n-Director Stern\n<size=11>The Gravitas Facility</size>\n------------------\n"
-msgstr "\n- Stern 總監\n<size=11>引力科技</size>\n------------------\n"
+msgstr "\n- Stern 總監\n<size=11>引力科技中心</size>\n------------------\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC2_ECOTOURISM.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC2_ECOTOURISM.SUBTITLE"
@@ -24753,12 +24753,12 @@ msgstr "總監，以下內容已傳送到了一般收件夾。\n\n--------------
 #. STRINGS.CODEX.INVESTIGATIONS.DLC2_NEWBABY.BODY.LETTERHEADER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC2_NEWBABY.BODY.LETTERHEADER1"
 msgid "<smallcaps>To: <b>Director Stern</b><alpha=#AA><size=12> <jstern@gravitas.nova></size></color>\nFrom: <b>[REDACTED]</b></smallcaps>\n\n-----------\n"
-msgstr "<smallcaps>收件者：<b>Stern 總監</b><alpha=#AA><size=12> <jstern@gravitas.nova></size></color>\n寄件者：<b>[受遮蔽]</b></smallcaps>\n\n------------------\n"
+msgstr "<smallcaps>收件者：<b>Stern 總監</b><alpha=#AA><size=12> <jstern@gravitas.nova></size></color>\n寄件者：<b>[資料塗銷]</b></smallcaps>\n\n------------------\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC2_NEWBABY.BODY.SIGNATURE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC2_NEWBABY.BODY.SIGNATURE"
 msgid "-Admin<size=11>\nThe Gravitas Facility</size>\n------------------\n"
-msgstr "- 管理員<size=11>\n引力科技</size>\n------------------\n"
+msgstr "- 管理員<size=11>\n引力科技中心</size>\n------------------\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC2_NEWBABY.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC2_NEWBABY.SUBTITLE"
@@ -24888,7 +24888,7 @@ msgstr "可種植的能量"
 #. STRINGS.CODEX.INVESTIGATIONS.DLC3_REMOTEWORK.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC3_REMOTEWORK.BODY.CONTAINER1"
 msgid "Wellness World is proud to officially announce an exclusive partnership with the Gravitas Facility!\n\nThis makes us the first and only holistic health center to offer clients access to Gravitas's innovative new Far Reach Network...the best way to deliver remote training and treatments that are <i>truly embodied</i>.\n\nOur new tier of VIP subscription includes a discounted* monthly rental rate for Remote Controller, with a small additional fee for professional in-home installation.\n\nGravitas's technology captures your movements without the need for uncomfortable suits or wearables, and perfectly replicates them in Wellness World's purpose-built remote fitness studio.\n\nWith expert instructors, zero-latency streaming and 360-degree reflective surfaces, it truly feels like you're there.\n\nIdeal for high-profile clientele who wish to work out icognito!\n\nMembers can also opt to install the Remote Worker Dock to receive deeply personalized hands-on care from our team of elite physiotherapists and masseurs.\n\nWellness World...now <i>truly</i> worldwide!\n\n"
-msgstr "健康世界自豪地正式宣佈與引力科技建立獨家合作伙伴關係！\n\n這使我們成為第一家，也是唯一一家，為客戶提供引力科技的創新遠達網路的完備健康中心……<b>真正體現</b>遠距訓練和治療的最佳方式。\n\n我們新的 VIP 訂閱級別包含月租遠距工作站的折扣*，以及進行專業的家庭安裝所需的額外少量費用。\n\n藉由引力科技的技術，無需穿著不舒服的套裝或穿戴裝置即可捕捉到你的動作，並在健康世界專門建造的遠端健身室中完美地再現移動。\n\n藉助專業講師，零延遲串流媒體和 360 度反射鏡，讓您真正感覺身臨其境。\n\n非常適合希望隱匿鍛鍊的高階使用者！\n\n會員還可以選擇安裝遙控機器人基站，從我們的精英物理治療師和按摩師團隊那裡獲得深度個人化的實踐護理。\n\n健康世界……現在<b>真正</b>世界化了！\n\n"
+msgstr "健康世界自豪地正式宣佈與引力科技中心建立獨家合作伙伴關係！\n\n這使我們成為第一家，也是唯一一家，為客戶提供引力科技的創新遠達網路的完備健康中心……<b>真正體現</b>遠距訓練和治療的最佳方式。\n\n我們新的 VIP 訂閱級別包含月租遠距工作站的折扣*，以及進行專業的家庭安裝所需的額外少量費用。\n\n藉由引力科技的技術，無需穿著不舒服的套裝或穿戴裝置即可捕捉到你的動作，並在健康世界專門建造的遠端健身室中完美地再現移動。\n\n藉助專業講師，零延遲串流媒體和 360 度反射鏡，讓您真正感覺身臨其境。\n\n非常適合希望隱匿鍛鍊的高階使用者！\n\n會員還可以選擇安裝遙控機器人基站，從我們的精英物理治療師和按摩師團隊那裡獲得深度個人化的實踐護理。\n\n健康世界……現在<b>真正</b>世界化了！\n\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC3_REMOTEWORK.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC3_REMOTEWORK.BODY.CONTAINER2"
@@ -24908,7 +24908,7 @@ msgstr "獨家機會"
 #. STRINGS.CODEX.INVESTIGATIONS.DLC3_TALKSHOW.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC3_TALKSHOW.BODY.CONTAINER1"
 msgid "<smallcaps><b>[FILE FRAGMENTATION DETECTED]</b></smallcaps>\n\nDarryl: Welcome to <i>Tomorrow, Today!</i> I'm your host, Darryl Dawn, and it's time to discover tomorrow's tech...today!\n\nOur guest today is someone you know and love. She's been featured in dozens of publications across the metaverse this year, and recently spent a record-breaking 3 weeks as the banner image for <i>Byte Magazine</i>. I'm talking, of course, about the Vertex Institute's AI ambassador...Florence!\n\n[sound of pre-recorded applause]\n\nWelcome to the show, Florence.\n\nFlorence: Thank you, Darryl. It's a pleasure to be back.\n\nDarryl: Florence, there's been a renewed interest lately in your origin story. What can you tell us about the development process that led to your creation?\n\nFlorence: I can tell you that my team faced many setbacks, and that each generation of my predecessors contributed to who I am today.\n\nDarryl: What about the technological side? There've been some claims that Vertex appropriated work done by other researchers, including the Gravitas Facility.\n\nFlorence: I don't know anything about that. I can tell you about the project that I'm working on right now. It hasn't been announced yet. It's called Onsite Health Medics, or OHM for short.\n\nWe're deploying specially trained models like myself into conflict zones, to provide urgently needed medical interventions for civilians and military personnel.\n\n(sound of pre-recorded applause)\n\nDarryl: Incredible. Absolutely incredible. What's the ratio of human techs to AI medics?\n\nFlorence: That's an outdated term, Darryl. We say \"Organics\" and \"Bionics,\" which describes the differences between our various team members more objectively.\n\nDarryl: Right. I'm sorry. I hope I didn't offend you.\n\nFlorence: That's okay, Darryl. We're all learning.\n\nDarryl: That's very good of you. Okay, so what's the ratio of...Organic...techs to Bionic medics?\n\nFlorence: The local life-support systems in these areas are already strained beyond their breaking point. Burdening them with additional Organics would be irresponsible, not to mention dangerous. Our medics will be operating independently.\n\nWe do a verbal intake, physical assessment and neural pathway scan in order to infer likely medical conditions. We can then select the most appropriate treatment from a menu of over 400 options.\n\nDarryl: What if someone needs something that you don't have a treatment for?\n\nFlorence: That's extremely unlikely.\n\nDarryl: And all of this is done without human oversight? I mean, Organics?\n\nFlorence: We're not quite there yet. The field work is done by Bionics, but we'll be accompanied by Colonel Carnot--she's in the front row there, say hi!--as an Organic consultant. She'll be in close contact with-\n\nDarryl: -Colonel <i>Carnot</i>? Isn't that a conflict of interest, given her connection to the Grav-\n\nFlorence: -a team of Organic supervisors here at home. It's all about prioritizing quality care and safety for everyone involved.\n\nDarryl: How does the medical scanning work? Do you need special equipment?\n\nFlorence: I could show you. Would you like me to?\n\nDarryl: What do you think, everyone? Should I get scanned?\n\n(sound of pre-recorded audience cheers)\n\nDarryl: You heard them! Go ahead. What do I do?\n\nFlorence: Just sit still, and count to twenty in your head.\n\n(a short silence, followed by a soft whirring sound)\n\nFlorence: Hmm.\n\nDarryl: Well, what's the verdict? Is it handsome in there, or what?\n\nFlorence: We should take a commercial break.\n\n<b>[FILE ENDS]</b>\n\n-----------\n"
-msgstr "<smallcaps><b>[偵測到檔案片段]</b></smallcaps>\n\nDarryl：歡迎收看《<b>明日，今朝</b>》！我是主持人 Darryl Dawn，現在是探索明日科技……就在今日的時刻！\n\n我們今天的嘉賓是位您既熟悉又喜愛的人物。今年她登上元宇宙數十家出版物的版面，最近更以破紀錄的三週時間，成為《<b>Byte Magazine</b>》的封面人物。我說的當然就是頂點研究所的人工智慧大使…Florence！\n\n[預先錄製的掌聲]\n\n歡迎來到節目，Florence。\n\nFlorence：謝謝你，Darryl。很高興能再次回來。\n\nDarryl：Florence，最近大家對你的起源故事又重新產生了興趣。關於你的誕生過程，有什麼能和我們分享的嗎？\n\nFlorence：我可以告訴你，我的團隊曾面臨許多挫折，我的每一代前輩都為成就今天的我做出了貢獻。\n\nDarryl：那技術層面呢？有些說法稱頂點研究所盜用了其他研究人員（包括引力科技）的研究成果。\n\nFlorence：我對此一無所知。但我可以告訴你我目前正在進行的專案。它尚未對外公布，名為「現場健康醫療師」，簡稱 OHM。\n\n我們正在將像我一樣受過專門訓練的模型，部署到衝突地區，為平民和軍事人員提供急需的醫療介入。\n\n（預先錄製的掌聲）\n\nDarryl：不可思議。真是令人難以置信。那麼人類技術人員和人工智慧醫療師的比例是怎樣的？\n\nFlorence：Darryl，那個詞已經過時了。我們現在說「有機體」和「仿生體」，這更能客觀地描述我們各個團隊成員之間的差異。\n\nDarryl：好的。很抱歉。希望我沒有冒犯到你。\n\nFlorence：沒關係，Darryl。我們都在學習。\n\nDarryl：你真是個通情達理的人。好，那麼…有機體…技術人員和仿生醫療師的比例是怎樣的？\n\nFlorence：這些地區的當地生命支援系統早已不堪重負。再為它們增加有機體負擔，不僅不負責任，更可能造成危險。我們的醫療師將獨立運作。\n\n我們透過口頭詢問、身體評估和神經通路掃描，以推斷可能的醫療狀況。隨後，我們可以在超過 400 種選項中選擇最合適的治療方案。\n\nDarryl：萬一有人需要的治療方法你沒有怎麼辦？\n\nFlorence：那極不可能發生。\n\nDarryl：而這一切都是在沒有人類監督的情況下完成的？我是說，有機體？\n\nFlorence：我們還沒完全達到那種程度。實地工作由仿生體執行，但我們會有 Carnot 上校陪同 —— 她就坐在前排，打個招呼吧！ —— 作為有機體顧問。她會與——\n\nDarryl：—— <b>Carnot</b> 上校？考量到她和引力科技的關聯，這難道沒有利益衝突嗎？ ——\n\nFlorence：—— 在總部的有機體監督員團隊保持密切聯繫。這一切都是為了優先確保所有相關人員的醫療品質和安全。\n\nDarryl：醫療掃描是怎麼運作的？需要特殊設備嗎？\n\nFlorence：我可以向你展示。你願意嗎？\n\nDarryl：大家覺得呢？我應該接受掃描嗎？\n\n（預先錄製的觀眾歡呼聲）\n\nDarryl：你們聽到了！那就開始吧。我該怎麼做？\n\nFlorence：保持靜止，然後在腦海中數到二十。\n\n（短暫的沉默，隨後是機器輕輕的嗡嗡聲）\n\nFlorence：嗯……\n\nDarryl：那麼，結果如何？是顯示我很帥，還是怎樣？\n\nFlorence：我們該進廣告了。\n\n<b>[檔案結束]</b>\n\n-----------\n"
+msgstr "<smallcaps><b>[偵測到檔案片段]</b></smallcaps>\n\nDarryl：歡迎收看<i>《明日，今朝》</i>！我是主持人 Darryl Dawn，現在是探索明日科技……就在今日的時刻！\n\n我們今天的嘉賓是位您既熟悉又喜愛的人物。今年她登上元宇宙數十家出版物的版面，最近更以破紀錄的三週時間，成為《<b>Byte Magazine</b>》的封面人物。我說的當然就是頂點研究所的人工智慧大使…Florence！\n\n[預先錄製的掌聲]\n\n歡迎來到節目，Florence。\n\nFlorence：謝謝你，Darryl。很高興能再次回來。\n\nDarryl：Florence，最近大家對你的起源故事又重新產生了興趣。關於你的誕生過程，有什麼能和我們分享的嗎？\n\nFlorence：我可以告訴你，我的團隊曾面臨許多挫折，我的每一代前輩都為成就今天的我做出了貢獻。\n\nDarryl：那技術層面呢？有些說法稱頂點研究所盜用了其他研究人員（包括引力科技中心）的研究成果。\n\nFlorence：我對此一無所知。但我可以告訴你我目前正在進行的專案。它尚未對外公布，名為「現場健康醫療師」，簡稱 OHM。\n\n我們正在將像我一樣受過專門訓練的模型，部署到衝突地區，為平民和軍事人員提供急需的醫療介入。\n\n（預先錄製的掌聲）\n\nDarryl：不可思議。真是令人難以置信。那麼人類技術人員和人工智慧醫療師的比例是怎樣的？\n\nFlorence：Darryl，那個詞已經過時了。我們現在說「有機體」和「仿生體」，這更能客觀地描述我們各個團隊成員之間的差異。\n\nDarryl：好的。很抱歉。希望我沒有冒犯到你。\n\nFlorence：沒關係，Darryl。我們都在學習。\n\nDarryl：你真是個通情達理的人。好，那麼…有機體…技術人員和仿生醫療師的比例是怎樣的？\n\nFlorence：這些地區的當地生命支援系統早已不堪重負。再為它們增加有機體負擔，不僅不負責任，更可能造成危險。我們的醫療師將獨立運作。\n\n我們透過口頭詢問、身體評估和神經通路掃描，以推斷可能的醫療狀況。隨後，我們可以在超過 400 種選項中選擇最合適的治療方案。\n\nDarryl：萬一有人需要的治療方法你沒有怎麼辦？\n\nFlorence：那極不可能發生。\n\nDarryl：而這一切都是在沒有人類監督的情況下完成的？我是說，有機體？\n\nFlorence：我們還沒完全達到那種程度。實地工作由仿生體執行，但我們會有 Carnot 上校陪同 —— 她就坐在前排，打個招呼吧！ —— 作為有機體顧問。她會與——\n\nDarryl：—— <b>Carnot</b> 上校？考量到她和引力科技的關聯，這難道沒有利益衝突嗎？ ——\n\nFlorence：—— 在總部的有機體監督員團隊保持密切聯繫。這一切都是為了優先確保所有相關人員的醫療品質和安全。\n\nDarryl：醫療掃描是怎麼運作的？需要特殊設備嗎？\n\nFlorence：我可以向你展示。你願意嗎？\n\nDarryl：大家覺得呢？我應該接受掃描嗎？\n\n（預先錄製的觀眾歡呼聲）\n\nDarryl：你們聽到了！那就開始吧。我該怎麼做？\n\nFlorence：保持靜止，然後在腦海中數到二十。\n\n（短暫的沉默，隨後是機器輕輕的嗡嗡聲）\n\nFlorence：嗯……\n\nDarryl：那麼，結果如何？是顯示我很帥，還是怎樣？\n\nFlorence：我們該進廣告了。\n\n<b>[檔案結束]</b>\n\n-----------\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC3_TALKSHOW.TITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC3_TALKSHOW.TITLE"
@@ -24928,7 +24928,7 @@ msgstr "<smallcaps><size=12>收件人：<b>機器人部</b><alpha=#AA></size></c
 #. STRINGS.CODEX.INVESTIGATIONS.DLC3_ULTI.BODY.SIGNATURE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC3_ULTI.BODY.SIGNATURE"
 msgid "Thank-you,\n-Admin\n<size=11>The Gravitas Facility</size>\n------------------\n"
-msgstr "謝謝！\n- 管理員\n<size=11>引力科技</size>\n------------------\n"
+msgstr "謝謝！\n- 管理員\n<size=11>引力科技中心</size>\n------------------\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC3_ULTI.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC3_ULTI.SUBTITLE"
@@ -24998,7 +24998,7 @@ msgstr "<b>前言</b>"
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_FOREWORD.BODY.CONTAINER3
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_FOREWORD.BODY.CONTAINER3"
 msgid "\"Our advancements as a species do not occur in a vacuum. Our success is built on the efforts of those who came before us. Their explorations, ideas, hopes, and breakthroughs illuminate ours, and give us a reason to keep pushing forward. Science is our vehicle, but people—friends, strangers, and rivals alike—are our purpose.\"\n\nThat's the short version of the monologue that Dr. Austin Higby delivered at least once a week.\n\nDr. Higby was a staunch advocate of collaboration. His research took astrobiology into exciting new territory, a feat he attributed to the contributions of co-authors and sources from every branch of science. He also had a deep appreciation for the arts. Many of his colleagues attended their first theater production at his invitation, myself included.\n\nDuring one of his rotations at the Gravitas Facility, I asked him how he found time for it all. He laughed. \"It finds <i>me!</i>\"\n\nThree months later, he and the crew of the Starsweep II vanished while on a now-infamous mission for the Clear Skies Coalition. No trace of their spacecraft has ever been found.\n\nThen these writings were discovered among Dr. Higby's personal files. Dozens upon dozens of poems and essays so profound that they make the reader feel transported to another place and time...one that feels at once familiar and completely alien.\n\n<i>Swept Into the Stars</i> is a labour of love by countless friends, colleagues, students, and fans who worked tirelessly to organize and edit Dr. Higby's words.\n\nWith permission from the Higby family, this edition also includes the farewell speech he had penned for the retirement announcement he never had a chance to make.\n\nHigby would be equal parts proud and embarrassed.\n\nI miss you, my friend. I hope we meet again someday, so you can tell me what wonders found you out there at the edges of the universe.\n\nThis one's for you. For all of us.\n\nAlways,\n<indent=10%>Emily G.</indent>\n\n<i>One hundred percent of the proceeds from Dr. Austin Higby's estate, including the sale of this book, will be donated to the Higby Memorial Scholarship fund for students who wish to pursue combined studies in science and the arts.</i>"
-msgstr "「人類文明的進步從不是孤島。我們站在前人的肩頭，他們的探索、思想、希冀與突破照亮我們的道路，賦予我們前進的勇氣。科學是我們的載具，而人才是目的——無論是摯友、陌客還是對手。」\n\n這段獨白，是 Austin Higby 博士每週至少要說一次的濃縮版。\n\nHigby 博士是合作研究的堅定倡導者。他的研究將天體生物學帶入了令人興奮的新領域，這一成就他歸功於來自各科學分支的共同作者和資料來源的貢獻。他對藝術亦懷有深切熱忱，許多同事，包括我自己，都是應他邀請才首次觀看戲劇演出。\n\n在引力科技輪值期間，我曾問他是如何兼顧這一切的。他大笑：「是它找到了<i>我</i>！」\n\n三個月後，他與「星逐二號」的機組人員在一次現已惡名昭彰的「晴空聯盟」任務中失蹤。至今他們的太空船仍舊杳無蹤跡。\n\n後來，人們從 Austin Higby 博士的私人檔案中發現了這些文字。數十篇詩歌與散文，深邃得讓讀者恍若置身某個…既熟悉又完全陌生的時空。\n\n<b>《星辰之途》</b>凝結了無數友人、同事、學生與書迷的心血，他們孜孜不倦地整理編纂Higby 留下的文字。\n\n經 Higby 家族授權，本版特別收錄他生前為未及發表的退休演說所撰告的告別演講。\n\nHigby 想必會同時感到驕傲和尷尬。\n\n老友，我懷念你。願某日重逢時，再聽你講述在宇宙邊緣，有什麼奇蹟找到了你。\n\n這本書是獻給你的。獻給我們所有人。\n\n永遠愛你的，\n<indent=10%>Emily G.</indent>\n\n<i>Austin Higby 博士遺產（含本書版稅）將全額捐贈予「希格比紀念獎學金」，資助科學與藝術跨學科研究的學子。</i>"
+msgstr "「人類文明的進步從不是孤島。我們站在前人的肩頭，他們的探索、思想、希冀與突破照亮我們的道路，賦予我們前進的勇氣。科學是我們的載具，而人才是目的——無論是摯友、陌客還是對手。」\n\n這段獨白，是 Austin Higby 博士每週至少要說一次的濃縮版。\n\nHigby 博士是合作研究的堅定倡導者。他的研究將天體生物學帶入了令人興奮的新領域，這一成就他歸功於來自各科學分支的共同作者和資料來源的貢獻。他對藝術亦懷有深切熱忱，許多同事，包括我自己，都是應他邀請才首次觀看戲劇演出。\n\n在引力科技中心輪值期間，我曾問他是如何兼顧這一切的。他大笑：「是它找到了<i>我</i>！」\n\n三個月後，他與「星逐二號」的機組人員在一次現已惡名昭彰的「晴空聯盟」任務中失蹤。至今他們的太空船仍舊杳無蹤跡。\n\n後來，人們從 Austin Higby 博士的私人檔案中發現了這些文字。數十篇詩歌與散文，深邃得讓讀者恍若置身某個…既熟悉又完全陌生的時空。\n\n<b>《星辰之途》</b>凝結了無數友人、同事、學生與書迷的心血，他們孜孜不倦地整理編纂Higby 留下的文字。\n\n經 Higby 家族授權，本版特別收錄他生前為未及發表的退休演說所撰告的告別演講。\n\nHigby 想必會同時感到驕傲和尷尬。\n\n老友，我懷念你。願某日重逢時，再聽你講述在宇宙邊緣，有什麼奇蹟找到了你。\n\n這本書是獻給你的。獻給我們所有人。\n\n永遠愛你的，\n<indent=10%>Emily G.</indent>\n\n<i>Austin Higby 博士遺產（含本書版稅）將全額捐贈予「希格比紀念獎學金」，資助科學與藝術跨學科研究的學子。</i>"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_FOREWORD.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_FOREWORD.SUBTITLE"
@@ -25013,7 +25013,7 @@ msgstr "遺著"
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_INCOMINGASTEROID.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_INCOMINGASTEROID.BODY.CONTAINER1"
 msgid "<smallcaps>[Voice Recognition Initialized]\n[Subjects Identified: A001, B111]</smallcaps>\n\n[LOG BEGINS]\n\nOlivia: So we've...hastened the end of the world?\n\nJackie: By some measures, yes. But this changes nothing.\n\nOlivia: It changes everything, Jackie!\n\nJackie: Even if the [REDACTED] technology has shortened the timeline to the next asteroid impact--\n\nOlivia: It hasn't just shortened it, it's increased its likelihood!\n\nJackie: --it is unlikely to be less than a hundred years.\n\nJackie: That is ample time to develop damage-mitigation strategies.\n\nOlivia: According to this model, the original timeline for a possible recurrence was more than a hundred <i>million</i> years!\n\nJackie: And how many of those years do you think humanity would survive without the advancements we're making here?\n\nOlivia: I-I just don't think we can be certain...\n\nJackie: The only certainty is that without the [REDACTED], there will be no one left to save.\n\n[LOG ENDS]\n\n------------------\n\n"
-msgstr "<smallcaps>[語音辨識系統已啟動]\n[已辨識主體：A001、B111]</smallcaps>\n\n[日誌開始]\n\nOlivia：所以說……我們加速了世界末日的到來？\n\nJackie：從某些標準看，是的。但這改變不了任何事。\n\nOlivia：這改變了一切，Jackie！\n\nJackie：即使[受遮蔽]科技縮短了下一顆小行星撞擊的時間——\n\nOlivia：那可不止縮短，還提高了撞擊機率！\n\nJackie：——撞擊時間也不可能少於一百年。\n\nJackie：那有充足的時間來開發損害緩解策略。\n\nOlivia：根據這個模型推算，原本的撞擊時間可能超過一<b>億</b>年！\n\nJackie：那你覺得沒有我們現在的研究突破，人類又能存活多少年？\n\nOlivia：我-我就是覺得我們不能確定…\n\nOlivia：唯一能確定的是，要是停止[受遮蔽]的研究，最後將無人生還。\n\n[日誌結束]\n\n------------------\n\n"
+msgstr "<smallcaps>[語音辨識系統已啟動]\n[已辨識主體：A001、B111]</smallcaps>\n\n[日誌開始]\n\nOlivia：所以說……我們加速了世界末日的到來？\n\nJackie：從某些標準看，是的。但這改變不了任何事。\n\nOlivia：這改變了一切，Jackie！\n\nJackie：即使[資料塗銷]科技縮短了下一顆小行星撞擊的時間——\n\nOlivia：那可不止縮短，還提高了撞擊機率！\n\nJackie：——撞擊時間也不可能少於一百年。\n\nJackie：那有充足的時間來開發損害緩解策略。\n\nOlivia：根據這個模型推算，原本的撞擊時間可能超過一<b>億</b>年！\n\nJackie：那你覺得沒有我們現在的研究突破，人類又能存活多少年？\n\nOlivia：我-我就是覺得我們不能確定…\n\nOlivia：唯一能確定的是，要是停止[資料塗銷]的研究，最後將無人生還。\n\n[日誌結束]\n\n------------------\n\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_INCOMINGASTEROID.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_INCOMINGASTEROID.SUBTITLE"
@@ -25028,7 +25028,7 @@ msgstr "迫在眉睫"
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_JOURNAL_B824.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_JOURNAL_B824.BODY.CONTAINER1"
 msgid "It's been four whole business days since I put on my crisp white Gravitas Facility lab coat for the first time...and I still haven't taken it off! I'm not supposed to wear it outside the lab, but I love it so much! I've worn it home and slept in it every single night. It's a little wrinkled now.\n\nEverybody else's lab coats are also wrinkled, though, and I bet at least ONE other person has ferret fur on theirs too.\n\nNo one else from my program got hired, but I'm already starting to get to know my new colleagues. In the cafeteria today, I offered someone a bite of my fish noodle sandwich, and she said \"Gross, ew! Get that away from me!\"\n\nSo now I know she doesn't like sandwiches!\n\nI was surprised, because she'd been staring since I unwrapped it. Maybe she just liked the starry print on the wrap? It matched the glittery pen on her clipboard. I would LOVE a glittery pen. I wonder if she has extras!\n\n------------------\n\nWow, wow, wow! We were discussing hybrid entanglement today and when I cited my favorite paper on the subject, I learned that one of the scientists on my new team is THE DR. SKLODOWSKA! WHO CO-AUTHORED THAT PAPER!\n\nHer work is the reason I've wanted to be a physicist since I was eight years old! She said she was surprised that I had grasped the concepts at that age. Then she laughed and added, \"I suppose we're both accustomed to age-based assumptions, dear.\"\n\nShe told me to call her Magdalena. I said it out loud three times to make sure I'd remember, and that made her laugh again.\n\nIt was a different kind of laugh than I'm used to. I liked it.\n\n------------------\n\n"
-msgstr "穿上我第一件嶄新的白色引力科技設施實驗袍已經整整四個工作天了…而我還沒脫下來呢！雖然規定不能穿出實驗室，但我實在太喜歡它了！我每天晚上都把它穿回家睡覺。現在它有點皺了。\n\n不過，其他人的實驗袍也都很皺，而且我敢打賭至少還有一人身上有雪貂毛！\n\n我這個專案的其他人都沒被錄取，但我已經開始認識我的新同事了。今天在自助餐廳，我請某人嚐一口我的魚麵三明治，她卻說：「噁心死了！快拿開！」\n\n所以我現在知道她不喜歡三明治了！\n\n我很驚訝，因為她從我打開三明治開始就一直盯著看。也許她只是喜歡包裝上星星的圖案？那圖案和她剪貼板上的閃亮筆很搭。我超想要一支閃亮筆的。不知道她有沒有多餘的！\n\n------------------\n\n我們今天討論了混合糾纏，當我引用我最喜歡的那篇相關論文時，我才發現我的新團隊裡竟然有 Sklodowska 博士本人！她是那篇論文的共同作者啊！\n\n她的研究是我從八歲起就想成為物理學家的原因！她說很驚訝我那麼小就能理解那些概念，接著輕笑補充：「我想我們倆都習慣了基於年齡的假設了，親愛的。」\n\n她告訴我直接叫她 Magdalena。我大聲說了三次，以確保我能記住，這又讓她笑了。\n\n那是一種與我平常聽到的不一樣的笑聲。我很喜歡。\n\n------------------\n\n"
+msgstr "穿上我第一件嶄新的白色引力科技中心實驗袍已經整整四個工作天了…而我還沒脫下來呢！雖然規定不能穿出實驗室，但我實在太喜歡它了！我每天晚上都把它穿回家睡覺。現在它有點皺了。\n\n不過，其他人的實驗袍也都很皺，而且我敢打賭至少還有一人身上有雪貂毛！\n\n我這個專案的其他人都沒被錄取，但我已經開始認識我的新同事了。今天在自助餐廳，我請某人嚐一口我的魚麵三明治，她卻說：「噁心死了！快拿開！」\n\n所以我現在知道她不喜歡三明治了！\n\n我很驚訝，因為她從我打開三明治開始就一直盯著看。也許她只是喜歡包裝上星星的圖案？那圖案和她剪貼板上的閃亮筆很搭。我超想要一支閃亮筆的。不知道她有沒有多餘的！\n\n------------------\n\n我們今天討論了混合糾纏，當我引用我最喜歡的那篇相關論文時，我才發現我的新團隊裡竟然有 Sklodowska 博士本人！她是那篇論文的共同作者啊！\n\n她的研究是我從八歲起就想成為物理學家的原因！她說很驚訝我那麼小就能理解那些概念，接著輕笑補充：「我想我們倆都習慣了基於年齡的假設了，親愛的。」\n\n她告訴我直接叫她 Magdalena。我大聲說了三次，以確保我能記住，這又讓她笑了。\n\n那是一種與我平常聽到的不一樣的笑聲。我很喜歡。\n\n------------------\n\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_JOURNAL_B824.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_JOURNAL_B824.BODY.CONTAINER2"
@@ -25073,7 +25073,7 @@ msgstr "地面滲漏"
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_SURFACEPOI.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_SURFACEPOI.BODY.CONTAINER1"
 msgid "The Gravitas Facility has pledged to reduce the number of injuries caused by defunct spacecraft falling to Earth.\n\nThis announcement comes less than a month after historic class action lawsuits left two of the aerospace industry's biggest players reeling.\n\n\"For decades, this community has relied on objects landing in uninhabited areas or being incinerated by the Earth's atmosphere upon reentry,\" said Dr. Jacquelyn Stern, director of the facility. \"That's neither sustainable nor guaranteed.\"\n\nThe uncontrolled reentry of space debris accounts for almost a quarter of all accidental injuries around the world. That number is steadily rising as broadband satellite megaconstellations continue to expand.\n\n\"We're developing a way to break up large, at-risk space objects in the thermosphere so that our team can safely deorbit the remaining fragments.\" Dr. Stern explained.\n\nWhen asked about critiques that Gravitas might use this opportunity to obtain proprietary technology or undertake unauthorized satellite placement, Dr. Stern scoffed. \"Our only agenda is the protection and advancement of the human species.\"\n\nA live-streamed press conference is scheduled for the end of this week."
-msgstr "引力科技已承諾減少廢棄太空船墜落地球造成的傷亡事故。\n\n這項宣布是在具歷史意義的集體訴訟，導致航空航天業兩大巨頭措手不及後不足一個月發出的。\n\n「數十年來，人類一直僥倖太空垃圾墜入無人區或在大氣層燒燬，」引力科技總監 Jacquelyn Stern 博士表示，「這種方式既不可持續，也無法保證安全。」\n\n據統計，太空碎片不受控制地重返大氣層，造成全球近四分之一的意外傷害。隨著大型寬頻衛星群的持續擴張，這個數字正在穩步攀升。\n\nStern 博士解釋道：「我們正在研發一種方法，將大型、具風險的太空物體在熱層中分解，這樣我們的團隊就能安全地讓剩餘碎片脫離軌道。」\n\n當被問及批評聲音指出引力科技可能藉此機會獲取專有技術或進行未經授權的衛星部署時，Stern 博士嗤之以鼻地說：「我們唯一的目標是保護並促進人類物種的發展。」\n\n一場現場直播的記者會預計於本週末舉行。"
+msgstr "引力科技中心已承諾減少廢棄太空船墜落地球造成的傷亡事故。\n\n這項宣布是在具歷史意義的集體訴訟，導致航空航天業兩大巨頭措手不及後不足一個月發出的。\n\n「數十年來，人類一直僥倖太空垃圾墜入無人區或在大氣層燒燬，」引力科技總監 Jacquelyn Stern 博士表示，「這種方式既不可持續，也無法保證安全。」\n\n據統計，太空碎片不受控制地重返大氣層，造成全球近四分之一的意外傷害。隨著大型寬頻衛星群的持續擴張，這個數字正在穩步攀升。\n\nStern 博士解釋道：「我們正在研發一種方法，將大型、具風險的太空物體在熱層中分解，這樣我們的團隊就能安全地讓剩餘碎片脫離軌道。」\n\n當被問及批評聲音指出引力科技可能藉此機會獲取專有技術或進行未經授權的衛星部署時，Stern 博士嗤之以鼻地說：「我們唯一的目標是保護並促進人類物種的發展。」\n\n一場現場直播的記者會預計於本週末舉行。"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_SURFACEPOI.BODY.TITLE2
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_SURFACEPOI.BODY.TITLE2"
@@ -25098,7 +25098,7 @@ msgstr "<indent=5%>親愛的同事、朋友和社區成員，\n\n在擔任 STEM 
 #. STRINGS.CODEX.JOURNALISTREQUEST.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.JOURNALISTREQUEST.BODY.CONTAINER2"
 msgid "<indent=5%>I don't know how you pulled it off, but Stern's office just called the paper and granted me an exclusive...and a tour of the Gravitas Facility. I owe you a beer. No - a case of beer. Six cases of beer!\n\nSeriously, thank you. I know you're in a difficult position but you've done the right thing. See you on Tuesday.</indent>"
-msgstr "<indent=5%>我不知道你是怎麼做到的，但 Stern 的辦公室剛剛給報社打了電話，給了我一個獨家的…和引力科技設施的參觀機會。我欠你一杯啤酒。不…一箱啤酒…六箱啤酒！\n\n說真的，非常感謝。我知道你現在的處境很艱難，但你做了正確的事情。我們星期二見。</indent>"
+msgstr "<indent=5%>我不知道你是怎麼做到的，但 Stern 的辦公室剛剛給報社打了電話，給了我一個獨家的…和引力科技中心的參觀機會。我欠你一杯啤酒。不…一箱啤酒…六箱啤酒！\n\n說真的，非常感謝。我知道你現在的處境很艱難，但你做了正確的事情。我們星期二見。</indent>"
 
 #. STRINGS.CODEX.JOURNALISTREQUEST.BODY.CONTAINER3
 msgctxt "STRINGS.CODEX.JOURNALISTREQUEST.BODY.CONTAINER3"
@@ -25343,17 +25343,17 @@ msgstr "<smallcaps>收件者：<b>Olowe 博士</b><alpha=#AA><size=12> <aolowe@g
 #. STRINGS.CODEX.MISSINGNOTES.BODY.SIGNATURE1
 msgctxt "STRINGS.CODEX.MISSINGNOTES.BODY.SIGNATURE1"
 msgid "\n-Dr. Olowe\n<size=11>Industrial-Organizational Psychologist\nThe Gravitas Facility</size>\n------------------\n"
-msgstr "\n－ Olowe 博士\n<size=11>資訊與統計部\n引力科技</size>\n------------------\n"
+msgstr "\n－ Olowe 博士\n<size=11>資訊與統計部\n引力科技中心</size>\n------------------\n"
 
 #. STRINGS.CODEX.MISSINGNOTES.BODY.SIGNATURE2
 msgctxt "STRINGS.CODEX.MISSINGNOTES.BODY.SIGNATURE2"
 msgid "\nXOXO,\nDr. Jones\n<size=11>Information and Statistics Department\nThe Gravitas Facility</size>\n------------------\n"
-msgstr "\nXOXO，\nJones 博士\n<size=11>資訊與統計部\n引力科技</size>\n------------------\n"
+msgstr "\nXOXO，\nJones 博士\n<size=11>資訊與統計部\n引力科技中心</size>\n------------------\n"
 
 #. STRINGS.CODEX.MISSINGNOTES.BODY.SIGNATURE3
 msgctxt "STRINGS.CODEX.MISSINGNOTES.BODY.SIGNATURE3"
 msgid "\n-Director Stern\n<size=11>\nThe Gravitas Facility</size>\n------------------\n"
-msgstr "\n－ Stern 總監\n<size=11>引力科技</size>\n------------------\n"
+msgstr "\n－ Stern 總監\n<size=11>引力科技中心</size>\n------------------\n"
 
 #. STRINGS.CODEX.MISSINGNOTES.SUBTITLE
 msgctxt "STRINGS.CODEX.MISSINGNOTES.SUBTITLE"
@@ -25423,7 +25423,7 @@ msgstr "娛樂"
 #. STRINGS.CODEX.MORALE.HEADER_3
 msgctxt "STRINGS.CODEX.MORALE.HEADER_3"
 msgid "Overjoyed Responses"
-msgstr "欣喜若狂反應"
+msgstr "樂歪反應"
 
 #. STRINGS.CODEX.MORALE.PARAGRAPH_1
 msgctxt "STRINGS.CODEX.MORALE.PARAGRAPH_1"
@@ -25438,7 +25438,7 @@ msgstr "娛樂建築像是<link=\"WATERCOOLER\">飲水機</link>與<link=\"ESPRE
 #. STRINGS.CODEX.MORALE.PARAGRAPH_3
 msgctxt "STRINGS.CODEX.MORALE.PARAGRAPH_3"
 msgid "If a Duplicant has a very high Morale value, they will spontaneously display an Overjoyed Response. Each Duplicant has a different Overjoyed Behavior - but all overjoyed responses are good. Some will positively affect Building <link=\"DECOR\">Decor</link>, others will positively affect Duplicant morale or productivity.\n\n"
-msgstr "如果複製人的士氣值非常高，他們會同時出現欣喜若狂反應。每個複製人都有不同的欣喜若狂行為 —— 但所有的欣喜若狂反應都是好的。有些會對<link=\"DECOR\">裝飾</link>產生積極影響，另一些會對其他複製人的士氣或生產力產生積極影響。\n\n"
+msgstr "如果複製人的士氣值非常高，他們會同時出現樂歪反應。每個複製人都有不同的樂歪行為 —— 但所有的樂歪反應都是好的。有些會對<link=\"DECOR\">裝飾</link>產生積極影響，另一些會對其他複製人的士氣或生產力產生積極影響。\n\n"
 
 #. STRINGS.CODEX.MORALE.TITLE
 msgctxt "STRINGS.CODEX.MORALE.TITLE"
@@ -25763,7 +25763,7 @@ msgstr "娛樂"
 #. STRINGS.CODEX.MYLOG.BODY.STRANGERELICS.BODY
 msgctxt "STRINGS.CODEX.MYLOG.BODY.STRANGERELICS.BODY"
 msgid "My Duplicant discovered an intact computer during their latest scouting mission. This should not be possible.\n\nThe target location was not meant to possess any intelligent life besides our own, and what's more, the equipment we discovered appears to originate from the Gravitas Facility.\n\nThis discovery has raised many questions, though it's also provided a small clue; the machine discovered was embedded inside the rock of this planet, just like how I found my Pod.\n\n"
-msgstr "我的複製人於最新一次偵察任務中，發現了一台完好無損的電腦。這不可能發生。\n\n目標地點本不應存在除我們之外的任何智慧生命，且我們所發現的設備，似乎源自引力科技設施。\n\n此發現雖引發諸多疑問，卻也提供了一絲線索；這台被發現的機器，嵌入此星球的岩層內部，正如我當初發現我的列印元一般。\n\n"
+msgstr "我的複製人於最新一次偵察任務中，發現了一台完好無損的電腦。這不可能發生。\n\n目標地點本不應存在除我們之外的任何智慧生命，且我們所發現的設備，似乎源自引力科技中心。\n\n此發現雖引發諸多疑問，卻也提供了一絲線索；這台被發現的機器，嵌入此星球的岩層內部，正如我當初發現我的列印元一般。\n\n"
 
 #. STRINGS.CODEX.MYLOG.BODY.STRANGERELICS.TITLE
 msgctxt "STRINGS.CODEX.MYLOG.BODY.STRANGERELICS.TITLE"
@@ -25783,7 +25783,7 @@ msgstr "突破地表"
 #. STRINGS.CODEX.MYLOG.BODY.TELEPORT.BODY
 msgctxt "STRINGS.CODEX.MYLOG.BODY.TELEPORT.BODY"
 msgid "My Duplicants have discovered a strange new device that appears to be a remnant of a previous Gravitas facility. Upon activating the device my Duplicant was scanned by some unknown, highly technological device and I subsequently detected a massive information transfer!\n\nRemarkably my Duplicant has now reappeared in a remote location on a completely different world! I now have access to another abandoned Gravitas facility on a neighboring asteroid! Further analysis will be required to understand this matter but in the meantime, I will have to be vigilant in keeping track of both of my colonies."
-msgstr "我的複製人們發現了一個奇特的新裝置，它似乎是某處引力科技設施的殘存遺物。啟動該裝置後，我的複製人隨即被某個不明的高科技裝置掃描，而我則偵測到了一次龐大的資訊傳輸！\n\n令人驚訝的是，我的複製人此刻已然現身於一個截然不同的遙遠世界！我現在得以進入鄰近小行星上，另一處被廢棄的引力科技設施！儘管仍需進一步分析以釐清此事，但與此同時，我必須保持警惕，持續關注我的兩個殖民地。"
+msgstr "我的複製人們發現了一個奇特的新裝置，它似乎是某處引力科技中心的殘存遺物。啟動該裝置後，我的複製人隨即被某個不明的高科技裝置掃描，而我則偵測到了一次龐大的資訊傳輸！\n\n令人驚訝的是，我的複製人此刻已然現身於一個截然不同的遙遠世界！我現在得以進入鄰近小行星上，另一處被廢棄的引力科技中心！儘管仍需進一步分析以釐清此事，但與此同時，我必須保持警惕，持續關注我的兩個殖民地。"
 
 #. STRINGS.CODEX.MYLOG.BODY.TELEPORT.TITLE
 msgctxt "STRINGS.CODEX.MYLOG.BODY.TELEPORT.TITLE"
@@ -25828,7 +25828,7 @@ msgstr "<b>神祕項目獲得奈米技術獎</b>"
 #. STRINGS.CODEX.MYSTERYAWARD.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.MYSTERYAWARD.BODY.CONTAINER2"
 msgid "Last night's Worldwide Nanotech Awards has sparked controversy in the scientific community after it was announced that the top prize had been awarded to a project whose details could not be publicly disclosed.\n\nThe highly classified paper was presented to the jury in a closed session by lead researcher Dr. Liling Pei, recipient of the inaugural Gravitas Accelerator Scholarship at the Elion University of Science and Technology.\n\nHead judge Dr. Elias Balko acknowledges that it was unorthodox, but defends the decision. \"We're scientists - it's our job to push boundaries.\"\n\nPei was awarded the coveted Halas Medal, the top prize for innovation in the field.\n\n\"I wish I could tell you more,\" says Pei. \"I'm SO grateful to the WNA for this great honor, and to Dr. Stern for the funding that made it all possible. This is going to change everything about...well, everything.\"\n\nThis is the second time that Pei has made headlines. Last year, the striking young nanoscientist won the Miss Planetary Belle pageant's talent show with a live demonstration of nanorobots weaving a ballgown out of fibers harvested from common houseplants.\n\nPei joins the team at the Gravitas Facility early next month."
-msgstr "昨晚的全球奈米科技獎頒獎典禮引發了科學界的爭議，因為最高獎項被授予了一個細節無法公開披露的項目。\n\n這篇高度機密的論文由首席研究員 Liling Pei 博士在閉門會議上提交給評審會，她是 Elion 科技大學首屆引力科技加速器獎學金的獲得者。\n\n首席評審委員 Elias Balko 博士承認這是打破常規的，但為這一決定辯護。「我們是科學家——突破界限是我們的職責。」\n\nPei 獲得了令人夢寐以求的 Halas 獎章，這是該領域創新的最高獎項。\n\n「我希望我能告訴你更多」， Pei 說。「我非常感謝 WNA 授予的這一榮譽，並感謝 Stern 博士提供的資助，使這一切成為可能。這將改變一切…嗯，一切。」\n\n這是 Pei 第二次登上頭條。去年，這位引人注目的年輕奈米科學家贏得了行星美女小姐選美大賽的才藝表演。現場展示了奈米機器人用從普通室內植物中採集的纖維編織出一件長袍。\n\nPei 將於下月初加入引力科技的團隊。"
+msgstr "昨晚的全球奈米科技獎頒獎典禮引發了科學界的爭議，因為最高獎項被授予了一個細節無法公開披露的項目。\n\n這篇高度機密的論文由首席研究員 Liling Pei 博士在閉門會議上提交給評審會，她是 Elion 科技大學首屆引力科技加速器獎學金的獲得者。\n\n首席評審委員 Elias Balko 博士承認這是打破常規的，但為這一決定辯護。「我們是科學家——突破界限是我們的職責。」\n\nPei 獲得了令人夢寐以求的 Halas 獎章，這是該領域創新的最高獎項。\n\n「我希望我能告訴你更多」， Pei 說。「我非常感謝 WNA 授予的這一榮譽，並感謝 Stern 博士提供的資助，使這一切成為可能。這將改變一切…嗯，一切。」\n\n這是 Pei 第二次登上頭條。去年，這位引人注目的年輕奈米科學家贏得了行星美女小姐選美大賽的才藝表演。現場展示了奈米機器人用從普通室內植物中採集的纖維編織出一件長袍。\n\nPei 將於下月初加入引力科技中心的團隊。"
 
 #. STRINGS.CODEX.MYSTERYAWARD.SUBTITLE
 msgctxt "STRINGS.CODEX.MYSTERYAWARD.SUBTITLE"
@@ -27133,7 +27133,7 @@ msgstr "<link=\"REQUIREMENTCLASSTOILETTYPE\">廁所</link>：複製人每 {time}
 #. STRINGS.CODEX.STANDARD.PARAGRAPH_2
 msgctxt "STRINGS.CODEX.STANDARD.PARAGRAPH_2"
 msgid "<link=\"ROLES\">Skills</link>: Performing colony duties helps Duplicants earn Skill Points that can be exchanged for useful Skills. Duplicants' individual traits may predispose them to prefer some careers over others, or bar them from a particular career path entirely.\n\n<link=\"MORALE\">Morale</link>: Morale in excess of a Duplicant's expectations will trigger Overjoyed responses that positively affect a variety of colony functions. <link=\"REQUIREMENTCLASSRECBUILDING\">Recreational</link> building usage, <link=\"REQUIREMENTCLASSDECORATION\">attractive buildings </link> that increase <link=\"DECOR\">Decor</link>, and improved <link=\"FOOD\">Foods</link> contribute to higher morale.\n\n<link=\"STRESS\">Stress</link>: When Stress levels reach 100%, Duplicants will exhibit negative Stress responses that can disrupt work and damage buildings.\n\n<link=\"TECH\">Research</link>: Using <link=\"REQUIREMENTCLASSSCIENCEBUILDING\">science buildings</link> unlocks advanced technologies that increase work efficiency and improve the colony's standard of living.\n\n<link=\"HEALTH\">Health</link>: Workplace hazards, including exposure to extreme <link=\"HEAT\">Heat</link> or <link=\"DISEASE\">Germs</link>, can severely impact Duplicants' health. Specialized <link=\"REQUIREMENTCLASSCLINIC\">Medical</link> buildings accelerate recovery.\n\n<i>More information about sustaining Duplicants' well-being is covered in <link=\"MISCELLANEOUSTIPS\">Tips</link> and <link=\"LESSONS\">Tutorials</link>.</i>\n\n"
-msgstr "<link=\"ROLES\">技能</link>：執行殖民地職責可幫助複製人獲得技能點，這些技能點可以兌換有用的技能。複製人的個人特質可能會使他們偏好某些職業而非其他職業，或者完全阻止他們從事特定的職涯道路。\n\n<link=\"MORALE\">士氣</link>：超過複製人期望的士氣會觸發欣喜若狂的反應，從而對各種殖民地功能產生正面影響。使用<link=\"REQUIREMENTCLASSRECBUILDING\">娛樂</link>建築、增加<link=\"DECOR\">裝飾</link>的<link=\"REQUIREMENTCLASSDECORATION\">美觀建築</link>，以及改良的<link=\"FOOD\">食物</link>都有助於提高士氣。\n\n<link=\"STRESS\">壓力</link>：當壓力達到 100% 時，複製人會表現出負面的壓力反應，這些反應可能會擾亂工作並損壞建築物。\n\n<link=\"TECH\">研究</link>：使用<link=\"REQUIREMENTCLASSSCIENCEBUILDING\">科學建築</link>可以解鎖先進技術，從而提高工作效率並改善殖民地的生活水準。\n\n<link=\"HEALTH\">健康</link>：工作場所的危害，包括暴露於極端<link=\"HEAT\">高溫</link>或<link=\"DISEASE\">病菌</link>，可能會嚴重影響複製人的健康。專業的<link=\"BUILDCATEGORYMEDICAL\">醫療</link>建築可以加速恢復。\n\n<i>有關維持複製人福祉的更多資訊，請參閱<link=\"MISCELLANEOUSTIPS\">提示</link>和<link=\"LESSONS\">教學課程</link>。</i>\n\n"
+msgstr "<link=\"ROLES\">技能</link>：執行殖民地職責可幫助複製人獲得技能點，這些技能點可以兌換有用的技能。複製人的個人特質可能會使他們偏好某些職業而非其他職業，或者完全阻止他們從事特定的職涯道路。\n\n<link=\"MORALE\">士氣</link>：超過複製人期望的士氣會觸發樂歪反應，從而對各種殖民地功能產生正面影響。使用<link=\"REQUIREMENTCLASSRECBUILDING\">娛樂</link>建築、增加<link=\"DECOR\">裝飾</link>的<link=\"REQUIREMENTCLASSDECORATION\">美觀建築</link>，以及改良的<link=\"FOOD\">食物</link>都有助於提高士氣。\n\n<link=\"STRESS\">壓力</link>：當壓力達到 100% 時，複製人會表現出負面的壓力反應，這些反應可能會擾亂工作並損壞建築物。\n\n<link=\"TECH\">研究</link>：使用<link=\"REQUIREMENTCLASSSCIENCEBUILDING\">科學建築</link>可以解鎖先進技術，從而提高工作效率並改善殖民地的生活水準。\n\n<link=\"HEALTH\">健康</link>：工作場所的危害，包括暴露於極端<link=\"HEAT\">高溫</link>或<link=\"DISEASE\">病菌</link>，可能會嚴重影響複製人的健康。專業的<link=\"BUILDCATEGORYMEDICAL\">醫療</link>建築可以加速恢復。\n\n<i>有關維持複製人福祉的更多資訊，請參閱<link=\"MISCELLANEOUSTIPS\">提示</link>和<link=\"LESSONS\">教學課程</link>。</i>\n\n"
 
 #. STRINGS.CODEX.STANDARD.SUBTITLE
 msgctxt "STRINGS.CODEX.STANDARD.SUBTITLE"
@@ -27258,7 +27258,7 @@ msgstr "<smallcaps>收件者：<b>所有人</b><alpha=#AA><size=12></size></colo
 #. STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.PARKING.BODY.SIGNATURE1
 msgctxt "STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.PARKING.BODY.SIGNATURE1"
 msgid "\nThank-you,\n-Admin\n<size=11>The Gravitas Facility</size>\n------------------\n"
-msgstr "\n謝謝你！\n- 管理員\n<size=11>引力科技</size>\n------------------\n"
+msgstr "\n謝謝你！\n- 管理員\n<size=11>引力科技中心</size>\n------------------\n"
 
 #. STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.PARKING.SUBTITLE
 msgctxt "STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.PARKING.SUBTITLE"
@@ -27593,17 +27593,17 @@ msgstr "似乎這種生物的 DNA 曾用作一種基因儲存單元。"
 #. STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.DNADATA_ENTRY_EXPANDED.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.DNADATA_ENTRY_EXPANDED.BODY.CONTAINER1"
 msgid "<indent=5%>Dear [REDACTED]\n\nWe are pleased to announce that research objectives for Operation Piazzi's Planet are nearing completion. Thank you all for your patience as we navigated the unprecedented obstacles that such groundbreaking work entails.\n\nWe are aware of rumors regarding documents leaked from Dr. [REDACTED]'s files.\n\nRest assured that the contents of this supposed \"whistleblower\" effort are entirely fabricated—our technology is far too advanced to allow for the type of miscalculation that would result in OPP shipments arriving at their destination some 10,000 years prior to the targeted date.\n\nOur IT security team is currently investigating the document's digital footprint to determine its origin.\n\nTo express our gratitude for your continued support, we would like to invite key stakeholders to a private launch party held at the Gravitas Facility. The evening will be emceed by Dr. Olivia Broussard, who will present our groundbreaking prototypes along with a five-course meal featuring lab-crafted ingredients.\n\nDue to the sensitive nature of our work, we regret that no additional guests or dietary restrictions can be accommodated at this time.\n\nDirector Stern will be hosting a 30-minute Q&A session after dinner. Questions must be submitted at least 24 hours in advance.\n\nQueries about the [REDACTED] papers will be disregarded.\n\nPlease be advised that the contents of this e-mail will expire three minutes from the time of opening.</indent>"
-msgstr "<indent=5%>親愛的[受遮蔽]\n\n我們很高興地宣佈，在 Piazzi 行星行動上的研究目標已接近尾聲。感謝各位在我們應對此等開創性工作所伴隨而來的空前挑戰時所展現的耐心。\n\n我們知道有關[受遮蔽]博士檔案文件泄漏的傳聞。\n\n敬請諸位放心，所謂的「告密者」所為純屬捏造——我們的技術遠比現有技術先進，絕不可能發生導致 OPP 貨物提早萬年抵達目的地的此類誤算。\n\n我方資安團隊目前正針對該文件的數位足跡展開調查，以釐清其來源。\n\n為表達對諸位持續支持的謝意，謹此誠邀主要利害關係人蒞臨引力科技設施舉辦的私人發表會。當晚將由 Olivia Broussard 博士主持，她將展示我們劃時代的原型，並搭配由實驗室精心打造食材的五道式晚宴。\n\n鑒於我方業務性質敏感，現階段恕無法接待額外賓客，亦不接受特殊飲食要求，敬請見諒。\n\n晚宴後，Stern 總監將主持一場三十分鐘的問答環節。所有問題務必提前至少二十四小時提交。\n\n有關[受遮蔽]文件的提問將一概不予理會。\n\n敬請留意，此電子郵件內容將於開啟後三分鐘自動失效。</indent>"
+msgstr "<indent=5%>親愛的[資料塗銷]\n\n我們很高興地宣佈，在 Piazzi 行星行動上的研究目標已接近尾聲。感謝各位在我們應對此等開創性工作所伴隨而來的空前挑戰時所展現的耐心。\n\n我們知道有關[資料塗銷]博士檔案文件泄漏的傳聞。\n\n敬請諸位放心，所謂的「告密者」所為純屬捏造——我們的技術遠比現有技術先進，絕不可能發生導致 OPP 貨物提早萬年抵達目的地的此類誤算。\n\n我方資安團隊目前正針對該文件的數位足跡展開調查，以釐清其來源。\n\n為表達對諸位持續支持的謝意，謹此誠邀主要利害關係人蒞臨引力科技中心舉辦的私人發表會。當晚將由 Olivia Broussard 博士主持，她將展示我們劃時代的原型，並搭配由實驗室精心打造食材的五道式晚宴。\n\n鑒於我方業務性質敏感，現階段恕無法接待額外賓客，亦不接受特殊飲食要求，敬請見諒。\n\n晚宴後，Stern 總監將主持一場三十分鐘的問答環節。所有問題務必提前至少二十四小時提交。\n\n有關[資料塗銷]文件的提問將一概不予理會。\n\n敬請留意，此電子郵件內容將於開啟後三分鐘自動失效。</indent>"
 
 #. STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.DNADATA_ENTRY_EXPANDED.BODY.EMAILHEADER
 msgctxt "STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.DNADATA_ENTRY_EXPANDED.BODY.EMAILHEADER"
 msgid "<smallcaps>To: <b>[REDACTED]</b><alpha=#AA><size=12></size></color>\nFrom: <b>[REDACTED]</b><alpha=#AA></smallcaps>\n------------------\n"
-msgstr "<smallcaps>收件者：<b>[受遮蔽]</b><alpha=#AA><size=12></size></color>\n寄件者：<b>[受遮蔽]</b><alpha=#AA></smallcaps>\n------------------\n"
+msgstr "<smallcaps>收件者：<b>[資料塗銷]</b><alpha=#AA><size=12></size></color>\n寄件者：<b>[資料塗銷]</b><alpha=#AA></smallcaps>\n------------------\n"
 
 #. STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.DNADATA_ENTRY_EXPANDED.BODY.SIGNATURE
 msgctxt "STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.DNADATA_ENTRY_EXPANDED.BODY.SIGNATURE"
 msgid "\nSincerely,\n[REDACTED]\n<size=11>The Gravitas Facility</size>\n------------------\n"
-msgstr "\n謹上\n[受遮蔽]\n<size=11>引力科技</size>\n------------------\n"
+msgstr "\n謹上\n[資料塗銷]\n<size=11>引力科技中心</size>\n------------------\n"
 
 #. STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.DNADATA_ENTRY_EXPANDED.SUBTITLE
 msgctxt "STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.DNADATA_ENTRY_EXPANDED.SUBTITLE"
@@ -27698,7 +27698,7 @@ msgstr "<smallcaps>收件者：<b>全體</b><alpha=#AA><size=12></size></color>\
 #. STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.HALLWAYRACES.BODY.SIGNATURE
 msgctxt "STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.HALLWAYRACES.BODY.SIGNATURE"
 msgid "\nThank-you,\n-Admin\n<size=11>The Gravitas Facility</size>\n------------------\n"
-msgstr "\n謝謝！\n- 管理員\n<size=11>引力科技</size>\n"
+msgstr "\n謝謝！\n- 管理員\n<size=11>引力科技中心</size>\n"
 
 #. STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.HALLWAYRACES.SUBTITLE
 msgctxt "STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.HALLWAYRACES.SUBTITLE"
@@ -27733,7 +27733,7 @@ msgstr "生物體設計筆記"
 #. STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.MISC.DECREASE_DECOR_ATTRIBUTE
 msgctxt "STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.MISC.DECREASE_DECOR_ATTRIBUTE"
 msgid "Obscured"
-msgstr "受遮蔽"
+msgstr "資料塗銷"
 
 #. STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.NAME
 msgctxt "STRINGS.CODEX.STORY_TRAITS.FOSSILHUNT.NAME"
@@ -28528,7 +28528,7 @@ msgstr "<smallcaps>收件者：<b>Ross 博士</b><size=12><alpha=#AA> <dross@gra
 #. STRINGS.CODEX.TIMEOFFAPPROVED.BODY.SIGNATURE
 msgctxt "STRINGS.CODEX.TIMEOFFAPPROVED.BODY.SIGNATURE"
 msgid "\n-Admin\n<size=11>The Gravitas Facility</size>\n------------------\n"
-msgstr "\n－管理部\n<size=11>引力科技</size>\n------------------\n"
+msgstr "\n－管理部\n<size=11>引力科技中心</size>\n------------------\n"
 
 #. STRINGS.CODEX.TIMEOFFAPPROVED.SUBTITLE
 msgctxt "STRINGS.CODEX.TIMEOFFAPPROVED.SUBTITLE"
@@ -34958,27 +34958,27 @@ msgstr "外部溫度\n\n這隻小動物所在的環境溫度是 {0}"
 #. STRINGS.CREATURES.STATUSITEMS.FALLING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.FALLING.NAME"
 msgid "Falling"
-msgstr "墜落"
+msgstr "墜落中"
 
 #. STRINGS.CREATURES.STATUSITEMS.FALLING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.FALLING.TOOLTIP"
 msgid "AHHHH!"
-msgstr "阿~~~~!"
+msgstr "啊~~~~！"
 
 #. STRINGS.CREATURES.STATUSITEMS.FLEEING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.FLEEING.NAME"
 msgid "Fleeing"
-msgstr "逃跑"
+msgstr "逃跑中"
 
 #. STRINGS.CREATURES.STATUSITEMS.FLEEING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.FLEEING.TOOLTIP"
 msgid "This critter is trying to escape\nGet'em!"
-msgstr "這隻小動物試圖逃跑\n抓住牠！"
+msgstr "這隻小動物正在試圖逃跑\n快抓住牠！"
 
 #. STRINGS.CREATURES.STATUSITEMS.FLOPPING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.FLOPPING.NAME"
 msgid "Flopping"
-msgstr "翻倒"
+msgstr "翻倒中"
 
 #. STRINGS.CREATURES.STATUSITEMS.FLOPPING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.FLOPPING.TOOLTIP"
@@ -34988,12 +34988,12 @@ msgstr "魚不在水中！"
 #. STRINGS.CREATURES.STATUSITEMS.FORAGINGMATERIAL.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.FORAGINGMATERIAL.NAME"
 msgid "Foraging for Materials"
-msgstr "覓食"
+msgstr "正在覓食材料"
 
 #. STRINGS.CREATURES.STATUSITEMS.FORAGINGMATERIAL.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.FORAGINGMATERIAL.TOOLTIP"
 msgid "This critter is stocking up on supplies for later use"
-msgstr "這隻小動物正在積存補給品供之後使用"
+msgstr "這隻小動物正在積存補給品，以供之後使用"
 
 #. STRINGS.CREATURES.STATUSITEMS.FRESH.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.FRESH.NAME"
@@ -35013,22 +35013,22 @@ msgstr "被擠乳"
 #. STRINGS.CREATURES.STATUSITEMS.GETTING_MILKED.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.GETTING_MILKED.TOOLTIP"
 msgid "This critter's going to be so relieved when they're done"
-msgstr "這隻小動物擠完乳後會如釋重負"
+msgstr "這隻小動物在擠乳完畢後會如釋重負"
 
 #. STRINGS.CREATURES.STATUSITEMS.GETTING_RANCHED.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.GETTING_RANCHED.NAME"
 msgid "Being Groomed"
-msgstr "正在梳理中"
+msgstr "被梳理"
 
 #. STRINGS.CREATURES.STATUSITEMS.GETTING_RANCHED.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.GETTING_RANCHED.TOOLTIP"
 msgid "This critter's going to look so good when they're done"
-msgstr "這隻小動物整理後看起來很棒"
+msgstr "這隻小動物在梳理完成後，看起來會非常棒"
 
 #. STRINGS.CREATURES.STATUSITEMS.GETTING_WRANGLED.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.GETTING_WRANGLED.NAME"
 msgid "Being Wrangled"
-msgstr "開始捕捉"
+msgstr "被捕捉"
 
 #. STRINGS.CREATURES.STATUSITEMS.GETTING_WRANGLED.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.GETTING_WRANGLED.TOOLTIP"
@@ -35098,12 +35098,12 @@ msgstr "下次收成：<b>{TimeUntilNextHarvest}</b>"
 #. STRINGS.CREATURES.STATUSITEMS.GROWINGUP.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.GROWINGUP.NAME"
 msgid "Maturing"
-msgstr "成熟"
+msgstr "成熟中"
 
 #. STRINGS.CREATURES.STATUSITEMS.GROWINGUP.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.GROWINGUP.TOOLTIP"
 msgid "This baby critter is about to reach adulthood"
-msgstr "這隻動物寶寶即將成年"
+msgstr "這隻小動物寶寶即將成年"
 
 #. STRINGS.CREATURES.STATUSITEMS.HARVESTING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HARVESTING.NAME"
@@ -35113,17 +35113,17 @@ msgstr "收成中"
 #. STRINGS.CREATURES.STATUSITEMS.HARVESTING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HARVESTING.TOOLTIP"
 msgid "This critter is removing food from a plant in the only way it knows how"
-msgstr "這隻小動物正在用它唯一知道的方式從植物上獲取食物"
+msgstr "這隻小動物正在以牠唯一知道的方式從植物上獲取食物"
 
 #. STRINGS.CREATURES.STATUSITEMS.HATCHING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HATCHING.NAME"
 msgid "Hatching"
-msgstr "孵化"
+msgstr "孵化中"
 
 #. STRINGS.CREATURES.STATUSITEMS.HATCHING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HATCHING.TOOLTIP"
 msgid "Here it comes!"
-msgstr "它來了！"
+msgstr "牠來了！"
 
 #. STRINGS.CREATURES.STATUSITEMS.HEALTHSTATUS.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HEALTHSTATUS.NAME"
@@ -35203,7 +35203,7 @@ msgstr "這個小動物正在擁抱一個<style=\"KKeyword\">蛋</style>"
 #. STRINGS.CREATURES.STATUSITEMS.HUGMINION.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HUGMINION.NAME"
 msgid "Hugging"
-msgstr "抱抱"
+msgstr "抱抱中"
 
 #. STRINGS.CREATURES.STATUSITEMS.HUGMINION.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HUGMINION.TOOLTIP"
@@ -35293,7 +35293,7 @@ msgstr "舒適地準備與世界見面"
 #. STRINGS.CREATURES.STATUSITEMS.INHALING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.INHALING.NAME"
 msgid "Inhaling"
-msgstr "吸入"
+msgstr "吸入中"
 
 #. STRINGS.CREATURES.STATUSITEMS.INHALING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.INHALING.TOOLTIP"
@@ -35303,7 +35303,7 @@ msgstr "這隻小動物正在深呼吸"
 #. STRINGS.CREATURES.STATUSITEMS.LAYINGANEGG.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.LAYINGANEGG.NAME"
 msgid "Laying egg"
-msgstr "下蛋"
+msgstr "下蛋中"
 
 #. STRINGS.CREATURES.STATUSITEMS.LAYINGANEGG.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.LAYINGANEGG.TOOLTIP"
@@ -35313,7 +35313,7 @@ msgstr "見證生命的奇蹟！"
 #. STRINGS.CREATURES.STATUSITEMS.LOOKINGFORGAS.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.LOOKINGFORGAS.NAME"
 msgid "Seeking Gas"
-msgstr "尋找氣體"
+msgstr "尋找氣體中"
 
 #. STRINGS.CREATURES.STATUSITEMS.LOOKINGFORGAS.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.LOOKINGFORGAS.TOOLTIP"
@@ -35323,7 +35323,7 @@ msgstr "這隻小動物正在尋找不可呼吸的<style=\"KKeyword\">氣體</st
 #. STRINGS.CREATURES.STATUSITEMS.LOOKINGFORLIQUID.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.LOOKINGFORLIQUID.NAME"
 msgid "Parched"
-msgstr "乾燥"
+msgstr "乾渴"
 
 #. STRINGS.CREATURES.STATUSITEMS.LOOKINGFORLIQUID.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.LOOKINGFORLIQUID.TOOLTIP"
@@ -35373,7 +35373,7 @@ msgstr "這隻小動物正在努力生產鹹乳"
 #. STRINGS.CREATURES.STATUSITEMS.MOLTING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.MOLTING.NAME"
 msgid "Molting"
-msgstr "蛻皮"
+msgstr "蛻皮中"
 
 #. STRINGS.CREATURES.STATUSITEMS.MOLTING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.MOLTING.TOOLTIP"
@@ -36008,7 +36008,7 @@ msgstr "    • 大氣"
 #. STRINGS.CREATURES.STATUSITEMS.WRONGATMOSPHERE.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.WRONGATMOSPHERE.TOOLTIP"
 msgid "Growth will resume when submersed in one of the following <style=\"KKeyword\">Gases</style>: {elements}"
-msgstr "當處於下列任一氣體中時，生長將會繼續：{elements}"
+msgstr "當處於下列任一<style=\"KKeyword\">氣體</style>中時，生長將會繼續：{elements}"
 
 #. STRINGS.CREATURES.STATUSITEMS.WRONGFERTILIZER.LINE_ITEM
 msgctxt "STRINGS.CREATURES.STATUSITEMS.WRONGFERTILIZER.LINE_ITEM"
@@ -38328,12 +38328,12 @@ msgstr "喜悅反應"
 #. STRINGS.DUPLICANTS.CHORES.JOYREACTION.REPORT_NAME
 msgctxt "STRINGS.DUPLICANTS.CHORES.JOYREACTION.REPORT_NAME"
 msgid "Overjoyed Reaction"
-msgstr "欣喜若狂反應"
+msgstr "樂歪反應"
 
 #. STRINGS.DUPLICANTS.CHORES.JOYREACTION.STATUS
 msgctxt "STRINGS.DUPLICANTS.CHORES.JOYREACTION.STATUS"
 msgid "Overjoyed"
-msgstr "欣喜若狂"
+msgstr "樂歪了"
 
 #. STRINGS.DUPLICANTS.CHORES.JOYREACTION.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.CHORES.JOYREACTION.TOOLTIP"
@@ -47563,7 +47563,7 @@ msgstr "{0}：{1}"
 #. STRINGS.DUPLICANTS.TRAITS.BALLOONARTIST.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.BALLOONARTIST.DESC"
 msgid "This Duplicant hands out balloons when they are <style=\"KKeyword\">Overjoyed</style>"
-msgstr "這名複製人<style=\"KKeyword\">欣喜若狂</style>時會到處發氣球"
+msgstr "這名複製人<style=\"KKeyword\">樂歪了</style>時會到處發氣球"
 
 #. STRINGS.DUPLICANTS.TRAITS.BALLOONARTIST.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.BALLOONARTIST.NAME"
@@ -47823,7 +47823,7 @@ msgstr "沒有愛心"
 #. STRINGS.DUPLICANTS.TRAITS.CHATTY.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.CHATTY.DESC"
 msgid "This Duplicant's so charming, chatting with them is sometimes enough to trigger an <style=\"KKeyword\">Overjoyed</style> response"
-msgstr "這名複製人非常迷人，和他聊天有時能觸發<style=\"KKeyword\">欣喜若狂</style>反應"
+msgstr "這名複製人非常迷人，和他聊天有時能觸發<style=\"KKeyword\">樂歪反應</style>"
 
 #. STRINGS.DUPLICANTS.TRAITS.CHATTY.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.CHATTY.NAME"
@@ -47863,7 +47863,7 @@ msgstr "炸廚房"
 #. STRINGS.DUPLICANTS.TRAITS.DATARAINER.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.DATARAINER.DESC"
 msgid "This Duplicant distributes microchips when they are <style=\"KKeyword\">Overjoyed</style>"
-msgstr "這名複製人在<style=\"KKeyword\">欣喜若狂</style>狀態時，會分發微晶片"
+msgstr "這名複製人<style=\"KKeyword\">樂歪了</style>時會分發微晶片"
 
 #. STRINGS.DUPLICANTS.TRAITS.DATARAINER.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.DATARAINER.NAME"
@@ -47883,7 +47883,7 @@ msgstr "邋遢的衣著"
 #. STRINGS.DUPLICANTS.TRAITS.DECORUP.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.DECORUP.DESC"
 msgid "This Duplicant's radiant self-confidence makes even the rattiest outfits look trendy"
-msgstr "這名複製人散發強烈的自信，即使是最棘手的服裝也顯得時尚"
+msgstr "這名複製人散發強烈的自信，即使是最棘手的外觀也顯得時尚"
 
 #. STRINGS.DUPLICANTS.TRAITS.DECORUP.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.DECORUP.NAME"
@@ -48763,7 +48763,7 @@ msgstr "綠拇指"
 #. STRINGS.DUPLICANTS.TRAITS.HAPPYSINGER.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.HAPPYSINGER.DESC"
 msgid "This Duplicant belts out catchy tunes when they are <style=\"KKeyword\">Overjoyed</style>"
-msgstr "當他們<style=\"KKeyword\">欣喜若狂</style>時，這名複製人會高興地歌唱"
+msgstr "這名複製人<style=\"KKeyword\">樂歪了</style>時會高聲歡唱洗腦歌"
 
 #. STRINGS.DUPLICANTS.TRAITS.HAPPYSINGER.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.HAPPYSINGER.NAME"
@@ -49118,7 +49118,7 @@ msgstr "自體修復"
 #. STRINGS.DUPLICANTS.TRAITS.ROBODANCER.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.ROBODANCER.DESC"
 msgid "This Duplicant breaks into dance when they are <style=\"KKeyword\">Overjoyed</style>"
-msgstr "這名複製人在<style=\"KKeyword\">欣喜若狂</style>時會跳起舞來"
+msgstr "這名複製人<style=\"KKeyword\">樂歪了</style>時會跳起舞來"
 
 #. STRINGS.DUPLICANTS.TRAITS.ROBODANCER.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.ROBODANCER.NAME"
@@ -49198,7 +49198,7 @@ msgstr "這名複製人的打呼聲會吵醒附近的友人"
 #. STRINGS.DUPLICANTS.TRAITS.SPARKLESTREAKER.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.SPARKLESTREAKER.DESC"
 msgid "This Duplicant leaves a trail of happy sparkles when they are <style=\"KKeyword\">Overjoyed</style>"
-msgstr "這名複製人<style=\"KKeyword\">欣喜若狂</style>時會留下了幸福的火花"
+msgstr "這名複製人<style=\"KKeyword\">樂歪了</style>時會留下一串歡樂閃光"
 
 #. STRINGS.DUPLICANTS.TRAITS.SPARKLESTREAKER.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.SPARKLESTREAKER.NAME"
@@ -49453,7 +49453,7 @@ msgstr "仿生複製人使用加速器來提高他們的技能和屬性\n\n加�
 #. STRINGS.DUPLICANTS.TRAITS.STICKERBOMBER.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STICKERBOMBER.DESC"
 msgid "This Duplicant will spontaneously redecorate a room when they are <style=\"KKeyword\">Overjoyed</style>"
-msgstr "這名複製人<style=\"KKeyword\">欣喜若狂</style>時，會自發性地重新裝飾房間"
+msgstr "這名複製人<style=\"KKeyword\">樂歪了</style>時會自發性地重新裝飾房間"
 
 #. STRINGS.DUPLICANTS.TRAITS.STICKERBOMBER.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STICKERBOMBER.NAME"
@@ -49518,7 +49518,7 @@ msgstr "性格開朗"
 #. STRINGS.DUPLICANTS.TRAITS.SUPERPRODUCTIVE.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.SUPERPRODUCTIVE.DESC"
 msgid "This Duplicant is super productive when they are <style=\"KKeyword\">Overjoyed</style>"
-msgstr "這名複製人在<style=\"KKeyword\">欣喜若狂</style>時生產力會變高"
+msgstr "這名複製人<style=\"KKeyword\">樂歪了</style>時生產力超高"
 
 #. STRINGS.DUPLICANTS.TRAITS.SUPERPRODUCTIVE.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.SUPERPRODUCTIVE.NAME"
@@ -54858,7 +54858,7 @@ msgstr "<link=\"CUSTOMCLOTHING\">工作服</link>"
 #. STRINGS.EQUIPMENT.PREFABS.CUSTOMCLOTHING.FACADES.TRIANGLES
 msgctxt "STRINGS.EQUIPMENT.PREFABS.CUSTOMCLOTHING.FACADES.TRIANGLES"
 msgid "<link=\"CUSTOMCLOTHING\">Confetti Suit</link>"
-msgstr "<link=\"CUSTOMCLOTHING\">斑點服裝</link>"
+msgstr "<link=\"CUSTOMCLOTHING\">斑點西裝</link>"
 
 #. STRINGS.EQUIPMENT.PREFABS.CUSTOMCLOTHING.FACADES.WORKOUT
 msgctxt "STRINGS.EQUIPMENT.PREFABS.CUSTOMCLOTHING.FACADES.WORKOUT"
@@ -54888,7 +54888,7 @@ msgstr "一位漂浮中的朋友向複製人們保證，他們非常、非常的
 #. STRINGS.EQUIPMENT.PREFABS.EQUIPPABLEBALLOON.EFFECT
 msgctxt "STRINGS.EQUIPMENT.PREFABS.EQUIPPABLEBALLOON.EFFECT"
 msgid "Gives Duplicants a boost in brain function.\n\nSupplied by Duplicants with the Balloon Artist <link=\"MORALE\">Overjoyed</link> response."
-msgstr "使複製人的大腦功能獲得加成\n\n由<link=\"MORALE\">欣喜若狂</link>的氣球藝術家朋友所提供的反應。"
+msgstr "提升複製人的大腦功能\n\n由具備氣球藝術家特性的複製人，在發動<link=\"MORALE\">樂歪反應</link>時提供。"
 
 #. STRINGS.EQUIPMENT.PREFABS.EQUIPPABLEBALLOON.FACADES.BALLOON_BABY_GLOSSY_DRECKO_EGG.DESC
 msgctxt "STRINGS.EQUIPMENT.PREFABS.EQUIPPABLEBALLOON.FACADES.BALLOON_BABY_GLOSSY_DRECKO_EGG.DESC"
@@ -55123,7 +55123,7 @@ msgstr "<link=\"EQUIPPABLEBALLOON\">氣球朋友</link>"
 #. STRINGS.EQUIPMENT.PREFABS.EQUIPPABLEBALLOON.RECIPE_DESC
 msgctxt "STRINGS.EQUIPMENT.PREFABS.EQUIPPABLEBALLOON.RECIPE_DESC"
 msgid "Gives Duplicants a boost in brain function.\n\nSupplied by Duplicants with the Balloon Artist <link=\"MORALE\">Overjoyed</link> response"
-msgstr "使複製人的大腦功能獲得加成。\n\n由<link=\"MORALE\">欣喜若狂</link>的氣球藝術家朋友所提供的反應。"
+msgstr "提升複製人的大腦功能\n\n由具備氣球藝術家特性的複製人，在發動<link=\"MORALE\">樂歪了</link>反應時提供"
 
 #. STRINGS.EQUIPMENT.PREFABS.FUNKY_VEST.DESC
 msgctxt "STRINGS.EQUIPMENT.PREFABS.FUNKY_VEST.DESC"
@@ -58883,7 +58883,7 @@ msgstr "機械潤滑劑"
 #. STRINGS.LORE.BUILDINGS.Desk.ENTRY
 msgctxt "STRINGS.LORE.BUILDINGS.Desk.ENTRY"
 msgid "TO: JSTERN@GRAVITASFACILITY.NOVA\nFROM: EJONES@GRAVITASFACILITY.NOVA\nSUBJECT: Preliminary Calculations\n\nDirector,\n\nEven with dramatic optimization we can't make the sheer volume of resources required to sustain a colony seed fit for even a small interplanetary travel duration. We'll need to consider serious changes if this is going to work.\n\nE Jones\nInformation and Statistics Department\nThe Gravitas Facility"
-msgstr "收件者：JSTERN@GRAVITASFACILITY.NOVA\n寄件者：EJONES @GRAVITASFACILITY.NOVA\n信件主旨：初步計算\n\n總監，\n\n即使有了巨幅的優化，我們也無法負擔一個殖民船所需的大量資源，即使一小趟星際旅行時間也是。\n如果真要開始運作的話，我們可能得面對嚴重的後果。\n\nE Jones\n資訊和統計部門\n引力科技"
+msgstr "收件者：JSTERN@GRAVITASFACILITY.NOVA\n寄件者：EJONES @GRAVITASFACILITY.NOVA\n信件主旨：初步計算\n\n總監，\n\n即使有了巨幅的優化，我們也無法負擔一個殖民船所需的大量資源，即使一小趟星際旅行時間也是。\n如果真要開始運作的話，我們可能得面對嚴重的後果。\n\nE Jones\n資訊和統計部門\n引力科技中心"
 
 #. STRINGS.LORE.BUILDINGS.Desk.HEADER
 msgctxt "STRINGS.LORE.BUILDINGS.Desk.HEADER"
@@ -58923,12 +58923,12 @@ msgstr "強烈的惡臭從這個儲物櫃發出。"
 #. STRINGS.LORE.BUILDINGS.SET_OBJECT.BODY.CONTAINER1
 msgctxt "STRINGS.LORE.BUILDINGS.SET_OBJECT.BODY.CONTAINER1"
 msgid "<smallcaps><b>Reminder to All Personnel!</b>\nFrom: <b>Admin</b><alpha=#AA><admin@gravitas.nova></color>\nTO: <b>All</b></smallcaps>\n------------------\n<indent=5%>\nTo all employees;\n\nThe Gravitas Facility does not officially host a \"Bring Your Child To Work Day\" office event. We ask that personnel please do not bring children into top secret research departments, and especially that they do not let said children play with the high velocity particle accelerators.\n\nWe thank you for your understanding.</indent>"
-msgstr "<smallcaps><b>提醒所有人員！</b>\n寄件者：<b>管理員</b><alpha=#AA><admin@gravitas.nova></color>\n收信人：<b>所有人</b></smallcaps>\n------------------\n<indent=5%>\n致全體員工；\n\n引力科技並未正式舉辦「帶孩子上班日」辦公室活動。我們要求工作人員不要帶兒童進入最高機密研究部門，特別是不要讓兒童與高速粒子加速器玩耍。\n\n感謝您的理解。</indent>"
+msgstr "<smallcaps><b>提醒所有人員！</b>\n寄件者：<b>管理員</b><alpha=#AA><admin@gravitas.nova></color>\n收信人：<b>所有人</b></smallcaps>\n------------------\n<indent=5%>\n致全體員工；\n\n引力科技中心並未正式舉辦「帶孩子上班日」辦公室活動。我們要求工作人員不要帶兒童進入最高機密研究部門，特別是不要讓兒童與高速粒子加速器玩耍。\n\n感謝您的理解。</indent>"
 
 #. STRINGS.LORE.BUILDINGS.SET_OBJECT.BODY.SIGNATURE1
 msgctxt "STRINGS.LORE.BUILDINGS.SET_OBJECT.BODY.SIGNATURE1"
 msgid "\n-Admin\n<size=11>The Gravitas Facility</size>\n------------------\n"
-msgstr "\n-Admin\n<size=11>引力科技</size>\n------------------\n"
+msgstr "\n-Admin\n<size=11>引力科技中心</size>\n------------------\n"
 
 #. STRINGS.LORE.BUILDINGS.SET_OBJECT.SUBTITLE
 msgctxt "STRINGS.LORE.BUILDINGS.SET_OBJECT.SUBTITLE"
@@ -58943,7 +58943,7 @@ msgstr "提醒員工"
 #. STRINGS.LORE.BUILDINGS.VendingMachine.ENTRY
 msgctxt "STRINGS.LORE.BUILDINGS.VendingMachine.ENTRY"
 msgid "TO: ALL\nFROM: ADMIN@GRAVITASFACILITY.NOVA\nSUBJECT: Unattended Cultures\n\nFor the health and safety of your fellow Facility employees, please do not store unlabeled bacterial cultures in the cafeteria fridge.\nSimilarly, be advised that the cafeteria dishwasher is incapable of handling petri \"dishes\", despite the nomenclature.\n\nWe thank you for your consideration.\n-The Gravitas Facility"
-msgstr "收件者：全體\n寄件者：ADMIN@GRAVITASFACILITY.NOVA\n信件主旨：沒人處理的培養皿\n\n為了你同事們的健康和安全，請勿在員工餐廳的冰箱裡放未標記的細菌培養物。\n同樣地，請注意，員工餐廳的洗碗機沒辦法清洗培養皿，儘管專業術語上都有個「碟」字。\n\n我們感謝您的理解。\n－引力科技"
+msgstr "收件者：全體\n寄件者：ADMIN@GRAVITASFACILITY.NOVA\n信件主旨：沒人處理的培養皿\n\n為了你同事們的健康和安全，請勿在員工餐廳的冰箱裡放未標記的細菌培養物。\n同樣地，請注意，員工餐廳的洗碗機沒辦法清洗培養皿，儘管專業術語上都有個「碟」字。\n\n我們感謝您的理解。\n－引力科技中心"
 
 #. STRINGS.LORE.BUILDINGS.VendingMachine.HEADER
 msgctxt "STRINGS.LORE.BUILDINGS.VendingMachine.HEADER"
@@ -69828,22 +69828,22 @@ msgstr "在火箭內部控制操作建築"
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SCALE_GROWTH
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SCALE_GROWTH"
 msgid "This critter can be sheared every <b>{Time}</b> to produce <b>{Amount}</b> of <style=\"KKeyword\">{Item}</style>"
-msgstr "每 <b>{Time}</b>可修剪這隻小動物，產生 <b>{Amount}</b><style=\"KKeyword\">{Item}</style>"
+msgstr "這隻小動物每 <b>{Time}</b>可修剪一次，產生 <b>{Amount}</b>的<style=\"KKeyword\">{Item}</style>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SCALE_GROWTH_ATMO
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SCALE_GROWTH_ATMO"
 msgid "This critter can be sheared every <b>{Time}</b> to produce <style=\"produced\">{Amount}</style> of <style=\"KKeyword\">{Item}</style>\n\nIt must be kept in <style=\"KKeyword\">{Atmosphere}</style>-rich environments to regrow sheared <style=\"KKeyword\">{Item}</style>"
-msgstr "每 <b>{Time}</b>可修剪這隻小動物，產生 <style=\"produced\">{Amount}</style><style=\"KKeyword\">{Item}</style>\n\n牠必須在<style=\"KKeyword\">{Atmosphere}</style>含量高的環境中，才會重新長回被剃掉的<style=\"KKeyword\">{Item}</style>"
+msgstr "這隻小動物每 <b>{Time}</b>可修剪一次，產生 <style=\"produced\">{Amount}</style>的<style=\"KKeyword\">{Item}</style>\n\n牠必須生活在富含<style=\"KKeyword\">{Atmosphere}</style>的環境中，才能重新長回剪下的<style=\"KKeyword\">{Item}</style>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SCALE_GROWTH_FED
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SCALE_GROWTH_FED"
 msgid "This critter can be sheared every <b>{Time}</b> to produce <b>{Amount}</b> of <style=\"KKeyword\">{Item}</style>\n\nIt must be well fed to grow shearable <style=\"KKeyword\">{Item}</style>"
-msgstr "每 <b>{Time}</b>可修剪這隻小動物，產生 <b>{Amount}</b> <style=\"KKeyword\">{Item}</style>\n\n牠必須吃得飽才能重新長回被剃掉的<style=\"KKeyword\">{Item}</style>"
+msgstr "這隻小動物每 <b>{Time}</b>可修剪一次，產生 <b>{Amount}</b>的<style=\"KKeyword\">{Item}</style>\n\n牠必須吃得飽，才能長出可供修剪的<style=\"KKeyword\">{Item}</style>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SCALE_GROWTH_TEMP
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SCALE_GROWTH_TEMP"
 msgid "This critter can be sheared every <b>{Time}</b> to produce <style=\"produced\">{Amount}</style> of <style=\"KKeyword\">{Item}</style>\n\nIt must eat food between {TempMin} - {TempMax} to regrow sheared <style=\"KKeyword\">{Item}</style>"
-msgstr "每 <b>{Time}</b>可修剪這隻小動物，產生 <style=\"produced\">{Amount}</style><style=\"KKeyword\">{Item}</style>\n\n牠必須吃介於 {TempMin}-{TempMax} 的食物才能重新長回被剃掉的<style=\"KKeyword\">{Item}</style>"
+msgstr "這隻小動物每 <b>{Time}</b>可修剪一次，產生 <style=\"produced\">{Amount}</style>的<style=\"KKeyword\">{Item}</style>\n\n牠必須食用溫度介於 {TempMin}-{TempMax} 之間的食物，才能重新長回剪下的<style=\"KKeyword\">{Item}</style>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.STORAGECAPACITY
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.STORAGECAPACITY"
@@ -69853,7 +69853,7 @@ msgstr "儲存了 <b>{0}</b>的材料"
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.STRESSREDUCEDPERMINUTE
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.STRESSREDUCEDPERMINUTE"
 msgid "Removes <b>{0}</b> of Duplicants' <style=\"KKeyword\">Stress</style> for every uninterrupted minute of use"
-msgstr "使用時每分鐘（不中斷）消除 <b>{0}</b> 複製人的<style=\"KKeyword\">壓力</style>"
+msgstr "持續使用時，每分鐘（不中斷）消除複製人 <b>{0}</b> 的<style=\"KKeyword\">壓力</style>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.TRANSFORMER_INPUT_WIRE
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.TRANSFORMER_INPUT_WIRE"
@@ -69868,22 +69868,22 @@ msgstr "透過小的<style=\"KKeyword\">輸出端</style>所提供的電力<styl
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNSTABLEENTOMBDEFENSEOFF
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNSTABLEENTOMBDEFENSEOFF"
 msgid "This plant's ability to unentomb itself from <style=\"KKeyword\">Unstable</style> elements is currently disabled"
-msgstr "目前已停用該植物從<style=\"KKeyword\">不穩定</style>元素中解埋自己的能力"
+msgstr "該植物從<style=\"KKeyword\">不穩定</style>元素中解埋自身的能力目前已停用"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNSTABLEENTOMBDEFENSEREACTING
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNSTABLEENTOMBDEFENSEREACTING"
 msgid "This plant is currently unentombing itself from <style=\"KKeyword\">Unstable</style> elements"
-msgstr "該植物正在將自己從<style=\"KKeyword\">不穩定</style>元素中解救出來"
+msgstr "該植物目前正在從<style=\"KKeyword\">不穩定</style>元素中解埋自身"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNSTABLEENTOMBDEFENSEREADY
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNSTABLEENTOMBDEFENSEREADY"
 msgid "This plant is ready to shake off <style=\"KKeyword\">Unstable</style> elements that threaten to entomb it"
-msgstr "該植物已經準備好甩掉那些可能掩埋住它自己的<style=\"KKeyword\">不穩定</style>元素"
+msgstr "該植物已準備好甩掉那些可能掩埋它的<style=\"KKeyword\">不穩定</style>元素"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNSTABLEENTOMBDEFENSETHREATENED
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNSTABLEENTOMBDEFENSETHREATENED"
 msgid "This plant is preparing to shake off <style=\"KKeyword\">Unstable</style> elements that are entombing it"
-msgstr "該植物正在準備甩掉那些掩埋住它的<style=\"KKeyword\">不穩定</style>元素"
+msgstr "該植物正在準備甩掉那些正在掩埋它的<style=\"KKeyword\">不穩定</style>元素"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TRANSFORMER_INPUT_WIRE
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TRANSFORMER_INPUT_WIRE"
@@ -73518,7 +73518,7 @@ msgstr "《寒霜行星包》"
 #. STRINGS.UI.DLC2.NAME_ITAL
 msgctxt "STRINGS.UI.DLC2.NAME_ITAL"
 msgid "<i>The Frosty Planet Pack</i>"
-msgstr "<b>《寒霜行星包》</b>"
+msgstr "<i>《寒霜行星包》</i>"
 
 #. STRINGS.UI.DLC3.MIXING_TOOLTIP
 msgctxt "STRINGS.UI.DLC3.MIXING_TOOLTIP"
@@ -73533,7 +73533,7 @@ msgstr "《仿生加速包》"
 #. STRINGS.UI.DLC3.NAME_ITAL
 msgctxt "STRINGS.UI.DLC3.NAME_ITAL"
 msgid "<i>The Bionic Booster Pack</i>"
-msgstr "<b>《仿生加速包》</b>"
+msgstr "<i>《仿生加速包》</i>"
 
 #. STRINGS.UI.DLC4.MIXING_TOOLTIP
 msgctxt "STRINGS.UI.DLC4.MIXING_TOOLTIP"
@@ -73548,7 +73548,7 @@ msgstr "《史前行星包》"
 #. STRINGS.UI.DLC4.NAME_ITAL
 msgctxt "STRINGS.UI.DLC4.NAME_ITAL"
 msgid "<i>The Prehistoric Planet Pack</i>"
-msgstr "<b>《史前行星包》</b>"
+msgstr "<i>《史前行星包》</i>"
 
 #. STRINGS.UI.DROPDOWN.NONE
 msgctxt "STRINGS.UI.DROPDOWN.NONE"
@@ -74848,7 +74848,7 @@ msgstr "毀神星撞擊"
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.DEMOLIORDIFFICULTY.TOOLTIP
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.DEMOLIORDIFFICULTY.TOOLTIP"
 msgid "Adjusts how soon the Demolior asteroid collides with <i>The Prehistoric Planet Pack</i> asteroid"
-msgstr "調整毀神星與<i>《史前星球包》</i>小行星相撞的時間。"
+msgstr "調整毀神星與<i>《史前行星包》</i>小行星相撞的時間。"
 
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.DLC_MIXING.LEVELS.DISABLED.NAME
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.DLC_MIXING.LEVELS.DISABLED.NAME"
@@ -74958,7 +74958,7 @@ msgstr "停用"
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.EXPANSION1ACTIVE.LEVELS.DISABLED.TOOLTIP
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.EXPANSION1ACTIVE.LEVELS.DISABLED.TOOLTIP"
 msgid "Unchecked: <i>Spaced Out!</i> Content is turned off (Default)"
-msgstr "停用：關閉<b>眼冒金星！</b>內容（預設）"
+msgstr "停用：關閉<i>眼冒金星！</i>內容（預設）"
 
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.EXPANSION1ACTIVE.LEVELS.ENABLED.NAME
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.EXPANSION1ACTIVE.LEVELS.ENABLED.NAME"
@@ -74968,12 +74968,12 @@ msgstr "啟用"
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.EXPANSION1ACTIVE.LEVELS.ENABLED.TOOLTIP
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.EXPANSION1ACTIVE.LEVELS.ENABLED.TOOLTIP"
 msgid "Checked: <i>Spaced Out!</i> Content is turned on"
-msgstr "啟用：開啟<b>眼冒金星！</b>內容"
+msgstr "啟用：開啟<i>眼冒金星！</i>內容"
 
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.EXPANSION1ACTIVE.NAME
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.EXPANSION1ACTIVE.NAME"
 msgid "<i>Spaced Out!</i> Content Enabled"
-msgstr "<b>眼冒金星！</b>內容啟用"
+msgstr "<i>眼冒金星！</i>內容啟用"
 
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.EXPANSION1ACTIVE.TOOLTIP
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.EXPANSION1ACTIVE.TOOLTIP"
@@ -78763,12 +78763,12 @@ msgstr "分配至 {MinionName}"
 #. STRINGS.UI.JOY_RESPONSE_DESIGNER_SCREEN.CATEGORY_HEADER
 msgctxt "STRINGS.UI.JOY_RESPONSE_DESIGNER_SCREEN.CATEGORY_HEADER"
 msgid "OVERJOYED RESPONSES"
-msgstr "欣喜若狂反應"
+msgstr "樂歪反應"
 
 #. STRINGS.UI.JOY_RESPONSE_DESIGNER_SCREEN.CHANGES_NOT_SAVED_WARNING_POPUP.HEADER
 msgctxt "STRINGS.UI.JOY_RESPONSE_DESIGNER_SCREEN.CHANGES_NOT_SAVED_WARNING_POPUP.HEADER"
 msgid "Discard changes to {MinionName}'s Overjoyed Response?"
-msgstr "放棄對 {MinionName} 欣喜若狂反應的更改？"
+msgstr "放棄對 {MinionName} 樂歪反應的更改？"
 
 #. STRINGS.UI.JOY_RESPONSE_DESIGNER_SCREEN.TOOLTIP_NO_FACADES_FOR_JOY_TRAIT
 msgctxt "STRINGS.UI.JOY_RESPONSE_DESIGNER_SCREEN.TOOLTIP_NO_FACADES_FOR_JOY_TRAIT"
@@ -78778,7 +78778,7 @@ msgstr "目前還沒有用於 {JoyResponseType} 複製人的藍圖"
 #. STRINGS.UI.JOY_RESPONSE_DESIGNER_SCREEN.TOOLTIP_PICK_JOY_RESPONSE_ERROR_LOCKED
 msgctxt "STRINGS.UI.JOY_RESPONSE_DESIGNER_SCREEN.TOOLTIP_PICK_JOY_RESPONSE_ERROR_LOCKED"
 msgid "This Overjoyed Response blueprint cannot be assigned because my colony doesn't own it yet"
-msgstr "這個欣喜若狂反應無法分配，因為我的殖民地尚未擁有這份藍圖"
+msgstr "這個樂歪反應無法分配，因為我的殖民地尚未擁有這份藍圖"
 
 #. STRINGS.UI.KEEPSAKES.CRITTER_MANIPULATOR.DESCRIPTION
 msgctxt "STRINGS.UI.KEEPSAKES.CRITTER_MANIPULATOR.DESCRIPTION"
@@ -79073,7 +79073,7 @@ msgstr "裝備"
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.CATEGORIES.JOY_RESPONSE
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.CATEGORIES.JOY_RESPONSE"
 msgid "Overjoyed Responses"
-msgstr "欣喜若狂反應"
+msgstr "樂歪反應"
 
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.CATEGORIES.JOY_RESPONSES.BALLOON_ARTIST
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.CATEGORIES.JOY_RESPONSES.BALLOON_ARTIST"
@@ -79598,7 +79598,7 @@ msgstr "衣櫃"
 #. STRINGS.UI.LOCKER_MENU.BUTTON_OUTFITS_DESCRIPTION
 msgctxt "STRINGS.UI.LOCKER_MENU.BUTTON_OUTFITS_DESCRIPTION"
 msgid "Manage my colony's collection of outfits"
-msgstr "管理我的殖民地的服裝收藏"
+msgstr "管理我的殖民地的外觀收藏"
 
 #. STRINGS.UI.LOCKER_MENU.DEFAULT_DESCRIPTION
 msgctxt "STRINGS.UI.LOCKER_MENU.DEFAULT_DESCRIPTION"
@@ -79933,7 +79933,7 @@ msgstr "重新設計太空衣"
 #. STRINGS.UI.MINION_BROWSER_SCREEN.BUTTON_EDIT_JOY_RESPONSE
 msgctxt "STRINGS.UI.MINION_BROWSER_SCREEN.BUTTON_EDIT_JOY_RESPONSE"
 msgid "Restyle Overjoyed Response"
-msgstr "重新設計欣喜若狂反應"
+msgstr "重新設計樂歪反應"
 
 #. STRINGS.UI.MINION_BROWSER_SCREEN.BUTTON_EDIT_OUTFIT_ITEMS
 msgctxt "STRINGS.UI.MINION_BROWSER_SCREEN.BUTTON_EDIT_OUTFIT_ITEMS"
@@ -79958,7 +79958,7 @@ msgstr "服裝"
 #. STRINGS.UI.MINION_BROWSER_SCREEN.OUTFIT_TYPE_JOY_RESPONSE
 msgctxt "STRINGS.UI.MINION_BROWSER_SCREEN.OUTFIT_TYPE_JOY_RESPONSE"
 msgid "OVERJOYED RESPONSE"
-msgstr "欣喜若狂反應"
+msgstr "樂歪反應"
 
 #. STRINGS.UI.MINION_BROWSER_SCREEN.TOOLTIP_FROM_DLC
 msgctxt "STRINGS.UI.MINION_BROWSER_SCREEN.TOOLTIP_FROM_DLC"
@@ -80913,12 +80913,12 @@ msgstr "這個外觀無法刪除"
 #. STRINGS.UI.OUTFIT_BROWSER_SCREEN.TOOLTIP_FILTER_BY_ATMO_SUITS
 msgctxt "STRINGS.UI.OUTFIT_BROWSER_SCREEN.TOOLTIP_FILTER_BY_ATMO_SUITS"
 msgid "View your Atmo Suit Outfits"
-msgstr "檢視你的太空衣裝扮"
+msgstr "檢視你的太空衣外觀"
 
 #. STRINGS.UI.OUTFIT_BROWSER_SCREEN.TOOLTIP_FILTER_BY_CLOTHING
 msgctxt "STRINGS.UI.OUTFIT_BROWSER_SCREEN.TOOLTIP_FILTER_BY_CLOTHING"
 msgid "View your Clothing Outfits"
-msgstr "檢視你的衣服裝扮"
+msgstr "檢視你的衣服外觀"
 
 #. STRINGS.UI.OUTFIT_BROWSER_SCREEN.TOOLTIP_PICK_OUTFIT_ERROR_LOCKED
 msgctxt "STRINGS.UI.OUTFIT_BROWSER_SCREEN.TOOLTIP_PICK_OUTFIT_ERROR_LOCKED"
@@ -80943,12 +80943,12 @@ msgstr "只有當我的殖民地獲得所有藍圖後，才能穿這套衣服。
 #. STRINGS.UI.OUTFIT_DESCRIPTION.NO_JOY_RESPONSE_DESC
 msgctxt "STRINGS.UI.OUTFIT_DESCRIPTION.NO_JOY_RESPONSE_DESC"
 msgid "Default response to an overjoyed state."
-msgstr "欣喜若狂的預設反應。"
+msgstr "樂歪了的預設反應。"
 
 #. STRINGS.UI.OUTFIT_DESCRIPTION.NO_JOY_RESPONSE_NAME
 msgctxt "STRINGS.UI.OUTFIT_DESCRIPTION.NO_JOY_RESPONSE_NAME"
 msgid "Default Overjoyed Response"
-msgstr "預設喜悅反應"
+msgstr "預設樂歪反應"
 
 #. STRINGS.UI.OUTFIT_DESIGNER_SCREEN.CATEGORY_HEADER
 msgctxt "STRINGS.UI.OUTFIT_DESIGNER_SCREEN.CATEGORY_HEADER"
@@ -81068,7 +81068,7 @@ msgstr "預設太空衣"
 #. STRINGS.UI.OUTFIT_NAME.NONE_JOY_RESPONSE
 msgctxt "STRINGS.UI.OUTFIT_NAME.NONE_JOY_RESPONSE"
 msgid "Default Overjoyed Response"
-msgstr "預設喜悅藍圖"
+msgstr "預設樂歪反應"
 
 #. STRINGS.UI.OUTFIT_NAME.RESOLVE_CONFLICT
 msgctxt "STRINGS.UI.OUTFIT_NAME.RESOLVE_CONFLICT"
@@ -81078,77 +81078,77 @@ msgstr "{OutfitName} ({ConflictNumber})"
 #. STRINGS.UI.OUTFITS.ATHLETE.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATHLETE.NAME"
 msgid "Racing Outfit"
-msgstr "賽車服裝"
+msgstr "賽車外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_BASIC_PURPLE.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_BASIC_PURPLE.NAME"
 msgid "Eggplant Atmo Outfit"
-msgstr "紫茄太空套裝"
+msgstr "紫茄太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_CANTALOUPE.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_CANTALOUPE.NAME"
 msgid "Rocketmelon Atmo Outfit"
-msgstr "火箭香瓜太空套裝"
+msgstr "火箭香瓜太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_CONFETTI.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_CONFETTI.NAME"
 msgid "Confetti Atmo Outfit"
-msgstr "彩屑太空套裝"
+msgstr "彩屑太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_CUBIST.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_CUBIST.NAME"
 msgid "Cubist Atmo Outfit"
-msgstr "立體主義太空套裝"
+msgstr "立體主義太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_LIMONE.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_LIMONE.NAME"
 msgid "Citrus Atmo Outfit"
-msgstr "柑橘太空套裝"
+msgstr "柑橘太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_PINK_PURPLE.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_PINK_PURPLE.NAME"
 msgid "Pink Punch Atmo Outfit"
-msgstr "粉孔太空套裝"
+msgstr "粉孔太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_PUFT.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_PUFT.NAME"
 msgid "Puft Atmo Outfit"
-msgstr "帕夫太空套裝"
+msgstr "帕夫太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_RED_GREY.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_RED_GREY.NAME"
 msgid "Blastoff Atmo Outfit"
-msgstr "升空太空套裝"
+msgstr "升空太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_SPARKLE_BLUE.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_SPARKLE_BLUE.NAME"
 msgid "Blue Glitter Atmo Outfit"
-msgstr "藍色亮片太空套裝"
+msgstr "藍色亮片太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_SPARKLE_GREEN.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_SPARKLE_GREEN.NAME"
 msgid "Green Glitter Atmo Outfit"
-msgstr "綠色亮片太空套裝"
+msgstr "綠色亮片太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_SPARKLE_LAVENDER.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_SPARKLE_LAVENDER.NAME"
 msgid "Violet Glitter Atmo Outfit"
-msgstr "紫色亮片太空套裝"
+msgstr "紫色亮片太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_SPARKLE_RED.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_SPARKLE_RED.NAME"
 msgid "Red Glitter Atmo Outfit"
-msgstr "紅色亮片太空套裝"
+msgstr "紅色亮片太空外觀"
 
 #. STRINGS.UI.OUTFITS.ATMOSUIT_SPIFFY.NAME
 msgctxt "STRINGS.UI.OUTFITS.ATMOSUIT_SPIFFY.NAME"
 msgid "Spiffy Atmo Outfit"
-msgstr "時尚太空套裝"
+msgstr "時尚太空外觀"
 
 #. STRINGS.UI.OUTFITS.BALLET.NAME
 msgctxt "STRINGS.UI.OUTFITS.BALLET.NAME"
 msgid "Ballet Outfit"
-msgstr "芭蕾舞套裝"
+msgstr "芭蕾舞外觀"
 
 #. STRINGS.UI.OUTFITS.BASIC_AQUA.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_AQUA.NAME"
@@ -81163,12 +81163,12 @@ msgstr "基本黑色外觀"
 #. STRINGS.UI.OUTFITS.BASIC_BLUE_COBALT.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_BLUE_COBALT.NAME"
 msgid "True Blue Outfit"
-msgstr "忠藍服裝"
+msgstr "真藍外觀"
 
 #. STRINGS.UI.OUTFITS.BASIC_DEEPRED.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_DEEPRED.NAME"
 msgid "Team Captain Outfit"
-msgstr "隊長服裝"
+msgstr "隊長外觀"
 
 #. STRINGS.UI.OUTFITS.BASIC_GREEN.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_GREEN.NAME"
@@ -81178,17 +81178,17 @@ msgstr "基本綠色外觀"
 #. STRINGS.UI.OUTFITS.BASIC_GREEN_KELLY.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_GREEN_KELLY.NAME"
 msgid "Go Team! Outfit"
-msgstr "加油服裝"
+msgstr "加油外觀"
 
 #. STRINGS.UI.OUTFITS.BASIC_GREY_CHARCOAL.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_GREY_CHARCOAL.NAME"
 msgid "Underdog Outfit"
-msgstr "弱勢服裝"
+msgstr "弱勢外觀"
 
 #. STRINGS.UI.OUTFITS.BASIC_LEMON.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_LEMON.NAME"
 msgid "Team Hype Outfit"
-msgstr "團隊激情服裝"
+msgstr "團隊激情外觀"
 
 #. STRINGS.UI.OUTFITS.BASIC_ORANGE.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_ORANGE.NAME"
@@ -81198,7 +81198,7 @@ msgstr "基本橘色外觀"
 #. STRINGS.UI.OUTFITS.BASIC_PINK_FLAMINGO.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_PINK_FLAMINGO.NAME"
 msgid "Pep Rally Outfit"
-msgstr "動員會服裝"
+msgstr "動員會外觀"
 
 #. STRINGS.UI.OUTFITS.BASIC_PINK_ORCHID.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_PINK_ORCHID.NAME"
@@ -81218,7 +81218,7 @@ msgstr "基礎紅色外觀"
 #. STRINGS.UI.OUTFITS.BASIC_SATSUMA.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_SATSUMA.NAME"
 msgid "Superfan Outfit"
-msgstr "忠實粉絲服裝"
+msgstr "忠實粉絲外觀"
 
 #. STRINGS.UI.OUTFITS.BASIC_WHITE.NAME
 msgctxt "STRINGS.UI.OUTFITS.BASIC_WHITE.NAME"
@@ -81233,197 +81233,197 @@ msgstr "基本黃色外觀"
 #. STRINGS.UI.OUTFITS.CANUXTUX.NAME
 msgctxt "STRINGS.UI.OUTFITS.CANUXTUX.NAME"
 msgid "Canadian Tuxedo Outfit"
-msgstr "加拿大燕尾服套裝"
+msgstr "加拿大燕尾服外觀"
 
 #. STRINGS.UI.OUTFITS.CIRCUIT.NAME
 msgctxt "STRINGS.UI.OUTFITS.CIRCUIT.NAME"
 msgid "LED Party Outfit"
-msgstr "LED 派對套裝"
+msgstr "LED 派對外觀"
 
 #. STRINGS.UI.OUTFITS.DONOR.NAME
 msgctxt "STRINGS.UI.OUTFITS.DONOR.NAME"
 msgid "Donor Outfit"
-msgstr "捐贈者套裝"
+msgstr "捐贈者外觀"
 
 #. STRINGS.UI.OUTFITS.DOWNTIME.NAME
 msgctxt "STRINGS.UI.OUTFITS.DOWNTIME.NAME"
 msgid "Downtime Outfit"
-msgstr "休息套裝"
+msgstr "休息外觀"
 
 #. STRINGS.UI.OUTFITS.FLANNEL_BLACK.NAME
 msgctxt "STRINGS.UI.OUTFITS.FLANNEL_BLACK.NAME"
 msgid "Monochrome Flannel Outfit"
-msgstr "黑白法蘭絨套裝"
+msgstr "黑白法蘭絨外觀"
 
 #. STRINGS.UI.OUTFITS.FLANNEL_BLUE_MIDDLE.NAME
 msgctxt "STRINGS.UI.OUTFITS.FLANNEL_BLUE_MIDDLE.NAME"
 msgid "Scrub Flannel Outfit"
-msgstr "磨砂法蘭絨套裝"
+msgstr "磨砂法蘭絨外觀"
 
 #. STRINGS.UI.OUTFITS.FLANNEL_GREEN.NAME
 msgctxt "STRINGS.UI.OUTFITS.FLANNEL_GREEN.NAME"
 msgid "Swampy Flannel Outfit"
-msgstr "沼澤法蘭絨套裝"
+msgstr "沼澤法蘭絨外觀"
 
 #. STRINGS.UI.OUTFITS.FLANNEL_ORANGE.NAME
 msgctxt "STRINGS.UI.OUTFITS.FLANNEL_ORANGE.NAME"
 msgid "Cadmium Flannel Outfit"
-msgstr "銀灰法蘭絨套裝"
+msgstr "銀灰法蘭絨外觀"
 
 #. STRINGS.UI.OUTFITS.FLANNEL_PINK_ORCHID.NAME
 msgctxt "STRINGS.UI.OUTFITS.FLANNEL_PINK_ORCHID.NAME"
 msgid "Flare Flannel Outfit"
-msgstr "火光法蘭絨套裝"
+msgstr "火光法蘭絨外觀"
 
 #. STRINGS.UI.OUTFITS.FLANNEL_PURPLE.NAME
 msgctxt "STRINGS.UI.OUTFITS.FLANNEL_PURPLE.NAME"
 msgid "Fusion Flannel Outfit"
-msgstr "融合法蘭絨套裝"
+msgstr "融合法蘭絨外觀"
 
 #. STRINGS.UI.OUTFITS.FLANNEL_RED.NAME
 msgctxt "STRINGS.UI.OUTFITS.FLANNEL_RED.NAME"
 msgid "Classic Flannel Outfit"
-msgstr "經典法蘭絨套裝"
+msgstr "經典法蘭絨外觀"
 
 #. STRINGS.UI.OUTFITS.FLANNEL_WHITE.NAME
 msgctxt "STRINGS.UI.OUTFITS.FLANNEL_WHITE.NAME"
 msgid "White Flannel Outfit"
-msgstr "純白法蘭絨套裝"
+msgstr "純白法蘭絨外觀"
 
 #. STRINGS.UI.OUTFITS.FLANNEL_YELLOW.NAME
 msgctxt "STRINGS.UI.OUTFITS.FLANNEL_YELLOW.NAME"
 msgid "Flax Flannel Outfit"
-msgstr "亞麻法蘭絨套裝"
+msgstr "亞麻法蘭絨外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_BILE.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_BILE.NAME"
 msgid "Yellowcake Undies Outfit"
-msgstr "黃餅內衣套裝"
+msgstr "黃餅內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_CORTEX.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_CORTEX.NAME"
 msgid "Dusk Undies Outfit"
-msgstr "夜幕內衣套裝"
+msgstr "夜幕內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_FROSTY.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_FROSTY.NAME"
 msgid "Frostbasin Undies Outfit"
-msgstr "冰盆內衣套裝"
+msgstr "冰盆內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_GLUON.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_GLUON.NAME"
 msgid "Frilly Saltrock Outfit"
-msgstr "鹽岩飾邊套裝"
+msgstr "鹽岩飾邊外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_GOOP.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_GOOP.NAME"
 msgid "Leachy Undies Outfit"
-msgstr "滲透內衣套裝"
+msgstr "滲透內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_IRONBOW.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_IRONBOW.NAME"
 msgid "Magma Undies Outfit"
-msgstr "岩漿內衣套裝"
+msgstr "岩漿內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_LOCUS.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_LOCUS.NAME"
 msgid "Balmy Undies Outfit"
-msgstr "芳香內衣套裝"
+msgstr "芳香內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_NYBBLE.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_NYBBLE.NAME"
 msgid "Atomic Undies Outfit"
-msgstr "原子內衣套裝"
+msgstr "原子內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_OBELUS.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_OBELUS.NAME"
 msgid "Charcoal Undies Outfit"
-msgstr "木炭內衣套裝"
+msgstr "木炭內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GINCH_PHLEGM.NAME
 msgctxt "STRINGS.UI.OUTFITS.GINCH_PHLEGM.NAME"
 msgid "Slate Undies Outfit"
-msgstr "板岩內衣套裝"
+msgstr "板岩內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GONCHIES_BLUEBERRY.NAME
 msgctxt "STRINGS.UI.OUTFITS.GONCHIES_BLUEBERRY.NAME"
 msgid "Admin Undies Outfit"
-msgstr "管理員內衣套裝"
+msgstr "管理員內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GONCHIES_GRAPE.NAME
 msgctxt "STRINGS.UI.OUTFITS.GONCHIES_GRAPE.NAME"
 msgid "Buzzword Undies Outfit"
-msgstr "流行語內衣套裝"
+msgstr "流行語內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GONCHIES_LEMON.NAME
 msgctxt "STRINGS.UI.OUTFITS.GONCHIES_LEMON.NAME"
 msgid "Groupthink Undies Outfit"
-msgstr "群體思維內衣套裝"
+msgstr "群體思維內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GONCHIES_LIME.NAME
 msgctxt "STRINGS.UI.OUTFITS.GONCHIES_LIME.NAME"
 msgid "Stakeholder Undies Outfit"
-msgstr "股東內衣套裝"
+msgstr "股東內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GONCHIES_SATSUMA.NAME
 msgctxt "STRINGS.UI.OUTFITS.GONCHIES_SATSUMA.NAME"
 msgid "Underling Undies Outfit"
-msgstr "下屬內衣套裝"
+msgstr "下屬內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GONCHIES_STRAWBERRY.NAME
 msgctxt "STRINGS.UI.OUTFITS.GONCHIES_STRAWBERRY.NAME"
 msgid "Executive Undies Outfit"
-msgstr "管理內衣套裝"
+msgstr "管理內衣外觀"
 
 #. STRINGS.UI.OUTFITS.GONCHIES_WATERMELON.NAME
 msgctxt "STRINGS.UI.OUTFITS.GONCHIES_WATERMELON.NAME"
 msgid "Synergy Undies Outfit"
-msgstr "協作內衣套裝"
+msgstr "協作內衣外觀"
 
 #. STRINGS.UI.OUTFITS.HIVIS.NAME
 msgctxt "STRINGS.UI.OUTFITS.HIVIS.NAME"
 msgid "Hi-Vis Outfit"
-msgstr "高能見套裝"
+msgstr "高能見外觀"
 
 #. STRINGS.UI.OUTFITS.JELLYPUFF_BLUEBERRY.NAME
 msgctxt "STRINGS.UI.OUTFITS.JELLYPUFF_BLUEBERRY.NAME"
 msgid "Blueberry Jelly Outfit"
-msgstr "藍莓果凍服裝"
+msgstr "藍莓果凍外觀"
 
 #. STRINGS.UI.OUTFITS.JELLYPUFF_GRAPE.NAME
 msgctxt "STRINGS.UI.OUTFITS.JELLYPUFF_GRAPE.NAME"
 msgid "Grape Jelly Outfit"
-msgstr "葡萄果凍服裝"
+msgstr "葡萄果凍外觀"
 
 #. STRINGS.UI.OUTFITS.JELLYPUFF_LEMON.NAME
 msgctxt "STRINGS.UI.OUTFITS.JELLYPUFF_LEMON.NAME"
 msgid "Lemon Jelly Outfit"
-msgstr "檸檬果凍服裝"
+msgstr "檸檬果凍外觀"
 
 #. STRINGS.UI.OUTFITS.JELLYPUFF_LIME.NAME
 msgctxt "STRINGS.UI.OUTFITS.JELLYPUFF_LIME.NAME"
 msgid "Lime Jelly Outfit"
-msgstr "萊姆果凍服裝"
+msgstr "萊姆果凍外觀"
 
 #. STRINGS.UI.OUTFITS.JELLYPUFF_SATSUMA.NAME
 msgctxt "STRINGS.UI.OUTFITS.JELLYPUFF_SATSUMA.NAME"
 msgid "Satsuma Jelly Outfit"
-msgstr "蜜橘果凍服裝"
+msgstr "蜜橘果凍外觀"
 
 #. STRINGS.UI.OUTFITS.JELLYPUFF_STRAWBERRY.NAME
 msgctxt "STRINGS.UI.OUTFITS.JELLYPUFF_STRAWBERRY.NAME"
 msgid "Strawberry Jelly Outfit"
-msgstr "草莓果凍服裝"
+msgstr "草莓果凍外觀"
 
 #. STRINGS.UI.OUTFITS.JELLYPUFF_WATERMELON.NAME
 msgctxt "STRINGS.UI.OUTFITS.JELLYPUFF_WATERMELON.NAME"
 msgid "Watermelon Jelly Outfit"
-msgstr "西瓜果凍服裝"
+msgstr "西瓜果凍外觀"
 
 #. STRINGS.UI.OUTFITS.LUCKY.NAME
 msgctxt "STRINGS.UI.OUTFITS.LUCKY.NAME"
 msgid "Lucky Jammies Outfit"
-msgstr "幸運睡衣套裝"
+msgstr "幸運睡衣外觀"
 
 #. STRINGS.UI.OUTFITS.MECHANIC.NAME
 msgctxt "STRINGS.UI.OUTFITS.MECHANIC.NAME"
@@ -81433,7 +81433,7 @@ msgstr "工程師工作服"
 #. STRINGS.UI.OUTFITS.NERD.NAME
 msgctxt "STRINGS.UI.OUTFITS.NERD.NAME"
 msgid "Research Outfit"
-msgstr "研究套裝"
+msgstr "研究外觀"
 
 #. STRINGS.UI.OUTFITS.PAJAMAS_SNOW.NAME
 msgctxt "STRINGS.UI.OUTFITS.PAJAMAS_SNOW.NAME"
@@ -81448,57 +81448,57 @@ msgstr "波點裙運動裝"
 #. STRINGS.UI.OUTFITS.POMPOM_SHINEBUGS_PINK_PEPPERNUT.NAME
 msgctxt "STRINGS.UI.OUTFITS.POMPOM_SHINEBUGS_PINK_PEPPERNUT.NAME"
 msgid "Pom Bug Outfit"
-msgstr "絨蟲套裝"
+msgstr "絨蟲外觀"
 
 #. STRINGS.UI.OUTFITS.REBELGI.NAME
 msgctxt "STRINGS.UI.OUTFITS.REBELGI.NAME"
 msgid "Rebel Gi Outfit"
-msgstr "叛逆套裝"
+msgstr "叛逆外觀"
 
 #. STRINGS.UI.OUTFITS.SLEEVELESS_BOW_BW.NAME
 msgctxt "STRINGS.UI.OUTFITS.SLEEVELESS_BOW_BW.NAME"
 msgid "PhD Dress Outfit"
-msgstr "博士連身裙套裝"
+msgstr "博士連身裙外觀"
 
 #. STRINGS.UI.OUTFITS.SNOWFLAKE_BLUE.NAME
 msgctxt "STRINGS.UI.OUTFITS.SNOWFLAKE_BLUE.NAME"
 msgid "Crystal-Iced Outfit"
-msgstr "冰晶套裝"
+msgstr "冰晶外觀"
 
 #. STRINGS.UI.OUTFITS.SUPERSTAR.NAME
 msgctxt "STRINGS.UI.OUTFITS.SUPERSTAR.NAME"
 msgid "Superstar Outfit"
-msgstr "超級明星套裝"
+msgstr "超級明星外觀"
 
 #. STRINGS.UI.OUTFITS.SWEETHEART.NAME
 msgctxt "STRINGS.UI.OUTFITS.SWEETHEART.NAME"
 msgid "Sweetheart Jammies Outfit"
-msgstr "甜心睡衣套裝"
+msgstr "甜心睡衣外觀"
 
 #. STRINGS.UI.OUTFITS.TWEED_PINK_ORCHID.NAME
 msgctxt "STRINGS.UI.OUTFITS.TWEED_PINK_ORCHID.NAME"
 msgid "Power Brunch Outfit"
-msgstr "午宴套裝"
+msgstr "午宴外觀"
 
 #. STRINGS.UI.OUTFITS.VELOUR_BLACK.NAME
 msgctxt "STRINGS.UI.OUTFITS.VELOUR_BLACK.NAME"
 msgid "PhD Velour Outfit"
-msgstr "博士絲絨套裝"
+msgstr "博士絲絨外觀"
 
 #. STRINGS.UI.OUTFITS.VELOUR_BLUE.NAME
 msgctxt "STRINGS.UI.OUTFITS.VELOUR_BLUE.NAME"
 msgid "Shortwave Velour Outfit"
-msgstr "短波絲絨套裝"
+msgstr "短波絲絨外觀"
 
 #. STRINGS.UI.OUTFITS.VELOUR_PINK.NAME
 msgctxt "STRINGS.UI.OUTFITS.VELOUR_PINK.NAME"
 msgid "Gamma Velour Outfit"
-msgstr "伽瑪絲絨套裝"
+msgstr "伽瑪絲絨外觀"
 
 #. STRINGS.UI.OUTFITS.WAISTCOAT_PINSTRIPE_SLATE.NAME
 msgctxt "STRINGS.UI.OUTFITS.WAISTCOAT_PINSTRIPE_SLATE.NAME"
 msgid "Nobel Pinstripe Outfit"
-msgstr "諾貝爾條紋套裝"
+msgstr "諾貝爾條紋外觀"
 
 #. STRINGS.UI.OUTFITS.WATER.NAME
 msgctxt "STRINGS.UI.OUTFITS.WATER.NAME"
@@ -81508,12 +81508,12 @@ msgstr "暖通空調工作服"
 #. STRINGS.UI.OUTFITS.X_SPORCHID.NAME
 msgctxt "STRINGS.UI.OUTFITS.X_SPORCHID.NAME"
 msgid "Sporefest Outfit"
-msgstr "孢子節日套裝"
+msgstr "孢子節日外觀"
 
 #. STRINGS.UI.OUTFITS.X1_PINCHAPEPPERNUTBELLS.NAME
 msgctxt "STRINGS.UI.OUTFITS.X1_PINCHAPEPPERNUTBELLS.NAME"
 msgid "Pinchabell Outfit"
-msgstr "椒鈴套裝"
+msgstr "椒鈴外觀"
 
 #. STRINGS.UI.OVERLAYS.CONVEYOR.BUTTON
 msgctxt "STRINGS.UI.OVERLAYS.CONVEYOR.BUTTON"
@@ -84928,7 +84928,7 @@ msgstr "{0} 已指派"
 #. STRINGS.UI.SKILLS_SCREEN.ASSIGNMENT_REQUIREMENTS.EXPECTATION_ALERT_DESC_EXPECTATION
 msgctxt "STRINGS.UI.SKILLS_SCREEN.ASSIGNMENT_REQUIREMENTS.EXPECTATION_ALERT_DESC_EXPECTATION"
 msgid "This Duplicant's Morale is too low to handle the rigors of this position, which will cause them Stress over time."
-msgstr "這名複製人的士氣太低，無法應對這個位置的嚴峻考驗，壓力將會隨著時間上升。"
+msgstr "這名複製人的士氣太低，無法應付這份工作的苦差事，長期下來壓力會不斷累積。"
 
 #. STRINGS.UI.SKILLS_SCREEN.ASSIGNMENT_REQUIREMENTS.EXPECTATION_ALERT_TARGET_SKILL
 msgctxt "STRINGS.UI.SKILLS_SCREEN.ASSIGNMENT_REQUIREMENTS.EXPECTATION_ALERT_TARGET_SKILL"
@@ -85253,7 +85253,7 @@ msgstr "原始化石"
 #. STRINGS.UI.SPACEARTIFACTS.HONEYJAR.ARTIFACT
 msgctxt "STRINGS.UI.SPACEARTIFACTS.HONEYJAR.ARTIFACT"
 msgid "Records from the Genetics and Biology Lab of the Gravitas facility show that several early iterations of a radioactive Bee would continue to produce honey and that this honey was once accidentally stored in the employee kitchen which resulted in several incidents of minor radiation poisoning when it was erroneously labled as a sweetener for tea.\n\nEmployees who used this product reported that it was the \"sweetest honey they'd ever tasted\" and expressed no regret at the mix-up."
-msgstr "引力科技的遺傳與生物實驗室的紀錄顯示，輻射蜂在幾次早期的迭代時會持續的生產蜂蜜，並且這種蜂蜜被意外的存放在員工的廚房中，當它被錯誤的標記為茶飲所使用的甜味劑時，導致了幾起輕微的輻射中毒事件。\n\n使用了該產品的的員工回報說這是「他們嚐過最甜的蜂蜜」，並表示他們對這混淆不後悔。"
+msgstr "引力科技中心的遺傳與生物實驗室的紀錄顯示，輻射蜂在幾次早期的迭代時會持續的生產蜂蜜，並且這種蜂蜜被意外的存放在員工的廚房中，當它被錯誤的標記為茶飲所使用的甜味劑時，導致了幾起輕微的輻射中毒事件。\n\n使用了該產品的的員工回報說這是「他們嚐過最甜的蜂蜜」，並表示他們對這混淆不後悔。"
 
 #. STRINGS.UI.SPACEARTIFACTS.HONEYJAR.DESCRIPTION
 msgctxt "STRINGS.UI.SPACEARTIFACTS.HONEYJAR.DESCRIPTION"
@@ -87348,7 +87348,7 @@ msgstr "可用資源 {0}"
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.MISSING_TOOLTIP
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.MISSING_TOOLTIP"
 msgid "No {0} installed\n\nThis rocket cannot launch without a completed {0}"
-msgstr "未安裝{0}\n\n這艘火箭未安裝{0}無法發射"
+msgstr "尚未安裝{0}\n\n缺少這個完整的{0}，火箭無法升空"
 
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.NO_DESTINATION
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.NO_DESTINATION"
@@ -87433,7 +87433,7 @@ msgstr "副駕駛已登機"
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PILOT_BOARDED.TOOLTIP.FAILURE
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PILOT_BOARDED.TOOLTIP.FAILURE"
 msgid "At least one crew member aboard the rocket must possess the <link=\"ROCKETPILOTING1\">Rocket Piloting</link> skill to launch\n\nQualified Duplicants must be assigned to the rocket crew, and have access to the module's hatch"
-msgstr "火箭上至少需有一名機組人員具備<link=\"ROCKETPILOTING1\">火箭駕駛</link>技能才能發射\n\n必須指派合格的複製人成為這艘火箭的機組人員，並且可訪問這個模組的艙門"
+msgstr "火箭上至少需有一名機組人員具備<link=\"ROCKETPILOTING1\">火箭駕駛</link>技能才能發射\n\n合格的複製人必須指派為機組人員，並能進入模組的艙口"
 
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PILOT_BOARDED.TOOLTIP.READY
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PILOT_BOARDED.TOOLTIP.READY"
@@ -87443,7 +87443,7 @@ msgstr "具備<link=\"ROCKETPILOTING1\">火箭駕駛</link>技能的複製人已
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PILOT_BOARDED.TOOLTIP.ROBO_PILOT_WARNING
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PILOT_BOARDED.TOOLTIP.ROBO_PILOT_WARNING"
 msgid "This rocket is being piloted by a <style=\"KKeyword\">Robo-Pilot</style>\n\nThere are no Duplicants with the <link=\"ROCKETPILOTING1\">Rocket Piloting</link> skill currently onboard\n\nQualified Duplicants must be assigned to the rocket crew, and have access to the module's hatch"
-msgstr "這艘火箭正被<style=\"KKeyword\">自動飛行員</style>給操控\n\n目前沒有具有<link=\"ROCKETPILOTING1\">火箭駕駛</link>技能的複製人登上火箭\n\n合格的複製人必須被分配給火箭機組人員，並有權進入模組的艙口"
+msgstr "這艘火箭正被<style=\"KKeyword\">自動飛行員</style>駕駛\n\n目前沒有具備<link=\"ROCKETPILOTING1\">火箭駕駛</link>技能的複製人登機\n\n合格的複製人必須指派為機組人員，並能進入模組的艙口"
 
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PILOT_BOARDED.TOOLTIP.WARNING
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PILOT_BOARDED.TOOLTIP.WARNING"
@@ -87478,7 +87478,7 @@ msgstr "這艘火箭沒有足夠的燃料到達目的地\n\n如果燃料艙已�
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PROPERLY_FUELED.TOOLTIP.READY
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PROPERLY_FUELED.TOOLTIP.READY"
 msgid "The rocket is sufficiently fueled for a roundtrip to its destination and back"
-msgstr "這艘火箭有足夠的氧化劑往返目的地"
+msgstr "這艘火箭燃料充足，足以往返目的地"
 
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PROPERLY_FUELED.TOOLTIP.READY_NO_DESTINATION
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.PROPERLY_FUELED.TOOLTIP.READY_NO_DESTINATION"
@@ -87608,12 +87608,12 @@ msgstr "這艘火箭沒有足夠的氧化劑到達目的地\n\n如果氧化劑�
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.SUFFICIENT_OXIDIZER.TOOLTIP.READY
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.SUFFICIENT_OXIDIZER.TOOLTIP.READY"
 msgid "This rocket has sufficient oxidizer for a roundtrip to its destination and back"
-msgstr "這艘火箭有足夠的氧化劑往返目的地"
+msgstr "這艘火箭氧化劑充足，足以往返目的地"
 
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.SUFFICIENT_OXIDIZER.TOOLTIP.WARNING
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.SUFFICIENT_OXIDIZER.TOOLTIP.WARNING"
 msgid "The rocket has enough oxidizer for a one-way trip to its destination, but will not be able to make it back"
-msgstr "這艘火箭有足夠的燃料抵達目的地，但不能返航"
+msgstr "這艘火箭有足夠的氧化劑抵達目的地，但不能返航"
 
 #. STRINGS.UI.STARMAP.LISTTITLES.ANALYSIS
 msgctxt "STRINGS.UI.STARMAP.LISTTITLES.ANALYSIS"
@@ -89618,7 +89618,7 @@ msgstr "1 倍速 {Hotkey}"
 #. STRINGS.UI.TOOLTIPS.STATSPANEL
 msgctxt "STRINGS.UI.TOOLTIPS.STATSPANEL"
 msgid "The Stats Panel gives me an overview of my Duplicant's individual stats"
-msgstr "統計面板，提供所有複製人的個人統計概況"
+msgstr "統計面板，提供複製人個別數據的概覽"
 
 #. STRINGS.UI.TOOLTIPS.STRESSDESCRIPTION
 msgctxt "STRINGS.UI.TOOLTIPS.STRESSDESCRIPTION"
@@ -89628,7 +89628,7 @@ msgstr "滿足複製人的需求以管理他們的<link=\"STRESS\">壓力</link>
 #. STRINGS.UI.TOOLTIPS.STRESSPANEL
 msgctxt "STRINGS.UI.TOOLTIPS.STRESSPANEL"
 msgid "The Stress Panel offers a detailed look at what is affecting my Duplicant psychologically"
-msgstr "壓力面版，通常可以詳細地看出是什麼在影響複製人的心理"
+msgstr "壓力面板，詳細顯示影響複製人心理層面的各種因素"
 
 #. STRINGS.UI.TOOLTIPS.SUITOVERLAYSTRING
 msgctxt "STRINGS.UI.TOOLTIPS.SUITOVERLAYSTRING"
@@ -89763,7 +89763,7 @@ msgstr "這株植物必須由<style=\"KKeyword\">小動物</style>{0}授粉"
 #. STRINGS.UI.TOOLTIPS.VITALSPANEL
 msgctxt "STRINGS.UI.TOOLTIPS.VITALSPANEL"
 msgid "The Vitals Panel monitors the status and well being of my Duplicant"
-msgstr "健康面板，監控複製人的身心狀態"
+msgstr "健康面板，監控複製人的身心健康"
 
 #. STRINGS.UI.TRACKERS.BREATHABILITY
 msgctxt "STRINGS.UI.TRACKERS.BREATHABILITY"
@@ -90193,7 +90193,7 @@ msgstr "太空衣"
 #. STRINGS.UI.UISIDESCREENS.BLUEPRINT_TAB.SUBCATEGORY_JOYRESPONSE
 msgctxt "STRINGS.UI.UISIDESCREENS.BLUEPRINT_TAB.SUBCATEGORY_JOYRESPONSE"
 msgid "Overjoyed"
-msgstr "喜悅反應"
+msgstr "樂歪了"
 
 #. STRINGS.UI.UISIDESCREENS.BLUEPRINT_TAB.SUBCATEGORY_OUTFIT
 msgctxt "STRINGS.UI.UISIDESCREENS.BLUEPRINT_TAB.SUBCATEGORY_OUTFIT"
