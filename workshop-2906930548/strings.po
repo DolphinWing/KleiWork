@@ -67303,7 +67303,7 @@ msgstr "\n\n<b>{0}</b> DLC 內容"
 #. STRINGS.RESEARCH.MESSAGING.DLC.EXPANSION1
 msgctxt "STRINGS.RESEARCH.MESSAGING.DLC.EXPANSION1"
 msgid "<style=\"KKeyword\">\n\n<i>Spaced Out!</i></style> DLC Content"
-msgstr "<style=\"KKeyword\">\n\n<b>眼冒金星！</b></style> 可下載內容"
+msgstr "<style=\"KKeyword\">\n\n<b>眼冒金星！</b></style> DLC 內容"
 
 #. STRINGS.RESEARCH.MESSAGING.MISSING_RESEARCH_STATION
 msgctxt "STRINGS.RESEARCH.MESSAGING.MISSING_RESEARCH_STATION"
@@ -77118,7 +77118,7 @@ msgstr "周期 {0} 報告就緒"
 #. STRINGS.UI.ENDOFDAYREPORT.NOTIFICATION_TOOLTIP
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.NOTIFICATION_TOOLTIP"
 msgid "The daily report for Cycle {0} is ready to view"
-msgstr "周期 {0} 的報告已經可以觀看"
+msgstr "周期 {0} 的每日報告已可檢視"
 
 #. STRINGS.UI.ENDOFDAYREPORT.NUMBER_OF_DOMESTICATED_CRITTERS.NAME
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.NUMBER_OF_DOMESTICATED_CRITTERS.NAME"
@@ -77158,12 +77158,12 @@ msgstr "<link=\"OXYGEN\">氧氣</link>生產："
 #. STRINGS.UI.ENDOFDAYREPORT.OXYGEN_CREATED.NEGATIVE_TOOLTIP
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.OXYGEN_CREATED.NEGATIVE_TOOLTIP"
 msgid "{0} of <link=\"OXYGEN\">Oxygen</link> was consumed by {1} over the course of the day"
-msgstr "{1} 今天消耗了 {0}<link=\"OXYGEN\">氧氣</link>"
+msgstr "{1} 今天消耗了 {0}的<link=\"OXYGEN\">氧氣</link>"
 
 #. STRINGS.UI.ENDOFDAYREPORT.OXYGEN_CREATED.POSITIVE_TOOLTIP
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.OXYGEN_CREATED.POSITIVE_TOOLTIP"
 msgid "{0} of <link=\"OXYGEN\">Oxygen</link> was produced by {1} over the course of the day"
-msgstr "{1} 今天生產了 {0}<link=\"OXYGEN\">氧氣</link>"
+msgstr "{1} 今天生產了 {0}的<link=\"OXYGEN\">氧氣</link>"
 
 #. STRINGS.UI.ENDOFDAYREPORT.PERSONAL_TIME.NAME
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.PERSONAL_TIME.NAME"
@@ -77173,7 +77173,7 @@ msgstr "個人時間："
 #. STRINGS.UI.ENDOFDAYREPORT.PERSONAL_TIME.POSITIVE_TOOLTIP
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.PERSONAL_TIME.POSITIVE_TOOLTIP"
 msgid "On average, {0} of {1}'s time was spent tending to personal needs"
-msgstr "{1} 平均花 {0} 時間，在處理個人的需求"
+msgstr "{1} 平均花 {0} 時間在處理個人需求"
 
 #. STRINGS.UI.ENDOFDAYREPORT.PREV
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.PREV"
@@ -77213,12 +77213,12 @@ msgstr "<link=\"STRESS\">壓力</link>變化："
 #. STRINGS.UI.ENDOFDAYREPORT.STRESS_DELTA.NEGATIVE_TOOLTIP
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.STRESS_DELTA.NEGATIVE_TOOLTIP"
 msgid "<link=\"STRESS\">Stress</link> decreased by a total of {0} for {1}"
-msgstr "{1} 總共減少了 {0} 的<link=\"STRESS\">壓力</link>"
+msgstr "{1} 總共減少了 {0} <link=\"STRESS\">壓力</link>"
 
 #. STRINGS.UI.ENDOFDAYREPORT.STRESS_DELTA.POSITIVE_TOOLTIP
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.STRESS_DELTA.POSITIVE_TOOLTIP"
 msgid "<link=\"STRESS\">Stress</link> increased by a total of {0} for {1}"
-msgstr "{1} 總共增加了 {0} 的<link=\"STRESS\">壓力</link>"
+msgstr "{1} 總共增加了 {0} <link=\"STRESS\">壓力</link>"
 
 #. STRINGS.UI.ENDOFDAYREPORT.TIME_DETAILS_HEADER
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.TIME_DETAILS_HEADER"
@@ -77233,7 +77233,7 @@ msgstr "廁所事故："
 #. STRINGS.UI.ENDOFDAYREPORT.TOILET_INCIDENT.TOOLTIP
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.TOILET_INCIDENT.TOOLTIP"
 msgid "{0} Duplicants couldn't quite reach the toilet in time today"
-msgstr "{0} 複製人今天找不到廁所"
+msgstr "{0} 複製人今天沒能及時趕到廁所"
 
 #. STRINGS.UI.ENDOFDAYREPORT.TRAVEL_TIME.NAME
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.TRAVEL_TIME.NAME"
@@ -77243,12 +77243,12 @@ msgstr "旅行時間："
 #. STRINGS.UI.ENDOFDAYREPORT.TRAVEL_TIME.POSITIVE_TOOLTIP
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.TRAVEL_TIME.POSITIVE_TOOLTIP"
 msgid "On average, {1} spent {0} of their time traveling between tasks"
-msgstr "{1} 平均花 {0} 時間，在工作之間往返"
+msgstr "{1} 平均花 {0} 時間在工作之間往返"
 
 #. STRINGS.UI.ENDOFDAYREPORT.TRAVELTIMEWARNING.WARNING_MESSAGE
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.TRAVELTIMEWARNING.WARNING_MESSAGE"
 msgid "My Duplicants are spending a significant amount of time traveling between their errands (> {0})"
-msgstr "複製人花了相當多的通勤時間在各種任務之間往返（> {0}）"
+msgstr "複製人花了相當多的時間在各種任務之間往返（> {0}）"
 
 #. STRINGS.UI.ENDOFDAYREPORT.TRAVELTIMEWARNING.WARNING_TITLE
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.TRAVELTIMEWARNING.WARNING_TITLE"
@@ -77263,7 +77263,7 @@ msgstr "工作時間："
 #. STRINGS.UI.ENDOFDAYREPORT.WORK_TIME.POSITIVE_TOOLTIP
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.WORK_TIME.POSITIVE_TOOLTIP"
 msgid "On average, {0} of {1}'s time was spent working"
-msgstr "{1} 平均花 {0} 時間，在工作上"
+msgstr "{1} 平均花 {0} 時間在工作上"
 
 #. STRINGS.UI.EQUIPMENTTAB_HELD
 msgctxt "STRINGS.UI.EQUIPMENTTAB_HELD"
@@ -77393,7 +77393,7 @@ msgstr "選擇小行星類型…"
 #. STRINGS.UI.FRONTEND.CLUSTERCATEGORYSELECTSCREEN.CLASSIC_DESC
 msgctxt "STRINGS.UI.FRONTEND.CLUSTERCATEGORYSELECTSCREEN.CLASSIC_DESC"
 msgid "Scenarios similar to the <b>classic Oxygen Not Included</b> experience. Large starting asteroids with many resources.\nLess emphasis on space travel."
-msgstr "類似<b>經典《缺氧》</b>體驗的場景。更大的初始小行星，有著許多資源。\n太空旅行的重要性更小。"
+msgstr "類似<b>經典《缺氧》</b>體驗的場景。初始小行星很大，且資源豐富。\n較不強調太空旅行。"
 
 #. STRINGS.UI.FRONTEND.CLUSTERCATEGORYSELECTSCREEN.CLASSIC_TITLE
 msgctxt "STRINGS.UI.FRONTEND.CLUSTERCATEGORYSELECTSCREEN.CLASSIC_TITLE"
@@ -78413,7 +78413,7 @@ msgstr "沙盒模式"
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.SANDBOXMODE.TOOLTIP
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.SANDBOXMODE.TOOLTIP"
 msgid "Manipulate and customize the simulation with tools that ignore regular game constraints"
-msgstr "允許使用忽略遊戲常規限制的操作工具來模擬"
+msgstr "使用忽略常規遊戲限制的工具，操縱並自訂模擬環境"
 
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.SAVETOCLOUD.LEVELS.DISABLED.NAME
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.SAVETOCLOUD.LEVELS.DISABLED.NAME"
@@ -78453,12 +78453,12 @@ msgstr "之後可在主選單載入畫面的殖民地管理選項中修改。"
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.SAVETOCLOUD.TOOLTIP_LOCAL
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.SAVETOCLOUD.TOOLTIP_LOCAL"
 msgid "This colony will be created in the local saves folder. It will not be a cloud save and will not be synced by the game platform."
-msgstr "這個殖民地將建立本機存檔。不會使用雲端存檔且不會由遊戲平台同步。"
+msgstr "這個殖民地將建立本機存檔，不會使用雲端存檔，且不會由遊戲平台同步。"
 
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.STORY_TRAIT_COUNT.LEVELS.FEW.NAME
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.STORY_TRAIT_COUNT.LEVELS.FEW.NAME"
 msgid "Stingy"
-msgstr "吝嗇"
+msgstr "少量"
 
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.STORY_TRAIT_COUNT.LEVELS.FEW.TOOLTIP
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.STORY_TRAIT_COUNT.LEVELS.FEW.TOOLTIP"
@@ -78473,7 +78473,7 @@ msgstr "大量"
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.STORY_TRAIT_COUNT.LEVELS.LOTS.TOOLTIP
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.STORY_TRAIT_COUNT.LEVELS.LOTS.TOOLTIP"
 msgid "Plenty of story traits to go around"
-msgstr "有許多故事特質"
+msgstr "故事特質充足"
 
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.STORY_TRAIT_COUNT.LEVELS.NONE.NAME
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.STORY_TRAIT_COUNT.LEVELS.NONE.NAME"
@@ -78483,7 +78483,7 @@ msgstr "毫無"
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.STORY_TRAIT_COUNT.LEVELS.NONE.TOOLTIP
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.STORY_TRAIT_COUNT.LEVELS.NONE.TOOLTIP"
 msgid "Zero story traits. Zip. Nada. None"
-msgstr "零個故事特質。零，沒有，無"
+msgstr "零個故事特質，零、沒有、無"
 
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.STORY_TRAIT_COUNT.NAME
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.STORY_TRAIT_COUNT.NAME"
@@ -78753,7 +78753,7 @@ msgstr "感謝遊玩！"
 #. STRINGS.UI.FRONTEND.DEVTOOLS.BUTTON
 msgctxt "STRINGS.UI.FRONTEND.DEVTOOLS.BUTTON"
 msgid "Show Dev Tools"
-msgstr "開發工具"
+msgstr "顯示開發工具"
 
 #. STRINGS.UI.FRONTEND.DEVTOOLS.DONTSHOW
 msgctxt "STRINGS.UI.FRONTEND.DEVTOOLS.DONTSHOW"
@@ -78768,7 +78768,7 @@ msgstr "關於開發工具"
 #. STRINGS.UI.FRONTEND.DEVTOOLS.WARNING
 msgctxt "STRINGS.UI.FRONTEND.DEVTOOLS.WARNING"
 msgid "DANGER!!\n\nDev Tools are intended for developer use only. Using them may result in your save becoming unplayable, unstable, or severely damaged.\n\nThese tools are completely unsupported and may contain bugs. Are you sure you want to continue?"
-msgstr "危險！！\n\n開發工具僅供開發人員使用。使用它們可能會導致您的存檔無法遊玩、不穩定或嚴重損壞。\n\n這些工具完全不受支持，並且可能包含錯誤。你確定你要繼續嗎？"
+msgstr "危險！！\n\n開發工具僅供開發人員使用。使用它們可能會導致您的存檔無法遊玩、不穩定或嚴重損壞。\n\n這些工具完全不受支援，並且可能包含錯誤。您確定要繼續嗎？"
 
 #. STRINGS.UI.FRONTEND.DONE_BUTTON
 msgctxt "STRINGS.UI.FRONTEND.DONE_BUTTON"
@@ -78778,7 +78778,7 @@ msgstr "完成"
 #. STRINGS.UI.FRONTEND.FEEDBACK_SCREEN.ALT_DESCRIPTION
 msgctxt "STRINGS.UI.FRONTEND.FEEDBACK_SCREEN.ALT_DESCRIPTION"
 msgid "Let us know if you encounter any problems or how we can improve your Oxygen Not Included experience.\n\nWhen reporting a bug, please include your log and colony save file.\n\nThank you for being part of the Oxygen Not Included community!"
-msgstr "如果您遇到了任何問題，或是有改善缺氧遊戲體驗的建議，請讓我們知道。\n\n在回報錯誤時，請附上您的日誌與存檔。\n右側的按鈕會幫助您找到這些檔案。\n\n感謝您成為缺氧社群的一份子！"
+msgstr "如果您遇到了任何問題，或是有改善《缺氧》遊戲體驗的建議，請讓我們知道。\n\n在回報錯誤時，請附上您的日誌與存檔。\n右側的按鈕會幫助您找到這些檔案。\n\n感謝您成為《缺氧》社群的一份子！"
 
 #. STRINGS.UI.FRONTEND.FEEDBACK_SCREEN.BUG_FORUMS_BUTTON
 msgctxt "STRINGS.UI.FRONTEND.FEEDBACK_SCREEN.BUG_FORUMS_BUTTON"
@@ -78788,12 +78788,12 @@ msgstr "回報錯誤"
 #. STRINGS.UI.FRONTEND.FEEDBACK_SCREEN.DESCRIPTION
 msgctxt "STRINGS.UI.FRONTEND.FEEDBACK_SCREEN.DESCRIPTION"
 msgid "Let us know if you encounter any problems or how we can improve your Oxygen Not Included experience.\n\nWhen reporting a bug, please include your log and colony save file. The buttons to the right will help you find those files on your local drive.\n\nThank you for being part of the Oxygen Not Included community!"
-msgstr "如果您遇到了任何問題，或是有改善缺氧遊戲體驗的建議，請讓我們知道。\n\n在回報錯誤時，請附上您的日誌與存檔。\n右側的按鈕會幫助您找到這些檔案。\n\n感謝您成為缺氧社群的一份子！"
+msgstr "如果您遇到了任何問題，或是有改善《缺氧》遊戲體驗的建議，請讓我們知道。\n\n在回報錯誤時，請附上您的日誌與存檔。\n右側的按鈕會幫助您找到這些檔案。\n\n感謝您成為《缺氧》社群的一份子！"
 
 #. STRINGS.UI.FRONTEND.FEEDBACK_SCREEN.HEADER
 msgctxt "STRINGS.UI.FRONTEND.FEEDBACK_SCREEN.HEADER"
 msgid "We would love to hear from you!"
-msgstr "我們喜歡聆聽玩家們的意見！"
+msgstr "期待您的回饋！"
 
 #. STRINGS.UI.FRONTEND.FEEDBACK_SCREEN.LOGS_DIRECTORY_BUTTON
 msgctxt "STRINGS.UI.FRONTEND.FEEDBACK_SCREEN.LOGS_DIRECTORY_BUTTON"
@@ -78883,7 +78883,7 @@ msgstr "接受變更？"
 #. STRINGS.UI.FRONTEND.GRAPHICS_OPTIONS_SCREEN.ACCEPT_CHANGES_STRING_COLOR
 msgctxt "STRINGS.UI.FRONTEND.GRAPHICS_OPTIONS_SCREEN.ACCEPT_CHANGES_STRING_COLOR"
 msgid "Interface changes will be visible immediately, but applying color changes to in-game text will require a restart.\n\nAccept Changes?"
-msgstr "調整介面是立即可見的，但調整遊戲內文字色彩需要重啟遊戲。\n\n接受變更？"
+msgstr "介面變更會立即生效，但調整遊戲內文字的顏色需要重啟遊戲。\n\n接受變更？"
 
 #. STRINGS.UI.FRONTEND.GRAPHICS_OPTIONS_SCREEN.APPLYBUTTON
 msgctxt "STRINGS.UI.FRONTEND.GRAPHICS_OPTIONS_SCREEN.APPLYBUTTON"
@@ -78913,7 +78913,7 @@ msgstr "藍色盲"
 #. STRINGS.UI.FRONTEND.GRAPHICS_OPTIONS_SCREEN.COLORBLIND_FEEDBACK
 msgctxt "STRINGS.UI.FRONTEND.GRAPHICS_OPTIONS_SCREEN.COLORBLIND_FEEDBACK"
 msgid "Color blindness options are currently in progress.\n\nIf you would benefit from an alternative color mode or have had difficulties with any of the default colors, please visit the forums and let us know about your experiences.\n\nYour feedback is extremely helpful to us!"
-msgstr "色盲選項仍在開發中\n\n如果您在調整顏色模式有獲得改善，或是在使用預設顏色遇到了任何困難，請訪問論壇並讓我們知道您的體驗。\n\n您的回饋會對我們非常地有幫助！"
+msgstr "色盲選項仍在開發中\n\n若您覺得替換的顏色模式會有所幫助，或在使用預設顏色時遇到任何困難，請前往論壇並讓我們知道您的體驗。\n\n您的回饋會對我們非常地有幫助！"
 
 #. STRINGS.UI.FRONTEND.GRAPHICS_OPTIONS_SCREEN.COLORBLIND_FEEDBACK_BUTTON
 msgctxt "STRINGS.UI.FRONTEND.GRAPHICS_OPTIONS_SCREEN.COLORBLIND_FEEDBACK_BUTTON"
@@ -78978,12 +78978,12 @@ msgstr "完成"
 #. STRINGS.UI.FRONTEND.INPUT_BINDINGS_SCREEN.DUPLICATE
 msgctxt "STRINGS.UI.FRONTEND.INPUT_BINDINGS_SCREEN.DUPLICATE"
 msgid "{0} was already bound to {1} and is now unbound."
-msgstr "{0} 原本指定為 {1}，現在已解除。"
+msgstr "{0} 原本綁定為 {1}，現在已解除。"
 
 #. STRINGS.UI.FRONTEND.INPUT_BINDINGS_SCREEN.MULTIPLE_UNBOUND_ACTIONS
 msgctxt "STRINGS.UI.FRONTEND.INPUT_BINDINGS_SCREEN.MULTIPLE_UNBOUND_ACTIONS"
 msgid "You have multiple unbound actions, this may result in difficulty playing the game. Are you sure you want to continue?"
-msgstr "你有多個未指定的按鍵，這可能導致遊戲困難。你確定你要繼續？"
+msgstr "您有多個未綁定的動作，這可能導致遊戲困難。您確定要繼續嗎？"
 
 #. STRINGS.UI.FRONTEND.INPUT_BINDINGS_SCREEN.RESET
 msgctxt "STRINGS.UI.FRONTEND.INPUT_BINDINGS_SCREEN.RESET"
@@ -78998,7 +78998,7 @@ msgstr "自訂按鍵"
 #. STRINGS.UI.FRONTEND.INPUT_BINDINGS_SCREEN.UNBOUND_ACTION
 msgctxt "STRINGS.UI.FRONTEND.INPUT_BINDINGS_SCREEN.UNBOUND_ACTION"
 msgid "{0} is unbound. Are you sure you want to continue?"
-msgstr "{0} 未指定。你確定你要繼續？"
+msgstr "{0} 未綁定。您確定要繼續嗎？"
 
 #. STRINGS.UI.FRONTEND.INPUT_BINDINGS_SCREEN.WAITING_FOR_INPUT
 msgctxt "STRINGS.UI.FRONTEND.INPUT_BINDINGS_SCREEN.WAITING_FOR_INPUT"
@@ -79063,7 +79063,7 @@ msgstr "檢視殖民地 「{0}」"
 #. STRINGS.UI.FRONTEND.LOADSCREEN.CONFIRMDELETE
 msgctxt "STRINGS.UI.FRONTEND.LOADSCREEN.CONFIRMDELETE"
 msgid "Are you sure you want to delete {0}?\nYou cannot undo this action."
-msgstr "你確定要刪除 {0}？\n你將無法復原這個動作。"
+msgstr "你確定要刪除 {0} 嗎？\n您將無法復原這個動作。"
 
 #. STRINGS.UI.FRONTEND.LOADSCREEN.CONTENT
 msgctxt "STRINGS.UI.FRONTEND.LOADSCREEN.CONTENT"
@@ -79208,7 +79208,7 @@ msgstr "拜訪論壇"
 #. STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_INFO
 msgctxt "STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_INFO"
 msgid "We've changed how save files are organized!\nPlease (ClickType/click) the button below to automatically update your save file storage."
-msgstr "我們修改了存檔的結構！\n請(ClickType/click)下方的按鈕來自動更新你的存檔。"
+msgstr "我們修改了存檔的結構！\n請(ClickType/click)下方的按鈕來自動更新您的存檔。"
 
 #. STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_RESULT
 msgctxt "STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_RESULT"
@@ -79218,7 +79218,7 @@ msgstr "<style=\"KKeyword\">成功！</style>\n已轉換 <style=\"KKeyword\">{0}
 #. STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_RESULT_FAILURES
 msgctxt "STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_RESULT_FAILURES"
 msgid "<style=\"KKeyword\"><b>WARNING:</b> Not all saves could be migrated.</style>\nMigration moved <style=\"KKeyword\">{0}/{1}</style> saves and <style=\"KKeyword\">{2}/{3}</style> autosaves.\n\nThe file <style=\"KKeyword\">{ErrorColony}</style> encountered this error:\n\n<b>{ErrorMessage}</b>"
-msgstr "<style=\"KKeyword\"><b>警告：:</b> 有些存檔沒有轉換。</style>\n已轉換了 <style=\"KKeyword\">{0}/{1}</style> 存檔與 <style=\"KKeyword\">{2}/{3}</style> 自動存檔。\n\n檔案 <style=\"KKeyword\">{ErrorColony}</style> 遇到這個錯誤：\n\n<b>{ErrorMessage}</b>"
+msgstr "<style=\"KKeyword\"><b>警告：:</b>有些存檔沒有轉換。</style>\n已轉換了 <style=\"KKeyword\">{0}/{1}</style> 存檔與 <style=\"KKeyword\">{2}/{3}</style> 自動存檔。\n\n檔案 <style=\"KKeyword\">{ErrorColony}</style> 遇到這個錯誤：\n\n<b>{ErrorMessage}</b>"
 
 #. STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_RESULT_FAILURES_MORE_INFO_ITEM1
 msgctxt "STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_RESULT_FAILURES_MORE_INFO_ITEM1"
@@ -79238,7 +79238,7 @@ msgstr "    3. 重啟遊戲並重新轉換存檔。"
 #. STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_RESULT_FAILURES_MORE_INFO_POST
 msgctxt "STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_RESULT_FAILURES_MORE_INFO_POST"
 msgid "\n<b>If this still doesn't solve the problem, please post a bug in the forums and we will attempt to assist with your issue.</b>"
-msgstr "\n<b>如果仍然無法解決問題，請到論壇回報錯誤，我們試著協助你解決問題。</b>"
+msgstr "\n<b>如果仍然無法解決問題，請到論壇回報錯誤，我們試著協助您解決問題。</b>"
 
 #. STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_RESULT_FAILURES_MORE_INFO_PRE
 msgctxt "STRINGS.UI.FRONTEND.LOADSCREEN.MIGRATE_RESULT_FAILURES_MORE_INFO_PRE"
@@ -79298,7 +79298,7 @@ msgstr "{0} 存檔  {1} 自動存檔  {2}"
 #. STRINGS.UI.FRONTEND.LOADSCREEN.SAVE_INFO_DIALOG_TEXT
 msgctxt "STRINGS.UI.FRONTEND.LOADSCREEN.SAVE_INFO_DIALOG_TEXT"
 msgid "Access your save files using the options below."
-msgstr "使用下方選項存取你的檔案。"
+msgstr "使用下方選項存取您的檔案。"
 
 #. STRINGS.UI.FRONTEND.LOADSCREEN.SAVE_INFO_DIALOG_TITLE
 msgctxt "STRINGS.UI.FRONTEND.LOADSCREEN.SAVE_INFO_DIALOG_TITLE"
@@ -79308,7 +79308,7 @@ msgstr "存檔資訊"
 #. STRINGS.UI.FRONTEND.LOADSCREEN.SAVE_INFO_DIALOG_TOOLTIP
 msgctxt "STRINGS.UI.FRONTEND.LOADSCREEN.SAVE_INFO_DIALOG_TOOLTIP"
 msgid "Access your save file locations from here."
-msgstr "這裡可訪問你的存檔位置。"
+msgstr "這裡可訪問您的存檔位置。"
 
 #. STRINGS.UI.FRONTEND.LOADSCREEN.SAVE_TOO_NEW
 msgctxt "STRINGS.UI.FRONTEND.LOADSCREEN.SAVE_TOO_NEW"
@@ -79363,7 +79363,7 @@ msgstr "<b><color=#F44A47FF>這個存檔來自遊戲本體，當前無法在<b>�
 #. STRINGS.UI.FRONTEND.LOADSCREEN.VANILLA_CONTENT
 msgctxt "STRINGS.UI.FRONTEND.LOADSCREEN.VANILLA_CONTENT"
 msgid "Vanilla FIXME"
-msgstr "香草版 FIXME"
+msgstr "基礎版 FIXME"
 
 #. STRINGS.UI.FRONTEND.LOADSCREEN.VANILLA_RESTART
 msgctxt "STRINGS.UI.FRONTEND.LOADSCREEN.VANILLA_RESTART"
@@ -79403,7 +79403,7 @@ msgstr "<b>這個DLC已被停用</b>\n\n<color=#ffff00ff><b>點擊以啟用<i>�
 #. STRINGS.UI.FRONTEND.MAINMENU.DLC.AD_DLC1
 msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.AD_DLC1"
 msgid "Spaced Out! DLC"
-msgstr "眼冒金星！可下載內容"
+msgstr "眼冒金星！DLC"
 
 #. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_ACTIVE_TOOLTIP
 msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_ACTIVE_TOOLTIP"
