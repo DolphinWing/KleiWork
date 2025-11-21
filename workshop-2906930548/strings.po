@@ -473,7 +473,7 @@ msgstr "逸蜥太空手套"
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_NEUTRONIUM.DESC"
 msgid "Thick engineered \"leather\" hand protectors and polished Neutronium cuffs keep little Duplicant fingers safe, no matter what they're tempted to touch."
-msgstr "厚實的人造「皮革」手部護具，配上拋光的 0 號元素護腕，能保護複製人小小的手指，無論他們多想碰觸什麼。"
+msgstr "厚實的人造「皮革」手部護具，配上拋光的零號元素護腕，能保護複製人小小的手指，無論他們多想碰觸什麼。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_NEUTRONIUM.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_NEUTRONIUM.NAME"
@@ -943,7 +943,7 @@ msgstr "冰種內衣"
 #. STRINGS.BLUEPRINTS.PERMIT_BOTTOM_REGAL_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BOTTOM_REGAL_NEUTRONIUM.DESC"
 msgid "These tailored uniform pants come in a rich, deep neutronium-inspired hue that pairs well with gold."
-msgstr "這些量身訂製的制服褲帶有一種濃郁深沉的 0 號元素色調，與黃金色搭配得很好。"
+msgstr "這些量身訂製的制服褲帶有一種濃郁深沉的零號元素色調，與黃金色搭配得很好。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_BOTTOM_REGAL_NEUTRONIUM.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BOTTOM_REGAL_NEUTRONIUM.NAME"
@@ -1483,7 +1483,7 @@ msgstr "鋼色手套"
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_NEUTRONIUM.DESC"
 msgid "Manufacturer's note: These gloves will not transform touched objects into gold or neutronium."
-msgstr "製造商註記：這雙手套不會將碰觸到的物體變成黃金或 0 號元素。"
+msgstr "製造商註記：這雙手套不會將碰觸到的物體變成黃金或零號元素。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_NEUTRONIUM.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_NEUTRONIUM.NAME"
@@ -1603,7 +1603,7 @@ msgstr "幽暗噴射手套"
 #. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_NEUTRONIUM.DESC"
 msgid "These gloves feature heavy neutronium-inspired cuffs that keep them securely attached no matter how fast the wearer is jettin' around."
-msgstr "這雙手套配有厚重且受到 0 號元素啟發的護腕，無論穿戴者噴射移動得多快，都能保持牢固地附著在手上。"
+msgstr "這雙手套配有厚重且受到零號元素啟發的護腕，無論穿戴者噴射移動得多快，都能保持牢固地附著在手上。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_NEUTRONIUM.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_NEUTRONIUM.NAME"
@@ -8833,7 +8833,7 @@ msgstr "探索過去的奧祕。"
 #. STRINGS.BUILDINGS.PREFABS.ARTIFACTANALYSISSTATION.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.ARTIFACTANALYSISSTATION.EFFECT"
 msgid "Analyses and extracts <link=\"UNOBTANIUM\">Neutronium</link> from artifacts of interest."
-msgstr "分析與抽取文物的<link=\"UNOBTANIUM\"> 0 號元素</link>。"
+msgstr "分析與抽取文物的<link=\"UNOBTANIUM\">零號元素</link>。"
 
 #. STRINGS.BUILDINGS.PREFABS.ARTIFACTANALYSISSTATION.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.ARTIFACTANALYSISSTATION.NAME"
@@ -16688,7 +16688,7 @@ msgstr "<link=\"MASSAGETABLE\">按摩床</link>"
 #. STRINGS.BUILDINGS.PREFABS.MASSIVEHEATSINK.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.MASSIVEHEATSINK.EFFECT"
 msgid "A self-sustaining machine powered by what appears to be refined <link=\"UNOBTANIUM\">Neutronium</link>.\n\nAbsorbs and neutralizes <link=\"HEAT\">Heat</link> energy when provided with piped <link=\"HYDROGEN\">Hydrogen Gas</link>."
-msgstr "一種自我維持的機器，似乎是由精煉過的<link=\"UNOBTANIUM\"> 0 號元素</link>提供能源。\n\n當透過管道供應<link=\"HYDROGEN\">氫氣</link>時，會吸收與中和<link=\"HEAT\">熱</link>量。"
+msgstr "一種自我維持的機器，似乎是由精煉過的<link=\"UNOBTANIUM\">零號元素</link>提供能源。\n\n當透過管道供應<link=\"HYDROGEN\">氫氣</link>時，會吸收與中和<link=\"HEAT\">熱</link>量。"
 
 #. STRINGS.BUILDINGS.PREFABS.MASSIVEHEATSINK.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.MASSIVEHEATSINK.NAME"
@@ -23658,7 +23658,7 @@ msgstr "員工處理"
 #. STRINGS.CODEX.A7_NEUTRONIUM.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A7_NEUTRONIUM.BODY.CONTAINER1"
 msgid "[LOG BEGINS]\n\nDirector: I've determined the substance to be metallic in nature. The exact cause of its formation is still unknown, though I believe it to be something of an autoimmune reaction of the natural universe, a quarantining of foreign material to prevent temporal contamination.\n\nDirector: A method has yet to be found that can successfully remove the substance from an affected object, and the larger implication that two molecularly, temporally identical objects cannot coexist at one point in time has dire implications for all time manipulation technology research, not just the Bow.\n\nDirector: For the moment I have dubbed the substance \"Neutronium\", and assigned it a theoretical place on the table of elements. Research continues.\n\n[LOG ENDS]"
-msgstr "[日誌開始]\n\n總監：我已經確定該物質本質上屬於金屬。其確切的形成原因仍是未知，不過我認為它類似於自然宇宙的一種自體免疫反應，藉由隔離外來物質來防止時間性汙染。\n\n總監：目前尚未找到能成功從受影響物體上移除此物質的方法，更嚴重的含義在於，兩個分子結構上、時間上完全相同的物體無法共存於同一個時間點，這對所有時間操控技術研究都造成了嚴峻的影響，不只針對「弓」這項研究。\n\n總監：目前我將此物質命名為「0 號元素」，並在元素週期表中賦予它一個理論位置。研究仍在持續。\n\n[日誌結束]"
+msgstr "[日誌開始]\n\n總監：我已經確定該物質本質上屬於金屬。其確切的形成原因仍是未知，不過我認為它類似於自然宇宙的一種自體免疫反應，藉由隔離外來物質來防止時間性汙染。\n\n總監：目前尚未找到能成功從受影響物體上移除此物質的方法，更嚴重的含義在於，兩個分子結構上、時間上完全相同的物體無法共存於同一個時間點，這對所有時間操控技術研究都造成了嚴峻的影響，不只針對「弓」這項研究。\n\n總監：目前我將此物質命名為「零號元素」，並在元素週期表中賦予它一個理論位置。研究仍在持續。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.A7_NEUTRONIUM.SUBTITLE
 msgctxt "STRINGS.CODEX.A7_NEUTRONIUM.SUBTITLE"
@@ -23753,7 +23753,7 @@ msgstr "他們竊取了我們的基因"
 #. STRINGS.CODEX.A9_NEUTRONIUMAPPLICATIONS.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.A9_NEUTRONIUMAPPLICATIONS.BODY.CONTAINER1"
 msgid "[LOG BEGINS]\n\nDirector: Temporal energy can be reconfigured to vibrate the matter constituting Neutronium at just the right frequency to break it down and disperse it.\n\nDirector: However, it is difficult to stabilize and maintain this reconfigured energy long enough to effectively remove practical amounts of Neutronium in real-life scenarios.\n\nDirector: I am looking into making this technology more reliable and compact - this data could potentially have uses in the development of some sort of all-purpose disintegration ray.\n\n[END LOG]"
-msgstr "[日誌開始]\n\n總監：時間能量可以被重新設定，在適當的頻率下震動組成 0 號元素的物質，可以打破並分散它。\n\n總監：無論如何，在現實生活中，它很難穩定並長時間地維持重新設定的能量以有效的消除實際數量的 0 號元素。\n\n總監：我正在使這樣技能變的更可靠與嚴謹ー這些資料可能會在某些通用射線的開發中有些用處。\n\n[日誌結束]"
+msgstr "[日誌開始]\n\n總監：時間能量可以被重新設定，在適當的頻率下震動組成零號元素的物質，可以打破並分散它。\n\n總監：無論如何，在現實生活中，它很難穩定並長時間地維持重新設定的能量以有效的消除實際數量的零號元素。\n\n總監：我正在使這樣技能變的更可靠與嚴謹ー這些資料可能會在某些通用射線的開發中有些用處。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.A9_NEUTRONIUMAPPLICATIONS.SUBTITLE
 msgctxt "STRINGS.CODEX.A9_NEUTRONIUMAPPLICATIONS.SUBTITLE"
@@ -27713,7 +27713,7 @@ msgstr "次元裂縫"
 #. STRINGS.CODEX.MYLOG.BODY.OUTSIDESTARTINGBIOME.BODY
 msgctxt "STRINGS.CODEX.MYLOG.BODY.OUTSIDESTARTINGBIOME.BODY"
 msgid "As the Duplicants scout further out I've begun to piece together a better view of our surroundings.\n\nThanks to their efforts, I've determined that this planet has enough resources to settle a longterm colony.\n\nBut... something is off. I've also detected deposits of Abyssalite and Neutronium in this planet's composition, manmade elements that shouldn't occur in nature.\n\nIs this really the target location?\n\n"
-msgstr "隨著複製人向外偵察，我對周遭環境的理解也日益清晰。\n\n多虧他們的努力，我已確定此星球資源充足，足以建立一處長期殖民地。\n\n但是…有些不對勁。我同時偵測到此星球的組成成分中，存在深淵水晶與 0 號元素，這些人造元素本不應出現於自然界中。\n\n這真的是目標位置嗎？\n\n"
+msgstr "隨著複製人向外偵察，我對周遭環境的理解也日益清晰。\n\n多虧他們的努力，我已確定此星球資源充足，足以建立一處長期殖民地。\n\n但是…有些不對勁。我同時偵測到此星球的組成成分中，存在深淵水晶與零號元素，這些人造元素本不應出現於自然界中。\n\n這真的是目標位置嗎？\n\n"
 
 #. STRINGS.CODEX.MYLOG.BODY.OUTSIDESTARTINGBIOME.TITLE
 msgctxt "STRINGS.CODEX.MYLOG.BODY.OUTSIDESTARTINGBIOME.TITLE"
@@ -27803,7 +27803,7 @@ msgstr "時間的潛力"
 #. STRINGS.CODEX.MYLOG.BODY.TEMPORALTEAR.BODY
 msgctxt "STRINGS.CODEX.MYLOG.BODY.TEMPORALTEAR.BODY"
 msgid "My Duplicants' space research has made a startling discovery.\n\nFar, far off on the horizon, their telescopes have spotted an anomaly that I could only possibly call a \"Temporal Tear\". Neutronium is detected in its readings, suggesting that it's related to the Neutronium that encases most of our asteroid.\n\nThough I believe it is through this Tear that we became jumbled within the section of our old planet, its discovery provides a glimmer of hope.\n\nTheoretically, we could send a rocket through the Tear to allow a Duplicant to explore the timelines and universes on the other side. They would never return, and we could not follow, but perhaps they could find a home among the stars, or even undo the terrible past that led us to our current fate.\n\n"
-msgstr "我的複製人們在太空研究中有了驚人的發現。\n\n從極其遙遠的地平線上，他們的望遠鏡發現了一個異常現象，我只能稱之為「時空裂縫」。其讀數偵測到了 0 號元素，這表明它與包圍我們大部分小行星的 0 號元素有所關聯。\n\n儘管我相信正是這個裂縫，使我們混亂地置身於舊星球的某個區塊，但它的發現卻帶來了一線希望。\n\n理論上，我們能夠發射火箭穿越裂縫，讓複製人探索另一側的時間線與宇宙。\n\n他們將永不復返，我們也無法追隨。但或許他們能在星海中找到一個家，甚至扭轉導致我們現今命運的可怕過去。\n\n"
+msgstr "我的複製人們在太空研究中有了驚人的發現。\n\n從極其遙遠的地平線上，他們的望遠鏡發現了一個異常現象，我只能稱之為「時空裂縫」。其讀數偵測到了零號元素，這表明它與包圍我們大部分小行星的零號元素有所關聯。\n\n儘管我相信正是這個裂縫，使我們混亂地置身於舊星球的某個區塊，但它的發現卻帶來了一線希望。\n\n理論上，我們能夠發射火箭穿越裂縫，讓複製人探索另一側的時間線與宇宙。\n\n他們將永不復返，我們也無法追隨。但或許他們能在星海中找到一個家，甚至扭轉導致我們現今命運的可怕過去。\n\n"
 
 #. STRINGS.CODEX.MYLOG.BODY.TEMPORALTEAR.TITLE
 msgctxt "STRINGS.CODEX.MYLOG.BODY.TEMPORALTEAR.TITLE"
@@ -28013,7 +28013,7 @@ msgstr "Olivia：我們仔細檢查了觀測設備，電腦也即將暖好機了
 #. STRINGS.CODEX.PLANETARYECHOES.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.PLANETARYECHOES.BODY.CONTAINER2"
 msgid "Olivia: What on earth is this?\n\n[An open palm slams papers down on a desk.]\n\nOlivia: These readings show that hundreds of kilograms of Neutronium are building up in the machine every shift. When were you going to tell me?\n\nJackie: I'm handling it.\n\nOlivia: We don't have the luxury of taking shortcuts. Not when safety is on the line.\n\nJackie: I think I'm capable of overseeing my own safety.\n\nOlivia: I-I'm not just concerned about <i>your</i> safety! We don't understand the longterm implications of what we're developing here... the manipulations we conduct in this facility could have rippling effects throughout the world, maybe even the universe.\n\nJackie: Don't be such a fearmonger. It's not befitting of a scientist. Besides, I'll remind you this research has the potential to stop the fuel wars in their tracks and end the suffering of thousands. Every day we spend on trials here delays that.\n\nOlivia: It's dangerous.\n\nJackie: Your concern is noted.\n------------------\n"
-msgstr "Olivia：這到底是什麼？\n\n[將一疊文件攤在桌上。]\n\nOlivia：這些讀數顯示，機器每次運作都堆積了幾百公斤的 0 號元素。你何時要告訴我？\n\nJackie：都在我的掌控之中。\n\nOlivia：我們沒有捷徑可走。在安全線的標準上沒有。\n\nJackie：我認為我能掌控自己的安全。\n\nOlivia：我…我不僅擔心<b>你的</b>安全！我們不了解在這的發展會造成什麼長期的影響…我們在此設施中進行的操作，產生的漣漪效應可能會影響全世界，甚至是宇宙。\n\nJackie：別這麼害怕。這不適合科學家。此外，我得提醒你，這將研究有可能停止燃料戰爭，結束數千人的痛苦。每天我們在此進行的實驗都會延緩這件事。\n\nOlivia：這有危險。\n\nJackie：我了解你的擔心。\n------------------\n"
+msgstr "Olivia：這到底是什麼？\n\n[將一疊文件攤在桌上。]\n\nOlivia：這些讀數顯示，機器每次運作都堆積了幾百公斤的零號元素。你何時要告訴我？\n\nJackie：都在我的掌控之中。\n\nOlivia：我們沒有捷徑可走。在安全線的標準上沒有。\n\nJackie：我認為我能掌控自己的安全。\n\nOlivia：我…我不僅擔心<b>你的</b>安全！我們不了解在這的發展會造成什麼長期的影響…我們在此設施中進行的操作，產生的漣漪效應可能會影響全世界，甚至是宇宙。\n\nJackie：別這麼害怕。這不適合科學家。此外，我得提醒你，這將研究有可能停止燃料戰爭，結束數千人的痛苦。每天我們在此進行的實驗都會延緩這件事。\n\nOlivia：這有危險。\n\nJackie：我了解你的擔心。\n------------------\n"
 
 #. STRINGS.CODEX.PLANETARYECHOES.BODY.TITLE1
 msgctxt "STRINGS.CODEX.PLANETARYECHOES.BODY.TITLE1"
@@ -54133,12 +54133,12 @@ msgstr "<link=\"TUNGSTENGAS\">鎢</link>"
 #. STRINGS.ELEMENTS.UNOBTANIUM.DESC
 msgctxt "STRINGS.ELEMENTS.UNOBTANIUM.DESC"
 msgid "(Nt) Neutronium is a mysterious and extremely resilient element.\n\nIt cannot be excavated by any Duplicant mining tool."
-msgstr "(Nt) 0 號元素是一種神祕而極具彈性的元素。\n\n它無法被複製人的任何工具挖掘。"
+msgstr "(Nt) 零號元素是一種神祕而極具彈性的元素。\n\n它無法被複製人的任何工具挖掘。"
 
 #. STRINGS.ELEMENTS.UNOBTANIUM.NAME
 msgctxt "STRINGS.ELEMENTS.UNOBTANIUM.NAME"
 msgid "<link=\"UNOBTANIUM\">Neutronium</link>"
-msgstr "<link=\"UNOBTANIUM\">0 號元素</link>"
+msgstr "<link=\"UNOBTANIUM\">零號元素</link>"
 
 #. STRINGS.ELEMENTS.URANIUMORE.DESC
 msgctxt "STRINGS.ELEMENTS.URANIUMORE.DESC"
@@ -57668,7 +57668,7 @@ msgstr "增加穿戴者周圍小範圍內的裝飾度。可以在<link=\"CLOTHIN
 #. STRINGS.EQUIPMENT.PREFABS.HOLIDAY_2023_CRATE.DESC
 msgctxt "STRINGS.EQUIPMENT.PREFABS.HOLIDAY_2023_CRATE.DESC"
 msgid "An unaddressed package has been discovered near the Printing Pod. It exudes seasonal cheer, and trace amounts of Neutronium have been detected."
-msgstr "在列印元附近發現了一個未註明地址的包裹。它散發著季節性的歡樂氣息，並偵測到了微量的 0 號元素。"
+msgstr "在列印元附近發現了一個未註明地址的包裹。它散發著季節性的歡樂氣息，並偵測到了微量的零號元素。"
 
 #. STRINGS.EQUIPMENT.PREFABS.HOLIDAY_2023_CRATE.NAME
 msgctxt "STRINGS.EQUIPMENT.PREFABS.HOLIDAY_2023_CRATE.NAME"
@@ -74983,17 +74983,17 @@ msgstr "複製選取的建築，以便建造一個新的。 {Hotkey}"
 #. STRINGS.UI.COSMETIC1.MIXING_TOOLTIP
 msgctxt "STRINGS.UI.COSMETIC1.MIXING_TOOLTIP"
 msgid "<i>Neutronium Cosmetics Pack</i> features cosmetic blueprints fit for royalty"
-msgstr "<i>0 號元素外觀包</i>包含適合皇室使用的外觀藍圖"
+msgstr "<i>零號元素裝扮包</i>包含適合皇室使用的外觀藍圖"
 
 #. STRINGS.UI.COSMETIC1.NAME
 msgctxt "STRINGS.UI.COSMETIC1.NAME"
 msgid "Neutronium Cosmetics Pack"
-msgstr "0 號元素外觀包"
+msgstr "零號元素裝扮包"
 
 #. STRINGS.UI.COSMETIC1.NAME_ITAL
 msgctxt "STRINGS.UI.COSMETIC1.NAME_ITAL"
 msgid "<i>Neutronium Cosmetics Pack</i>"
-msgstr "<i>0 號元素外觀包</b>"
+msgstr "<i>零號元素裝扮包</b>"
 
 #. STRINGS.UI.CRAFT
 msgctxt "STRINGS.UI.CRAFT"
@@ -87118,7 +87118,7 @@ msgstr "挖掘<link=\"DIAMOND\">鑽石</link>與<link=\"OBSIDIAN\">黑曜石</li
 #. STRINGS.UI.ROLES_SCREEN.PERKS.CAN_DIG_UNOBTANIUM.DESCRIPTION
 msgctxt "STRINGS.UI.ROLES_SCREEN.PERKS.CAN_DIG_UNOBTANIUM.DESCRIPTION"
 msgid "<link=\"UNOBTANIUM\">Neutronium</link> Mining"
-msgstr "<link=\"UNOBTANIUM\">0 號元素</link>開採"
+msgstr "<link=\"UNOBTANIUM\">零號元素</link>開採"
 
 #. STRINGS.UI.ROLES_SCREEN.PERKS.CAN_DIG_VERY_FIRM.DESCRIPTION
 msgctxt "STRINGS.UI.ROLES_SCREEN.PERKS.CAN_DIG_VERY_FIRM.DESCRIPTION"
@@ -88893,12 +88893,12 @@ msgstr "聽筒"
 #. STRINGS.UI.SPACEARTIFACTS.TEAPOT.ARTIFACT
 msgctxt "STRINGS.UI.SPACEARTIFACTS.TEAPOT.ARTIFACT"
 msgid "The amount of Neutronium present in this teapot suggests that it has crossed the threshold of the spacetime continuum on countless occasions, floating through many multiple universes over a plethora of times and spaces.\n\nThough there are, theoretically, an infinite amount of outcomes to any one event over many multi-verses, the homogeneity of the still relatively young multiverse suggests that this is then not the only teapot which has crossed into multiple universes. Despite the infinite possible outcomes of infinite multiverses it appears one high probability constant is that there is, or once was, a teapot floating somewhere in space within every universe."
-msgstr "這個茶壺存在的 0 號元素數量表示它已經無數次跨越了時間連續體，橫跨了眾多的時間與空間漂浮在多個宇宙中。\n\n雖然從理論上講，任何一件事橫跨多個宇宙都有無數結果。但仍然相對年輕的多元宇宙的同質性表明，這不是唯一一個跨越多個宇宙的茶壺。\n\n雖然多元宇宙有無數種可能性，但似乎有一個高機率的常數是，或曾經是：有個茶壺漂浮在每個宇宙的某個地方。"
+msgstr "這個茶壺存在的零號元素數量表示它已經無數次跨越了時間連續體，橫跨了眾多的時間與空間漂浮在多個宇宙中。\n\n雖然從理論上講，任何一件事橫跨多個宇宙都有無數結果。但仍然相對年輕的多元宇宙的同質性表明，這不是唯一一個跨越多個宇宙的茶壺。\n\n雖然多元宇宙有無數種可能性，但似乎有一個高機率的常數是，或曾經是：有個茶壺漂浮在每個宇宙的某個地方。"
 
 #. STRINGS.UI.SPACEARTIFACTS.TEAPOT.DESCRIPTION
 msgctxt "STRINGS.UI.SPACEARTIFACTS.TEAPOT.DESCRIPTION"
 msgid "A teapot from the depths of space, coated in a thick layer of Neutronium."
-msgstr "一個來自太空深處的茶壺，嵌在厚厚的 0 號元素裡。"
+msgstr "一個來自太空深處的茶壺，嵌在厚厚的零號元素裡。"
 
 #. STRINGS.UI.SPACEARTIFACTS.TEAPOT.NAME
 msgctxt "STRINGS.UI.SPACEARTIFACTS.TEAPOT.NAME"
@@ -89928,7 +89928,7 @@ msgstr "望遠鏡目標"
 #. STRINGS.UI.SPACEDESTINATIONS.WORMHOLE.DESCRIPTION
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.WORMHOLE.DESCRIPTION"
 msgid "The source of our misfortune, though it may also be our shot at freedom. Traces of Neutronium are detectable in my readings."
-msgstr "我們不幸的根源，同時也是我們自由的機會。在我的讀數中可以偵測到 0 號元素的痕跡。"
+msgstr "我們不幸的根源，同時也是我們自由的機會。在我的讀數中可以偵測到零號元素的痕跡。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.WORMHOLE.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.WORMHOLE.NAME"
