@@ -3260,6 +3260,11 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_STANDARD_BIONIC_TOP.NAME"
 msgid "Bionic Uniform Shirt"
 msgstr "仿生制服襯衫"
 
+#. STRINGS.BLUEPRINTS.PERMIT_STANDARD_REGAL_NEUTRONIUM_OUTFIT.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_STANDARD_REGAL_NEUTRONIUM_OUTFIT.NAME"
+msgid "Regal Neutronium Uniform"
+msgstr "帝王 0 號制服"
+
 #. STRINGS.BLUEPRINTS.PERMIT_STEAMTURBINE2_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_STEAMTURBINE2_NEUTRONIUM.DESC"
 msgid "It exudes power, literally and figuratively."
@@ -13682,7 +13687,7 @@ msgstr "複製人可以在太空旅行中生存…希望。"
 
 #. STRINGS.BUILDINGS.PREFABS.HABITATMODULEMEDIUM.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.HABITATMODULEMEDIUM.EFFECT"
-msgid "Functions as a Command Module.\n\nHolds up to 10 Duplicant travellers.\n\nOne Command Module may be installed per rocket. \n\nEngine must be built via <link=\"LAUNCHPAD\">Rocket Platform</link>."
+msgid "Functions as a Command Module.\n\nHolds up to 10 Duplicant travellers.\n\nOne Command Module may be installed per rocket. \n\nMust be built via <link=\"LAUNCHPAD\">Rocket Platform</link>."
 msgstr "用作指揮艙。\n\n最多可容納 10 位複製人。\n\n一艘火箭只能安裝一個指揮艙。\n\n必須透過<link=\"LAUNCHPAD\">火箭平台</link>建造。"
 
 #. STRINGS.BUILDINGS.PREFABS.HABITATMODULEMEDIUM.NAME
@@ -18057,8 +18062,8 @@ msgstr "每艘火箭都需要鼻錐才能飛行。"
 
 #. STRINGS.BUILDINGS.PREFABS.NOSECONEBASIC.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.NOSECONEBASIC.EFFECT"
-msgid "Protects a rocket during takeoff and entry, enabling space travel.\n\nEngine must be built via <link=\"LAUNCHPAD\">Rocket Platform</link>. \n\nMust be built at the top of a rocket."
-msgstr "在升空或進入期間保護火箭，實現太空旅行。\n\n必須建在火箭的頂端。\n\n必須透過<link=\"LAUNCHPAD\">火箭平台</link>建造。"
+msgid "Protects a rocket during takeoff and entry, enabling space travel.\n\nMust be built via <link=\"LAUNCHPAD\">Rocket Platform</link>, and built at the top of a rocket."
+msgstr "在升空與重返期間保護火箭，以進行太空旅行。\n\n必須透過<link=\"LAUNCHPAD\">火箭平台</link>建造，且必須位於火箭的最頂端。"
 
 #. STRINGS.BUILDINGS.PREFABS.NOSECONEBASIC.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.NOSECONEBASIC.NAME"
@@ -23803,7 +23808,7 @@ msgstr "抗組織胺"
 #. STRINGS.CODEX.ANTIHISTAMINE.TITLE
 msgctxt "STRINGS.CODEX.ANTIHISTAMINE.TITLE"
 msgid "Allergy Medication"
-msgstr "過敏藥物"
+msgstr "抗敏藥"
 
 #. STRINGS.CODEX.ARBORTREE.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.ARBORTREE.BODY.CONTAINER1"
@@ -24432,8 +24437,8 @@ msgstr "禮貌的請求"
 
 #. STRINGS.CODEX.B9_TELEPORTATION.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.B9_TELEPORTATION.BODY.CONTAINER1"
-msgid "<smallcaps>[Voice Recognition Initialized]\n[Subject Identified: A001]</smallcaps>\n\n[LOG BEGINS]\n\nDr. Techna's newest notes on Duplicant memories have revealed some interesting discoveries. It seems memories </i>can</i> be transferred to the cloned subject but it requires the host to be subjected to a machine that performs extremely detailed microanalysis. This in-depth dissection of the subject would produce the results we need but at the expense of destroying the host.\n\nOf course this is not ideal for our current situation. The time and energy it took to recruit Gravitas' highly trained staff would be wasted if we were to extirpate these people for the sake of experimentation. But perhaps we can use our Duplicants as experimental subjects until we perfect the process and look into finding volunteers for the future in order to obtain an ideal specimen. I will have to discuss this with Dr. Techna but I'm sure he would be enthusiastic about such an opportunity to continue his work.\n\nI am also very interested in the commercial opportunities this presents. Off the top of my head I can think of applications in genetics, AI development, and teleportation technology. This could be a significant financial windfall for the company.\n\n[LOG ENDS]"
-msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：A001]</smallcaps>\n\n[日誌開始]\n\nTechna 博士關於複製人記憶的最新記錄，揭露了一些有趣的發現。記憶似乎<b>可以</b>移到複製體上，但需要將複製體送入一台機器做非常細微的分析。對複製來源的深入剖析會產生我們需要的結果，但需要以破壞複製來源為代價。\n\n當然，這對於我們目前的狀況來說不是個好方案。如果我們為了實驗而淘汰這些人，那麼引力科技就浪費這些花了時間與精力培養的資深員工。但也許我們可以將複製人當作實驗對象，直到我們完善流程，並找到自願者來完成這個目標。我必須和 Techna 博士討論，但我相信他會因能繼續工作而充滿熱情。\n\n我對這所能創造的商機很感興趣。我想到了遺傳學的應用、AI 開發與傳送技術。這對公司來說可能是個巨大意外收益。\n\n[日誌結束]"
+msgid "<smallcaps>[Voice Recognition Initialized]\n[Subject Identified: A001]</smallcaps>\n\n[LOG BEGINS]\n\nDr. Techna's newest notes on Duplicant memories have revealed some interesting discoveries. It seems memories <i>can</i> be transferred to the cloned subject but it requires the host to be subjected to a machine that performs extremely detailed microanalysis. This in-depth dissection of the subject would produce the results we need but at the expense of destroying the host.\n\nOf course this is not ideal for our current situation. The time and energy it took to recruit Gravitas' highly trained staff would be wasted if we were to extirpate these people for the sake of experimentation. But perhaps we can use our Duplicants as experimental subjects until we perfect the process and look into finding volunteers for the future in order to obtain an ideal specimen. I will have to discuss this with Dr. Techna but I'm sure he would be enthusiastic about such an opportunity to continue his work.\n\nI am also very interested in the commercial opportunities this presents. Off the top of my head I can think of applications in genetics, AI development, and teleportation technology. This could be a significant financial windfall for the company.\n\n[LOG ENDS]"
+msgstr "<smallcaps>[語音辨識系統初始化完成]\n[主體已識別：A001]</smallcaps>\n\n[日誌開始]\n\nTechna 博士關於複製人記憶的最新筆記揭露了一些有趣的發現。記憶似乎<i>真的</i>可以轉移到複製體上，但這需要將宿主送入一台機器進行極其精密的微觀分析。對主體進行這種深入剖析能產生我們需要的結果，但代價是會摧毀宿主。\n\n當然，這對我們目前的處境來說並不理想。如果為了實驗而剷除這些人，那我們為了招募引力科技訓練有素的員工所投入的大量時間與精力，就全都白費了。但也許我們可以先用我們的複製人當作實驗對象，直到我們完善流程，並在未來尋找志願者以獲取完美的樣本。我必須和 Techna 博士討論這件事，但我相信對於能有這樣的機會繼續他的研究，他肯定會充滿熱情。\n\n我對這裡面潛藏的商業機會也非常感興趣。我隨便就能想到在遺傳學、AI 開發和傳送技術方面的應用。這對公司來說可能是一筆巨大的橫財。\n\n[日誌結束]"
 
 #. STRINGS.CODEX.B9_TELEPORTATION.SUBTITLE
 msgctxt "STRINGS.CODEX.B9_TELEPORTATION.SUBTITLE"
@@ -27132,8 +27137,8 @@ msgstr "珍藏品"
 
 #. STRINGS.CODEX.KELP.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.KELP.BODY.CONTAINER1"
-msgid "The leaf of a <link=\"KELPPLANT\">Seakomb</link>.\n\nIt can be processed into <link=\"PHYTOOIL\">Phyto Oil</link> or used as an ingredient in <link=\"ANTIHISTAMINE \">Allergy Medication</link>."
-msgstr "<link=\"KELPPLANT\">海梳蕨</link>的葉片。\n\n可加工成<link=\"PHYTOOIL\">植物油</link>，或用作<link=\"ANTIHISTAMINE \">抗過敏藥</link>的成分。"
+msgid "The leaf of a <link=\"KELPPLANT\">Seakomb</link>.\n\nIt can be processed into <link=\"PHYTOOIL\">Phyto Oil</link> or used as an ingredient in <link=\"ANTIHISTAMINE\">Allergy Medication</link>."
+msgstr "<link=\"KELPPLANT\">海梳蕨</link>的葉片。\n\n可加工成<link=\"PHYTOOIL\">植物油</link>，或用作<link=\"ANTIHISTAMINE\">抗敏藥</link>的成分。"
 
 #. STRINGS.CODEX.KELP.SUBTITLE
 msgctxt "STRINGS.CODEX.KELP.SUBTITLE"
@@ -33058,12 +33063,12 @@ msgstr "這名複製人最近被<style=\"KKeyword\">匿蚊</style>叮了，感�
 #. STRINGS.CREATURES.MODIFIERS.DUPE_MOSQUITO_BITE_SUPPRESSED.NAME
 msgctxt "STRINGS.CREATURES.MODIFIERS.DUPE_MOSQUITO_BITE_SUPPRESSED.NAME"
 msgid "Allergy Medication"
-msgstr "過敏藥"
+msgstr "抗敏藥"
 
 #. STRINGS.CREATURES.MODIFIERS.DUPE_MOSQUITO_BITE_SUPPRESSED.TOOLTIP
 msgctxt "STRINGS.CREATURES.MODIFIERS.DUPE_MOSQUITO_BITE_SUPPRESSED.TOOLTIP"
 msgid "This Duplicant is unbothered by their recent <style=\"KKeyword\">Gnit</style> sting, thanks to <style=\"KKeyword\">Allergy Medication</style>"
-msgstr "多虧了<style=\"KKeyword\">過敏藥</style>，這名複製人最近沒有受<style=\"KKeyword\">匿蚊</style>叮咬困擾"
+msgstr "多虧了<style=\"KKeyword\">抗敏藥</style>，這名複製人最近沒有受<style=\"KKeyword\">匿蚊</style>叮咬困擾"
 
 #. STRINGS.CREATURES.MODIFIERS.EGGHUG.NAME
 msgctxt "STRINGS.CREATURES.MODIFIERS.EGGHUG.NAME"
@@ -61207,8 +61212,8 @@ msgstr "<link=\"GINGERCONFIG\">辛香根</link>"
 
 #. STRINGS.ITEMS.INGREDIENTS.KELP.DESC
 msgctxt "STRINGS.ITEMS.INGREDIENTS.KELP.DESC"
-msgid "The leaf of a <link=\"KELPPLANT\">Seakomb</link>.\n\nIt can be processed into <link=\"PHYTOOIL\">Phyto Oil</link> or used as an ingredient in <link=\"ANTIHISTAMINE \">Allergy Medication</link>."
-msgstr "<link=\"KELPPLANT\">海梳蕨</link>的葉子。\n\n它可以加工成<link=\"PHYTOOIL\">植物油</link>，或作為<link=\"ANTIHISTAMINE \">過敏藥</link>的成分。"
+msgid "The leaf of a <link=\"KELPPLANT\">Seakomb</link>.\n\nIt can be processed into <link=\"PHYTOOIL\">Phyto Oil</link> or used as an ingredient in <link=\"ANTIHISTAMINE\">Allergy Medication</link>."
+msgstr "<link=\"KELPPLANT\">海梳蕨</link>的葉子。\n\n它可以加工成<link=\"PHYTOOIL\">植物油</link>，或作為<link=\"ANTIHISTAMINE\">抗敏藥</link>的成分。"
 
 #. STRINGS.ITEMS.INGREDIENTS.KELP.NAME
 msgctxt "STRINGS.ITEMS.INGREDIENTS.KELP.NAME"
@@ -61298,12 +61303,12 @@ msgstr "抑制和預防過敏反應。"
 #. STRINGS.ITEMS.PILLS.ANTIHISTAMINE.NAME
 msgctxt "STRINGS.ITEMS.PILLS.ANTIHISTAMINE.NAME"
 msgid "<link=\"ANTIHISTAMINE\">Allergy Medication</link>"
-msgstr "<link=\"ANTIHISTAMINE\">過敏藥物</link>"
+msgstr "<link=\"ANTIHISTAMINE\">抗敏藥</link>"
 
 #. STRINGS.ITEMS.PILLS.ANTIHISTAMINE.RECIPEDESC
 msgctxt "STRINGS.ITEMS.PILLS.ANTIHISTAMINE.RECIPEDESC"
 msgid "A strong antihistamine Duplicants can take to halt an allergic reaction. <link=\"ANTIHISTAMINE\">Allergy Medication</link> will also prevent further reactions from occurring for a short time after ingestion."
-msgstr "強效抗過敏藥，可治療複製人的過敏反應。<link=\"ANTIHISTAMINE\">過敏藥物</link>在服用後，也可以在短時間內預防進一步的過敏反應。"
+msgstr "強效抗過敏藥，可治療複製人的過敏反應。<link=\"ANTIHISTAMINE\">抗敏藥</link>在服用後，也可以在短時間內預防進一步的過敏反應。"
 
 #. STRINGS.ITEMS.PILLS.BASICBOOSTER.DESC
 msgctxt "STRINGS.ITEMS.PILLS.BASICBOOSTER.DESC"
@@ -77007,8 +77012,8 @@ msgstr "屬性提高："
 
 #. STRINGS.UI.ENDOFDAYREPORT.LEVEL_UP.TOOLTIP
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.LEVEL_UP.TOOLTIP"
-msgid "Today {1} gained a total of {0} skill levels"
-msgstr "今天 {1} 總共獲得了 {0} 技能點"
+msgid "Today {1} gained a total of {0} attribute levels"
+msgstr "今天 {1} 總共獲得了 {0} 級屬性"
 
 #. STRINGS.UI.ENDOFDAYREPORT.MY_COLONY
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.MY_COLONY"
