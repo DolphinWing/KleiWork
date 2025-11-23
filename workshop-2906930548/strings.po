@@ -2643,7 +2643,7 @@ msgstr "每日好漁"
 #. STRINGS.BLUEPRINTS.PERMIT_PAINTING_WIDE_ART_CERES_A.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PAINTING_WIDE_ART_CERES_A.DESC"
 msgid "The scale implies that this critter and its friend were larger than most."
-msgstr "其規模意味著這種生物和它的朋友比大多數生物都要大。"
+msgstr "其規模意味著這種小動物和它的朋友比大多數生物都要大。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PAINTING_WIDE_ART_CERES_A.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PAINTING_WIDE_ART_CERES_A.NAME"
@@ -8658,7 +8658,7 @@ msgstr "焊接台允許複製人製作有幫助的飛尋機回收機器人。"
 #. STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.EFFECT"
 msgid "Produces advanced electronics and bionic <link=\"BIONICUPGRADE\">Boosters</link>.\n\nDuplicants will not fabricate items unless recipes are queued."
-msgstr "生產高階電子產品和仿生<link=\"BIONICUPGRADE\">加速器</link>。\n\n佇列中沒有訂單，複製人將不會製作。"
+msgstr "生產高階電子產品和仿生<link=\"BOOSTER\">加速器</link>。\n\n佇列中沒有訂單，複製人將不會製作。"
 
 #. STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.GENERIC_RECIPE_DESCRIPTION
 msgctxt "STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.GENERIC_RECIPE_DESCRIPTION"
@@ -10378,7 +10378,7 @@ msgstr "<link=\"CREATUREAIRTRAP\">飛行小動物陷阱</link>"
 #. STRINGS.BUILDINGS.PREFABS.CREATUREDELIVERYPOINT.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.CREATUREDELIVERYPOINT.DESC"
 msgid "Duplicants automatically bring captured critters to these relocation points for release."
-msgstr "複製人會自動地將捕捉的生物運送至這個安置地點釋放。"
+msgstr "複製人會自動地將捕捉的小動物運送至這個安置地點釋放。"
 
 #. STRINGS.BUILDINGS.PREFABS.CREATUREDELIVERYPOINT.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.CREATUREDELIVERYPOINT.EFFECT"
@@ -10423,12 +10423,12 @@ msgstr "<link=\"CREATUREGROUNDTRAP\">小動物陷阱</link>"
 #. STRINGS.BUILDINGS.PREFABS.CREATURETRAP.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.CREATURETRAP.DESC"
 msgid "Critter traps cannot catch swimming or flying critters."
-msgstr "動物陷阱不能捕捉水中或飛行生物。"
+msgstr "動物陷阱不能捕捉水中或飛行小動物。"
 
 #. STRINGS.BUILDINGS.PREFABS.CREATURETRAP.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.CREATURETRAP.EFFECT"
 msgid "Captures a living <link=\"CREATURES\">Critter</link> for transport.\n\nSingle use."
-msgstr "捕捉活的<link=\"CRITTERS\">動物</link>以便運送。\n\n只能使用一次。"
+msgstr "捕捉活的<link=\"CRITTERS\">小動物</link>以便運送。\n\n只能使用一次。"
 
 #. STRINGS.BUILDINGS.PREFABS.CREATURETRAP.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.CREATURETRAP.NAME"
@@ -36668,7 +36668,7 @@ msgstr "毛髮生長"
 #. STRINGS.CREATURES.STATS.SCALEGROWTH.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATS.SCALEGROWTH.TOOLTIP"
 msgid "When growth reaches 100%, this critter can be shorn for {0}"
-msgstr "當生長達到 100% 時，這隻生物可以剪毛以獲得{0}"
+msgstr "當生長達到 100% 時，這隻小動物可以剪毛以獲得{0}"
 
 #. STRINGS.CREATURES.STATS.THERMALCONDUCTIVITYBARRIER.NAME
 msgctxt "STRINGS.CREATURES.STATS.THERMALCONDUCTIVITYBARRIER.NAME"
@@ -37298,7 +37298,7 @@ msgstr "呼氣"
 #. STRINGS.CREATURES.STATUSITEMS.EXHALING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.EXHALING.TOOLTIP"
 msgid "This critter is expelling <style=\"KKeyword\">Gas</style> from its lungsacs"
-msgstr "這隻小生物正在排出肺部的<style=\"KKeyword\">氣體</style>"
+msgstr "這隻小動物正在排出肺部的<style=\"KKeyword\">氣體</style>"
 
 #. STRINGS.CREATURES.STATUSITEMS.EXPELLING_GAS.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.EXPELLING_GAS.NAME"
@@ -67768,7 +67768,7 @@ msgstr "<link=\"AMPLIFIERS\">功率放大器</link>"
 #. STRINGS.RESEARCH.TECHS.ANIMALCOMFORT.DESC
 msgctxt "STRINGS.RESEARCH.TECHS.ANIMALCOMFORT.DESC"
 msgid "Strategies for maximizing critters' quality of life."
-msgstr "最大限度提高生物生活品質的策略。"
+msgstr "最大限度提高小動物生活品質的策略。"
 
 #. STRINGS.RESEARCH.TECHS.ANIMALCOMFORT.NAME
 msgctxt "STRINGS.RESEARCH.TECHS.ANIMALCOMFORT.NAME"
