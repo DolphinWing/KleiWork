@@ -184,6 +184,7 @@ worldTemplateRules:
         tag: AtDepths
         minDistance: 0
         maxDistance: 3
+
   # MorbRoverMaker
   - names:
       - storytraits/morb_rover_maker
@@ -243,6 +244,7 @@ worldTemplateRules:
         tag: AtSurface
         minDistance: 0
         maxDistance: 2
+
   # FossilHunt
   - names:
       - storytraits/fossil_hunt_main
@@ -295,6 +297,65 @@ worldTemplateRules:
         tag: AtStart
         minDistance: 1
         maxDistance: 2
+
+  # HijackHeadquarters: MAIN
+  - names:
+      - storytraits/hijack_headquarters
+    listRule: GuaranteeOne
+    ruleId: tg_Story_HijackHeadquarters
+    priority: 400
+    useRelaxedFiltering: true
+    allowedCellsFilter:
+      - command: All
+      #- command: ExceptWith
+      #  tagcommand: AtTag
+      #  tag: NoGlobalFeatureSpawning # this also excludes Space
+      - command: ExceptWith  # too close to start
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 0
+        maxDistance: 1
+        ignoreIfMissingTag: true
+      - command: ExceptWith  # too far from start
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 6
+        maxDistance: 99
+        ignoreIfMissingTag: true
+      - command: ExceptWith # too close to surface
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 2
+      - command: ExceptWith
+        temperatureRanges:
+          - VeryHot
+          - ExtremelyHot
+      - command: ExceptWith
+        zoneTypes: [OilField]
+  # HijackHeadquarters: extention: gravitas bathroom with access code near surface
+  - names:
+      - storytraits/hijack_headquarters_bathroom
+    listRule: GuaranteeOne
+    ruleId: tg_Story_HijackHeadquarters
+    priority: 200
+    useRelaxedFiltering: true
+    allowedCellsFilter:
+      - command: All
+      #- command: ExceptWith
+      #  tagcommand: AtTag
+      #  tag: NoGlobalFeatureSpawning # this also excludes Space
+      - command: ExceptWith  # too close to start
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 0
+        maxDistance: 2
+        ignoreIfMissingTag: true
+      - command: ExceptWith
+        temperatureRanges:
+          - ExtremelyHot
+      - command: ExceptWith
+        zoneTypes: [OilField]
 
   # --- Critter Caves ---
   # Critter Vanilla

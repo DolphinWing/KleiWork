@@ -2,6 +2,7 @@ name: Voidria.Voidria.LAND_NAME
 description: Voidria.Voidria.LAND_DESC
 disableWorldTraits: true
 asteroidIcon: asteroid_unknown_kanim
+nameTables: [ MAGMA, TERRA ]
 
 worldTraitScale: 1 # Adjust with worldSize. Traits are tuned to base game world sizes.
 worldsize:

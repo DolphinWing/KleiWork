@@ -1,15 +1,21 @@
 info:
   size:
-    X: 7
+    X: 11
     Y: 6
   min:
     X: -3
     Y: -2
-  area: 42
+  area: 43
 cells:
 - element: Polypropylene
   mass: 100
-  temperature: 292.026245
+  temperature: 292.936493
+  location_x: 7
+  location_y: 3
+  preventFoWReveal: true
+- element: Polypropylene
+  mass: 100
+  temperature: 292.142365
   location_x: -3
   location_y: -2
 - element: Polypropylene
@@ -33,17 +39,17 @@ cells:
   location_y: -2
 - element: Polypropylene
   mass: 100
-  temperature: 292.990356
+  temperature: 292.863007
   location_x: 2
   location_y: -2
-- element: Corium
-  mass: 198.159958
-  temperature: 298.666901
+- element: Fullerene
+  mass: 1
+  temperature: 293.409546
   location_x: 3
   location_y: -2
 - element: Cuprite
   mass: 100
-  temperature: 282.685638
+  temperature: 283.108063
   location_x: -3
   location_y: -1
 - element: Vacuum
@@ -67,13 +73,13 @@ cells:
   preventFoWReveal: true
 - element: Steel
   mass: 400
-  temperature: 292.65448
+  temperature: 292.812164
   location_x: 3
   location_y: -1
   preventFoWReveal: true
 - element: Cuprite
   mass: 100
-  temperature: 282.668854
+  temperature: 283.099915
   location_x: -3
 - element: Vacuum
   location_x: -2
@@ -89,14 +95,14 @@ cells:
 - element: Vacuum
   location_x: 2
   preventFoWReveal: true
-- element: EnrichedUranium
-  mass: 200
-  temperature: 291.423218
+- element: SuperInsulator
+  mass: 10
+  temperature: 300.143555
   location_x: 3
   preventFoWReveal: true
 - element: Polypropylene
   mass: 100
-  temperature: 291.746277
+  temperature: 291.856354
   location_x: -3
   location_y: 1
 - element: Vacuum
@@ -120,13 +126,13 @@ cells:
   preventFoWReveal: true
 - element: Obsidian
   mass: 1000
-  temperature: 297.622833
+  temperature: 297.786438
   location_x: 3
   location_y: 1
   preventFoWReveal: true
 - element: Polypropylene
   mass: 100
-  temperature: 292.806366
+  temperature: 292.807434
   location_x: -3
   location_y: 2
 - element: Vacuum
@@ -150,7 +156,7 @@ cells:
   preventFoWReveal: true
 - element: Diamond
   mass: 800
-  temperature: 299.459259
+  temperature: 299.342285
   location_x: 3
   location_y: 2
   preventFoWReveal: true
@@ -161,9 +167,10 @@ cells:
   location_y: 3
 - element: Polypropylene
   mass: 100
-  temperature: 292.975922
+  temperature: 292.936493
   location_x: -2
   location_y: 3
+  preventFoWReveal: true
 - element: Katairite
   mass: 2000
   temperature: 300.14975
@@ -171,8 +178,9 @@ cells:
   location_y: 3
 - element: Polypropylene
   mass: 100
-  temperature: 292.959808
+  temperature: 292.936493
   location_y: 3
+  preventFoWReveal: true
 - element: Katairite
   mass: 2000
   temperature: 300.149658
@@ -180,15 +188,21 @@ cells:
   location_y: 3
 - element: Polypropylene
   mass: 100
-  temperature: 292.965668
+  temperature: 292.936493
   location_x: 2
   location_y: 3
+  preventFoWReveal: true
 - element: Katairite
   mass: 2000
   temperature: 300.149994
   location_x: 3
   location_y: 3
 buildings:
+- id: TilePOI
+  location_x: 7
+  location_y: 3
+  element: Polypropylene
+  temperature: 292.936493
 - id: InsulatedLiquidConduit
   location_x: -2
   element: Cuprite
@@ -259,7 +273,7 @@ buildings:
   location_x: -3
   location_y: -1
   element: Cuprite
-  temperature: 282.685638
+  temperature: 283.108063
   other_values:
   - id: sealedDoorDirection
 - id: TilePOI
@@ -271,26 +285,26 @@ buildings:
   location_x: -3
   location_y: 1
   element: Polypropylene
-  temperature: 291.941376
+  temperature: 291.940552
 - id: TilePOI
   location_x: -3
   location_y: 2
   element: Polypropylene
   temperature: 292.807434
 - id: TilePOI
-  location_x: -2
   location_y: 3
   element: Polypropylene
-  temperature: 292.975922
-- id: TilePOI
-  location_y: 3
-  element: Polypropylene
-  temperature: 292.959808
+  temperature: 292.936493
 - id: TilePOI
   location_x: 2
   location_y: 3
   element: Polypropylene
-  temperature: 292.965668
+  temperature: 292.936493
+- id: IceCooledFan
+  location_x: 1
+  location_y: -1
+  element: Wolframite
+  temperature: 292.94397
 - id: PropGravitasWall
   location_x: -1
   location_y: 2
@@ -305,11 +319,11 @@ buildings:
   location_y: 1
   element: Granite
   temperature: 300
-- id: IceCooledFan
-  location_x: 1
-  location_y: -1
-  element: Wolframite
-  temperature: 293.149994
+- id: TilePOI
+  location_x: -2
+  location_y: 3
+  element: Polypropylene
+  temperature: 292.936493
 pickupables:
 - id: Electrobank
   location_x: 3

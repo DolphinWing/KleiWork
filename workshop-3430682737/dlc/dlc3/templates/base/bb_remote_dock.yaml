@@ -7,14 +7,14 @@ info:
     Y: -2
   area: 42
 cells:
-- element: Corium
-  mass: 197.679947
-  temperature: 298.609497
+- element: Fullerene
+  mass: 1
+  temperature: 300.149994
   location_x: -3
   location_y: -2
 - element: Polypropylene
   mass: 100
-  temperature: 292.971161
+  temperature: 292.81604
   location_x: -2
   location_y: -2
 - element: Polypropylene
@@ -33,17 +33,17 @@ cells:
   location_y: -2
 - element: Polypropylene
   mass: 100
-  temperature: 292.602905
+  temperature: 292.597992
   location_x: 2
   location_y: -2
 - element: Polypropylene
   mass: 100
-  temperature: 293.814606
+  temperature: 293.880127
   location_x: 3
   location_y: -2
 - element: Steel
   mass: 400
-  temperature: 292.735077
+  temperature: 292.801117
   location_x: -3
   location_y: -1
   preventFoWReveal: true
@@ -68,12 +68,12 @@ cells:
   preventFoWReveal: true
 - element: Cuprite
   mass: 100
-  temperature: 291.285492
+  temperature: 291.294708
   location_x: 3
   location_y: -1
-- element: EnrichedUranium
-  mass: 200
-  temperature: 291.487976
+- element: SuperInsulator
+  mass: 10
+  temperature: 300.149994
   location_x: -3
   preventFoWReveal: true
 - element: Vacuum
@@ -92,11 +92,11 @@ cells:
   preventFoWReveal: true
 - element: Cuprite
   mass: 100
-  temperature: 291.278137
+  temperature: 291.294434
   location_x: 3
 - element: Obsidian
   mass: 1000
-  temperature: 297.502991
+  temperature: 297.485596
   location_x: -3
   location_y: 1
   preventFoWReveal: true
@@ -121,12 +121,12 @@ cells:
   preventFoWReveal: true
 - element: Polypropylene
   mass: 100
-  temperature: 293.718994
+  temperature: 293.776794
   location_x: 3
   location_y: 1
 - element: Diamond
   mass: 800
-  temperature: 299.13681
+  temperature: 299.117828
   location_x: -3
   location_y: 2
   preventFoWReveal: true
@@ -156,7 +156,7 @@ cells:
   location_y: 2
 - element: Polypropylene
   mass: 100
-  temperature: 294.318024
+  temperature: 293.821228
   location_x: -3
   location_y: 3
   preventFoWReveal: true
@@ -243,7 +243,7 @@ buildings:
   location_x: 3
   location_y: -1
   element: Cuprite
-  temperature: 291.285492
+  temperature: 291.294708
   other_values:
   - id: sealedDoorDirection
     value: 1

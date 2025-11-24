@@ -2,6 +2,7 @@ name: Voidria.Voidria.WARP_NAME
 description: Voidria.Voidria.WARP_DESC
 disableWorldTraits: true
 asteroidIcon: asteroid_unknown_kanim
+nameTables: [ SWAMP, SULFUR ]
 
 worldTraitScale: 1 # Adjust with worldSize. Traits are tuned to base game world sizes.
 worldsize:

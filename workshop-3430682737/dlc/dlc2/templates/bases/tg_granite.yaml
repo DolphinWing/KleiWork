@@ -7,86 +7,101 @@ info:
     Y: -2
   area: 42
 cells:
-- element: Vacuum
-  location_x: -2
-  location_y: 1
+- element: Obsidian
+  mass: 100
+  temperature: 238.259476
+  location_x: -3
+  location_y: -2
   preventFoWReveal: true
 - element: Obsidian
   mass: 100
-  temperature: 262.801727
-  location_x: -3
-  location_y: -2
-- element: Obsidian
-  mass: 100
-  temperature: 255.726379
+  temperature: 234.787399
   location_x: -2
   location_y: -2
+  preventFoWReveal: true
 - element: Obsidian
   mass: 100
-  temperature: 269.49823
+  temperature: 234.901138
   location_x: -1
   location_y: -2
-- element: Granite
-  mass: 100
-  temperature: 286.706909
-  location_y: -2
-- element: Granite
-  mass: 100
-  temperature: 289.638214
-  location_x: 1
-  location_y: -2
-- element: Granite
-  mass: 100
-  temperature: 287.859863
-  location_x: 2
-  location_y: -2
+  preventFoWReveal: true
 - element: Obsidian
   mass: 100
-  temperature: 274.766083
+  temperature: 234.265625
+  location_y: -2
+  preventFoWReveal: true
+- element: Obsidian
+  mass: 100
+  temperature: 234.15361
+  location_x: 1
+  location_y: -2
+  preventFoWReveal: true
+- element: Obsidian
+  mass: 100
+  temperature: 234.779648
+  location_x: 2
+  location_y: -2
+  preventFoWReveal: true
+- element: Obsidian
+  mass: 100
+  temperature: 238.386276
   location_x: 3
   location_y: -2
-- element: Cuprite
-  mass: 100
-  temperature: 271.332367
-  location_x: -3
-  location_y: -1
-- element: Vacuum
-  location_x: -2
-  location_y: -1
-  preventFoWReveal: true
-- element: Vacuum
-  location_x: -1
-  location_y: -1
-  preventFoWReveal: true
-- element: Vacuum
-  location_y: -1
-  preventFoWReveal: true
-- element: Vacuum
-  location_x: 1
-  location_y: -1
-  preventFoWReveal: true
-- element: Vacuum
-  location_x: 2
-  location_y: -1
   preventFoWReveal: true
 - element: Cuprite
   mass: 100
-  temperature: 271.849365
+  temperature: 268.34964
+  location_x: -3
+  location_y: -1
+- element: Vacuum
+  location_x: -2
+  location_y: -1
+  preventFoWReveal: true
+- element: Sand
+  mass: 10
+  temperature: 300.149994
+  location_x: -1
+  location_y: -1
+  preventFoWReveal: true
+- element: Regolith
+  mass: 10
+  temperature: 300.149994
+  location_y: -1
+  preventFoWReveal: true
+- element: Sand
+  mass: 10
+  temperature: 300.149994
+  location_x: 1
+  location_y: -1
+  preventFoWReveal: true
+- element: Vacuum
+  location_x: 2
+  location_y: -1
+  preventFoWReveal: true
+- element: Cuprite
+  mass: 100
+  temperature: 270.209076
   location_x: 3
   location_y: -1
 - element: Cuprite
   mass: 100
-  temperature: 270.143005
+  temperature: 267.878418
   location_x: -3
 - element: Vacuum
   location_x: -2
   preventFoWReveal: true
-- element: Vacuum
+- element: Regolith
+  mass: 10
+  temperature: 300.149994
   location_x: -1
   preventFoWReveal: true
-- element: Vacuum
+- element: Sand
+  mass: 10
+  temperature: 300.149994
   preventFoWReveal: true
-- element: Vacuum
+- element: Regolith
+  mass: 10
+  temperature: 300.149994
   location_x: 1
   preventFoWReveal: true
 - element: Vacuum
@@ -94,12 +109,16 @@ cells:
   preventFoWReveal: true
 - element: Cuprite
   mass: 100
-  temperature: 268.268799
+  temperature: 268.301147
   location_x: 3
 - element: Obsidian
   mass: 100
-  temperature: 257.727386
+  temperature: 257.158936
   location_x: -3
+  location_y: 1
+  preventFoWReveal: true
+- element: Vacuum
+  location_x: -2
   location_y: 1
   preventFoWReveal: true
 - element: Vacuum
@@ -119,13 +138,13 @@ cells:
   preventFoWReveal: true
 - element: Obsidian
   mass: 100
-  temperature: 255.492584
+  temperature: 255.707733
   location_x: 3
   location_y: 1
   preventFoWReveal: true
 - element: Obsidian
   mass: 100
-  temperature: 243.630096
+  temperature: 243.788391
   location_x: -3
   location_y: 2
   preventFoWReveal: true
@@ -150,19 +169,19 @@ cells:
   preventFoWReveal: true
 - element: Obsidian
   mass: 100
-  temperature: 242.826767
+  temperature: 243.078445
   location_x: 3
   location_y: 2
   preventFoWReveal: true
 - element: Obsidian
   mass: 100
-  temperature: 237.267822
+  temperature: 237.421661
   location_x: -3
   location_y: 3
   preventFoWReveal: true
 - element: Obsidian
   mass: 100
-  temperature: 235.14325
+  temperature: 235.198364
   location_x: -2
   location_y: 3
   preventFoWReveal: true
@@ -179,19 +198,19 @@ cells:
   preventFoWReveal: true
 - element: Obsidian
   mass: 100
-  temperature: 234.109329
+  temperature: 234.128647
   location_x: 1
   location_y: 3
   preventFoWReveal: true
 - element: Obsidian
   mass: 100
-  temperature: 235.129257
+  temperature: 235.159927
   location_x: 2
   location_y: 3
   preventFoWReveal: true
 - element: Obsidian
   mass: 100
-  temperature: 237.152145
+  temperature: 237.300354
   location_x: 3
   location_y: 3
   preventFoWReveal: true
@@ -201,63 +220,59 @@ buildings:
   location_y: -1
   element: Granite
   temperature: 273
-- id: TilePOI
-  location_x: 2
-  location_y: -2
+- id: PropGravitasWall
+  location_x: -1
   element: Granite
-  temperature: 289.710052
-- id: TilePOI
+  temperature: 273
+- id: StorageLocker
+  location_y: -1
+  element: IronOre
+  temperature: 293.149994
+- id: PropGravitasWall
   location_x: 1
-  location_y: -2
+  location_y: -1
   element: Granite
-  temperature: 291.360077
-- id: TilePOI
-  location_y: -2
+  temperature: 273
+- id: PropGravitasWall
+  location_x: 1
   element: Granite
-  temperature: 289.676422
-- id: TilePOI
-  location_x: -2
-  location_y: -2
-  element: Obsidian
-  temperature: 248.339462
+  temperature: 273
 - id: POIBunkerExteriorDoor
   location_x: 3
   location_y: -1
   element: Cuprite
-  temperature: 271.849365
+  temperature: 270.209076
   other_values:
   - id: sealedDoorDirection
     value: 1
-- id: TilePOI
+- id: StorageLocker
   location_x: -1
-  location_y: -2
-  element: Obsidian
-  temperature: 266.466064
-- id: TilePOI
-  location_x: 3
-  location_y: -2
-  element: Obsidian
-  temperature: 268.664825
+  location_y: -1
+  element: IronOre
+  temperature: 293.149994
+- id: PropGravitasWall
+  element: Granite
+  temperature: 273
 - id: TilePOI
   location_x: -2
   location_y: 3
   element: Obsidian
-  temperature: 234.638977
+  temperature: 234.728821
 - id: TilePOI
   location_x: 3
   location_y: 1
   element: Obsidian
-  temperature: 252.92717
+  temperature: 253.740448
 - id: TilePOI
   location_x: 1
   location_y: 3
   element: Obsidian
-  temperature: 234.109329
+  temperature: 234.110107
 - id: TilePOI
   location_x: 2
   location_y: 3
   element: Obsidian
-  temperature: 234.628937
+  temperature: 234.717651
 - id: TilePOI
   location_y: 3
   element: Obsidian
@@ -266,12 +281,12 @@ buildings:
   location_x: -3
   location_y: 3
   element: Obsidian
-  temperature: 236.250702
+  temperature: 236.552795
 - id: TilePOI
   location_x: 3
   location_y: 2
   element: Obsidian
-  temperature: 241.063232
+  temperature: 241.630096
 - id: TilePOI
   location_x: -1
   location_y: 3
@@ -281,29 +296,35 @@ buildings:
   location_x: 3
   location_y: 3
   element: Obsidian
-  temperature: 236.297791
+  temperature: 236.558884
 - id: POIBunkerExteriorDoor
   location_x: -3
   location_y: -1
   element: Cuprite
-  temperature: 271.332367
+  temperature: 268.34964
   other_values:
   - id: sealedDoorDirection
-- id: TilePOI
-  location_x: -3
-  location_y: -2
-  element: Obsidian
-  temperature: 260.693298
+- id: Refrigerator
+  location_x: 1
+  location_y: -1
+  element: Fossil
+  temperature: 293.149994
+  storage:
+  - id: FieldRation
+    element: Creature
+    units: 10
+    temperature: 294.963287
+    rottable: {}
 - id: TilePOI
   location_x: -3
   location_y: 1
   element: Obsidian
-  temperature: 255.864334
+  temperature: 256.34613
 - id: TilePOI
   location_x: -3
   location_y: 2
   element: Obsidian
-  temperature: 241.549698
+  temperature: 242.187836
 - id: PropGravitasLabWindowHorizontal
   location_y: 1
   element: Glass
@@ -343,77 +364,61 @@ buildings:
   temperature: 273
 - id: PropGravitasWall
   location_x: -1
+  location_y: -1
+  element: Granite
+  temperature: 273
+- id: PropGravitasWall
+  location_y: -1
+  element: Granite
+  temperature: 273
+- id: TilePOI
+  location_x: -2
   location_y: -2
-  element: Granite
-  temperature: 269.49823
-- id: PropGravitasWall
-  location_y: -2
-  element: Granite
-  temperature: 286.706909
-- id: PropGravitasWall
+  element: Obsidian
+  temperature: 234.701004
+- id: TilePOI
   location_x: 1
   location_y: -2
-  element: Granite
-  temperature: 289.638214
-- id: PropGravitasWall
+  element: Obsidian
+  temperature: 234.109329
+- id: TilePOI
+  location_x: 2
+  location_y: -2
+  element: Obsidian
+  temperature: 234.691086
+- id: TilePOI
+  location_y: -2
+  element: Obsidian
+  temperature: 234.172043
+- id: TilePOI
+  location_x: -3
+  location_y: -2
+  element: Obsidian
+  temperature: 236.473358
+- id: TilePOI
   location_x: -1
-  element: Granite
-  temperature: 273
-- id: PropGravitasWall
-  element: Granite
-  temperature: 273
-- id: StorageLocker
-  location_y: -1
-  element: IronOre
-  temperature: 293.149994
-  storage:
-  - id: Granite
-    element: Granite
-    units: 10000
-    isOre: true
-    temperature: 272.936707
-    rottable: {}
-- id: PropGravitasWall
+  location_y: -2
+  element: Obsidian
+  temperature: 234.808685
+- id: TilePOI
+  location_x: 3
+  location_y: -2
+  element: Obsidian
+  temperature: 236.489929
+elementalOres:
+- id: Granite
   location_y: -1
   element: Granite
-  temperature: 273
-- id: PropGravitasWall
-  location_x: 1
-  location_y: -1
-  element: Granite
-  temperature: 273
-- id: PropGravitasWall
+  temperature: 272.937561
+  units: 10000
+  type: Ore
+- id: Granite
   location_x: -1
   location_y: -1
   element: Granite
-  temperature: 273
-- id: StorageLocker
-  location_x: -1
-  location_y: -1
-  element: IronOre
-  temperature: 293.149994
-  storage:
-  - id: Granite
-    element: Granite
-    units: 10000
-    isOre: true
-    temperature: 272.936707
-    rottable: {}
-- id: PropGravitasWall
-  location_x: 1
-  element: Granite
-  temperature: 273
-- id: Refrigerator
-  location_x: 1
-  location_y: -1
-  element: Fossil
-  temperature: 293.149994
-  storage:
-  - id: FieldRation
-    element: Creature
-    units: 10
-    temperature: 295
-    rottable: {}
+  temperature: 272.936401
+  units: 10000
+  type: Ore
 otherEntities:
 - id: PropLight
   location_y: 2
