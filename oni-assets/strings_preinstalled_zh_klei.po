@@ -14352,7 +14352,7 @@ msgstr "温度传感器可在管道内容物达到特定温度时禁用某些建
 #. STRINGS.BUILDINGS.PREFABS.GASCONDUITTEMPERATURESENSOR.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.GASCONDUITTEMPERATURESENSOR.EFFECT"
 msgid "Sends a <b><style=\"logic_on\">Green Signal</style></b> or a <b><style=\"logic_off\">Red Signal</style></b> when pipe contents enter the chosen <link=\"HEAT\">Temperature</link> range."
-msgstr "当管内气体温度达到选定范围内时，输出<b><style=\"logic_on\">绿色信号</style></b>或<b><style=\"logic_off\">红色信号</style></b>。"
+msgstr "当管内气体<link=\"HEAT\">温度</link>达到选定范围内时，输出<b><style=\"logic_on\">绿色信号</style></b>或<b><style=\"logic_off\">红色信号</style></b>。"
 
 #. STRINGS.BUILDINGS.PREFABS.GASCONDUITTEMPERATURESENSOR.LOGIC_PORT
 msgctxt "STRINGS.BUILDINGS.PREFABS.GASCONDUITTEMPERATURESENSOR.LOGIC_PORT"
@@ -16885,7 +16885,7 @@ msgstr "通知"
 #. STRINGS.BUILDINGS.PREFABS.LOGICALARM.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICALARM.NAME"
 msgid "<link=\"LOGICALARM\">Automated Notifier</link>"
-msgstr "<link=\"LOGIC\">自动化通知器</link>"
+msgstr "<link=\"LOGICALARM\">自动化通知器</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICCLUSTERLOCATIONSENSOR.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICCLUSTERLOCATIONSENSOR.DESC"
@@ -17874,7 +17874,7 @@ msgid ""
 "\n"
 "Can be run through wall and floor tile."
 msgstr ""
-"让一组<link=\"LOGICWIRE\">信号线组</link>可以越过另一组信号线组，而不会连到一起。\n"
+"让一组<link=\"LOGICRIBBON\">信号线组</link>可以越过另一组信号线组，而不会连到一起。\n"
 "\n"
 "可穿过墙体和地面。"
 
@@ -18473,7 +18473,7 @@ msgstr ""
 #. STRINGS.BUILDINGS.PREFABS.MANUALHIGHENERGYPARTICLESPAWNER.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.MANUALHIGHENERGYPARTICLESPAWNER.NAME"
 msgid "<link=\"MANUALHIGHENERGYPARTICLESPAWNER\">Manual Radbolt Generator</link>"
-msgstr "<link=\"HIGHENERGYPARTICLESPAWNER\">人力辐射粒子发生器</link>"
+msgstr "<link=\"MANUALHIGHENERGYPARTICLESPAWNER\">人力辐射粒子发生器</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.MANUALHIGHENERGYPARTICLESPAWNER.RECIPE_DESCRIPTION
 msgctxt "STRINGS.BUILDINGS.PREFABS.MANUALHIGHENERGYPARTICLESPAWNER.RECIPE_DESCRIPTION"
@@ -19386,7 +19386,7 @@ msgstr "自动地与相邻的<link=\"LAUNCHPAD\">火箭平台</link>或任何<li
 #. STRINGS.BUILDINGS.PREFABS.MODULARLAUNCHPADPORTBRIDGE.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.MODULARLAUNCHPADPORTBRIDGE.NAME"
 msgid "<link=\"MODULARLAUNCHPADPORTBRIDGE\">Rocket Port Extension</link>"
-msgstr "<link=\"MODULARLAUNCHPADPORTSOLID\">火箭端口延伸桥</link>"
+msgstr "<link=\"MODULARLAUNCHPADPORTBRIDGE\">火箭端口延伸桥</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.MODULARLAUNCHPADPORTGAS.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.MODULARLAUNCHPADPORTGAS.DESC"
@@ -25393,7 +25393,7 @@ msgid ""
 msgstr ""
 "一台可以将<link=\"ELEMENTSLIQUID\">液体</link>、<link=\"ELEMENTSSOLID\">固体</link>和<link=\"ELEMENTSGAS\">气体</link>资源传送到其他小行星的机器。\n"
 "\n"
-"可以由具有<link=\"RESEARCHING22\">实地研究</link>技能的复制人激活。\n"
+"可以由具有<link=\"RESEARCHING2\">实地研究</link>技能的复制人激活。\n"
 "\n"
 "这个是接收端。"
 
@@ -44299,7 +44299,7 @@ msgstr "<link=\"DEERSPECIES\">狐鹿</link>"
 #. STRINGS.CREATURES.FAMILY_PLURAL.DIVERGENTSPECIES
 msgctxt "STRINGS.CREATURES.FAMILY_PLURAL.DIVERGENTSPECIES"
 msgid "<link=\"DIVERGENTSPECIES\">Divergents</link>"
-msgstr "<link=\"DRECKOSPECIES\">异化虫</link>"
+msgstr "<link=\"DIVERGENTSPECIES\">异化虫</link>"
 
 #. STRINGS.CREATURES.FAMILY_PLURAL.DRECKOSPECIES
 msgctxt "STRINGS.CREATURES.FAMILY_PLURAL.DRECKOSPECIES"
@@ -46411,7 +46411,7 @@ msgstr "一处高压间歇泉，定期喷出<link=\"SALTWATER\">盐水</link>。
 #. STRINGS.CREATURES.SPECIES.GEYSER.SALT_WATER.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.SALT_WATER.NAME"
 msgid "<link=\"GEYSERGENERICSALTWATER\">Salt Water Geyser</link>"
-msgstr "<link=\"GEYSERGENERICHOTWATER\">盐水泉</link>"
+msgstr "<link=\"GEYSERGENERICSALTWATER\">盐水泉</link>"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.SLIMY_PO2.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.SLIMY_PO2.DESC"
@@ -67821,7 +67821,7 @@ msgstr "<link=\"MOLTENGOLD\">熔融金</link>"
 #. STRINGS.ELEMENTS.MOLTENIRIDIUM.DESC
 msgctxt "STRINGS.ELEMENTS.MOLTENIRIDIUM.DESC"
 msgid "(Ir) Molten Iridium is a highly conductive <link=\"METAL\">Metal</link> heated to a <link=\"ELEMENTSLIQUID\">Liquid</link>  state."
-msgstr "(Ir) 熔融铱是一种被加热成<link=\"ELEMENTSLIQUID\">液态</link>的高导性<link=\"RAWMETAL\">金属</link>。"
+msgstr "(Ir) 熔融铱是一种被加热成<link=\"ELEMENTSLIQUID\">液态</link>的高导性<link=\"METAL\">金属</link>。"
 
 #. STRINGS.ELEMENTS.MOLTENIRIDIUM.NAME
 msgctxt "STRINGS.ELEMENTS.MOLTENIRIDIUM.NAME"
@@ -79178,7 +79178,7 @@ msgstr ""
 "\n"
 "我可以通过提供良好的<link=\"FOOD\">食物</link>、豪华的<link=\"DECOR\">装饰</link>和增强<link=\"MORALE\">士气</link>的道具来帮助复制人管理压力。\n"
 "\n"
-"我可以选择一名复制人，通过将鼠标悬停在其状态栏中的<link=\"STRESS\">压力</link>或<link=\"MORALE\">士气</link>上查看各个压力因素，希望可以在这些因素造成问题之前使影响最小化。\n"
+"我可以选择一名复制人，通过将鼠标悬停在其状态栏中的<link=\"STRESS\">压力</link>或<link=\"MORALE\">士气</link>上查看当前状态，希望可以在各种因素造成问题之前解决。\n"
 "\n"
 "相关<link=\"VIDEOS13\">视频：复制人士气</link>"
 
@@ -95363,7 +95363,7 @@ msgstr "<link=\"DISEASE\">疾病</link>感染："
 #. STRINGS.UI.ENDOFDAYREPORT.DISEASE_ADDED.NEGATIVE_TOOLTIP
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.DISEASE_ADDED.NEGATIVE_TOOLTIP"
 msgid "{0} <link=\"DISEASE\">Disease</link> were cured by {1}"
-msgstr "{1}治愈了{0}个疾病。"
+msgstr "{1}治愈了{0}个<link=\"DISEASE\">疾病</link>。"
 
 #. STRINGS.UI.ENDOFDAYREPORT.DISEASE_ADDED.POSITIVE_TOOLTIP
 msgctxt "STRINGS.UI.ENDOFDAYREPORT.DISEASE_ADDED.POSITIVE_TOOLTIP"
@@ -109993,7 +109993,7 @@ msgid ""
 "\n"
 "<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
 msgstr ""
-"一片小行星带，含有<link=\"IRON\">铁</link>、<link=\"COPPER\">铜</link>、和<link=\"OBSIDIAN\">黑曜石</link>。\n"
+"一片小行星带，含有<link=\"IRON\">铁</link>、<link=\"COPPER\">铜</link>、<link=\"LEAD\">铅</link>和<link=\"OBSIDIAN\">黑曜石</link>。\n"
 "\n"
 "火箭装有<link=\"NOSECONEHARVEST\">钻头前锥</link>才能进行<link=\"EXOBASESDLC1\">太空采矿</link>。"
 
@@ -115106,7 +115106,7 @@ msgid ""
 msgstr ""
 "这个配方需要建筑在输入口收集辐射粒子\n"
 "\n"
-"打开<b>辐射概览</b> {Hotkey/Overlay13} 以查看建筑的辐射端口"
+"打开<b>辐射概览</b> {Hotkey/Overlay15} 以查看建筑的辐射端口"
 
 #. STRINGS.UI.UISIDESCREENS.FABRICATORSIDESCREEN.ALL_INGREDIENTS_IN_CATEGORY_DISOVERED
 msgctxt "STRINGS.UI.UISIDESCREENS.FABRICATORSIDESCREEN.ALL_INGREDIENTS_IN_CATEGORY_DISOVERED"
@@ -122736,7 +122736,7 @@ msgstr "水域小行星"
 #~ "\n"
 #~ "Once the engine has been built, more rocket modules can be added."
 #~ msgstr ""
-#~ "燃烧<link=\"PETROLEUM\">生物柴油</link>以推动火箭进行中距离太空探索。\n"
+#~ "燃烧<link=\"REFINEDLIPID\">生物柴油</link>以推动火箭进行中距离太空探索。\n"
 #~ "\n"
 #~ "生物柴油引擎的高度限制较为宽松，可以带有很多舱块。\n"
 #~ "\n"

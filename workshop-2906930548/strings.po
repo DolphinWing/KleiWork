@@ -9178,7 +9178,7 @@ msgstr "使用氣罐抽取器的元素篩選項，可在特定區域儲存指定
 #. STRINGS.BUILDINGS.PREFABS.BOTTLEEMPTIERCONDUITGAS.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.BOTTLEEMPTIERCONDUITGAS.EFFECT"
 msgid "Drains <link=\"ELEMENTSGAS\">Gas</link> canisters into <link=\"GASCONDUIT\">Gas Pipes</link>."
-msgstr "將罐裝<link=\"ELEMENTSGAS\">氣體</link>抽入<link=\"GASCONDUIT\">氣體管道</link>中。"
+msgstr "將罐裝<link=\"ELEMENTSGAS\">氣體</link>抽入<link=\"GASCONDUIT\">氣體管</link>中。"
 
 #. STRINGS.BUILDINGS.PREFABS.BOTTLEEMPTIERCONDUITGAS.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.BOTTLEEMPTIERCONDUITGAS.NAME"
@@ -9193,7 +9193,7 @@ msgstr "使用瓶子抽取器的元素篩選項，可在特定區域儲存指定
 #. STRINGS.BUILDINGS.PREFABS.BOTTLEEMPTIERCONDUITLIQUID.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.BOTTLEEMPTIERCONDUITLIQUID.EFFECT"
 msgid "Drains bottled <link=\"ELEMENTSLIQUID\">Liquids</link> into <link=\"LIQUIDCONDUIT\">Liquid Pipes</link>."
-msgstr "將瓶裝<link=\"ELEMENTSLIQUID\">液體</link>抽入<link=\"LIQUIDPIPING\">液體管道</link>中。"
+msgstr "將瓶裝<link=\"ELEMENTSLIQUID\">液體</link>抽入<link=\"LIQUIDPIPING\">液體管</link>中。"
 
 #. STRINGS.BUILDINGS.PREFABS.BOTTLEEMPTIERCONDUITLIQUID.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.BOTTLEEMPTIERCONDUITLIQUID.NAME"
@@ -23808,7 +23808,7 @@ msgstr "抗組織胺"
 #. STRINGS.CODEX.ANTIHISTAMINE.TITLE
 msgctxt "STRINGS.CODEX.ANTIHISTAMINE.TITLE"
 msgid "Allergy Medication"
-msgstr "抗敏藥"
+msgstr "抗過敏藥"
 
 #. STRINGS.CODEX.ARBORTREE.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.ARBORTREE.BODY.CONTAINER1"
@@ -27137,8 +27137,8 @@ msgstr "珍藏品"
 
 #. STRINGS.CODEX.KELP.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.KELP.BODY.CONTAINER1"
-msgid "The leaf of a <link=\"KELPPLANT\">Seakomb</link>.\n\nIt can be processed into <link=\"PHYTOOIL\">Phyto Oil</link> or used as an ingredient in <link=\"ANTIHISTAMINE\">Allergy Medication</link>."
-msgstr "<link=\"KELPPLANT\">海梳蕨</link>的葉片。\n\n可加工成<link=\"PHYTOOIL\">植物油</link>，或用作<link=\"ANTIHISTAMINE\">抗敏藥</link>的成分。"
+msgid "The leaf of a <link=\"KELPPLANT\">Seakomb</link>.\n\nIt can be processed into <link=\"PHYTOOIL\">Phyto Oil</link> or used as an ingredient in <link=\"ANTIHISTAMINE \">Allergy Medication</link>."
+msgstr "<link=\"KELPPLANT\">海梳蕨</link>的葉片。\n\n可加工成<link=\"PHYTOOIL\">植物油</link>，或用作<link=\"ANTIHISTAMINE\">抗過敏藥</link>的成分。"
 
 #. STRINGS.CODEX.KELP.SUBTITLE
 msgctxt "STRINGS.CODEX.KELP.SUBTITLE"
@@ -29993,7 +29993,7 @@ msgstr "檢視資料"
 #. STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.ACTIVATECODE.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.ACTIVATECODE.BODY.CONTAINER1"
 msgid "<size=18>Giga Co-Op</size>\n<i><smallcaps>Proactive solutions for timeless tech</i>\nOpen 24/7\n\nReceipt #978-0-465-02656-2\n</smallcaps>\n\nDear Patron,\n\n<indent=5%>Thank you for using Giga Co-Op.\n\nPlease enter your thirteen-digit receipt number into your machine's control panel to access the updated operator's manual.\n\nDo not print or share this code.\n\nSubmit a review and get 4% off your next service!</indent>\n\n<smallcaps># ITEMS SOLD 2</smallcaps>\n\n\n------------------\n"
-msgstr "<size=18>千兆合作社</size>\n<i><smallcaps>永恆科技的前瞻性解決方案</i>\n全天候開放\n\n收據編號 #978-0-465-02656-2\n</smallcaps>\n\n尊敬的客戶，\n\n<indent=5%>感謝您使用吉加合作社的服務。\n\n請將您的十三位數收據編號輸入機器的控制面板，以存取更新的操作手冊。\n\n請勿印製或分享此密碼。\n\n提交評論，您的下一次服務即可獲得 4% 的折扣！</indent>\n\n<smallcaps>售出項目數量 2</smallcaps>\n\n\n------------------\n"
+msgstr "<size=18>千兆合作社</size>\n<i><smallcaps>永恆科技的前瞻性解決方案</i>\n全天候開放\n\n收據編號 #978-0-465-02656-2\n</smallcaps>\n\n尊敬的客戶，\n\n<indent=5%>感謝您使用千兆合作社的服務。\n\n請將您的十三位數收據編號輸入機器的控制面板，以存取更新的操作手冊。\n\n請勿印製或分享此密碼。\n\n提交評論，您的下一次服務即可獲得 4% 的折扣！</indent>\n\n<smallcaps>售出項目數量 2</smallcaps>\n\n\n------------------\n"
 
 #. STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.ACTIVATECODE.SUBTITLE
 msgctxt "STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.ACTIVATECODE.SUBTITLE"
@@ -30018,7 +30018,7 @@ msgstr "我的複製人發現了一台引人入勝的機器。構造表明，它
 #. STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.BEGIN_POPUP.NAME
 msgctxt "STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.BEGIN_POPUP.NAME"
 msgid "Story Trait: Printerceptor"
-msgstr "故事特質：印製干擾器"
+msgstr "故事特質：列印截能儀"
 
 #. STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.DESCRIPTION
 msgctxt "STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.DESCRIPTION"
@@ -30048,7 +30048,7 @@ msgstr "成功！這座建築已印製出第一個可存活的有機體。它不
 #. STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.END_POPUP.NAME
 msgctxt "STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.END_POPUP.NAME"
 msgid "Story Trait Complete: Printerceptor"
-msgstr "故事特質完成：印製干擾器"
+msgstr "故事特質完成：列印截能儀"
 
 #. STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.HANDOFF.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.HANDOFF.BODY.CONTAINER1"
@@ -30068,7 +30068,7 @@ msgstr "隔間"
 #. STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.NAME
 msgctxt "STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.NAME"
 msgid "Printerceptor"
-msgstr "印製干擾器"
+msgstr "列印截能儀"
 
 #. STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.UNLOCK_POPUP.BUTTON
 msgctxt "STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.UNLOCK_POPUP.BUTTON"
@@ -30083,12 +30083,12 @@ msgstr "沖刷證據"
 #. STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.UNLOCK_POPUP.DESCRIPTION
 msgctxt "STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.UNLOCK_POPUP.DESCRIPTION"
 msgid "My Duplicants have recovered the access code to unlock the Printerceptor!\n\nThe data storage medium was damaged during retrieval, but it has already served its purpose: the Printerceptor's targeted printing technology is now at my colony's fingertips."
-msgstr "我的複製人已經回收了存取密碼，得以解鎖印製干擾器！\n\n該資料儲存媒介在回收過程中損毀，但它已經達到其目的：印製干擾器的目標印製技術現已在我的殖民地的掌握之中。"
+msgstr "我的複製人已經回收了存取密碼，得以解鎖列印截能儀！\n\n該資料儲存媒介在回收過程中損毀，但它已經達到其目的：列印截能儀的目標印製技術現已在我的殖民地的掌握之中。"
 
 #. STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.UNLOCK_POPUP.NAME
 msgctxt "STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.UNLOCK_POPUP.NAME"
 msgid "Story Trait: Printerceptor"
-msgstr "故事特質：印製干擾器"
+msgstr "故事特質：列印截能儀"
 
 #. STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.WHENIMGONE.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.STORY_TRAITS.HIJACK_HEADQUARTERS.WHENIMGONE.BODY.CONTAINER1"
@@ -32568,22 +32568,22 @@ msgstr "食物在<style=\"KKeyword\">新鮮度</style>降到 50% 時變質，在
 #. STRINGS.CREATURES.ATTRIBUTES.SCALEGROWTHDELTA.NAME
 msgctxt "STRINGS.CREATURES.ATTRIBUTES.SCALEGROWTHDELTA.NAME"
 msgid "Scale Growth"
-msgstr "毛髮生長"
+msgstr "鱗片生長"
 
 #. STRINGS.CREATURES.ATTRIBUTES.SCALEGROWTHDELTA.TOOLTIP
 msgctxt "STRINGS.CREATURES.ATTRIBUTES.SCALEGROWTHDELTA.TOOLTIP"
 msgid "Determines how long this <style=\"KKeyword\">Critter's</style> scales will take to grow back."
-msgstr "決定<style=\"KKeyword\">小動物</style>的毛髮重長回來的所需時間。"
+msgstr "決定<style=\"KKeyword\">小動物</style>的鱗片重新生長所需的時間。"
 
 #. STRINGS.CREATURES.ATTRIBUTES.VIABILITYDELTA.NAME
 msgctxt "STRINGS.CREATURES.ATTRIBUTES.VIABILITYDELTA.NAME"
 msgid "Viability Loss Rate"
-msgstr "生命力下降速度"
+msgstr "生存力損耗率"
 
 #. STRINGS.CREATURES.ATTRIBUTES.WILDNESSDELTA.DESC
 msgctxt "STRINGS.CREATURES.ATTRIBUTES.WILDNESSDELTA.DESC"
 msgid "Wild creatures can survive on fewer <style=\"KKeyword\">Calories</style> than domesticated ones."
-msgstr "野生動物生存所需要的<style=\"KKeyword\">卡路里</style>少於被馴服的同類。"
+msgstr "野生的生物比被馴化的同類消耗更少的<style=\"KKeyword\">卡路里</style>即可生存。"
 
 #. STRINGS.CREATURES.ATTRIBUTES.WILDNESSDELTA.NAME
 msgctxt "STRINGS.CREATURES.ATTRIBUTES.WILDNESSDELTA.NAME"
@@ -32593,12 +32593,12 @@ msgstr "野性"
 #. STRINGS.CREATURES.BAGGED_DESC_FMT
 msgctxt "STRINGS.CREATURES.BAGGED_DESC_FMT"
 msgid "This {0} has been captured and is now safe to relocate."
-msgstr "{0}已被捕捉，可以安全地送達別處。"
+msgstr "{0}已被捕捉，現可安全地轉移。"
 
 #. STRINGS.CREATURES.BAGGED_NAME_FMT
 msgctxt "STRINGS.CREATURES.BAGGED_NAME_FMT"
 msgid "Bagged {0}"
-msgstr "袋裝{0}"
+msgstr "已裝袋的{0}"
 
 #. STRINGS.CREATURES.FAMILY.CRAB
 msgctxt "STRINGS.CREATURES.FAMILY.CRAB"
@@ -33063,12 +33063,12 @@ msgstr "這名複製人最近被<style=\"KKeyword\">匿蚊</style>叮了，感�
 #. STRINGS.CREATURES.MODIFIERS.DUPE_MOSQUITO_BITE_SUPPRESSED.NAME
 msgctxt "STRINGS.CREATURES.MODIFIERS.DUPE_MOSQUITO_BITE_SUPPRESSED.NAME"
 msgid "Allergy Medication"
-msgstr "抗敏藥"
+msgstr "抗過敏藥"
 
 #. STRINGS.CREATURES.MODIFIERS.DUPE_MOSQUITO_BITE_SUPPRESSED.TOOLTIP
 msgctxt "STRINGS.CREATURES.MODIFIERS.DUPE_MOSQUITO_BITE_SUPPRESSED.TOOLTIP"
 msgid "This Duplicant is unbothered by their recent <style=\"KKeyword\">Gnit</style> sting, thanks to <style=\"KKeyword\">Allergy Medication</style>"
-msgstr "多虧了<style=\"KKeyword\">抗敏藥</style>，這名複製人最近沒有受<style=\"KKeyword\">匿蚊</style>叮咬困擾"
+msgstr "多虧了<style=\"KKeyword\">抗過敏藥</style>，這名複製人最近沒有受<style=\"KKeyword\">匿蚊</style>叮咬困擾"
 
 #. STRINGS.CREATURES.MODIFIERS.EGGHUG.NAME
 msgctxt "STRINGS.CREATURES.MODIFIERS.EGGHUG.NAME"
@@ -36193,7 +36193,7 @@ msgstr "<link=\"STATERPILLAR\">煙霧蛞蝓寶寶</link>"
 #. STRINGS.CREATURES.SPECIES.STATERPILLAR.VARIANT_GAS.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.STATERPILLAR.VARIANT_GAS.DESC"
 msgid "Smog Slugs are porous creatures that draw in unbreathable <link=\"ELEMENTSGAS\">Gases</link> during the day.\n\nAt night, they sleep near exposed <link=\"GASCONDUIT\">Gas Pipes,</link> where they deposit their cache."
-msgstr "煙霧蛞蝓是一種多孔生物，能夠在白天吸入不可呼吸的<link=\"ELEMENTSGAS\">氣體</link>。\n\n在晚上，牠們會睡在<link=\"GASCONDUIT\">氣體管道</link>附近，向其中存放其吸收物。"
+msgstr "煙霧蛞蝓是一種多孔生物，能夠在白天吸入不可呼吸的<link=\"ELEMENTSGAS\">氣體</link>。\n\n在晚上，牠們會睡在<link=\"GASCONDUIT\">氣體管</link>附近，向其中存放其吸收物。"
 
 #. STRINGS.CREATURES.SPECIES.STATERPILLAR.VARIANT_GAS.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.STATERPILLAR.VARIANT_GAS.EGG_NAME"
@@ -36218,7 +36218,7 @@ msgstr "<link=\"STATERPILLAR\">海綿蛞蝓寶寶</link>"
 #. STRINGS.CREATURES.SPECIES.STATERPILLAR.VARIANT_LIQUID.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.STATERPILLAR.VARIANT_LIQUID.DESC"
 msgid "Sponge Slugs are thirsty creatures that soak up <link=\"ELEMENTSLIQUID\">Liquids</link> during the day.\n\nThey deposit their stored <link=\"ELEMENTSLIQUID\">Liquids</link> into the exposed <link=\"LIQUIDCONDUIT\">Liquid Pipes</link> they sleep next to at night."
-msgstr "海綿蛞蝓是一種缺水生物，能夠在白天吸收<link=\"ELEMENTSLIQUID\">液體</link>。\n\n在晚上睡覺時，牠們會將保存的<link=\"ELEMENTSLIQUID\">液體</link>存放到其附近的<link=\"LIQUIDCONDUIT\">液體管道</link>中。"
+msgstr "海綿蛞蝓是一種缺水生物，能夠在白天吸收<link=\"ELEMENTSLIQUID\">液體</link>。\n\n在晚上睡覺時，牠們會將保存的<link=\"ELEMENTSLIQUID\">液體</link>存放到其附近的<link=\"LIQUIDCONDUIT\">液體管</link>中。"
 
 #. STRINGS.CREATURES.SPECIES.STATERPILLAR.VARIANT_LIQUID.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.STATERPILLAR.VARIANT_LIQUID.EGG_NAME"
@@ -36660,15 +36660,40 @@ msgctxt "STRINGS.CREATURES.STATS.ROT.TOOLTIP"
 msgid "Food items become stale at fifty percent <style=\"KKeyword\">Freshness</style>, and rot at zero percent"
 msgstr "食物的<style=\"KKeyword\">新鮮</style>度降到 50% 時會變得不新鮮，在 0% 會腐爛"
 
+#. STRINGS.CREATURES.STATS.SCALEGROWTH.ANTLER
+msgctxt "STRINGS.CREATURES.STATS.SCALEGROWTH.ANTLER"
+msgid "Antler Growth"
+msgstr "鹿角生長"
+
+#. STRINGS.CREATURES.STATS.SCALEGROWTH.CROWN
+msgctxt "STRINGS.CREATURES.STATS.SCALEGROWTH.CROWN"
+msgid "Crest Growth"
+msgstr "冠羽生長"
+
+#. STRINGS.CREATURES.STATS.SCALEGROWTH.FEATHER
+msgctxt "STRINGS.CREATURES.STATS.SCALEGROWTH.FEATHER"
+msgid "Feather Growth"
+msgstr "羽毛生長"
+
+#. STRINGS.CREATURES.STATS.SCALEGROWTH.FUR
+msgctxt "STRINGS.CREATURES.STATS.SCALEGROWTH.FUR"
+msgid "Fur Growth"
+msgstr "皮毛生長"
+
 #. STRINGS.CREATURES.STATS.SCALEGROWTH.NAME
 msgctxt "STRINGS.CREATURES.STATS.SCALEGROWTH.NAME"
 msgid "Scale Growth"
-msgstr "毛髮生長"
+msgstr "鱗片生長"
+
+#. STRINGS.CREATURES.STATS.SCALEGROWTH.SCALE
+msgctxt "STRINGS.CREATURES.STATS.SCALEGROWTH.SCALE"
+msgid "Scale Growth"
+msgstr "鱗片生長"
 
 #. STRINGS.CREATURES.STATS.SCALEGROWTH.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATS.SCALEGROWTH.TOOLTIP"
 msgid "When growth reaches 100%, this critter can be shorn for {0}"
-msgstr "當生長達到 100% 時，這隻小動物可以剪毛以獲得{0}"
+msgstr "當生長達到 100% 時，可對此生物進行收穫，以獲得{0}"
 
 #. STRINGS.CREATURES.STATS.THERMALCONDUCTIVITYBARRIER.NAME
 msgctxt "STRINGS.CREATURES.STATS.THERMALCONDUCTIVITYBARRIER.NAME"
@@ -38193,12 +38218,12 @@ msgstr "這隻小動物試圖逃跑"
 #. STRINGS.CREATURES.STATUSITEMS.STUNTED_SCALE_GROWTH.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.STUNTED_SCALE_GROWTH.NAME"
 msgid "Stunted Scales"
-msgstr "毛髮停止生長"
+msgstr "鱗片發育不良"
 
 #. STRINGS.CREATURES.STATUSITEMS.STUNTED_SCALE_GROWTH.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.STUNTED_SCALE_GROWTH.TOOLTIP"
 msgid "This critter's <style=\"KKeyword\">Scale Growth</style> is being stunted by an unfavorable environment"
-msgstr "這隻小動物待在不喜愛的環境，會阻礙<style=\"KKeyword\">毛髮生長</style>"
+msgstr "由於環境條件不適，這隻小動物的<style=\"KKeyword\">鱗片生長</style>受到抑制"
 
 #. STRINGS.CREATURES.STATUSITEMS.SUFFOCATING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.SUFFOCATING.NAME"
@@ -61213,7 +61238,7 @@ msgstr "<link=\"GINGERCONFIG\">辛香根</link>"
 #. STRINGS.ITEMS.INGREDIENTS.KELP.DESC
 msgctxt "STRINGS.ITEMS.INGREDIENTS.KELP.DESC"
 msgid "The leaf of a <link=\"KELPPLANT\">Seakomb</link>.\n\nIt can be processed into <link=\"PHYTOOIL\">Phyto Oil</link> or used as an ingredient in <link=\"ANTIHISTAMINE\">Allergy Medication</link>."
-msgstr "<link=\"KELPPLANT\">海梳蕨</link>的葉子。\n\n它可以加工成<link=\"PHYTOOIL\">植物油</link>，或作為<link=\"ANTIHISTAMINE\">抗敏藥</link>的成分。"
+msgstr "<link=\"KELPPLANT\">海梳蕨</link>的葉子。\n\n它可以加工成<link=\"PHYTOOIL\">植物油</link>，或作為<link=\"ANTIHISTAMINE\">抗過敏藥</link>的成分。"
 
 #. STRINGS.ITEMS.INGREDIENTS.KELP.NAME
 msgctxt "STRINGS.ITEMS.INGREDIENTS.KELP.NAME"
@@ -61303,12 +61328,12 @@ msgstr "抑制和預防過敏反應。"
 #. STRINGS.ITEMS.PILLS.ANTIHISTAMINE.NAME
 msgctxt "STRINGS.ITEMS.PILLS.ANTIHISTAMINE.NAME"
 msgid "<link=\"ANTIHISTAMINE\">Allergy Medication</link>"
-msgstr "<link=\"ANTIHISTAMINE\">抗敏藥</link>"
+msgstr "<link=\"ANTIHISTAMINE\">抗過敏藥</link>"
 
 #. STRINGS.ITEMS.PILLS.ANTIHISTAMINE.RECIPEDESC
 msgctxt "STRINGS.ITEMS.PILLS.ANTIHISTAMINE.RECIPEDESC"
 msgid "A strong antihistamine Duplicants can take to halt an allergic reaction. <link=\"ANTIHISTAMINE\">Allergy Medication</link> will also prevent further reactions from occurring for a short time after ingestion."
-msgstr "強效抗過敏藥，可治療複製人的過敏反應。<link=\"ANTIHISTAMINE\">抗敏藥</link>在服用後，也可以在短時間內預防進一步的過敏反應。"
+msgstr "強效抗過敏藥，可治療複製人的過敏反應。<link=\"ANTIHISTAMINE\">抗過敏藥</link>在服用後，也可以在短時間內預防進一步的過敏反應。"
 
 #. STRINGS.ITEMS.PILLS.BASICBOOSTER.DESC
 msgctxt "STRINGS.ITEMS.PILLS.BASICBOOSTER.DESC"
@@ -72928,17 +72953,17 @@ msgstr "補給包裹"
 #. STRINGS.UI.CHANGEPERCYCLE
 msgctxt "STRINGS.UI.CHANGEPERCYCLE"
 msgid "Total change per cycle: {0}"
-msgstr "每周期變化：{0}"
+msgstr "每周期總變動：{0}"
 
 #. STRINGS.UI.CHANGEPERCYCLE_FRESH
 msgctxt "STRINGS.UI.CHANGEPERCYCLE_FRESH"
 msgid "Total change in freshness per cycle: {0}"
-msgstr "每個周期新鮮度的總變化：{0}"
+msgstr "每個周期新鮮度的總變動：{0}"
 
 #. STRINGS.UI.CHANGEPERSECOND
 msgctxt "STRINGS.UI.CHANGEPERSECOND"
 msgid "Change per second: {0}"
-msgstr "每秒變化：{0}"
+msgstr "每秒變動：{0}"
 
 #. STRINGS.UI.CHARACTERCONTAINER_ALL_MODELS
 msgctxt "STRINGS.UI.CHARACTERCONTAINER_ALL_MODELS"
@@ -73163,7 +73188,7 @@ msgstr "<b>全部剩餘質量</b>"
 #. STRINGS.UI.CLUSTERMAP.POI.ROCKETS_AT_THIS_LOCATION
 msgctxt "STRINGS.UI.CLUSTERMAP.POI.ROCKETS_AT_THIS_LOCATION"
 msgid "<b>Rockets at this location</b>"
-msgstr "<b>火箭在這裡</b>"
+msgstr "<b>本地點的火箭</b>"
 
 #. STRINGS.UI.CLUSTERMAP.POI.TITLE
 msgctxt "STRINGS.UI.CLUSTERMAP.POI.TITLE"
@@ -75213,7 +75238,7 @@ msgstr "格子繪製"
 #. STRINGS.UI.DEBUG_TOOLS.SAVE_BASE_TEMPLATE.BASE_GAME_FOLDER_NAME
 msgctxt "STRINGS.UI.DEBUG_TOOLS.SAVE_BASE_TEMPLATE.BASE_GAME_FOLDER_NAME"
 msgid "Base Game"
-msgstr "基地名稱"
+msgstr "基礎遊戲"
 
 #. STRINGS.UI.DEBUG_TOOLS.SAVE_BASE_TEMPLATE.CLEAR_BUTTON
 msgctxt "STRINGS.UI.DEBUG_TOOLS.SAVE_BASE_TEMPLATE.CLEAR_BUTTON"
