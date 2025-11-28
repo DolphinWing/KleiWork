@@ -90500,7 +90500,7 @@ msgstr ""
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.METALLICASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.METALLICASTEROIDFIELD.DESC"
-msgid "An asteroid field containing <link=\"IRON\">Iron</link>, <link=\"COPPER\">Copper</link> and <link=\"OBSIDIAN\">Obsidian</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
+msgid "An asteroid field containing <link=\"IRON\">Iron</link>, <link=\"COPPER\">Copper</link>, <link=\"LEAD\">Lead</link>, and <link=\"OBSIDIAN\">Obsidian</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
 msgstr ""
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.METALLICASTEROIDFIELD.NAME

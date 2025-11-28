@@ -21858,7 +21858,7 @@ msgstr "磚塊能跨越空隙，前往原本無法抵達的區域。"
 #. STRINGS.BUILDINGS.PREFABS.TILE.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.TILE.EFFECT"
 msgid "Used to build the walls and floors of rooms.\n\nIncreases Duplicant runspeed."
-msgstr "用於建造房間的牆壁與地板。\n\n提高複製人的跑速。"
+msgstr "用於建造房間的牆壁與地板。\n\n提高複製人的移動速度。"
 
 #. STRINGS.BUILDINGS.PREFABS.TILE.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.TILE.NAME"
@@ -25743,7 +25743,7 @@ msgstr "貨物可以透過連接補給傳送器上的<link=\"ELEMENTSGAS\">氣�
 #. STRINGS.CODEX.EXOBASESDLC1.PARAGRAPH_5
 msgctxt "STRINGS.CODEX.EXOBASESDLC1.PARAGRAPH_5"
 msgid "Retrieving resources from space requires mining a target mass using a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link>, then gathering the harvestable fragments with a cargo module designed for those materials. Cargo modules include <link=\"SOLIDCARGOBAYSMALL\">Cargo Bay</link>, <link=\"LIQUIDCARGOBAYCLUSTER\">Large Liquid Cargo Tank</link>, <link=\"GASCARGOBAYSMALL\">Gas Cargo Canister</link>, and more.\n\nFree-floating <link=\"SPACEARTIFACT\">Space Artifacts</link> and <link=\"DATABANK\">Data Bank</link>s can be gathered with an <link=\"ARTIFACTCARGOBAY\">Artifact Transport Module</link> or a <link=\"RESEARCHMODULE\">Research Module</link> respectively, no mining required."
-msgstr "從太空獲取資源需要使用裝備了<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link> 的火箭來開採目標物質塊，然後再用為該材料設計的貨物模組來收集可收穫的碎片。貨物模組包括 <link=\"SOLIDCARGOBAYSMALL\">貨艙</link>、<link=\"LIQUIDCARGOBAYCLUSTER\">大型液體貨艙</link>、<link=\"GASCARGOBAYSMALL\">氣體貨艙</link> 等。\n\n自由漂浮的 <link=\"SPACEARTIFACT\">太空文物</link>和<link=\"DATABANK\">資料磁片</link>可以分別透過<link=\"ARTIFACTCARGOBAY\">文物運輸模組</link>或<link=\"RESEARCHMODULE\">研究模組</link>來收集，無需開採。"
+msgstr "從太空獲取資源需要使用裝備了<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>的火箭來開採目標物質塊，然後使用專為該材料設計的貨物模組來收集可收穫的碎片。貨物模組包括<link=\"SOLIDCARGOBAYSMALL\">貨艙</link>、<link=\"LIQUIDCARGOBAYCLUSTER\">大型液體貨艙</link>、<link=\"GASCARGOBAYSMALL\">氣體貨艙</link> 等。\n\n自由漂浮的<link=\"SPACEARTIFACT\">太空文物</link>和<link=\"DATABANK\">資料磁片</link>可以分別透過<link=\"ARTIFACTCARGOBAY\">文物運輸模組</link>或<link=\"RESEARCHMODULE\">研究模組</link>來收集，無需開採。"
 
 #. STRINGS.CODEX.EXOBASESDLC1.TITLE
 msgctxt "STRINGS.CODEX.EXOBASESDLC1.TITLE"
@@ -46738,7 +46738,7 @@ msgstr "<link=\"BIONICSC1\">原理示意</link>"
 #. STRINGS.DUPLICANTS.ROLES.BIONICS_C2.DESCRIPTION
 msgctxt "STRINGS.DUPLICANTS.ROLES.BIONICS_C2.DESCRIPTION"
 msgid "Allows Bionic Duplicants to install an additional booster and increase their runspeed."
-msgstr "允許仿生複製人能安裝額外的加速器，藉此提升奔跑速度。"
+msgstr "允許仿生複製人能安裝額外的加速器，藉此提升移動速度。"
 
 #. STRINGS.DUPLICANTS.ROLES.BIONICS_C2.NAME
 msgctxt "STRINGS.DUPLICANTS.ROLES.BIONICS_C2.NAME"
@@ -71238,7 +71238,7 @@ msgstr "<link=\"RUST\">鐵鏽</link>與<link=\"RUSTDEOXIDIZER\">鐵鏽脫氧機<
 #. STRINGS.SUBWORLDS.SANDSTONE.DESC
 msgctxt "STRINGS.SUBWORLDS.SANDSTONE.DESC"
 msgid "The Sandstone Biome is a temperate oasis with few inherent dangers. It's the perfect spot to get your colony up and running."
-msgstr "沙岩生態系是一個溫和且有點危險的綠洲。\n是一個殖民地成長與運作的完美地點。"
+msgstr "沙岩生態系是一個溫和且有點危險的綠洲。是一個殖民地成長與運作的完美地點。"
 
 #. STRINGS.SUBWORLDS.SANDSTONE.NAME
 msgctxt "STRINGS.SUBWORLDS.SANDSTONE.NAME"
@@ -72263,7 +72263,7 @@ msgstr "複製人與朋友在<link=\"MULTIMINIONDININGTABLE\">公共餐桌</link
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.COOLANT
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.COOLANT"
 msgid "<b>{1}</b> of <style=\"KKeyword\">{0}</style> coolant is required to cool off an item produced by this building\n\nCoolant <style=\"KKeyword\">Temperature</style> increase is variable and dictated by the amount of energy needed to cool the produced item"
-msgstr "本建築生產的物品需 <b>{1}</b> <style=\"KKeyword\">{0}</style> 冷卻劑進行冷卻\n\n冷卻劑<style=\"KKeyword\">溫度</style>升高幅度是可變的，取決於冷卻該物品所需的能量"
+msgstr "此建築生產的物品需 <b>{1}</b> <style=\"KKeyword\">{0}</style> 冷卻劑進行冷卻\n\n冷卻劑<style=\"KKeyword\">溫度</style>升高幅度是可變的，取決於冷卻該物品所需的能量"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DECORDECREASED
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DECORDECREASED"
@@ -72278,32 +72278,32 @@ msgstr "在 <b>{1}</b> 格範圍內，<style=\"KKeyword\">裝飾</style>值 <b><
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DIET_ADDITIONAL_PRODUCED
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DIET_ADDITIONAL_PRODUCED"
 msgid "This critter gets bloated after eating and will produce {Items}"
-msgstr "這隻小動物進食後會膨脹，並會產生{Items}。"
+msgstr "這隻小動物進食後會鼓脹，並會產出{Items}。"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DIET_CONSUMED
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DIET_CONSUMED"
 msgid "This critter can typically consume these materials at the following rates:\n\n{Foodlist}"
-msgstr "這隻小動物通常會依下列速率消耗這些材料：\n\n{Foodlist}"
+msgstr "這隻小動物通常會依循下列速率消耗這些材料：\n\n{Foodlist}"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DIET_HEADER
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DIET_HEADER"
 msgid "Creatures will eat and digest only specific materials"
-msgstr "小動物會吃掉並消化特定的材料"
+msgstr "小動物只會攝食並消化特定的材料"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DIET_PRODUCED
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DIET_PRODUCED"
 msgid "This critter will \"produce\" the following materials:\n\n{Items}"
-msgstr "這隻小動物將「生產」以下材料：\n\n{Items}"
+msgstr "這隻小動物會「生產」以下材料：\n\n{Items}"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DISEASECONSUMEDPERUSE
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DISEASECONSUMEDPERUSE"
 msgid "Removes <style=\"consumed\">{0}</style> per use"
-msgstr "每次使用消耗 <style=\"consumed\">{0}</style>"
+msgstr "每次使用，移除 <style=\"consumed\">{0}</style>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DISEASEEMITTEDPERUSE
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DISEASEEMITTEDPERUSE"
 msgid "Produces <style=\"produced\">{1}</style> of <style=\"KKeyword\">{0}</style> per use"
-msgstr "每次使用生產 <style=\"produced\">{1}</style>的<style=\"KKeyword\">{0}</style>"
+msgstr "每次使用，產生 <style=\"produced\">{1}</style>的<style=\"KKeyword\">{0}</style>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DOCTORING
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DOCTORING"
@@ -72328,47 +72328,47 @@ msgstr "行動電源儲存了{0}<style=\"KKeyword\">電力</style>\n\n行動電�
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTCONSUMED
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTCONSUMED"
 msgid "Consumes <style=\"consumed\">{1}</style> of <style=\"KKeyword\">{0}</style> when in use"
-msgstr "使用時消耗 <style=\"consumed\">{1}</style> 的<style=\"KKeyword\">{0}</style>"
+msgstr "運作時，消耗 <style=\"consumed\">{1}</style> 的<style=\"KKeyword\">{0}</style>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTCONSUMEDPERUSE
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTCONSUMEDPERUSE"
 msgid "Consumes <style=\"consumed\">{1}</style> of <style=\"KKeyword\">{0}</style> per use"
-msgstr "每次使用消耗 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>"
+msgstr "每次使用，消耗 <style=\"consumed\">{1}</style> 的<style=\"KKeyword\">{0}</style>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_ENTITYTEMP
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_ENTITYTEMP"
 msgid "Produces <style=\"produced\">{1}</style> of <style=\"KKeyword\">{0}</style> when in use\n\nIt will be the <style=\"KKeyword\">Temperature</style> of the building at the time of production"
-msgstr "使用時生產 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n這是建築在生產時的<style=\"KKeyword\">溫度</style>"
+msgstr "運作時，產出 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n產物的<style=\"KKeyword\">溫度</style>將與生產時的建築物溫度一致"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_FIXEDTEMP
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_FIXEDTEMP"
 msgid "Produces <style=\"produced\">{1}</style> of <style=\"KKeyword\">{0}</style> when in use\n\nIt will be produced at <b>{2}</b>."
-msgstr "使用時生產 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n它會用<b>{2}</b>生產。"
+msgstr "運作時，產出 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n產物的溫度將固定為 <b>{2}</b>。"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_INPUTTEMP
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_INPUTTEMP"
 msgid "Produces <style=\"produced\">{1}</style> of <style=\"KKeyword\">{0}</style> when in use\n\nIt will be the combined <style=\"KKeyword\">Temperature</style> of the input materials."
-msgstr "使用時生產 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n它會加上輸入材料的<style=\"KKeyword\">溫度</style>。"
+msgstr "運作時，產出 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n產物的<style=\"KKeyword\">溫度</style>將是輸入材料綜合後的溫度。"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_MINORENTITYTEMP
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_MINORENTITYTEMP"
 msgid "Produces <style=\"produced\">{1}</style> of <style=\"KKeyword\">{0}</style> when in use\n\nIt will be at least <b>{2}</b>, or hotter if the building is hotter."
-msgstr "使用時生產 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n最小溫度為 <b>{2}</b>，如果建築變熱也會跟著升溫。"
+msgstr "運作時，產出 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n產物的溫度至少為 <b>{2}</b>，並會隨建築物溫度升高而升高。"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_MINTEMP
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_MINTEMP"
 msgid "Produces <style=\"produced\">{1}</style> of <style=\"KKeyword\">{0}</style> when in use\n\nIt will be at least <b>{2}</b>, or hotter if the input materials are hotter."
-msgstr "使用時生產 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n最小溫度為 <b>{2}</b>，如果輸入材料變熱也會跟著升溫。"
+msgstr "運作時，產出 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n產物的溫度至少為 <b>{2}</b>，並會隨輸入材料溫度升高而升高。"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_TOILET
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTED_TOILET"
 msgid "Produces <style=\"produced\">{1}</style> of <style=\"KKeyword\">{0}</style> per use\n\nDuplicant waste is emitted at <b>{2}</b>."
-msgstr "每次使用生產 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n複製人排泄時會釋放 <b>{2}</b>。"
+msgstr "每次使用，產出 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n複製人的排泄物溫度固定為 <b>{2}</b>。"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTEDPERUSE
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ELEMENTEMITTEDPERUSE"
 msgid "Produces <style=\"produced\">{1}</style> of <style=\"KKeyword\">{0}</style> per use\n\nIt will be the <style=\"KKeyword\">Temperature</style> of the input materials."
-msgstr "每次使用生產 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n它的溫度等於輸入材料的<style=\"KKeyword\">溫度</style>。"
+msgstr "每次使用，產出 <style=\"produced\">{1}</style> 的<style=\"KKeyword\">{0}</style>\n\n產物的<style=\"KKeyword\">溫度</style>將與輸入材料的溫度一致。"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ENABLESDOMESTICGROWTH
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ENABLESDOMESTICGROWTH"
@@ -72378,17 +72378,17 @@ msgstr "加速<style=\"KKeyword\">植物</style>生長和成熟"
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ENERGYCONSUMED
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ENERGYCONSUMED"
 msgid "Draws <style=\"consumed\">{0}</style> from the <style=\"KKeyword\">Power Grid</style> it's connected to"
-msgstr "消耗<style=\"KKeyword\">電力系統</style>中 <style=\"consumed\">{0}</style>的電力"
+msgstr "從所連接的<style=\"KKeyword\">電力系統</style>中，消耗 <style=\"consumed\">{0}</style> 電力"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ENERGYGENERATED
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ENERGYGENERATED"
 msgid "Produces <style=\"produced\">{0}</style> for the <style=\"KKeyword\">Power Grid</style> it's connected to"
-msgstr "供應 <style=\"produced\">{0}</style>的電力給<style=\"KKeyword\">電力系統</style>"
+msgstr "向所連接的<style=\"KKeyword\">電力系統</style>，輸出 <style=\"produced\">{0}</style> 電力"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.FABRICATES
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.FABRICATES"
 msgid "Fabrication is the production of items and equipment"
-msgstr "生產物品或裝備"
+msgstr "製造即為生產物品與設備的過程"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.FABRICATOR_INGREDIENTS
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.FABRICATOR_INGREDIENTS"
@@ -72398,7 +72398,7 @@ msgstr "成份：\n{0}"
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.FOOD_DEHYDRATOR_WATER_OUTPUT
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.FOOD_DEHYDRATOR_WATER_OUTPUT"
 msgid "This building dumps <style=\"KKeyword\">Water</style> on the floor while in use"
-msgstr "建築物在使用時將<style=\"KKeyword\">水</style>倒在地板上"
+msgstr "此建築物運作時，會將<style=\"KKeyword\">水</style>排放至地面"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.GASCOOLING
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.GASCOOLING"
@@ -72408,7 +72408,7 @@ msgstr "降低管道內<style=\"KKeyword\">氣體</style>的<style=\"KKeyword\">
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.GEYSER_DISEASE
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.GEYSER_DISEASE"
 msgid "<style=\"KKeyword\">{0}</style> germs are present in the output of this geyser"
-msgstr "<style=\"KKeyword\">{0}</style> 病菌存在於這個間歇泉的排放口"
+msgstr "此間歇泉的產物中存在<style=\"KKeyword\">{0}</style>病菌"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.GEYSER_PERIOD
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.GEYSER_PERIOD"
@@ -72473,7 +72473,7 @@ msgstr "這個間歇泉在 <b>{0}</b>後休眠"
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.GEYSER_YEAR_PERIOD
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.GEYSER_YEAR_PERIOD"
 msgid "This geyser will be active for <b>{0}</b> out of every <b>{1}</b>\n\nIt will be dormant the rest of the time"
-msgstr "這個間歇泉每隔 <b>{1}</b>將會噴發 <b>{0}</b>\n\n其它時間將會休眠"
+msgstr "這個間歇泉每隔 <b>{1}</b>將會噴發<b>{0}</b>\n\n其它時間將會休眠"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.GEYSER_YEAR_UNSTUDIED
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.GEYSER_YEAR_UNSTUDIED"
@@ -72528,17 +72528,17 @@ msgstr "{0}"
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.IN_ORBIT_REQUIRED
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.IN_ORBIT_REQUIRED"
 msgid "This building is only operational while its parent rocket is in flight"
-msgstr "這個建築只有在母火箭飛行時才能運作"
+msgstr "此建築物僅在其所屬火箭處於飛行狀態時才能運作"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ITEM_TEMPERATURE_ADJUST
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.ITEM_TEMPERATURE_ADJUST"
 msgid "Stored items will reach a <style=\"KKeyword\">Temperature</style> of <b>{0}</b> over time"
-msgstr "隨著時間經過，儲存物品的<style=\"KKeyword\">溫度</style>將達到 <b>{0}</b>"
+msgstr "儲存的物品<style=\"KKeyword\">溫度</style>將隨時間趨近於 <b>{0}</b>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.KETTLE_MELT_RATE
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.KETTLE_MELT_RATE"
 msgid "This building melts {0} of <style=\"KKeyword\">Ice</style> into {0} of cold ({1}) <style=\"KKeyword\">Water</style>\n\n<style=\"KKeyword\">Wood</style> consumption varies depending on the initial temperature of the <style=\"KKeyword\">Ice</style>"
-msgstr "這個建築將 {0}的<style=\"KKeyword\">冰</style>融化為 {0}的冷<style=\"KKeyword\">水</style>（{1}）\n\n<style=\"KKeyword\">木材</style>消耗會根據<style=\"KKeyword\">冰</style>的初始溫度變化"
+msgstr "此建築物將 {0}的<style=\"KKeyword\">冰</style>熔化為 {0}的冷<style=\"KKeyword\">水</style>（{1}）\n\n<style=\"KKeyword\">木材</style>消耗量會隨<style=\"KKeyword\">冰</style>的初始溫度而變化"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.LIQUIDCOOLING
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.LIQUIDCOOLING"
@@ -72548,12 +72548,12 @@ msgstr "降低管道內<style=\"KKeyword\">液體</style>的<style=\"KKeyword\">
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.MAX_BITS
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.MAX_BITS"
 msgid "Sending an <style=\"KKeyword\">Automation Signal</style> with a higher <style=\"KKeyword\">Bit Depth</style> than the connected <style=\"KKeyword\">Logic Wire</style> can result in damage to the circuit"
-msgstr "發出比<style=\"KKeyword\">訊號線</style>的<style=\"KKeyword\">位元深度</style>還高的<style=\"KKeyword\">自動化訊號</style>會使電路受損"
+msgstr "當傳輸的<style=\"KKeyword\">自動化訊號</style>其<style=\"KKeyword\">位元深度</style>超過連接的<style=\"KKeyword\">訊號線</style>時，可能導致訊號迴路受損"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.MAX_WATTAGE
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.MAX_WATTAGE"
 msgid "Drawing more than the maximum allowed <style=\"KKeyword\">Watts</style> can result in damage to the circuit"
-msgstr "用電量超過最大可負載<style=\"KKeyword\">瓦數</style>時，會導致電線受損"
+msgstr "當電力消耗超過最大允許<style=\"KKeyword\">瓦數</style>時，會導致電路受損"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.MESS_TABLE_SALT
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.MESS_TABLE_SALT"
@@ -72563,42 +72563,42 @@ msgstr "複製人在<link=\"REQUIREMENTCLASSDININGTABLETYPE\">餐桌</link>用�
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.MINIMUM_TEMP
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.MINIMUM_TEMP"
 msgid "Ceases to function when temperatures fall below <b>{0}</b>"
-msgstr "當周圍的溫度低於 <b>{0}</b> 時停止運作"
+msgstr "當溫度低於 <b>{0}</b> 時即停止運作"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.MOVEMENT_BONUS
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.MOVEMENT_BONUS"
 msgid "Increases the Runspeed of Duplicants"
-msgstr "增加複製人的移動速度"
+msgstr "提升複製人的移動速度"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.NOISE_POLLUTION_DECREASE
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.NOISE_POLLUTION_DECREASE"
 msgid "Dampens noise at <b>{0} dB</b> in a <b>{1}</b> tile radius"
-msgstr "減少噪音 <b>{0} 分貝</b>影響 <b>{1}</b> 格範圍"
+msgstr "在 <b>{1}</b> 格半徑範圍內，抑制噪音 <b>{0} dB</b>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.NOISE_POLLUTION_INCREASE
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.NOISE_POLLUTION_INCREASE"
 msgid "Produces noise at <b>{0} dB</b> in a <b>{1}</b> tile radius"
-msgstr "產生噪音 <b>{0} 分貝</b>影響 <b>{1}</b> 格範圍"
+msgstr "在 <b>{1}</b> 格半徑範圍內，產生 <b>{0} dB</b> 的噪音"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.OPERATIONEFFECTS
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.OPERATIONEFFECTS"
 msgid "The building will produce these effects when its requirements are met"
-msgstr "這建築所需要的條件達成後，即可進行生產"
+msgstr "當此建築物的運作條件被滿足時，將會產生這些效果"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.OPERATIONREQUIREMENTS
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.OPERATIONREQUIREMENTS"
 msgid "All requirements must be met in order for this building to operate"
-msgstr "這建築所有的必須條件都達成後，才會運作"
+msgstr "必須滿足所有條件，此建築物才能運作"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.OVER_PRESSURE_MASS
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.OVER_PRESSURE_MASS"
 msgid "Ceases to function when the surrounding mass is above <b>{0}</b>"
-msgstr "當周圍的質量高於 <b>{0}</b> 時停止運作"
+msgstr "當周圍質量高於 <b>{0}</b> 時即停止運作"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.OVERHEAT_TEMP
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.OVERHEAT_TEMP"
 msgid "Begins overheating at <b>{0}</b>"
-msgstr "在 <b>{0}</b> 會開始過熱"
+msgstr "超過 <b>{0}</b> 即開始過熱"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.PARTICLE_PORT_INPUT
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.PARTICLE_PORT_INPUT"
@@ -72613,7 +72613,7 @@ msgstr "這個建築配有<style=\"KKeyword\">輻射粒子</style>的發射端�
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.PLANTERBOX_PENTALTY
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.PLANTERBOX_PENTALTY"
 msgid "Plants grow more slowly when contained within boxes"
-msgstr "種植在種植箱內的植物生長速度較慢"
+msgstr "在種植箱中，植物生長速度會較慢"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.PREFERS_ROOM
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.PREFERS_ROOM"
@@ -72628,7 +72628,7 @@ msgstr "將這種材料精煉成<style=\"KKeyword\">{0}</style>"
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.PROCESSES
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.PROCESSES"
 msgid "Processes raw materials into refined materials"
-msgstr "加工材料變成精煉材料"
+msgstr "將原料加工為精煉材料"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.PRODUCES_RESEARCH_POINTS
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.PRODUCES_RESEARCH_POINTS"
@@ -73093,17 +73093,17 @@ msgstr "少量"
 #. STRINGS.UI.CLUSTERMAP.ASTEROIDS.ELEMENT_AMOUNTS.LOTS
 msgctxt "STRINGS.UI.CLUSTERMAP.ASTEROIDS.ELEMENT_AMOUNTS.LOTS"
 msgid "Plentiful"
-msgstr "豐富"
+msgstr "充裕"
 
 #. STRINGS.UI.CLUSTERMAP.ASTEROIDS.ELEMENT_AMOUNTS.SOME
 msgctxt "STRINGS.UI.CLUSTERMAP.ASTEROIDS.ELEMENT_AMOUNTS.SOME"
 msgid "Significant amount"
-msgstr "豐富"
+msgstr "大量"
 
 #. STRINGS.UI.CLUSTERMAP.ASTEROIDS.ELEMENT_AMOUNTS.VERY_LITTLE
 msgctxt "STRINGS.UI.CLUSTERMAP.ASTEROIDS.ELEMENT_AMOUNTS.VERY_LITTLE"
 msgid "Trace amount"
-msgstr "稀少"
+msgstr "微量"
 
 #. STRINGS.UI.CLUSTERMAP.ASTEROIDS.SURFACE_CONDITIONS.LIGHT
 msgctxt "STRINGS.UI.CLUSTERMAP.ASTEROIDS.SURFACE_CONDITIONS.LIGHT"
@@ -73133,7 +73133,7 @@ msgstr "元素"
 #. STRINGS.UI.CLUSTERMAP.HEXCELL_INVENTORY.DESC
 msgctxt "STRINGS.UI.CLUSTERMAP.HEXCELL_INVENTORY.DESC"
 msgid "Free-floating resources that can be gathered by a rocket equipped with a cargo module.\n\nAdditional resources may become available by <link=\"EXOBASESDLC1\">mining</link> other space POIs on the same hex cell."
-msgstr "自由漂浮的資源，可由裝備了貨艙模組的火箭收集。\n\n透過對同一星圖格上的其他太空興趣點進行<link=\"EXOBASESDLC1\">採礦</link>，可能會獲得額外的資源。"
+msgstr "自由漂浮的資源，可由配備貨物模組的火箭收集。\n\n透過<link=\"EXOBASESDLC1\">採礦</link>同一星圖格上的其他太空興趣點，可額外獲得更多資源。"
 
 #. STRINGS.UI.CLUSTERMAP.HEXCELL_INVENTORY.NAME
 msgctxt "STRINGS.UI.CLUSTERMAP.HEXCELL_INVENTORY.NAME"
@@ -89518,7 +89518,7 @@ msgstr "結凍辰砂星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC2CERESOREFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC2CERESOREFIELD.DESC"
 msgid "An asteroid field containing <link=\"CINNABAR\">Cinnabar</link>, <link=\"ICE\">Ice</link> and <link=\"MERCURY\">Mercury</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "包含<link=\"CINNABAR\">辰砂</link>、<link=\"ICE\">冰</link>和<link=\"MERCURY\">汞</link>的小行星場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"CINNABAR\">辰砂</link>、<link=\"ICE\">冰</link>和<link=\"MERCURY\">汞</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC2CERESOREFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC2CERESOREFIELD.NAME"
@@ -89558,7 +89558,7 @@ msgstr "熔融毀神星碎片"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4PREHISTORICMIXINGFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4PREHISTORICMIXINGFIELD.DESC"
 msgid "An asteroid field containing <link=\"NICKELORE\">Nickel Ore</link>, <link=\"PEAT\">Peat</link>, <link=\"AMBER\">Amber</link> and <link=\"SHALE\">Shale</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片小行星帶，含有<link=\"NICKELORE\">鎳礦</link>、<link=\"PEAT\">泥炭</link>、<link=\"AMBER\">琥珀</link>和<link=\"SHALE\">頁岩</link>。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"NICKELORE\">鎳礦</link>、<link=\"PEAT\">泥炭</link>、<link=\"AMBER\">琥珀</link>和<link=\"SHALE\">頁岩</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4PREHISTORICMIXINGFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4PREHISTORICMIXINGFIELD.NAME"
@@ -89578,7 +89578,7 @@ msgstr "琥珀礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.FORESTYOREFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.FORESTYOREFIELD.DESC"
 msgid "A field of harvestable resources containing <link=\"CARBONDIOXIDE\">Carbon Dioxide</link>, <link=\"IGNEOUSROCK\">Igneous Rock</link> and <link=\"ALUMINUMORE\">Aluminum Ore</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "可採集<link=\"CARBONDIOXIDE\">二氧化碳</link>、<link=\"IGNEOUSROCK\">火成岩</link>與<link=\"ALUMINUMORE\">鋁礦</link>的礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片可採集<link=\"CARBONDIOXIDE\">二氧化碳</link>、<link=\"IGNEOUSROCK\">火成岩</link>與<link=\"ALUMINUMORE\">鋁礦</link>的礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.FORESTYOREFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.FORESTYOREFIELD.NAME"
@@ -89588,7 +89588,7 @@ msgstr "森林礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.FROZENOREFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.FROZENOREFIELD.DESC"
 msgid "An asteroid field containing <link=\"DIRTYICE\">Polluted Ice</link>, <link=\"ICE\">Ice</link>, <link=\"SNOW\">Snow</link> and <link=\"ALUMINUMORE\">Aluminum Ore</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "含有<link=\"DIRTYICE\">汙冰</link>、<link=\"ICE\">冰</link>、<link=\"SNOW\">雪</link>與<link=\"ALUMINUMORE\">鋁礦</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"DIRTYICE\">汙冰</link>、<link=\"ICE\">冰</link>、<link=\"SNOW\">雪</link>與<link=\"ALUMINUMORE\">鋁礦</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.FROZENOREFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.FROZENOREFIELD.NAME"
@@ -89608,7 +89608,7 @@ msgstr "爆炸巨大星雲"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GILDEDASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GILDEDASTEROIDFIELD.DESC"
 msgid "An asteroid field containing <link=\"GOLD\">Gold</link>, <link=\"FULLERENE\">Fullerene</link>, <link=\"REGOLITH\">Regolith</link> and more.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "含有<link=\"GOLD\">金</link>、<link=\"FULLERENE\">富勒烯</link> 與 <link=\"REGOLITH\">表土</link>和其他東西的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"GOLD\">金</link>、<link=\"FULLERENE\">富勒烯</link> 與 <link=\"REGOLITH\">表土</link>和其他東西的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GILDEDASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GILDEDASTEROIDFIELD.NAME"
@@ -89618,7 +89618,7 @@ msgstr "鍍金小行星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GLIMMERINGASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GLIMMERINGASTEROIDFIELD.DESC"
 msgid "An asteroid field containing <link=\"TUNGSTEN\">Tungsten</link>, <link=\"WOLFRAMITE\">Wolframite</link> and more.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "含有<link=\"TUNGSTEN\">鎢</link>與<link=\"WOLFRAMITE\">黑鎢礦</link>和其他東西的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link> 需要一艘配備有 <link=\"NOSECONEHARVEST\">鑽頭鼻錐</link> 和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"TUNGSTEN\">鎢</link>與<link=\"WOLFRAMITE\">黑鎢礦</link>和其他東西的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link> 需要一艘配備有 <link=\"NOSECONEHARVEST\">鑽頭鼻錐</link> 和一個貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GLIMMERINGASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GLIMMERINGASTEROIDFIELD.NAME"
@@ -89648,7 +89648,7 @@ msgstr "爆炸的巨大冰礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.INTERSTELLARICEFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.INTERSTELLARICEFIELD.DESC"
 msgid "An asteroid field containing <link=\"ICE\">Ice</link>, <link=\"CARBONDIOXIDE\">Carbon Dioxide</link> and <link=\"OXYGEN\">Oxygen</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "含有<link=\"ICE\">冰</link>、<link=\"CARBONDIOXIDE\">二氧化碳</link>與<link=\"OXYGEN\">氧氣</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"ICE\">冰</link>、<link=\"CARBONDIOXIDE\">二氧化碳</link>與<link=\"OXYGEN\">氧氣</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.INTERSTELLARICEFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.INTERSTELLARICEFIELD.NAME"
@@ -89667,8 +89667,8 @@ msgstr "星際海洋"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.METALLICASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.METALLICASTEROIDFIELD.DESC"
-msgid "An asteroid field containing <link=\"IRON\">Iron</link>, <link=\"COPPER\">Copper</link> and <link=\"OBSIDIAN\">Obsidian</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "含有<link=\"IRON\">鐵</link>、<link=\"COPPER\">銅</link>與<link=\"OBSIDIAN\">黑曜石</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgid "An asteroid field containing <link=\"IRON\">Iron</link>, <link=\"COPPER\">Copper</link>, <link=\"LEAD\">Lead</link>, and <link=\"OBSIDIAN\">Obsidian</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
+msgstr "一片包含<link=\"IRON\">鐵</link>、<link=\"COPPER\">銅</link>、<link=\"LEAD\">鉛</link>與<link=\"OBSIDIAN\">黑曜石</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.METALLICASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.METALLICASTEROIDFIELD.NAME"
@@ -89698,7 +89698,7 @@ msgstr "有機物礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OXIDIZEDASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OXIDIZEDASTEROIDFIELD.DESC"
 msgid "An asteroid field containing <link=\"CARBONDIOXIDE\">Carbon Dioxide</link> and <link=\"RUST\">Rust</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片小行星礦場，含有<link=\"CARBONDIOXIDE\">二氧化碳</link>和<link=\"RUST\">鐵鏽</link>。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"CARBONDIOXIDE\">二氧化碳</link>和<link=\"RUST\">鐵鏽</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OXIDIZEDASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OXIDIZEDASTEROIDFIELD.NAME"
@@ -89708,7 +89708,7 @@ msgstr "氧化小行星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OXYGENRICHASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OXYGENRICHASTEROIDFIELD.DESC"
 msgid "An asteroid field containing <link=\"ICE\">Ice</link>, <link=\"CONTAMINATEDOXYGEN\">Polluted Oxygen</link> and <link=\"WATER\">Water</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "含有<link=\"ICE\">冰</link>、<link=\"CONTAMINATEDOXYGEN\">汙氧</link>與<link=\"WATER\">水</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"ICE\">冰</link>、<link=\"CONTAMINATEDOXYGEN\">汙氧</link>與<link=\"WATER\">水</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OXYGENRICHASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OXYGENRICHASTEROIDFIELD.NAME"
@@ -89728,7 +89728,7 @@ msgstr "{0}"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.RADIOACTIVEASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.RADIOACTIVEASTEROIDFIELD.DESC"
 msgid "An asteroid field containing <link=\"BLEACHSTONE\">Bleach Stone</link>, <link=\"RUST\">Rust</link>, <link=\"URANIUMORE\">Uranium Ore</link> and <link=\"SULFUR\">Sulfur</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片小行星帶，含有<link=\"BLEACHSTONE\">漂白石</link>，<link=\"RUST\">鐵鏽</link>，<link=\"URANIUMORE\">鈾礦</link>和<link=\"SULFUR\">硫</link>。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"BLEACHSTONE\">漂白石</link>，<link=\"RUST\">鐵鏽</link>，<link=\"URANIUMORE\">鈾礦</link>和<link=\"SULFUR\">硫</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.RADIOACTIVEASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.RADIOACTIVEASTEROIDFIELD.NAME"
@@ -89738,7 +89738,7 @@ msgstr "輻射小行星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.RADIOACTIVEGASCLOUD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.RADIOACTIVEGASCLOUD.DESC"
 msgid "A cloud of resources containing <link=\"CHLORINEGAS\">Chlorine Gas</link>, <link=\"URANIUMORE\">Uranium Ore</link> and <link=\"CARBONDIOXIDE\">Carbon Dioxide</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "含有<link=\"CHLORINEGAS\">氯氣</link>、<link=\"URANIUMORE\">鈾礦</link>與<link=\"CARBONDIOXIDE\">二氧化碳</link>的星雲。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"CHLORINEGAS\">氯氣</link>、<link=\"URANIUMORE\">鈾礦</link>與<link=\"CARBONDIOXIDE\">二氧化碳</link>的星雲。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.RADIOACTIVEGASCLOUD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.RADIOACTIVEGASCLOUD.NAME"
@@ -89748,7 +89748,7 @@ msgstr "輻射氣體星雲"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ROCKYASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ROCKYASTEROIDFIELD.DESC"
 msgid "An asteroid field containing <link=\"GRANITE\">Granite</link>, <link=\"KATAIRITE\">Abyssalite</link>, <link=\"SEDIMENTARYROCK\">Sedimentary Rock</link>, and <link=\"IGNEOUSROCK\">Igneous Rock</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "含有<link=\"GRANITE\">花崗岩</link>、<link=\"KATAIRITE\">深淵水晶</link>、<link=\"SEDIMENTARYROCK\">沉積岩</link>與<link=\"IGNEOUSROCK\">火成岩</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"GRANITE\">花崗岩</link>、<link=\"KATAIRITE\">深淵水晶</link>、<link=\"SEDIMENTARYROCK\">沉積岩</link>與<link=\"IGNEOUSROCK\">火成岩</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ROCKYASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ROCKYASTEROIDFIELD.NAME"
@@ -89758,7 +89758,7 @@ msgstr "岩石小行星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SALTYASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SALTYASTEROIDFIELD.DESC"
 msgid "A field of harvestable resources containing <link=\"SALTWATER\">Salt Water</link>,<link=\"BRINE\">Brine</link> and <link=\"CARBONDIOXIDE\">Carbon Dioxide</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一個可採集<link=\"SALTWATER\">鹽水</link>，<link=\"BRINE\">濃鹽水</link>與<link=\"CARBONDIOXIDE\">二氧化碳</link>的地方。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一個可採集<link=\"SALTWATER\">鹽水</link>，<link=\"BRINE\">濃鹽水</link>與<link=\"CARBONDIOXIDE\">二氧化碳</link>的礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SALTYASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SALTYASTEROIDFIELD.NAME"
@@ -89768,7 +89768,7 @@ msgstr "鹽鹽小行星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SANDYOREFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SANDYOREFIELD.DESC"
 msgid "An asteroid field containing <link=\"SANDSTONE\">Sandstone</link>, <link=\"ALGAE\">Algae</link>, <link=\"CUPRITE\">Copper Ore</link> and <link=\"SAND\">Sand</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "含有 <link=\"SANDSTONE\">沙岩</link>、<link=\"ALGAE\">藻類</link>、<link=\"CUPRITE\">銅礦</link>與<link=\"SAND\">沙子</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"SANDSTONE\">沙岩</link>、<link=\"ALGAE\">藻類</link>、<link=\"CUPRITE\">銅礦</link>與<link=\"SAND\">沙子</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SANDYOREFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SANDYOREFIELD.NAME"
@@ -89788,7 +89788,7 @@ msgstr "太空垃圾"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SWAMPYOREFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SWAMPYOREFIELD.DESC"
 msgid "An asteroid field containing <link=\"MUD\">Mud</link>, <link=\"TOXICSAND\">Polluted Dirt</link> and <link=\"COBALTITE\">Cobalt Ore</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "含有<link=\"MUD\">泥土</link>、<link=\"TOXICSAND\">汙土</link>與<link=\"COBALTITE\">鈷礦</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"MUD\">泥土</link>、<link=\"TOXICSAND\">汙土</link>與<link=\"COBALTITE\">鈷礦</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SWAMPYOREFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SWAMPYOREFIELD.NAME"
