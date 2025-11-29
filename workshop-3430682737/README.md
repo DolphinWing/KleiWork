@@ -1,27 +1,136 @@
+# Lore 故事背景
 
-日誌條目：第 1 周期。我的系統已在無多利亞（Voidria）啟動，這片由破碎小岩石群組成的荒蕪之地。感測器回報，環境極端惡劣：絕大多數區域都是真空，我們僅能依靠極其稀薄的空氣維生。最大的挑戰是，這裡沒有任何間歇泉。
+> [English Version](#voidria---eng---lore) | [中文版](#voidria---cht---lore)
 
-這意味著，資源極度稀缺且有限。除了起始基地附近殘存的少量資源，所有生命所需都必須從這些冰冷的岩石中費力開採，並嘗試開拓能自力生產的系統，否則無法長久維持。每一次氧氣流動，每一單位能量消耗，都在提醒我們存量正緩慢耗盡。
-
-最終指令的執行目前懸而未決。為了確立長遠目標，徹底了解無多利亞的潛力與危險至關重要。因此，複製人將被指派優先探索周邊岩石塊，搜尋任何潛在資訊或可利用的資源。這項任務需要最大化他們的潛力，而個體生命的耗盡，將被視為獲取這些關鍵數據的必要代價。
-
-Log Entry: Cycle 1. My systems have activated on Voidria, a desolate landscape composed of shattered asteroid fragments. Sensor readouts confirm an extreme environment: most areas are a vacuum, and we rely on extremely thin air within our temporary module for survival. The most fundamental challenge: there are no geysers anywhere on this world.
-
-This means resources are critically scarce and limited. Beyond the meager supplies near our initial base, all life-sustaining materials must be laboriously extracted from these cold rocks. To maintain long-term viability, we must establish self-sustaining production systems. Every breath of oxygen, every unit of energy consumed, reminds me of our rapidly depleting reserves.
-
-The ultimate directive remains pending. To fully assess Voidria's potential and hazards, a thorough exploration is paramount. Replicants will be prioritized for scouting surrounding rock formations, searching for any anomalies or viable resources. This requires maximizing each replicant's potential; the depletion of individual life signs will be recorded as a necessary cost for acquiring this critical data.
-
-Log End.
+### 🛑 System Boot Sequence... Initiated
+### ⚠️ Loading Planetary Log... Corrupted
 
 ---
 
-殖民地陷入了絕望的虛無中，資源稀缺而有限。
+<a name="voidria---eng---lore"></a>
 
-最殘酷的現實是，這裡並沒有間歇泉，已經切斷了所有維持生命的供給。
+## Voidria - The Fractured Cluster
 
-每個複製人，作為垂死機器中的一個活生生的齒輪，都必須工作至死，才能讓殖民地再次繁榮。
+**Log Entry: Cycle 1**
+My systems have reactivated on **Voidria**.
 
-一場與壓倒性逆境的絕望搏鬥，生存的本能驅使他們超越極限，只為換取一線微弱的希望。
+Sensor readouts confirm extreme environmental anomalies:
+* **Reality Boundaries**: Most sectors are hard vacuum. The surrounding rock faces exhibit unnatural **geometric flatness**, as if matter and space were violently truncated here, leaving behind an inexplicable void.
+* **Resource Index Error**: Scanner signals are highly unstable. No active geyser signatures detected on surface level.
+* **Bio-Isolation**: Flora and fauna templates are isolated on floating islands, resembling independent test units forgotten in the void, disconnected from one another.
+
+**WARNING: Critical Database Corruption.**
+
+The system executed a **Disaster Recovery** procedure on residual sectors. While some fragmented logs were retrieved, they are logically inconsistent and fail to match:
+
+> **[Recovered Segment @0x5F_2A1A - Lab Log]**
+> ```log
+> "...Project Ark... Isolation unit deployed... Vacuum stress test... Protocol forced..."
+> ```
+
+> **[Recovered Segment @0x9E_04CB - Audio Transcript]**
+> ```log
+> "...Warning! Gravitational Anchor [STATIC]... Failed! Repeat... Field containment lost...[DATA INTERRUPTED]..."
+> "...It's not working! [STATIC] reaction unstoppable... Tectonic plates are [STATIC]... Oh god, we are drifting into ..."
+> "...Structure disintegrating... Evacuate..."
+> ```
+
+> **[Recovered Segment @0x11_8F3C - Cargo Manifest]**
+> ```log
+> "...Valuation complete... High-value extraction 99%... Residuals deemed non-viable... Initiating orbital jettison..."
+> ```
+
+> **[SYSTEM FATAL ERROR @0x00_DEAD]**
+> ```log
+> [SYS_WARN] Heap fragmentation critical. Available physical memory < 1%.
+> [ERR] Allocation failed for object 'Terrain_Chunk_04'. Request denied.
+> [ERR] WorldGen: Topology generation aborted at coordinate [NaN, NaN].
+> [FATAL] System.OutOfMemoryException: The simulation has exceeded the allocated bounds.
+>    at WorldBuilder.ConstructTopology()
+>    at Sim.Physics.ComputeGravity()
+>    at Core.Bootstrap.Initia... <DATA_STREAM_INTERRUPTED>
+> ```
+
+**ALERT: Life Support Systems Countdown.**
+
+Error analysis skipped. No time to process historical data.
+Every unit of oxygen and power is depleting rapidly.
+
+**Directive:**
+Immediately inventory all available resources and environmental data.
+
+Duplicants will be assigned to prioritize exploration of surrounding debris, searching for any assets not purged by the system.
+
+> **Note: Command Override**
+> 
+> Standard "Personnel Safety Protocols" suspended.
+> Individual survival rates no longer limit command decisions—to ensure core function, any form of sacrifice is hereby permitted.
+
+---
+
+<a name="voidria---cht---lore"></a>
+
+## Voidria - 無多利亞 - 破碎星團
+
+**日誌條目：第 1 周期**
+
+我的系統已在**無多利亞**重新上線。
+
+感測器回報顯示環境極端異常：
+* **現實邊界**：絕大多數區域呈現真空狀態。周遭的岩石斷面呈現出不自然的**幾何平整**，物質與空間彷彿在這裡被暴力截斷，留下了無法解釋的虛無。
+* **資源索引錯誤**：掃描器訊號極度不穩定，地表偵測不到任何活躍的間歇泉訊號。
+* **生態隔離**：動植物樣本被孤立在漂浮島嶼上，如同被遺忘在虛空中的獨立測試單元，彼此互不相連。
+
+**警告：資料庫完整性嚴重受損。**
+
+系統對底層殘存磁區執行了**災難復原**程序。雖然成功檢索出部分破碎的日誌片段，但這些內容彼此邏輯矛盾，無法匹配：
+
+> **【修復片段 @0x5F_2A1A - 實驗日誌】**
+> ```log
+> 「...樣本方舟計畫...隔離區塊部署確認...真空環境極限測試...協議強制執行中...」
+> ```
+
+> **【修復片段 @0x9E_04CB - 音訊轉錄】**
+> ```log
+> 「...警告！引力錨[雜訊]...失效！重複...力場無法抑制...[數據中斷]」
+> 「...不行！[雜訊]反應停不下來...地殼板塊正在[雜訊]...天啊，我們正在飄進...」
+> 「...結構解體中...快撤離...」
+> ```
+
+> **【修復片段 @0x11_8F3C - 貨運清單】**
+> ```log
+> 「...價值評估完畢...高價值目標提取率 99%...剩餘殘渣判定無效益...執行軌道拋棄...」
+> ```
+
+> **【系統嚴重錯誤 @0x00_DEAD】**
+> ```log
+> [SYS_WARN] Heap fragmentation critical. Available physical memory < 1%.
+> [ERR] Allocation failed for object 'Terrain_Chunk_04'. Request denied.
+> [ERR] WorldGen: Topology generation aborted at coordinate [NaN, NaN].
+> [FATAL] System.OutOfMemoryException: The simulation has exceeded the allocated bounds.
+>    at WorldBuilder.ConstructTopology()
+>    at Sim.Physics.ComputeGravity()
+>    at Core.Bootstrap.Initia... <DATA_STREAM_INTERRUPTED>
+> ```
+
+**警報：維生系統倒數中**
+
+錯誤分析已略過。當前沒有時間處理歷史資料。
+每一單位的氧氣與電力都在急劇消耗。
+
+**指令：**
+盡速清點周遭可利用的資源與環境潛在資訊。
+
+複製人將被指派優先探索周邊岩石塊，搜尋任何未被系統刪除的物資。
+
+> **備註：指令覆寫**
+> 
+> 已暫停標準「人員安全保護協定」。
+> 個體存活率將不再限制指揮決策——為了確保核心運作，任何形式的犧牲皆已被允許。
+
+---
+
+# Steam intro
 
 Colony was plunged into a hopeless void, with resources scarce and limited. 
 
@@ -31,12 +140,22 @@ Each Duplicant, a living cog in a dying machine, MUST work to DEATH to make the 
 
 Against overwhelming odds, the desperate primal instinct for survival, driving them beyond their limits, for just a glimmer of hope.
 
+殖民地陷入了絕望的虛無中，資源稀缺而有限。
+
+最殘酷的現實是，這裡並沒有間歇泉，已經切斷了所有維持生命的供給。
+
+每個複製人，作為垂死機器中的一個活生生的齒輪，都必須工作至死，才能讓殖民地再次繁榮。
+
+一場與壓倒性逆境的絕望搏鬥，生存的本能驅使他們超越極限，只為換取一線微弱的希望。
+
 ---
 
-此星球生成啟發自空島生存，且支援所有DLC的動植物生態系。
-
-模組選項中可以調整生存補給資源量，與油田和鐵火山的生成。
+# Developer's Note
 
 The worldgen is inspired by SkyBlock Survival, and supports the flora and fauna ecosystem of all the DLCs.
 
-The amount of survival supply resources, as well as the generation of a oil field and a iron volcano, can be adjusted in the mod options.
+The amount of survival supply resources, as well as the generation of a oil field and a iron volcano, can be adjusted in the mod options. There are even more options for you to challenge.
+
+此星球生成啟發自空島生存，且支援所有 DLC 的動植物生態系。
+
+模組選項中可以調整生存補給資源量，與油田和鐵火山的生成等更多挑戰選項。
