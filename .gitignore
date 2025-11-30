@@ -24,3 +24,7 @@ tools/desktop-app/configs.ini
 # os temp files
 Thumbs.*
 .DS_Store*
+
+tmp
+output
+oni-assets/StreamingAssets/

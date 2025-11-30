@@ -129,25 +129,6 @@ Duplicants will be assigned to prioritize exploration of surrounding debris, sea
 > 個體存活率將不再限制指揮決策——為了確保核心運作，任何形式的犧牲皆已被允許。
 
 ---
-
-# Steam intro
-
-Colony was plunged into a hopeless void, with resources scarce and limited. 
-
-The cruelest reality was the stark truth: GEYSERS NOT INCLUDED, cutting off all vital supplies. 
-
-Each Duplicant, a living cog in a dying machine, MUST work to DEATH to make the colony thrive again. 
-
-Against overwhelming odds, the desperate primal instinct for survival, driving them beyond their limits, for just a glimmer of hope.
-
-殖民地陷入了絕望的虛無中，資源稀缺而有限。
-
-最殘酷的現實是，這裡並沒有間歇泉，已經切斷了所有維持生命的供給。
-
-每個複製人，作為垂死機器中的一個活生生的齒輪，都必須工作至死，才能讓殖民地再次繁榮。
-
-一場與壓倒性逆境的絕望搏鬥，生存的本能驅使他們超越極限，只為換取一線微弱的希望。
-
 ---
 
 # Developer's Note
