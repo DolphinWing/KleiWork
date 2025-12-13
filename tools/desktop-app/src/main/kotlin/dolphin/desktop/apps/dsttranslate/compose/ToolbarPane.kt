@@ -23,12 +23,13 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import dolphin.android.apps.dsttranslate.WordEntry
+import dolphin.desktop.apps.dsttranslate.AppStrings
 
 private val textMap = listOf(
-    Pair("old-text", AppTheme.AppColor.blue),
-    Pair("now-text", AppTheme.AppColor.purple),
-    Pair("old", AppTheme.AppColor.orange),
-    Pair("now", AppTheme.AppColor.green),
+    Pair(AppStrings.toolbar_old_text, AppTheme.AppColor.blue),
+    Pair(AppStrings.toolbar_now_text, AppTheme.AppColor.purple),
+    Pair(AppStrings.toolbar_old, AppTheme.AppColor.orange),
+    Pair(AppStrings.toolbar_now, AppTheme.AppColor.green),
 )
 
 interface ToolbarCallback {
@@ -56,7 +57,7 @@ fun ToolbarPane(
     ) {
         val changed = changedList?.filter { it > 0L } ?: arrayListOf()
         Text(
-            "all: ${filteredList?.size ?: 0}, changed: ${changed.size}",
+            AppStrings.toolbar_status(filteredList?.size ?: 0, changed.size),
             modifier = Modifier.weight(1f),
             fontSize = AppTheme.largerFontSize(),
             color = MaterialTheme.colors.onPrimary,

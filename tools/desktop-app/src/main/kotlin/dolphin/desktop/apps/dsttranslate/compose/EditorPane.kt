@@ -2,7 +2,6 @@ package dolphin.desktop.apps.dsttranslate.compose
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -39,7 +38,7 @@ import androidx.compose.ui.window.Dialog
 import dolphin.android.apps.dsttranslate.PoHelper
 import dolphin.android.apps.dsttranslate.WordEntry
 import dolphin.android.apps.dsttranslate.WordEntry.Companion.dropQuote
-import res.stringResource
+import dolphin.desktop.apps.dsttranslate.AppStrings
 
 private fun Color.tinted(visible: Boolean): Color = copy(alpha = if (visible) 1f else .25f)
 
@@ -91,7 +90,7 @@ fun EditorPane(
                 data.dst?.let { // new item has no previous for reference, need to check source
                     TooltipIconButton(
                         onClick = { dstVisible = !dstVisible },
-                        tooltip = "Source text"
+                        tooltip = AppStrings.tooltip_source_text
                     ) {
                         Icon(
                             Icons.Rounded.Visibility,
@@ -103,7 +102,7 @@ fun EditorPane(
             }
             TooltipIconButton(
                 onClick = { chsVisible = !chsVisible },
-                tooltip = "Now text"
+                tooltip = AppStrings.tooltip_now_text
             ) {
                 Icon(
                     Icons.Rounded.Visibility,
@@ -114,7 +113,7 @@ fun EditorPane(
             if (mode == PoHelper.Mode.DST) {
                 TooltipIconButton(
                     onClick = { chtVisible = !chtVisible },
-                    tooltip = "Traditional text"
+                    tooltip = AppStrings.tooltip_traditional_text
                 ) {
                     Icon(
                         Icons.Rounded.Visibility,
@@ -128,7 +127,7 @@ fun EditorPane(
         if (chsVisible) {
             TooltipButton(
                 onClick = { text = data.chs?.dropQuote() ?: "" },
-                tooltip = "Use this text",
+                tooltip = AppStrings.tooltip_use_this_text,
                 modifier = Modifier.fillMaxWidth(),
                 enabled = data.chs?.isNotEmpty() == true,
                 colors = ButtonDefaults.buttonColors(
@@ -142,7 +141,7 @@ fun EditorPane(
         if (mode == PoHelper.Mode.DST && chtVisible) {
             TooltipButton(
                 onClick = { text = data.cht?.dropQuote() ?: "" },
-                tooltip = "Use this text",
+                tooltip = AppStrings.tooltip_use_this_text,
                 modifier = Modifier.fillMaxWidth(),
                 enabled = data.cht?.isNotEmpty() == true,
                 colors = ButtonDefaults.buttonColors(
@@ -160,7 +159,7 @@ fun EditorPane(
                     Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                         TooltipTextButton(
                             onClick = { onCopyToClipboard?.invoke(old.origin()) },
-                            tooltip = "Copy original text",
+                            tooltip = AppStrings.tooltip_copy_original_text,
                             modifier = Modifier.weight(1f),
                             colors = ButtonDefaults.textButtonColors(
                                 contentColor = AppTheme.AppColor.orange,
@@ -174,14 +173,14 @@ fun EditorPane(
                         }
                         TooltipIconButton(
                             onClick = { onTranslate?.invoke(old.origin()) },
-                            tooltip = "Send to Google Translate",
+                            tooltip = AppStrings.tooltip_send_to_google_translate,
                         ) {
-                            Icon(Icons.Rounded.Translate, contentDescription = "Translate")
+                            Icon(Icons.Rounded.Translate, contentDescription = AppStrings.content_description_translate)
                         }
                     }
                     TooltipButton(
                         onClick = { text = old.string() },
-                        tooltip = "Use this text",
+                        tooltip = AppStrings.tooltip_use_this_text,
                         modifier = Modifier.fillMaxWidth(),
                         colors = ButtonDefaults.buttonColors(
                             backgroundColor = AppTheme.AppColor.orange,
@@ -224,7 +223,7 @@ fun EditorPane(
                         text += "msgstr \"${data.target.string()}\""
                         onCopyToClipboard?.invoke(text)
                     },
-                    tooltip = "Copy this text",
+                    tooltip = AppStrings.tooltip_copy_this_text,
                     modifier = Modifier.weight(1f),
                     colors = ButtonDefaults.textButtonColors(
                         contentColor = AppTheme.AppColor.green,
@@ -239,19 +238,19 @@ fun EditorPane(
 
                 TooltipIconButton(
                     onClick = { onCopyToClipboard?.invoke(data.target.origin()) },
-                    tooltip = "Copy original text"
+                    tooltip = AppStrings.tooltip_copy_original_text
                 ) {
                     Icon(Icons.Rounded.ContentCopy, contentDescription = null)
                 }
                 TooltipIconButton(
                     onClick = { onTranslate?.invoke(data.target.origin()) },
-                    tooltip = "Send to Google Translate"
+                    tooltip = AppStrings.tooltip_send_to_google_translate
                 ) {
                     Icon(Icons.Rounded.Translate, contentDescription = null)
                 }
                 TooltipIconButton(
                     onClick = { linkSelector = true },
-                    tooltip = "Show link",
+                    tooltip = AppStrings.tooltip_show_link,
                     enabled = links.count() > 0
                 ) {
                     Icon(Icons.Rounded.TextFields, contentDescription = null)
@@ -259,7 +258,7 @@ fun EditorPane(
             }
             TooltipButton(
                 onClick = { text = data.target.string() },
-                tooltip = "Use this text",
+                tooltip = AppStrings.tooltip_use_this_text,
                 modifier = Modifier.fillMaxWidth(),
                 colors = ButtonDefaults.buttonColors(backgroundColor = AppTheme.AppColor.green),
             ) {
@@ -281,13 +280,13 @@ fun EditorPane(
         Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
             TooltipIconButton(
                 onClick = { onCopyToClipboard?.invoke(text) },
-                tooltip = "Copy all"
+                tooltip = AppStrings.tooltip_copy_all
             ) {
                 Icon(Icons.Rounded.CopyAll, contentDescription = null)
             }
             TooltipIconButton(
                 onClick = { onCopyFromClipboard?.invoke()?.let { result -> text = result } },
-                tooltip = "Paste all"
+                tooltip = AppStrings.tooltip_paste_all
             ) {
                 Icon(Icons.Rounded.ContentPaste, contentDescription = null)
             }
@@ -296,11 +295,11 @@ fun EditorPane(
                 onClick = { onSave?.invoke(data.target.key, "\"$text\"") },
                 modifier = Modifier.weight(1f),
             ) {
-                Text(stringResource("Apply"))
+                Text(AppStrings.button_apply)
             }
             Spacer(modifier = Modifier.requiredWidth(16.dp))
             TextButton(onClick = { onCancel?.invoke() }) {
-                Text(stringResource("Cancel"))
+                Text(AppStrings.button_cancel)
             }
         }
     }
@@ -365,7 +364,8 @@ private fun AlertRegexLinkSelector(links: Sequence<MatchResult>, onSelected: (St
 @Preview
 private fun PreviewAlertRegexLinkSelector() {
     val regex = Regex("<link=([^>]+)>([^<]+)</link>")
-    val links = regex.findAll("The Moo Biome is the natural habitat of the charismatic <link=\\\"MOO\\\">Gassy Moo</link>, a great source of <link=\\\"METHANE\\\">Natural Gas</link>.")
+    val links =
+        regex.findAll("The Moo Biome is the natural habitat of the charismatic <link=\\\"MOO\\\">Gassy Moo</link>, a great source of <link=\\\"METHANE\\\">Natural Gas</link>.")
 
     DstTranslatorTheme {
         AlertRegexLinkSelector(

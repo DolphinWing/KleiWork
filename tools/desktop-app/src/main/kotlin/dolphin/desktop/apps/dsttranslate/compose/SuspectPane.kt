@@ -12,7 +12,7 @@ import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import dolphin.android.apps.dsttranslate.WordEntry
-import res.stringResource
+import dolphin.desktop.apps.dsttranslate.AppStrings
 
 sealed class SuspectData(
     val title: String? = null,
@@ -66,7 +66,7 @@ fun SuspectPane(
                 }
             }
             TextButton(onClick = onHide, modifier = Modifier.fillMaxWidth()) {
-                Text(stringResource("Close"))
+                Text(AppStrings.button_close)
             }
         }
     }

@@ -39,6 +39,7 @@ import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
 import dolphin.android.apps.dsttranslate.PoHelper
 import dolphin.android.apps.dsttranslate.WordEntry
+import dolphin.desktop.apps.dsttranslate.AppStrings
 import dolphin.desktop.apps.dsttranslate.DesktopPoHelper
 import dolphin.desktop.apps.dsttranslate.Ini
 import dolphin.desktop.apps.dsttranslate.PoDataModel
@@ -109,7 +110,7 @@ fun main(args: Array<String>) = application {
             }
         },
         state = windowState,
-        title = "ONI/DST PO Helper",
+        title = AppStrings.app_name,
         icon = BitmapPainter(useResource("nisbet_ponder.png", ::loadImageBitmap)),
     ) {
         App(
@@ -183,9 +184,9 @@ fun App(
                 cached = false // hide debug dialog
                 val (exported, cost) = model.save(cacheIt)
                 if (cost > 0) {
-                    toast("write $exported cost $cost ms")
+                    toast(AppStrings.toast_write_success(exported, cost))
                 } else {
-                    toast("write failed!")
+                    toast(AppStrings.toast_write_failed)
                 }
             }
         }
@@ -195,7 +196,7 @@ fun App(
                 override fun onRefresh() {
                     coroutineScope.launch {
                         val cost = model.translate()
-                        toast("cost $cost ms")
+                        toast(AppStrings.toast_cost_ms(cost))
                     }
                 }
 
@@ -213,7 +214,7 @@ fun App(
                         val result = model.analyze()
                         changeUiState(UiState.Analysis)
                         val cost = System.currentTimeMillis() - start
-                        toast("found $result, cost $cost ms")
+                        toast(AppStrings.toast_found_cost_ms(result, cost))
                     }
                 }
             }
@@ -291,7 +292,7 @@ fun App(
                 DebugSaveDialog(
                     onDismissRequest = { cached = false },
                     onSave = { saveEntryList(it) },
-                    title = "write to ${model.helper.getCachedFile(model.appMode.value)}?",
+                    title = AppStrings.debug_save_dialog_title(model.helper.getCachedFile(model.appMode.value).toString()),
                     modifier = Modifier.fillMaxWidth(.5f),
                 )
             }
@@ -353,13 +354,13 @@ private fun MainPane(
                     selected = selectedTab == 0,
                     onClick = { onTabChange?.invoke(0) },
                 ) {
-                    Text("Config", modifier = Modifier.padding(8.dp))
+                    Text(AppStrings.tab_config, modifier = Modifier.padding(8.dp))
                 }
                 Tab(
                     selected = selectedTab == 1,
                     onClick = { onTabChange?.invoke(1) },
                 ) {
-                    Text("Translation", modifier = Modifier.padding(8.dp))
+                    Text(AppStrings.tab_translation, modifier = Modifier.padding(8.dp))
                 }
             }
             Text(

@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dolphin.android.apps.dsttranslate.PoHelper
 import dolphin.android.apps.dsttranslate.WordEntry
+import dolphin.desktop.apps.dsttranslate.AppStrings
 import dolphin.desktop.apps.dsttranslate.PoDataModel
 
 @Composable
@@ -49,7 +50,7 @@ fun EntryListPane(
             spec = spec,
         )
         if (spec.enabled && (dataList.value.isEmpty())) {
-            Text("no items", modifier = Modifier.padding(8.dp), textAlign = TextAlign.Center)
+            Text(AppStrings.content_no_items, modifier = Modifier.padding(8.dp), textAlign = TextAlign.Center)
         }
         if (!spec.enabled) {
             Spacer(modifier = Modifier.requiredHeight(16.dp))

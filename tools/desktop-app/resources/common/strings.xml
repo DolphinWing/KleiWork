@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <resources>
-    <string name="app_name">ONI/DST PO Helper</string>
     <string name="replacement_3dot">…</string>
     <string name="replacement_left_bracket">「</string>
     <string name="replacement_right_bracket">」</string>
@@ -71,25 +71,22 @@
         <item>嗬|呼</item>
         <item>纔|才</item>
         <item>哥特|哥德</item>
-		<item>鹿角怪|獨眼巨鹿</item>
-		<item>漂浮飛魚|帕夫</item>
-		<item>噴浮飛魚|帕夫</item>
-		<item>浮油生物|小油怪</item>
-		<item>疫病章魚|莫布</item>
-		<item>鍬環田鼠|鑽地田鼠</item>
-		<item>浮土|表土</item>
-		<item>毛刺花|鬃花</item>
-		<item>錦葵|錦醇菇</item>
-		<item>冰息蘿蔔|冰樹</item>
-		<item>孢子蘭|惡魔花</item>
-		<item>複制人|複製人</item>
-		<item>氣壓服|太空衣</item>
-		<item>閾值|門檻</item>
-		<item>莊嚴科技|引力科技</item>
+        <item>鹿角怪|獨眼巨鹿</item>
+        <item>漂浮飛魚|帕夫</item>
+        <item>噴浮飛魚|帕夫</item>
+        <item>浮油生物|小油怪</item>
+        <item>疫病章魚|莫布</item>
+        <item>鍬環田鼠|鑽地田鼠</item>
+        <item>浮土|表土</item>
+        <item>毛刺花|鬃花</item>
+        <item>錦葵|錦醇菇</item>
+        <item>冰息蘿蔔|冰樹</item>
+        <item>孢子蘭|惡魔花</item>
+        <item>複制人|複製人</item>
+        <item>氣壓服|太空衣</item>
+        <item>閾值|門檻</item>
+        <item>莊嚴科技|引力科技</item>
         <item>牛脂|動物油脂</item>
-		<!--<item>無子|無籽</item>-->
+        <!--<item>無子|無籽</item>-->
     </string-array>
-    <string name="button_apply">Apply</string>
-    <string name="button_refresh">Refresh</string>
-    <string name="button_save">Save</string>
 </resources>

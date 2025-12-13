@@ -18,7 +18,7 @@
 
 ### 3. UI 與程式碼可讀性 (UI & Readability)
 
-- [ ] **升級本地化方案**: 將目前 `ResourceBundle` 和自定義 `strings.xml` 的作法，升級為 `moko-resources` 函式庫，以實現型別安全且符合 KMP 最佳實踐的跨平台資源管理。
+- [ ] **升級本地化方案**: 移除硬編碼 UI 字串，改用 `ResourceBundle` 和 Kotlin 包裝器 `AppStrings` 實現型別安全且外部可修改的 UI 字串本地化。將 UI 相關字串移至 `strings.properties`。保留 `resources/common/strings.xml` 作為 `DesktopPoHelper` 的 `replacement_list` 配置檔，並維持其外部可修改性。
 - [ ] **增加程式碼註解**: 在複雜的邏輯函式 (如 `analyzeText`) 中補充註解，說明其設計目的與演算法思路，方便未來維護。
 
 ### 4. 現代化與自動化 (Modernization & Automation)

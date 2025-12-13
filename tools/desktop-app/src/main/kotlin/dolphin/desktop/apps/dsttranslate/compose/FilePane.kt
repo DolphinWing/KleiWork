@@ -17,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.awt.ComposeWindow
 import androidx.compose.ui.graphics.Color
+import dolphin.desktop.apps.dsttranslate.AppStrings
 import java.io.File
 import javax.swing.JFileChooser
 import javax.swing.filechooser.FileFilter
@@ -59,7 +60,7 @@ fun FileChooserPane(
                     JFileChooser.FILES_ONLY -> Icons.Rounded.FileCopy
                     else -> Icons.Rounded.Folder
                 },
-                contentDescription = "Folder",
+                contentDescription = AppStrings.content_description_folder,
                 tint = MaterialTheme.colors.primary,
             )
         }
@@ -89,6 +90,6 @@ private fun PreviewFileChooserPane() {
 @Composable
 private fun PreviewThis() {
     DstTranslatorTheme {
-        Text("sample text")
+        Text("Sample Text")
     }
 }

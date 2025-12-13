@@ -36,9 +36,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import dolphin.android.apps.dsttranslate.WordEntry
+import dolphin.desktop.apps.dsttranslate.AppStrings
 import dolphin.desktop.apps.dsttranslate.PoDataModel
 import kotlinx.coroutines.launch
-import res.stringResource
 
 enum class SearchType {
     Key, Origin, Text,
@@ -81,13 +81,13 @@ fun SearchPane(
             onValueChange = { text -> refreshItems(text) },
             modifier = Modifier.fillMaxWidth(),
             colors = TextFieldDefaults.outlinedTextFieldColors(),
-            placeholder = { Text("text to search") },
+            placeholder = { Text(AppStrings.search_placeholder) },
             trailingIcon = {
                 Row {
                     IconButton(onClick = { last = data.value }) {
                         Icon(
                             Icons.Rounded.Save,
-                            contentDescription = "Cached",
+                            contentDescription = AppStrings.content_description_cached,
                             tint = if (data.value.isNotEmpty()) Color.Gray else Color.LightGray,
                         )
                     }
@@ -95,13 +95,13 @@ fun SearchPane(
                         IconButton(onClick = { refreshItems(last) }) {
                             Icon(
                                 Icons.Rounded.Replay,
-                                contentDescription = "Undo",
+                                contentDescription = AppStrings.content_description_undo,
                                 tint = if (last.isNotEmpty()) Color.Gray else Color.LightGray
                             )
                         }
                     }
                     IconButton(onClick = { refreshItems("") }) {
-                        Icon(Icons.Rounded.Clear, contentDescription = "Clear")
+                        Icon(Icons.Rounded.Clear, contentDescription = AppStrings.content_description_clear)
                     }
                 }
             },
@@ -123,7 +123,11 @@ fun SearchPane(
                         contentDescription = null
                     )
                     Text(
-                        type.name,
+                        when (type) {
+                            SearchType.Key -> AppStrings.search_type_key
+                            SearchType.Origin -> AppStrings.search_type_origin
+                            SearchType.Text -> AppStrings.search_type_text
+                        },
                         modifier = Modifier.padding(horizontal = 8.dp),
                         textAlign = TextAlign.Center,
                     )
@@ -158,10 +162,10 @@ fun SearchPane(
                     currentEntry ?: model.helper.allValues().find { entry -> entry.toSearchText() == data.value }
                 onSelect?.invoke(entry?.key() ?: "")
             }, modifier = Modifier.weight(1f)) {
-                Text(stringResource("Edit"))
+                Text(AppStrings.button_edit)
             }
             TextButton(onClick = { onCancel?.invoke() }, modifier = Modifier.weight(1f)) {
-                Text(stringResource("Cancel"))
+                Text(AppStrings.button_close)
             }
         }
     }

@@ -19,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import dolphin.android.apps.dsttranslate.PoHelper
+import dolphin.desktop.apps.dsttranslate.AppStrings
 import dolphin.desktop.apps.dsttranslate.Ini
 import java.io.File
 import javax.swing.JFileChooser
@@ -52,7 +53,7 @@ fun ConfigPane(
     } else ""
 
     Column {
-        Text("GitHub root", style = MaterialTheme.typography.caption)
+        Text(AppStrings.config_github_root, style = MaterialTheme.typography.caption)
         FileChooserPane(
             file = githubRoot,
             onFileChange = { file ->
@@ -71,7 +72,7 @@ fun ConfigPane(
             selectionMode = JFileChooser.DIRECTORIES_ONLY,
         )
 
-        Text("workshop dir", style = MaterialTheme.typography.caption)
+        Text(AppStrings.config_workshop_dir, style = MaterialTheme.typography.caption)
         FileChooserPane(
             file = configs.dstWorkshopDir,
             onFileChange = { file ->
@@ -81,7 +82,7 @@ fun ConfigPane(
             selectionMode = JFileChooser.DIRECTORIES_ONLY,
         )
         Spacer(modifier = Modifier.requiredHeight(4.dp))
-        Text("assets dir", style = MaterialTheme.typography.caption)
+        Text(AppStrings.config_assets_dir, style = MaterialTheme.typography.caption)
         FileChooserPane(
             file = configs.dstAssetsDir,
             onFileChange = { file ->
@@ -91,7 +92,7 @@ fun ConfigPane(
             selectionMode = JFileChooser.DIRECTORIES_ONLY,
         )
         Spacer(modifier = Modifier.requiredHeight(4.dp))
-        Text("ONI workshop dir", style = MaterialTheme.typography.caption)
+        Text(AppStrings.config_oni_workshop_dir, style = MaterialTheme.typography.caption)
         FileChooserPane(
             file = configs.oniWorkshopDir,
             onFileChange = { file ->
@@ -101,7 +102,7 @@ fun ConfigPane(
             selectionMode = JFileChooser.DIRECTORIES_ONLY,
         )
         Spacer(modifier = Modifier.requiredHeight(4.dp))
-        Text("ONI asset dir", style = MaterialTheme.typography.caption)
+        Text(AppStrings.config_oni_asset_dir, style = MaterialTheme.typography.caption)
         FileChooserPane(
             file = configs.oniAssetsDir,
             onFileChange = { file ->
@@ -112,7 +113,7 @@ fun ConfigPane(
         )
 
         Text(
-            "strings.xml: ${configs.stringMap}",
+            AppStrings.config_strings_xml(configs.stringMap),
             style = MaterialTheme.typography.body2,
             modifier = Modifier.clickable { visible = true }.padding(8.dp),
             color = if (configs.stringMap.isEmpty()) Color.Red else MaterialTheme.typography.caption.color,
@@ -130,13 +131,13 @@ fun ConfigPane(
                 onClick = { onModeChange?.invoke(PoHelper.Mode.DST) },
                 enabled = mode != PoHelper.Mode.DST,
             ) {
-                Text("Switch to DST mode")
+                Text(AppStrings.config_switch_to_dst_mode)
             }
             TextButton(
                 onClick = { onModeChange?.invoke(PoHelper.Mode.ONI) },
                 enabled = mode != PoHelper.Mode.ONI,
             ) {
-                Text("Switch to ONI mode")
+                Text(AppStrings.config_switch_to_oni_mode)
             }
         }
     }
