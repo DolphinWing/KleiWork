@@ -24,6 +24,17 @@ abstract class PoHelper {
     enum class Mode { DST, ONI }
 
     protected val replaceList = ArrayList<Pair<String, String>>()
+    private var replacementMap = mapOf<String, String>()
+    private var replacementRegex: Regex? = null
+
+    protected fun setupReplacements() {
+        replacementMap = replaceList.toMap()
+        if (replacementMap.isNotEmpty()) {
+            val regexPattern = replacementMap.keys.joinToString("|") { Regex.escape(it) }
+            replacementRegex = Regex(regexPattern)
+        }
+    }
+
     protected var replace3dot: String = ""
     private val replace6dot: String
         get() = "$replace3dot$replace3dot"
@@ -358,8 +369,10 @@ abstract class PoHelper {
             str = str.replace("...", replace3dot)
             str = if (str != "\"$replace6dot\"") str.replace(replace6dot, replace3dot) else str
         }
-        replaceList.forEach { (o, n) ->
-            str = str.replace(o, n)
+        replacementRegex?.let { regex ->
+            str = regex.replace(str) { matchResult ->
+                replacementMap[matchResult.value] ?: matchResult.value
+            }
         }
         if (mode == Mode.DST) {
             if (str.contains("\\\"")) {

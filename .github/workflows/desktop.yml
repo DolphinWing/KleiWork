@@ -18,11 +18,17 @@ jobs:
         working-directory: tools/desktop-app
 
     steps:
-    - uses: actions/checkout@v2
-    - name: set up JDK 17
-      uses: actions/setup-java@v2
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
       with:
         distribution: 'zulu'
         java-version: '17'
-    - name: Build with Gradle
-      run: ./gradlew assemble
+
+    - name: Setup Gradle and cache dependencies
+      uses: gradle/actions/setup-gradle@v3
+
+    - name: Build and test with Gradle
+      run: ./gradlew build

@@ -157,6 +157,7 @@ class DesktopPoHelper(val ini: Ini = Ini(), private val debug: Boolean = false) 
         replace3dot = replaceMap["replacement_3dot"] ?: ""
         replaceLeftBracket = replaceMap["replacement_left_bracket"] ?: ""
         replaceRightBracket = replaceMap["replacement_right_bracket"] ?: ""
+        setupReplacements()
     }
 
     override fun loadAssetFile(name: String, mode: Mode): ArrayList<WordEntry> {

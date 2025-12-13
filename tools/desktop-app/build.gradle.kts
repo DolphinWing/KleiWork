@@ -6,9 +6,10 @@ val releaseAppVersion = "3.1.1"
 val releaseAppRevision = SimpleDateFormat("yy.M.d").format(Date()) ?: "0"
 
 plugins {
-    kotlin("jvm")
-    id("org.jetbrains.compose")
-    id("org.jetbrains.kotlin.plugin.compose")
+    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.jetbrains.compose)
+    alias(libs.plugins.kotlin.plugin.compose)
+    alias(libs.plugins.versions.plugin)
 }
 
 group = "dolphin.desktop.apps"
@@ -27,7 +28,7 @@ dependencies {
     implementation(compose.uiTooling)
 
     // https://github.com/houbb/opencc4j
-    implementation("com.github.houbb:opencc4j:1.8.1")
+    implementation(libs.opencc4j)
 }
 
 compose.desktop {
@@ -65,5 +66,20 @@ compose.desktop {
         }
 
         args += listOf("v=$releaseAppVersion")
+    }
+}
+
+tasks.withType<com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask> {
+    rejectVersionIf {
+        isNonStable(candidate.version)
+    }
+
+    gradleReleaseChannel = "current"
+}
+
+fun isNonStable(version: String): Boolean {
+    val uppercaseVersion = version.uppercase()
+    return listOf("ALPHA", "BETA", "RC", "SNAPSHOT", "M", "DEV").any {
+        uppercaseVersion.contains(it)
     }
 }
