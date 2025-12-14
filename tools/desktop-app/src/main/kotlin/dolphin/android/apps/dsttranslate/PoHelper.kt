@@ -17,7 +17,7 @@ abstract class PoHelper {
         const val ONI_PO = "strings.po"
     }
 
-    protected val replaceList = ArrayList<Pair<String, String>>()
+    protected val replaceList: MutableList<Pair<String, String>> = mutableListOf()
     private var replacementMap = mapOf<String, String>()
     private var replacementRegex: Regex? = null
 
@@ -59,12 +59,7 @@ abstract class PoHelper {
      */
     fun translated(key: String): WordEntry? = translatedEntries[key]
 
-//    /**
-//     * @return all word entry in original map
-//     */
-//    fun dstValues(): List<WordEntry> = originMap.map { entry -> entry.value }
-
-    private val wordList = ArrayList<WordEntry>()
+    private val wordList: MutableList<WordEntry> = mutableListOf()
 
     /**
      * @return full word list entry
@@ -83,77 +78,75 @@ abstract class PoHelper {
      */
     abstract fun prepare()
 
-    protected fun loadFromReader(reader: BufferedReader): ArrayList<WordEntry> {
-        val list = ArrayList<WordEntry>()
+    protected fun loadFromReader(reader: BufferedReader): List<WordEntry> {
+        val list = mutableListOf<WordEntry>()
         try {
-            // do reading, usually loop until end of file reading
-            var line: String? = ""//reader.readLine()
-            while (line != null) {
-                val line1 = reader.readLine()
-                if (!line1.startsWith("#")) {
-                    // log("bypass $line1")
-                    continue //bypass some invalid header
-                }
-                var line2 = reader.readLine() // msgctxt
-                var line3 = reader.readLine()
-                while (!line3.startsWith("msgid")) {
-                    line2 = line2.dropLast(1) + line3.drop(1)
-                    line3 = reader.readLine()
-                }
-                var line4 = reader.readLine()
-                while (!line4.startsWith("msgstr")) {
-                    line3 = line3.dropLast(1) + line4.drop(1)
-                    line4 = reader.readLine()
-                }
-                line = reader.readLine()
-                while (!line.isNullOrEmpty()) {
-                    line4 = line4.dropLast(1) + line.drop(1)
-                    line = reader.readLine()
-                }
-                val entry = WordEntry.from(line1, line2, line3, line4)
-                if (entry != null) {
-                    list.add(entry)
-                } else {
-                    log("invalid input: $line1")
+            reader.use { r ->
+                var line = r.readLine()
+                while (line != null) {
+                    if (!line.startsWith("#")) {
+                        line = r.readLine()
+                        continue // bypass some invalid header
+                    }
+
+                    val line1 = line
+                    var line2 = r.readLine() ?: break // msgctxt
+                    var line3 = r.readLine()
+                    while (line3 != null && !line3.startsWith("msgid")) {
+                        line2 = line2.dropLast(1) + line3.drop(1)
+                        line3 = r.readLine()
+                    }
+                    if (line3 == null) break
+
+                    var line4 = r.readLine()
+                    while (line4 != null && !line4.startsWith("msgstr")) {
+                        line3 = line3.dropLast(1) + line4.drop(1)
+                        line4 = r.readLine()
+                    }
+                    if (line4 == null) break
+
+                    var currentLine = r.readLine()
+                    while (!currentLine.isNullOrEmpty()) {
+                        line4 = line4.dropLast(1) + currentLine.drop(1)
+                        currentLine = r.readLine()
+                    }
+
+                    WordEntry.from(line1, line2, line3, line4)?.let { entry ->
+                        list.add(entry)
+                    } ?: log("invalid input: $line1")
+
+                    line = currentLine // Continue from the line after the entry
                 }
             }
         } catch (e: Exception) {
             log("Exception: ${e.message}")
-        } finally {
-            try {
-                reader.close()
-            } catch (e: Exception) {
-                log("close: ${e.message}")
-            }
         }
         return list
     }
 
     private fun writeEntryToFile(
         output: File = getOutputFile(),
-        list: ArrayList<WordEntry> = wordList
+        list: List<WordEntry> = wordList
     ): Boolean {
         if (list.isEmpty()) return false // no list, don't write
-        val writer: BufferedWriter?
         try { // http://stackoverflow.com/a/1053474
-            writer = BufferedWriter(FileWriter(output, StandardCharsets.UTF_8))
-            var content = "\"Language: zh-tw\"\n\"POT Version: 2.0\"\n"
-            content += "Application: Oxygen Not Included\n"
-            content += "Last-Translator: DolphinWing\n"
-            content += "MIME-Version: 1.0\n"
-            content += "Content-Type: text/plain; charset=UTF-8\n"
-            writer.write(content, 0, content.length)
-            list.forEach { entry ->
-                val str = if (entry.str.startsWith("\"") && entry.str.endsWith("\"")) entry.str else "\"${entry.str}\""
-                content = "\n"
-                content += "#. ${entry.key}\n"
-                content += "msgctxt ${entry.text}\n"
-                content += "msgid ${templateMap[entry.key]?.id ?: entry.id}\n"
-                content += "msgstr ${str}\n"
-                writer.write(content, 0, content.length)
+            output.bufferedWriter(StandardCharsets.UTF_8).use { writer ->
+                writer.appendLine("\"Language: zh-tw\"")
+                writer.appendLine("\"POT Version: 2.0\"")
+                writer.appendLine("Application: Oxygen Not Included")
+                writer.appendLine("Last-Translator: DolphinWing")
+                writer.appendLine("MIME-Version: 1.0")
+                writer.appendLine("Content-Type: text/plain; charset=UTF-8")
+                list.forEach { entry ->
+                    val str =
+                        if (entry.str.startsWith("\"") && entry.str.endsWith("\"")) entry.str else "\"${entry.str}\""
+                    writer.newLine()
+                    writer.appendLine("#. ${entry.key}")
+                    writer.appendLine("msgctxt ${entry.text}")
+                    writer.appendLine("msgid ${templateMap[entry.key]?.id ?: entry.id}")
+                    writer.appendLine("msgstr $str")
+                }
             }
-            writer.close()
-            // writer = null
         } catch (e: Exception) {
             // e.printStackTrace()
             log("writeStringToFile: ${e.message}")
@@ -169,12 +162,7 @@ abstract class PoHelper {
      * @param name asset name
      * @return word entry list
      */
-    abstract fun loadAssetFile(name: String): ArrayList<WordEntry>
-
-//    fun runTranslation(postAction: ((timeCost: Long) -> Unit)? = null) {
-//        val cost = runBlocking { runTranslationProcess() }
-//        postAction?.let { action -> context.runOnUiThread { action(cost) } }
-//    }
+    abstract fun loadAssetFile(name: String): List<WordEntry>
 
     private val processStatus = MutableStateFlow("")
 
@@ -201,7 +189,7 @@ abstract class PoHelper {
         val chsPoFile = ONI_CHS_PO
         processStatus.emit("load $chsPoFile")
         val simplifiedEntries = loadAssetFile(chsPoFile)
-        simplifiedEntries.clear()
+        simplifiedMap.clear()
         simplifiedEntries.forEach { entry ->
             // entry.str = sc2tc(entry.str).trim() // translate to traditional
             simplifiedMap[entry.key] = entry
@@ -292,7 +280,7 @@ abstract class PoHelper {
      */
     suspend fun writeTranslationFile(
         output: File = getOutputFile(),
-        list: ArrayList<WordEntry> = wordList
+        list: List<WordEntry> = wordList
     ): Boolean = withContext(Dispatchers.IO) {
         loading.emit(true)
         val start = System.currentTimeMillis()
@@ -321,15 +309,9 @@ abstract class PoHelper {
      */
     abstract fun sc2tc(str: String): String
 
-    private fun refactor(src: String): String {
-        var str = src;
-        replacementRegex?.let { regex ->
-            str = regex.replace(str) { matchResult ->
-                replacementMap[matchResult.value] ?: matchResult.value
-            }
-        }
-        return str
-    }
+    private fun refactor(src: String): String = replacementRegex?.replace(src) {
+        replacementMap[it.value] ?: it.value
+    } ?: src
 
     /**
      * Build a list with changed entries

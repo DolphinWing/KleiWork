@@ -120,7 +120,6 @@ fun main(args: Array<String>) = application {
     }
 
     LaunchedEffect(Unit) {
-        // delay(500.milliseconds)
         val (position, size) = dataModel.loadIni() // LaunchedEffect
         windowState.position = position
         windowState.size = size
@@ -148,7 +147,6 @@ fun App(
         var cached by remember { mutableStateOf(false) }
         var selectedTab by remember { mutableStateOf(1) } // default to Translation tab
         val loading = dataModel.helper.loading.collectAsState()
-        val configs = dataModel.configs.collectAsState()
 
         // toast
         val toastJob = remember { mutableStateOf<Job?>(null) }
@@ -169,7 +167,6 @@ fun App(
         }
 
         fun showEntryEditor(entry: WordEntry) {
-            // println("edit: ${entry.key}")
             editorData = dataModel.requestEdit(entry)
             changeUiState(UiState.Editor)
         }
@@ -220,7 +217,7 @@ fun App(
                         callback = callback,
                         appVersion = if (debug) "${appVersion}D" else appVersion,
                         selectedTab = selectedTab,
-                        onTabChange = { coroutineScope.launch { selectedTab = it } },
+                        onTabChange = { selectedTab = it },
                     )
 
                 UiState.Editor ->
@@ -247,8 +244,6 @@ fun App(
                         model = dataModel,
                         modifier = Modifier.fillMaxSize(),
                         onSelect = { key ->
-                            // println("edit key = $key")
-                            // hideSearchPane()
                             dataModel.helper.translated(key)?.let { entry ->
                                 showEntryEditor(entry)
                             }
@@ -258,10 +253,11 @@ fun App(
             }
 
             if (cached) {
+                val file = dataModel.helper.getOutputFile(true)
                 DebugSaveDialog(
                     onDismissRequest = { cached = false },
                     onSave = { saveEntryList(it) },
-                    title = AppStrings.debug_save_dialog_title(dataModel.helper.getOutputFile(true).toString()),
+                    title = AppStrings.debug_save_dialog_title(file.toString()),
                     modifier = Modifier.fillMaxWidth(.5f),
                 )
             }
@@ -271,7 +267,7 @@ fun App(
                     Modifier.fillMaxSize().background(Color.Black.copy(alpha = .25f)),
                     contentAlignment = Alignment.Center,
                 ) {
-                    CircularProgressIndicator(color = MaterialTheme.colors.secondary)
+                    // CircularProgressIndicator(color = MaterialTheme.colors.secondary)
                 }
             }
 
@@ -293,15 +289,9 @@ private fun MainPane(
 ) {
     val composeScope = rememberCoroutineScope()
     val configs = model.configs.collectAsState()
-    // val enabled = model.helper.loading.collectAsState() // global status
-    var spec by remember { mutableStateOf(ToolbarSpec()) }
     val status = model.helper.status.collectAsState()
-
-    LaunchedEffect(Unit) {
-        model.helper.loading.collect { loading ->
-            spec = spec.copy(enabled = loading.not())
-        }
-    }
+    val loading by model.helper.loading.collectAsState()
+    val spec by remember(loading) { mutableStateOf(ToolbarSpec(enabled = !loading)) }
 
     Column(modifier = modifier) {
         Row(
@@ -310,7 +300,6 @@ private fun MainPane(
         ) {
             ScrollableTabRow(
                 selectedTabIndex = selectedTab,
-                // modifier = Modifier.defaultMinSize(minHeight = 36.dp),
                 backgroundColor = Color.Transparent, // MaterialTheme.colors.secondaryVariant,
                 contentColor = MaterialTheme.colors.onSecondary,
                 modifier = Modifier.weight(1f),
@@ -381,9 +370,13 @@ fun copyToSystemClipboard(text: String) {
  * See https://stackoverflow.com/q/11596368
  */
 fun copyFromSystemClipboard(): String {
-    val clipboard: Clipboard = Toolkit.getDefaultToolkit().systemClipboard
-    // println("get data: ${clipboard.getData(DataFlavor.stringFlavor)}")
-    return clipboard.getData(DataFlavor.stringFlavor).toString()
+    return try {
+        val clipboard: Clipboard = Toolkit.getDefaultToolkit().systemClipboard
+        clipboard.getData(DataFlavor.stringFlavor).toString()
+    } catch (e: Exception) {
+        println("copyFromSystemClipboard: ${e.message}")
+        ""
+    }
 }
 
 /**

@@ -26,8 +26,8 @@ import dolphin.desktop.apps.dsttranslate.AppStrings
 
 private val textMap = listOf(
     Pair(AppStrings.toolbar_template_text, AppTheme.AppColor.purple),
-    Pair(AppStrings.toolbar_old_translated, AppTheme.AppColor.orange),
     Pair(AppStrings.toolbar_simplified_text, AppTheme.AppColor.blue),
+    Pair(AppStrings.toolbar_old_translated, AppTheme.AppColor.orange),
     Pair(AppStrings.toolbar_now_translated, AppTheme.AppColor.green),
 )
 

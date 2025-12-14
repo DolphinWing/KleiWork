@@ -147,9 +147,14 @@ class DesktopPoHelper(val ini: Ini = Ini(), private val debug: Boolean = false) 
         loadXmlBySax(findReplacementXml())
         replaceList.clear() // reset list from loading XML
         replaceMap.filter { entry -> entry.key.startsWith("entry-") }
-            .map { entry ->
-                val pair = entry.value.split("|")
-                Pair(pair[0], pair[1])
+            .mapNotNull { entry ->
+                val pair = entry.value.split('|')
+                if (pair.size >= 2) {
+                    Pair(pair[0], pair[1])
+                } else {
+                    log("Invalid replacement entry: key=${entry.key}, value='${entry.value}'. Must contain a '|'.")
+                    null
+                }
             }
             .forEach { entry -> replaceList.add(entry) }
         // println("replace list: ${replaceList.size}")
@@ -159,15 +164,15 @@ class DesktopPoHelper(val ini: Ini = Ini(), private val debug: Boolean = false) 
         setupReplacements()
     }
 
-    override fun loadAssetFile(name: String): ArrayList<WordEntry> {
+    override fun loadAssetFile(name: String): List<WordEntry> {
         if (name == ONI_PO) return loadFile(ini.oniWorkshopDir, name)
         return loadFile(ini.oniAssetsDir, name)
     }
 
-    private fun loadFile(dir: String, name: String): ArrayList<WordEntry> {
+    private fun loadFile(dir: String, name: String): List<WordEntry> {
         log("load asset: $dir${File.separator}$name")
         val file = File(dir, name)
-        val list: ArrayList<WordEntry> = if (file.exists()) try {
+        val list: List<WordEntry> = if (file.exists()) try {
             // Read UTF-8 https://stackoverflow.com/a/14918597
             val reader = BufferedReader(InputStreamReader(FileInputStream(file), StandardCharsets.UTF_8))
             loadFromReader(reader)
