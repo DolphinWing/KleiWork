@@ -37,7 +37,6 @@ import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.WindowPosition
 import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
-import dolphin.android.apps.dsttranslate.PoHelper
 import dolphin.android.apps.dsttranslate.WordEntry
 import dolphin.desktop.apps.dsttranslate.AppStrings
 import dolphin.desktop.apps.dsttranslate.DesktopPoHelper
@@ -45,13 +44,11 @@ import dolphin.desktop.apps.dsttranslate.Ini
 import dolphin.desktop.apps.dsttranslate.PoDataModel
 import dolphin.desktop.apps.dsttranslate.compose.ConfigPane
 import dolphin.desktop.apps.dsttranslate.compose.DebugSaveDialog
-import dolphin.desktop.apps.dsttranslate.compose.DstTranslatorTheme
+import dolphin.desktop.apps.dsttranslate.compose.OniTranslatorTheme
 import dolphin.desktop.apps.dsttranslate.compose.EditorPane
 import dolphin.desktop.apps.dsttranslate.compose.EditorSpec
 import dolphin.desktop.apps.dsttranslate.compose.EntryListPane
 import dolphin.desktop.apps.dsttranslate.compose.SearchPane
-import dolphin.desktop.apps.dsttranslate.compose.SuspectData
-import dolphin.desktop.apps.dsttranslate.compose.SuspectPane
 import dolphin.desktop.apps.dsttranslate.compose.ToastUi
 import dolphin.desktop.apps.dsttranslate.compose.ToolbarCallback
 import dolphin.desktop.apps.dsttranslate.compose.ToolbarSpec
@@ -67,7 +64,7 @@ import java.io.File
 import java.net.URL
 
 enum class UiState {
-    Main, Editor, Search, Analysis,
+    Main, Editor, Search,
 }
 
 @ExperimentalMaterialApi
@@ -86,7 +83,7 @@ fun main(args: Array<String>) = application {
 //    val homeDir: String = System.getProperty("user.home")
 //    println("homeDir = $homeDir")
 
-    val model = remember {
+    val dataModel = remember {
         val workingDir: String = System.getProperties().getProperty("user.dir")
         println("workingDir = $workingDir")
 
@@ -104,7 +101,7 @@ fun main(args: Array<String>) = application {
         onCloseRequest = {
             coroutineScope.launch {
                 println("close window: save")
-                model.rememberLastWindowState(windowState)
+                dataModel.rememberLastWindowState(windowState)
                 println("close window: exit")
                 exitApplication()
             }
@@ -114,7 +111,7 @@ fun main(args: Array<String>) = application {
         icon = BitmapPainter(useResource("nisbet_ponder.png", ::loadImageBitmap)),
     ) {
         App(
-            model,
+            dataModel,
             onCopyTo = ::copyToSystemClipboard,
             onCopyFrom = ::copyFromSystemClipboard,
             debug = debugMode,
@@ -124,7 +121,7 @@ fun main(args: Array<String>) = application {
 
     LaunchedEffect(Unit) {
         // delay(500.milliseconds)
-        val (position, size) = model.loadIniAndPo() // LaunchedEffect
+        val (position, size) = dataModel.loadIni() // LaunchedEffect
         windowState.position = position
         windowState.size = size
     }
@@ -134,7 +131,7 @@ fun main(args: Array<String>) = application {
 @Composable
 @Preview
 fun App(
-    model: PoDataModel,
+    dataModel: PoDataModel,
     onCopyTo: (String) -> Unit,
     onCopyFrom: () -> String,
     debug: Boolean = false,
@@ -142,18 +139,16 @@ fun App(
 ) {
     val coroutineScope = rememberCoroutineScope()
 
-    DstTranslatorTheme {
+    OniTranslatorTheme {
         var uiState by remember { mutableStateOf<Pair<UiState, UiState?>>(Pair(UiState.Main, null)) }
         val entryListState = rememberLazyListState()
-        val suspectState = rememberLazyListState()
-        var suspectList by remember { mutableStateOf(emptyList<SuspectData>()) }
 
         var editorData by remember { mutableStateOf(EditorSpec()) } // editor
-
         var toasted by remember { mutableStateOf("") }
         var cached by remember { mutableStateOf(false) }
         var selectedTab by remember { mutableStateOf(1) } // default to Translation tab
-        val loading = model.helper.loading.collectAsState()
+        val loading = dataModel.helper.loading.collectAsState()
+        val configs = dataModel.configs.collectAsState()
 
         // toast
         val toastJob = remember { mutableStateOf<Job?>(null) }
@@ -175,14 +170,14 @@ fun App(
 
         fun showEntryEditor(entry: WordEntry) {
             // println("edit: ${entry.key}")
-            editorData = model.requestEdit(entry)
+            editorData = dataModel.requestEdit(entry)
             changeUiState(UiState.Editor)
         }
 
         fun saveEntryList(cacheIt: Boolean = false) {
             coroutineScope.launch {
                 cached = false // hide debug dialog
-                val (exported, cost) = model.save(cacheIt)
+                val (exported, cost) = dataModel.save(cacheIt)
                 if (cost > 0) {
                     toast(AppStrings.toast_write_success(exported, cost))
                 } else {
@@ -195,7 +190,7 @@ fun App(
             object : ToolbarCallback {
                 override fun onRefresh() {
                     coroutineScope.launch {
-                        val cost = model.translate()
+                        val cost = dataModel.translate()
                         toast(AppStrings.toast_cost_ms(cost))
                     }
                 }
@@ -207,35 +202,18 @@ fun App(
                 override fun onSearch() {
                     changeUiState(UiState.Search)
                 }
-
-                override fun onAnalyze() {
-                    coroutineScope.launch {
-                        val start = System.currentTimeMillis()
-                        val result = model.analyze()
-                        changeUiState(UiState.Analysis)
-                        val cost = System.currentTimeMillis() - start
-                        toast(AppStrings.toast_found_cost_ms(result, cost))
-                    }
-                }
             }
         }
 
         LaunchedEffect(Unit) {
-            model.suspectMap.collect { suspects ->
-                val list = ArrayList<SuspectData>()
-                suspects.forEach { (category, map) ->
-                    list.add(SuspectData.Category(category))
-                    map.forEach { entry -> list.add(SuspectData.Entry(entry)) }
-                }
-                suspectList = list
-            }
+            dataModel.loadIniAndPo()
         }
 
         Box {
             when (uiState.first) {
                 UiState.Main ->
                     MainPane(
-                        model,
+                        dataModel,
                         modifier = Modifier.fillMaxSize(),
                         state = entryListState,
                         onEdit = { entry -> showEntryEditor(entry) },
@@ -251,7 +229,7 @@ fun App(
                         modifier = Modifier.fillMaxSize(),
                         onSave = { key, text ->
                             coroutineScope.launch {
-                                model.edit(key, text)
+                                dataModel.edit(key, text)
                                 changeUiState() // hideEntryEditor
                             }
                         },
@@ -260,31 +238,22 @@ fun App(
                             onCopyTo.invoke(text)
                             toast(text)
                         },
-                        onTranslate = { text -> translateByGoogle(text) },
+                        // onTranslate = { text -> translateByGoogle(text) },
                         onCopyFromClipboard = onCopyFrom,
-                        mode = model.appMode.value,
                     )
 
                 UiState.Search ->
                     SearchPane(
-                        model = model,
+                        model = dataModel,
                         modifier = Modifier.fillMaxSize(),
                         onSelect = { key ->
                             // println("edit key = $key")
                             // hideSearchPane()
-                            model.helper.dst(key)?.let { entry ->
+                            dataModel.helper.translated(key)?.let { entry ->
                                 showEntryEditor(entry)
                             }
                         },
                         onCancel = { changeUiState() /* BACK */ },
-                    )
-
-                UiState.Analysis ->
-                    SuspectPane(
-                        suspectList = suspectList,
-                        state = suspectState,
-                        onEdit = { entry -> showEntryEditor(entry) },
-                        onHide = { changeUiState() /* BACK */ },
                     )
             }
 
@@ -292,7 +261,7 @@ fun App(
                 DebugSaveDialog(
                     onDismissRequest = { cached = false },
                     onSave = { saveEntryList(it) },
-                    title = AppStrings.debug_save_dialog_title(model.helper.getCachedFile(model.appMode.value).toString()),
+                    title = AppStrings.debug_save_dialog_title(dataModel.helper.getOutputFile(true).toString()),
                     modifier = Modifier.fillMaxWidth(.5f),
                 )
             }
@@ -324,17 +293,13 @@ private fun MainPane(
 ) {
     val composeScope = rememberCoroutineScope()
     val configs = model.configs.collectAsState()
-    val mode = model.appMode.collectAsState()
     // val enabled = model.helper.loading.collectAsState() // global status
-    var spec by remember { mutableStateOf(ToolbarSpec(enableAnalyze = true)) }
+    var spec by remember { mutableStateOf(ToolbarSpec()) }
     val status = model.helper.status.collectAsState()
 
     LaunchedEffect(Unit) {
         model.helper.loading.collect { loading ->
-            spec = spec.copy(
-                enabled = loading.not(),
-                enableAnalyze = model.appMode.value == PoHelper.Mode.DST,
-            )
+            spec = spec.copy(enabled = loading.not())
         }
     }
 
@@ -378,10 +343,6 @@ private fun MainPane(
                         configs = configs.value,
                         onConfigChange = { newConfigs ->
                             composeScope.launch { model.saveConfig(newConfigs) }
-                        },
-                        mode = mode.value,
-                        onModeChange = { mode ->
-                            composeScope.launch { model.loadIniAndPo(mode) }
                         },
                     )
 

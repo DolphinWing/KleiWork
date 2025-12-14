@@ -4,10 +4,6 @@
     <string name="replacement_left_bracket">「</string>
     <string name="replacement_right_bracket">」</string>
     <string-array name="replacement_list">
-        <item>威爾遜|威爾森</item>
-        <item>沃爾夫岡|沃夫岡</item>
-        <item>韋斯|維斯</item>
-        <item>薇克伯頓|薇克巴頓</item>
         <item>晒|曬</item>
         <!--<item>濕|溼</item>-->
         <item>卧槽|草泥馬</item>
@@ -16,8 +12,6 @@
         <item>里面|裡面</item>
         <item>海里|海裡</item>
         <item>粘|黏</item>
-        <item>考拉象|無尾象</item>
-        <item>帕格納|普格納</item>
         <item>土豆|馬鈴薯</item>
         <item>皮膚物品|造型物品</item>
         <item>面板物品|造型物品</item>
@@ -32,18 +26,15 @@
         <item>胡里花哨|花俏</item>
         <item>花哨|花俏</item>
         <item>意大利|義大利</item>
-        <item>皮弗婁牛|野牛</item>
         <item>曲奇餅|餅乾</item>
         <item>噠|答</item>
         <item>評委|評審</item>
-        <item>阿斯加德|阿斯嘉</item>
         <item>揹|背</item>
         <item>蛋清|蛋白</item>
-        <item>沙羅曼蛇|沙拉蠑螈</item>
         <item>神秘|神祕</item>
         <item>誒|欸</item>
         <!--<item>籽|子</item>-->
-        <item>熒光果|螢光果</item>
+        <item>熒光|螢光</item>
         <item>乾凈|乾淨</item>
         <item>裝璜|裝潢</item>
         <item>艷|豔</item>
@@ -59,7 +50,6 @@
         <item>嗒|答</item>
         <item>嗞|滋</item>
         <item>嗶|逼</item>
-        <item>神龕|祭壇</item>
         <item>攢|累積</item>
         <item>迹|跡</item>
         <item>嚓|喳</item>
@@ -71,7 +61,6 @@
         <item>嗬|呼</item>
         <item>纔|才</item>
         <item>哥特|哥德</item>
-        <item>鹿角怪|獨眼巨鹿</item>
         <item>漂浮飛魚|帕夫</item>
         <item>噴浮飛魚|帕夫</item>
         <item>浮油生物|小油怪</item>

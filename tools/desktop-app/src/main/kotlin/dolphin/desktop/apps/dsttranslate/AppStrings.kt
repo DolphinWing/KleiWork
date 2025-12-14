@@ -42,6 +42,8 @@ object AppStrings {
         get() = resourceBundle.getString("button_no")
     val button_yes: String
         get() = resourceBundle.getString("button_yes")
+    val button_search: String
+        get() = resourceBundle.getString("button_search")
 
     // Content Descriptions
     val content_description_cached: String
@@ -50,8 +52,6 @@ object AppStrings {
         get() = resourceBundle.getString("content_description_undo")
     val content_description_clear: String
         get() = resourceBundle.getString("content_description_clear")
-    val content_description_translate: String
-        get() = resourceBundle.getString("content_description_translate")
     val content_description_folder: String
         get() = resourceBundle.getString("content_description_folder")
 
@@ -70,8 +70,8 @@ object AppStrings {
         get() = resourceBundle.getString("tooltip_source_text")
     val tooltip_now_text: String
         get() = resourceBundle.getString("tooltip_now_text")
-    val tooltip_traditional_text: String
-        get() = resourceBundle.getString("tooltip_traditional_text")
+    val tooltip_simplified_chinese_text: String
+        get() = resourceBundle.getString("tooltip_simplified_chinese_text")
     val tooltip_use_this_text: String
         get() = resourceBundle.getString("tooltip_use_this_text")
     val tooltip_copy_original_text: String
@@ -88,38 +88,34 @@ object AppStrings {
         get() = resourceBundle.getString("tooltip_paste_all")
 
     // Configs
-    val config_github_root: String
-        get() = resourceBundle.getString("config_github_root")
-    val config_workshop_dir: String
-        get() = resourceBundle.getString("config_workshop_dir")
-    val config_assets_dir: String
-        get() = resourceBundle.getString("config_assets_dir")
-    val config_oni_workshop_dir: String
-        get() = resourceBundle.getString("config_oni_workshop_dir")
-    val config_oni_asset_dir: String
-        get() = resourceBundle.getString("config_oni_asset_dir")
-    val config_switch_to_dst_mode: String
-        get() = resourceBundle.getString("config_switch_to_dst_mode")
-    val config_switch_to_oni_mode: String
-        get() = resourceBundle.getString("config_switch_to_oni_mode")
+    val github_root: String
+        get() = resourceBundle.getString("github_root")
+    val workshop_dir: String
+        get() = resourceBundle.getString("workshop_dir")
+    val assets_dir: String
+        get() = resourceBundle.getString("assets_dir")
+    val oni_workshop_dir: String
+        get() = resourceBundle.getString("oni_workshop_dir")
+    val oni_asset_dir: String
+        get() = resourceBundle.getString("oni_asset_dir")
 
     // Toolbar
-    val toolbar_old_text: String
-        get() = resourceBundle.getString("toolbar_old_text")
-    val toolbar_now_text: String
-        get() = resourceBundle.getString("toolbar_now_text")
-    val toolbar_old: String
-        get() = resourceBundle.getString("toolbar_old")
-    val toolbar_now: String
-        get() = resourceBundle.getString("toolbar_now")
+    val toolbar_simplified_text: String
+        get() = resourceBundle.getString("toolbar_simplified_text")
+    val toolbar_template_text: String
+        get() = resourceBundle.getString("toolbar_template_text")
+    val toolbar_old_translated: String
+        get() = resourceBundle.getString("toolbar_old_translated")
+    val toolbar_now_translated: String
+        get() = resourceBundle.getString("toolbar_now_translated")
 
     // Toasts
     val toast_write_failed: String
         get() = resourceBundle.getString("toast_write_failed")
 
     // Formatted Strings
-    fun config_strings_xml(param: String): String =
-        String.format(resourceBundle.getString("config_strings_xml"), param)
+    fun strings_xml(param: String): String =
+        String.format(resourceBundle.getString("strings_xml"), param)
     fun toolbar_status(allCount: Int, changedCount: Int): String =
         String.format(resourceBundle.getString("toolbar_status"), allCount, changedCount)
     fun debug_save_dialog_title(param: String): String =
@@ -128,9 +124,6 @@ object AppStrings {
         String.format(resourceBundle.getString("toast_write_success"), exported, cost)
     fun toast_cost_ms(cost: Long): String =
         String.format(resourceBundle.getString("toast_cost_ms"), cost)
-    fun toast_found_cost_ms(result: Int, cost: Long): String =
-        String.format(resourceBundle.getString("toast_found_cost_ms"), result, cost)
-
 
     // TODO: Add a way to change locale dynamically if needed
     // fun setLocale(locale: Locale) {

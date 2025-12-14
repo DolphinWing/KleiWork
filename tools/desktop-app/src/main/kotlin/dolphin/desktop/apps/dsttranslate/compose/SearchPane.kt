@@ -68,7 +68,7 @@ fun SearchPane(
     fun WordEntry.toSearchText() = when (searchType.value) {
         SearchType.Origin -> origin()
         SearchType.Key -> key()
-        SearchType.Text -> string()
+        SearchType.Text -> translated()
     }
 
     LaunchedEffect(Unit) {
@@ -152,7 +152,7 @@ fun SearchPane(
                             color = Color.Gray,
                         )
                     }
-                    Text(entry.string(), style = MaterialTheme.typography.body1)
+                    Text(entry.translated(), style = MaterialTheme.typography.body1)
                 }
             }
         }
@@ -174,7 +174,7 @@ fun SearchPane(
 @Preview
 @Composable
 private fun PreviewSearchPaneAll() {
-    DstTranslatorTheme {
+    OniTranslatorTheme {
         SearchPane(PreviewDefaults.model)
     }
 }
@@ -182,7 +182,7 @@ private fun PreviewSearchPaneAll() {
 @Preview
 @Composable
 private fun PreviewSearchPaneShowSelected() {
-    DstTranslatorTheme {
+    OniTranslatorTheme {
         SearchPane(PreviewDefaults.model, selectedValue = "ch")
     }
 }

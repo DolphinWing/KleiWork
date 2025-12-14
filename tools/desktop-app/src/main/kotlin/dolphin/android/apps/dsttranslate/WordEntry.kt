@@ -81,5 +81,5 @@ data class WordEntry(
     /**
      * @return entry text after translation
      */
-    fun string(): String = str.dropQuote()
+    fun translated(): String = str.dropQuote()
 }

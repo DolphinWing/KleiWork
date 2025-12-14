@@ -35,7 +35,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
-import dolphin.android.apps.dsttranslate.PoHelper
 import dolphin.android.apps.dsttranslate.WordEntry
 import dolphin.android.apps.dsttranslate.WordEntry.Companion.dropQuote
 import dolphin.desktop.apps.dsttranslate.AppStrings
@@ -44,9 +43,8 @@ private fun Color.tinted(visible: Boolean): Color = copy(alpha = if (visible) 1f
 
 data class EditorSpec(
     val target: WordEntry = WordEntry.default(),
-    val dst: WordEntry? = null,
-    val chs: String? = null,
-    val cht: String? = null,
+    val simplifiedToTraditional: String? = null,
+    val templateContent: String? = null,
 )
 
 @Composable
@@ -58,14 +56,10 @@ fun EditorPane(
     onTranslate: ((String) -> Unit)? = null,
     onCopyFromClipboard: (() -> String)? = null,
     onCancel: (() -> Unit)? = null,
-    mode: PoHelper.Mode = PoHelper.Mode.ONI,
 ) {
-    var text by remember { mutableStateOf(data.target.string()) }
+    var text by remember { mutableStateOf(data.target.translated()) }
     var nowVisible by remember { mutableStateOf(true) }
-    var dstVisible by remember { mutableStateOf(true) }
-    var chsVisible by remember { mutableStateOf(true) }
-    var chtVisible by remember { mutableStateOf(true) }
-    var linkSelector by remember { mutableStateOf(false) }
+    var chsVisible by remember { mutableStateOf(data.simplifiedToTraditional?.isNotEmpty() == true) }
 
     Column(
         modifier = modifier
@@ -73,197 +67,37 @@ fun EditorPane(
             // .verticalScroll(rememberScrollState())
             .padding(8.dp),
     ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(
-                data.target.key(),
-                modifier = Modifier.weight(1f),
-                overflow = TextOverflow.Ellipsis,
-            )
-            IconButton(onClick = { nowVisible = !nowVisible }) {
-                Icon(
-                    Icons.Rounded.Visibility,
-                    contentDescription = null,
-                    tint = AppTheme.AppColor.green.tinted(nowVisible),
-                )
-            }
-            if (mode == PoHelper.Mode.DST) {
-                data.dst?.let { // new item has no previous for reference, need to check source
-                    TooltipIconButton(
-                        onClick = { dstVisible = !dstVisible },
-                        tooltip = AppStrings.tooltip_source_text
-                    ) {
-                        Icon(
-                            Icons.Rounded.Visibility,
-                            contentDescription = null,
-                            tint = AppTheme.AppColor.orange.tinted(dstVisible)
-                        )
-                    }
-                }
-            }
-            TooltipIconButton(
-                onClick = { chsVisible = !chsVisible },
-                tooltip = AppStrings.tooltip_now_text
-            ) {
-                Icon(
-                    Icons.Rounded.Visibility,
-                    contentDescription = null,
-                    tint = AppTheme.AppColor.blue.tinted(chsVisible)
-                )
-            }
-            if (mode == PoHelper.Mode.DST) {
-                TooltipIconButton(
-                    onClick = { chtVisible = !chtVisible },
-                    tooltip = AppStrings.tooltip_traditional_text
-                ) {
-                    Icon(
-                        Icons.Rounded.Visibility,
-                        contentDescription = null,
-                        tint = AppTheme.AppColor.purple.tinted(chtVisible)
-                    )
-                }
-            }
-        }
+        EditorTopBar(
+            title = data.target.key(),
+            modifier = Modifier.fillMaxWidth(),
+            currentViewVisible = nowVisible,
+            onToggleCurrentView = { nowVisible = !nowVisible },
+            referenceViewVisible = chsVisible,
+            onToggleReferenceView = { chsVisible = !chsVisible },
+        )
 
         if (chsVisible) {
             TooltipButton(
-                onClick = { text = data.chs?.dropQuote() ?: "" },
+                onClick = { text = data.simplifiedToTraditional?.dropQuote() ?: "" },
                 tooltip = AppStrings.tooltip_use_this_text,
                 modifier = Modifier.fillMaxWidth(),
-                enabled = data.chs?.isNotEmpty() == true,
+                enabled = data.simplifiedToTraditional?.isNotEmpty() == true,
                 colors = ButtonDefaults.buttonColors(
                     backgroundColor = AppTheme.AppColor.blue,
                 ),
             ) {
-                Text(data.chs?.dropQuote() ?: "", fontSize = AppTheme.largerFontSize())
-            }
-        }
-
-        if (mode == PoHelper.Mode.DST && chtVisible) {
-            TooltipButton(
-                onClick = { text = data.cht?.dropQuote() ?: "" },
-                tooltip = AppStrings.tooltip_use_this_text,
-                modifier = Modifier.fillMaxWidth(),
-                enabled = data.cht?.isNotEmpty() == true,
-                colors = ButtonDefaults.buttonColors(
-                    contentColor = Color.White,
-                    backgroundColor = AppTheme.AppColor.purple,
-                ),
-            ) {
-                Text(data.cht?.dropQuote() ?: "", fontSize = AppTheme.largerFontSize())
-            }
-        }
-
-        if (mode == PoHelper.Mode.DST) {
-            data.dst?.let { old ->
-                if (dstVisible) {
-                    Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                        TooltipTextButton(
-                            onClick = { onCopyToClipboard?.invoke(old.origin()) },
-                            tooltip = AppStrings.tooltip_copy_original_text,
-                            modifier = Modifier.weight(1f),
-                            colors = ButtonDefaults.textButtonColors(
-                                contentColor = AppTheme.AppColor.orange,
-                            ),
-                        ) {
-                            Text(
-                                old.origin(),
-                                modifier = Modifier.fillMaxWidth(),
-                                fontSize = AppTheme.largerFontSize(),
-                            )
-                        }
-                        TooltipIconButton(
-                            onClick = { onTranslate?.invoke(old.origin()) },
-                            tooltip = AppStrings.tooltip_send_to_google_translate,
-                        ) {
-                            Icon(Icons.Rounded.Translate, contentDescription = AppStrings.content_description_translate)
-                        }
-                    }
-                    TooltipButton(
-                        onClick = { text = old.string() },
-                        tooltip = AppStrings.tooltip_use_this_text,
-                        modifier = Modifier.fillMaxWidth(),
-                        colors = ButtonDefaults.buttonColors(
-                            backgroundColor = AppTheme.AppColor.orange,
-                        ),
-                    ) {
-                        Text(old.string(), fontSize = AppTheme.largerFontSize())
-                    }
-                }
+                Text(data.simplifiedToTraditional?.dropQuote() ?: "", fontSize = AppTheme.largerFontSize())
             }
         }
 
         if (nowVisible) {
-            // use regex to find link content
-            // sample: <link=\"DATABANK\">Data Banks</link>
-            val regex = Regex("<link=([^>]+)>([^<]+)</link>")
-            val links = regex.findAll(data.target.origin())
-            println(data.target.origin())
-            if (links.count() == 0) {
-                println("  No link found.")
-            } else {
-                links.forEach {
-                    println("  ${it.groupValues[1]}: ${it.groupValues[2]}")
-                }
-            }
-
-            if (linkSelector) {
-                Dialog(onDismissRequest = { linkSelector = false }) {
-                    AlertRegexLinkSelector(links, onSelected = {
-                        onCopyToClipboard?.invoke(it)
-                        linkSelector = false
-                    })
-                }
-            }
-
-            Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                TooltipTextButton(
-                    onClick = {
-                        var text = "msgctxt \"${data.target.key()}\"\n"
-                        text += "msgid \"${data.target.origin()}\"\n"
-                        text += "msgstr \"${data.target.string()}\""
-                        onCopyToClipboard?.invoke(text)
-                    },
-                    tooltip = AppStrings.tooltip_copy_this_text,
-                    modifier = Modifier.weight(1f),
-                    colors = ButtonDefaults.textButtonColors(
-                        contentColor = AppTheme.AppColor.green,
-                    ),
-                ) {
-                    Text(
-                        data.target.origin(),
-                        modifier = Modifier.fillMaxWidth(),
-                        fontSize = AppTheme.largerFontSize(),
-                    )
-                }
-
-                TooltipIconButton(
-                    onClick = { onCopyToClipboard?.invoke(data.target.origin()) },
-                    tooltip = AppStrings.tooltip_copy_original_text
-                ) {
-                    Icon(Icons.Rounded.ContentCopy, contentDescription = null)
-                }
-                TooltipIconButton(
-                    onClick = { onTranslate?.invoke(data.target.origin()) },
-                    tooltip = AppStrings.tooltip_send_to_google_translate
-                ) {
-                    Icon(Icons.Rounded.Translate, contentDescription = null)
-                }
-                TooltipIconButton(
-                    onClick = { linkSelector = true },
-                    tooltip = AppStrings.tooltip_show_link,
-                    enabled = links.count() > 0
-                ) {
-                    Icon(Icons.Rounded.TextFields, contentDescription = null)
-                }
-            }
-            TooltipButton(
-                onClick = { text = data.target.string() },
-                tooltip = AppStrings.tooltip_use_this_text,
+            EditorTemplateContent(
+                data = data,
                 modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(backgroundColor = AppTheme.AppColor.green),
-            ) {
-                Text(data.target.string(), fontSize = AppTheme.largerFontSize())
-            }
+                onCopyToClipboard = { content -> onCopyToClipboard?.invoke(content) },
+                onTranslate = onTranslate,
+                onReplace = { text = data.target.translated() }
+            )
         }
 
         TextField(
@@ -277,30 +111,173 @@ fun EditorPane(
             // singleLine = true,
         )
 
-        Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+        EditorBottomBar(
+            modifier = Modifier.fillMaxWidth(),
+            onCopyToClipboard = { onCopyToClipboard?.invoke(text) },
+            onCopyFromClipboard = { onCopyFromClipboard?.invoke()?.let { result -> text = result } },
+            onCancel = { onCancel?.invoke() },
+            onSave = { onSave?.invoke(data.target.key, "\"$text\"") },
+        )
+    }
+}
+
+@Composable
+private fun EditorTopBar(
+    title: String,
+    modifier: Modifier = Modifier,
+    currentViewVisible: Boolean = true,
+    onToggleCurrentView: () -> Unit = {},
+    referenceViewVisible: Boolean = true,
+    onToggleReferenceView: () -> Unit = {},
+) {
+    Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
+        Text(
+            title,
+            modifier = Modifier.weight(1f),
+            overflow = TextOverflow.Ellipsis,
+        )
+
+        TooltipIconButton(
+            onClick = onToggleReferenceView,
+            tooltip = AppStrings.tooltip_simplified_chinese_text
+        ) {
+            Icon(
+                Icons.Rounded.Visibility,
+                contentDescription = null,
+                tint = AppTheme.AppColor.blue.tinted(referenceViewVisible)
+            )
+        }
+
+        TooltipIconButton(
+            onClick = onToggleCurrentView,
+            tooltip = AppStrings.tooltip_now_text
+        ) {
+            Icon(
+                Icons.Rounded.Visibility,
+                contentDescription = null,
+                tint = AppTheme.AppColor.green.tinted(currentViewVisible),
+            )
+        }
+    }
+}
+
+@Composable
+private fun EditorTemplateContent(
+    data: EditorSpec,
+    modifier: Modifier = Modifier,
+    onCopyToClipboard: (String) -> Unit = {},
+    onTranslate: ((String) -> Unit)? = null,
+    onReplace: () -> Unit = {},
+) {
+    var linkSelector by remember { mutableStateOf(false) }
+
+    // use regex to find link content
+    // sample: <link=\"DATABANK\">Data Banks</link>
+    val regex = Regex("<link=([^>]+)>([^<]+)</link>")
+    val links = regex.findAll(data.target.origin())
+//    println(data.target.origin())
+//    if (links.count() == 0) {
+//        println("  No link found.")
+//    } else {
+//        links.forEach {
+//            println("  ${it.groupValues[1]}: ${it.groupValues[2]}")
+//        }
+//    }
+
+    if (linkSelector) {
+        Dialog(onDismissRequest = { linkSelector = false }) {
+            AlertRegexLinkSelector(links, onSelected = {
+                onCopyToClipboard.invoke(it)
+                linkSelector = false
+            })
+        }
+    }
+
+    Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
+        TooltipTextButton(
+            onClick = {
+                var text = "msgctxt \"${data.target.key()}\"\n"
+                text += "msgid \"${data.target.origin()}\"\n"
+                text += "msgstr \"${data.target.translated()}\""
+                onCopyToClipboard.invoke(text)
+            },
+            tooltip = AppStrings.tooltip_copy_this_text,
+            modifier = Modifier.weight(1f),
+            colors = ButtonDefaults.textButtonColors(
+                contentColor = AppTheme.AppColor.green,
+            ),
+        ) {
+            Text(
+                data.target.origin(),
+                modifier = Modifier.fillMaxWidth(),
+                fontSize = AppTheme.largerFontSize(),
+            )
+        }
+        TooltipIconButton(
+            onClick = onReplace,
+            tooltip = data.target.translated(),
+        ) {
+            Icon(
+                Icons.Rounded.TextFields,
+                contentDescription = AppStrings.tooltip_use_this_text,
+                tint = AppTheme.AppColor.green
+            )
+        }
+        TooltipIconButton(
+            onClick = { onCopyToClipboard.invoke(data.target.origin()) },
+            tooltip = AppStrings.tooltip_copy_original_text
+        ) {
+            Icon(Icons.Rounded.ContentCopy, contentDescription = null)
+        }
+        onTranslate?.let { listener ->
             TooltipIconButton(
-                onClick = { onCopyToClipboard?.invoke(text) },
-                tooltip = AppStrings.tooltip_copy_all
+                onClick = { listener.invoke(data.target.origin()) },
+                tooltip = AppStrings.tooltip_send_to_google_translate
             ) {
-                Icon(Icons.Rounded.CopyAll, contentDescription = null)
+                Icon(Icons.Rounded.Translate, contentDescription = null)
             }
-            TooltipIconButton(
-                onClick = { onCopyFromClipboard?.invoke()?.let { result -> text = result } },
-                tooltip = AppStrings.tooltip_paste_all
-            ) {
-                Icon(Icons.Rounded.ContentPaste, contentDescription = null)
-            }
-            Spacer(modifier = Modifier.requiredWidth(16.dp))
-            Button(
-                onClick = { onSave?.invoke(data.target.key, "\"$text\"") },
-                modifier = Modifier.weight(1f),
-            ) {
-                Text(AppStrings.button_apply)
-            }
-            Spacer(modifier = Modifier.requiredWidth(16.dp))
-            TextButton(onClick = { onCancel?.invoke() }) {
-                Text(AppStrings.button_cancel)
-            }
+        }
+        TooltipIconButton(
+            onClick = { linkSelector = true },
+            tooltip = AppStrings.tooltip_show_link,
+            enabled = links.count() > 0
+        ) {
+            Icon(Icons.Rounded.TextFields, contentDescription = null)
+        }
+    }
+}
+
+@Composable
+private fun EditorBottomBar(
+    modifier: Modifier = Modifier,
+    onCopyToClipboard: () -> Unit = {},
+    onCopyFromClipboard: () -> Unit = { },
+    onCancel: () -> Unit = {},
+    onSave: () -> Unit = { },
+) {
+    Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
+        TooltipIconButton(
+            onClick = onCopyToClipboard,
+            tooltip = AppStrings.tooltip_copy_all
+        ) {
+            Icon(Icons.Rounded.CopyAll, contentDescription = null)
+        }
+        TooltipIconButton(
+            onClick = onCopyFromClipboard,
+            tooltip = AppStrings.tooltip_paste_all
+        ) {
+            Icon(Icons.Rounded.ContentPaste, contentDescription = null)
+        }
+        Spacer(modifier = Modifier.requiredWidth(16.dp))
+        Button(
+            onClick = onSave,
+            modifier = Modifier.weight(1f),
+        ) {
+            Text(AppStrings.button_apply)
+        }
+        Spacer(modifier = Modifier.requiredWidth(16.dp))
+        TextButton(onClick = onCancel) {
+            Text(AppStrings.button_cancel)
         }
     }
 }
@@ -308,38 +285,8 @@ fun EditorPane(
 @Preview
 @Composable
 private fun PreviewEditorPaneTargetOnly() {
-    DstTranslatorTheme {
+    OniTranslatorTheme {
         EditorPane(data = EditorSpec())
-    }
-}
-
-@Preview
-@Composable
-private fun PreviewEditorPaneWithOriginal() {
-    DstTranslatorTheme {
-        EditorPane(data = EditorSpec(dst = PreviewDefaults.dst))
-    }
-}
-
-@Preview
-@Composable
-private fun PreviewEditorPaneWithChs() {
-    DstTranslatorTheme {
-        EditorPane(data = EditorSpec(dst = PreviewDefaults.dst, chs = "simplified"))
-    }
-}
-
-@Preview
-@Composable
-private fun PreviewEditorPaneWithCht() {
-    DstTranslatorTheme {
-        EditorPane(
-            data = EditorSpec(
-                dst = PreviewDefaults.dst,
-                chs = "simplified",
-                cht = "traditional",
-            )
-        )
     }
 }
 
@@ -364,10 +311,11 @@ private fun AlertRegexLinkSelector(links: Sequence<MatchResult>, onSelected: (St
 @Preview
 private fun PreviewAlertRegexLinkSelector() {
     val regex = Regex("<link=([^>]+)>([^<]+)</link>")
-    val links =
-        regex.findAll("The Moo Biome is the natural habitat of the charismatic <link=\\\"MOO\\\">Gassy Moo</link>, a great source of <link=\\\"METHANE\\\">Natural Gas</link>.")
+    val sampleText = "The Moo Biome is the natural habitat of the charismatic <link=\\\"MOO\\\">Gassy Moo</link>," +
+            " a great source of <link=\\\"METHANE\\\">Natural Gas</link>."
+    val links = regex.findAll(sampleText)
 
-    DstTranslatorTheme {
+    OniTranslatorTheme {
         AlertRegexLinkSelector(
             links,
             onSelected = { println(it) }

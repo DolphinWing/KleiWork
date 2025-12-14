@@ -25,7 +25,7 @@ object AppTheme {
 }
 
 @Composable
-fun DstTranslatorTheme(content: @Composable () -> Unit) {
+fun OniTranslatorTheme(content: @Composable () -> Unit) {
     MaterialTheme(
         colors = lightColors(
             primary = AppTheme.AppColor.primary,
@@ -38,16 +38,16 @@ fun DstTranslatorTheme(content: @Composable () -> Unit) {
 }
 
 object PreviewDefaults {
-    val dst = WordEntry("key-dst", "text-dst", "id-dst", "str-dst")
-    val chs = WordEntry("key-chs", "text-chs", "id-chs", "str-chs")
-    val cht = WordEntry("key-cht", "text-cht", "id-cht", "str-cht")
+    val translated = WordEntry("key-dst", "text-dst", "id-dst", "str-dst")
+    val simplified = WordEntry("key-chs", "text-chs", "id-chs", "str-chs")
+    val template = WordEntry("key-cht", "text-cht", "id-cht", "str-cht")
 
     // val samples = listOf(WordEntry.default(), dst, chs, cht)
 
     val model = PoDataModel(DesktopPoHelper().apply {
         addToTodoList(WordEntry.default())
-        addToTodoList(dst)
-        addToTodoList(chs)
-        addToTodoList(cht)
+        addToTodoList(translated)
+        addToTodoList(simplified)
+        addToTodoList(template)
     })
 }

@@ -14,11 +14,11 @@
 - [ ] **檔案路徑處理**: 重構 `Ini.kt` 和 `DesktopPoHelper.kt` 中寫死的相對路徑。考慮改用 ClassLoader 的資源讀取機制，避免因目錄結構變更導致程式出錯。
 - [ ] **錯誤處理**: 改善通用的 `catch (e: Exception)` 區塊。改為捕捉更具體的例外類型，並將重要的錯誤訊息顯示在 UI 上，提升使用者體驗。
 - [ ] **移除 Magic Strings**: 將程式碼中硬式編碼的字串 (如 Regex、URL) 定義為 `const val` 常數，增加程式碼的可讀性與可維護性。
-- [ ] **移除對 DST 的支援**: 簡化程式碼，將所有與 DST 相關的邏輯和資源移除，專注於 ONI。
+- [x] **移除對 DST 的支援**: 簡化程式碼，將所有與 DST 相關的邏輯和資源移除，專注於 ONI。
 
 ### 3. UI 與程式碼可讀性 (UI & Readability)
 
-- [ ] **升級本地化方案**: 移除硬編碼 UI 字串，改用 `ResourceBundle` 和 Kotlin 包裝器 `AppStrings` 實現型別安全且外部可修改的 UI 字串本地化。將 UI 相關字串移至 `strings.properties`。保留 `resources/common/strings.xml` 作為 `DesktopPoHelper` 的 `replacement_list` 配置檔，並維持其外部可修改性。
+- [x] **升級本地化方案**: 移除硬編碼 UI 字串，改用 `ResourceBundle` 和 Kotlin 包裝器 `AppStrings` 實現型別安全且外部可修改的 UI 字串本地化。將 UI 相關字串移至 `strings.properties`。保留 `resources/common/strings.xml` 作為 `DesktopPoHelper` 的 `replacement_list` 配置檔，並維持其外部可修改性。
 - [ ] **增加程式碼註解**: 在複雜的邏輯函式 (如 `analyzeText`) 中補充註解，說明其設計目的與演算法思路，方便未來維護。
 
 ### 4. 現代化與自動化 (Modernization & Automation)

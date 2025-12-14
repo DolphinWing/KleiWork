@@ -17,6 +17,7 @@ import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -24,7 +25,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import dolphin.android.apps.dsttranslate.PoHelper
 import dolphin.android.apps.dsttranslate.WordEntry
 import dolphin.desktop.apps.dsttranslate.AppStrings
 import dolphin.desktop.apps.dsttranslate.PoDataModel
@@ -38,18 +38,18 @@ fun EntryListPane(
     spec: ToolbarSpec = ToolbarSpec(),
     onEdit: ((WordEntry) -> Unit)? = null,
 ) {
-    val dataList = model.filteredList.collectAsState()
-    val changedList = model.changedList.collectAsState()
+    val dataList by model.filteredList.collectAsState()
+    val changedList by model.changedList.collectAsState()
 
     Column(modifier = modifier) {
         ToolbarPane(
             modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
-            filteredList = dataList.value,
-            changedList = changedList.value,
+            filteredList = dataList,
+            changedList = changedList,
             callback = callback,
             spec = spec,
         )
-        if (spec.enabled && (dataList.value.isEmpty())) {
+        if (spec.enabled && (dataList.isEmpty())) {
             Text(AppStrings.content_no_items, modifier = Modifier.padding(8.dp), textAlign = TextAlign.Center)
         }
         if (!spec.enabled) {
@@ -59,20 +59,16 @@ fun EntryListPane(
             }
             Spacer(modifier = Modifier.requiredHeight(16.dp))
         }
-        LazyScrollableColumn(dataList.value, modifier = Modifier.weight(1f), state = state) { index, entry ->
-            // val dst = remember { helper.dst(entry.key) }
-            // val chs = remember { helper.chs(entry.key) }
-            // val cht = remember { helper.cht(entry.key) }
+        LazyScrollableColumn(dataList, modifier = Modifier.weight(1f), state = state) { index, entry ->
             EntryView(
                 origin = entry,
                 modifier = Modifier.fillMaxWidth(),
-                dst = model.helper.dst(entry.key), // dst,
-                chs = model.helper.chs(entry.key), // chs,
-                cht = model.helper.cht(entry.key), // cht,
+                templated = model.helper.templated(entry.key),
+                translated = model.helper.translated(entry.key),
+                simplified = model.helper.simplified(entry.key),
                 onItemClick = { item -> onEdit?.invoke(item) },
                 index = index,
-                changed = changedList.value[index],
-                mode = model.appMode.value,
+                changed = changedList[index],
             )
         }
     }
@@ -82,13 +78,12 @@ fun EntryListPane(
 fun EntryView(
     origin: WordEntry,
     modifier: Modifier = Modifier,
-    dst: WordEntry? = null,
-    chs: WordEntry? = null,
-    cht: WordEntry? = null,
+    translated: WordEntry? = null,
+    simplified: WordEntry? = null,
+    templated: WordEntry? = null,
     onItemClick: ((WordEntry) -> Unit)? = null,
     index: Int = 0,
     changed: Long = 0L,
-    mode: PoHelper.Mode = PoHelper.Mode.DST,
 ) {
     // val entry by remember { mutableStateOf(origin) }
     val changedColor = if (changed > 0) Color.Gray else Color.LightGray
@@ -117,32 +112,24 @@ fun EntryView(
                 fontSize = 14.sp,
             )
         }
-        chs?.let { source ->
-            Text(source.origin(), fontSize = AppTheme.largerFontSize())
+        Text(
+            templated?.origin() ?: origin.origin(),
+            color = AppTheme.AppColor.purple,
+            fontSize = AppTheme.largerFontSize(),
+        )
+
+        simplified?.let { source ->
+            Text(source.translated(), fontSize = AppTheme.largerFontSize(), color = AppTheme.AppColor.blue)
         }
-        if (cht?.string()?.isNotEmpty() == true) {
+        if (translated?.translated()?.isNotEmpty() == true) {
             Text(
-                // if (dst?.id == origin.id) dst.string() else dst?.origin() ?: origin.origin(),
-                cht.string(),
-                color = AppTheme.AppColor.purple,
-                fontSize = AppTheme.largerFontSize(),
-            )
-        } else if (mode == PoHelper.Mode.ONI) {
-            Text(
-                cht?.origin() ?: origin.origin(),
-                color = AppTheme.AppColor.purple,
-                fontSize = AppTheme.largerFontSize(),
-            )
-        }
-        if (dst?.string()?.isNotEmpty() == true) {
-            Text(
-                dst.string(),
+                translated.translated(),
                 color = AppTheme.AppColor.orange,
                 fontSize = AppTheme.largerFontSize(),
             )
         }
         Text(
-            origin.string(),
+            origin.translated(),
             color = AppTheme.AppColor.green,
             fontSize = AppTheme.largerFontSize(),
         )
@@ -152,7 +139,7 @@ fun EntryView(
 @Preview
 @Composable
 private fun PreviewEntryViewOrigin() {
-    DstTranslatorTheme {
+    OniTranslatorTheme {
         EntryView(origin = WordEntry.default())
     }
 }
@@ -160,12 +147,12 @@ private fun PreviewEntryViewOrigin() {
 @Preview
 @Composable
 private fun PreviewEntryViewAll() {
-    DstTranslatorTheme {
+    OniTranslatorTheme {
         EntryView(
             origin = WordEntry.default(),
-            dst = PreviewDefaults.dst,
-            chs = PreviewDefaults.chs,
-            cht = PreviewDefaults.cht,
+            translated = PreviewDefaults.translated,
+            simplified = PreviewDefaults.simplified,
+            templated = PreviewDefaults.template,
         )
     }
 }

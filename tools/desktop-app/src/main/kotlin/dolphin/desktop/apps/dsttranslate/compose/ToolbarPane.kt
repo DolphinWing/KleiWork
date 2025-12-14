@@ -11,7 +11,6 @@ import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Analytics
 import androidx.compose.material.icons.rounded.Refresh
 import androidx.compose.material.icons.rounded.Save
 import androidx.compose.material.icons.rounded.Search
@@ -26,20 +25,19 @@ import dolphin.android.apps.dsttranslate.WordEntry
 import dolphin.desktop.apps.dsttranslate.AppStrings
 
 private val textMap = listOf(
-    Pair(AppStrings.toolbar_old_text, AppTheme.AppColor.blue),
-    Pair(AppStrings.toolbar_now_text, AppTheme.AppColor.purple),
-    Pair(AppStrings.toolbar_old, AppTheme.AppColor.orange),
-    Pair(AppStrings.toolbar_now, AppTheme.AppColor.green),
+    Pair(AppStrings.toolbar_template_text, AppTheme.AppColor.purple),
+    Pair(AppStrings.toolbar_old_translated, AppTheme.AppColor.orange),
+    Pair(AppStrings.toolbar_simplified_text, AppTheme.AppColor.blue),
+    Pair(AppStrings.toolbar_now_translated, AppTheme.AppColor.green),
 )
 
 interface ToolbarCallback {
     fun onRefresh()
     fun onSave()
     fun onSearch()
-    fun onAnalyze()
 }
 
-data class ToolbarSpec(var enabled: Boolean = true, var enableAnalyze: Boolean = false)
+data class ToolbarSpec(var enabled: Boolean = true)
 
 @Composable
 fun ToolbarPane(
@@ -62,10 +60,6 @@ fun ToolbarPane(
             fontSize = AppTheme.largerFontSize(),
             color = MaterialTheme.colors.onPrimary,
         )
-        if (spec.enableAnalyze) {
-            ToolbarIconButton(Icons.Rounded.Analytics, onClick = { callback?.onAnalyze() }, enabled = spec.enabled)
-            Spacer(modifier = Modifier.requiredWidth(8.dp))
-        }
         textMap.forEach { (title, color) ->
             Text(
                 text = title,
@@ -76,23 +70,58 @@ fun ToolbarPane(
             )
         }
         Spacer(modifier = Modifier.requiredWidth(8.dp))
-        ToolbarIconButton(Icons.Rounded.Refresh, onClick = { callback?.onRefresh() }, enabled = spec.enabled)
-        ToolbarIconButton(Icons.Rounded.Search, onClick = { callback?.onSearch() }, enabled = spec.enabled)
-        ToolbarIconButton(Icons.Rounded.Save, onClick = { callback?.onSave() }, enabled = spec.enabled)
+        ToolbarIconButton(
+            Icons.Rounded.Refresh,
+            onClick = { callback?.onRefresh() },
+            enabled = spec.enabled,
+            contentDescription = AppStrings.button_refresh
+        )
+        ToolbarIconButton(
+            Icons.Rounded.Search,
+            onClick = { callback?.onSearch() },
+            enabled = spec.enabled,
+            contentDescription = AppStrings.button_search
+        )
+        ToolbarIconButton(
+            Icons.Rounded.Save,
+            onClick = { callback?.onSave() },
+            enabled = spec.enabled,
+            contentDescription = AppStrings.button_save
+        )
     }
 }
 
 @Composable
-private fun ToolbarIconButton(imageVector: ImageVector, onClick: () -> Unit, enabled: Boolean = true) {
-    IconButton(onClick = onClick, enabled = enabled) {
-        Icon(imageVector, contentDescription = null, tint = if (enabled) Color.LightGray else Color.DarkGray)
+private fun ToolbarIconButton(
+    imageVector: ImageVector,
+    onClick: () -> Unit,
+    enabled: Boolean = true,
+    contentDescription: String? = null
+) {
+    contentDescription?.let { tooltip ->
+        TooltipIconButton(onClick = onClick, enabled = enabled, tooltip = tooltip) {
+            Icon(
+                imageVector,
+                contentDescription = null,
+                tint = if (enabled) Color.LightGray else Color.DarkGray
+            )
+        }
+    } ?: run {
+        IconButton(onClick = onClick, enabled = enabled) {
+            Icon(
+                imageVector,
+                contentDescription = contentDescription,
+                tint = if (enabled) Color.LightGray else Color.DarkGray
+            )
+        }
     }
+
 }
 
 @Preview
 @Composable
 private fun PreviewToolbarPane() {
-    DstTranslatorTheme {
+    OniTranslatorTheme {
         ToolbarPane(filteredList = listOf(WordEntry.default()), changedList = listOf(0))
     }
 }

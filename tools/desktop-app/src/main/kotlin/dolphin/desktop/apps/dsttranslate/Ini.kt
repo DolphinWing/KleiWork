@@ -22,16 +22,24 @@ class Ini(
     private val homeConfigs: File
         get() {
             val s = File.separator
-            val folder = if (isLinux) {
-                File("${System.getProperty("user.home")}${s}.config${s}dst-translator")
+            val pFolder = if (isLinux) {
+                File("${System.getProperty("user.home")}${s}.config${s}")
             } else {
-                File("${System.getProperty("user.home")}${s}AppData${s}Local${s}dst-translator")
+                File("${System.getProperty("user.home")}${s}AppData${s}Local${s}")
             }
+            val dstFolder = File(pFolder, "dst-translator")
+            val oniFolder = File(pFolder, "oni-translator")
             try {
-                if (!folder.exists()) folder.mkdirs()
-                return folder // make sure it exists
+                if (!oniFolder.exists()) {
+                    if (dstFolder.exists()) {
+                        dstFolder.renameTo(oniFolder)
+                    } else {
+                        oniFolder.mkdirs()
+                    }
+                }
+                return oniFolder // make sure it exists
             } catch (e: Exception) {
-                println("no such folder")
+                println("no such folder ${e.message}")
             }
             return File(System.getProperty("user.home")) // it must exist
         }
@@ -44,19 +52,17 @@ class Ini(
     /**
      * User workshop code folder
      */
-    var dstWorkshopDir: String = ""
     var oniWorkshopDir: String = ""
 
     /**
      * Klei PO file source folder
      */
-    var dstAssetsDir: String = ""
     var oniAssetsDir: String = ""
 
     /**
      * Replacement strings
      */
-    var dstStringMap: String = ""
+    var stringMap: String = ""
 
     /**
      * Window position and size
@@ -114,9 +120,7 @@ class Ini(
             val data = line.split("=")
             val value = if (data.size > 1) data[1] else ""
             when (data[0]) {
-                "workshopDir" -> dstWorkshopDir = value
-                "assetsDir" -> dstAssetsDir = value
-                "stringMap" -> dstStringMap = value
+                "stringMap" -> stringMap = value
                 "workshopDir_oni" -> oniWorkshopDir = value
                 "assetsDir_oni" -> oniAssetsDir = value
                 "windowPosX" -> windowPosX = value.toFloatOrNull() ?: 0f
@@ -135,9 +139,7 @@ class Ini(
     @Suppress("MemberVisibilityCanBePrivate")
     suspend fun save() = withContext(Dispatchers.IO) {
         val builder = StringBuilder()
-        builder.append("workshopDir=$dstWorkshopDir\n")
-        builder.append("assetsDir=$dstAssetsDir\n")
-        builder.append("stringMap=$dstStringMap\n")
+        builder.append("stringMap=$stringMap\n")
         builder.append("workshopDir_oni=$oniWorkshopDir\n")
         builder.append("assetsDir_oni=$oniAssetsDir\n")
         builder.append("windowPosX=$windowPosX\n")
@@ -159,29 +161,25 @@ class Ini(
         if (!srcFile.exists()) return@withContext
         val map = File(homeConfigs, "strings.xml")
         srcFile.copyTo(target = map, overwrite = true)
-        dstStringMap = map.absolutePath
+        stringMap = map.absolutePath
         save() // write configs
     }
 
     /**
      * Apply configs changed
      *
-     * @param workingDir app working dir
-     * @param assetsDir source Klei PO assets
+     * @param workingDirOni app working dir
+     * @param assetsDirOni source Klei PO assets
      * @param stringMap refactor list
      */
     suspend fun apply(
-        workingDir: String? = null,
-        assetsDir: String? = null,
         stringMap: String? = null,
         workingDirOni: String? = null,
         assetsDirOni: String? = null,
     ) = withContext(Dispatchers.IO) {
-        if (stringMap != null && stringMap != this@Ini.dstStringMap) {
+        if (stringMap != null && stringMap != this@Ini.stringMap) {
             this@Ini.updateMaps(File(stringMap))
         }
-        workingDir?.let { dir -> this@Ini.dstWorkshopDir = dir }
-        assetsDir?.let { dir -> this@Ini.dstAssetsDir = dir }
         workingDirOni?.let { dir -> this@Ini.oniWorkshopDir = dir }
         assetsDirOni?.let { dir -> this@Ini.oniAssetsDir = dir }
         save()

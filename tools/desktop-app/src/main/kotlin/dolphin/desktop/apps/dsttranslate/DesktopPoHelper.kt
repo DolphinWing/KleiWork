@@ -20,7 +20,6 @@ import java.nio.charset.StandardCharsets
 import javax.xml.parsers.DocumentBuilderFactory
 import javax.xml.parsers.SAXParserFactory
 
-typealias SuspectMap = HashMap<Char, ArrayList<WordEntry>>
 
 class DesktopPoHelper(val ini: Ini = Ini(), private val debug: Boolean = false) : PoHelper() {
     override fun log(message: String) {
@@ -118,15 +117,15 @@ class DesktopPoHelper(val ini: Ini = Ini(), private val debug: Boolean = false) 
 
     private fun findReplacementXml(): File {
         // load from ini
-        if (/*ini.isLinux &&*/ File(ini.dstStringMap).exists()) {
-            return File(ini.dstStringMap)
+        if (/*ini.isLinux &&*/ File(ini.stringMap).exists()) {
+            return File(ini.stringMap)
         }
         val s = File.separator
         // locate debug build
         if (File(ini.workingDir, "resources").exists()) {
             val file = File("${ini.workingDir}${s}resources${s}common${s}strings.xml")
             if (file.exists()) {
-                ini.dstStringMap = file.absolutePath // debug build
+                ini.stringMap = file.absolutePath // debug build
                 return file
             }
         }
@@ -134,12 +133,12 @@ class DesktopPoHelper(val ini: Ini = Ini(), private val debug: Boolean = false) 
         if (File(ini.workingDir, "app").exists()) {
             val file = File("${ini.workingDir}${s}app${s}resources${s}strings.xml")
             if (file.exists()) {
-                ini.dstStringMap = file.absolutePath // release build
+                ini.stringMap = file.absolutePath // release build
                 return file
             }
         }
         // locate in workshop dir
-        return File(ini.dstWorkshopDir, "strings.xml")
+        return File(ini.oniWorkshopDir, "strings.xml")
     }
 
     suspend fun loadXml() = withContext(Dispatchers.IO) {
@@ -160,13 +159,9 @@ class DesktopPoHelper(val ini: Ini = Ini(), private val debug: Boolean = false) 
         setupReplacements()
     }
 
-    override fun loadAssetFile(name: String, mode: Mode): ArrayList<WordEntry> {
-        if (name == DST_PO) return loadFile(ini.dstWorkshopDir, name)
+    override fun loadAssetFile(name: String): ArrayList<WordEntry> {
         if (name == ONI_PO) return loadFile(ini.oniWorkshopDir, name)
-        return when (mode) {
-            Mode.ONI -> loadFile(ini.oniAssetsDir, name)
-            else -> loadFile(ini.dstAssetsDir, name)
-        }
+        return loadFile(ini.oniAssetsDir, name)
     }
 
     private fun loadFile(dir: String, name: String): ArrayList<WordEntry> {
@@ -177,25 +172,24 @@ class DesktopPoHelper(val ini: Ini = Ini(), private val debug: Boolean = false) 
             val reader = BufferedReader(InputStreamReader(FileInputStream(file), StandardCharsets.UTF_8))
             loadFromReader(reader)
         } catch (e: Exception) {
+            println("load $name ${e.message}")
             ArrayList()
         } else {
+            println("unable to locate $dir${File.separator}$name")
             ArrayList()
         }
         log("asset: done with $name (${list.size})")
         return list
     }
 
-    override fun getOutputFile(mode: Mode): File = getOutputFile(debug, mode)
+    override fun getOutputFile(): File = getOutputFile(debug)
 
-    fun getOutputFile(cached: Boolean, mode: Mode = Mode.DST): File = if (cached) getCachedFile(mode) else {
-        if (mode == Mode.DST)
-            File(ini.dstWorkshopDir, DST_PO)
-        else
-            File(ini.oniWorkshopDir, ONI_PO)
+    fun getOutputFile(cached: Boolean): File = if (cached) getCachedFile() else {
+        File(ini.oniWorkshopDir, ONI_PO)
     }
 
-    override fun getCachedFile(mode: Mode): File =
-        File(System.getProperty("java.io.tmpdir"), if (mode == Mode.DST) DST_PO else ONI_PO)
+    override fun getCachedFile(): File =
+        File(System.getProperty("java.io.tmpdir"), ONI_PO)
 
     override fun sc2tc(str: String): String {
         return ZhTwConverterUtil.toTraditional(str)
@@ -221,72 +215,5 @@ class DesktopPoHelper(val ini: Ini = Ini(), private val debug: Boolean = false) 
     private fun Char.valid(): Boolean =
         this != ' ' && this != '\t' && this != '\n' && this != '\r'
 
-    suspend fun analyzeText(): Pair<Int, SuspectMap> = withContext(Dispatchers.IO) {
-        loading.emit(true)
-        val map = LinkedHashMap<Char, Char>() // use map to drop duplicated char
-        // load Taiwan 4818 common characters
-        val githubRoot = File(ini.dstWorkshopDir).parentFile
-        val dstAsset = File(githubRoot, "dst-assets")
-        val sample = File(dstAsset, "Taiwan4818.txt")
-        if (sample.exists()) { // add Taiwan4818.txt
-            val reader = BufferedReader(InputStreamReader(FileInputStream(sample), StandardCharsets.UTF_8))
-            try {
-                var line: String? = ""//reader.readLine()
-                while (line != null) {
-                    line.filter { char -> char.valid() }.forEach { char -> map[char] = char }
-                    line = reader.readLine()
-                }
-            } catch (e: Exception) {
-                log("Exception: ${e.message}")
-            } finally {
-                reader.close()
-            }
-        }
 
-        val suspects = SuspectMap()
-        // check our text files
-        allValues().filter { entry ->
-            val text = entry.string().trim().filter { char -> char.valid() }
-                .filterNot { char -> map.containsKey(char) }
-                .filter { char -> char.toString() != replace3dot }
-            if (text.isNotEmpty()) {
-                text.forEach { char ->
-                    suspects.putIfAbsent(char, ArrayList())
-                    if (suspects[char]?.any { e -> entry.key() == e.key() } == false) {
-                        suspects[char]?.add(entry)
-                        println("$char: ${entry.string()}")
-                    }
-                }
-            }
-            text.isNotEmpty()
-        }
-
-        // put all characters into map
-        allValues().forEach { entry ->
-            entry.string().filter { char -> char.valid() }.forEach { char -> map[char] = char }
-        }
-        log("found ${map.size} text")
-
-        // output content map
-        val contentFile = if (sample.exists()) {
-            File(sample.parent, "dst_cht.txt")
-        } else {
-            File(ini.workingDir, "dst_cht.txt")
-        }
-        // write to file
-        try { // http://stackoverflow.com/a/1053474
-            val writer = BufferedWriter(FileWriter(contentFile))
-            map.map { entry -> entry.value }.sortedBy { it.inc() }.forEach { char ->
-                writer.write(char.toString())
-                writer.newLine()
-            }
-            writer.close()
-            // writer = null
-        } catch (e: Exception) {
-            log("exportText: ${e.message}")
-        }
-        log("write to ${contentFile.absolutePath} with ${contentFile.length()} done")
-        loading.emit(false)
-        return@withContext Pair(map.size, suspects)
-    }
 }

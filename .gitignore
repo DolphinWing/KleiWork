@@ -24,6 +24,7 @@ tools/desktop-app/configs.ini
 # os temp files
 Thumbs.*
 .DS_Store*
+*Zone.Identifier
 
 tmp
 output

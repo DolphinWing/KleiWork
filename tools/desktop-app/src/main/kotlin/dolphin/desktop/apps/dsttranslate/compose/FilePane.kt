@@ -70,7 +70,7 @@ fun FileChooserPane(
 @Preview
 @Composable
 private fun PreviewFileChooserPane() {
-    DstTranslatorTheme {
+    OniTranslatorTheme {
         Column {
             FileChooserPane(
                 file = "/home/jimmyhu",
@@ -89,7 +89,7 @@ private fun PreviewFileChooserPane() {
 @Preview
 @Composable
 private fun PreviewThis() {
-    DstTranslatorTheme {
+    OniTranslatorTheme {
         Text("Sample Text")
     }
 }

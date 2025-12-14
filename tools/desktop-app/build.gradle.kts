@@ -2,7 +2,7 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import java.text.SimpleDateFormat
 import java.util.Date
 
-val releaseAppVersion = "3.1.1"
+val releaseAppVersion = "3.2.0"
 val releaseAppRevision = SimpleDateFormat("yy.M.d").format(Date()) ?: "0"
 
 plugins {
