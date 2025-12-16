@@ -26,6 +26,7 @@ dependencies {
     implementation(compose.materialIconsExtended)
     implementation(compose.preview)
     implementation(compose.uiTooling)
+    implementation(compose.components.resources)
 
     // https://github.com/houbb/opencc4j
     implementation(libs.opencc4j)
@@ -67,6 +68,12 @@ compose.desktop {
 
         args += listOf("v=$releaseAppVersion")
     }
+
+
+}
+
+compose.resources {
+    // https://kotlinlang.org/docs/multiplatform/compose-multiplatform-resources-usage.html
 }
 
 tasks.withType<com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask> {

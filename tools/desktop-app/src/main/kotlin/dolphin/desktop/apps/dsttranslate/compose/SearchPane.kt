@@ -36,9 +36,20 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import dolphin.android.apps.dsttranslate.WordEntry
-import dolphin.desktop.apps.dsttranslate.AppStrings
 import dolphin.desktop.apps.dsttranslate.PoDataModel
+import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.button_close
+
+import dolphin.desktop.apps.onitranslator.generated.resources.button_edit
+import dolphin.desktop.apps.onitranslator.generated.resources.content_description_cached
+import dolphin.desktop.apps.onitranslator.generated.resources.content_description_clear
+import dolphin.desktop.apps.onitranslator.generated.resources.content_description_undo
+import dolphin.desktop.apps.onitranslator.generated.resources.search_placeholder
+import dolphin.desktop.apps.onitranslator.generated.resources.search_type_key
+import dolphin.desktop.apps.onitranslator.generated.resources.search_type_origin
+import dolphin.desktop.apps.onitranslator.generated.resources.search_type_text
 import kotlinx.coroutines.launch
+import org.jetbrains.compose.resources.stringResource
 
 enum class SearchType {
     Key, Origin, Text,
@@ -81,13 +92,13 @@ fun SearchPane(
             onValueChange = { text -> refreshItems(text) },
             modifier = Modifier.fillMaxWidth(),
             colors = TextFieldDefaults.outlinedTextFieldColors(),
-            placeholder = { Text(AppStrings.search_placeholder) },
+            placeholder = { Text(stringResource(Res.string.search_placeholder)) },
             trailingIcon = {
                 Row {
                     IconButton(onClick = { last = data.value }) {
                         Icon(
                             Icons.Rounded.Save,
-                            contentDescription = AppStrings.content_description_cached,
+                            contentDescription = stringResource(Res.string.content_description_cached),
                             tint = if (data.value.isNotEmpty()) Color.Gray else Color.LightGray,
                         )
                     }
@@ -95,13 +106,13 @@ fun SearchPane(
                         IconButton(onClick = { refreshItems(last) }) {
                             Icon(
                                 Icons.Rounded.Replay,
-                                contentDescription = AppStrings.content_description_undo,
+                                contentDescription = stringResource(Res.string.content_description_undo),
                                 tint = if (last.isNotEmpty()) Color.Gray else Color.LightGray
                             )
                         }
                     }
                     IconButton(onClick = { refreshItems("") }) {
-                        Icon(Icons.Rounded.Clear, contentDescription = AppStrings.content_description_clear)
+                        Icon(Icons.Rounded.Clear, contentDescription = stringResource(Res.string.content_description_clear))
                     }
                 }
             },
@@ -124,9 +135,9 @@ fun SearchPane(
                     )
                     Text(
                         when (type) {
-                            SearchType.Key -> AppStrings.search_type_key
-                            SearchType.Origin -> AppStrings.search_type_origin
-                            SearchType.Text -> AppStrings.search_type_text
+                            SearchType.Key -> stringResource(Res.string.search_type_key)
+                            SearchType.Origin -> stringResource(Res.string.search_type_origin)
+                            SearchType.Text -> stringResource(Res.string.search_type_text)
                         },
                         modifier = Modifier.padding(horizontal = 8.dp),
                         textAlign = TextAlign.Center,
@@ -162,10 +173,10 @@ fun SearchPane(
                     currentEntry ?: model.helper.allValues().find { entry -> entry.toSearchText() == data.value }
                 onSelect?.invoke(entry?.key() ?: "")
             }, modifier = Modifier.weight(1f)) {
-                Text(AppStrings.button_edit)
+                Text(stringResource(Res.string.button_edit))
             }
             TextButton(onClick = { onCancel?.invoke() }, modifier = Modifier.weight(1f)) {
-                Text(AppStrings.button_close)
+                Text(stringResource(Res.string.button_close))
             }
         }
     }

@@ -12,7 +12,11 @@ import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import dolphin.desktop.apps.dsttranslate.AppStrings
+import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.button_cancel
+import dolphin.desktop.apps.onitranslator.generated.resources.button_no
+import dolphin.desktop.apps.onitranslator.generated.resources.button_yes
+import org.jetbrains.compose.resources.stringResource
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
@@ -29,15 +33,15 @@ fun DebugSaveDialog(
         },
         buttons = {
             Row(modifier = Modifier.padding(horizontal = 8.dp)) {
-                TextButton(onClick = onDismissRequest) { Text(AppStrings.button_cancel) }
+                TextButton(onClick = onDismissRequest) { Text(stringResource(Res.string.button_cancel)) }
                 Spacer(modifier = Modifier.weight(1f))
-                TextButton(onClick = { onSave(false) }) { Text(AppStrings.button_no) }
+                TextButton(onClick = { onSave(false) }) { Text(stringResource(Res.string.button_no)) }
                 TextButton(
                     onClick = { onSave(true) },
                     colors = ButtonDefaults.textButtonColors(
                         contentColor = MaterialTheme.colors.secondary,
                     ),
-                ) { Text(AppStrings.button_yes) }
+                ) { Text(stringResource(Res.string.button_yes)) }
             }
         },
         modifier = modifier,

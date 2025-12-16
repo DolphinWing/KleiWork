@@ -17,7 +17,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.awt.ComposeWindow
 import androidx.compose.ui.graphics.Color
-import dolphin.desktop.apps.dsttranslate.AppStrings
+import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.content_description_folder
+import org.jetbrains.compose.resources.stringResource
 import java.io.File
 import javax.swing.JFileChooser
 import javax.swing.filechooser.FileFilter
@@ -60,7 +62,7 @@ fun FileChooserPane(
                     JFileChooser.FILES_ONLY -> Icons.Rounded.FileCopy
                     else -> Icons.Rounded.Folder
                 },
-                contentDescription = AppStrings.content_description_folder,
+                contentDescription = stringResource(Res.string.content_description_folder),
                 tint = MaterialTheme.colors.primary,
             )
         }

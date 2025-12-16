@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.ScrollableTabRow
@@ -28,9 +27,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.painter.BitmapPainter
-import androidx.compose.ui.res.loadImageBitmap
-import androidx.compose.ui.res.useResource
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
@@ -38,30 +34,41 @@ import androidx.compose.ui.window.WindowPosition
 import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
 import dolphin.android.apps.dsttranslate.WordEntry
-import dolphin.desktop.apps.dsttranslate.AppStrings
 import dolphin.desktop.apps.dsttranslate.DesktopPoHelper
 import dolphin.desktop.apps.dsttranslate.Ini
 import dolphin.desktop.apps.dsttranslate.PoDataModel
 import dolphin.desktop.apps.dsttranslate.compose.ConfigPane
 import dolphin.desktop.apps.dsttranslate.compose.DebugSaveDialog
-import dolphin.desktop.apps.dsttranslate.compose.OniTranslatorTheme
 import dolphin.desktop.apps.dsttranslate.compose.EditorPane
 import dolphin.desktop.apps.dsttranslate.compose.EditorSpec
 import dolphin.desktop.apps.dsttranslate.compose.EntryListPane
+import dolphin.desktop.apps.dsttranslate.compose.OniTranslatorTheme
 import dolphin.desktop.apps.dsttranslate.compose.SearchPane
 import dolphin.desktop.apps.dsttranslate.compose.ToastUi
+import dolphin.desktop.apps.dsttranslate.compose.ToastWrap
 import dolphin.desktop.apps.dsttranslate.compose.ToolbarCallback
 import dolphin.desktop.apps.dsttranslate.compose.ToolbarSpec
+import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.app_name
+import dolphin.desktop.apps.onitranslator.generated.resources.debug_save_dialog_title
+import dolphin.desktop.apps.onitranslator.generated.resources.nisbet_ponder
+import dolphin.desktop.apps.onitranslator.generated.resources.tab_config
+import dolphin.desktop.apps.onitranslator.generated.resources.tab_translation
+import dolphin.desktop.apps.onitranslator.generated.resources.toast_cost_ms
+import dolphin.desktop.apps.onitranslator.generated.resources.toast_write_failed
+import dolphin.desktop.apps.onitranslator.generated.resources.toast_write_success
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 import java.awt.Desktop
 import java.awt.Toolkit
 import java.awt.datatransfer.Clipboard
 import java.awt.datatransfer.DataFlavor
 import java.awt.datatransfer.StringSelection
 import java.io.File
-import java.net.URL
+import java.net.URI
 
 enum class UiState {
     Main, Editor, Search,
@@ -107,8 +114,8 @@ fun main(args: Array<String>) = application {
             }
         },
         state = windowState,
-        title = AppStrings.app_name,
-        icon = BitmapPainter(useResource("nisbet_ponder.png", ::loadImageBitmap)),
+        title = stringResource(Res.string.app_name),
+        icon = painterResource(Res.drawable.nisbet_ponder),
     ) {
         App(
             dataModel,
@@ -143,19 +150,19 @@ fun App(
         val entryListState = rememberLazyListState()
 
         var editorData by remember { mutableStateOf(EditorSpec()) } // editor
-        var toasted by remember { mutableStateOf("") }
+        var toasted by remember { mutableStateOf<ToastWrap?>(null) }
         var cached by remember { mutableStateOf(false) }
         var selectedTab by remember { mutableStateOf(1) } // default to Translation tab
         val loading = dataModel.helper.loading.collectAsState()
 
         // toast
         val toastJob = remember { mutableStateOf<Job?>(null) }
-        fun toast(message: String) {
+        fun toast(message: ToastWrap) {
             toastJob.value?.cancel()
             toastJob.value = coroutineScope.launch {
                 toasted = message
                 delay(2000)
-                toasted = ""
+                toasted = null
             }
         }
 
@@ -176,9 +183,9 @@ fun App(
                 cached = false // hide debug dialog
                 val (exported, cost) = dataModel.save(cacheIt)
                 if (cost > 0) {
-                    toast(AppStrings.toast_write_success(exported, cost))
+                    toast(ToastWrap.WriteSuccess(exported, cost))
                 } else {
-                    toast(AppStrings.toast_write_failed)
+                    toast(ToastWrap.WriteFailed)
                 }
             }
         }
@@ -188,7 +195,7 @@ fun App(
                 override fun onRefresh() {
                     coroutineScope.launch {
                         val cost = dataModel.translate()
-                        toast(AppStrings.toast_cost_ms(cost))
+                        toast(ToastWrap.ShowCost(cost))
                     }
                 }
 
@@ -233,7 +240,7 @@ fun App(
                         onCancel = { changeUiState() /* BACK */ },
                         onCopyToClipboard = { text ->
                             onCopyTo.invoke(text)
-                            toast(text)
+                            toast(ToastWrap.ShowString(text))
                         },
                         // onTranslate = { text -> translateByGoogle(text) },
                         onCopyFromClipboard = onCopyFrom,
@@ -257,7 +264,7 @@ fun App(
                 DebugSaveDialog(
                     onDismissRequest = { cached = false },
                     onSave = { saveEntryList(it) },
-                    title = AppStrings.debug_save_dialog_title(file.toString()),
+                    title = stringResource(Res.string.debug_save_dialog_title, file.toString()),
                     modifier = Modifier.fillMaxWidth(.5f),
                 )
             }
@@ -271,7 +278,7 @@ fun App(
                 }
             }
 
-            ToastUi(toasted)
+            toasted?.let { ToastUi(it) }
         }
     }
 }
@@ -308,13 +315,13 @@ private fun MainPane(
                     selected = selectedTab == 0,
                     onClick = { onTabChange?.invoke(0) },
                 ) {
-                    Text(AppStrings.tab_config, modifier = Modifier.padding(8.dp))
+                    Text(stringResource(Res.string.tab_config), modifier = Modifier.padding(8.dp))
                 }
                 Tab(
                     selected = selectedTab == 1,
                     onClick = { onTabChange?.invoke(1) },
                 ) {
-                    Text(AppStrings.tab_translation, modifier = Modifier.padding(8.dp))
+                    Text(stringResource(Res.string.tab_translation), modifier = Modifier.padding(8.dp))
                 }
             }
             Text(
@@ -385,13 +392,14 @@ fun copyFromSystemClipboard(): String {
  *
  * @param text target text
  */
+@Suppress("unused")
 fun translateByGoogle(text: String) {
     val desktop = if (Desktop.isDesktopSupported()) Desktop.getDesktop() else return
     if (desktop.isSupported(Desktop.Action.BROWSE)) {
         try {
             val encoded = text.replace(" ", "%20")
             val url = "https://translate.google.com.tw/?hl=zh-TW&sl=en&tl=zh-TW&text=$encoded"
-            desktop.browse(URL(url).toURI())
+            desktop.browse(URI(url))
         } catch (e: Exception) {
             println("translateByGoogle: ${e.message}")
         }

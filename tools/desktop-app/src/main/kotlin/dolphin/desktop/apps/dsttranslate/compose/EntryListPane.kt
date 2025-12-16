@@ -26,8 +26,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dolphin.android.apps.dsttranslate.WordEntry
-import dolphin.desktop.apps.dsttranslate.AppStrings
 import dolphin.desktop.apps.dsttranslate.PoDataModel
+import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.content_no_items
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun EntryListPane(
@@ -50,7 +52,7 @@ fun EntryListPane(
             spec = spec,
         )
         if (spec.enabled && (dataList.isEmpty())) {
-            Text(AppStrings.content_no_items, modifier = Modifier.padding(8.dp), textAlign = TextAlign.Center)
+            Text(stringResource(Res.string.content_no_items), modifier = Modifier.padding(8.dp), textAlign = TextAlign.Center)
         }
         if (!spec.enabled) {
             Spacer(modifier = Modifier.requiredHeight(16.dp))

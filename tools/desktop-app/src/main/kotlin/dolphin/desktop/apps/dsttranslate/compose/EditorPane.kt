@@ -37,7 +37,19 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import dolphin.android.apps.dsttranslate.WordEntry
 import dolphin.android.apps.dsttranslate.WordEntry.Companion.dropQuote
-import dolphin.desktop.apps.dsttranslate.AppStrings
+import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.button_apply
+import dolphin.desktop.apps.onitranslator.generated.resources.button_cancel
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_all
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_original_text
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_this_text
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_now_text
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_paste_all
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_send_to_google_translate
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_show_link
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_simplified_chinese_text
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_use_this_text
+import org.jetbrains.compose.resources.stringResource
 
 private fun Color.tinted(visible: Boolean): Color = copy(alpha = if (visible) 1f else .25f)
 
@@ -79,7 +91,7 @@ fun EditorPane(
         if (chsVisible) {
             TooltipButton(
                 onClick = { text = data.simplifiedToTraditional?.dropQuote() ?: "" },
-                tooltip = AppStrings.tooltip_use_this_text,
+                tooltip = stringResource(Res.string.tooltip_use_this_text),
                 modifier = Modifier.fillMaxWidth(),
                 enabled = data.simplifiedToTraditional?.isNotEmpty() == true,
                 colors = ButtonDefaults.buttonColors(
@@ -139,7 +151,7 @@ private fun EditorTopBar(
 
         TooltipIconButton(
             onClick = onToggleReferenceView,
-            tooltip = AppStrings.tooltip_simplified_chinese_text
+            tooltip = stringResource(Res.string.tooltip_simplified_chinese_text)
         ) {
             Icon(
                 Icons.Rounded.Visibility,
@@ -150,7 +162,7 @@ private fun EditorTopBar(
 
         TooltipIconButton(
             onClick = onToggleCurrentView,
-            tooltip = AppStrings.tooltip_now_text
+            tooltip = stringResource(Res.string.tooltip_now_text)
         ) {
             Icon(
                 Icons.Rounded.Visibility,
@@ -201,7 +213,7 @@ private fun EditorTemplateContent(
                 text += "msgstr \"${data.target.translated()}\""
                 onCopyToClipboard.invoke(text)
             },
-            tooltip = AppStrings.tooltip_copy_this_text,
+            tooltip = stringResource(Res.string.tooltip_copy_this_text),
             modifier = Modifier.weight(1f),
             colors = ButtonDefaults.textButtonColors(
                 contentColor = AppTheme.AppColor.green,
@@ -219,27 +231,27 @@ private fun EditorTemplateContent(
         ) {
             Icon(
                 Icons.Rounded.TextFields,
-                contentDescription = AppStrings.tooltip_use_this_text,
+                contentDescription = stringResource(Res.string.tooltip_use_this_text),
                 tint = AppTheme.AppColor.green
             )
         }
         TooltipIconButton(
             onClick = { onCopyToClipboard.invoke(data.target.origin()) },
-            tooltip = AppStrings.tooltip_copy_original_text
+            tooltip = stringResource(Res.string.tooltip_copy_original_text)
         ) {
             Icon(Icons.Rounded.ContentCopy, contentDescription = null)
         }
         onTranslate?.let { listener ->
             TooltipIconButton(
                 onClick = { listener.invoke(data.target.origin()) },
-                tooltip = AppStrings.tooltip_send_to_google_translate
+                tooltip = stringResource(Res.string.tooltip_send_to_google_translate)
             ) {
                 Icon(Icons.Rounded.Translate, contentDescription = null)
             }
         }
         TooltipIconButton(
             onClick = { linkSelector = true },
-            tooltip = AppStrings.tooltip_show_link,
+            tooltip = stringResource(Res.string.tooltip_show_link),
             enabled = links.count() > 0
         ) {
             Icon(Icons.Rounded.TextFields, contentDescription = null)
@@ -258,13 +270,13 @@ private fun EditorBottomBar(
     Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
         TooltipIconButton(
             onClick = onCopyToClipboard,
-            tooltip = AppStrings.tooltip_copy_all
+            tooltip = stringResource(Res.string.tooltip_copy_all)
         ) {
             Icon(Icons.Rounded.CopyAll, contentDescription = null)
         }
         TooltipIconButton(
             onClick = onCopyFromClipboard,
-            tooltip = AppStrings.tooltip_paste_all
+            tooltip = stringResource(Res.string.tooltip_paste_all)
         ) {
             Icon(Icons.Rounded.ContentPaste, contentDescription = null)
         }
@@ -273,11 +285,11 @@ private fun EditorBottomBar(
             onClick = onSave,
             modifier = Modifier.weight(1f),
         ) {
-            Text(AppStrings.button_apply)
+            Text(stringResource(Res.string.button_apply))
         }
         Spacer(modifier = Modifier.requiredWidth(16.dp))
         TextButton(onClick = onCancel) {
-            Text(AppStrings.button_cancel)
+            Text(stringResource(Res.string.button_cancel))
         }
     }
 }

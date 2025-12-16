@@ -36,6 +36,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.toast_cost_ms
+import dolphin.desktop.apps.onitranslator.generated.resources.toast_write_failed
+import dolphin.desktop.apps.onitranslator.generated.resources.toast_write_success
+import org.jetbrains.compose.resources.stringResource
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -138,8 +143,21 @@ fun RowScope.TableCell(
     )
 }
 
+sealed interface ToastWrap {
+    data class WriteSuccess(val exported: String, val cost: Long) : ToastWrap
+    data object WriteFailed : ToastWrap
+    data class ShowCost(val cost: Long) : ToastWrap
+    data class ShowString(val message: String) : ToastWrap
+}
+
 @Composable
-fun BoxScope.ToastUi(text: String) {
+fun BoxScope.ToastUi(toast: ToastWrap) {
+    val text = when (toast) {
+        is ToastWrap.ShowString -> toast.message
+        is ToastWrap.ShowCost -> stringResource(Res.string.toast_cost_ms, toast.cost)
+        is ToastWrap.WriteFailed -> stringResource(Res.string.toast_write_failed)
+        is ToastWrap.WriteSuccess -> stringResource(Res.string.toast_write_success, toast.exported, toast.cost)
+    }
     if (text.isNotEmpty()) {
         AnimatedVisibility(
             visible = true,

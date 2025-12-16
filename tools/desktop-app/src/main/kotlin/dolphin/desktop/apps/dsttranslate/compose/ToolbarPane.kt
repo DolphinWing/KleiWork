@@ -22,13 +22,22 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import dolphin.android.apps.dsttranslate.WordEntry
-import dolphin.desktop.apps.dsttranslate.AppStrings
+import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.button_refresh
+import dolphin.desktop.apps.onitranslator.generated.resources.button_save
+import dolphin.desktop.apps.onitranslator.generated.resources.button_search
+import dolphin.desktop.apps.onitranslator.generated.resources.toolbar_now_translated
+import dolphin.desktop.apps.onitranslator.generated.resources.toolbar_old_translated
+import dolphin.desktop.apps.onitranslator.generated.resources.toolbar_simplified_text
+import dolphin.desktop.apps.onitranslator.generated.resources.toolbar_status
+import dolphin.desktop.apps.onitranslator.generated.resources.toolbar_template_text
+import org.jetbrains.compose.resources.stringResource
 
 private val textMap = listOf(
-    Pair(AppStrings.toolbar_template_text, AppTheme.AppColor.purple),
-    Pair(AppStrings.toolbar_simplified_text, AppTheme.AppColor.blue),
-    Pair(AppStrings.toolbar_old_translated, AppTheme.AppColor.orange),
-    Pair(AppStrings.toolbar_now_translated, AppTheme.AppColor.green),
+    Pair(Res.string.toolbar_template_text, AppTheme.AppColor.purple),
+    Pair(Res.string.toolbar_simplified_text, AppTheme.AppColor.blue),
+    Pair(Res.string.toolbar_old_translated, AppTheme.AppColor.orange),
+    Pair(Res.string.toolbar_now_translated, AppTheme.AppColor.green),
 )
 
 interface ToolbarCallback {
@@ -55,14 +64,14 @@ fun ToolbarPane(
     ) {
         val changed = changedList?.filter { it > 0L } ?: arrayListOf()
         Text(
-            AppStrings.toolbar_status(filteredList?.size ?: 0, changed.size),
+            stringResource(Res.string.toolbar_status, filteredList?.size ?: 0, changed.size),
             modifier = Modifier.weight(1f),
             fontSize = AppTheme.largerFontSize(),
             color = MaterialTheme.colors.onPrimary,
         )
         textMap.forEach { (title, color) ->
             Text(
-                text = title,
+                text = stringResource(title),
                 modifier = Modifier.background(color).padding(vertical = 4.dp, horizontal = 8.dp),
                 fontSize = AppTheme.largerFontSize(),
                 // fontFamily = FontFamily.Monospace,
@@ -74,19 +83,19 @@ fun ToolbarPane(
             Icons.Rounded.Refresh,
             onClick = { callback?.onRefresh() },
             enabled = spec.enabled,
-            contentDescription = AppStrings.button_refresh
+            contentDescription = stringResource(Res.string.button_refresh)
         )
         ToolbarIconButton(
             Icons.Rounded.Search,
             onClick = { callback?.onSearch() },
             enabled = spec.enabled,
-            contentDescription = AppStrings.button_search
+            contentDescription = stringResource(Res.string.button_search)
         )
         ToolbarIconButton(
             Icons.Rounded.Save,
             onClick = { callback?.onSave() },
             enabled = spec.enabled,
-            contentDescription = AppStrings.button_save
+            contentDescription = stringResource(Res.string.button_save)
         )
     }
 }
