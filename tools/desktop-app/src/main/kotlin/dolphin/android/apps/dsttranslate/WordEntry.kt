@@ -61,6 +61,8 @@ data class WordEntry(
         }
     }
 
+    constructor(key: String, id: String, newly: Boolean = true) : this(key, key, id, id, newly)
+
     override fun hashCode(): Int = id.hashCode() + str.hashCode()
 
     override fun equals(other: Any?): Boolean {

@@ -22,7 +22,12 @@ abstract class PoHelper {
     private var replacementRegex: Regex? = null
 
     protected fun setupReplacements() {
-        replacementMap = replaceList.toMap()
+        replacementMap = try {
+            replaceList.toMap()
+        } catch (e: Exception) {
+            println("Failed to replacement map: ${e.message}")
+            emptyMap()
+        }
         if (replacementMap.isNotEmpty()) {
             val regexPattern = replacementMap.keys.joinToString("|") { Regex.escape(it) }
             replacementRegex = Regex(regexPattern)

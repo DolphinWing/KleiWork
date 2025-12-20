@@ -303,7 +303,7 @@ private fun PreviewEditorPaneTargetOnly() {
 }
 
 @Composable
-private fun AlertRegexLinkSelector(links: Sequence<MatchResult>, onSelected: (String) -> Unit) {
+internal fun AlertRegexLinkSelector(links: Sequence<MatchResult>, onSelected: (String) -> Unit) {
     Column(modifier = Modifier.background(Color.White).padding(16.dp)) {
         links.forEach {
             val link = it.groupValues[1].substring(2, it.groupValues[1].length - 2)

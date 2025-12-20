@@ -57,18 +57,60 @@
 
 ### 遷移步驟
 
-- [ ] **1. 加入 M3 依賴**: 在 `build.gradle.kts` 中，加入 `compose.material3` 依賴。
-- [ ] **2. 更新主題**: 在 `AppTheme.kt` 中，將 `androidx.compose.material.MaterialTheme` 替換為 `androidx.compose.material3.MaterialTheme`，並將 `lightColors()` 替換為 `lightColorScheme()`。定義新的 M3 顏色方案。
-- [ ] **3. 遷移 `Main.kt`**: 作為第一步，將 `Main.kt` 中所有 M2 元件遷移到其 M3 對應項目。這包括 `OniTranslatorTheme`、`ScrollableTabRow`、`Tab`、`Text` 和 `CircularProgressIndicator`。
-- [ ] **4. 遷移 `*Pane.kt` 和 `*Dialog.kt` 檔案**: 逐步遷移剩餘的 UI 檔案：
-    - [ ] `ToolbarPane.kt` (`Icon`, `IconButton`)
-    - [ ] `SearchPane.kt` (`Button`, `TextField`, `Icon` 等)
-    - [ ] `FilePane.kt` (`TextField`, `Icon`)
-    - [ ] `EditorPane.kt` (`Button`, `TextField`, `Icon`)
-    - [ ] `ConfigPane.kt` (`TextButton`)
-    - [ ] `DebugSaveDialog.kt` (`AlertDialog`, `TextButton`)
-- [ ] **5. 最後清理**: 所有元件遷移並驗證後，搜尋並移除任何剩餘的 `androidx.compose.material.*` 用法。
-- [ ] **6. (可選) 移除 M2 依賴**: 遷移完成並驗證後，可以從 `build.gradle.kts` 中移除 `compose.material` 依賴。
+**開發流程共識**：我們將採用兩階段遷移策略。
+1.  **第一階段 (UI 優先)**：專注於使用 M3 元件完成所有 UI 的靜態佈局和刻畫，確保介面達到理想的現代化設計。在此階段，我們會建立新的 M3 Composable，但暫時不與 `PoDataModel` 的複雜邏輯深度耦合。
+2.  **第二階段 (邏輯與狀態重構)**：在 UI 佈局完全確定後，回頭重構 `PoDataModel` 和 `StateFlow`，使其完美適配新的 UI 架構，並移除舊的 M2 UI 程式碼。
+
+- [x] **1. 加入 M3 依賴**: 在 `build.gradle.kts` 中，加入 `compose.material3` 依賴。
+- [x] **2. 更新主題**: 在 `AppTheme.kt` 中，將 `androidx.compose.material.MaterialTheme` 替換為 `androidx.compose.material3.MaterialTheme`，並將 `lightColors()` 替換為 `lightColorScheme()`。定義新的 M3 顏色方案。
+- [x] **3. 建立新的應用程式根元件**: 將 `Main.kt` 中的 `App` Composable 抽離至 `dolphin.desktop.apps.onitranslator` 套件下的 `OniTranslatorApp.kt`，並讓 `Main.kt` 中的 `main()` 函式呼叫新的 `OniTranslatorApp`。
+- [x] **4. 遷移 `Main.kt` (舊 Tab)**: 參考 `Main.kt` 中功能，重新使用其 M3 對應項目取代舊有的所有 M2 元件，並調整結構。
+- [x] **5. 頂層架構重構：引入 Scaffold 與主從式佈局**: 這是實現現代化 UI 的核心步驟。
+    - [x] 在 `OniTranslatorApp.kt` 中使用 `Scaffold` 元件作為根佈局。
+    - [x] **TopAppBar**:
+        - [x] 在 `Scaffold` 的 `topBar` 中實作一個全域的 `TopAppBar`。
+        - [x] `TopAppBar` 需要能夠在「一般標題模式」和「搜尋模式 (`SearchBar`)」之間切換。
+        - [x] 在「搜尋模式」下，`SearchBar` 下方應包含一組 `FilterChip`，用於切換搜尋類型 (Key, Origin, Text)。
+    - [x] **主從式佈局 (Master-Detail)**:
+        - [x] 在 `Scaffold` 的 `content` 區域，使用 `Row` 實現主從式佈局。
+        - [x] 左側 (Master) 為 `M3EntryListPane`。
+        - [x] 右側 (Detail) 為 `M3EditorPane`。
+    - [x] **StatusBar**:
+        - [x] (可選) 在 `Scaffold` 的 `bottomBar` 中實作一個全域的 `StatusBar`，用於顯示 App 狀態或編輯提示。
+    - [x] **狀態管理**:
+        - [x] 在 `OniTranslatorApp` 的頂層管理 `selectedEntry: State<WordEntry?>` 和 `searchText: State<String>` 等 UI 狀態。
+- [x] **6. 各 `Pane` 的 M3 適配與遷移**: 根據新的頂層架構，遷移或建立各個 `Pane`。
+    - [x] `EntryListPane.kt`:
+        - [x] 建立 `M3EntryListPane`。
+        - [x] 功能擴充：讓其能根據傳入的 `searchText` 決定是顯示完整列表還是搜尋結果。
+        - [x] 功能調整：`onEdit` 回調僅更新頂層的 `selectedEntry` 狀態。
+        - [ ] (可選) 為當前選中的列表項增加視覺高亮效果。
+    - [x] `ConfigPane.kt`: (已重新檢視並整合)
+        - [x] 建立 `M3ConfigPane`。
+        - [x] 移除其內部的 `Surface`，使其能融入父容器背景。
+        - [x] 建立私有的 `M3FileChooser` 元件。
+        - [x] 完成「快速設定」和「手動設定」的佈局。
+        - [x] **整合 Config 頁面至主要 UI**：
+            - [x] 在 `OniTranslatorApp.kt` 中，新增 `showConfigDialog` 狀態來控制 Config 頁面的顯示。
+            - [x] 在 `PoDataModel` 的 `loadIniAndPo()` 完成後，檢查設定是否有效（使用 `DesktopPoHelper.isConfigValid()`）。若無效，自動顯示 Config 頁面。
+            - [x] 將 `M3ConfigPane` 放在 `Dialog` 中顯示，由 `showConfigDialog` 控制。
+            - [x] `M3ConfigPane` 增加了 `onConfigSaved` 和 `onDismissRequest` 回呼，以處理儲存和關閉邏輯。
+            - [x] 在 `OniTranslatorTopBar` 的溢出選單中，新增「設定」進入點，點擊後會顯示 Config 頁面。
+    - [x] `EditorPane.kt`:
+        - [x] 建立 `M3EditorPane` 檔案。
+        - [x] `M3EditorPane` **不包含**自身的 `Toolbar`。
+        - [x] 介面根據傳入的 `selectedEntry` 顯示，若為 `null` 則顯示提示。
+        - [x] 使用 M3 元件 (`OutlinedTextField`, `TextButton`, `Icon` 等) 設計編輯器 UI。
+    - [x] `SearchPane.kt`:
+        - [x] **計畫變更**：**不再**建立獨立的 `M3SearchPane` 檔案。其功能被整合到 `TopAppBar` 的 `SearchBar` 和 `M3EntryListPane` 的搜尋結果顯示模式中。
+    - [x] `DebugSaveDialog.kt` (`AlertDialog`, `TextButton`)
+        - [x] 已經在 `OniTranslatorApp.kt` 中整合了 `M3DebugSaveDialog`。
+- [ ] **7. (第二階段) 資料層與狀態管理重構**:
+    - [ ] 全面審視並重構 `PoDataModel.kt`，使其 API 更符合新的 UI 架構和單向資料流 (UDF) 原則。
+    - [ ] 優化 `Ini.kt` 和 `DesktopPoHelper.kt` 的資料解析與檔案處理邏輯。
+    - [ ] **實作「儲存草稿」機制**: (這是第二階段的內容，目前尚未開始)
+- [ ] **8. (可選) 最後清理**: 所有遷移和重構完成後，搜尋並移除任何剩餘的 M2 依賴和舊 UI 檔案。
+- [ ] **9. (可選) 移除 M2 依賴**: 遷移完成並驗證後，可以從 `build.gradle.kts` 中移除 `compose.material` 依賴。
 
 ---
 

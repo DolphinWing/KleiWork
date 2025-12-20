@@ -46,4 +46,7 @@
     <string name="toolbar_old_translated">CHT</string>
     <string name="toolbar_now_translated">now</string>
     <string name="content_no_items">No items</string>
+    <string name="quick_setup">Quick Setup</string>
+    <string name="manual_setup">Manual Setup</string>
+    <string name="string_map_path_cannot_be_empty">Path to strings.xml cannot be empty</string>
 </resources>

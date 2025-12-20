@@ -48,6 +48,7 @@ import dolphin.desktop.apps.dsttranslate.compose.ToastUi
 import dolphin.desktop.apps.dsttranslate.compose.ToastWrap
 import dolphin.desktop.apps.dsttranslate.compose.ToolbarCallback
 import dolphin.desktop.apps.dsttranslate.compose.ToolbarSpec
+import dolphin.desktop.apps.onitranslator.OniTranslatorApp
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.app_name
 import dolphin.desktop.apps.onitranslator.generated.resources.debug_save_dialog_title
@@ -82,7 +83,7 @@ fun main(args: Array<String>) = application {
 //    val osName: String = System.getProperties().getProperty("os.name")
 //    println("os.name = $osName")
 
-    val debugMode by remember { mutableStateOf(false) }
+    var debugMode by remember { mutableStateOf(false) }
 
 //    val tempDir: String = System.getProperty("java.io.tmpdir")
 //    println("tempDir = $tempDir")
@@ -96,6 +97,7 @@ fun main(args: Array<String>) = application {
 
         val debug = File(workingDir, "build").exists() // has build dir
         println("debug = $debug")
+        debugMode = debug
 
         val ini = Ini(workingDir)
         PoDataModel(DesktopPoHelper(ini, debug = debug).apply { prepare() })
@@ -117,7 +119,7 @@ fun main(args: Array<String>) = application {
         title = stringResource(Res.string.app_name),
         icon = painterResource(Res.drawable.nisbet_ponder),
     ) {
-        App(
+        OniTranslatorApp(
             dataModel,
             onCopyTo = ::copyToSystemClipboard,
             onCopyFrom = ::copyFromSystemClipboard,

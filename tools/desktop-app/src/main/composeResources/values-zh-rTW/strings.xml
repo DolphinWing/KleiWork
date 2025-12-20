@@ -46,4 +46,7 @@
     <string name="toolbar_old_translated">舊翻</string>
     <string name="toolbar_now_translated">新翻</string>
     <string name="content_no_items">沒有項目</string>
+    <string name="quick_setup">快速設定</string>
+    <string name="manual_setup">手動設定</string>
+    <string name="string_map_path_cannot_be_empty">strings.xml 路徑不能為空</string>
 </resources>

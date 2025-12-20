@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import dolphin.desktop.apps.dsttranslate.Ini
+import dolphin.desktop.apps.onitranslator.Configs
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.github_root
 import dolphin.desktop.apps.onitranslator.generated.resources.oni_asset_dir
@@ -25,18 +26,6 @@ import dolphin.desktop.apps.onitranslator.generated.resources.strings_xml
 import org.jetbrains.compose.resources.stringResource
 import java.io.File
 import javax.swing.JFileChooser
-
-data class Configs(
-    val stringMap: String = "",
-    val oniWorkshopDir: String = "",
-    val oniAssetsDir: String = "",
-) {
-    constructor(ini: Ini) : this(
-        ini.stringMap,
-        ini.oniWorkshopDir,
-        ini.oniAssetsDir,
-    )
-}
 
 @Composable
 fun ConfigPane(

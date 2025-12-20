@@ -217,8 +217,12 @@ class DesktopPoHelper(val ini: Ini = Ini(), private val debug: Boolean = false) 
 //        return File(fonts, "Taiwan4818.txt").exists()
 //    }
 
-    private fun Char.valid(): Boolean =
-        this != ' ' && this != '\t' && this != '\n' && this != '\r'
+//        private fun Char.valid(): Boolean =
+//            this != ' ' && this != '\t' && this != '\n' && this != '\r'
 
-
-}
+        fun isConfigValid(): Boolean {
+            val workshopDir = File(ini.oniWorkshopDir)
+            val assetsDir = File(ini.oniAssetsDir)
+            return workshopDir.isDirectory && assetsDir.isDirectory
+        }
+    }

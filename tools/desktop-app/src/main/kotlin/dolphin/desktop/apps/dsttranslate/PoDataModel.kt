@@ -5,9 +5,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.WindowPosition
 import androidx.compose.ui.window.WindowState
 import dolphin.android.apps.dsttranslate.WordEntry
-import dolphin.desktop.apps.dsttranslate.compose.Configs
 import dolphin.desktop.apps.dsttranslate.compose.EditorSpec
 import dolphin.desktop.apps.dsttranslate.compose.SearchType
+import dolphin.desktop.apps.onitranslator.Configs
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.withContext
