@@ -1,4 +1,4 @@
-package dolphin.android.apps.dsttranslate
+package dolphin.desktop.apps.onitranslator.model
 
 /**
  * A word item in Klei PO file.

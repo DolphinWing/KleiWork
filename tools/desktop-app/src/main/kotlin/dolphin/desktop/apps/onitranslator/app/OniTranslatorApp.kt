@@ -1,4 +1,4 @@
-package dolphin.desktop.apps.onitranslator
+package dolphin.desktop.apps.onitranslator.app
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandVertically
@@ -36,12 +36,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import dolphin.android.apps.dsttranslate.WordEntry
-import dolphin.desktop.apps.dsttranslate.PoDataModel
-import dolphin.desktop.apps.dsttranslate.compose.SearchType
-import dolphin.desktop.apps.onitranslator.compose.OniTranslatorM3Theme
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.debug_save_dialog_title
+import dolphin.desktop.apps.onitranslator.model.PoDataModel
+import dolphin.desktop.apps.onitranslator.model.WordEntry
+import dolphin.desktop.apps.onitranslator.pane.ConfigDialogContent
+import dolphin.desktop.apps.onitranslator.model.Configs
+import dolphin.desktop.apps.onitranslator.model.EditorData
+import dolphin.desktop.apps.onitranslator.pane.EditorPane
+import dolphin.desktop.apps.onitranslator.pane.EntryListPane
+import dolphin.desktop.apps.onitranslator.model.SearchType
+import dolphin.desktop.apps.onitranslator.theme.OniTranslatorM3Theme
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.stringResource
 
@@ -163,7 +168,7 @@ fun OniTranslatorApp(
                         }
                     }
                     Row(modifier = Modifier.fillMaxSize()) {
-                        M3EntryListPane(
+                        EntryListPane(
                             dataModel = dataModel,
                             list = list,
                             searchText = searchText,
@@ -171,7 +176,7 @@ fun OniTranslatorApp(
                             onEdit = { entry -> selectedEntry = entry }
                         )
                         VerticalDivider(modifier = Modifier.fillMaxHeight().width(1.dp))
-                        M3EditorPane(
+                        EditorPane(
                             entry = bundleData,
                             modifier = Modifier.weight(0.6f),
                             onSave = { entry, newText ->
@@ -180,6 +185,7 @@ fun OniTranslatorApp(
                                 }
                             },
                             onCopyToClipboard = onCopyTo,
+                            onConvert = { text -> dataModel.helper.convert(text) },
                             onCancel = { selectedEntry = null }
                         )
                     }
@@ -202,7 +208,7 @@ fun OniTranslatorApp(
 
             if (showConfigDialog) {
                 Dialog(onDismissRequest = { showConfigDialog = false }) {
-                    M3ConfigDialogContent(
+                    ConfigDialogContent(
                         configs = configsState,
                         onConfigChange = { configsState = it },
                         onConfigSaved = { configs ->
@@ -215,6 +221,7 @@ fun OniTranslatorApp(
                     )
                 }
             }
+
 
             if (loading && !isSearchActive) { // Don't show loading overlay when search is active
                 Box(

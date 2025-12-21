@@ -1,13 +1,9 @@
-package dolphin.desktop.apps.dsttranslate
+package dolphin.desktop.apps.onitranslator.model
 
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.WindowPosition
 import androidx.compose.ui.window.WindowState
-import dolphin.android.apps.dsttranslate.WordEntry
-import dolphin.desktop.apps.dsttranslate.compose.EditorSpec
-import dolphin.desktop.apps.dsttranslate.compose.SearchType
-import dolphin.desktop.apps.onitranslator.Configs
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.withContext
@@ -130,21 +126,21 @@ class PoDataModel(val helper: DesktopPoHelper) {
         })
     }
 
-    /**
-     * Make a new [EditorSpec] to editor
-     *
-     * @param entry target word
-     * @return new entry to editor
-     */
-    fun requestEdit(entry: WordEntry): EditorSpec {
-        // ONI: update entry id to template one
-        val entry1 = entry.copy(id = helper.templated(entry.key)?.id ?: entry.id)
-        return EditorSpec(
-            entry1,
-            simplifiedToTraditional = helper.sc2tc(helper.simplified(entry.key)?.str ?: ""),
-            templateContent = helper.templated(entry.key)?.id,
-        )
-    }
+//    /**
+//     * Make a new [EditorSpec] to editor
+//     *
+//     * @param entry target word
+//     * @return new entry to editor
+//     */
+//    fun requestEdit(entry: WordEntry): EditorSpec {
+//        // ONI: update entry id to template one
+//        val entry1 = entry.copy(id = helper.templated(entry.key)?.id ?: entry.id)
+//        return EditorSpec(
+//            entry1,
+//            simplifiedToTraditional = helper.sc2tc(helper.simplified(entry.key)?.str ?: ""),
+//            templateContent = helper.templated(entry.key)?.id,
+//        )
+//    }
 
     suspend fun rememberLastWindowState(windowState: WindowState) {
         val pos = windowState.position

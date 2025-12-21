@@ -1,9 +1,8 @@
-package dolphin.desktop.apps.onitranslator
+package dolphin.desktop.apps.onitranslator.pane
 
 // Import the new M3ToolbarPane
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -28,26 +27,18 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.composed
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import dolphin.android.apps.dsttranslate.WordEntry
-import dolphin.desktop.apps.dsttranslate.PoDataModel
-import dolphin.desktop.apps.onitranslator.compose.OniTranslatorM3Theme
-
-private data class EntryViewData(
-    val origin: WordEntry,
-    val mainTranslation: String,
-    val templateText: String,
-    val simplifiedText: String?,
-    val oldTranslationText: String?,
-)
+import dolphin.desktop.apps.onitranslator.model.EditorData
+import dolphin.desktop.apps.onitranslator.model.EntryTagType
+import dolphin.desktop.apps.onitranslator.model.PoDataModel
+import dolphin.desktop.apps.onitranslator.model.WordEntry
+import dolphin.desktop.apps.onitranslator.theme.OniTranslatorM3Theme
+import dolphin.desktop.apps.onitranslator.widget.TextTag
+import dolphin.desktop.apps.onitranslator.widget.shimmerEffect
 
 @Composable
-fun M3EntryListPane(
+fun EntryListPane(
     dataModel: PoDataModel,
     list: List<WordEntry>,
     modifier: Modifier = Modifier,
@@ -177,28 +168,6 @@ private fun M3EntryView(
 }
 
 @Composable
-internal fun TextTag(
-    text: String,
-    containerColor: Color,
-    contentColor: Color,
-    modifier: Modifier = Modifier
-) {
-    Surface(
-        shape = MaterialTheme.shapes.small,
-        color = containerColor,
-        modifier = modifier,
-    ) {
-        Text(
-            text = text,
-            color = contentColor,
-            style = MaterialTheme.typography.bodySmall,
-            modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp)
-        )
-    }
-}
-
-
-@Composable
 private fun EntryViewPlaceholder(modifier: Modifier = Modifier) {
     OutlinedCard(
         modifier = modifier.fillMaxWidth().padding(vertical = 4.dp, horizontal = 8.dp),
@@ -218,20 +187,6 @@ private fun EntryViewPlaceholder(modifier: Modifier = Modifier) {
             Spacer(modifier = Modifier.height(4.dp))
         }
     }
-}
-
-fun Modifier.shimmerEffect(): Modifier = composed {
-    background(
-        brush = Brush.linearGradient(
-            colors = listOf(
-                MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.6f),
-                MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.2f),
-                MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.6f),
-            ),
-            start = Offset.Zero,
-            end = Offset(x = 500f, y = 500f) // Adjust for effect size
-        )
-    )
 }
 
 // Previews for M3EntryListPane components

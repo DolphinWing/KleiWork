@@ -1,8 +1,6 @@
-package dolphin.desktop.apps.dsttranslate
+package dolphin.desktop.apps.onitranslator.model
 
 import com.github.houbb.opencc4j.util.ZhTwConverterUtil
-import dolphin.android.apps.dsttranslate.PoHelper
-import dolphin.android.apps.dsttranslate.WordEntry
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.w3c.dom.Element
@@ -198,6 +196,10 @@ class DesktopPoHelper(val ini: Ini = Ini(), private val debug: Boolean = false) 
 
     override fun sc2tc(str: String): String {
         return ZhTwConverterUtil.toTraditional(str)
+    }
+
+    fun convert(str: String): String {
+        return refactor(sc2tc(str))
     }
 
     private fun NodeList.items(): List<Node> {

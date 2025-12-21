@@ -1,4 +1,4 @@
-package dolphin.desktop.apps.dsttranslate
+package dolphin.desktop.apps.onitranslator.model
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

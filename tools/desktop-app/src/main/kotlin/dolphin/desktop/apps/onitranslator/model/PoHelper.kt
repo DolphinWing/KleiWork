@@ -1,4 +1,4 @@
-package dolphin.android.apps.dsttranslate
+package dolphin.desktop.apps.onitranslator.model
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -314,7 +314,7 @@ abstract class PoHelper {
      */
     abstract fun sc2tc(str: String): String
 
-    private fun refactor(src: String): String = replacementRegex?.replace(src) {
+    protected fun refactor(src: String): String = replacementRegex?.replace(src) {
         replacementMap[it.value] ?: it.value
     } ?: src
 

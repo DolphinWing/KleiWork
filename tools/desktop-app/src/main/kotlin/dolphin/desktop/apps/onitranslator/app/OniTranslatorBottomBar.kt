@@ -1,4 +1,4 @@
-package dolphin.desktop.apps.onitranslator
+package dolphin.desktop.apps.onitranslator.app
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.layout.Arrangement
@@ -20,7 +20,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import dolphin.desktop.apps.onitranslator.compose.OniTranslatorM3Theme
+import dolphin.desktop.apps.onitranslator.model.EntryTagType
+import dolphin.desktop.apps.onitranslator.theme.OniTranslatorM3Theme
+import dolphin.desktop.apps.onitranslator.widget.TextTag
 import org.jetbrains.compose.resources.stringResource
 
 @OptIn(ExperimentalMaterial3Api::class)

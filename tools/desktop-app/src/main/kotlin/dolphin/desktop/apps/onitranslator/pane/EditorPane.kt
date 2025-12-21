@@ -1,18 +1,24 @@
-package dolphin.desktop.apps.onitranslator
+package dolphin.desktop.apps.onitranslator.pane
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.ContentCopy
 import androidx.compose.material.icons.rounded.ContentPaste
+import androidx.compose.material.icons.rounded.EditOff
 import androidx.compose.material.icons.rounded.Link
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
@@ -26,29 +32,26 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
-import dolphin.android.apps.dsttranslate.WordEntry
-import dolphin.desktop.apps.dsttranslate.compose.AlertRegexLinkSelector
-import dolphin.desktop.apps.onitranslator.compose.OniTranslatorM3Theme
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_this_text
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_show_link
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_use_this_text
+import dolphin.desktop.apps.onitranslator.model.EditorData
+import dolphin.desktop.apps.onitranslator.model.EntryTagType
+import dolphin.desktop.apps.onitranslator.model.WordEntry
+import dolphin.desktop.apps.onitranslator.theme.OniTranslatorM3Theme
+import dolphin.desktop.apps.onitranslator.widget.TooltipIconButton
 import org.jetbrains.compose.resources.stringResource
 
-data class EditorData(
-    val target: WordEntry,
-    val templateText: String,
-    val referenceText: String? = null,
-    val draftText: String? = null,
-)
-
 @Composable
-fun M3EditorPane(
+fun EditorPane(
     entry: EditorData?,
     modifier: Modifier = Modifier,
     onCopyToClipboard: (String) -> Unit = {},
+    onConvert: (String) -> String = { it },
     onSave: (WordEntry, String) -> Unit = { _, _ -> },
     onCancel: () -> Unit = {},
 ) {
@@ -58,15 +61,11 @@ fun M3EditorPane(
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
-                "No entry selected",
-                style = MaterialTheme.typography.titleMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-            Text(
-                "Select an item from the list to start editing.",
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            Icon(
+                Icons.Rounded.EditOff,
+                contentDescription = null,
+                modifier = Modifier.size(128.dp),
+                tint = MaterialTheme.colorScheme.tertiary.copy(alpha = 0.25f)
             )
         }
     } else {
@@ -108,12 +107,20 @@ fun M3EditorPane(
                 )
                 entry.referenceText?.let { text ->
                     if (text.isNotBlank()) {
-                        ReferenceView(text, type = EntryTagType.Simplified, onReplace = { editedText = text })
+                        ReferenceView(
+                            text,
+                            type = EntryTagType.Simplified,
+                            onReplace = { editedText = onConvert(text) },
+                        )
                     }
                 }
                 entry.draftText?.let { text ->
                     if (text.isNotBlank()) {
-                        ReferenceView(text, type = EntryTagType.Translated, onReplace = { editedText = text })
+                        ReferenceView(
+                            text,
+                            type = EntryTagType.Translated,
+                            onReplace = { editedText = onConvert(text) },
+                        )
                     }
                 }
             }
@@ -130,7 +137,7 @@ fun M3EditorPane(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.End,
             ) {
-                TextButton(onClick = onCancel, enabled = isChanged) {
+                TextButton(onClick = onCancel) {
                     Text("Cancel")
                 }
                 TextButton(
@@ -180,13 +187,13 @@ private fun ReferenceView(
             )
 
             onCopyToClipboard?.let { listener ->
-                M3TooltipIconButton(
+                TooltipIconButton(
                     icon = Icons.Rounded.ContentCopy,
                     tooltip = stringResource(Res.string.tooltip_copy_this_text),
                     onClick = { listener.invoke("") },
                 )
                 if (links.count() > 0) {
-                    M3TooltipIconButton(
+                    TooltipIconButton(
                         icon = Icons.Rounded.Link,
                         tooltip = stringResource(Res.string.tooltip_show_link),
                         onClick = { linkSelector = !linkSelector }
@@ -194,11 +201,42 @@ private fun ReferenceView(
                 }
             }
             onReplace?.let { listener ->
-                M3TooltipIconButton(
+                TooltipIconButton(
                     icon = Icons.Rounded.ContentPaste,
                     tooltip = stringResource(Res.string.tooltip_use_this_text),
                     onClick = listener,
                 )
+            }
+        }
+    }
+}
+
+@Composable
+private fun AlertRegexLinkSelector(links: Sequence<MatchResult>, onSelected: (String) -> Unit) {
+    Column(modifier = Modifier.background(Color.White).padding(16.dp)) {
+        links.forEach {
+            val link = it.groupValues[1].substring(2, it.groupValues[1].length - 2)
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                TextButton(onClick = { onSelected(link) }) {
+                    Text(link)
+                }
+                IconButton(onClick = { onSelected("<link=\\\"${link}\\\"</link>") }) {
+                    Icon(Icons.Rounded.Link, contentDescription = null)
+                }
+            }
+        }
+    }
+}
+
+@Preview
+@Composable
+private fun M3EditorPanePreviewEmpty() {
+    Column {
+        arrayOf(false, true).forEach { darkTheme ->
+            OniTranslatorM3Theme(darkTheme) {
+                Surface {
+                    EditorPane(entry = null, modifier = Modifier.height(240.dp))
+                }
             }
         }
     }
@@ -216,7 +254,7 @@ private fun M3EditorPanePreviewLight() {
     // Light Theme Preview
     OniTranslatorM3Theme(darkTheme = false) {
         Surface {
-            M3EditorPane(entry = data)
+            EditorPane(entry = data)
         }
     }
 }
@@ -235,7 +273,7 @@ private fun M3EditorPanePreviewDark() {
     // Dark Theme Preview
     OniTranslatorM3Theme(darkTheme = true) {
         Surface {
-            M3EditorPane(entry = data)
+            EditorPane(entry = data)
         }
     }
 }

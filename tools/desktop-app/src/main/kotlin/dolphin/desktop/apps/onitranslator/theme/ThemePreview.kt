@@ -1,4 +1,4 @@
-package dolphin.desktop.apps.onitranslator.compose
+package dolphin.desktop.apps.onitranslator.theme
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.background

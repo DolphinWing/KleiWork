@@ -1,4 +1,4 @@
-package dolphin.desktop.apps.onitranslator
+package dolphin.desktop.apps.onitranslator.widget
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -18,7 +18,7 @@ import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun M3TooltipIconButton(
+fun TooltipIconButton(
     icon: ImageVector,
     tooltip: String,
     onClick: () -> Unit,

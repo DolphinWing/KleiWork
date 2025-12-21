@@ -1,4 +1,4 @@
-package dolphin.desktop.apps.onitranslator
+package dolphin.desktop.apps.onitranslator.pane
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.layout.Arrangement
@@ -12,24 +12,17 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.Close
-import androidx.compose.material.icons.rounded.FolderOpen
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import dolphin.desktop.apps.dsttranslate.Ini
-import dolphin.desktop.apps.onitranslator.compose.OniTranslatorM3Theme
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.github_root
 import dolphin.desktop.apps.onitranslator.generated.resources.manual_setup
@@ -37,41 +30,12 @@ import dolphin.desktop.apps.onitranslator.generated.resources.oni_asset_dir
 import dolphin.desktop.apps.onitranslator.generated.resources.oni_workshop_dir
 import dolphin.desktop.apps.onitranslator.generated.resources.quick_setup
 import dolphin.desktop.apps.onitranslator.generated.resources.string_map_path_cannot_be_empty
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import dolphin.desktop.apps.onitranslator.model.Configs
+import dolphin.desktop.apps.onitranslator.theme.OniTranslatorM3Theme
+import dolphin.desktop.apps.onitranslator.widget.FileChooser
 import org.jetbrains.compose.resources.stringResource
 import java.io.File
 import javax.swing.JFileChooser
-import javax.swing.UIManager
-
-/**
- * Data class to hold configuration paths.
- * @param stringMap Path to strings.xml.
- * @param oniWorkshopDir Path to the ONI workshop directory.
- * @param oniAssetsDir Path to the ONI assets directory.
- */
-data class Configs(
-    val stringMap: String = "",
-    val oniWorkshopDir: String = "",
-    val oniAssetsDir: String = "",
-) {
-    /**
-     * Secondary constructor to initialize Configs from an Ini object.
-     * @param ini The Ini object containing configuration data.
-     */
-    constructor(ini: Ini) : this(
-        ini.stringMap,
-        ini.oniWorkshopDir,
-        ini.oniAssetsDir,
-    )
-
-    fun isValid(): Boolean {
-        return stringMap.isNotBlank() && File(stringMap).isFile &&
-                oniWorkshopDir.isNotBlank() && File(oniWorkshopDir).isDirectory &&
-                oniAssetsDir.isNotBlank() && File(oniAssetsDir).isDirectory
-    }
-}
 
 /**
  * M3ConfigPane provides a Material Design 3 interface for configuring application paths.
@@ -86,7 +50,7 @@ data class Configs(
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun M3ConfigPane(
+fun ConfigPane(
     configs: Configs,
     onConfigChange: ((configs: Configs) -> Unit)? = null,
     onApply: (Configs) -> Unit = {},
@@ -97,7 +61,7 @@ fun M3ConfigPane(
         // Quick Setup Section
         Text(stringResource(Res.string.quick_setup), style = MaterialTheme.typography.titleMedium)
         Spacer(Modifier.height(8.dp))
-        M3FileChooser(
+        FileChooser(
             label = stringResource(Res.string.github_root),
             path = "", // No specific "github_root" stored, only used for selection
             onPathChange = { file ->
@@ -120,7 +84,7 @@ fun M3ConfigPane(
         Text(stringResource(Res.string.manual_setup), style = MaterialTheme.typography.titleMedium)
         Spacer(Modifier.height(8.dp))
 
-        M3FileChooser(
+        FileChooser(
             label = stringResource(Res.string.oni_workshop_dir),
             path = configs.oniWorkshopDir,
             onPathChange = { onConfigChange?.invoke(configs.copy(oniWorkshopDir = it)) },
@@ -128,7 +92,7 @@ fun M3ConfigPane(
         )
         Spacer(Modifier.height(8.dp))
 
-        M3FileChooser(
+        FileChooser(
             label = stringResource(Res.string.oni_asset_dir),
             path = configs.oniAssetsDir,
             onPathChange = { onConfigChange?.invoke(configs.copy(oniAssetsDir = it)) },
@@ -138,7 +102,7 @@ fun M3ConfigPane(
 
         // strings.xml file path with error handling
         val isStringMapError = configs.stringMap.isEmpty()
-        M3FileChooser(
+        FileChooser(
             label = "strings.xml",
             path = configs.stringMap,
             onPathChange = { onConfigChange?.invoke(configs.copy(stringMap = it)) },
@@ -171,7 +135,7 @@ fun M3ConfigPane(
 }
 
 @Composable
-fun M3ConfigDialogContent(
+internal fun ConfigDialogContent(
     configs: Configs,
     onConfigChange: ((configs: Configs) -> Unit)? = null,
     onConfigSaved: (Configs) -> Unit,
@@ -183,7 +147,7 @@ fun M3ConfigDialogContent(
         color = MaterialTheme.colorScheme.surface,
         shape = MaterialTheme.shapes.medium, // Apply rounded corners
     ) {
-        M3ConfigPane(
+        ConfigPane(
             configs = configs,
             onConfigChange = onConfigChange,
             onApply = onConfigSaved,
@@ -192,74 +156,13 @@ fun M3ConfigDialogContent(
     }
 }
 
-/**
- * A Material Design 3 file chooser Composable.
- *
- * @param label The label for the text field.
- * @param path The current selected path.
- * @param onPathChange Callback when the path is changed.
- * @param selectionMode The selection mode for the JFileChooser (FILES_ONLY, DIRECTORIES_ONLY, FILES_AND_DIRECTORIES).
- * @param modifier Modifier for this Composable.
- * @param isError Whether the text field is in an error state.
- * @param supportingText Optional supporting text below the text field.
- */
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun M3FileChooser(
-    label: String,
-    path: String,
-    onPathChange: (String) -> Unit,
-    selectionMode: Int,
-    modifier: Modifier = Modifier,
-    isError: Boolean = false,
-    supportingText: @Composable (() -> Unit)? = null,
-) {
-    val coroutineScope = rememberCoroutineScope()
-
-    Row(
-        modifier = modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        OutlinedTextField(
-            value = path,
-            onValueChange = {}, // Read-only, changes handled by file chooser
-            label = { Text(label) },
-            readOnly = true,
-            modifier = Modifier.weight(1f),
-            singleLine = true,
-            isError = isError,
-            supportingText = supportingText,
-            trailingIcon = {
-                IconButton(onClick = {
-                    coroutineScope.launch {
-                        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()) // Use system L&F
-                        val fileChooser = JFileChooser(if (path.isNotEmpty()) File(path) else null)
-                        fileChooser.fileSelectionMode = selectionMode
-                        val result = withContext(Dispatchers.IO) {
-                            fileChooser.showOpenDialog(null) // 'null' for parent component
-                        }
-                        if (result == JFileChooser.APPROVE_OPTION) {
-                            fileChooser.selectedFile?.let {
-                                onPathChange(it.absolutePath)
-                            }
-                        }
-                    }
-                }) {
-                    Icon(Icons.Rounded.FolderOpen, contentDescription = "Open File Chooser")
-                }
-            }
-        )
-    }
-}
-
-
 // Previews for M3ConfigPane components
 @Preview
 @Composable
 private fun M3ConfigPanePreviewLight() {
     OniTranslatorM3Theme(darkTheme = false) {
         Surface {
-            M3ConfigPane(
+            ConfigPane(
                 configs = Configs(
                     stringMap = "/path/to/strings.xml",
                     oniWorkshopDir = "/path/to/workshop",
@@ -275,7 +178,7 @@ private fun M3ConfigPanePreviewLight() {
 private fun M3ConfigPanePreviewDark() {
     OniTranslatorM3Theme(darkTheme = true) {
         Surface {
-            M3ConfigPane(
+            ConfigPane(
                 configs = Configs(
                     stringMap = "", // Test error case
                     oniWorkshopDir = "/path/to/workshop",
