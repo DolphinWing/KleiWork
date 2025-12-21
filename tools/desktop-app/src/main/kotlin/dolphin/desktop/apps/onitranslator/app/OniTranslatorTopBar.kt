@@ -31,40 +31,36 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import dolphin.desktop.apps.onitranslator.theme.OniTranslatorM3Theme
+import dolphin.desktop.apps.onitranslator.model.AppState
+import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun OniTranslatorTopBar(
-    isSearchActive: Boolean,
-    onSearchActiveChange: (Boolean) -> Unit,
-    searchText: String,
-    onSearchTextChange: (String) -> Unit,
-    onSaveFile: () -> Unit,
-    onShowConfig: () -> Unit,
-    onSaveDraft: () -> Unit,
+    state: AppState,
+    onEvent: (AppEvent) -> Unit,
 ) {
     var menuExpanded by remember { mutableStateOf(false) }
 
-    if (isSearchActive) {
+    if (state.uiState.isSearchActive) {
         Box(contentAlignment = Alignment.Center, modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)) {
             DockedSearchBar(
                 inputField = {
                     SearchBarDefaults.InputField(
-                        query = searchText,
-                        onQueryChange = onSearchTextChange,
-                        onSearch = onSearchTextChange, // Not used as we don't have expanded search
+                        query = state.searchText,
+                        onQueryChange = { onEvent(AppEvent.OnSearchTextChange(it)) },
+                        onSearch = { onEvent(AppEvent.OnSearchTextChange(it)) }, // Not used as we don't have expanded search
                         expanded = false,
-                        onExpandedChange = { onSearchActiveChange(it) }, // Corrected to use onSearchActiveChange
+                        onExpandedChange = { onEvent(AppEvent.OnSearchActiveChange(it)) }, // Corrected to use onSearchActiveChange
                         placeholder = { Text("Search...") },
                         leadingIcon = {
-                            IconButton(onClick = { onSearchActiveChange(false) }) {
+                            IconButton(onClick = { onEvent(AppEvent.OnSearchActiveChange(false)) }) {
                                 Icon(Icons.Rounded.ArrowBackIosNew, contentDescription = "Back") // Corrected icon
                             }
                         },
                         trailingIcon = {
-                            if (searchText.isNotEmpty()) {
-                                IconButton(onClick = { onSearchTextChange("") }) {
+                            if (state.searchText.isNotEmpty()) {
+                                IconButton(onClick = { onEvent(AppEvent.OnSearchTextChange("")) }) {
                                     Icon(Icons.Rounded.Close, contentDescription = "Clear search")
                                 }
                             }
@@ -73,7 +69,7 @@ fun OniTranslatorTopBar(
                     )
                 },
                 expanded = false,
-                onExpandedChange = { onSearchActiveChange(it) }, // Corrected to use onSearchActiveChange
+                onExpandedChange = { onEvent(AppEvent.OnSearchActiveChange(it)) }, // Corrected to use onSearchActiveChange
                 modifier = Modifier.fillMaxWidth()
             ) {
                 // Search results would go here, but we are doing a docked search bar
@@ -84,7 +80,7 @@ fun OniTranslatorTopBar(
         TopAppBar(
             title = { Text("Oni Translator") },
             actions = {
-                IconButton(onClick = { onSearchActiveChange(true) }) {
+                IconButton(onClick = { onEvent(AppEvent.OnSearchActiveChange(true)) }) {
                     Icon(Icons.Rounded.Search, contentDescription = "Search")
                 }
                 IconButton(onClick = { menuExpanded = true }) {
@@ -97,7 +93,7 @@ fun OniTranslatorTopBar(
                     DropdownMenuItem(
                         text = { Text("Save file") },
                         onClick = {
-                            onSaveFile()
+                            onEvent(AppEvent.OnSaveFile(false)) // false for regular save
                             menuExpanded = false
                         },
                         leadingIcon = { Icon(Icons.Rounded.Save, contentDescription = "Save file") }
@@ -105,7 +101,7 @@ fun OniTranslatorTopBar(
                     DropdownMenuItem(
                         text = { Text("Draft") },
                         onClick = {
-                            onSaveDraft()
+                            onEvent(AppEvent.OnSaveDraft)
                             menuExpanded = false
                         },
                         leadingIcon = { Icon(Icons.Rounded.Drafts, contentDescription = "Done file") }
@@ -113,7 +109,7 @@ fun OniTranslatorTopBar(
                     DropdownMenuItem(
                         text = { Text("Settings") },
                         onClick = {
-                            onShowConfig()
+                            onEvent(AppEvent.UiEvent.OnShowConfig)
                             menuExpanded = false
                         },
                         leadingIcon = { Icon(Icons.Rounded.Settings, contentDescription = "Settings") }
@@ -127,26 +123,18 @@ fun OniTranslatorTopBar(
 @Preview
 @Composable
 private fun OniTranslatorTopBarPreview() {
+    val appState = AppState()
+
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         arrayOf(false, true).forEach { dark ->
-            OniTranslatorM3Theme(darkTheme = dark) {
+            OniTranslatorTheme(darkTheme = dark) {
                 OniTranslatorTopBar(
-                    isSearchActive = false,
-                    onSearchActiveChange = {},
-                    searchText = "",
-                    onSearchTextChange = {},
-                    onSaveFile = { },
-                    onSaveDraft = { },
-                    onShowConfig = { },
+                    state = appState,
+                    onEvent = {},
                 )
                 OniTranslatorTopBar(
-                    isSearchActive = true,
-                    onSearchActiveChange = {},
-                    searchText = "STRINGS.",
-                    onSearchTextChange = {},
-                    onSaveFile = {},
-                    onSaveDraft = { },
-                    onShowConfig = { },
+                    state = appState.copy(uiState = appState.uiState.copy(isSearchActive = true)),
+                    onEvent = {},
                 )
             }
         }

@@ -138,22 +138,20 @@ class Ini(
      */
     @Suppress("MemberVisibilityCanBePrivate")
     suspend fun save() = withContext(Dispatchers.IO) {
-        val builder = StringBuilder()
-        builder.append("stringMap=$stringMap\n")
-        builder.append("workshopDir_oni=$oniWorkshopDir\n")
-        builder.append("assetsDir_oni=$oniAssetsDir\n")
-        builder.append("windowPosX=$windowPosX\n")
-        builder.append("windowPosY=$windowPosY\n")
-        builder.append("windowWidth=$windowWidth\n")
-        builder.append("windowHeight=$windowHeight\n")
-        val content = builder.toString()
-        try { // http://stackoverflow.com/a/1053474
-            val writer = BufferedWriter(FileWriter(configFile))
-            writer.write(content, 0, content.length)
-            writer.close()
+        val content = buildString {
+            appendLine("stringMap=$stringMap")
+            appendLine("workshopDir_oni=$oniWorkshopDir")
+            appendLine("assetsDir_oni=$oniAssetsDir")
+            appendLine("windowPosX=$windowPosX")
+            appendLine("windowPosY=$windowPosY")
+            appendLine("windowWidth=$windowWidth")
+            appendLine("windowHeight=$windowHeight")
+        }
+        try {
+            configFile.writeText(content)
         } catch (e: Exception) {
             e.printStackTrace()
-            println("writeStringToFile: " + e.message)
+            println("writeStringToFile: ${e.message}")
         }
     }
 

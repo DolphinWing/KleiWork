@@ -35,6 +35,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
+import dolphin.desktop.apps.onitranslator.app.AppEvent
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_this_text
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_show_link
@@ -42,18 +43,16 @@ import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_use_this_t
 import dolphin.desktop.apps.onitranslator.model.EditorData
 import dolphin.desktop.apps.onitranslator.model.EntryTagType
 import dolphin.desktop.apps.onitranslator.model.WordEntry
-import dolphin.desktop.apps.onitranslator.theme.OniTranslatorM3Theme
+import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.TooltipIconButton
 import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun EditorPane(
     entry: EditorData?,
+    onEvent: (AppEvent) -> Unit,
     modifier: Modifier = Modifier,
-    onCopyToClipboard: (String) -> Unit = {},
     onConvert: (String) -> String = { it },
-    onSave: (WordEntry, String) -> Unit = { _, _ -> },
-    onCancel: () -> Unit = {},
 ) {
     if (entry == null) {
         Column(
@@ -95,14 +94,15 @@ fun EditorPane(
                 ReferenceView(
                     entry.templateText, type = EntryTagType.Templated,
                     onCopyToClipboard = { text ->
-                        if (text.isNotBlank()) {
-                            onCopyToClipboard.invoke("")
+                        val text = if (text.isNotBlank()) {
+                            ""
                         } else {
                             var text = "msgctxt \"${entry.target.key()}\"\n"
                             text += "msgid \"${entry.templateText}\"\n"
                             text += "msgstr \"${entry.target.translated()}\""
-                            onCopyToClipboard.invoke(text)
+                            text
                         }
+                        onEvent(AppEvent.OnCopyToClipboard(text))
                     }
                 )
                 entry.referenceText?.let { text ->
@@ -137,11 +137,11 @@ fun EditorPane(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.End,
             ) {
-                TextButton(onClick = onCancel) {
+                TextButton(onClick = { onEvent(AppEvent.OnEditEntry(null))}) {
                     Text("Cancel")
                 }
                 TextButton(
-                    onClick = { onSave(entry.target, editedText) },
+                    onClick = { onEvent(AppEvent.OnSaveEntry(entry.target, editedText)) },
                     enabled = isChanged,
                 ) {
                     Text("Apply")
@@ -233,9 +233,9 @@ private fun AlertRegexLinkSelector(links: Sequence<MatchResult>, onSelected: (St
 private fun M3EditorPanePreviewEmpty() {
     Column {
         arrayOf(false, true).forEach { darkTheme ->
-            OniTranslatorM3Theme(darkTheme) {
+            OniTranslatorTheme(darkTheme) {
                 Surface {
-                    EditorPane(entry = null, modifier = Modifier.height(240.dp))
+                    EditorPane(entry = null, modifier = Modifier.height(240.dp), onEvent = {})
                 }
             }
         }
@@ -252,9 +252,9 @@ private fun M3EditorPanePreviewLight() {
     val data = EditorData(sampleEntry, "sample text", "simplified text", "draftText text")
 
     // Light Theme Preview
-    OniTranslatorM3Theme(darkTheme = false) {
+    OniTranslatorTheme(darkTheme = false) {
         Surface {
-            EditorPane(entry = data)
+            EditorPane(entry = data, onEvent = {})
         }
     }
 }
@@ -271,9 +271,9 @@ private fun M3EditorPanePreviewDark() {
     val data = EditorData(sampleEntry, "sample text")
 
     // Dark Theme Preview
-    OniTranslatorM3Theme(darkTheme = true) {
+    OniTranslatorTheme(darkTheme = true) {
         Surface {
-            EditorPane(entry = data)
+            EditorPane(entry = data, onEvent = {})
         }
     }
 }
@@ -283,7 +283,7 @@ private fun M3EditorPanePreviewDark() {
 private fun M3EditorPanePreviewReferenceView() {
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         arrayOf(false, true).forEach { darkTheme ->
-            OniTranslatorM3Theme(darkTheme) {
+            OniTranslatorTheme(darkTheme) {
                 ReferenceView(
                     "template text <link=\\\"DATABANK\\\">Data Banks</link>",
                     EntryTagType.Templated,

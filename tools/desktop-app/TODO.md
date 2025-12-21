@@ -49,6 +49,17 @@
 - [x] **依賴管理：整合 Gradle Versions Plugin**: 加入 `com.github.ben-manes.versions` 插件，並透過 `./gradlew dependencyUpdates` 指令定期檢查依賴庫的更新，以利專案維持在最新的狀態。
 - [ ] **軟體品質：加入單元測試 (Unit Tests)**: 引入 `JUnit 5` 測試框架，為核心邏輯 (例如 `PoHelper.kt`, `Ini.kt`) 撰寫單元測試，以確保程式碼變更時的穩定性與正確性。
 - [x] **自動化：更新 GitHub Actions CI 工作流程**: 優化並更新現有的 CI (Continuous Integration) 工作流程，包含升級 Actions 版本、整合 Gradle 快取，並確保在每次推送到 Git 倉庫時自動執行編譯 (`./gradlew build`) 和測試。
+- [ ] **資料層與狀態管理重構**:
+    - [ ] 全面審視並重構 `PoData.kt`，使其 API 更符合新的 UI 架構和單向資料流 (UDF) 原則。
+        - [x] **引入 `AppState` data class**：將 `PoDataModel` 中的 `MutableStateFlow` 都放到這個 data class 中，用一個 `StateFlow<AppState>` 來管理所有的狀態。
+        - [ ] **將 `loadIni` 和 `loadIniAndPo` 的回傳值改為 `Unit`**：將回傳值改為透過 `StateFlow` 來傳遞，讓 `PoDataModel` 的 API 更簡潔。
+        - [ ] **將 `save` 函式的回傳值改為 `Unit`**：將回傳值改為透過 UI 事件來處理，例如顯示一個 Snackbar 或 Toast。
+        - [ ] **將 `translate` 函式的回傳值改為 `Unit`**：將回傳值改為透過 UI 事件來處理。
+        - [ ] **將 `search` 和 `searchType` 合併**：將它們合併成一個 `updateSearch` 函式，並用一個 `SearchState` data class 來管理搜尋相關的狀態。
+    - [ ] 優化 `Ini.kt` 和 `DesktopPoHelper.kt` 的資料解析與檔案處理邏輯。
+        - [ ] **`Ini.kt`**：優化 `huntForReleaseConfig` 和 `huntForDebugConfig` 的邏輯，提高可讀性。
+        - [ ] **`DesktopPoHelper.kt`**：將 `loadXmlBySax` 和 `loadXmlByDom` 合併成一個函式，並將 `runTranslationProcess` 拆分成幾個更小的函式。
+    - [ ] **實作「儲存草稿」機制**: 目標是利用 debug 版本存的 cache 檔案，拿來做為額外的資料來源。讓編輯支援中斷，避免清單太長無法一次處理完成。
 
 ---
 
@@ -108,9 +119,5 @@
         - [x] **計畫變更**：**不再**建立獨立的 `M3SearchPane` 檔案。其功能被整合到 `TopAppBar` 的 `SearchBar` 和 `M3EntryListPane` 的搜尋結果顯示模式中。
     - [x] `DebugSaveDialog.kt` (`AlertDialog`, `TextButton`)
         - [x] 已經在 `OniTranslatorApp.kt` 中整合了 `M3DebugSaveDialog`。
-- [ ] **7. (第二階段) 資料層與狀態管理重構**:
-    - [ ] 全面審視並重構 `PoDataModel.kt`，使其 API 更符合新的 UI 架構和單向資料流 (UDF) 原則。
-    - [ ] 優化 `Ini.kt` 和 `DesktopPoHelper.kt` 的資料解析與檔案處理邏輯。
-    - [ ] **實作「儲存草稿」機制**: (這是第二階段的內容，目前尚未開始)
-- [ ] **8. (可選) 最後清理**: 所有遷移和重構完成後，搜尋並移除任何剩餘的 M2 依賴和舊 UI 檔案。
-- [ ] **9. (可選) 移除 M2 依賴**: 遷移完成並驗證後，可以從 `build.gradle.kts` 中移除 `compose.material` 依賴。
+- [x] **8. (可選) 最後清理**: 所有遷移和重構完成後，搜尋並移除任何剩餘的 M2 依賴和舊 UI 檔案。
+- [x] **9. (可選) 移除 M2 依賴**: 遷移完成並驗證後，可以從 `build.gradle.kts` 中移除 `compose.material` 依賴。

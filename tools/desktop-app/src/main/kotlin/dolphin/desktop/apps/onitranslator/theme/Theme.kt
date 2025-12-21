@@ -71,7 +71,7 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 @Composable
-fun OniTranslatorM3Theme(
+fun OniTranslatorTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {

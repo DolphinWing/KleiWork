@@ -31,7 +31,7 @@ import dolphin.desktop.apps.onitranslator.generated.resources.oni_workshop_dir
 import dolphin.desktop.apps.onitranslator.generated.resources.quick_setup
 import dolphin.desktop.apps.onitranslator.generated.resources.string_map_path_cannot_be_empty
 import dolphin.desktop.apps.onitranslator.model.Configs
-import dolphin.desktop.apps.onitranslator.theme.OniTranslatorM3Theme
+import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.FileChooser
 import org.jetbrains.compose.resources.stringResource
 import java.io.File
@@ -160,7 +160,7 @@ internal fun ConfigDialogContent(
 @Preview
 @Composable
 private fun M3ConfigPanePreviewLight() {
-    OniTranslatorM3Theme(darkTheme = false) {
+    OniTranslatorTheme(darkTheme = false) {
         Surface {
             ConfigPane(
                 configs = Configs(
@@ -176,7 +176,7 @@ private fun M3ConfigPanePreviewLight() {
 @Preview
 @Composable
 private fun M3ConfigPanePreviewDark() {
-    OniTranslatorM3Theme(darkTheme = true) {
+    OniTranslatorTheme(darkTheme = true) {
         Surface {
             ConfigPane(
                 configs = Configs(

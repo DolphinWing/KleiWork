@@ -17,63 +17,72 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.Refresh
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import dolphin.desktop.apps.onitranslator.app.AppEvent
+import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.button_refresh
+import dolphin.desktop.apps.onitranslator.model.AppState
 import dolphin.desktop.apps.onitranslator.model.EditorData
 import dolphin.desktop.apps.onitranslator.model.EntryTagType
-import dolphin.desktop.apps.onitranslator.model.PoDataModel
 import dolphin.desktop.apps.onitranslator.model.WordEntry
-import dolphin.desktop.apps.onitranslator.theme.OniTranslatorM3Theme
+import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.TextTag
 import dolphin.desktop.apps.onitranslator.widget.shimmerEffect
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun EntryListPane(
-    dataModel: PoDataModel,
-    list: List<WordEntry>,
+    state: AppState,
+    onEvent: (AppEvent) -> Unit,
     modifier: Modifier = Modifier,
-    state: LazyListState = rememberLazyListState(),
-    searchText: String = "",
-    onEdit: (WordEntry) -> Unit,
+    listState: LazyListState = rememberLazyListState(),
 ) {
-    val changedList by dataModel.changedList.collectAsState()
-    val isLoading by dataModel.helper.loading.collectAsState()
+    val list by remember(state.searchText, state.searchList, state.filteredList) {
+        mutableStateOf(if (state.searchText.isBlank()) state.filteredList else state.searchList)
+    }
 
-    if (isLoading && searchText.isBlank()) {
+    if (state.isLoading && state.searchText.isBlank()) {
         // Show Skeleton Screen only when not searching
         LazyColumn(modifier = modifier) {
             items(10) {
                 EntryViewPlaceholder()
             }
         }
+    } else if (list.isEmpty()) {
+        Column(modifier = modifier, verticalArrangement = Arrangement.Center) {
+            IconButton(onClick = { onEvent(AppEvent.OnRefreshSource) }) {
+                Icon(
+                    imageVector = Icons.Rounded.Refresh,
+                    contentDescription = stringResource(Res.string.button_refresh)
+                )
+            }
+        }
     } else {
         // Show actual list
-        LazyColumn(modifier = modifier, state = state) {
+        LazyColumn(modifier = modifier, state = listState) {
             itemsIndexed(list) { index, entry ->
-                val isSearchMode = searchText.isNotBlank()
+                val isSearchMode = state.searchText.isNotBlank()
                 val originalIndex = if (isSearchMode) -1 else index
-                val changedValue = if (isSearchMode) 0L else changedList.getOrNull(index) ?: 0L
-
-                val viewData = EditorData(
-                    target = entry,
-                    templateText = dataModel.helper.templated(entry.key)?.origin() ?: entry.origin(),
-                    referenceText = dataModel.helper.simplified(entry.key)?.translated(),
-                    draftText = dataModel.helper.translated(entry.key)?.translated(),
-                )
-
+                val changedValue = if (isSearchMode) 0L else state.changedList.getOrNull(index) ?: 0L
                 M3EntryView(
-                    data = viewData,
-                    onItemClick = { onEdit.invoke(it) },
+                    data = entry,
+                    onItemClick = { onEvent(AppEvent.OnEditEntry(it)) },
                     index = originalIndex, // Pass original index or -1 if not available
                     changed = changedValue,
                 )
@@ -92,10 +101,11 @@ private fun M3EntryView(
     changed: Long,
 ) {
     val isChanged = changed > 0
-    val cardBorderColor =
-        if (isChanged) MaterialTheme.colorScheme.primary.copy(alpha = 0.5f) else MaterialTheme.colorScheme.outline.copy(
-            alpha = 0.2f
-        )
+    val cardBorderColor = if (isChanged) {
+        MaterialTheme.colorScheme.primary.copy(alpha = 0.5f)
+    } else {
+        MaterialTheme.colorScheme.outline.copy(alpha = 0.2f)
+    }
 
     OutlinedCard(
         onClick = { onItemClick.invoke(data.target) },
@@ -141,26 +151,14 @@ private fun M3EntryView(
                 verticalArrangement = Arrangement.spacedBy(4.dp),
             ) {
                 // Templated
-                TextTag(
-                    text = data.templateText,
-                    containerColor = EntryTagType.Templated.containerColor(MaterialTheme.colorScheme),
-                    contentColor = EntryTagType.Templated.contentColor(MaterialTheme.colorScheme),
-                )
+                TextTag(tagType = EntryTagType.Templated, text = data.templateText)
                 // Simplified
                 data.referenceText?.let {
-                    TextTag(
-                        text = it,
-                        containerColor = EntryTagType.Simplified.containerColor(MaterialTheme.colorScheme),
-                        contentColor = EntryTagType.Simplified.contentColor(MaterialTheme.colorScheme),
-                    )
+                    TextTag(tagType = EntryTagType.Simplified, text = it)
                 }
                 // Old translated
                 data.draftText?.let {
-                    TextTag(
-                        text = it,
-                        containerColor = EntryTagType.Translated.containerColor(MaterialTheme.colorScheme),
-                        contentColor = EntryTagType.Translated.contentColor(MaterialTheme.colorScheme),
-                    )
+                    TextTag(tagType = EntryTagType.Translated, text = it)
                 }
             }
         }
@@ -205,7 +203,7 @@ private fun M3EntryViewPreview() {
 
     Column(modifier = Modifier.padding(16.dp).width(400.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
         arrayOf(false, true).forEach { darkTheme ->
-            OniTranslatorM3Theme(darkTheme = darkTheme) {
+            OniTranslatorTheme(darkTheme = darkTheme) {
                 Surface {
                     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                         M3EntryView(
@@ -231,11 +229,11 @@ private fun M3EntryViewPreview() {
 @Composable
 private fun EntryViewPlaceholderPreview() {
     Column(modifier = Modifier.padding(16.dp)) {
-        OniTranslatorM3Theme(darkTheme = false) {
+        OniTranslatorTheme(darkTheme = false) {
             EntryViewPlaceholder()
             EntryViewPlaceholder()
         }
-        OniTranslatorM3Theme(darkTheme = true) {
+        OniTranslatorTheme(darkTheme = true) {
             EntryViewPlaceholder()
             EntryViewPlaceholder()
         }

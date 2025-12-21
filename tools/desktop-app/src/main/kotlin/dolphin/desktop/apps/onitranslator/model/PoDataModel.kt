@@ -4,21 +4,40 @@ import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.WindowPosition
 import androidx.compose.ui.window.WindowState
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.io.File
 
-class PoDataModel(val helper: DesktopPoHelper) {
-    val configs = MutableStateFlow(Configs())
-    val filteredList = MutableStateFlow(emptyList<WordEntry>())
-    val changedList = MutableStateFlow(emptyList<Long>())
-    val searchType = MutableStateFlow(SearchType.Key)
-    val searchText = MutableStateFlow("")
-    val searchList = MutableStateFlow(emptyList<WordEntry>())
+data class SaveData(val realFile: File, val draftFile: File)
 
-    suspend fun loadIni() : Pair<WindowPosition, DpSize> = withContext(Dispatchers.IO) {
+class PoDataModel(private val helper: DesktopPoHelper, appVersion: String) {
+    private val _state = MutableStateFlow(AppState(appVersion = appVersion))
+    val state: StateFlow<AppState> = _state.asStateFlow()
+
+    init {
+        // FIXME: https://github.com/JetBrains/compose-multiplatform/issues/4603
+        // CoroutineScope(Dispatchers.IO).launch { loadIni() }
+
+        CoroutineScope(Dispatchers.Default).launch {
+            helper.loading.collect { loading ->
+                _state.value = state.value.copy(isLoading = loading)
+            }
+        }
+    }
+
+    fun onUiStateChange(uiState: UiState) {
+        _state.update { it.copy(uiState = uiState) }
+    }
+
+    suspend fun loadIni(): Pair<WindowPosition, DpSize> = withContext(Dispatchers.IO) {
         helper.loadXml() // setup replacement at launch
-        configs.emit(Configs(helper.ini))
+        _state.update { it.copy(configs = Configs(helper.ini)) }
         val position = if (helper.ini.windowPosX > 0 && helper.ini.windowPosY > 0) {
             WindowPosition.Absolute(helper.ini.windowPosX.dp, helper.ini.windowPosY.dp)
         } else {
@@ -30,14 +49,14 @@ class PoDataModel(val helper: DesktopPoHelper) {
             DpSize(1200.dp, 800.dp)
         }
         println("position = $position, size = $size")
+        _state.update { it.copy(windowPosition = position, windowSize = size) }
         return@withContext Pair(position, size)
     }
 
     suspend fun loadIniAndPo() = withContext(Dispatchers.IO) {
         loadIni() // loadIniAndPo
-        helper.runTranslationProcess() // setup replacement at launch
-        refreshDataSource() // loadPo
-        searchList.emit(helper.allValues()) // loadPo
+        translate() // loadIniAndPo
+        _state.update { it.copy(searchList = helper.allValues().map { entry -> requestEditorData(entry)!! }) } // loadPo
     }
 
     /**
@@ -76,13 +95,11 @@ class PoDataModel(val helper: DesktopPoHelper) {
         refreshDataSource() // edit
     }
 
-    private suspend fun refreshDataSource() {
-        val list = ArrayList<Long>()
-        val filtered = helper.buildChangeList()
-        filtered.forEach { item -> list.add(item.changed) }
+    private suspend fun refreshDataSource() = withContext(Dispatchers.IO) {
+        val filtered = helper.buildChangeList().map { requestEditorData(it)!! }
+        val list = filtered.map { it.target.changed }
         println("refreshDataSource: ${filtered.size}")
-        filteredList.emit(filtered)
-        changedList.emit(list)
+        _state.update { it.copy(filteredList = filtered, changedList = list) }
     }
 
     /**
@@ -105,8 +122,8 @@ class PoDataModel(val helper: DesktopPoHelper) {
      * @param type new search type
      */
     suspend fun searchType(type: SearchType) {
-        searchType.emit(type)
-        search(searchText.value)
+        _state.update { it.copy(searchType = type) }
+        search(state.value.searchText, type)
     }
 
     /**
@@ -115,32 +132,18 @@ class PoDataModel(val helper: DesktopPoHelper) {
      * @param text target text
      * @param type search type
      */
-    suspend fun search(text: String, type: SearchType = searchType.value) {
-        searchText.emit(text)
-        searchList.emit(helper.allValues().filter { item ->
-            when (type) {
-                SearchType.Origin -> item.origin()
-                SearchType.Key -> item.key()
-                SearchType.Text -> item.translated()
-            }.contains(text, ignoreCase = true)
-        })
+    suspend fun search(text: String, type: SearchType = state.value.searchType) = withContext(Dispatchers.IO) {
+        _state.update { it.copy(searchText = text) }
+        _state.update {
+            it.copy(searchList = helper.allValues().filter { item ->
+                when (type) {
+                    SearchType.Origin -> item.origin()
+                    SearchType.Key -> item.key()
+                    SearchType.Text -> item.translated()
+                }.contains(text, ignoreCase = true)
+            }.map { entry -> requestEditorData(entry)!! })
+        }
     }
-
-//    /**
-//     * Make a new [EditorSpec] to editor
-//     *
-//     * @param entry target word
-//     * @return new entry to editor
-//     */
-//    fun requestEdit(entry: WordEntry): EditorSpec {
-//        // ONI: update entry id to template one
-//        val entry1 = entry.copy(id = helper.templated(entry.key)?.id ?: entry.id)
-//        return EditorSpec(
-//            entry1,
-//            simplifiedToTraditional = helper.sc2tc(helper.simplified(entry.key)?.str ?: ""),
-//            templateContent = helper.templated(entry.key)?.id,
-//        )
-//    }
 
     suspend fun rememberLastWindowState(windowState: WindowState) {
         val pos = windowState.position
@@ -154,4 +157,20 @@ class PoDataModel(val helper: DesktopPoHelper) {
             helper.ini.save()
         }
     }
+
+    fun requestEditorData(entry: WordEntry?): EditorData? = if (entry == null) null else {
+        val key = entry.key
+        val templateText = helper.templated(key)?.origin() ?: entry.origin()
+        val referenceText = helper.simplified(key)?.translated()
+        val draftText = helper.translated(key)?.translated()
+        EditorData(entry, templateText, referenceText, draftText)
+    }
+
+    fun requestSaveData(): SaveData {
+        val file1 = helper.getOutputFile(false)
+        val file2 = helper.getOutputFile(true)
+        return SaveData(file1, file2)
+    }
+
+    fun onConvert(text: String): String = helper.convert(text)
 }

@@ -48,12 +48,12 @@ fun ThemePreview(modifier: Modifier = Modifier) {
 fun PreviewThemes() {
     Column(modifier = Modifier.fillMaxSize()) {
         // Light Theme Preview
-        OniTranslatorM3Theme(darkTheme = false) {
+        OniTranslatorTheme(darkTheme = false) {
             ThemePreview(modifier = Modifier.weight(1f))
         }
 
         // Dark Theme Preview
-        OniTranslatorM3Theme(darkTheme = true) {
+        OniTranslatorTheme(darkTheme = true) {
             ThemePreview(modifier = Modifier.weight(1f))
         }
     }

@@ -16,23 +16,25 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import dolphin.desktop.apps.onitranslator.model.AppState
 import dolphin.desktop.apps.onitranslator.model.EntryTagType
-import dolphin.desktop.apps.onitranslator.theme.OniTranslatorM3Theme
+import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.TextTag
-import org.jetbrains.compose.resources.stringResource
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun OniTranslatorBottomBar(
-    isLoading: Boolean,
-    modifier: Modifier = Modifier,
-    listSize: Int = 0,
-    versionText: String = "",
-) {
+fun OniTranslatorBottomBar(state: AppState, modifier: Modifier = Modifier) {
+    val list by remember(state.searchText, state.searchList, state.filteredList) {
+        mutableStateOf(if (state.searchText.isBlank()) state.filteredList else state.searchList)
+    }
+
     Surface(
         modifier = modifier,
         color = BottomAppBarDefaults.containerColor,
@@ -43,7 +45,7 @@ fun OniTranslatorBottomBar(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                text = if (isLoading) "Loading..." else "$listSize items",
+                text = if (state.isLoading) "Loading..." else "${list.size} items",
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.weight(1f),
@@ -53,17 +55,13 @@ fun OniTranslatorBottomBar(
             VerticalDivider(modifier = Modifier.size(1.dp, 16.dp))
             Spacer(Modifier.width(4.dp))
             EntryTagType.entries.forEach { type ->
-                TextTag(
-                    text = stringResource(type.label),
-                    containerColor = type.containerColor(MaterialTheme.colorScheme),
-                    contentColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
+                TextTag(tagType = type)
                 Spacer(Modifier.width(4.dp))
             }
             VerticalDivider(modifier = Modifier.size(1.dp, 16.dp))
             Spacer(Modifier.width(8.dp))
             Text(
-                versionText,
+                state.appVersion,
                 color = MaterialTheme.colorScheme.onSurface,
                 style = MaterialTheme.typography.bodySmall
             )
@@ -74,13 +72,12 @@ fun OniTranslatorBottomBar(
 @Preview
 @Composable
 private fun OniTranslatorBottomBarPreview() {
+    val appState = AppState(appVersion = "2.0.0")
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         arrayOf(false, true).forEach { dark ->
-            OniTranslatorM3Theme(darkTheme = dark) {
-                OniTranslatorBottomBar(isLoading = false, listSize = 10, versionText = "2.0.0")
-            }
-            OniTranslatorM3Theme(darkTheme = dark) {
-                OniTranslatorBottomBar(isLoading = true, versionText = "2.0.0")
+            OniTranslatorTheme(darkTheme = dark) {
+                OniTranslatorBottomBar(state = appState)
+                OniTranslatorBottomBar(state = appState.copy(isLoading = true))
             }
         }
     }
