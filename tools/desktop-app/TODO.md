@@ -35,12 +35,12 @@
       * 將所有用到 `AppStrings.xxx` 的地方，替換為新的 `Res.string.xxx`。
     - [x] **E. 清理舊資源**：移除 `src/main/resources` 下舊的資源檔案（`nisbet_ponder.png`, `strings.properties`, `strings_zh_TW.properties`）以及 `AppStrings.kt` 檔案。
 - [ ] **增加程式碼註解**: 在複雜的邏輯函式 (如 `analyzeText`) 中補充註解，說明其設計目的與演算法思路，方便未來維護。
-- [ ] **UI 反饋：實作 Snackbar/Toast 通知機制**:
-    - [ ] 定義 `SnackbarMessage` 資料結構 (包含訊息、動作、持續時間、類型)。
-    - [ ] 建立 `SnackbarManager` 單例，提供觸發通知的方法。
-    - [ ] 實作 `SnackbarHost` Composable，用於在 UI 上顯示通知。
-    - [ ] 將 `SnackbarHost` 整合到 `OniTranslatorApp` 的根 Composable 中。
-    - [ ] 在關鍵操作（如檔案儲存、設定保存）後，透過 `SnackbarManager` 顯示相關通知。
+- [x] **UI 反饋：實作 Snackbar/Toast 通知機制**:
+    - [x] 定義 `SnackbarMessage` 資料結構 (包含訊息、動作、持續時間、類型)。
+    - [x] 建立 `SnackbarManager` 單例，提供觸發通知的方法。
+    - [x] 實作 `SnackbarHost` Composable，用於在 UI 上顯示通知。
+    - [x] 將 `SnackbarHost` 整合到 `OniTranslatorApp` 的根 Composable 中。
+    - [x] 在關鍵操作（如檔案儲存、設定保存）後，透過 `SnackbarManager` 顯示相關通知。
 
 ### 4. 現代化與自動化 (Modernization & Automation)
 

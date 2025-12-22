@@ -20,10 +20,12 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -38,6 +40,7 @@ import dolphin.desktop.apps.onitranslator.pane.ConfigDialogContent
 import dolphin.desktop.apps.onitranslator.pane.EditorPane
 import dolphin.desktop.apps.onitranslator.pane.EntryListPane
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
+import dolphin.desktop.apps.onitranslator.widget.OniSnackbarHost
 import org.jetbrains.compose.resources.stringResource
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -67,6 +70,8 @@ fun OniTranslatorApp(
     }
 
     OniTranslatorTheme {
+        val snackbarHostState = remember { SnackbarHostState() }
+
         Box(modifier = Modifier.fillMaxSize()) {
             Scaffold(
                 topBar = {
@@ -75,6 +80,7 @@ fun OniTranslatorApp(
                 bottomBar = {
                     OniTranslatorBottomBar(state = state)
                 },
+                snackbarHost = { OniSnackbarHost(snackbarHostState) },
                 containerColor = MaterialTheme.colorScheme.background,
                 contentColor = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier.fillMaxSize()

@@ -19,10 +19,13 @@ import dolphin.desktop.apps.onitranslator.app.OniTranslatorApp
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.app_name
 import dolphin.desktop.apps.onitranslator.generated.resources.nisbet_ponder
+import dolphin.desktop.apps.onitranslator.generated.resources.toast_write_failed
+import dolphin.desktop.apps.onitranslator.generated.resources.toast_write_success
 import dolphin.desktop.apps.onitranslator.model.DesktopPoHelper
 import dolphin.desktop.apps.onitranslator.model.Ini
 import dolphin.desktop.apps.onitranslator.model.OniDialogState
 import dolphin.desktop.apps.onitranslator.model.PoDataModel
+import dolphin.desktop.apps.onitranslator.model.SnackbarManager
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
@@ -70,7 +73,8 @@ fun main(args: Array<String>) = application {
     fun handleAppEvent(event: AppEvent) {
         coroutineScope.launch {
             when (event) {
-                is AppEvent.UiEvent -> { /* UI only event, handled by app */
+                is AppEvent.UiEvent -> {
+                    /* UI only event, usually handled by app */
                     if (event is AppEvent.UiEvent.OnShowDebugSaveDialog) {
                         val save = dataModel.requestSaveData()
                         val data = OniDialogState.DebugSaveDialog(
@@ -83,10 +87,17 @@ fun main(args: Array<String>) = application {
                 }
 
                 is AppEvent.OnUiStateChange -> dataModel.onUiStateChange(event.uiState)
-                is AppEvent.OnCopyToClipboard -> copyToSystemClipboard(event.text)
+                is AppEvent.OnCopyToClipboard -> {
+                    copyToSystemClipboard(event.text)
+                    SnackbarManager.showMessage(event.text)
+                }
+
                 is AppEvent.OnRefreshSource ->
                     if (appState.configs.isValid()) {
                         dataModel.loadIniAndPo()
+                    } else {
+                        val uiState = appState.uiState
+                        dataModel.onUiStateChange(uiState.copy(dialogState = OniDialogState.ConfigDialog(appState.configs)))
                     }
 
                 is AppEvent.OnSearchTextChange -> dataModel.search(event.text)
@@ -100,7 +111,12 @@ fun main(args: Array<String>) = application {
                     }
 
                 is AppEvent.OnSaveDraft -> {
-                    dataModel.save(true) // Always cache for draft
+                    val (path, cost) = dataModel.save(true) // Always cache for draft
+                    if (cost > 0) {
+                        SnackbarManager.showMessage(Res.string.toast_write_success, path, cost)
+                    } else {
+                        SnackbarManager.showMessage(Res.string.toast_write_failed)
+                    }
                 }
 
                 is AppEvent.OnSaveFile -> {
@@ -113,7 +129,12 @@ fun main(args: Array<String>) = application {
                         )
                         dataModel.onUiStateChange(uiState.copy(dialogState = data))
                     } else {
-                        dataModel.save(event.useCache)
+                        val (path, cost) = dataModel.save(event.useCache)
+                        if (cost > 0) {
+                            SnackbarManager.showMessage(Res.string.toast_write_success, path, cost)
+                        } else {
+                            SnackbarManager.showMessage(Res.string.toast_write_failed)
+                        }
                         dataModel.onUiStateChange(uiState.copy(dialogState = null))
                     }
                 }
