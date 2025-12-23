@@ -13,16 +13,6 @@ data class Configs(
     val oniWorkshopDir: String = "",
     val oniAssetsDir: String = "",
 ) {
-    /**
-     * Secondary constructor to initialize Configs from an Ini object.
-     * @param ini The Ini object containing configuration data.
-     */
-    constructor(ini: Ini) : this(
-        ini.stringMap,
-        ini.oniWorkshopDir,
-        ini.oniAssetsDir,
-    )
-
     fun isValid(): Boolean {
         return stringMap.isNotBlank() && File(stringMap).isFile &&
                 oniWorkshopDir.isNotBlank() && File(oniWorkshopDir).isDirectory &&

@@ -50,32 +50,13 @@ fun OniTranslatorApp(
     onEvent: (AppEvent) -> Unit,
     onEditorConvert: (String) -> String = { it },
 ) {
-    fun handleUiEvents(event: AppEvent) {
-        if (event is AppEvent.UiEvent) {
-            var uiState = state.uiState
-            uiState = when (event) {
-                is AppEvent.UiEvent.OnShowConfig ->
-                    uiState.copy(dialogState = OniDialogState.ConfigDialog(state.configs))
-
-                is AppEvent.UiEvent.OnShowDebugSaveDialog ->
-                    uiState.copy(dialogState = OniDialogState.DebugSaveDialog())
-
-                is AppEvent.UiEvent.OnDismissDialog ->
-                    uiState.copy(dialogState = null)
-            }
-            onEvent(AppEvent.OnUiStateChange(uiState))
-        } else {
-            onEvent(event)
-        }
-    }
-
     OniTranslatorTheme {
         val snackbarHostState = remember { SnackbarHostState() }
 
         Box(modifier = Modifier.fillMaxSize()) {
             Scaffold(
                 topBar = {
-                    OniTranslatorTopBar(state = state, onEvent = ::handleUiEvents)
+                    OniTranslatorTopBar(state = state, onEvent = onEvent)
                 },
                 bottomBar = {
                     OniTranslatorBottomBar(state = state)
@@ -99,7 +80,7 @@ fun OniTranslatorApp(
                                 FilterChip(
                                     selected = state.searchType == type,
                                     onClick = {
-                                        onEvent(AppEvent.OnSearchTypeChange(type))
+                                        onEvent(AppEvent.OnSearchTextChange(state.searchText, type))
                                     },
                                     label = { Text(type.name) }
                                 )
@@ -109,7 +90,7 @@ fun OniTranslatorApp(
                     Row(modifier = Modifier.fillMaxSize()) {
                         EntryListPane(
                             state = state,
-                            onEvent = ::handleUiEvents,
+                            onEvent = onEvent,
                             modifier = Modifier.weight(0.4f),
                         )
                         VerticalDivider(modifier = Modifier.fillMaxHeight().width(1.dp))
@@ -123,7 +104,7 @@ fun OniTranslatorApp(
                 }
             }
 
-            M3DialogHost(state, onEvent = ::handleUiEvents)
+            M3DialogHost(state, onEvent = onEvent)
 
             if (state.isLoading && !state.uiState.isSearchActive) { // Don't show loading overlay when search is active
                 Box(

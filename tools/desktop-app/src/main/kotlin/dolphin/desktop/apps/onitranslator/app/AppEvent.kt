@@ -8,8 +8,7 @@ import dolphin.desktop.apps.onitranslator.model.WordEntry
 
 sealed interface AppEvent {
     data class OnSearchActiveChange(val isActive: Boolean) : AppEvent
-    data class OnSearchTextChange(val text: String) : AppEvent
-    data class OnSearchTypeChange(val searchType: SearchType) : AppEvent
+    data class OnSearchTextChange(val text: String, val searchType: SearchType) : AppEvent
 
     object OnSaveDraft : AppEvent
     data class OnSaveFile(val useCache: Boolean) : AppEvent

@@ -68,7 +68,7 @@ fun ConfigPane(
                 val s = File.separator
                 onConfigChange?.invoke(
                     configs.copy(
-                        stringMap = "${file}${s}desktop-app${s}resources${s}common${s}strings.xml",
+                        stringMap = "${file}${s}tools${s}desktop-app${s}resources${s}common${s}strings.xml",
                         oniWorkshopDir = "${file}${s}workshop-2906930548", // Example workshop folder name
                         oniAssetsDir = "${file}${s}oni-assets",
                     )

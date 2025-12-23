@@ -12,9 +12,6 @@
 ### 2. 程式碼結構與效能 (Code Structure & Performance)
 
 - [x] **字串取代效能**: 優化 `PoHelper.kt` 中的 `refactor` 函式。將 `forEach` 迴圈取代方式改為使用單一合併的 Regex 或 Map 查表，以提升處理大量取代規則時的效能。
-- [ ] **檔案路徑處理**: 重構 `Ini.kt` 和 `DesktopPoHelper.kt` 中寫死的相對路徑。考慮改用 ClassLoader 的資源讀取機制，避免因目錄結構變更導致程式出錯。
-- [ ] **錯誤處理**: 改善通用的 `catch (e: Exception)` 區塊。改為捕捉更具體的例外類型，並將重要的錯誤訊息顯示在 UI 上，提升使用者體驗。
-- [ ] **移除 Magic Strings**: 將程式碼中硬式編碼的字串 (如 Regex、URL) 定義為 `const val` 常數，增加程式碼的可讀性與可維護性。
 - [x] **移除對 DST 的支援**: 簡化程式碼，將所有與 DST 相關的邏輯和資源移除，專注於 ONI。
 
 ### 3. UI 與程式碼可讀性 (UI & Readability)
@@ -56,10 +53,28 @@
         - [ ] **將 `save` 函式的回傳值改為 `Unit`**：將回傳值改為透過 UI 事件來處理，例如顯示一個 Snackbar 或 Toast。
         - [ ] **將 `translate` 函式的回傳值改為 `Unit`**：將回傳值改為透過 UI 事件來處理。
         - [ ] **將 `search` 和 `searchType` 合併**：將它們合併成一個 `updateSearch` 函式，並用一個 `SearchState` data class 來管理搜尋相關的狀態。
-    - [ ] 優化 `Ini.kt` 和 `DesktopPoHelper.kt` 的資料解析與檔案處理邏輯。
-        - [ ] **`Ini.kt`**：優化 `huntForReleaseConfig` 和 `huntForDebugConfig` 的邏輯，提高可讀性。
-        - [ ] **`DesktopPoHelper.kt`**：將 `loadXmlBySax` 和 `loadXmlByDom` 合併成一個函式，並將 `runTranslationProcess` 拆分成幾個更小的函式。
-    - [ ] **實作「儲存草稿」機制**: 目標是利用 debug 版本存的 cache 檔案，拿來做為額外的資料來源。讓編輯支援中斷，避免清單太長無法一次處理完成。
+    - [x] **ViewModel 與資料層重構**:
+        - [x] **更名**: 將 `PoDataModel.kt` 檔案與 `class` 更名為 `OniTranslatorViewModel.kt`，以明確其 ViewModel 職責。
+        - [x] **關注點分離與依賴注入 (DI)**:
+            - [x] **`ReplacementLoader.kt`**: 建立此類別，專責尋找及解析 `strings.xml` 以提供 `replacementMap`。
+            - [x] **`TextConverter.kt`**: 將此從 `object` 改為 `class`，在其建構子中接收 `replacementMap`，專責文字轉換。
+            - [x] **`PoHelper.kt`**: 重構此類別，使其建構子依賴 `Configs` 與 `TextConverter` 實例，專注於 PO 檔的核心業務邏輯。
+            - [x] **`OniTranslatorViewModel.kt`**: 作為總指揮官，重構其內部邏輯以符合新的 DI 流程。
+        - [x] **函式拆分與清理**:
+            - [x] 在 `PoHelper.kt` 中，將 `runTranslationProcess` 拆分為數個小型私有函式。
+            - [x] 刪除已無作用的 `DesktopPoHelper.kt` 檔案 (若還存在)。
+    - [x] **將事件處理邏輯集中到 ViewModel (MVI 模式)**:
+        - [x] 在 `OniTranslatorViewModel` 中建立 `onEvent(event: AppEvent)` 的單一入口函式。
+        - [x] 將 `Main.kt` 中的 `handleAppEvent` 邏輯完整遷移至 `ViewModel`。
+        - [x] 移除 `OniTranslatorApp.kt` 中的 `handleUiEvents` 函式，將其邏輯合併至 `ViewModel`。
+        - [x] 修改 `Main.kt` 和 `OniTranslatorApp.kt`，使其直接呼叫 `viewModel.onEvent()`。
+        - [ ] **錯誤與狀態處理**:
+            - [ ] 建立 `StateFlow` 來管理錯誤狀態，取代 `println`，並由 `ViewModel` 觸發 `Snackbar`。
+            - [ ] 維持 `processStatus` `StateFlow` 以供 `StatusBar` 使用。
+
+### 5. 新功能
+
+- [ ] **實作「儲存草稿」機制**: 目標是利用 debug 版本存的 cache 檔案，拿來做為額外的資料來源。讓編輯支援中斷，避免清單太長無法一次處理完成。
 
 ---
 

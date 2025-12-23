@@ -94,9 +94,7 @@ fun EditorPane(
                 ReferenceView(
                     entry.templateText, type = EntryTagType.Templated,
                     onCopyToClipboard = { text ->
-                        val text = if (text.isNotBlank()) {
-                            ""
-                        } else {
+                        val text = text.ifBlank {
                             var text = "msgctxt \"${entry.target.key()}\"\n"
                             text += "msgid \"${entry.templateText}\"\n"
                             text += "msgstr \"${entry.target.translated()}\""
@@ -220,7 +218,7 @@ private fun AlertRegexLinkSelector(links: Sequence<MatchResult>, onSelected: (St
                 TextButton(onClick = { onSelected(link) }) {
                     Text(link)
                 }
-                IconButton(onClick = { onSelected("<link=\\\"${link}\\\"</link>") }) {
+                IconButton(onClick = { onSelected("<link=\\\"${link}\\\"></link>") }) {
                     Icon(Icons.Rounded.Link, contentDescription = null)
                 }
             }

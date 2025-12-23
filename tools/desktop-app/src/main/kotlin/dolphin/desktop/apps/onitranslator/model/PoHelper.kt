@@ -5,137 +5,191 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.withContext
 import java.io.BufferedReader
-import java.io.BufferedWriter
 import java.io.File
-import java.io.FileWriter
+import java.io.FileInputStream
+import java.io.InputStreamReader
 import java.nio.charset.StandardCharsets
 
-abstract class PoHelper {
+/**
+ * Core helper class for processing ONI translation files (.po, .pot).
+ * This class orchestrates the loading of template, simplified chinese, and existing translation files,
+ * then merges them into a final word list for the editor.
+ *
+ * @param configs The application path configurations.
+ * @param textConverter A helper for performing text transformations.
+ * @param debug A flag to indicate if running in debug mode, affects output file paths.
+ */
+class PoHelper(
+    private val configs: Configs,
+    private val textConverter: TextConverter,
+    private val debug: Boolean = false,
+) {
     companion object {
         private const val ONI_PO_TEMPLATE = "strings_template.pot"
         private const val ONI_CHS_PO = "strings_preinstalled_zh_klei.po"
         const val ONI_PO = "strings.po"
     }
 
-    protected val replaceList: MutableList<Pair<String, String>> = mutableListOf()
-    private var replacementMap = mapOf<String, String>()
-    private var replacementRegex: Regex? = null
+    private val simplifiedMap = HashMap<String, WordEntry>()
+    private val templateMap = HashMap<String, WordEntry>()
+    private val translatedEntries = HashMap<String, WordEntry>()
+    private val wordList: MutableList<WordEntry> = mutableListOf()
 
-    protected fun setupReplacements() {
-        replacementMap = try {
-            replaceList.toMap()
-        } catch (e: Exception) {
-            println("Failed to replacement map: ${e.message}")
-            emptyMap()
+    fun simplified(key: String): WordEntry? = simplifiedMap[key]
+    fun templated(key: String): WordEntry? = templateMap[key]
+    fun translated(key: String): WordEntry? = translatedEntries[key]
+    fun allValues(): List<WordEntry> = wordList.toList()
+
+    private val _status = MutableStateFlow("")
+    val status: StateFlow<String> = _status
+
+    private val _loading = MutableStateFlow(true)
+    val loading: StateFlow<Boolean> = _loading
+
+    private fun log(message: String) {
+        println(message) // TODO: Replace with error handling via StateFlow
+    }
+
+    /**
+     * The main orchestration function to run the entire translation process.
+     */
+    suspend fun runTranslationProcess(): Long = withContext(Dispatchers.IO) {
+        _loading.emit(true)
+        val startTime = System.currentTimeMillis()
+
+        loadAllSources()
+        buildWordList()
+
+        writeEntryToFile(getCachedFile(), wordList)
+        val cost = System.currentTimeMillis() - startTime
+        log("Translation process finished in $cost ms")
+        _status.emit("")
+        _loading.emit(false)
+        return@withContext cost
+    }
+
+    private suspend fun loadAllSources() {
+        _status.emit("Loading Simplified Chinese PO...")
+        simplifiedMap.putAll(loadAssetFile(ONI_CHS_PO).associateBy { it.key })
+        log("Simplified Chinese PO size: ${simplifiedMap.size}")
+
+        _status.emit("Loading PO Template...")
+        templateMap.putAll(loadAssetFile(ONI_PO_TEMPLATE).associateBy { it.key })
+        log("PO Template size: ${templateMap.size}")
+
+        _status.emit("Loading existing translations...")
+        translatedEntries.putAll(
+            loadAssetFile(ONI_PO).filter { it.id != "\"\"" && it.str != "\"\"" }.associateBy { it.key }
+        )
+        log("Previous translations size: ${translatedEntries.size}")
+    }
+
+    private suspend fun buildWordList() {
+        _status.emit("Building word list...")
+        wordList.clear()
+        templateMap.values.filter { entry ->
+            (entry.translated().isEmpty() && entry.origin().isNotEmpty()) && // no translation
+                    !entry.translated().startsWith("only_used_by") // from dst
+        }.forEach { entry ->
+            val newEntry = buildWordEntry(entry)
+            wordList.add(newEntry)
         }
-        if (replacementMap.isNotEmpty()) {
-            val regexPattern = replacementMap.keys.joinToString("|") { Regex.escape(it) }
-            replacementRegex = Regex(regexPattern)
+        log("New word list size: ${wordList.size}")
+    }
+
+    /**
+     * Builds a single [WordEntry] by merging data from template, simplified, and translated sources.
+     */
+    private fun buildWordEntry(templateEntry: WordEntry): WordEntry {
+        val key = templateEntry.key
+        var isNewly = false
+        var newStr = ""
+
+        val existingTranslation = translatedEntries[key]
+        if (existingTranslation != null) {
+            newStr = existingTranslation.str.trim()
+        }
+
+        if (newStr.isEmpty()) {
+            isNewly = true
+            newStr = simplifiedMap[key]?.str ?: templateEntry.origin()
+            newStr = TextConverter.sc2tc(newStr)
+        }
+
+        newStr = textConverter.refactor(newStr)
+
+        val id = existingTranslation?.id ?: templateEntry.id
+        if (id != templateEntry.id) {
+            log("Found msgid changed for key '$key': ${id} -> ${templateEntry.id}")
+            isNewly = true
+        }
+
+        return WordEntry(key, templateEntry.text, templateEntry.id, newStr, isNewly)
+    }
+
+    private fun loadAssetFile(name: String): List<WordEntry> {
+        val dir = if (name == ONI_PO) configs.oniWorkshopDir else configs.oniAssetsDir
+        val file = File(dir, name)
+        log("Loading asset: ${file.absolutePath}")
+        return if (file.exists()) {
+            try {
+                BufferedReader(InputStreamReader(FileInputStream(file), StandardCharsets.UTF_8)).use { reader ->
+                    parsePoFile(reader)
+                }
+            } catch (e: Exception) {
+                log("Failed to load $name: ${e.message}")
+                emptyList()
+            }
+        } else {
+            log("Asset not found: ${file.absolutePath}")
+            emptyList()
         }
     }
 
-    protected var replace3dot: String = ""
-    private val replace6dot: String
-        get() = "$replace3dot$replace3dot"
-    protected var replaceLeftBracket: String = ""
-    protected var replaceRightBracket: String = ""
-
-    private val simplifiedMap = HashMap<String, WordEntry>()
-
-    /**
-     * @param key entry key
-     * @return word entry from official simplified chinese po file
-     */
-    fun simplified(key: String): WordEntry? = simplifiedMap[key]
-
-    private val templateMap = HashMap<String, WordEntry>()
-
-    /**
-     * @param key entry key
-     * @return word entry from template file
-     */
-    fun templated(key: String): WordEntry? = templateMap[key]
-
-    private val translatedEntries = HashMap<String, WordEntry>()
-
-    /**
-     * @param key entry key
-     * @return word entry from translated file
-     */
-    fun translated(key: String): WordEntry? = translatedEntries[key]
-
-    private val wordList: MutableList<WordEntry> = mutableListOf()
-
-    /**
-     * @return full word list entry
-     */
-    fun allValues(): List<WordEntry> = wordList
-
-    /**
-     * A debug log output implementation.
-     *
-     * @param message log message to standard output
-     */
-    protected abstract fun log(message: String)
-
-    /**
-     * Prepare the helper instance. Usually call this when init.
-     */
-    abstract fun prepare()
-
-    protected fun loadFromReader(reader: BufferedReader): List<WordEntry> {
+    private fun parsePoFile(reader: BufferedReader): List<WordEntry> {
+        // A more robust implementation would handle multi-line msgid/msgstr and other edge cases.
+        // For now, this simple 4-line parser is retained.
         val list = mutableListOf<WordEntry>()
-        try {
-            reader.use { r ->
-                var line = r.readLine()
-                while (line != null) {
-                    if (!line.startsWith("#")) {
-                        line = r.readLine()
-                        continue // bypass some invalid header
-                    }
+        var line: String?
+        while (reader.readLine().also { line = it } != null) {
+            if (!line!!.startsWith("#.")) continue
 
-                    val line1 = line
-                    var line2 = r.readLine() ?: break // msgctxt
-                    var line3 = r.readLine()
-                    while (line3 != null && !line3.startsWith("msgid")) {
-                        line2 = line2.dropLast(1) + line3.drop(1)
-                        line3 = r.readLine()
-                    }
-                    if (line3 == null) break
+            val line1 = line!!
+            val line2 = reader.readLine() ?: break // msgctxt
+            val line3 = reader.readLine() ?: break // msgid
+            val line4 = reader.readLine() ?: break // msgstr
 
-                    var line4 = r.readLine()
-                    while (line4 != null && !line4.startsWith("msgstr")) {
-                        line3 = line3.dropLast(1) + line4.drop(1)
-                        line4 = r.readLine()
-                    }
-                    if (line4 == null) break
-
-                    var currentLine = r.readLine()
-                    while (!currentLine.isNullOrEmpty()) {
-                        line4 = line4.dropLast(1) + currentLine.drop(1)
-                        currentLine = r.readLine()
-                    }
-
-                    WordEntry.from(line1, line2, line3, line4)?.let { entry ->
-                        list.add(entry)
-                    } ?: log("invalid input: $line1")
-
-                    line = currentLine // Continue from the line after the entry
-                }
-            }
-        } catch (e: Exception) {
-            log("Exception: ${e.message}")
+            WordEntry.from(line1, line2, line3, line4)?.let { list.add(it) }
+                ?: log("Invalid PO entry starting with: $line1")
         }
         return list
     }
 
-    private fun writeEntryToFile(
-        output: File = getOutputFile(),
-        list: List<WordEntry> = wordList
-    ): Boolean {
-        if (list.isEmpty()) return false // no list, don't write
-        try { // http://stackoverflow.com/a/1053474
+    fun update(key: String, value: String) {
+        wordList.find { it.key == key }?.apply {
+            str = value
+            changed = System.currentTimeMillis()
+            log("Updated '$key' at $changed")
+        }
+    }
+
+    fun buildChangeList(): List<WordEntry> = wordList.filter { it.changed > 0 || it.newly }
+
+    suspend fun writeTranslationFile(output: File, list: List<WordEntry> = wordList): Boolean = withContext(Dispatchers.IO) {
+        _loading.emit(true)
+        val start = System.currentTimeMillis()
+        val result = writeEntryToFile(output, list)
+        val cost = System.currentTimeMillis() - start
+        log("Wrote to ${output.absolutePath} in $cost ms. Success: $result")
+        _loading.emit(false)
+        return@withContext result
+    }
+
+    private fun writeEntryToFile(output: File, list: List<WordEntry>): Boolean {
+        if (list.isEmpty()) return false
+        try {
             output.bufferedWriter(StandardCharsets.UTF_8).use { writer ->
+                // TODO: Make these header strings constants
                 writer.appendLine("\"Language: zh-tw\"")
                 writer.appendLine("\"POT Version: 2.0\"")
                 writer.appendLine("Application: Oxygen Not Included")
@@ -143,8 +197,7 @@ abstract class PoHelper {
                 writer.appendLine("MIME-Version: 1.0")
                 writer.appendLine("Content-Type: text/plain; charset=UTF-8")
                 list.forEach { entry ->
-                    val str =
-                        if (entry.str.startsWith("\"") && entry.str.endsWith("\"")) entry.str else "\"${entry.str}\""
+                    val str = if (entry.str.startsWith("\"") && entry.str.endsWith("\"")) entry.str else "\"${entry.str}\""
                     writer.newLine()
                     writer.appendLine("#. ${entry.key}")
                     writer.appendLine("msgctxt ${entry.text}")
@@ -152,192 +205,20 @@ abstract class PoHelper {
                     writer.appendLine("msgstr $str")
                 }
             }
+            return true
         } catch (e: Exception) {
-            // e.printStackTrace()
-            log("writeStringToFile: ${e.message}")
+            log("Failed to write to file ${output.absolutePath}: ${e.message}")
             return false
         }
-        log("write to ${output.absolutePath} with ${output.length()} done")
-        return true
     }
 
-    /**
-     * Implementation of loading asset file to memory
-     *
-     * @param name asset name
-     * @return word entry list
-     */
-    abstract fun loadAssetFile(name: String): List<WordEntry>
-
-    private val processStatus = MutableStateFlow("")
-
-    /**
-     * Process status
-     */
-    val status: StateFlow<String> = processStatus
-
-    /**
-     * Loading status. True means the app is processing data.
-     */
-    val loading = MutableStateFlow(true)
-
-    /**
-     * Load chs and cht translation file to app.
-     *
-     * @return total process time
-     */
-    suspend fun runTranslationProcess(): Long = withContext(Dispatchers.IO) {
-        // log("run translation")
-        loading.emit(true)
-        val start = System.currentTimeMillis()
-
-        val chsPoFile = ONI_CHS_PO
-        processStatus.emit("load $chsPoFile")
-        val simplifiedEntries = loadAssetFile(chsPoFile)
-        simplifiedMap.clear()
-        simplifiedEntries.forEach { entry ->
-            // entry.str = sc2tc(entry.str).trim() // translate to traditional
-            simplifiedMap[entry.key] = entry
-        }
-        val stop1 = System.currentTimeMillis()
-        log("ONI simplified chinese size: ${simplifiedEntries.size} (${stop1 - start} ms)")
-
-        val chtPoFile = ONI_PO_TEMPLATE
-        processStatus.emit("load $chtPoFile")
-        val templateEntries = loadAssetFile(chtPoFile)
-        templateMap.clear()
-        templateEntries.forEach { entry ->
-            templateMap[entry.key] = entry
-        }
-        val stop2 = System.currentTimeMillis()
-        log("ONI traditional chinese size: ${templateEntries.size} (${stop2 - start} ms)")
-
-        val outputPoFile = ONI_PO
-        processStatus.emit("load $outputPoFile")
-        translatedEntries.clear()
-        loadAssetFile(outputPoFile).filter { entry ->
-            entry.id != "\"\"" && entry.str != "\"\""
-        }.forEach { entry ->
-            translatedEntries[entry.key] = entry
-        }
-        val stop3 = System.currentTimeMillis()
-        log("previous data size: ${translatedEntries.size} (${stop3 - stop1} ms)")
-
-        processStatus.emit("prepare word list")
-        wordList.clear()
-        templateEntries.filter { entry ->
-            (entry.translated().isEmpty() && entry.origin().isNotEmpty()) // no translation
-                    && !entry.translated().startsWith("only_used_by") // from dst
-        }.forEachIndexed { index, entry ->
-            var newly = false
-            var str = ""
-            if (translatedEntries.containsKey(entry.key)) {
-                val str1 = translatedEntries[entry.key]?.str ?: ""
-                if (str1.isNotEmpty()) str = str1.trim()
-            } else {
-                processStatus.emit("${entry.key} (${index + 1}/${simplifiedEntries.size})")
-            }
-            if (str.isEmpty()) { // not in the translated po
-                newly = true
-                if (simplifiedMap.containsKey(entry.key)) {
-                    str = simplifiedMap[entry.key]?.str ?: ""
-                }
-                if (str.isEmpty())
-                    str = entry.origin()
-                str = sc2tc(str)
-            }
-            str = refactor(str)
-            // make sure id changed will be shown
-            val id = translatedEntries[entry.key]?.id ?: entry.id
-            if (id != entry.id) {
-                log("found $id changed to ${entry.id}")
-                newly = true // mark that it is changed
-            }
-            addToTodoList(WordEntry(entry.key, entry.text, id, str, newly))
-        }
-
-        val stop4 = System.currentTimeMillis()
-        log("new list size: ${wordList.size} (${stop4 - stop3} ms)")
-
-        writeEntryToFile(getCachedFile(), wordList) // runTranslationProcess
-        val cost = System.currentTimeMillis() - start
-        log("write data done. $cost ms")
-        processStatus.emit("")
-        loading.emit(false) // complete
-        return@withContext cost
+    fun getOutputFile(cached: Boolean = debug): File = if (cached) {
+        getCachedFile()
+    } else {
+        File(configs.oniWorkshopDir, ONI_PO)
     }
 
-    /**
-     * Add an entry to the database
-     *
-     * @param entry new word
-     */
-    fun addToTodoList(entry: WordEntry) {
-        wordList.add(entry)
-    }
+    private fun getCachedFile(): File = File(System.getProperty("java.io.tmpdir"), ONI_PO)
 
-    /**
-     * Write all word entries to a file
-     *
-     * @param output destination file
-     * @param list word entry list
-     * @return true if file written is success
-     */
-    suspend fun writeTranslationFile(
-        output: File = getOutputFile(),
-        list: List<WordEntry> = wordList
-    ): Boolean = withContext(Dispatchers.IO) {
-        loading.emit(true)
-        val start = System.currentTimeMillis()
-        val result = writeEntryToFile(output, list) // writeTranslationFile
-        val cost = System.currentTimeMillis() - start
-        log("write data done. $cost ms")
-        loading.emit(false) // complete
-        return@withContext result
-    }
-
-    /**
-     * @return actual output file
-     */
-    abstract fun getOutputFile(): File
-
-    /**
-     * @return cache file
-     */
-    abstract fun getCachedFile(): File
-
-    /**
-     * Convert simplified chinese to traditional chinese
-     *
-     * @param str simplified chinese text
-     * @return traditional chinese text
-     */
-    abstract fun sc2tc(str: String): String
-
-    protected fun refactor(src: String): String = replacementRegex?.replace(src) {
-        replacementMap[it.value] ?: it.value
-    } ?: src
-
-    /**
-     * Build a list with changed entries
-     *
-     * @return word list with change items
-     */
-    fun buildChangeList(): List<WordEntry> = wordList.filter { entry ->
-        entry.changed > 0 || entry.newly
-    }
-
-    /**
-     * Update text of specific word entry
-     *
-     * @param key entry key
-     * @param value entry text
-     */
-    fun update(key: String, value: String) {
-        wordList.find { entry -> entry.key == key }?.apply {
-            str = value
-            changed = System.currentTimeMillis() // set new change time
-            println("set new $key to $str at $changed")
-        }
-    }
+    fun isConfigValid(): Boolean = configs.isValid()
 }

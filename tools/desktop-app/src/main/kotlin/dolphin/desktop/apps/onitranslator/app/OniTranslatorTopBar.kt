@@ -48,8 +48,8 @@ fun OniTranslatorTopBar(
                 inputField = {
                     SearchBarDefaults.InputField(
                         query = state.searchText,
-                        onQueryChange = { onEvent(AppEvent.OnSearchTextChange(it)) },
-                        onSearch = { onEvent(AppEvent.OnSearchTextChange(it)) }, // Not used as we don't have expanded search
+                        onQueryChange = { onEvent(AppEvent.OnSearchTextChange(it, state.searchType)) },
+                        onSearch = { onEvent(AppEvent.OnSearchTextChange(it, state.searchType)) }, // Not used as we don't have expanded search
                         expanded = false,
                         onExpandedChange = { onEvent(AppEvent.OnSearchActiveChange(it)) }, // Corrected to use onSearchActiveChange
                         placeholder = { Text("Search...") },
@@ -60,7 +60,7 @@ fun OniTranslatorTopBar(
                         },
                         trailingIcon = {
                             if (state.searchText.isNotEmpty()) {
-                                IconButton(onClick = { onEvent(AppEvent.OnSearchTextChange("")) }) {
+                                IconButton(onClick = { onEvent(AppEvent.OnSearchTextChange("", state.searchType)) }) {
                                     Icon(Icons.Rounded.Close, contentDescription = "Clear search")
                                 }
                             }
