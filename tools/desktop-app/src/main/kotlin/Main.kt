@@ -40,8 +40,8 @@ fun main(args: Array<String>) = application {
     }
     val appState by viewModel.state.collectAsState()
     val windowState = rememberWindowState(
-        size = appState.windowSize,
-        position = appState.windowPosition
+        size = appState.uiState.windowSize,
+        position = appState.uiState.windowPosition
     )
 
     Window(
@@ -64,8 +64,8 @@ fun main(args: Array<String>) = application {
     }
 
     // Observe window state changes from ViewModel and apply to actual windowState
-    LaunchedEffect(appState.windowPosition, appState.windowSize) {
-        windowState.position = appState.windowPosition
-        windowState.size = appState.windowSize
+    LaunchedEffect(appState.uiState.windowPosition, appState.uiState.windowSize) {
+        windowState.position = appState.uiState.windowPosition
+        windowState.size = appState.uiState.windowSize
     }
 }

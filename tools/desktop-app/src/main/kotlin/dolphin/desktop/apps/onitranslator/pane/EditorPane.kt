@@ -94,13 +94,13 @@ fun EditorPane(
                 ReferenceView(
                     entry.templateText, type = EntryTagType.Templated,
                     onCopyToClipboard = { text ->
-                        val text = text.ifBlank {
-                            var text = "msgctxt \"${entry.target.key()}\"\n"
-                            text += "msgid \"${entry.templateText}\"\n"
-                            text += "msgstr \"${entry.target.translated()}\""
-                            text
+                        val textToCopy = text.ifBlank {
+                            var t = "msgctxt \"${entry.target.key()}\"\n"
+                            t += "msgid \"${entry.templateText}\"\n"
+                            t += "msgstr \"${entry.target.translated()}\""
+                            t
                         }
-                        onEvent(AppEvent.OnCopyToClipboard(text))
+                        onEvent(AppEvent.Ui.CopyToClipboard(textToCopy))
                     }
                 )
                 entry.referenceText?.let { text ->
@@ -135,11 +135,11 @@ fun EditorPane(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.End,
             ) {
-                TextButton(onClick = { onEvent(AppEvent.OnEditEntry(null))}) {
+                TextButton(onClick = { onEvent(AppEvent.Editor.Select(null)) }) {
                     Text("Cancel")
                 }
                 TextButton(
-                    onClick = { onEvent(AppEvent.OnSaveEntry(entry.target, editedText)) },
+                    onClick = { onEvent(AppEvent.Editor.Save(entry.target, editedText)) },
                     enabled = isChanged,
                 ) {
                     Text("Apply")

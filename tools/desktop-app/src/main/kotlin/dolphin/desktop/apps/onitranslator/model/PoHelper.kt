@@ -3,12 +3,22 @@ package dolphin.desktop.apps.onitranslator.model
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.withContext
 import java.io.BufferedReader
 import java.io.File
 import java.io.FileInputStream
 import java.io.InputStreamReader
 import java.nio.charset.StandardCharsets
+
+data class LogEntry(
+    val message: String,
+    val timestamp: Long = System.currentTimeMillis(),
+    val type: LogType = LogType.Info
+)
+
+enum class LogType { Info, Warning, Error }
 
 /**
  * Core helper class for processing ONI translation files (.po, .pot).
@@ -28,11 +38,13 @@ class PoHelper(
         private const val ONI_PO_TEMPLATE = "strings_template.pot"
         private const val ONI_CHS_PO = "strings_preinstalled_zh_klei.po"
         const val ONI_PO = "strings.po"
+        private const val MAX_LOG_SIZE = 200
     }
 
     private val simplifiedMap = HashMap<String, WordEntry>()
-    private val templateMap = HashMap<String, WordEntry>()
+    private val templateMap = LinkedHashMap<String, WordEntry>()
     private val translatedEntries = HashMap<String, WordEntry>()
+    private val draftEntries = HashMap<String, WordEntry>()
     private val wordList: MutableList<WordEntry> = mutableListOf()
 
     fun simplified(key: String): WordEntry? = simplifiedMap[key]
@@ -40,14 +52,19 @@ class PoHelper(
     fun translated(key: String): WordEntry? = translatedEntries[key]
     fun allValues(): List<WordEntry> = wordList.toList()
 
-    private val _status = MutableStateFlow("")
-    val status: StateFlow<String> = _status
-
     private val _loading = MutableStateFlow(true)
     val loading: StateFlow<Boolean> = _loading
 
-    private fun log(message: String) {
-        println(message) // TODO: Replace with error handling via StateFlow
+    private val _logs = MutableStateFlow<List<LogEntry>>(emptyList())
+    val logs: StateFlow<List<LogEntry>> = _logs.asStateFlow()
+
+    private fun log(message: String, type: LogType = LogType.Info) {
+        val entry = LogEntry(message, type = type)
+        _logs.update { currentList ->
+            val newList = currentList + entry
+            if (newList.size > MAX_LOG_SIZE) newList.takeLast(MAX_LOG_SIZE) else newList
+        }
+        println("[${type.name}] $message")
     }
 
     /**
@@ -63,29 +80,35 @@ class PoHelper(
         writeEntryToFile(getCachedFile(), wordList)
         val cost = System.currentTimeMillis() - startTime
         log("Translation process finished in $cost ms")
-        _status.emit("")
         _loading.emit(false)
         return@withContext cost
     }
 
     private suspend fun loadAllSources() {
-        _status.emit("Loading Simplified Chinese PO...")
+        log("Loading Simplified Chinese PO...")
         simplifiedMap.putAll(loadAssetFile(ONI_CHS_PO).associateBy { it.key })
         log("Simplified Chinese PO size: ${simplifiedMap.size}")
 
-        _status.emit("Loading PO Template...")
+        log("Loading PO Template...")
         templateMap.putAll(loadAssetFile(ONI_PO_TEMPLATE).associateBy { it.key })
         log("PO Template size: ${templateMap.size}")
 
-        _status.emit("Loading existing translations...")
+        log("Loading existing translations...")
         translatedEntries.putAll(
             loadAssetFile(ONI_PO).filter { it.id != "\"\"" && it.str != "\"\"" }.associateBy { it.key }
         )
         log("Previous translations size: ${translatedEntries.size}")
+
+        val draftFile = getCachedFile()
+        if (draftFile.exists()) {
+            log("Loading Draft...")
+            draftEntries.putAll(loadFile(draftFile).associateBy { it.key })
+            log("Draft entries size: ${draftEntries.size}")
+        }
     }
 
     private suspend fun buildWordList() {
-        _status.emit("Building word list...")
+        log("Building word list...")
         wordList.clear()
         templateMap.values.filter { entry ->
             (entry.translated().isEmpty() && entry.origin().isNotEmpty()) && // no translation
@@ -105,8 +128,14 @@ class PoHelper(
         var isNewly = false
         var newStr = ""
 
+        val draftEntry = draftEntries[key]
         val existingTranslation = translatedEntries[key]
-        if (existingTranslation != null) {
+
+        if (draftEntry != null && draftEntry.str.isNotEmpty()) {
+            newStr = draftEntry.str.trim()
+        }
+
+        if (newStr.isEmpty() && existingTranslation != null) {
             newStr = existingTranslation.str.trim()
         }
 
@@ -120,7 +149,7 @@ class PoHelper(
 
         val id = existingTranslation?.id ?: templateEntry.id
         if (id != templateEntry.id) {
-            log("Found msgid changed for key '$key': ${id} -> ${templateEntry.id}")
+            println("Found msgid changed for key '$key': $id -> ${templateEntry.id}")
             isNewly = true
         }
 
@@ -130,18 +159,22 @@ class PoHelper(
     private fun loadAssetFile(name: String): List<WordEntry> {
         val dir = if (name == ONI_PO) configs.oniWorkshopDir else configs.oniAssetsDir
         val file = File(dir, name)
-        log("Loading asset: ${file.absolutePath}")
+        return loadFile(file)
+    }
+
+    private fun loadFile(file: File): List<WordEntry> {
+        log("Loading file: ${file.absolutePath}")
         return if (file.exists()) {
             try {
                 BufferedReader(InputStreamReader(FileInputStream(file), StandardCharsets.UTF_8)).use { reader ->
                     parsePoFile(reader)
                 }
             } catch (e: Exception) {
-                log("Failed to load $name: ${e.message}")
+                log("Failed to load ${file.name}: ${e.message}", LogType.Error)
                 emptyList()
             }
         } else {
-            log("Asset not found: ${file.absolutePath}")
+            log("File not found: ${file.absolutePath}", LogType.Error)
             emptyList()
         }
     }
@@ -154,13 +187,13 @@ class PoHelper(
         while (reader.readLine().also { line = it } != null) {
             if (!line!!.startsWith("#.")) continue
 
-            val line1 = line!!
+            val line1 = line
             val line2 = reader.readLine() ?: break // msgctxt
             val line3 = reader.readLine() ?: break // msgid
             val line4 = reader.readLine() ?: break // msgstr
 
             WordEntry.from(line1, line2, line3, line4)?.let { list.add(it) }
-                ?: log("Invalid PO entry starting with: $line1")
+                ?: log("Invalid PO entry starting with: $line1", LogType.Warning)
         }
         return list
     }
@@ -181,6 +214,17 @@ class PoHelper(
         val result = writeEntryToFile(output, list)
         val cost = System.currentTimeMillis() - start
         log("Wrote to ${output.absolutePath} in $cost ms. Success: $result")
+
+        // If we are saving to the real location (not cache), delete the draft file
+        val cachedFile = getCachedFile()
+        if (result && output.absolutePath != cachedFile.absolutePath && cachedFile.exists()) {
+            if (cachedFile.delete()) {
+                log("Deleted draft file: ${cachedFile.absolutePath}")
+            } else {
+                log("Failed to delete draft file: ${cachedFile.absolutePath}", LogType.Warning)
+            }
+        }
+
         _loading.emit(false)
         return@withContext result
     }
@@ -207,7 +251,7 @@ class PoHelper(
             }
             return true
         } catch (e: Exception) {
-            log("Failed to write to file ${output.absolutePath}: ${e.message}")
+            log("Failed to write to file ${output.absolutePath}: ${e.message}", LogType.Error)
             return false
         }
     }

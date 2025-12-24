@@ -31,7 +31,7 @@
       * 移除 `dolphin.desktop.apps.dsttranslate.AppStrings` 這個自定義的字串包裝器檔案 (`AppStrings.kt`)。
       * 將所有用到 `AppStrings.xxx` 的地方，替換為新的 `Res.string.xxx`。
     - [x] **E. 清理舊資源**：移除 `src/main/resources` 下舊的資源檔案（`nisbet_ponder.png`, `strings.properties`, `strings_zh_TW.properties`）以及 `AppStrings.kt` 檔案。
-- [ ] **增加程式碼註解**: 在複雜的邏輯函式 (如 `analyzeText`) 中補充註解，說明其設計目的與演算法思路，方便未來維護。
+- [ ] **增加程式碼註解**: 在複雜的邏輯函式中補充註解，說明其設計目的與演算法思路，方便未來維護。
 - [x] **UI 反饋：實作 Snackbar/Toast 通知機制**:
     - [x] 定義 `SnackbarMessage` 資料結構 (包含訊息、動作、持續時間、類型)。
     - [x] 建立 `SnackbarManager` 單例，提供觸發通知的方法。
@@ -68,13 +68,25 @@
         - [x] 將 `Main.kt` 中的 `handleAppEvent` 邏輯完整遷移至 `ViewModel`。
         - [x] 移除 `OniTranslatorApp.kt` 中的 `handleUiEvents` 函式，將其邏輯合併至 `ViewModel`。
         - [x] 修改 `Main.kt` 和 `OniTranslatorApp.kt`，使其直接呼叫 `viewModel.onEvent()`。
-        - [ ] **錯誤與狀態處理**:
-            - [ ] 建立 `StateFlow` 來管理錯誤狀態，取代 `println`，並由 `ViewModel` 觸發 `Snackbar`。
-            - [ ] 維持 `processStatus` `StateFlow` 以供 `StatusBar` 使用。
 
-### 5. 新功能
+### 5. 日誌系統 (Logging System)
 
-- [ ] **實作「儲存草稿」機制**: 目標是利用 debug 版本存的 cache 檔案，拿來做為額外的資料來源。讓編輯支援中斷，避免清單太長無法一次處理完成。
+- [x] **實作進階日誌系統 (Advanced Logging System)**: 建立一個即時且可回溯的日誌機制，整合至 `PoHelper` 與 UI。
+    - [x] **架構設計 (Architectural Design)**:
+        - [x] 定義 `LogEntry` data class (message, timestamp, type: Info/Warning/Error)。
+        - [x] 在 `PoHelper` 中引入 `_logs: MutableStateFlow<List<LogEntry>>` 用於保存歷史紀錄。
+        - [x] 改造 `log()` 函式，使其同時更新 `_logs` (歷史列表) 與 `_status` (即時狀態)。
+        - [x] 實作容量控制機制 (例如保留最近 100 條)，避免記憶體無限膨脹。
+        - [x] **有序輸出**：將 `templateMap` 改為 `LinkedHashMap` 以確保輸出順序。
+        - [x] **草稿機制**：實作優先讀取與寫入後清除 Draft 的邏輯。
+    - [x] **ViewModel 整合 (ViewModel Integration)**:
+        - [x] 將 `status` 狀態管理從 `PoHelper` 移至 `OniTranslatorViewModel`。
+        - [x] ViewModel 訂閱 `PoHelper.logs`，並自動更新自身的 `status` (取最新一筆) 與 `logs`。
+        - [x] ViewModel 提供 `updateStatus(message)` 介面供 UI 外部手動更新狀態。
+    - [x] **UI 整合 (UI Integration)**:
+        - [x] ViewModel 暴露 `logs: StateFlow<List<LogEntry>>` 給 UI。
+        - [x] Status Bar 顯示 ViewModel 的 `status`。
+        - [x] TopBar 展開 Dropdown Menu/Popup，以 LazyColumn 顯示完整 Log 歷史列表。
 
 ---
 

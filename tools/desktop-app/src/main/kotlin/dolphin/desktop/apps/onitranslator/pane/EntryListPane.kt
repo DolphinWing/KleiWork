@@ -54,11 +54,11 @@ fun EntryListPane(
     modifier: Modifier = Modifier,
     listState: LazyListState = rememberLazyListState(),
 ) {
-    val list by remember(state.searchText, state.searchList, state.filteredList) {
-        mutableStateOf(if (state.searchText.isBlank()) state.filteredList else state.searchList)
+    val list by remember(state.uiState.searchState.text, state.uiState.searchState.results, state.filteredList) {
+        mutableStateOf(if (state.uiState.searchState.text.isBlank()) state.filteredList else state.uiState.searchState.results)
     }
 
-    if (state.isLoading && state.searchText.isBlank()) {
+    if (state.uiState.isLoading && state.uiState.searchState.text.isBlank()) {
         // Show Skeleton Screen only when not searching
         LazyColumn(modifier = modifier) {
             items(10) {
@@ -67,7 +67,7 @@ fun EntryListPane(
         }
     } else if (list.isEmpty()) {
         Column(modifier = modifier.fillMaxSize(), verticalArrangement = Arrangement.Center) {
-            IconButton(onClick = { onEvent(AppEvent.OnRefreshSource) }) {
+            IconButton(onClick = { onEvent(AppEvent.File.RefreshSource) }) {
                 Icon(
                     imageVector = Icons.Rounded.Refresh,
                     contentDescription = stringResource(Res.string.button_refresh)
@@ -78,12 +78,12 @@ fun EntryListPane(
         // Show actual list
         LazyColumn(modifier = modifier, state = listState) {
             itemsIndexed(list) { index, entry ->
-                val isSearchMode = state.searchText.isNotBlank()
+                val isSearchMode = state.uiState.searchState.text.isNotBlank()
                 val originalIndex = if (isSearchMode) -1 else index
                 val changedValue = if (isSearchMode) 0L else state.changedList.getOrNull(index) ?: 0L
                 M3EntryView(
                     data = entry,
-                    onItemClick = { onEvent(AppEvent.OnEditEntry(it)) },
+                    onItemClick = { onEvent(AppEvent.Editor.Select(it)) },
                     index = originalIndex, // Pass original index or -1 if not available
                     changed = changedValue,
                 )

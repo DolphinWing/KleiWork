@@ -31,8 +31,8 @@ import dolphin.desktop.apps.onitranslator.widget.TextTag
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun OniTranslatorBottomBar(state: AppState, modifier: Modifier = Modifier) {
-    val list by remember(state.searchText, state.searchList, state.filteredList) {
-        mutableStateOf(if (state.searchText.isBlank()) state.filteredList else state.searchList)
+    val list by remember(state.uiState.searchState.text, state.uiState.searchState.results, state.filteredList) {
+        mutableStateOf(if (state.uiState.searchState.text.isBlank()) state.filteredList else state.uiState.searchState.results)
     }
 
     Surface(
@@ -45,7 +45,7 @@ fun OniTranslatorBottomBar(state: AppState, modifier: Modifier = Modifier) {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                text = if (state.isLoading) "Loading..." else "${list.size} items",
+                text = if (state.uiState.isLoading) "Loading..." else "${list.size} items",
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.weight(1f),
@@ -77,7 +77,7 @@ private fun OniTranslatorBottomBarPreview() {
         arrayOf(false, true).forEach { dark ->
             OniTranslatorTheme(darkTheme = dark) {
                 OniTranslatorBottomBar(state = appState)
-                OniTranslatorBottomBar(state = appState.copy(isLoading = true))
+                OniTranslatorBottomBar(state = appState.copy(uiState = appState.uiState.copy(isLoading = true)))
             }
         }
     }

@@ -47,92 +47,115 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     fun onEvent(event: AppEvent) {
         scope.launch {
             when (event) {
-                is AppEvent.UiEvent -> handleUiEvent(event)
-                is AppEvent.OnUiStateChange -> onUiStateChange(event.uiState)
-                is AppEvent.OnCopyToClipboard -> {
-                    copyToSystemClipboard(event.text)
-                    SnackbarManager.showMessage(event.text)
-                }
-                is AppEvent.OnRefreshSource -> translate()
-                is AppEvent.OnSearchTextChange -> search(event.text, event.searchType)
-                is AppEvent.OnSearchActiveChange -> {
-                    if (event.isActive) {
-                        onUiStateChange(state.value.uiState.copy(isSearchActive = true))
-                    } else {
-                        search("") // clear search text
-                        onUiStateChange(state.value.uiState.copy(isSearchActive = false))
-                    }
-                }
-                is AppEvent.OnSaveDraft -> {
-                    val (path, cost) = save(true) // Always cache for draft
-                    if (cost > 0) {
-                        SnackbarManager.showMessage(Res.string.toast_write_success, path, cost)
-                    } else {
-                        SnackbarManager.showMessage(Res.string.toast_write_failed)
-                    }
-                }
-                is AppEvent.OnSaveFile -> {
-                    val uiState = state.value.uiState
-                    if (debugMode && uiState.dialogState == null) {
-                        val save = requestSaveData()
-                        if (save != null) {
-                            val data = OniDialogState.DebugSaveDialog(
-                                realFileName = save.realFile.absolutePath,
-                                draftFileName = save.draftFile.absolutePath
-                            )
-                            onUiStateChange(uiState.copy(dialogState = data))
-                        }
-                    } else {
-                        val (path, cost) = save(event.useCache)
-                        if (cost > 0) {
-                            SnackbarManager.showMessage(Res.string.toast_write_success, path, cost)
-                        } else {
-                            SnackbarManager.showMessage(Res.string.toast_write_failed)
-                        }
-                        onUiStateChange(uiState.copy(dialogState = null))
-                    }
-                }
-                is AppEvent.OnConfigSaved -> {
+                // Search & Source
+                is AppEvent.Search.TextChange -> search(event.text, event.type)
+                is AppEvent.Search.ActiveChange -> onSearchActiveChange(event.isActive)
+                is AppEvent.File.RefreshSource -> translate()
+
+                // File I/O
+                is AppEvent.File.SaveDraft -> saveFileInternal(useCache = true)
+                is AppEvent.File.Save -> onSaveFileRequest(event.useCache)
+
+                // Configuration
+                is AppEvent.Config.Change -> saveConfig(event.configs)
+                is AppEvent.Config.Saved -> {
                     saveConfig(event.configs)
-                    onUiStateChange(state.value.uiState.copy(dialogState = null))
+                    updateUiState { it.copy(dialogState = null) }
                 }
-                is AppEvent.OnConfigChange -> saveConfig(event.configs)
-                is AppEvent.OnEditEntry -> {
-                    val data = requestEditorData(event.entry)
-                    onUiStateChange(state.value.uiState.copy(editorData = data))
-                }
-                is AppEvent.OnSaveEntry -> edit(event.entry.key, event.newText)
+
+                // Editor
+                is AppEvent.Editor.Select -> loadEditorData(event.entry)
+                is AppEvent.Editor.Save -> edit(event.entry.key, event.newText)
+
+                // UI & System
+                is AppEvent.Ui -> onUiEvent(event)
             }
         }
     }
 
-    private fun handleUiEvent(event: AppEvent.UiEvent) {
-        var uiState = state.value.uiState
-        uiState = when (event) {
-            is AppEvent.UiEvent.OnShowConfig ->
-                uiState.copy(dialogState = OniDialogState.ConfigDialog(state.value.configs))
-            is AppEvent.UiEvent.OnShowDebugSaveDialog -> {
+    private fun onUiEvent(event: AppEvent.Ui) {
+        when (event) {
+            is AppEvent.Ui.ShowConfig ->
+                updateUiState { it.copy(dialogState = OniDialogState.ConfigDialog(state.value.configs)) }
+            is AppEvent.Ui.ShowDebugSaveDialog -> {
                 val save = requestSaveData()
                 if (save != null) {
-                    uiState.copy(
-                        dialogState = OniDialogState.DebugSaveDialog(
-                            realFileName = save.realFile.absolutePath,
-                            draftFileName = save.draftFile.absolutePath
+                    updateUiState {
+                        it.copy(
+                            dialogState = OniDialogState.DebugSaveDialog(
+                                realFileName = save.realFile.absolutePath,
+                                draftFileName = save.draftFile.absolutePath
+                            )
                         )
-                    )
-                } else {
-                    uiState
+                    }
                 }
             }
-            is AppEvent.UiEvent.OnDismissDialog -> uiState.copy(dialogState = null)
+            is AppEvent.Ui.ShowLogWindow ->
+                updateUiState { it.copy(dialogState = OniDialogState.LogWindow(logs = state.value.logs)) }
+            is AppEvent.Ui.DismissDialog -> updateUiState { it.copy(dialogState = null) }
+            is AppEvent.Ui.UpdateState -> updateUiState { event.uiState }
+            is AppEvent.Ui.CopyToClipboard -> copyToClipboard(event.text)
         }
-        onUiStateChange(uiState)
+    }
+
+    private suspend fun onSearchActiveChange(isActive: Boolean) {
+        if (isActive) {
+            updateUiState { it.copy(searchState = it.searchState.copy(isActive = true)) }
+        } else {
+            // clear search text when closing search
+            search("")
+            updateUiState { it.copy(searchState = it.searchState.copy(isActive = false)) }
+        }
+    }
+
+    private suspend fun onSaveFileRequest(useCache: Boolean) {
+        val uiState = state.value.uiState
+        if (debugMode && uiState.dialogState == null) {
+            val save = requestSaveData()
+            if (save != null) {
+                val dialog = OniDialogState.DebugSaveDialog(
+                    realFileName = save.realFile.absolutePath,
+                    draftFileName = save.draftFile.absolutePath
+                )
+                updateUiState { it.copy(dialogState = dialog) }
+            }
+        } else {
+            saveFileInternal(useCache)
+            updateUiState { it.copy(dialogState = null) }
+        }
+    }
+
+    private suspend fun saveFileInternal(useCache: Boolean) {
+        val (path, cost) = save(useCache)
+        if (cost > 0) {
+            SnackbarManager.showMessage(Res.string.toast_write_success, path, cost)
+        } else {
+            SnackbarManager.showMessage(Res.string.toast_write_failed)
+        }
+    }
+
+    private fun loadEditorData(entry: WordEntry?) {
+        val data = requestEditorData(entry)
+        updateUiState { it.copy(editorData = data) }
+    }
+
+    private fun copyToClipboard(text: String) {
+        copyToSystemClipboard(text)
+        SnackbarManager.showMessage(text)
     }
 
     private suspend fun loadInitialData() {
         val (configs, winConfig) = ConfigManager.load()
         _windowConfig.value = winConfig
-        _state.update { it.copy(configs = configs, windowSize = winConfig.toDpSize(), windowPosition = winConfig.toWindowPosition()) }
+        _state.update {
+            it.copy(
+                configs = configs,
+                uiState = it.uiState.copy(
+                    windowSize = winConfig.toDpSize(),
+                    windowPosition = winConfig.toWindowPosition()
+                )
+            )
+        }
 
         val replacementMap = ReplacementLoader(configs).load()
         val converter = TextConverter(replacementMap)
@@ -142,18 +165,27 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         helper = newHelper
 
         // Collect flows from the new helper instance
-        scope.launch { newHelper.loading.collect { loading -> _state.update { it.copy(isLoading = loading) } } }
-        scope.launch { newHelper.status.collect { status -> if (status.isNotBlank()) SnackbarManager.showMessage(status) } }
+        scope.launch {
+            newHelper.loading.collect { loading ->
+                updateUiState { it.copy(isLoading = loading) }
+            }
+        }
+        scope.launch {
+            newHelper.logs.collect { logs ->
+                _state.update { it.copy(logs = logs) }
+                updateUiState { it.copy(processStatus = logs.lastOrNull()?.message ?: "") }
+            }
+        }
 
         if (newHelper.isConfigValid()) {
             translate()
         } else {
-            _state.update { it.copy(uiState = it.uiState.copy(dialogState = OniDialogState.ConfigDialog(configs))) }
+            updateUiState { it.copy(dialogState = OniDialogState.ConfigDialog(configs)) }
         }
     }
 
-    private fun onUiStateChange(uiState: UiState) {
-        _state.update { it.copy(uiState = uiState) }
+    private fun updateUiState(block: (UiState) -> UiState) {
+        _state.update { it.copy(uiState = block(it.uiState)) }
     }
 
     private suspend fun saveConfig(newConfigs: Configs) = withContext(Dispatchers.IO) {
@@ -163,9 +195,11 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     }
 
     private suspend fun translate() = withContext(Dispatchers.IO) {
+        updateUiState { it.copy(processStatus = "Translating...") }
         helper?.runTranslationProcess()
         refreshDataSource()
-        _state.update { it.copy(searchList = helper?.allValues()?.mapNotNull { entry -> requestEditorData(entry) } ?: emptyList()) }
+        val results = helper?.allValues()?.mapNotNull { entry -> requestEditorData(entry) } ?: emptyList()
+        updateUiState { it.copy(searchState = it.searchState.copy(results = results)) }
     }
 
     private suspend fun edit(key: String, value: String) {
@@ -188,8 +222,8 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         return@withContext Pair(exported.absolutePath, if (result) cost else -1)
     }
 
-    private suspend fun search(text: String, type: SearchType = state.value.searchType) = withContext(Dispatchers.IO) {
-        _state.update { it.copy(searchText = text, searchType = type) }
+    private suspend fun search(text: String, type: SearchType = state.value.uiState.searchState.type) = withContext(Dispatchers.IO) {
+        updateUiState { it.copy(searchState = it.searchState.copy(text = text, type = type)) }
         val searchResult = helper?.allValues()?.filter { item ->
             when (type) {
                 SearchType.Origin -> item.origin()
@@ -197,7 +231,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                 SearchType.Text -> item.translated()
             }.contains(text, ignoreCase = true)
         }?.mapNotNull { entry -> requestEditorData(entry) } ?: emptyList()
-        _state.update { it.copy(searchList = searchResult) }
+        updateUiState { it.copy(searchState = it.searchState.copy(results = searchResult)) }
     }
 
     suspend fun rememberLastWindowState(windowState: WindowState) {

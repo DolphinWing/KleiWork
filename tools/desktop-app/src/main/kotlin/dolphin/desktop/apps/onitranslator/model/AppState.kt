@@ -7,24 +7,32 @@ data class AppState(
     val configs: Configs = Configs(),
     val filteredList: List<EditorData> = emptyList(),
     val changedList: List<Long> = emptyList(),
-    val searchType: SearchType = SearchType.Key,
-    val searchText: String = "",
-    val searchList: List<EditorData> = emptyList(),
-    val isLoading: Boolean = false,
-    val windowPosition: WindowPosition = WindowPosition.PlatformDefault,
-    val windowSize: DpSize = DpSize.Unspecified,
-    val uiState: UiState = UiState(),
+    val logs: List<LogEntry> = emptyList(),
     val appVersion: String = "0.0.0",
+    val uiState: UiState = UiState(),
 )
 
 data class UiState(
-    val isSearchActive: Boolean = false,
+    val isLoading: Boolean = false,
+    val processStatus: String = "",
+    val searchState: SearchState = SearchState(),
     val editorData: EditorData? = null,
     val dialogState: OniDialogState? = null,
+    val windowPosition: WindowPosition = WindowPosition.PlatformDefault,
+    val windowSize: DpSize = DpSize.Unspecified,
+)
+
+data class SearchState(
+    val isActive: Boolean = false,
+    val type: SearchType = SearchType.Key,
+    val text: String = "",
+    val results: List<EditorData> = emptyList(),
 )
 
 sealed interface OniDialogState {
     data class DebugSaveDialog(val realFileName: String = "", val draftFileName: String = "") : OniDialogState
     data class ConfigDialog(val configs: Configs) : OniDialogState
+
+    data class LogWindow(val logs: List<LogEntry>) : OniDialogState
 }
 

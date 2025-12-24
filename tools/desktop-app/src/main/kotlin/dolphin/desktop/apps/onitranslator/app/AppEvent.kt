@@ -1,31 +1,47 @@
 package dolphin.desktop.apps.onitranslator.app
 
-import dolphin.desktop.apps.onitranslator.model.AppState
 import dolphin.desktop.apps.onitranslator.model.Configs
 import dolphin.desktop.apps.onitranslator.model.SearchType
 import dolphin.desktop.apps.onitranslator.model.UiState
 import dolphin.desktop.apps.onitranslator.model.WordEntry
 
 sealed interface AppEvent {
-    data class OnSearchActiveChange(val isActive: Boolean) : AppEvent
-    data class OnSearchTextChange(val text: String, val searchType: SearchType) : AppEvent
+    // Search Actions
+    sealed interface Search : AppEvent {
+        data class ActiveChange(val isActive: Boolean) : Search
+        data class TextChange(val text: String, val type: SearchType) : Search
+    }
 
-    object OnSaveDraft : AppEvent
-    data class OnSaveFile(val useCache: Boolean) : AppEvent
-    data class OnConfigSaved(val configs: Configs) : AppEvent
-    data class OnConfigChange(val configs: Configs) : AppEvent
+    // File Operations
+    sealed interface File : AppEvent {
+        object SaveDraft : File
+        data class Save(val useCache: Boolean) : File
+        object RefreshSource : File
+    }
 
-    data class OnEditEntry(val entry: WordEntry?) : AppEvent
-    data class OnSaveEntry(val entry: WordEntry, val newText: String) : AppEvent
+    // Configuration Actions
+    sealed interface Config : AppEvent {
+        data class Change(val configs: Configs) : Config
+        data class Saved(val configs: Configs) : Config
+    }
 
-    data class OnUiStateChange(val uiState: UiState) : AppEvent
-    data class OnCopyToClipboard(val text: String) : AppEvent
+    // Editor Actions
+    sealed interface Editor : AppEvent {
+        data class Select(val entry: WordEntry?) : Editor
+        data class Save(val entry: WordEntry, val newText: String) : Editor
 
-    object OnRefreshSource : AppEvent
+        // data class Convert(val text: String) : Editor // If needed as an event, though usually a direct call
+    }
 
-    sealed interface UiEvent : AppEvent {
-        object OnShowConfig : UiEvent
-        object OnShowDebugSaveDialog : UiEvent
-        object OnDismissDialog : UiEvent
+    // UI & System Actions
+    sealed interface Ui : AppEvent {
+        data class UpdateState(val uiState: UiState) : Ui
+        data class CopyToClipboard(val text: String) : Ui
+        
+        // Dialog Control
+        object ShowConfig : Ui
+        object ShowDebugSaveDialog : Ui
+        object ShowLogWindow : Ui
+        object DismissDialog : Ui
     }
 }
