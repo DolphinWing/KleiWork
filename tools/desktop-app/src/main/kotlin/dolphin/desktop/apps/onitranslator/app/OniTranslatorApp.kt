@@ -5,7 +5,6 @@ import androidx.compose.animation.expandVertically
 import androidx.compose.animation.shrinkVertically
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.background
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -32,11 +31,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import androidx.compose.ui.text.font.FontFamily
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.debug_save_dialog_title
 import dolphin.desktop.apps.onitranslator.model.AppState
@@ -174,7 +172,7 @@ private fun LogWindowContent(
 ) {
     Surface(
         modifier = modifier,
-        shape = MaterialTheme.shapes.medium,
+        shape = MaterialTheme.shapes.large,
         color = MaterialTheme.colorScheme.surface,
         tonalElevation = 6.dp
     ) {
@@ -209,7 +207,7 @@ private fun LogItemView(log: LogEntry) {
     val color = when (log.type) {
         LogType.Error -> MaterialTheme.colorScheme.error
         LogType.Warning -> MaterialTheme.colorScheme.tertiary
-        else -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f) // Faded Info
+        else -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.9f) // Faded Info
     }
 
     // Simple time format: HH:mm:ss

@@ -32,8 +32,20 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.button_search
+import dolphin.desktop.apps.onitranslator.generated.resources.content_description_back
+import dolphin.desktop.apps.onitranslator.generated.resources.content_description_clear
+import dolphin.desktop.apps.onitranslator.generated.resources.content_description_more_actions
+import dolphin.desktop.apps.onitranslator.generated.resources.menu_draft
+import dolphin.desktop.apps.onitranslator.generated.resources.menu_save_file
+import dolphin.desktop.apps.onitranslator.generated.resources.menu_settings
+import dolphin.desktop.apps.onitranslator.generated.resources.menu_show_logs
+import dolphin.desktop.apps.onitranslator.generated.resources.placeholder_search
+import dolphin.desktop.apps.onitranslator.generated.resources.toolbar_status
 import dolphin.desktop.apps.onitranslator.model.AppState
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
+import org.jetbrains.compose.resources.stringResource
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -50,19 +62,27 @@ fun OniTranslatorTopBar(
                     SearchBarDefaults.InputField(
                         query = state.uiState.searchState.text,
                         onQueryChange = { onEvent(AppEvent.Search.TextChange(it, state.uiState.searchState.type)) },
-                        onSearch = { onEvent(AppEvent.Search.TextChange(it, state.uiState.searchState.type)) }, // Not used as we don't have expanded search
+                        onSearch = { onEvent(AppEvent.Search.TextChange(it, state.uiState.searchState.type)) },
                         expanded = false,
                         onExpandedChange = { onEvent(AppEvent.Search.ActiveChange(it)) }, // Corrected to use onSearchActiveChange
-                        placeholder = { Text("Search...") },
+                        placeholder = { Text(stringResource(Res.string.placeholder_search)) },
                         leadingIcon = {
                             IconButton(onClick = { onEvent(AppEvent.Search.ActiveChange(false)) }) {
-                                Icon(Icons.Rounded.ArrowBackIosNew, contentDescription = "Back") // Corrected icon
+                                Icon(
+                                    Icons.Rounded.ArrowBackIosNew,
+                                    contentDescription = stringResource(Res.string.content_description_back)
+                                ) // Corrected icon
                             }
                         },
                         trailingIcon = {
                             if (state.uiState.searchState.text.isNotEmpty()) {
-                                IconButton(onClick = { onEvent(AppEvent.Search.TextChange("", state.uiState.searchState.type)) }) {
-                                    Icon(Icons.Rounded.Close, contentDescription = "Clear search")
+                                IconButton(onClick = {
+                                    onEvent(AppEvent.Search.TextChange("", state.uiState.searchState.type))
+                                }) {
+                                    Icon(
+                                        Icons.Rounded.Close,
+                                        contentDescription = stringResource(Res.string.content_description_clear)
+                                    )
                                 }
                             }
                         },
@@ -78,50 +98,56 @@ fun OniTranslatorTopBar(
             }
         }
     } else {
+        val filteredList = state.filteredList
+        val changedList = state.filteredList
+
         TopAppBar(
-            title = { Text("Oni Translator") },
+            title = { Text(stringResource(Res.string.toolbar_status, filteredList.size, changedList.size)) },
             actions = {
                 IconButton(onClick = { onEvent(AppEvent.Search.ActiveChange(true)) }) {
-                    Icon(Icons.Rounded.Search, contentDescription = "Search")
+                    Icon(Icons.Rounded.Search, contentDescription = stringResource(Res.string.button_search))
                 }
                 IconButton(onClick = { menuExpanded = true }) {
-                    Icon(Icons.Rounded.MoreVert, contentDescription = "More actions")
+                    Icon(
+                        Icons.Rounded.MoreVert,
+                        contentDescription = stringResource(Res.string.content_description_more_actions)
+                    )
                 }
                 DropdownMenu(
                     expanded = menuExpanded,
                     onDismissRequest = { menuExpanded = false }
                 ) {
                     DropdownMenuItem(
-                        text = { Text("Save file") },
+                        text = { Text(stringResource(Res.string.menu_save_file)) },
                         onClick = {
                             onEvent(AppEvent.File.Save(false)) // false for regular save
                             menuExpanded = false
                         },
-                        leadingIcon = { Icon(Icons.Rounded.Save, contentDescription = "Save file") }
+                        leadingIcon = { Icon(Icons.Rounded.Save, contentDescription = null) }
                     )
                     DropdownMenuItem(
-                        text = { Text("Draft") },
+                        text = { Text(stringResource(Res.string.menu_draft)) },
                         onClick = {
                             onEvent(AppEvent.File.SaveDraft)
                             menuExpanded = false
                         },
-                        leadingIcon = { Icon(Icons.Rounded.Drafts, contentDescription = "Done file") }
+                        leadingIcon = { Icon(Icons.Rounded.Drafts, contentDescription = null) }
                     )
                     DropdownMenuItem(
-                        text = { Text("Show logs") },
+                        text = { Text(stringResource(Res.string.menu_show_logs)) },
                         onClick = {
                             onEvent(AppEvent.Ui.ShowLogWindow)
                             menuExpanded = false
                         },
-                        leadingIcon = { Icon(Icons.Rounded.Report, contentDescription = "Logs") }
+                        leadingIcon = { Icon(Icons.Rounded.Report, contentDescription = null) }
                     )
                     DropdownMenuItem(
-                        text = { Text("Settings") },
+                        text = { Text(stringResource(Res.string.menu_settings)) },
                         onClick = {
                             onEvent(AppEvent.Ui.ShowConfig)
                             menuExpanded = false
                         },
-                        leadingIcon = { Icon(Icons.Rounded.Settings, contentDescription = "Settings") }
+                        leadingIcon = { Icon(Icons.Rounded.Settings, contentDescription = null) }
                     )
                 }
             }
@@ -142,7 +168,11 @@ private fun OniTranslatorTopBarPreview() {
                     onEvent = {},
                 )
                 OniTranslatorTopBar(
-                    state = appState.copy(uiState = appState.uiState.copy(searchState = appState.uiState.searchState.copy(isActive = true))),
+                    state = appState.copy(
+                        uiState = appState.uiState.copy(
+                            searchState = appState.uiState.searchState.copy(isActive = true)
+                        )
+                    ),
                     onEvent = {},
                 )
             }

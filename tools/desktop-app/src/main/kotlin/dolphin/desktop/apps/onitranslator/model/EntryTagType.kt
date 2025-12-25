@@ -15,13 +15,13 @@ enum class EntryTagType(val label: StringResource) {
 
     fun containerColor(colorScheme: ColorScheme): Color = when (this) {
         Templated -> colorScheme.primaryContainer
-        Simplified -> colorScheme.tertiaryContainer
-        Translated -> colorScheme.secondaryContainer
+        Simplified -> colorScheme.secondaryContainer
+        Translated -> colorScheme.tertiaryContainer
     }
 
     fun contentColor(colorScheme: ColorScheme): Color = when (this) {
         Templated -> colorScheme.onPrimaryContainer
-        Simplified -> colorScheme.onTertiaryContainer
-        Translated -> colorScheme.onSecondaryContainer
+        Simplified -> colorScheme.onSecondaryContainer
+        Translated -> colorScheme.onTertiaryContainer
     }
 }

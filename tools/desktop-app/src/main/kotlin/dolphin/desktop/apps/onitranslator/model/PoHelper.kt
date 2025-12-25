@@ -41,15 +41,15 @@ class PoHelper(
         private const val MAX_LOG_SIZE = 200
     }
 
-    private val simplifiedMap = HashMap<String, WordEntry>()
     private val templateMap = LinkedHashMap<String, WordEntry>()
+    private val simplifiedMap = HashMap<String, WordEntry>()
     private val translatedEntries = HashMap<String, WordEntry>()
     private val draftEntries = HashMap<String, WordEntry>()
     private val wordList: MutableList<WordEntry> = mutableListOf()
 
+    fun templateText(key: String): WordEntry? = templateMap[key]
     fun simplified(key: String): WordEntry? = simplifiedMap[key]
-    fun templated(key: String): WordEntry? = templateMap[key]
-    fun translated(key: String): WordEntry? = translatedEntries[key]
+    fun drafted(key: String): WordEntry? = draftEntries[key]
     fun allValues(): List<WordEntry> = wordList.toList()
 
     private val _loading = MutableStateFlow(true)
@@ -202,7 +202,7 @@ class PoHelper(
         wordList.find { it.key == key }?.apply {
             str = value
             changed = System.currentTimeMillis()
-            log("Updated '$key' at $changed")
+            log("Updated '$key'.")
         }
     }
 
@@ -213,7 +213,7 @@ class PoHelper(
         val start = System.currentTimeMillis()
         val result = writeEntryToFile(output, list)
         val cost = System.currentTimeMillis() - start
-        log("Wrote to ${output.absolutePath} in $cost ms. Success: $result")
+        log("Wrote to ${output.absolutePath} in $cost ms. Result: $result")
 
         // If we are saving to the real location (not cache), delete the draft file
         val cachedFile = getCachedFile()

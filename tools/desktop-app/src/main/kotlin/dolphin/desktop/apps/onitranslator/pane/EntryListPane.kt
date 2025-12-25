@@ -33,6 +33,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import dolphin.desktop.apps.onitranslator.app.AppEvent
@@ -123,6 +124,7 @@ private fun M3EntryView(
                     modifier = Modifier.weight(1f),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
+                    fontFamily = FontFamily.Monospace,
                 )
                 if (data.target.newly) {
                     Text(
@@ -142,6 +144,7 @@ private fun M3EntryView(
                 text = data.target.translated(),
                 style = MaterialTheme.typography.bodyLarge,
                 color = MaterialTheme.colorScheme.onSurface,
+                fontFamily = FontFamily.Monospace,
             )
 
             Spacer(Modifier.height(8.dp))

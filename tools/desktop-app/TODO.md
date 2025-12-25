@@ -31,7 +31,7 @@
       * 移除 `dolphin.desktop.apps.dsttranslate.AppStrings` 這個自定義的字串包裝器檔案 (`AppStrings.kt`)。
       * 將所有用到 `AppStrings.xxx` 的地方，替換為新的 `Res.string.xxx`。
     - [x] **E. 清理舊資源**：移除 `src/main/resources` 下舊的資源檔案（`nisbet_ponder.png`, `strings.properties`, `strings_zh_TW.properties`）以及 `AppStrings.kt` 檔案。
-- [ ] **增加程式碼註解**: 在複雜的邏輯函式中補充註解，說明其設計目的與演算法思路，方便未來維護。
+- [x] **增加程式碼註解**: 在複雜的邏輯函式中補充註解，說明其設計目的與演算法思路，方便未來維護。
 - [x] **UI 反饋：實作 Snackbar/Toast 通知機制**:
     - [x] 定義 `SnackbarMessage` 資料結構 (包含訊息、動作、持續時間、類型)。
     - [x] 建立 `SnackbarManager` 單例，提供觸發通知的方法。
@@ -47,12 +47,12 @@
 - [ ] **軟體品質：加入單元測試 (Unit Tests)**: 引入 `JUnit 5` 測試框架，為核心邏輯 (例如 `PoHelper.kt`, `Ini.kt`) 撰寫單元測試，以確保程式碼變更時的穩定性與正確性。
 - [x] **自動化：更新 GitHub Actions CI 工作流程**: 優化並更新現有的 CI (Continuous Integration) 工作流程，包含升級 Actions 版本、整合 Gradle 快取，並確保在每次推送到 Git 倉庫時自動執行編譯 (`./gradlew build`) 和測試。
 - [ ] **資料層與狀態管理重構**:
-    - [ ] 全面審視並重構 `PoData.kt`，使其 API 更符合新的 UI 架構和單向資料流 (UDF) 原則。
+    - [x] 全面審視並重構 `PoData.kt`，使其 API 更符合新的 UI 架構和單向資料流 (UDF) 原則。
         - [x] **引入 `AppState` data class**：將 `PoDataModel` 中的 `MutableStateFlow` 都放到這個 data class 中，用一個 `StateFlow<AppState>` 來管理所有的狀態。
-        - [ ] **將 `loadIni` 和 `loadIniAndPo` 的回傳值改為 `Unit`**：將回傳值改為透過 `StateFlow` 來傳遞，讓 `PoDataModel` 的 API 更簡潔。
-        - [ ] **將 `save` 函式的回傳值改為 `Unit`**：將回傳值改為透過 UI 事件來處理，例如顯示一個 Snackbar 或 Toast。
-        - [ ] **將 `translate` 函式的回傳值改為 `Unit`**：將回傳值改為透過 UI 事件來處理。
-        - [ ] **將 `search` 和 `searchType` 合併**：將它們合併成一個 `updateSearch` 函式，並用一個 `SearchState` data class 來管理搜尋相關的狀態。
+        - [x] **將 `loadIni` 和 `loadIniAndPo` 的回傳值改為 `Unit`**：將回傳值改為透過 `StateFlow` 來傳遞，讓 `PoDataModel` 的 API 更簡潔。
+        - [x] **將 `save` 函式的回傳值改為 `Unit`**：將回傳值改為透過 UI 事件來處理，例如顯示一個 Snackbar 或 Toast。
+        - [x] **將 `translate` 函式的回傳值改為 `Unit`**：將回傳值改為透過 UI 事件來處理。
+        - [x] **將 `search` 和 `searchType` 合併**：將它們合併成一個 `updateSearch` 函式，並用一個 `SearchState` data class 來管理搜尋相關的狀態。
     - [x] **ViewModel 與資料層重構**:
         - [x] **更名**: 將 `PoDataModel.kt` 檔案與 `class` 更名為 `OniTranslatorViewModel.kt`，以明確其 ViewModel 職責。
         - [x] **關注點分離與依賴注入 (DI)**:

@@ -25,6 +25,7 @@
 *   **關鍵函式庫**:
     *   `opencc4j`: 簡繁轉換核心。
     *   `kotlinx.coroutines`: 非同步任務處理。
+    *   **Compose Resources**: 用於型別安全的多語系、圖片與字體管理。
 
 ---
 
@@ -39,6 +40,7 @@
     *   **不包含業務邏輯**。
     *   透過 `onEvent: (AppEvent) -> Unit` 將操作意圖傳遞給 ViewModel。
     *   訂閱 ViewModel 的 `StateFlow` (`AppState`, `UiState`) 來更新畫面。
+    *   **設計語彙**：遵循 Material Design 3，使用「藍 (Primary)、紫 (Secondary)、金 (Tertiary)」作為核心色調，分別代表「核心功能、層次區分、活力焦點」。
     *   *進入點*: `OniTranslatorApp.kt`
 
 2.  **ViewModel (`OniTranslatorViewModel`)**
@@ -74,6 +76,7 @@
     *   `uiState`: 包含下方的 UI 狀態。
 *   **`UiState`**: 純 UI 相關的短暫狀態。
     *   `isLoading`: 是否正在處理中。
+    *   `processStatus`: 即時狀態訊息（如：儲存中...）。
     *   `searchState`: 搜尋關鍵字、結果與是否啟用搜尋模式。
     *   `editorData`: 右側編輯器當前選中的資料。
     *   `dialogState`: 控制對話框 (Config, Save Confirm) 的顯示。
@@ -88,12 +91,19 @@
 
 **合併邏輯**：Draft > Existing Translation > Simplified (converted) > Template Origin。
 
-### 4.3. 日誌系統 (Logging System)
+### 4.3. 資源與日誌系統
 
-為了讓使用者知道程式在背後做了什麼（例如「自動修正了某個詞」或「存檔成功」），我們設計了一套即時日誌系統：
+#### 多語系資源管理 (Localization)
+專案使用 Compose Multiplatform 的資源系統，所有字串定義於 `src/main/composeResources/values/strings.xml`，並透過 `Res.string.xxx` 以型別安全的方式存取。嚴禁在 UI 中寫死 (Hardcode) 任何顯示文字。
 
+#### 即時回饋機制
+為了讓使用者知道程式在背後做了什麼：
 *   `PoHelper` 內部產生 `LogEntry` (Info/Warning/Error)。
-*   `ViewModel` 監聽 `PoHelper.logs`，並將最新的一條 Log 轉發到 `UiState.processStatus` 顯示於狀態列。
+*   `ViewModel` 監聽 `PoHelper.logs`，並將最新的一條訊息轉發到 `UiState.processStatus`。
+*   **`OniTranslatorBottomBar`** 負責呈現此狀態，並具備 Fallback 邏輯：
+    1.  優先顯示 `processStatus`。
+    2.  若為空，顯示 `isLoading` 狀態。
+    3.  閒置時顯示當前項目總數。
 *   完整 Log 列表保留在 `AppState.logs` 供查閱。
 
 ---

@@ -24,6 +24,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.button_cancel
+import dolphin.desktop.apps.onitranslator.generated.resources.button_save
 import dolphin.desktop.apps.onitranslator.generated.resources.github_root
 import dolphin.desktop.apps.onitranslator.generated.resources.manual_setup
 import dolphin.desktop.apps.onitranslator.generated.resources.oni_asset_dir
@@ -114,21 +116,15 @@ fun ConfigPane(
         )
 
         // Action buttons
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(top = 16.dp),
-            horizontalArrangement = Arrangement.End
-        ) {
+        Row(horizontalArrangement = Arrangement.End, modifier = Modifier.fillMaxWidth()) {
             TextButton(onClick = onCancel) {
-                Icon(Icons.Rounded.Close, contentDescription = "Cancel")
-                Text("Cancel")
+                Icon(Icons.Rounded.Close, contentDescription = null)
+                Text(stringResource(Res.string.button_cancel))
             }
             Spacer(Modifier.width(8.dp))
-            Button(
-                onClick = { onApply(configs) },
-                enabled = configs.isValid()
-            ) {
-                Icon(Icons.Rounded.Check, contentDescription = "Save")
-                Text("Save")
+            Button(onClick = { onApply(configs) }) {
+                Icon(Icons.Rounded.Check, contentDescription = null)
+                Text(stringResource(Res.string.button_save))
             }
         }
     }

@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import dolphin.desktop.apps.onitranslator.model.EntryTagType
 import org.jetbrains.compose.resources.stringResource
@@ -31,6 +32,7 @@ fun TextTag(
             text = text,
             color = contentColor,
             style = MaterialTheme.typography.labelSmall,
+            fontFamily = FontFamily.Monospace,
         )
     }
 }

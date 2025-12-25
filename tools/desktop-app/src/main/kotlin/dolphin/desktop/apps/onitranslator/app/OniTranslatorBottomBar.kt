@@ -16,23 +16,36 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.status_items_count
+import dolphin.desktop.apps.onitranslator.generated.resources.status_loading
 import dolphin.desktop.apps.onitranslator.model.AppState
 import dolphin.desktop.apps.onitranslator.model.EntryTagType
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.TextTag
+import org.jetbrains.compose.resources.stringResource
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun OniTranslatorBottomBar(state: AppState, modifier: Modifier = Modifier) {
-    val list by remember(state.uiState.searchState.text, state.uiState.searchState.results, state.filteredList) {
-        mutableStateOf(if (state.uiState.searchState.text.isBlank()) state.filteredList else state.uiState.searchState.results)
+    // Derived state for the item list size
+    val listSize = if (state.uiState.searchState.text.isBlank()) {
+        state.filteredList.size
+    } else {
+        state.uiState.searchState.results.size
+    }
+
+    // Determine the status text: prefer processStatus, fallback to item count
+    val statusText = if (state.uiState.processStatus.isNotBlank()) {
+        state.uiState.processStatus
+    } else if (state.uiState.isLoading) {
+        stringResource(Res.string.status_loading)
+    } else {
+        stringResource(Res.string.status_items_count, listSize)
     }
 
     Surface(
@@ -45,7 +58,7 @@ fun OniTranslatorBottomBar(state: AppState, modifier: Modifier = Modifier) {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                text = if (state.uiState.isLoading) "Loading..." else "${list.size} items",
+                text = statusText,
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.weight(1f),
@@ -76,8 +89,17 @@ private fun OniTranslatorBottomBarPreview() {
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         arrayOf(false, true).forEach { dark ->
             OniTranslatorTheme(darkTheme = dark) {
-                OniTranslatorBottomBar(state = appState)
-                OniTranslatorBottomBar(state = appState.copy(uiState = appState.uiState.copy(isLoading = true)))
+                Surface {
+                    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        OniTranslatorBottomBar(state = appState)
+                        OniTranslatorBottomBar(state = appState.copy(uiState = appState.uiState.copy(isLoading = true)))
+                        OniTranslatorBottomBar(
+                            state = appState.copy(
+                                uiState = appState.uiState.copy(processStatus = "Saving file...")
+                            )
+                        )
+                    }
+                }
             }
         }
     }

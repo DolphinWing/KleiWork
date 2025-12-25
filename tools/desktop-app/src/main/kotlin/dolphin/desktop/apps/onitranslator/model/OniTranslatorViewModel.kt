@@ -10,6 +10,8 @@ import dolphin.desktop.apps.onitranslator.generated.resources.toast_write_failed
 import dolphin.desktop.apps.onitranslator.generated.resources.toast_write_success
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -37,6 +39,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     private val windowConfig: State<WindowConfig> = _windowConfig
 
     private val scope = CoroutineScope(Dispatchers.Default)
+    private var autoClearJob: Job? = null
 
     init {
         scope.launch {
@@ -144,6 +147,19 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         SnackbarManager.showMessage(text)
     }
 
+    private fun updateStatus(message: String) {
+        updateUiState { it.copy(processStatus = message) }
+
+        // Auto-clear status after 3 seconds if not empty
+        autoClearJob?.cancel()
+        if (message.isNotBlank()) {
+            autoClearJob = scope.launch {
+                delay(3000)
+                updateUiState { it.copy(processStatus = "") }
+            }
+        }
+    }
+
     private suspend fun loadInitialData() {
         val (configs, winConfig) = ConfigManager.load()
         _windowConfig.value = winConfig
@@ -173,7 +189,8 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         scope.launch {
             newHelper.logs.collect { logs ->
                 _state.update { it.copy(logs = logs) }
-                updateUiState { it.copy(processStatus = logs.lastOrNull()?.message ?: "") }
+                val message = logs.lastOrNull()?.message ?: ""
+                updateStatus(message)
             }
         }
 
@@ -195,7 +212,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     }
 
     private suspend fun translate() = withContext(Dispatchers.IO) {
-        updateUiState { it.copy(processStatus = "Translating...") }
+        updateStatus("Translating...")
         helper?.runTranslationProcess()
         refreshDataSource()
         val results = helper?.allValues()?.mapNotNull { entry -> requestEditorData(entry) } ?: emptyList()
@@ -253,9 +270,9 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         val h = helper ?: return null
         return if (entry == null) null else {
             val key = entry.key
-            val templateText = h.templated(key)?.origin() ?: entry.origin()
+            val templateText = h.templateText(key)?.origin() ?: entry.origin()
             val referenceText = h.simplified(key)?.translated()
-            val draftText = h.translated(key)?.translated()
+            val draftText = h.drafted(key)?.translated()
             EditorData(entry, templateText, referenceText, draftText)
         }
     }
