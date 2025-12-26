@@ -76,7 +76,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         }
     }
 
-    private fun onUiEvent(event: AppEvent.Ui) {
+    private suspend fun onUiEvent(event: AppEvent.Ui) {
         when (event) {
             is AppEvent.Ui.ShowConfig ->
                 updateUiState { it.copy(dialogState = OniDialogState.ConfigDialog(state.value.configs)) }
@@ -98,6 +98,12 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
             is AppEvent.Ui.DismissDialog -> updateUiState { it.copy(dialogState = null) }
             is AppEvent.Ui.UpdateState -> updateUiState { event.uiState }
             is AppEvent.Ui.CopyToClipboard -> copyToClipboard(event.text)
+            is AppEvent.Ui.ChangeTheme -> {
+                updateUiState { it.copy(darkTheme = event.dark) }
+                val newConfig = _windowConfig.value.copy(darkTheme = event.dark)
+                _windowConfig.value = newConfig
+                saveConfig(state.value.configs)
+            }
         }
     }
 
@@ -168,7 +174,8 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                 configs = configs,
                 uiState = it.uiState.copy(
                     windowSize = winConfig.toDpSize(),
-                    windowPosition = winConfig.toWindowPosition()
+                    windowPosition = winConfig.toWindowPosition(),
+                    darkTheme = winConfig.darkTheme,
                 )
             )
         }
@@ -259,7 +266,8 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                 x = pos.x.value,
                 y = pos.y.value,
                 width = size.width.value,
-                height = size.height.value
+                height = size.height.value,
+                darkTheme = state.value.uiState.darkTheme,
             )
             _windowConfig.value = newWindowConfig
             ConfigManager.save(state.value.configs, newWindowConfig)

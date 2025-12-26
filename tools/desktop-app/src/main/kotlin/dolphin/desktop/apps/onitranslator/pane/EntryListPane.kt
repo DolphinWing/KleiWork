@@ -1,12 +1,16 @@
 package dolphin.desktop.apps.onitranslator.pane
 
 // Import the new M3ToolbarPane
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.snap
+import androidx.compose.animation.core.tween
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -19,10 +23,9 @@ import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Refresh
+import androidx.compose.material.icons.rounded.Search
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Surface
@@ -33,6 +36,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.geometry.CornerRadius
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -45,8 +53,10 @@ import dolphin.desktop.apps.onitranslator.model.EntryTagType
 import dolphin.desktop.apps.onitranslator.model.WordEntry
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.TextTag
+import dolphin.desktop.apps.onitranslator.widget.TooltipIconButton
 import dolphin.desktop.apps.onitranslator.widget.shimmerEffect
 import org.jetbrains.compose.resources.stringResource
+import kotlin.math.max
 
 @Composable
 fun EntryListPane(
@@ -59,35 +69,50 @@ fun EntryListPane(
         mutableStateOf(if (state.uiState.searchState.text.isBlank()) state.filteredList else state.uiState.searchState.results)
     }
 
-    if (state.uiState.isLoading && state.uiState.searchState.text.isBlank()) {
-        // Show Skeleton Screen only when not searching
-        LazyColumn(modifier = modifier) {
-            items(10) {
-                EntryViewPlaceholder()
+    Surface(modifier = modifier, color = MaterialTheme.colorScheme.background) {
+        if (state.uiState.isLoading && state.uiState.searchState.text.isBlank()) {
+            // Show Skeleton Screen only when not searching
+            LazyColumn(
+                modifier = Modifier.fillMaxSize(),
+                contentPadding = PaddingValues(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                items(10) {
+                    EntryViewPlaceholder()
+                }
             }
-        }
-    } else if (list.isEmpty()) {
-        Column(modifier = modifier.fillMaxSize(), verticalArrangement = Arrangement.Center) {
-            IconButton(onClick = { onEvent(AppEvent.File.RefreshSource) }) {
-                Icon(
-                    imageVector = Icons.Rounded.Refresh,
-                    contentDescription = stringResource(Res.string.button_refresh)
-                )
+        } else if (list.isEmpty()) {
+            Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                TooltipIconButton(
+                    icon = Icons.Rounded.Search,
+                    tooltip = stringResource(Res.string.button_refresh),
+                ) {
+                    onEvent(AppEvent.File.RefreshSource)
+                }
+
             }
-        }
-    } else {
-        // Show actual list
-        LazyColumn(modifier = modifier, state = listState) {
-            itemsIndexed(list) { index, entry ->
-                val isSearchMode = state.uiState.searchState.text.isNotBlank()
-                val originalIndex = if (isSearchMode) -1 else index
-                val changedValue = if (isSearchMode) 0L else state.changedList.getOrNull(index) ?: 0L
-                M3EntryView(
-                    data = entry,
-                    onItemClick = { onEvent(AppEvent.Editor.Select(it)) },
-                    index = originalIndex, // Pass original index or -1 if not available
-                    changed = changedValue,
-                )
+        } else {
+            // Show actual list
+            LazyColumn(
+                modifier = Modifier.fillMaxSize()
+                    .drawOrganicScrollbar(listState, MaterialTheme.colorScheme.primary),
+                contentPadding = PaddingValues(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+                state = listState
+            ) {
+                itemsIndexed(list) { index, entry ->
+                    val isSearchMode = state.uiState.searchState.text.isNotBlank()
+                    val originalIndex = if (isSearchMode) -1 else index
+                    val changedValue = if (isSearchMode) 0L else state.changedList.getOrNull(index) ?: 0L
+                    val selected = state.uiState.editorData == entry
+                    M3EntryView(
+                        data = entry,
+                        onItemClick = { onEvent(AppEvent.Editor.Select(it)) },
+                        index = originalIndex, // Pass original index or -1 if not available
+                        changed = changedValue,
+                        selected = selected,
+                    )
+                }
             }
         }
     }
@@ -98,21 +123,35 @@ fun EntryListPane(
 private fun M3EntryView(
     data: EditorData,
     modifier: Modifier = Modifier,
-    onItemClick: (WordEntry) -> Unit,
-    index: Int,
-    changed: Long,
+    onItemClick: (WordEntry) -> Unit = {},
+    index: Int = 0,
+    changed: Long = 0L,
+    selected: Boolean = false,
 ) {
     val isChanged = changed > 0
-    val cardBorderColor = if (isChanged) {
+    val cardBorderColor = if (selected) {
+        MaterialTheme.colorScheme.primary
+    } else if (isChanged) {
         MaterialTheme.colorScheme.primary.copy(alpha = 0.5f)
     } else {
         MaterialTheme.colorScheme.outline.copy(alpha = 0.2f)
     }
+    val cardBorderWidth = if (selected) 2.dp else if (isChanged) 1.5.dp else 1.dp
+
+    val cardColors = if (selected) {
+        CardDefaults.outlinedCardColors(
+            containerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.12f),
+            contentColor = MaterialTheme.colorScheme.onSurface
+        )
+    } else {
+        CardDefaults.outlinedCardColors()
+    }
 
     OutlinedCard(
         onClick = { onItemClick.invoke(data.target) },
-        modifier = modifier.fillMaxWidth().padding(vertical = 4.dp, horizontal = 8.dp),
-        border = BorderStroke(if (isChanged) 1.5.dp else 1.dp, cardBorderColor)
+        modifier = modifier.fillMaxWidth(),
+        border = BorderStroke(cardBorderWidth, cardBorderColor),
+        colors = cardColors,
     ) {
         Column(modifier = Modifier.padding(vertical = 8.dp, horizontal = 12.dp)) {
             // Header: Key and Index
@@ -172,7 +211,7 @@ private fun M3EntryView(
 @Composable
 private fun EntryViewPlaceholder(modifier: Modifier = Modifier) {
     OutlinedCard(
-        modifier = modifier.fillMaxWidth().padding(vertical = 4.dp, horizontal = 8.dp),
+        modifier = modifier.fillMaxWidth(),
     ) {
         Column(modifier = Modifier.padding(vertical = 8.dp, horizontal = 12.dp)) {
             // Header
@@ -205,23 +244,14 @@ private fun M3EntryViewPreview() {
     val newEntryViewData = defaultViewData.copy(target = sampleEntry, draftText = null, referenceText = null)
     var index = 0
 
-    Column(modifier = Modifier.padding(16.dp).width(400.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+    Row(modifier = Modifier.padding(16.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
         arrayOf(false, true).forEach { darkTheme ->
             OniTranslatorTheme(darkTheme = darkTheme) {
-                Surface {
-                    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                        M3EntryView(
-                            data = defaultViewData,
-                            onItemClick = {},
-                            index = ++index,
-                            changed = 0L,
-                        )
-                        M3EntryView(
-                            data = newEntryViewData,
-                            onItemClick = {},
-                            index = ++index,
-                            changed = 1L, // Mark as changed
-                        )
+                Surface(color = MaterialTheme.colorScheme.surfaceDim) {
+                    Column(Modifier.width(360.dp).padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        M3EntryView(data = defaultViewData, index = ++index)
+                        M3EntryView(data = newEntryViewData, index = ++index, changed = 1L)
+                        M3EntryView(data = defaultViewData, index = ++index, selected = true)
                     }
                 }
             }
@@ -240,6 +270,50 @@ private fun EntryViewPlaceholderPreview() {
         OniTranslatorTheme(darkTheme = true) {
             EntryViewPlaceholder()
             EntryViewPlaceholder()
+        }
+    }
+}
+
+@Composable
+fun Modifier.drawOrganicScrollbar(state: LazyListState, color: Color = Color.Gray): Modifier {
+    // 1. 動態透明度：捲動時浮現，靜止時優雅消失
+    val alpha by animateFloatAsState(
+        targetValue = if (state.isScrollInProgress) 0.4f else 0f,
+        animationSpec = if (state.isScrollInProgress) {
+            snap() // 開始捲動瞬間出現
+        } else {
+            tween(durationMillis = 500, delayMillis = 200) // 結束後停留一下再消失
+        },
+        label = "scrollbar_alpha"
+    )
+
+    return this.drawWithContent {
+        drawContent()
+
+        val layoutInfo = state.layoutInfo
+        val totalItemsCount = layoutInfo.totalItemsCount
+        if (totalItemsCount <= 0) return@drawWithContent
+
+        // 2. 計算比例：避免忽大忽小的物理修正
+        val viewportHeight = size.height
+        val visibleItemsCount = layoutInfo.visibleItemsInfo.size
+        // 確保 Scrollbar 至少有 30.dp 高，不會縮到看不見
+        val scrollbarHeight = max(
+            (visibleItemsCount.toFloat() / totalItemsCount) * viewportHeight,
+            30.dp.toPx()
+        )
+
+        val scrollOffset = if (totalItemsCount > visibleItemsCount) {
+            (state.firstVisibleItemIndex.toFloat() / (totalItemsCount - visibleItemsCount)) * (viewportHeight - scrollbarHeight)
+        } else 0f
+
+        if (alpha > 0f) {
+            drawRoundRect(
+                color = color.copy(alpha = alpha),
+                topLeft = Offset(size.width - 6.dp.toPx(), scrollOffset),
+                size = Size(4.dp.toPx(), scrollbarHeight),
+                cornerRadius = CornerRadius(2.dp.toPx())
+            )
         }
     }
 }

@@ -46,6 +46,7 @@ compose.desktop {
             version = releaseAppVersion
             description = "ONI PO Translate Helper"
             vendor = "DolphinWing"
+            copyright = "Copyright (c) 2025 DolphinWing"
 
             appResourcesRootDir.set(project.layout.projectDirectory.dir("resources"))
 

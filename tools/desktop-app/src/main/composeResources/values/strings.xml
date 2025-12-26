@@ -39,6 +39,7 @@
 
     <!-- Tooltips -->
     <string name="tooltip_copy_this_text">Copy this text</string>
+    <string name="tooltip_theme_toggle">Toggle theme</string>
     <string name="tooltip_show_link">Show link</string>
     <string name="tooltip_use_this_text">Use this text</string>
 

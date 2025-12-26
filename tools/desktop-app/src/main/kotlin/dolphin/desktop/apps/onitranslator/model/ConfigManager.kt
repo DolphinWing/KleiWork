@@ -76,6 +76,7 @@ object ConfigManager {
             y = props[Incs.KEY_WINDOW_POS_Y]?.toFloatOrNull() ?: 0f,
             width = props[Incs.KEY_WINDOW_WIDTH]?.toFloatOrNull() ?: 1200f,
             height = props[Incs.KEY_WINDOW_HEIGHT]?.toFloatOrNull() ?: 800f,
+            darkTheme = props[Incs.KEY_DARK_THEME]?.toBooleanStrictOrNull(),
         )
 
         return@withContext Pair(configs, windowConfig)
@@ -96,6 +97,9 @@ object ConfigManager {
             appendLine("${Incs.KEY_WINDOW_POS_Y}=${windowConfig.y}")
             appendLine("${Incs.KEY_WINDOW_WIDTH}=${windowConfig.width}")
             appendLine("${Incs.KEY_WINDOW_HEIGHT}=${windowConfig.height}")
+            if (windowConfig.darkTheme != null) {
+                appendLine("${Incs.KEY_DARK_THEME}=${windowConfig.darkTheme}")
+            }
         }
         try {
             configFile.writeText(content)

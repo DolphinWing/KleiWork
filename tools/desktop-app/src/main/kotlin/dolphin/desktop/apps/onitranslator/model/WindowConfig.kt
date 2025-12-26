@@ -17,6 +17,7 @@ data class WindowConfig(
     val y: Float = 0f,
     val width: Float = 1200f,
     val height: Float = 800f,
+    val darkTheme: Boolean? = null,
 ) {
     /**
      * Converts the stored coordinates to a Compose [WindowPosition].

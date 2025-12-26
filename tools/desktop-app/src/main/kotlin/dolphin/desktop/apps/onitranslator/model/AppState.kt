@@ -31,6 +31,7 @@ data class UiState(
     val dialogState: OniDialogState? = null,
     val windowPosition: WindowPosition = WindowPosition.PlatformDefault,
     val windowSize: DpSize = DpSize.Unspecified,
+    val darkTheme: Boolean? = null,
 )
 
 /**

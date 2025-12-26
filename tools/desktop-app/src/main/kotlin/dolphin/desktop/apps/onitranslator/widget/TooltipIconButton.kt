@@ -21,8 +21,8 @@ import androidx.compose.ui.unit.dp
 fun TooltipIconButton(
     icon: ImageVector,
     tooltip: String,
-    onClick: () -> Unit,
     enabled: Boolean = true,
+    onClick: () -> Unit,
 ) {
     TooltipBox(
         positionProvider = TooltipDefaults.rememberTooltipPositionProvider(TooltipAnchorPosition.Below),

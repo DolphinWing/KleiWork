@@ -5,6 +5,7 @@ import androidx.compose.animation.expandVertically
 import androidx.compose.animation.shrinkVertically
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.background
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -15,22 +16,27 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
@@ -56,13 +62,16 @@ fun OniTranslatorApp(
     onEvent: (AppEvent) -> Unit,
     onEditorConvert: (String) -> String = { it },
 ) {
-    OniTranslatorTheme {
+    val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
+    val isDark = state.uiState.darkTheme ?: isSystemInDarkTheme()
+
+    OniTranslatorTheme(darkTheme = isDark) {
         val snackbarHostState = remember { SnackbarHostState() }
 
-        Box(modifier = Modifier.fillMaxSize()) {
+        Box(modifier = Modifier.fillMaxSize().nestedScroll(scrollBehavior.nestedScrollConnection)) {
             Scaffold(
                 topBar = {
-                    OniTranslatorTopBar(state = state, onEvent = onEvent)
+                    OniTranslatorTopBar(state = state, onEvent = onEvent, scrollBehavior = scrollBehavior)
                 },
                 bottomBar = {
                     OniTranslatorBottomBar(state = state)
@@ -78,19 +87,11 @@ fun OniTranslatorApp(
                         enter = expandVertically(),
                         exit = shrinkVertically()
                     ) {
-                        Row(
+                        SearchTypeRow(
+                            selected = state.uiState.searchState.type,
                             modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 4.dp),
-                            horizontalArrangement = Arrangement.spacedBy(8.dp)
-                        ) {
-                            SearchType.entries.forEach { type ->
-                                FilterChip(
-                                    selected = state.uiState.searchState.type == type,
-                                    onClick = {
-                                        onEvent(AppEvent.Search.TextChange(state.uiState.searchState.text, type))
-                                    },
-                                    label = { Text(type.name) }
-                                )
-                            }
+                        ) { searchType ->
+                            onEvent(AppEvent.Search.TextChange(state.uiState.searchState.text, searchType))
                         }
                     }
                     Row(modifier = Modifier.fillMaxSize()) {
@@ -99,7 +100,10 @@ fun OniTranslatorApp(
                             onEvent = onEvent,
                             modifier = Modifier.weight(0.4f),
                         )
-                        VerticalDivider(modifier = Modifier.fillMaxHeight().width(1.dp))
+                        VerticalDivider(
+                            modifier = Modifier.fillMaxHeight().width(1.dp),
+                            color = MaterialTheme.colorScheme.outline
+                        )
                         EditorPane(
                             entry = state.uiState.editorData,
                             modifier = Modifier.weight(0.6f),

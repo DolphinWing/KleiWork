@@ -39,6 +39,7 @@
 
     <!-- Tooltips -->
     <string name="tooltip_copy_this_text">複製此文字</string>
+    <string name="tooltip_theme_toggle">切換主題</string>
     <string name="tooltip_show_link">顯示連結</string>
     <string name="tooltip_use_this_text">使用此文字</string>
 

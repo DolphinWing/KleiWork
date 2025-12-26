@@ -12,6 +12,7 @@ object Incs {
     const val KEY_WINDOW_POS_Y = "windowPosY"
     const val KEY_WINDOW_WIDTH = "windowWidth"
     const val KEY_WINDOW_HEIGHT = "windowHeight"
+    const val KEY_DARK_THEME = "darkTheme"
 }
 
 /**

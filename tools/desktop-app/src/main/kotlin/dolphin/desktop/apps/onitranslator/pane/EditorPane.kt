@@ -1,8 +1,10 @@
 package dolphin.desktop.apps.onitranslator.pane
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -17,7 +19,6 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.ContentCopy
 import androidx.compose.material.icons.rounded.ContentPaste
-import androidx.compose.material.icons.rounded.EditOff
 import androidx.compose.material.icons.rounded.Link
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -28,6 +29,7 @@ import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -45,6 +47,7 @@ import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.button_apply
 import dolphin.desktop.apps.onitranslator.generated.resources.button_cancel
 import dolphin.desktop.apps.onitranslator.generated.resources.label_translated_text
+import dolphin.desktop.apps.onitranslator.generated.resources.nisbet_ponder
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_this_text
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_show_link
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_use_this_text
@@ -53,6 +56,7 @@ import dolphin.desktop.apps.onitranslator.model.EntryTagType
 import dolphin.desktop.apps.onitranslator.model.WordEntry
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.TooltipIconButton
+import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 
 @Composable
@@ -63,16 +67,12 @@ fun EditorPane(
     onConvert: (String) -> String = { it },
 ) {
     if (entry == null) {
-        Column(
-            modifier = modifier.fillMaxSize().padding(16.dp),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Icon(
-                Icons.Rounded.EditOff,
+        Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            Image(
+                painterResource(Res.drawable.nisbet_ponder),
                 contentDescription = null,
-                modifier = Modifier.size(128.dp),
-                tint = MaterialTheme.colorScheme.tertiary.copy(alpha = 0.25f)
+                modifier = Modifier.size(240.dp),
+                alpha = 0.5f
             )
         }
     } else {
@@ -89,7 +89,7 @@ private fun M3EditorPanePreviewEmpty() {
         arrayOf(false, true).forEach { darkTheme ->
             OniTranslatorTheme(darkTheme) {
                 Surface {
-                    EditorPane(entry = null, modifier = Modifier.height(240.dp), onEvent = {})
+                    EditorPane(entry = null, modifier = Modifier.height(320.dp), onEvent = {})
                 }
             }
         }
@@ -175,6 +175,11 @@ private fun EditorSection(
             modifier = Modifier.fillMaxWidth().weight(1f),
             minLines = 5,
             textStyle = MaterialTheme.typography.bodyMedium.copy(fontFamily = FontFamily.Monospace),
+            shape = MaterialTheme.shapes.medium,
+            colors = TextFieldDefaults.colors(
+                focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
+                unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
+            )
         )
 
         Row(modifier = Modifier.fillMaxWidth()) {
@@ -272,7 +277,7 @@ private fun ReferenceView(
     }
 
     Surface(
-        shape = MaterialTheme.shapes.small,
+        shape = MaterialTheme.shapes.medium,
         color = type.containerColor(MaterialTheme.colorScheme),
         modifier = Modifier.fillMaxWidth(),
     ) {
@@ -289,14 +294,16 @@ private fun ReferenceView(
                 TooltipIconButton(
                     icon = Icons.Rounded.ContentCopy,
                     tooltip = stringResource(Res.string.tooltip_copy_this_text),
-                    onClick = { listener.invoke("") },
-                )
+                ) {
+                    listener.invoke("")
+                }
                 if (links.count() > 0) {
                     TooltipIconButton(
                         icon = Icons.Rounded.Link,
                         tooltip = stringResource(Res.string.tooltip_show_link),
-                        onClick = { linkSelector = !linkSelector }
-                    )
+                    ) {
+                        linkSelector = !linkSelector
+                    }
                 }
             }
             onReplace?.let { listener ->
