@@ -115,17 +115,19 @@ fun ConfigPane(
             } else null
         )
 
+        Spacer(Modifier.height(8.dp))
+
         // Action buttons
         Row(horizontalArrangement = Arrangement.End, modifier = Modifier.fillMaxWidth()) {
             TextButton(onClick = onCancel) {
                 Icon(Icons.Rounded.Close, contentDescription = null)
                 Text(stringResource(Res.string.button_cancel))
             }
-            Spacer(Modifier.width(8.dp))
-            Button(onClick = { onApply(configs) }) {
-                Icon(Icons.Rounded.Check, contentDescription = null)
-                Text(stringResource(Res.string.button_save))
-            }
+//            Spacer(Modifier.width(8.dp))
+//            Button(onClick = { onApply(configs) }) {
+//                Icon(Icons.Rounded.Check, contentDescription = null)
+//                Text(stringResource(Res.string.button_save))
+//            }
         }
     }
 }
@@ -133,8 +135,8 @@ fun ConfigPane(
 @Composable
 internal fun ConfigDialogContent(
     configs: Configs,
-    onConfigChange: ((configs: Configs) -> Unit)? = null,
-    onConfigSaved: (Configs) -> Unit,
+    onConfigChange: (configs: Configs) -> Unit = {},
+//    onConfigSaved: (Configs) -> Unit,
     onDismissRequest: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -146,7 +148,7 @@ internal fun ConfigDialogContent(
         ConfigPane(
             configs = configs,
             onConfigChange = onConfigChange,
-            onApply = onConfigSaved,
+//            onApply = onConfigSaved,
             onCancel = onDismissRequest,
         )
     }

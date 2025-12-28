@@ -148,7 +148,7 @@ private fun M3DialogHost(state: AppState, onEvent: (AppEvent) -> Unit) {
                 ConfigDialogContent(
                     configs = state.configs,
                     onConfigChange = { onEvent(AppEvent.Config.Change(it)) },
-                    onConfigSaved = { onEvent(AppEvent.Config.Saved(it)) },
+//                    onConfigSaved = { onEvent(AppEvent.Config.Saved(it)) },
                     onDismissRequest = { onEvent(AppEvent.Ui.DismissDialog) },
                 )
             }
