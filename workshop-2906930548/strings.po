@@ -53248,7 +53248,7 @@ msgstr "(Ni) 熔融鎳是一種被加熱成<link=\"ELEMENTSLIQUID\">液態</link
 #. STRINGS.ELEMENTS.MOLTENNICKEL.NAME
 msgctxt "STRINGS.ELEMENTS.MOLTENNICKEL.NAME"
 msgid "<link=\"MOLTENNICKEL\">Molten Nickel</link>"
-msgstr "<link=\"MOLTENNICKEL\">熔融鎳</link>"
+msgstr "<link=\"MOLTENNICKEL\">鎳</link>"
 
 #. STRINGS.ELEMENTS.MOLTENNIOBIUM.DESC
 msgctxt "STRINGS.ELEMENTS.MOLTENNIOBIUM.DESC"
@@ -53313,12 +53313,12 @@ msgstr "<link=\"MOLTENTUNGSTEN\">鎢</link>"
 #. STRINGS.ELEMENTS.MOLTENTUNGSTENDISELENIDE.DESC
 msgctxt "STRINGS.ELEMENTS.MOLTENTUNGSTENDISELENIDE.DESC"
 msgid "(WSe<sub>2</sub>) Tungsten Diselenide is an inorganic <link=\"RAWMETAL\">Metal</link> compound heated into a <link=\"ELEMENTSLIQUID\">Liquid</link> state."
-msgstr "(WSe<sub>2</sub>) 鎢二硒化物是一種無機<link=\"RAWMETAL\">金屬</link>化合物，加熱變成<link=\"ELEMENTSLIQUID\">液體</link>狀態。"
+msgstr "(WSe<sub>2</sub>) 二硒化鎢是一種無機<link=\"RAWMETAL\">金屬</link>化合物，加熱變成<link=\"ELEMENTSLIQUID\">液體</link>狀態。"
 
 #. STRINGS.ELEMENTS.MOLTENTUNGSTENDISELENIDE.NAME
 msgctxt "STRINGS.ELEMENTS.MOLTENTUNGSTENDISELENIDE.NAME"
 msgid "<link=\"MOLTENTUNGSTENDISELENIDE\">Tungsten Diselenide</link>"
-msgstr "<link=\"MOLTENTUNGSTENDISELENIDE\">鎢二硒化物</link>"
+msgstr "<link=\"MOLTENTUNGSTENDISELENIDE\">二硒化鎢</link>"
 
 #. STRINGS.ELEMENTS.MOLTENURANIUM.DESC
 msgctxt "STRINGS.ELEMENTS.MOLTENURANIUM.DESC"
@@ -53343,7 +53343,7 @@ msgstr "<link=\"MUD\">泥漿</link>"
 #. STRINGS.ELEMENTS.NAPHTHA.DESC
 msgctxt "STRINGS.ELEMENTS.NAPHTHA.DESC"
 msgid "Naphtha a distilled hydrocarbon mixture produced from the burning of <link=\"POLYPROPYLENE\">Plastic</link>."
-msgstr "石腦油是由燃燒<link=\"POLYPROPYLENE\">塑膠</link>分離出來的氣體混合物。"
+msgstr "石腦油是由燃燒<link=\"POLYPROPYLENE\">塑膠</link>後所產生的碳氫化合物混合液。"
 
 #. STRINGS.ELEMENTS.NAPHTHA.NAME
 msgctxt "STRINGS.ELEMENTS.NAPHTHA.NAME"
@@ -53423,7 +53423,7 @@ msgstr "<link=\"NIOBIUMGAS\">鈮</link>"
 #. STRINGS.ELEMENTS.NUCLEARWASTE.DESC
 msgctxt "STRINGS.ELEMENTS.NUCLEARWASTE.DESC"
 msgid "Highly toxic liquid full of <link=\"RADIATION\">Radioactive Contaminants</link> which emit <link=\"RADIATION\">Radiation</link> that can be absorbed by <link=\"HIGHENERGYPARTICLESPAWNER\">Radbolt Generators</link>."
-msgstr "高度有害且充滿<link=\"RADIATION\">輻射汙染</link>的液體，會釋放<link=\"RADIATION\">輻射</link>，可以使用<link=\"HIGHENERGYPARTICLESPAWNER\">輻射粒子產生器</link>收集並產生輻射粒子。"
+msgstr "充滿<link=\"RADIATION\">放射性污染物</link>的劇毒液體，會釋放可供<link=\"HIGHENERGYPARTICLESPAWNER\">輻射粒子產生器</link>吸收的<link=\"RADIATION\">輻射</link>。"
 
 #. STRINGS.ELEMENTS.NUCLEARWASTE.NAME
 msgctxt "STRINGS.ELEMENTS.NUCLEARWASTE.NAME"
@@ -53443,7 +53443,7 @@ msgstr "<link=\"OBSIDIAN\">黑曜石</link>"
 #. STRINGS.ELEMENTS.OXYGEN.DESC
 msgctxt "STRINGS.ELEMENTS.OXYGEN.DESC"
 msgid "(O<sub>2</sub>) Oxygen is an atomically lightweight and breathable <link=\"ELEMENTSGAS\">Gas</link>, necessary for sustaining life.\n\nIt tends to rise above other gases."
-msgstr "(O<sub>2</sub>) 氧是一種原子量輕與可呼吸的<link=\"ELEMENTSGAS\">氣體</link>，是維持生命所必需。\n\n它通常比其它的氣體輕。"
+msgstr "(O<sub>2</sub>) 氧氣是一種原子量輕且可供呼吸的<link=\"ELEMENTSGAS\">氣體</link>，是維持生命所必需。\n\n它傾向於飄升至其他氣體上方。"
 
 #. STRINGS.ELEMENTS.OXYGEN.NAME
 msgctxt "STRINGS.ELEMENTS.OXYGEN.NAME"
@@ -53493,7 +53493,7 @@ msgstr "(PO<sup>3-</sup><sub>4</sub>) 含高濃度磷酸鹽岩的沉積岩結核
 #. STRINGS.ELEMENTS.PHOSPHATENODULES.NAME
 msgctxt "STRINGS.ELEMENTS.PHOSPHATENODULES.NAME"
 msgid "<link=\"PHOSPHATENODULES\">Phosphate Nodules</link>"
-msgstr "<link=\"PHOSPHATENODULES\">磷酸鹽</link>"
+msgstr "<link=\"PHOSPHATENODULES\">磷酸鹽結核</link>"
 
 #. STRINGS.ELEMENTS.PHOSPHORITE.DESC
 msgctxt "STRINGS.ELEMENTS.PHOSPHORITE.DESC"
@@ -53518,7 +53518,7 @@ msgstr "<link=\"PHOSPHORUS\">精煉磷</link>"
 #. STRINGS.ELEMENTS.PHOSPHORUSGAS.DESC
 msgctxt "STRINGS.ELEMENTS.PHOSPHORUSGAS.DESC"
 msgid "(P) Phosphorus Gas is the <link=\"ELEMENTSGAS\">Gaseous</link> state of <link=\"PHOSPHORUS\">Refined Phosphorus</link>."
-msgstr "(P) 磷是一種處於<link=\"ELEMENTSGAS\">氣體</link>狀態的<link=\"PHOSPHORUS\">精煉磷</link>。"
+msgstr "(P) 氣態磷是一種處於<link=\"ELEMENTSGAS\">氣體</link>狀態的<link=\"PHOSPHORUS\">精煉磷</link>。"
 
 #. STRINGS.ELEMENTS.PHOSPHORUSGAS.NAME
 msgctxt "STRINGS.ELEMENTS.PHOSPHORUSGAS.NAME"
@@ -53553,12 +53553,12 @@ msgstr "<link=\"POLYPROPYLENE\">塑膠</link>"
 #. STRINGS.ELEMENTS.PONDSCUM.DESC
 msgctxt "STRINGS.ELEMENTS.PONDSCUM.DESC"
 msgid "Pondscum is a soft, naturally occurring composite of biological nutrients.\n\nIt may be processed into <link=\"FERTILIZER\">Fertilizer</link> and aids in the growth of certain <link=\"PLANTS\">Plants</link>."
-msgstr "綠藻是一種軟的，天然的有機營養物複合物。\n\n它可以被加工成<link=\"FERTILIZER\">肥料</link>，幫助<link=\"PLANTS\">植物</link>生長。"
+msgstr "池渣是一種柔軟、天然生成的生物營養混合體。\n\n它可以被加工成<link=\"FERTILIZER\">肥料</link>，有助於特定<link=\"PLANTS\">植物</link>生長。"
 
 #. STRINGS.ELEMENTS.PONDSCUM.NAME
 msgctxt "STRINGS.ELEMENTS.PONDSCUM.NAME"
 msgid "<link=\"PONDSCUM\">Pondscum</link>"
-msgstr "<link=\"PONDSCUM\">綠藻</link>"
+msgstr "<link=\"PONDSCUM\">池渣</link>"
 
 #. STRINGS.ELEMENTS.PROPANE.DESC
 msgctxt "STRINGS.ELEMENTS.PROPANE.DESC"
@@ -53578,7 +53578,7 @@ msgstr "輻射吸收係數：{0}\n輻射量/1000 公斤：{1}"
 #. STRINGS.ELEMENTS.RADIUM.DESC
 msgctxt "STRINGS.ELEMENTS.RADIUM.DESC"
 msgid "(Ra) Radium is a <link=\"LIGHT\">Light</link> emitting radioactive substance.\n\nIt is useful as a <link=\"POWER\">Power</link> source."
-msgstr "(Ra) 鐳是一種<link=\"LIGHT\">發光</link>放射性物質。\n\n它適合用來<link=\"POWER\">發電</link>。"
+msgstr "(Ra) 鐳是一種會<link=\"LIGHT\">發光</link>的放射性物質。\n\n它適合作為<link=\"POWER\">電力</link>來源。"
 
 #. STRINGS.ELEMENTS.RADIUM.NAME
 msgctxt "STRINGS.ELEMENTS.RADIUM.NAME"
@@ -53608,7 +53608,7 @@ msgstr "<link=\"REFINEDLIPID\">生質柴油</link>"
 #. STRINGS.ELEMENTS.REGOLITH.DESC
 msgctxt "STRINGS.ELEMENTS.REGOLITH.DESC"
 msgid "Regolith is a sandy substance composed of the various particles that collect atop terrestrial objects.\n\nIt is useful as a <link=\"FILTER\">Filtration Medium</link>."
-msgstr "表土是多種顆粒的混合物，可在星球表面獲得。\n\n它可當成<link=\"FILTER\">過濾介質</link>。"
+msgstr "表土是一種沙狀物質，由累積在天體表面的各種微粒組成。\n\n它適合用作<link=\"FILTER\">過濾介質</link>。"
 
 #. STRINGS.ELEMENTS.REGOLITH.NAME
 msgctxt "STRINGS.ELEMENTS.REGOLITH.NAME"
@@ -53658,7 +53658,7 @@ msgstr "<link=\"SALT\">鹽</link>"
 #. STRINGS.ELEMENTS.SALTGAS.DESC
 msgctxt "STRINGS.ELEMENTS.SALTGAS.DESC"
 msgid "(NaCl) Salt Gas is an edible chemical compound that has been superheated into a <link=\"ELEMENTSGAS\">Gaseous</link> state."
-msgstr "(NaCl) 氣態鹽是一種可食用的化合物，被過度加熱變成<link=\"ELEMENTSGAS\">氣體</link>狀態。"
+msgstr "(NaCl) 鹽氣是一種可食用的化合物，已被加熱至極高溫的<link=\"ELEMENTSGAS\">氣體</link>狀態。"
 
 #. STRINGS.ELEMENTS.SALTGAS.NAME
 msgctxt "STRINGS.ELEMENTS.SALTGAS.NAME"
@@ -53678,7 +53678,7 @@ msgstr "<link=\"SALTWATER\">鹽水</link>"
 #. STRINGS.ELEMENTS.SAND.DESC
 msgctxt "STRINGS.ELEMENTS.SAND.DESC"
 msgid "Sand is a composite of granular rock.\n\nIt is useful as a <link=\"FILTER\">Filtration Medium</link>."
-msgstr "沙子是顆粒狀岩石的混合物\n\n它是一種很好用的<link=\"FILTER\">過濾介質</link>。"
+msgstr "沙子是顆粒狀岩石的組成物。\n\n它適合用作<link=\"FILTER\">過濾介質</link>。"
 
 #. STRINGS.ELEMENTS.SAND.NAME
 msgctxt "STRINGS.ELEMENTS.SAND.NAME"
@@ -53693,17 +53693,17 @@ msgstr "<link=\"SANDCEMENT\">水泥沙</link>"
 #. STRINGS.ELEMENTS.SANDSTONE.DESC
 msgctxt "STRINGS.ELEMENTS.SANDSTONE.DESC"
 msgid "Sandstone is a composite of relatively soft sedimentary rock.\n\nIt is useful as a <b>Construction Material</b>."
-msgstr "沙岩是一種相對較軟的沉積岩。\n\n它是有用的<b>建築材料</b>。"
+msgstr "砂岩是一種質地相對較軟的沉積岩複合物。\n\n它適合作為<b>建築材料</b>。"
 
 #. STRINGS.ELEMENTS.SANDSTONE.NAME
 msgctxt "STRINGS.ELEMENTS.SANDSTONE.NAME"
 msgid "<link=\"SANDSTONE\">Sandstone</link>"
-msgstr "<link=\"SANDSTONE\">沙岩</link>"
+msgstr "<link=\"SANDSTONE\">砂岩</link>"
 
 #. STRINGS.ELEMENTS.SEDIMENTARYROCK.DESC
 msgctxt "STRINGS.ELEMENTS.SEDIMENTARYROCK.DESC"
 msgid "Sedimentary Rock is a hardened composite of sediment layers.\n\nIt is useful as a <b>Construction Material</b>."
-msgstr "沉積岩是一種沉積層的堅硬合成物。\n\n它是有用的<b>建築材料</b>。"
+msgstr "沉積岩是由沉積層硬化而成的複合物。\n\n它適合作為<b>建築材料</b>。"
 
 #. STRINGS.ELEMENTS.SEDIMENTARYROCK.NAME
 msgctxt "STRINGS.ELEMENTS.SEDIMENTARYROCK.NAME"
@@ -53713,7 +53713,7 @@ msgstr "<link=\"SEDIMENTARYROCK\">沉積岩</link>"
 #. STRINGS.ELEMENTS.SHALE.DESC
 msgctxt "STRINGS.ELEMENTS.SHALE.DESC"
 msgid "Shale is a brittle composite of sediment layers.\n\nIt is useful as a <b>Construction Material</b>."
-msgstr "頁岩是一種由沉積岩層組成的脆性體。\n\n它可用作<b>建造材料</b>。"
+msgstr "頁岩是一種由沉積岩層組成的脆性體。\n\n它適合作為<b>建造材料</b>。"
 
 #. STRINGS.ELEMENTS.SHALE.NAME
 msgctxt "STRINGS.ELEMENTS.SHALE.NAME"
@@ -53778,7 +53778,7 @@ msgstr "<link=\"SOLIDCRUDEOIL\">原油</link>"
 #. STRINGS.ELEMENTS.SOLIDETHANOL.DESC
 msgctxt "STRINGS.ELEMENTS.SOLIDETHANOL.DESC"
 msgid "(C<sub>2</sub>H<sub>6</sub>O) Solid Ethanol is an advanced chemical compound.\n\nIt can be used as a highly effective fuel source when burned."
-msgstr "(C<sub>2</sub>H<sub>6</sub>O) 乙醇是一種高級化合物。\n\n它可以用來作為一種高效率的燃料。"
+msgstr "(C<sub>2</sub>H<sub>6</sub>O) 固態乙醇是一種高階化合物。\n\n燃燒時可作為一種極為高效的燃料來源。"
 
 #. STRINGS.ELEMENTS.SOLIDETHANOL.NAME
 msgctxt "STRINGS.ELEMENTS.SOLIDETHANOL.NAME"
@@ -53788,7 +53788,7 @@ msgstr "<link=\"SOLIDETHANOL\">乙醇</link>"
 #. STRINGS.ELEMENTS.SOLIDHYDROGEN.DESC
 msgctxt "STRINGS.ELEMENTS.SOLIDHYDROGEN.DESC"
 msgid "(H) Solid Hydrogen is the universe's most common element in a <link=\"ELEMENTSSOLID\">Solid</link> state."
-msgstr "(H) 氫是宇宙中最常見的元素處於<link=\"ELEMENTSSOLID\">固體</link>狀態。"
+msgstr "(H) 固態氫是處於<link=\"ELEMENTSSOLID\">固體</link>狀態下的宇宙最常見元素。"
 
 #. STRINGS.ELEMENTS.SOLIDHYDROGEN.NAME
 msgctxt "STRINGS.ELEMENTS.SOLIDHYDROGEN.NAME"
@@ -53798,7 +53798,7 @@ msgstr "<link=\"SOLIDHYDROGEN\">氫</link>"
 #. STRINGS.ELEMENTS.SOLIDMERCURY.DESC
 msgctxt "STRINGS.ELEMENTS.SOLIDMERCURY.DESC"
 msgid "(Hg) Mercury is a rare <link=\"RAWMETAL\">Metal</link> in a <link=\"ELEMENTSSOLID\">Solid</link> state."
-msgstr "(Hg) 汞是一種稀有<link=\"RAWMETAL\">金屬</link>處於<link=\"ELEMENTSSOLID\">固體</link>狀態。"
+msgstr "(Hg) 固態汞是一種處於<link=\"ELEMENTSSOLID\">固體</link>狀態的稀有<link=\"RAWMETAL\">金屬</link>。"
 
 #. STRINGS.ELEMENTS.SOLIDMERCURY.NAME
 msgctxt "STRINGS.ELEMENTS.SOLIDMERCURY.NAME"
@@ -53833,12 +53833,12 @@ msgstr "充滿<link=\"RADIATION\">輻射汙染</link>的劇毒固體。"
 #. STRINGS.ELEMENTS.SOLIDNUCLEARWASTE.NAME
 msgctxt "STRINGS.ELEMENTS.SOLIDNUCLEARWASTE.NAME"
 msgid "<link=\"SOLIDNUCLEARWASTE\">Solid Nuclear Waste</link>"
-msgstr "<link=\"SOLIDNUCLEARWASTE\">固態核廢料</link>"
+msgstr "<link=\"SOLIDNUCLEARWASTE\">核廢料</link>"
 
 #. STRINGS.ELEMENTS.SOLIDOXYGEN.DESC
 msgctxt "STRINGS.ELEMENTS.SOLIDOXYGEN.DESC"
 msgid "(O<sub>2</sub>) Solid Oxygen is a breathable element in a <link=\"ELEMENTSSOLID\">Solid</link> state."
-msgstr "(O<sub>2</sub>) 氧氣是一種可呼吸的元素，處於<link=\"ELEMENTSSOLID\">固體</link>狀態。"
+msgstr "(O<sub>2</sub>) 固態氧是一種可呼吸的元素，處於<link=\"ELEMENTSSOLID\">固體</link>狀態。"
 
 #. STRINGS.ELEMENTS.SOLIDOXYGEN.NAME
 msgctxt "STRINGS.ELEMENTS.SOLIDOXYGEN.NAME"
@@ -53848,7 +53848,7 @@ msgstr "<link=\"SOLIDOXYGEN\">氧</link>"
 #. STRINGS.ELEMENTS.SOLIDPETROLEUM.DESC
 msgctxt "STRINGS.ELEMENTS.SOLIDPETROLEUM.DESC"
 msgid "Petroleum is a <link=\"POWER\">Power</link> source.\n\nThis selection is in a <link=\"ELEMENTSSOLID\">Solid</link> state."
-msgstr "石油是一種<link=\"POWER\">電力</link>來源\n\n處於<link=\"ELEMENTSSOLID\">固體</link>狀態。"
+msgstr "石油是一種<link=\"POWER\">電力</link>來源\n\n目前處於<link=\"ELEMENTSSOLID\">固體</link>狀態。"
 
 #. STRINGS.ELEMENTS.SOLIDPETROLEUM.NAME
 msgctxt "STRINGS.ELEMENTS.SOLIDPETROLEUM.NAME"
@@ -53858,7 +53858,7 @@ msgstr "<link=\"SOLIDPETROLEUM\">石油</link>"
 #. STRINGS.ELEMENTS.SOLIDPROPANE.DESC
 msgctxt "STRINGS.ELEMENTS.SOLIDPROPANE.DESC"
 msgid "(C<sub>3</sub>H<sub>8</sub>) Solid Propane is a natural gas in a <link=\"ELEMENTSSOLID\">Solid</link> state."
-msgstr "(C<sub>3</sub>H<sub>8</sub>) 丙烷是一種天然氣，處於<link=\"ELEMENTSSOLID\">固體</link>狀態。"
+msgstr "(C<sub>3</sub>H<sub>8</sub>) 固態丙烷是處於<link=\"ELEMENTSSOLID\">固體</link>狀態下的天然氣體。"
 
 #. STRINGS.ELEMENTS.SOLIDPROPANE.NAME
 msgctxt "STRINGS.ELEMENTS.SOLIDPROPANE.NAME"
@@ -53878,7 +53878,7 @@ msgstr "<link=\"SOLIDRESIN\">原生膠</link>"
 #. STRINGS.ELEMENTS.SOLIDSUPERCOOLANT.DESC
 msgctxt "STRINGS.ELEMENTS.SOLIDSUPERCOOLANT.DESC"
 msgid "Super Coolant is an industrial-grade <link=\"FULLERENE\">Fullerene</link> coolant.\n\nThis selection is in a <link=\"ELEMENTSSOLID\">Solid</link> state."
-msgstr "超級冷卻液是一種工業級的<link=\"FULLERENE\">富勒烯</link>冷卻液。\n\n處於固體<link=\"ELEMENTSSOLID\">固體</link>狀態。"
+msgstr "超級冷卻液是一種工業級的<link=\"FULLERENE\">富勒烯</link>冷卻液。\n\n目前處於<link=\"ELEMENTSSOLID\">固體</link>狀態。"
 
 #. STRINGS.ELEMENTS.SOLIDSUPERCOOLANT.NAME
 msgctxt "STRINGS.ELEMENTS.SOLIDSUPERCOOLANT.NAME"
@@ -53888,7 +53888,7 @@ msgstr "<link=\"SOLIDSUPERCOOLANT\">超級冷卻液</link>"
 #. STRINGS.ELEMENTS.SOLIDSYNGAS.DESC
 msgctxt "STRINGS.ELEMENTS.SOLIDSYNGAS.DESC"
 msgid "Solid Synthesis Gas is an artificial, unbreathable <link=\"ELEMENTSSOLID\">Solid</link>.\n\nIt can be converted into an efficient fuel."
-msgstr "合成氣是一種人工製造不能呼吸的<link=\"ELEMENTSGAS\">氣體</link>。\n\n它可以轉化成高效燃料。"
+msgstr "固態合成氣是一種人工製造、不可呼吸的<link=\"ELEMENTSSOLID\">氣體</link>。\n\n它可以轉化為高效燃料。"
 
 #. STRINGS.ELEMENTS.SOLIDSYNGAS.NAME
 msgctxt "STRINGS.ELEMENTS.SOLIDSYNGAS.NAME"
@@ -53973,7 +53973,7 @@ msgstr "<link=\"STEEL\">鋼</link>"
 #. STRINGS.ELEMENTS.STEELGAS.DESC
 msgctxt "STRINGS.ELEMENTS.STEELGAS.DESC"
 msgid "Steel Gas is a superheated <link=\"RAWMETAL\">Metal</link> <link=\"ELEMENTSGAS\">Gas</link> composed of iron and carbon."
-msgstr "鋼是一種高溫加熱的<link=\"RAWMETAL\">金屬</link><link=\"ELEMENTSGAS\">氣體</link>，由鐵和碳組成的合成物。"
+msgstr "鋼氣是一種高溫加熱的<link=\"RAWMETAL\">金屬</link><link=\"ELEMENTSGAS\">氣體</link>，由鐵和碳組成的合成物。"
 
 #. STRINGS.ELEMENTS.STEELGAS.NAME
 msgctxt "STRINGS.ELEMENTS.STEELGAS.NAME"
@@ -54043,7 +54043,7 @@ msgstr "<link=\"SUPERCOOLANTGAS\">超級冷卻液</link>"
 #. STRINGS.ELEMENTS.SUPERINSULATOR.DESC
 msgctxt "STRINGS.ELEMENTS.SUPERINSULATOR.DESC"
 msgid "Insulite reduces <link=\"HEAT\">Heat Transfer</link> and is composed of recrystallized <link=\"KATAIRITE\">Abyssalite</link>."
-msgstr "隔熱質減少<link=\"HEAT\">熱量傳遞</link>並且是<link=\"KATAIRITE\">深淵水晶</link>的再結晶複合物。"
+msgstr "隔熱質能減少<link=\"HEAT\">熱量傳遞</link>，是由再結晶的<link=\"KATAIRITE\">深淵水晶</link>所組成。"
 
 #. STRINGS.ELEMENTS.SUPERINSULATOR.NAME
 msgctxt "STRINGS.ELEMENTS.SUPERINSULATOR.NAME"
@@ -54138,7 +54138,7 @@ msgstr "<link=\"TUNGSTENDISELENIDE\">二硒化鎢</link>"
 #. STRINGS.ELEMENTS.TUNGSTENDISELENIDEGAS.DESC
 msgctxt "STRINGS.ELEMENTS.TUNGSTENDISELENIDEGAS.DESC"
 msgid "(WSe<sub>2</sub>) Tungsten Diselenide Gasis a superheated <link=\"RAWMETAL\">Metal</link> compound in a <link=\"ELEMENTSGAS\">Gaseous</link> state."
-msgstr "(WSe<sub>2</sub>) 二硒化鎢一種高溫的<link=\"RAWMETAL\">金屬</link>化合物，處於<link=\"ELEMENTSGAS\">氣體</link>狀態。"
+msgstr "(WSe<sub>2</sub>) 二硒化鎢氣是一種已被加熱至極高溫、處於<link=\"ELEMENTSGAS\">氣體</link>狀態的<link=\"RAWMETAL\">金屬</link>化合物。"
 
 #. STRINGS.ELEMENTS.TUNGSTENDISELENIDEGAS.NAME
 msgctxt "STRINGS.ELEMENTS.TUNGSTENDISELENIDEGAS.NAME"
@@ -54198,12 +54198,12 @@ msgstr "<link=\"VISCOGEL\">凝膠</link>"
 #. STRINGS.ELEMENTS.VOID.DESC
 msgctxt "STRINGS.ELEMENTS.VOID.DESC"
 msgid "Cold, infinite nothingness."
-msgstr "寒冷，一片虛無。"
+msgstr "寒冷而無窮的虛無。"
 
 #. STRINGS.ELEMENTS.VOID.NAME
 msgctxt "STRINGS.ELEMENTS.VOID.NAME"
 msgid "<link=\"VOID\">Void</link>"
-msgstr "<link=\"VOID\">空</link>"
+msgstr "<link=\"VOID\">虛空</link>"
 
 #. STRINGS.ELEMENTS.WATER.DESC
 msgctxt "STRINGS.ELEMENTS.WATER.DESC"
@@ -54238,7 +54238,7 @@ msgstr "<link=\"WOOD\">木材</link>"
 #. STRINGS.ELEMENTS.YELLOWCAKE.DESC
 msgctxt "STRINGS.ELEMENTS.YELLOWCAKE.DESC"
 msgid "(U<sub>3</sub>O<sub>8</sub>) Yellowcake is a byproduct of <link=\"URANIUM\">Uranium</link> mining.\n\nIt is useful in preparing fuel for <link=\"NUCLEARREACTOR\">Research Reactors</link>.\n\nNote: Do not eat."
-msgstr "(U<sub>3</sub>O<sub>8</sub>) 黃餅是挖掘<link=\"URANIUM\">鈾礦</link>的副產品。\n\n它是<link=\"NUCLEARREACTOR\">研究反應爐</link>的燃料。\n\n注意：別吃它。"
+msgstr "(U<sub>3</sub>O<sub>8</sub>) 黃餅是挖掘<link=\"URANIUM\">鈾礦</link>的副產品。\n\n它適合用於製備<link=\"NUCLEARREACTOR\">研究反應爐</link>的燃料。\n\n注意：請勿食用。"
 
 #. STRINGS.ELEMENTS.YELLOWCAKE.NAME
 msgctxt "STRINGS.ELEMENTS.YELLOWCAKE.NAME"
@@ -54268,7 +54268,7 @@ msgstr "提供<style=\"oxygen\">氧氣</style>讓複製人在水下呼吸。"
 #. STRINGS.EQUIPMENT.PREFABS.AQUA_SUIT.WORN_DESC
 msgctxt "STRINGS.EQUIPMENT.PREFABS.AQUA_SUIT.WORN_DESC"
 msgid "A worn out <link=\"AQUASUIT\">Aqua Suit</link>.\n\nSuits can be repaired at a <link=\"CRAFTINGTABLE\">Crafting Station</link>."
-msgstr "破舊的<link=\"AQUASUIT\">潛水衣</link>。\n\n潛水衣可以在<link=\"CRAFTINGTABLE\">工藝台</link> 修理。"
+msgstr "破舊的<link=\"AQUASUIT\">潛水衣</link>。\n\n潛水衣可以在<link=\"CRAFTINGTABLE\">工藝台</link>修理。"
 
 #. STRINGS.EQUIPMENT.PREFABS.AQUA_SUIT.WORN_NAME
 msgctxt "STRINGS.EQUIPMENT.PREFABS.AQUA_SUIT.WORN_NAME"
@@ -70963,7 +70963,7 @@ msgstr "水域生態"
 #. STRINGS.SUBWORLDS.AQUATIC.UTILITY
 msgctxt "STRINGS.SUBWORLDS.AQUATIC.UTILITY"
 msgid "Initially there is very little solid ground in this biome to establish a temporary base, but once a transportation network can be established to send the <link=\"WATER\">Water</link> of the Aquatic Biome to the rest of the colony, the other elements will be easier to reach.\n\n<link=\"SANDSTONE\">Sandstone</link>, <link=\"MAFICROCK\">Mafic Rock</link>, <link=\"SAND\">Sand</link> and <link=\"SEDIMENTARYROCK\">Sedimentary Rock</link> provide readily available construction materials for setting up elementary infrastructure. The presence of <link=\"OXYROCK\">Oxylite</link> provides invaluable <link=\"OXYGEN\">Oxygen</link> which, through careful planning, should be able to sustain any Duplicants working in the area for a limited amount of time."
-msgstr "這個生態在最初時，有個很小且結實的地方可以建立臨時的基地。不過一旦可以建立運輸系統，就可以將水生態系中的<link=\"WATER\">水</link>送到殖民地的其它地方，且其它元素也會更容易取得。\n\n<link=\"SANDSTONE\">沙岩</link>、<link=\"MAFICROCK\">基岩</link>、<link=\"SAND\">沙子</link>與<link=\"SEDIMENTARYROCK\">沉積岩</link>為建立基礎設施提供現成的材料。<link=\"OXYROCK\">氧石</link>提供無價的<link=\"OXYGEN\">氧氣</link>，藉由詳細的規劃，應該能夠在有限的時間內，維持在這個區域工作的任何複製人生存。"
+msgstr "這個生態在最初時，有個很小且結實的地方可以建立臨時的基地。不過一旦可以建立運輸系統，就可以將水生態系中的<link=\"WATER\">水</link>送到殖民地的其它地方，且其它元素也會更容易取得。\n\n<link=\"SANDSTONE\">砂岩</link>、<link=\"MAFICROCK\">基岩</link>、<link=\"SAND\">沙子</link>與<link=\"SEDIMENTARYROCK\">沉積岩</link>為建立基礎設施提供現成的材料。<link=\"OXYROCK\">氧石</link>提供無價的<link=\"OXYGEN\">氧氣</link>，藉由詳細的規劃，應該能夠在有限的時間內，維持在這個區域工作的任何複製人生存。"
 
 #. STRINGS.SUBWORLDS.BARREN.DESC
 msgctxt "STRINGS.SUBWORLDS.BARREN.DESC"
@@ -71238,17 +71238,17 @@ msgstr "<link=\"RUST\">鐵鏽</link>與<link=\"RUSTDEOXIDIZER\">鐵鏽脫氧機<
 #. STRINGS.SUBWORLDS.SANDSTONE.DESC
 msgctxt "STRINGS.SUBWORLDS.SANDSTONE.DESC"
 msgid "The Sandstone Biome is a temperate oasis with few inherent dangers. It's the perfect spot to get your colony up and running."
-msgstr "沙岩生態系是一個溫和且有點危險的綠洲。是一個殖民地成長與運作的完美地點。"
+msgstr "砂岩生態系是一個溫和且有點危險的綠洲。是一個殖民地成長與運作的完美地點。"
 
 #. STRINGS.SUBWORLDS.SANDSTONE.NAME
 msgctxt "STRINGS.SUBWORLDS.SANDSTONE.NAME"
 msgid "Sandstone Biome"
-msgstr "沙岩生態"
+msgstr "砂岩生態"
 
 #. STRINGS.SUBWORLDS.SANDSTONE.UTILITY
 msgctxt "STRINGS.SUBWORLDS.SANDSTONE.UTILITY"
 msgid "<link=\"OXYROCK\">Oxylite</link> and <link=\"BASICFORAGEPLANTPLANTED\">Buried Muckroot</link> are in sufficient supply to sustain your colony while you gather more resources.\n\n<link=\"DIRT\">Dirt</link>, <link=\"ALGAE\">Algae</link>, <link=\"COPPER\">Copper</link> and, of course, <link=\"SANDSTONE\">Sandstone</link> provide all the materials to get basic colony essentials built.\n\nRandom <link=\"LIGHTBUGSPECIES\">Shine Bugs</link> provide <link=\"MORALE\">Morale</link> boosts for my Duplicants but are not a reliable light source.\n\n<link=\"HATCHSPECIES\">Hatches</link> can be domesticated for food or <link=\"CARBON\">Coal</link>, which will be useful if using a <link=\"GENERATOR\">Coal Generator</link> for power.\n\nAll in all, this biome is the perfect starting spot for my colony to establish a base full of essentials, from which they can then venture out and explore."
-msgstr "<link=\"OXYROCK\">氧石</link>與<link=\"BASICFORAGEPLANTPLANTED\">埋住的塊根</link>供應充足，可在你收集更多資源時維持殖民地所需。\n\n<link=\"DIRT\">泥土</link>、<link=\"ALGAE\">藻類</link>、<link=\"COPPER\">銅</link>，當然還有<link=\"SANDSTONE\">沙岩</link>，提供了建造殖民地所有基本必需品的材料。\n\n隨機出現的<link=\"LIGHTBUGSPECIES\">發光蟲</link>為複製人提供<link=\"MORALE\">士氣</link>加成，但不是可靠的光源。\n\n<link=\"HATCHSPECIES\">哈奇</link>可以馴服作為食物，或生產<link=\"CARBON\">煤炭</link>，這對使用<link=\"GENERATOR\">燃煤發電機</link>供電很有用。\n\n總而言之，這個生態區是一個建立充滿必需品的基地的完美起點，複製人可以從此處出發，冒險探索。"
+msgstr "<link=\"OXYROCK\">氧石</link>與<link=\"BASICFORAGEPLANTPLANTED\">埋住的塊根</link>供應充足，可在你收集更多資源時維持殖民地所需。\n\n<link=\"DIRT\">泥土</link>、<link=\"ALGAE\">藻類</link>、<link=\"COPPER\">銅</link>，當然還有<link=\"SANDSTONE\">砂岩</link>，提供了建造殖民地所有基本必需品的材料。\n\n隨機出現的<link=\"LIGHTBUGSPECIES\">發光蟲</link>為複製人提供<link=\"MORALE\">士氣</link>加成，但不是可靠的光源。\n\n<link=\"HATCHSPECIES\">哈奇</link>可以馴服作為食物，或生產<link=\"CARBON\">煤炭</link>，這對使用<link=\"GENERATOR\">燃煤發電機</link>供電很有用。\n\n總而言之，這個生態區是一個建立充滿必需品的基地的完美起點，複製人可以從此處出發，冒險探索。"
 
 #. STRINGS.SUBWORLDS.SPACE.DESC
 msgctxt "STRINGS.SUBWORLDS.SPACE.DESC"
@@ -71308,7 +71308,7 @@ msgstr "荒地生態"
 #. STRINGS.SUBWORLDS.WASTELAND.UTILITY
 msgctxt "STRINGS.SUBWORLDS.WASTELAND.UTILITY"
 msgid "The prevalance of <link=\"COPPER\">Copper</link>, <link=\"SANDSTONE\">Sandstone</link>, <link=\"IGNEOUSROCK\">Igneous Rock</link> and its <link=\"IRON\">Iron</link>-rich counterpart <link=\"MAFICROCK\">Mafic Rock</link>, make this a fruitful biome to explore for construction material. <link=\"SAND\">Sand</link> is also in abundance here which is useful as a filtering material.\n\nWhile the wildlife is not in abundance in the Wasteland Biome, the <link=\"DIVERGENTBEETLE\">Sweetle</link> and <link=\"DIVERGENTWORM\">Grubgrub</link> make interesting creatures to domesticate as they co-exist with the <link=\"WORMPLANT\">Grubfruit Plants</link> to produce a much higher quality food than the <link=\"WORMPLANT\">Spindly Grubfruit Plant</link> found in the wild. Additionally, the <link=\"SULFUR\">Sulfur</link> found here works both as food for the GrubGrubs and fertilizer for the Grubfruit Plants.\n\nThe abundance of <link=\"OXYGEN\">Oxygen</link> found in the Wasteland Biome makes for a low-risk area to send my Duplicants into to collect useful resources to continue with their construction projects."
-msgstr "大量的<link=\"COPPER\">銅</link>、<link=\"SANDSTONE\">沙岩</link>、<link=\"IGNEOUSROCK\">火成岩</link>與富含<link=\"IRON\">鐵</link>的<link=\"MAFICROCK\">基岩</link>，使這種生態系成為取得建築材料的良好地點。這裡也有豐富的<link=\"SAND\">沙子</link>可用來作為過濾介質。\n\n雖然荒地生態系的野生動植物並不豐富，但<link=\"DIVERGENTBEETLE\">甜素甲蟲</link>與<link=\"DIVERGENTWORM\">蟲果果蟲</link>是可馴化的有趣動物，牠們與<link=\"WORMPLANT\">蟲蜜草</link>形成共生關係，將牠們養在一起就能生產比野生<link=\"WORMPLANT\">蕪弱蟲蜜草</link>品質更好的食物。此外，這裡也能找到<link=\"SULFUR\">硫</link>，同時可作為蟲果果蟲的食物與蟲蜜草的肥料。\n\n荒地生態系有豐富的<link=\"OXYGEN\">氧氣</link>，所以對於我的複製人來說是風險較低的區域，我可以將我的複製人送去收集有用的資源並繼續完成建設計劃。"
+msgstr "大量的<link=\"COPPER\">銅</link>、<link=\"SANDSTONE\">砂岩</link>、<link=\"IGNEOUSROCK\">火成岩</link>與富含<link=\"IRON\">鐵</link>的<link=\"MAFICROCK\">基岩</link>，使這種生態系成為取得建築材料的良好地點。這裡也有豐富的<link=\"SAND\">沙子</link>可用來作為過濾介質。\n\n雖然荒地生態系的野生動植物並不豐富，但<link=\"DIVERGENTBEETLE\">甜素甲蟲</link>與<link=\"DIVERGENTWORM\">蟲果果蟲</link>是可馴化的有趣動物，牠們與<link=\"WORMPLANT\">蟲蜜草</link>形成共生關係，將牠們養在一起就能生產比野生<link=\"WORMPLANT\">蕪弱蟲蜜草</link>品質更好的食物。此外，這裡也能找到<link=\"SULFUR\">硫</link>，同時可作為蟲果果蟲的食物與蟲蜜草的肥料。\n\n荒地生態系有豐富的<link=\"OXYGEN\">氧氣</link>，所以對於我的複製人來說是風險較低的區域，我可以將我的複製人送去收集有用的資源並繼續完成建設計劃。"
 
 #. STRINGS.SUBWORLDS.WETLANDS.DESC
 msgctxt "STRINGS.SUBWORLDS.WETLANDS.DESC"
@@ -88838,7 +88838,7 @@ msgstr "由多層沉積物組成的美麗岩石。"
 #. STRINGS.UI.SPACEARTIFACTS.SANDSTONE.NAME
 msgctxt "STRINGS.UI.SPACEARTIFACTS.SANDSTONE.NAME"
 msgid "Sandstone"
-msgstr "沙岩"
+msgstr "砂岩"
 
 #. STRINGS.UI.SPACEARTIFACTS.SAXOPHONE.ARTIFACT
 msgctxt "STRINGS.UI.SPACEARTIFACTS.SAXOPHONE.ARTIFACT"
@@ -89768,7 +89768,7 @@ msgstr "鹽鹽小行星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SANDYOREFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SANDYOREFIELD.DESC"
 msgid "An asteroid field containing <link=\"SANDSTONE\">Sandstone</link>, <link=\"ALGAE\">Algae</link>, <link=\"CUPRITE\">Copper Ore</link> and <link=\"SAND\">Sand</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片包含<link=\"SANDSTONE\">沙岩</link>、<link=\"ALGAE\">藻類</link>、<link=\"CUPRITE\">銅礦</link>與<link=\"SAND\">沙子</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"SANDSTONE\">砂岩</link>、<link=\"ALGAE\">藻類</link>、<link=\"CUPRITE\">銅礦</link>與<link=\"SAND\">沙子</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SANDYOREFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SANDYOREFIELD.NAME"
@@ -99928,7 +99928,7 @@ msgstr "繆斯冰星"
 #. STRINGS.WORLDS.IDEALLANDINGSITE.DESCRIPTION
 msgctxt "STRINGS.WORLDS.IDEALLANDINGSITE.DESCRIPTION"
 msgid "A sandstone and forest world with significant radiation.\n\n<smallcaps>Irradiated Forest Asteroids have an abundance of metal for the taking if Duplicants can withstand the planetoid's radiation.</smallcaps>"
-msgstr "一個廣布沙岩與森林、並承受著大量輻射影響的世界。\n\n<smallcaps>「受輻森林小行星」蘊藏豐富金屬，只要複製人能承受得住這顆小型行星的輻射，即可開採利用。</smallcaps>"
+msgstr "一個廣布砂岩與森林、並承受著大量輻射影響的世界。\n\n<smallcaps>「受輻森林小行星」蘊藏豐富金屬，只要複製人能承受得住這顆小型行星的輻射，即可開採利用。</smallcaps>"
 
 #. STRINGS.WORLDS.IDEALLANDINGSITE.NAME
 msgctxt "STRINGS.WORLDS.IDEALLANDINGSITE.NAME"
@@ -100353,7 +100353,7 @@ msgstr "輻射沼澤小行星"
 #. STRINGS.WORLDS.TERRAMOONLET.DESCRIPTION
 msgctxt "STRINGS.WORLDS.TERRAMOONLET.DESCRIPTION"
 msgid "A balanced variety of resources on a smaller sandstone world.\n\n<smallcaps>Terrania Asteroids have everything needed to start a colony in a compact area. With a short distance to the surface, inter-world travel can be achieved quickly.</smallcaps>"
-msgstr "一個資源種類均衡的小型沙岩世界。\n\n<smallcaps>「類地小行星」擁有建立殖民地所需的一切資源，且分佈於緊湊的區域。由於地表距離較短，可以快速實現星際旅行。</smallcaps>"
+msgstr "一個資源種類均衡的小型砂岩世界。\n\n<smallcaps>「類地小行星」擁有建立殖民地所需的一切資源，且分佈於緊湊的區域。由於地表距離較短，可以快速實現星際旅行。</smallcaps>"
 
 #. STRINGS.WORLDS.TERRAMOONLET.NAME
 msgctxt "STRINGS.WORLDS.TERRAMOONLET.NAME"

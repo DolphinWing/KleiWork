@@ -23,6 +23,7 @@ import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.Refresh
 import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -84,7 +85,7 @@ fun EntryListPane(
         } else if (list.isEmpty()) {
             Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 TooltipIconButton(
-                    icon = Icons.Rounded.Search,
+                    icon = Icons.Rounded.Refresh,
                     tooltip = stringResource(Res.string.button_refresh),
                 ) {
                     onEvent(AppEvent.File.RefreshSource)
