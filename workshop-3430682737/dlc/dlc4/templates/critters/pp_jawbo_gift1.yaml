@@ -536,329 +536,329 @@ cells:
   location_x: 4
   location_y: -4
 buildings:
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   location_y: 2
   element: Shale
   temperature: 301.432343
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: 2
   element: Shale
   temperature: 301.444214
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: 2
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 1
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 1
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 1
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 1
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: 1
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: 1
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: 2
   element: Shale
   temperature: 301.607239
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 6
   location_y: 2
   element: Shale
   temperature: 301.598419
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 6
   location_y: 1
   element: Shale
   temperature: 301.604553
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: 1
   element: Shale
   temperature: 301.608948
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   location_y: 3
   element: Shale
   temperature: 293.182129
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: 3
   element: Shale
   temperature: 293.182129
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: 3
   element: Shale
   temperature: 293.182129
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 3
   element: Shale
   temperature: 293.182129
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 3
   element: Shale
   temperature: 293.182129
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 3
   element: Shale
   temperature: 293.182129
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: 2
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: 1
   element: Shale
   temperature: 301.355286
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   location_y: 1
   element: Shale
   temperature: 301.433228
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   element: Shale
   temperature: 301.382019
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   element: Shale
   temperature: 301.354034
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   element: Shale
   temperature: 301.358978
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 3
   element: Shale
   temperature: 293.182129
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: 3
   element: Shale
   temperature: 293.181885
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: 3
   element: Shale
   temperature: 293.181885
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: 3
   element: Shale
   temperature: 293.181244
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 6
   location_y: 3
   element: Shale
   temperature: 293.181458
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -5
   location_y: 3
   element: Shale
   temperature: 293.200256
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   element: Shale
   temperature: 301.609192
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 6
   element: Shale
   temperature: 301.783997
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: -1
   element: Shale
   temperature: 301.785645
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: -1
   element: Shale
   temperature: 301.67691
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: -1
   element: Shale
   temperature: 301.670258
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: -1
   element: Shale
   temperature: 301.590149
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -1
   element: Shale
   temperature: 301.507202
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -1
   element: Shale
   temperature: 301.442566
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -1
   element: Shale
   temperature: 301.377472
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: -1
   element: Shale
   temperature: 301.359009
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: -1
   element: Shale
   temperature: 301.352081
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   location_y: -1
   element: Shale
   temperature: 300.0802
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: -2
   element: Shale
   temperature: 301.352203
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: -2
   element: Shale
   temperature: 301.358948
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -2
   element: Shale
   temperature: 301.377502
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -2
   element: Shale
   temperature: 301.442352
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -2
   element: Shale
   temperature: 301.507355
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: -2
   element: Shale
   temperature: 301.590149
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: -2
   element: Shale
   temperature: 301.670197
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: -2
   element: Shale
   temperature: 301.968689
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: -3
   element: Shale
   temperature: 301.358948
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -3
   element: Shale
   temperature: 301.835205
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -3
   element: Shale
   temperature: 301.520844
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -3
   element: Shale
   temperature: 301.659973
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: -3
   element: Shale
   temperature: 301.435577
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: -3
   element: Shale
   temperature: 301.854584
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 2
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 2
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 2
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 2
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: 1
   element: Fossil
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: 2
   element: Fossil

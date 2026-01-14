@@ -294,117 +294,117 @@ cells:
   location_x: 3
   location_y: 3
 buildings:
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: -2
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -2
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -1
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: -1
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -1
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: 1
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 1
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: -1
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: -1
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: 1
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 1
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 1
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 1
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 2
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 2
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 2
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 2
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: 2
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   element: SandStone
   temperature: 293.149994

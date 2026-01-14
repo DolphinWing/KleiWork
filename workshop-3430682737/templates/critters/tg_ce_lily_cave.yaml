@@ -358,156 +358,156 @@ cells:
   location_x: 3
   location_y: 5
 buildings:
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -1
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: -1
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: -2
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: -2
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -2
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: -3
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -3
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -3
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -3
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -4
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -4
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -4
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 1
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 1
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 1
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 2
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 2
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 2
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 2
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 3
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 3
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 3
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 3
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: 3
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: 4
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 4
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 4
   element: IgneousRock
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 4
   element: IgneousRock
   temperature: 293.149994

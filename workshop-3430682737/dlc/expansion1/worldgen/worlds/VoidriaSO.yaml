@@ -524,25 +524,6 @@ worldTemplateRules:
         tag: AtSurface
         minDistance: 0
         maxDistance: 3
-  # Critter Spaced Out!
-  - names:
-    - expansion1::critters/tg_beeta_hive
-    - expansion1::critters/tg_divertgent
-    - expansion1::critters/tg_plug_slug
-    listRule: GuaranteeAll
-    ruleId: tg_Critter_SpacedOut
-    priority: 120
-    allowedCellsFilter:
-      - command: Replace
-        tagcommand: DistanceFromTag
-        tag: AtStart
-        minDistance: 2
-        maxDistance: 99
-      - command: ExceptWith # too close to surface
-        tagcommand: DistanceFromTag
-        tag: AtSurface
-        minDistance: 0
-        maxDistance: 3
   # Gifts from devs
   - names:
     - expansion1::bases/tg_gifted_base_so
@@ -559,7 +540,7 @@ worldTemplateRules:
   - names:
     - expansion1::poi/radioactive/uranium_geode1
     listRule: GuaranteeOne
-    ruleId: tg_gift_basic
+    ruleId: tg_gift_uranium
     useRelaxedFiltering: true
     allowExtremeTemperatureOverlap: true # has Abyssalite border
     priority: 200

@@ -448,227 +448,227 @@ cells:
   location_x: 5
   location_y: 4
 buildings:
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -2
   element: MaficRock
   temperature: 291.715454
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -1
   element: MaficRock
   temperature: 291.66629
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: -1
   element: MaficRock
   temperature: 292.588745
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: -1
   element: MaficRock
   temperature: 291.098816
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   location_y: -1
   element: MaficRock
   temperature: 291.456268
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   element: MaficRock
   temperature: 291.113861
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   location_y: 1
   element: MaficRock
   temperature: 291.276367
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   location_y: 2
   element: MaficRock
   temperature: 291.373505
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: 2
   element: MaficRock
   temperature: 291.474091
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: 3
   element: MaficRock
   temperature: 292.862366
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: 1
   element: MaficRock
   temperature: 291.010132
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   element: MaficRock
   temperature: 291.001404
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   element: MaficRock
   temperature: 290.924622
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: 1
   element: MaficRock
   temperature: 290.552643
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: 2
   element: MaficRock
   temperature: 290.784393
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   element: MaficRock
   temperature: 290.781067
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 1
   element: MaficRock
   temperature: 289.350403
-- id: ExteriorWall
+- id: PropGravitasWall
   element: MaficRock
   temperature: 290.73468
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 1
   element: MaficRock
   temperature: 289.64328
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 2
   element: MaficRock
   temperature: 288.55484
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -1
   element: MaficRock
   temperature: 291.420624
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -2
   element: MaficRock
   temperature: 291.714172
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -2
   element: MaficRock
   temperature: 291.70871
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -1
   element: MaficRock
   temperature: 291.488495
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   element: MaficRock
   temperature: 290.75061
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 1
   element: MaficRock
   temperature: 290.299652
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 2
   element: MaficRock
   temperature: 288.899841
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 2
   element: MaficRock
   temperature: 289.917542
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 3
   element: MaficRock
   temperature: 288.775909
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: 3
   element: MaficRock
   temperature: 289.024109
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: 2
   element: MaficRock
   temperature: 290.174377
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: 1
   element: MaficRock
   temperature: 290.887878
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 1
   element: MaficRock
   temperature: 290.577271
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   element: MaficRock
   temperature: 291.180847
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   element: MaficRock
   temperature: 291.253876
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: -1
   element: MaficRock
   temperature: 291.810516
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: -1
   element: MaficRock
   temperature: 291.705231
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: -2
   element: MaficRock
   temperature: 291.696716
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: -2
   element: MaficRock
   temperature: 291.68219
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: -2
   element: MaficRock
   temperature: 291.685822
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: -2
   element: MaficRock
   temperature: 291.690643
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: -1
   element: MaficRock
   temperature: 291.792419
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   element: MaficRock
   temperature: 290.687042
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   element: MaficRock
   temperature: 291.228638
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: -1
   element: MaficRock
   temperature: 291.807617
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: 1
   element: MaficRock
   temperature: 290.885284
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: 2
   element: MaficRock
   temperature: 291.128235
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: 2
   element: MaficRock

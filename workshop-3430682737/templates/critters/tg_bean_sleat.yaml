@@ -214,87 +214,87 @@ cells:
   location_x: 2
   location_y: 4
 buildings:
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -2
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -1
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -1
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 1
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 1
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 2
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 2
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 2
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 3
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 1
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 3
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -1
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 3
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -2
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: -1
   element: Obsidian

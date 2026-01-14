@@ -254,36 +254,36 @@ cells:
   location_x: 4
   location_y: 3
 buildings:
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: -2
   element: WoodLog
   temperature: 292.699432
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: -2
   element: WoodLog
   temperature: 292.699432
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -2
   element: WoodLog
   temperature: 292.699432
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -2
   element: WoodLog
   temperature: 292.699432
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -2
   element: WoodLog
   temperature: 292.699432
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: -2
   element: WoodLog
   temperature: 292.699432
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: -2
   element: WoodLog
@@ -292,7 +292,7 @@ buildings:
   location_y: -1
   element: Cinnabar
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 1
   element: WoodLog
   temperature: 250

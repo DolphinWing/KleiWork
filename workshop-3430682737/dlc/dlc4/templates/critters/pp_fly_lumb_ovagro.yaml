@@ -490,31 +490,31 @@ buildings:
   location_x: 5
   element: Polypropylene
   temperature: 299.752441
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 7
   location_y: 1
   element: Shale
   temperature: 300.13855
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 6
   location_y: 1
   element: Shale
   temperature: 301.289246
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: 1
   element: Shale
   temperature: 299.913544
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: 1
   element: Shale
   temperature: 299.914978
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   element: Shale
   temperature: 299.912231
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   element: Shale
   temperature: 302.322815

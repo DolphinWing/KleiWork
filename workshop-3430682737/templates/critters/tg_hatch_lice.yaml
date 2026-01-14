@@ -217,21 +217,21 @@ buildings:
   location_y: -1
   element: Polypropylene
   temperature: 302.755127
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -1
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -1
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: -1
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: -1
   element: SandStone

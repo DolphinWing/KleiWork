@@ -82,7 +82,7 @@ poiPlacements:
       - HarvestableSpacePOI_SandyOreField
       - HarvestableSpacePOI_SwampyOreField
       - HarvestableSpacePOI_OrganicMassField
-    numToSpawn: 5
+    numToSpawn: 6
     canSpawnDuplicates: true
     allowedRings:
       min: 2
@@ -105,7 +105,7 @@ poiPlacements:
       - HarvestableSpacePOI_FrozenOreField
       - HarvestableSpacePOI_RadioactiveGasCloud
       - HarvestableSpacePOI_RadioactiveAsteroidField
-    numToSpawn: 10
+    numToSpawn: 12
     canSpawnDuplicates: true
     allowedRings:
       min: 3

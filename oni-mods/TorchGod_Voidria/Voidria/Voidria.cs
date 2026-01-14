@@ -192,7 +192,8 @@ namespace Voidria
                                 if (history)
                                 {
                                     PUtil.LogDebug("... add prehistory critters");
-                                    rule.names.Add("dlc4::critters/pp_jawbo_pool");
+                                    if (options?.EnableIronVolcano == true) // no iron volcano will have bigger tanks
+                                        rule.names.Add("dlc4::critters/pp_jawbo_pool");
                                     rule.names.Add("dlc4::critters/pp_rhex_dartle");
                                     rule.names.Add("dlc4::critters/pp_mos_lure");
                                 }

@@ -6,8 +6,8 @@ nameTables: [ SWAMP, SULFUR ]
 
 worldTraitScale: 1 # Adjust with worldSize. Traits are tuned to base game world sizes.
 worldsize:
-  X: 56
-  Y: 56
+  X: 64
+  Y: 80
 layoutMethod: PowerTree
 
 defaultsOverrides:
@@ -39,8 +39,8 @@ startingBasePositionHorizontal:
   min: 0.45
   max: 0.55
 startingBasePositionVertical:
-  min: 0.45
-  max: 0.55
+  min: 0.55
+  max: 0.65
 
 # List all the subworld files to load
 subworldFiles:
@@ -107,3 +107,22 @@ worldTemplateRules:
         tag: AtSurface
         minDistance: 0
         maxDistance: 0
+  # Critter Spaced Out!
+  - names:
+    - expansion1::critters/tg_beeta_hive
+    - expansion1::critters/tg_divertgent
+    - expansion1::critters/tg_plug_slug
+    listRule: GuaranteeAll
+    ruleId: tg_Critter_SpacedOut
+    priority: 120
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 1
+        maxDistance: 99
+      - command: ExceptWith # too close to surface
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 1

@@ -422,16 +422,16 @@ buildings:
   temperature: 293.149994
   other_values:
   - id: joulesAvailable
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: -1
   element: Obsidian
   temperature: 293.156067
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   element: Obsidian
   temperature: 293.156403
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: 1
   element: Obsidian
@@ -441,12 +441,12 @@ buildings:
   location_y: -1
   element: Cuprite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: 2
   element: Obsidian
   temperature: 293.153534
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   element: Obsidian
   temperature: 293.157227
@@ -459,30 +459,30 @@ buildings:
   location_y: -1
   element: Cuprite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 7
   element: Obsidian
   temperature: 293.160645
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: 1
   element: Obsidian
   temperature: 293.152252
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   location_y: 1
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -1
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 1
   element: Obsidian
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 6
   element: Obsidian
   temperature: 293.156952
@@ -513,7 +513,7 @@ buildings:
     isOre: true
     temperature: 295.651886
     rottable: {}
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 6
   location_y: 1
   element: Obsidian

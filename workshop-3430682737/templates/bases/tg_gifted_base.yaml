@@ -1023,7 +1023,7 @@ cells:
 - element: Vacuum
   location_x: -10
 buildings:
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: 5
   element: Granite
@@ -1037,7 +1037,7 @@ buildings:
   location_y: 5
   element: SandStone
   temperature: 293.506775
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 6
   location_y: -4
   element: Obsidian
@@ -1092,22 +1092,22 @@ buildings:
   location_y: 1
   element: Cuprite
   temperature: 293.156189
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: -2
   element: Obsidian
   temperature: 299.97995
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   location_y: -2
   element: Obsidian
   temperature: 299.982849
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   location_y: -3
   element: Obsidian
   temperature: 299.983002
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -2
   element: Obsidian
@@ -1128,36 +1128,36 @@ buildings:
   location_y: 5
   element: Copper
   temperature: 296.709045
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -9
   location_y: -1
   element: Obsidian
   temperature: 293.530273
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: -1
   element: Obsidian
   temperature: 297.379761
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -7
   location_y: -1
   element: Obsidian
   temperature: 287.271698
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -1
   element: Obsidian
   temperature: 298.359924
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -1
   element: Obsidian
   temperature: 299.715027
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: -1
   element: Obsidian
   temperature: 253.687958
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 7
   location_y: -1
   element: Obsidian
@@ -1173,126 +1173,126 @@ buildings:
   element: Copper
   temperature: 297.013367
   connections: 1
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -2
   element: Obsidian
   temperature: 299.995728
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: 4
   element: SandStone
   temperature: 293.150116
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 6
   location_y: 4
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: 3
   element: SandStone
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 2
   element: Granite
   temperature: 293.162628
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: 3
   element: SandStone
   temperature: 293.150818
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 8
   location_y: -2
   element: Obsidian
   temperature: 299.997589
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 7
   location_y: -2
   element: Obsidian
   temperature: 300
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: -3
   element: Obsidian
   temperature: 299.965973
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 7
   location_y: -3
   element: Obsidian
   temperature: 300
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 7
   location_y: -4
   element: Obsidian
   temperature: 299.770233
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: -4
   element: Obsidian
   temperature: 299.885376
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: -4
   element: Obsidian
   temperature: 299.884399
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: -3
   element: Obsidian
   temperature: 299.943726
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 4
   element: Granite
   temperature: 293.156494
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: -4
   element: Obsidian
   temperature: 299.907013
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: -4
   element: Obsidian
   temperature: 299.888519
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 6
   location_y: -3
   element: Obsidian
   temperature: 300
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: -2
   element: Obsidian
   temperature: 297.098938
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 9
   location_y: -2
   element: Obsidian
   temperature: 299.905548
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 6
   location_y: 3
   element: SandStone
   temperature: 293.149963
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 6
   location_y: -2
   element: Obsidian
   temperature: 299.26236
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: -1
   element: Obsidian
   temperature: 292.021118
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 9
   location_y: -1
   element: Obsidian
   temperature: 293.752014
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: -1
   element: Obsidian
@@ -1308,7 +1308,7 @@ buildings:
   element: Copper
   temperature: 296.042236
   connections: 2
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -2
   element: Obsidian
@@ -1419,7 +1419,7 @@ buildings:
   location_y: 4
   element: SandStone
   temperature: 293.165314
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -5
   location_y: 4
   element: Granite
@@ -1429,16 +1429,16 @@ buildings:
   location_y: 5
   element: SandStone
   temperature: 293.697937
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 4
   element: Granite
   temperature: 293.161621
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 1
   element: Granite
   temperature: 293.161987
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -5
   location_y: 2
   element: Granite
@@ -1452,7 +1452,7 @@ buildings:
   location_y: -5
   element: SandStone
   temperature: 294.630188
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 4
   element: Granite
@@ -1493,31 +1493,31 @@ buildings:
   location_y: -5
   element: SandStone
   temperature: 294.100403
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: 5
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -8
   location_y: 1
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 3
   element: Granite
   temperature: 293.158112
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 3
   element: Granite
   temperature: 293.161774
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 3
   element: Granite
   temperature: 293.162323
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 3
   element: Granite
@@ -1533,32 +1533,32 @@ buildings:
   location_y: 1
   element: Cuprite
   temperature: 293.15387
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: 4
   element: Granite
   temperature: 293.150574
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: 1
   element: Granite
   temperature: 292.970703
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -7
   location_y: 3
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: 5
   element: Granite
   temperature: 293.150452
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: 2
   element: Granite
   temperature: 293.153656
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 2
   element: Granite
@@ -1568,7 +1568,7 @@ buildings:
   location_y: 6
   element: SandStone
   temperature: 293.131195
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 6
   location_y: 5
   element: Granite
@@ -1583,17 +1583,17 @@ buildings:
   location_y: 5
   element: SandStone
   temperature: 293.71405
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   location_y: 1
   element: Granite
   temperature: 293.150146
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -5
   location_y: 1
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 1
   element: Granite
@@ -1610,57 +1610,57 @@ buildings:
   location_x: 5
   element: SandStone
   temperature: 274.209137
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -8
   location_y: 4
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -8
   location_y: 3
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -8
   location_y: 2
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: -3
   element: Obsidian
   temperature: 299.982941
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: -3
   element: Obsidian
   temperature: 299.975067
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: -4
   element: Obsidian
   temperature: 299.907562
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -4
   element: Obsidian
   temperature: 299.924927
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: -4
   element: Obsidian
   temperature: 299.929504
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -8
   location_y: -1
   element: Obsidian
   temperature: 299.934113
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -6
   location_y: -3
   element: Obsidian
   temperature: 299.959747
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -5
   location_y: -3
   element: Obsidian
@@ -1697,22 +1697,22 @@ buildings:
   location_y: 2
   element: Copper
   temperature: 294.484863
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   location_y: -1
   element: Obsidian
   temperature: 299.960724
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -5
   location_y: -1
   element: Obsidian
   temperature: 299.956451
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -6
   location_y: -1
   element: Obsidian
   temperature: 299.94986
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -5
   location_y: -4
   element: Obsidian
@@ -1726,32 +1726,32 @@ buildings:
   location_x: -3
   element: Copper
   temperature: 293.972748
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -1
   element: Obsidian
   temperature: 104.823143
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: -1
   element: Obsidian
   temperature: 106.08078
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -6
   location_y: -4
   element: Obsidian
   temperature: 299.892883
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: -1
   element: Obsidian
   temperature: 137.121582
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 6
   location_y: -1
   element: Obsidian
   temperature: 144.697678
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 8
   location_y: -1
   element: Obsidian
@@ -1802,42 +1802,42 @@ buildings:
   element: Copper
   temperature: 298.850342
   connections: 3
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: -2
   element: Obsidian
   temperature: 299.982697
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -5
   location_y: -2
   element: Obsidian
   temperature: 299.983124
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -6
   location_y: -2
   element: Obsidian
   temperature: 299.958679
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -7
   location_y: -2
   element: Obsidian
   temperature: 299.830414
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -8
   location_y: -2
   element: Obsidian
   temperature: 299.529419
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -8
   location_y: -3
   element: Obsidian
   temperature: 298.962891
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -7
   location_y: -3
   element: Obsidian
   temperature: 299.832428
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -7
   location_y: -4
   element: Obsidian
@@ -1863,50 +1863,50 @@ buildings:
   element: Copper
   temperature: 293.160187
   connections: 4
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: -2
   element: Obsidian
   temperature: 299.942932
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -3
   element: Obsidian
   temperature: 299.983856
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -3
   element: Obsidian
   temperature: 299.99585
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -4
   element: Obsidian
   temperature: 299.904785
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -4
   element: Obsidian
   temperature: 299.904327
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: -2
   element: Obsidian
   temperature: 299.901001
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: -2
   element: Obsidian
   temperature: 299.947235
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: -3
   element: Obsidian
   temperature: 299.946503
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: -3
   element: Obsidian
   temperature: 299.902252
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -6
   location_y: 4
   element: Granite
@@ -1921,12 +1921,12 @@ buildings:
   location_y: 6
   element: SandStone
   temperature: 293.109436
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: 4
   element: SandStone
   temperature: 293.150604
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -3
   element: Obsidian
@@ -1966,7 +1966,7 @@ buildings:
   location_y: -4
   element: SandStone
   temperature: 294.718903
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -7
   location_y: 2
   element: Granite
@@ -1986,17 +1986,17 @@ buildings:
   location_y: 6
   element: SandStone
   temperature: 293.123871
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: 1
   element: Granite
   temperature: 292.877625
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: 3
   element: Granite
   temperature: 293.15033
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 8
   location_y: -3
   element: Obsidian
@@ -2042,12 +2042,12 @@ buildings:
   location_y: -3
   element: SandStone
   temperature: 294.559753
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -7
   location_y: 4
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 2
   element: Granite
   temperature: 293.156403
@@ -2061,7 +2061,7 @@ buildings:
     units: 50
     temperature: 295
     rottable: {}
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   location_y: -4
   element: Obsidian

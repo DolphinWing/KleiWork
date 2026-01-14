@@ -13,56 +13,56 @@ cells:
   location_x: -5
   location_y: -2
 - element: Katairite
-  mass: 500
+  mass: 220
   temperature: 213.149994
   location_x: -4
   location_y: -2
 - element: Katairite
-  mass: 500
+  mass: 240
   temperature: 213.149994
   location_x: -3
   location_y: -2
 - element: Katairite
-  mass: 500
+  mass: 240
   temperature: 213.149994
   location_x: -2
   location_y: -2
 - element: Katairite
-  mass: 500
+  mass: 200
   temperature: 213.149994
   location_x: -1
   location_y: -2
 - element: Katairite
-  mass: 500
+  mass: 240
   temperature: 213.149994
   location_y: -2
 - element: Katairite
-  mass: 500
+  mass: 214
   temperature: 213.149994
   location_x: 1
   location_y: -2
 - element: Katairite
-  mass: 500
+  mass: 256
   temperature: 213.149994
   location_x: 2
   location_y: -2
 - element: Katairite
-  mass: 500
+  mass: 224
   temperature: 213.149994
   location_x: 3
   location_y: -2
 - element: Katairite
-  mass: 500
+  mass: 212
   temperature: 213.149994
   location_x: 4
   location_y: -2
 - element: Katairite
-  mass: 500
+  mass: 212
   temperature: 213.149994
   location_x: 5
   location_y: -2
 - element: Katairite
-  mass: 500
+  mass: 224
   temperature: 213.149994
   location_x: -5
   location_y: -1
@@ -111,17 +111,17 @@ cells:
   location_x: 4
   location_y: -1
 - element: Katairite
-  mass: 500
+  mass: 240
   temperature: 213.149994
   location_x: 5
   location_y: -1
 - element: Katairite
-  mass: 500
+  mass: 120
   temperature: 213.149994
   location_x: 6
   location_y: -1
 - element: IgneousRock
-  mass: 1840
+  mass: 840
   temperature: 200
   location_x: -6
 - element: Methane
@@ -168,16 +168,16 @@ cells:
   temperature: 238.53537
   location_x: 5
 - element: Katairite
-  mass: 500
+  mass: 360
   temperature: 213.149994
   location_x: 6
 - element: IgneousRock
-  mass: 1840
+  mass: 810
   temperature: 200
   location_x: -6
   location_y: 1
 - element: IgneousRock
-  mass: 1840
+  mass: 812
   temperature: 200
   location_x: -5
   location_y: 1
@@ -231,7 +231,7 @@ cells:
   location_x: 5
   location_y: 1
 - element: Katairite
-  mass: 500
+  mass: 240
   temperature: 213.149994
   location_x: 6
   location_y: 1
@@ -241,7 +241,7 @@ cells:
   location_x: -6
   location_y: 2
 - element: IgneousRock
-  mass: 1840
+  mass: 840
   temperature: 200
   location_x: -5
   location_y: 2
@@ -290,61 +290,61 @@ cells:
   location_x: 4
   location_y: 2
 - element: IgneousRock
-  mass: 1840
+  mass: 880
   temperature: 200
   location_x: 5
   location_y: 2
 - element: Obsidian
-  mass: 1000
+  mass: 1020
   temperature: 213.149994
   location_x: 6
   location_y: 2
 - element: Granite
-  mass: 1840
+  mass: 840
   temperature: 213.149994
   location_x: -5
   location_y: 3
 - element: IgneousRock
-  mass: 1840
+  mass: 880
   temperature: 200
   location_x: -4
   location_y: 3
 - element: IgneousRock
-  mass: 1840
+  mass: 724
   temperature: 200
   location_x: -3
   location_y: 3
 - element: IgneousRock
-  mass: 1840
+  mass: 960
   temperature: 200
   location_x: -2
   location_y: 3
 - element: IgneousRock
-  mass: 1840
+  mass: 821
   temperature: 200
   location_x: -1
   location_y: 3
 - element: IgneousRock
-  mass: 1840
+  mass: 800
   temperature: 200
   location_y: 3
 - element: IgneousRock
-  mass: 1840
+  mass: 864
   temperature: 200
   location_x: 1
   location_y: 3
 - element: IgneousRock
-  mass: 1840
+  mass: 764
   temperature: 200
   location_x: 2
   location_y: 3
 - element: IgneousRock
-  mass: 1840
+  mass: 799
   temperature: 200
   location_x: 3
   location_y: 3
 - element: IgneousRock
-  mass: 1840
+  mass: 800
   temperature: 200
   location_x: 4
   location_y: 3
@@ -359,261 +359,261 @@ cells:
   location_x: -6
   location_y: -1
 buildings:
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -1
   element: Granite
   temperature: 292.586182
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: -1
   element: Granite
   temperature: 292.585358
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -1
   element: Granite
   temperature: 233.548737
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -1
   element: Granite
   temperature: 291.244965
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: -1
   element: Granite
   temperature: 291.511505
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   element: Granite
   temperature: 291.249573
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   element: Granite
   temperature: 290.910492
-- id: ExteriorWall
+- id: PropGravitasWall
   element: Granite
   temperature: 291.273895
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   element: Granite
   temperature: 291.73819
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: 1
   element: Granite
   temperature: 291.374573
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 1
   element: Granite
   temperature: 233.62381
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 1
   element: Granite
   temperature: 291.382782
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 1
   element: Granite
   temperature: 290.908844
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 1
   element: Granite
   temperature: 290.974579
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: 1
   element: Granite
   temperature: 290.722168
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: 1
   element: Granite
   temperature: 290.840485
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   location_y: 1
   element: Granite
   temperature: 290.848511
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   location_y: 2
   element: Granite
   temperature: 290.899963
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: 2
   element: Granite
   temperature: 290.881958
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: 2
   element: Granite
   temperature: 290.976379
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 2
   element: Granite
   temperature: 290.854797
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 2
   element: Granite
   temperature: 291.241608
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 2
   element: Granite
   temperature: 234.118073
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 2
   element: Granite
   temperature: 291.386353
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -5
   element: Granite
   temperature: 290.64624
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   element: Granite
   temperature: 290.789917
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   element: Granite
   temperature: 291.024567
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   element: Granite
   temperature: 293.08844
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   location_y: -1
   element: Granite
   temperature: 292.58548
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: -1
   element: Granite
   temperature: 230.32872
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: 2
   element: Granite
   temperature: 291.048096
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: 2
   element: Granite
   temperature: 291.034973
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: 1
   element: Granite
   temperature: 291.368073
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: 1
   element: Granite
   temperature: 291.641663
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: -1
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: -1
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: 2
   element: Granite
   temperature: 200
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -5
   location_y: 1
   element: Granite
   temperature: 200
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -5
   location_y: 2
   element: Granite
   temperature: 200
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -6
   element: Granite
   temperature: 200
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -6
   location_y: 1
   element: Granite
   temperature: 200
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -6
   location_y: 2
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -5
   location_y: 3
   element: Granite
   temperature: 293.149994
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -4
   location_y: 3
   element: Granite
   temperature: 200
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -3
   location_y: 3
   element: Granite
   temperature: 200
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -2
   location_y: 3
   element: Granite
   temperature: 200
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 3
   element: Granite
   temperature: 200
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 3
   element: Granite
   temperature: 200
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 3
   element: Granite
   temperature: 200
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 3
   element: Granite
   temperature: 200
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 3
   location_y: 3
   element: Granite
   temperature: 200
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 4
   location_y: 3
   element: Granite
   temperature: 200
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 5
   location_y: 3
   element: Granite

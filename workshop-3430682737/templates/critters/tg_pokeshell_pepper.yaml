@@ -248,100 +248,100 @@ cells:
   location_x: 2
   location_y: 4
 buildings:
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 3
   element: SedimentaryRock
   temperature: 293.77652
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 2
   element: SedimentaryRock
   temperature: 294.071869
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: 1
   element: SedimentaryRock
   temperature: 293.70813
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 1
   element: SedimentaryRock
   temperature: 293.842682
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: 2
   element: SedimentaryRock
   temperature: 294.166595
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: 1
   element: SedimentaryRock
   temperature: 294.543488
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: 1
   element: SedimentaryRock
   temperature: 294.577515
-- id: ExteriorWall
+- id: PropGravitasWall
   element: SedimentaryRock
   temperature: 294.315857
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   element: SedimentaryRock
   temperature: 293.733612
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -1
   element: SedimentaryRock
   temperature: 293.155457
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -1
   element: SedimentaryRock
   temperature: 293.23114
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -1
   element: SedimentaryRock
   temperature: 293.189697
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: -1
   element: SedimentaryRock
   temperature: 293.160736
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: -2
   element: SedimentaryRock
   temperature: 293.170349
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -2
   element: SedimentaryRock
   temperature: 293.172699
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -2
   element: SedimentaryRock
   temperature: 293.164795
-- id: ExteriorWall
+- id: PropGravitasWall
   location_y: -3
   element: SedimentaryRock
   temperature: 322.788361
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 1
   location_y: -3
   element: SedimentaryRock
   temperature: 323.085754
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: 2
   location_y: -3
   element: SedimentaryRock
   temperature: 323.054382
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -3
   element: SedimentaryRock
   temperature: 301.73056
-- id: ExteriorWall
+- id: PropGravitasWall
   location_x: -1
   location_y: -2
   element: SedimentaryRock

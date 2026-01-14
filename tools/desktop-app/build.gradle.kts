@@ -38,8 +38,9 @@ compose.desktop {
     application {
         mainClass = "MainKt"
 
+        // https://kotlinlang.org/docs/multiplatform/compose-native-distribution.html
         nativeDistributions {
-            targetFormats(TargetFormat.Msi, TargetFormat.Deb)
+            targetFormats(TargetFormat.Msi, TargetFormat.Exe)
 
             packageName = "OniTranslator"
             packageVersion = releaseAppVersion
@@ -69,10 +70,13 @@ compose.desktop {
             }
         }
 
+        buildTypes.release.proguard {
+            obfuscate.set(true)
+            optimize.set(true)
+        }
+
         args += listOf("v=$releaseAppVersion")
     }
-
-
 }
 
 compose.resources {
