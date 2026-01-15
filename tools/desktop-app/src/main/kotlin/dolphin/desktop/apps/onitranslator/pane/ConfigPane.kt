@@ -8,11 +8,8 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.Close
-import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -24,8 +21,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
-import dolphin.desktop.apps.onitranslator.generated.resources.button_cancel
-import dolphin.desktop.apps.onitranslator.generated.resources.button_save
+import dolphin.desktop.apps.onitranslator.generated.resources.button_close
 import dolphin.desktop.apps.onitranslator.generated.resources.github_root
 import dolphin.desktop.apps.onitranslator.generated.resources.manual_setup
 import dolphin.desktop.apps.onitranslator.generated.resources.oni_asset_dir
@@ -34,7 +30,7 @@ import dolphin.desktop.apps.onitranslator.generated.resources.quick_setup
 import dolphin.desktop.apps.onitranslator.generated.resources.string_map_path_cannot_be_empty
 import dolphin.desktop.apps.onitranslator.model.Configs
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
-import dolphin.desktop.apps.onitranslator.widget.FileChooser
+import dolphin.desktop.apps.onitranslator.widget.FilePicker
 import org.jetbrains.compose.resources.stringResource
 import java.io.File
 import javax.swing.JFileChooser
@@ -63,15 +59,16 @@ fun ConfigPane(
         // Quick Setup Section
         Text(stringResource(Res.string.quick_setup), style = MaterialTheme.typography.titleMedium)
         Spacer(Modifier.height(8.dp))
-        FileChooser(
+        FilePicker(
             label = stringResource(Res.string.github_root),
             path = "", // No specific "github_root" stored, only used for selection
             onPathChange = { file ->
                 val s = File.separator
                 onConfigChange?.invoke(
+
                     configs.copy(
-                        stringMap = "${file}${s}tools${s}desktop-app${s}resources${s}common${s}strings.xml",
-                        oniWorkshopDir = "${file}${s}workshop-2906930548", // Example workshop folder name
+                        dataBankPath = "${file}${s}tools${s}desktop-app${s}src${s}main${s}composeResources${s}files${s}replacement_strings.xml",
+                        oniWorkshopDir = "${file}${s}workshop-2906930548", // workshop folder name
                         oniAssetsDir = "${file}${s}oni-assets",
                     )
                 )
@@ -86,7 +83,7 @@ fun ConfigPane(
         Text(stringResource(Res.string.manual_setup), style = MaterialTheme.typography.titleMedium)
         Spacer(Modifier.height(8.dp))
 
-        FileChooser(
+        FilePicker(
             label = stringResource(Res.string.oni_workshop_dir),
             path = configs.oniWorkshopDir,
             onPathChange = { onConfigChange?.invoke(configs.copy(oniWorkshopDir = it)) },
@@ -94,7 +91,7 @@ fun ConfigPane(
         )
         Spacer(Modifier.height(8.dp))
 
-        FileChooser(
+        FilePicker(
             label = stringResource(Res.string.oni_asset_dir),
             path = configs.oniAssetsDir,
             onPathChange = { onConfigChange?.invoke(configs.copy(oniAssetsDir = it)) },
@@ -102,12 +99,12 @@ fun ConfigPane(
         )
         Spacer(Modifier.height(8.dp))
 
-        // strings.xml file path with error handling
-        val isStringMapError = configs.stringMap.isEmpty()
-        FileChooser(
-            label = "strings.xml",
-            path = configs.stringMap,
-            onPathChange = { onConfigChange?.invoke(configs.copy(stringMap = it)) },
+        // replacement_strings.xml file path with error handling
+        val isStringMapError = configs.dataBankPath.isEmpty()
+        FilePicker(
+            label = "replacement_strings.xml",
+            path = configs.dataBankPath,
+            onPathChange = { onConfigChange?.invoke(configs.copy(dataBankPath = it)) },
             selectionMode = JFileChooser.FILES_ONLY,
             isError = isStringMapError,
             supportingText = if (isStringMapError) {
@@ -121,13 +118,8 @@ fun ConfigPane(
         Row(horizontalArrangement = Arrangement.End, modifier = Modifier.fillMaxWidth()) {
             TextButton(onClick = onCancel) {
                 Icon(Icons.Rounded.Close, contentDescription = null)
-                Text(stringResource(Res.string.button_cancel))
+                Text(stringResource(Res.string.button_close))
             }
-//            Spacer(Modifier.width(8.dp))
-//            Button(onClick = { onApply(configs) }) {
-//                Icon(Icons.Rounded.Check, contentDescription = null)
-//                Text(stringResource(Res.string.button_save))
-//            }
         }
     }
 }
@@ -136,7 +128,6 @@ fun ConfigPane(
 internal fun ConfigDialogContent(
     configs: Configs,
     onConfigChange: (configs: Configs) -> Unit = {},
-//    onConfigSaved: (Configs) -> Unit,
     onDismissRequest: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -148,7 +139,6 @@ internal fun ConfigDialogContent(
         ConfigPane(
             configs = configs,
             onConfigChange = onConfigChange,
-//            onApply = onConfigSaved,
             onCancel = onDismissRequest,
         )
     }
@@ -162,7 +152,7 @@ private fun M3ConfigPanePreviewLight() {
         Surface {
             ConfigPane(
                 configs = Configs(
-                    stringMap = "/path/to/strings.xml",
+                    dataBankPath = "/path/to/strings.xml",
                     oniWorkshopDir = "/path/to/workshop",
                     oniAssetsDir = "/path/to/assets"
                 ),
@@ -178,7 +168,7 @@ private fun M3ConfigPanePreviewDark() {
         Surface {
             ConfigPane(
                 configs = Configs(
-                    stringMap = "", // Test error case
+                    dataBankPath = "", // Test error case
                     oniWorkshopDir = "/path/to/workshop",
                     oniAssetsDir = "/path/to/assets"
                 ),

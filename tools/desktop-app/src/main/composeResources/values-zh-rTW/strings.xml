@@ -6,6 +6,7 @@
     <!-- Actions (Buttons & Menus) -->
     <string name="button_apply">套用</string>
     <string name="button_cancel">取消</string>
+    <string name="button_close">關閉</string>
     <string name="button_refresh">刷新</string>
     <string name="button_save">儲存</string>
     <string name="button_search">搜尋</string>

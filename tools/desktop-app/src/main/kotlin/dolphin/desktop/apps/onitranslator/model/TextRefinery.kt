@@ -6,11 +6,11 @@ import com.github.houbb.opencc4j.util.ZhTwConverterUtil
  * A class responsible for text transformations, including
  * Simplified-to-Traditional Chinese conversion and custom string replacements.
  *
- * @param replacementMap A map where keys are strings to be found and values are their replacements.
+ * @param dataBank A map where keys are strings to be found and values are their replacements.
  */
-class TextConverter(private val replacementMap: Map<String, String>) {
-    private val replacementRegex: Regex? = if (replacementMap.isNotEmpty()) {
-        val regexPattern = replacementMap.keys.joinToString("|") { Regex.escape(it) }
+class TextRefinery(private val dataBank: Map<String, String>) {
+    private val replacementRegex: Regex? = if (dataBank.isNotEmpty()) {
+        val regexPattern = dataBank.keys.joinToString("|") { Regex.escape(it) }
         Regex(regexPattern)
     } else {
         null
@@ -24,7 +24,7 @@ class TextConverter(private val replacementMap: Map<String, String>) {
      */
     fun refactor(source: String): String {
         return replacementRegex?.replace(source) { matchResult ->
-            replacementMap[matchResult.value] ?: matchResult.value
+            dataBank[matchResult.value] ?: matchResult.value
         } ?: source
     }
 

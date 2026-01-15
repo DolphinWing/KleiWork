@@ -21,7 +21,7 @@ import javax.swing.JFileChooser
 import javax.swing.UIManager
 
 /**
- * A Material Design 3 file chooser Composable.
+ * A Material Design 3 file picker Composable.
  *
  * @param label The label for the text field.
  * @param path The current selected path.
@@ -33,7 +33,7 @@ import javax.swing.UIManager
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun FileChooser(
+fun FilePicker(
     label: String,
     path: String,
     onPathChange: (String) -> Unit,

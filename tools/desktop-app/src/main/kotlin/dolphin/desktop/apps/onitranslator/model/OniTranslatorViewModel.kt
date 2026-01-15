@@ -32,7 +32,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     val state: StateFlow<AppState> = _state.asStateFlow()
 
     private var helper: PoHelper? = null
-    private var textConverter: TextConverter? = null
+    private var textRefinery: TextRefinery? = null
 
     // A mutable state for windowConfig to be used by window state remembering
     private val _windowConfig = mutableStateOf(WindowConfig())
@@ -180,11 +180,11 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
             )
         }
 
-        val replacementMap = ReplacementLoader(configs).load()
-        val converter = TextConverter(replacementMap)
-        textConverter = converter
+        val dataBank = DataBank(configs).load()
+        val refinery = TextRefinery(dataBank)
+        textRefinery = refinery
 
-        val newHelper = PoHelper(configs, converter, debugMode)
+        val newHelper = PoHelper(configs, refinery, debugMode)
         helper = newHelper
 
         // Collect flows from the new helper instance
@@ -293,8 +293,8 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     }
 
     fun onConvert(text: String): String {
-        val converter = textConverter ?: return text
-        val traditional = TextConverter.sc2tc(text)
+        val converter = textRefinery ?: return text
+        val traditional = TextRefinery.sc2tc(text)
         return converter.refactor(traditional)
     }
 

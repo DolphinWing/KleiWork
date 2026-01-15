@@ -26,12 +26,12 @@ enum class LogType { Info, Warning, Error }
  * then merges them into a final word list for the editor.
  *
  * @param configs The application path configurations.
- * @param textConverter A helper for performing text transformations.
+ * @param textRefinery A helper for performing text transformations.
  * @param debug A flag to indicate if running in debug mode, affects output file paths.
  */
 class PoHelper(
     private val configs: Configs,
-    private val textConverter: TextConverter,
+    private val textRefinery: TextRefinery,
     private val debug: Boolean = false,
 ) {
     companion object {
@@ -142,10 +142,10 @@ class PoHelper(
         if (newStr.isEmpty()) {
             isNewly = true
             newStr = simplifiedMap[key]?.str ?: templateEntry.origin()
-            newStr = TextConverter.sc2tc(newStr)
+            newStr = TextRefinery.sc2tc(newStr)
         }
 
-        newStr = textConverter.refactor(newStr)
+        newStr = textRefinery.refactor(newStr)
 
         val id = existingTranslation?.id ?: templateEntry.id
         if (id != templateEntry.id) {

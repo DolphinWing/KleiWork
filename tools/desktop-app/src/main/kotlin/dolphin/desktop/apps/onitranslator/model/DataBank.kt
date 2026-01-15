@@ -1,7 +1,11 @@
 package dolphin.desktop.apps.onitranslator.model
 
+import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import org.xml.sax.Attributes
 import org.xml.sax.helpers.DefaultHandler
+import java.io.ByteArrayInputStream
 import java.io.File
 import java.io.InputStream
 import javax.xml.parsers.SAXParserFactory
@@ -10,7 +14,7 @@ import javax.xml.parsers.SAXParserFactory
  * A loader responsible for finding and parsing the `strings.xml` file
  * to provide a map of replacement strings.
  */
-class ReplacementLoader(private val configs: Configs) {
+class DataBank(private val configs: Configs) {
 
     /**
      * Loads the replacement strings map.
@@ -19,31 +23,36 @@ class ReplacementLoader(private val configs: Configs) {
      *
      * @return A map of strings to be replaced.
      */
-    fun load(): Map<String, String> {
+    suspend fun load(): Map<String, String> = withContext(Dispatchers.IO) {
         val replacementMap = HashMap<String, String>()
         val xmlFile = findReplacementXml()
-        if (xmlFile.exists()) {
-            try {
-                SAXParserFactory.newInstance().newSAXParser().parse(xmlFile, SaxDocumentHandler(replacementMap))
-            } catch (e: Exception) {
-                // TODO: Replace with error handling via StateFlow
-                println("SAXParser Exception: ${e.message}")
+
+        try {
+            val inputStream: InputStream = if (xmlFile != null && xmlFile.exists()) {
+                xmlFile.inputStream()
+            } else {
+                val bytes = Res.readBytes("files/replacement_strings.xml")
+                ByteArrayInputStream(bytes)
             }
-        } else {
+
+            val parser = SAXParserFactory.newInstance().newSAXParser()
+            parser.parse(inputStream, SaxDocumentHandler(replacementMap))
+        } catch (e: Exception) {
             // TODO: Replace with error handling via StateFlow
-            println("Replacement XML not found: ${xmlFile.absolutePath}")
+            println("SAXParser Exception: ${e.message}")
         }
-        return replacementMap
+
+        replacementMap
     }
 
-    private fun findReplacementXml(): File {
-        println("configs.stringMap = ${configs.stringMap}")
+    private fun findReplacementXml(): File? {
+        println("configs.stringMap = ${configs.dataBankPath}")
         println("configs.oniWorkshopDir = ${configs.oniWorkshopDir}")
         println("configs.oniAssetDir = ${configs.oniAssetsDir}")
 
         // 1. Try stringMap from configs if it's a valid file
-        if (configs.stringMap.isNotBlank()) {
-            val configFile = File(configs.stringMap)
+        if (configs.dataBankPath.isNotBlank()) {
+            val configFile = File(configs.dataBankPath)
             if (configFile.exists() && configFile.isFile) {
                 return configFile
             }
@@ -55,20 +64,7 @@ class ReplacementLoader(private val configs: Configs) {
             return workshopFile
         }
 
-        // 3. Fallback to the default bundled resource
-        val resourceStream: InputStream? = this::class.java.getResourceAsStream(FilePaths.DEFAULT_CONFIG_PATH)
-        if (resourceStream != null) {
-            // SAX parser needs a File, so we write the resource stream to a temporary file.
-            val tempFile = File.createTempFile("strings_default", ".xml")
-            tempFile.deleteOnExit() // Ensure temp file is cleaned up on JVM exit
-            tempFile.outputStream().use { output ->
-                resourceStream.copyTo(output)
-            }
-            return tempFile
-        }
-
-        // 4. Return a non-existent file handle as a last resort, load() will handle the error.
-        return workshopFile // Re-using handle to indicate the expected location
+        return null
     }
 
     /**
@@ -104,6 +100,7 @@ class ReplacementLoader(private val configs: Configs) {
                 currentTag == "string" && currentName?.startsWith("replacement") == true -> {
                     map[currentName!!] = content
                 }
+
                 currentTag == "item" && isReplacementList -> {
                     // Create a unique key for each item in the replacement list
                     map["entry-${map.size}"] = content

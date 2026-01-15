@@ -134,8 +134,6 @@ fun OniTranslatorApp(
 private fun M3DialogHost(state: AppState, onEvent: (AppEvent) -> Unit) {
     when (val dialogState = state.uiState.dialogState) {
         is OniDialogState.DebugSaveDialog ->
-            // val cacheFile = dataModel.helper.getOutputFile(true) // Should be in AppState
-            // val file = dataModel.helper.getOutputFile(false) // Should be in AppState
             M3DebugSaveDialog(
                 onDismissRequest = { onEvent(AppEvent.Ui.DismissDialog) },
                 onSave = { useCache -> onEvent(AppEvent.File.Save(useCache)) },
@@ -148,7 +146,6 @@ private fun M3DialogHost(state: AppState, onEvent: (AppEvent) -> Unit) {
                 ConfigDialogContent(
                     configs = state.configs,
                     onConfigChange = { onEvent(AppEvent.Config.Change(it)) },
-//                    onConfigSaved = { onEvent(AppEvent.Config.Saved(it)) },
                     onDismissRequest = { onEvent(AppEvent.Ui.DismissDialog) },
                 )
             }

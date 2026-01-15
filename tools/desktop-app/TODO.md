@@ -46,7 +46,7 @@
 - [x] **依賴管理：整合 Gradle Versions Plugin**: 加入 `com.github.ben-manes.versions` 插件，並透過 `./gradlew dependencyUpdates` 指令定期檢查依賴庫的更新，以利專案維持在最新的狀態。
 - [ ] **軟體品質：加入單元測試 (Unit Tests)**: 引入 `JUnit 5` 測試框架，為核心邏輯 (例如 `PoHelper.kt`, `Ini.kt`) 撰寫單元測試，以確保程式碼變更時的穩定性與正確性。
 - [x] **自動化：更新 GitHub Actions CI 工作流程**: 優化並更新現有的 CI (Continuous Integration) 工作流程，包含升級 Actions 版本、整合 Gradle 快取，並確保在每次推送到 Git 倉庫時自動執行編譯 (`./gradlew build`) 和測試。
-- [ ] **資料層與狀態管理重構**:
+- [x] **資料層與狀態管理重構**:
     - [x] 全面審視並重構 `PoData.kt`，使其 API 更符合新的 UI 架構和單向資料流 (UDF) 原則。
         - [x] **引入 `AppState` data class**：將 `PoDataModel` 中的 `MutableStateFlow` 都放到這個 data class 中，用一個 `StateFlow<AppState>` 來管理所有的狀態。
         - [x] **將 `loadIni` 和 `loadIniAndPo` 的回傳值改為 `Unit`**：將回傳值改為透過 `StateFlow` 來傳遞，讓 `PoDataModel` 的 API 更簡潔。
@@ -125,7 +125,7 @@
         - [x] 建立 `M3EntryListPane`。
         - [x] 功能擴充：讓其能根據傳入的 `searchText` 決定是顯示完整列表還是搜尋結果。
         - [x] 功能調整：`onEdit` 回調僅更新頂層的 `selectedEntry` 狀態。
-        - [ ] (可選) 為當前選中的列表項增加視覺高亮效果。
+        - [x] (可選) 為當前選中的列表項增加視覺高亮效果。
     - [x] `ConfigPane.kt`: (已重新檢視並整合)
         - [x] 建立 `M3ConfigPane`。
         - [x] 移除其內部的 `Surface`，使其能融入父容器背景。

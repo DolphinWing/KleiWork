@@ -40,16 +40,14 @@ compose.desktop {
 
         // https://kotlinlang.org/docs/multiplatform/compose-native-distribution.html
         nativeDistributions {
-            targetFormats(TargetFormat.Msi, TargetFormat.Exe)
+            targetFormats(TargetFormat.Exe)
 
             packageName = "OniTranslator"
             packageVersion = releaseAppVersion
             version = releaseAppVersion
             description = "ONI PO Translate Helper"
             vendor = "DolphinWing"
-            copyright = "Copyright (c) 2025 DolphinWing"
-
-            appResourcesRootDir.set(project.layout.projectDirectory.dir("resources"))
+            copyright = "Copyright (c) 2026 DolphinWing"
 
             windows {
                 dirChooser = true

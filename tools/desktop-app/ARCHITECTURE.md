@@ -10,7 +10,7 @@
 
 它不只是一個純文字編輯器，還整合了：
 - **簡繁轉換**：自動將簡體中文來源轉換為繁體中文。
-- **詞彙替換**：透過 `strings.xml` 定義專有詞彙的自動修正規則。
+- **詞彙替換**：透過 `replacement_strings.xml` 定義專有詞彙的自動修正規則。
 - **草稿機制**：支援未完成的編輯作業自動存檔。
 - **差異比對**：能識別原廠檔案的變更 (msgid change)。
 
@@ -52,7 +52,8 @@
     *   負責實際的資料讀寫與運算。
     *   **`PoHelper`**: 核心邏輯所在。負責讀取 `.po` 檔、合併草稿、執行簡繁轉換、寫入檔案。
     *   **`ConfigManager`**: 負責 `configs.ini` 的讀寫與視窗狀態保存。
-    *   **`TextConverter`**: 封裝 `opencc4j` 與 `ReplacementLoader` 的轉換邏輯。
+    *   **`TextRefinery`**: (原 TextConverter) 負責封裝 `opencc4j` 與 `DataBank` 的精煉邏輯，將原始文本轉化為目標翻譯。
+    *   **`DataBank`**: (原 ReplacementLoader) 負責從 `replacement_strings.xml` 載入替換規則與詞彙對照表。
 
 ### 資料流向 (Unidirectional Data Flow)
 
@@ -93,8 +94,10 @@
 
 ### 4.3. 資源與日誌系統
 
-#### 多語系資源管理 (Localization)
-專案使用 Compose Multiplatform 的資源系統，所有字串定義於 `src/main/composeResources/values/strings.xml`，並透過 `Res.string.xxx` 以型別安全的方式存取。嚴禁在 UI 中寫死 (Hardcode) 任何顯示文字。
+#### 多語系與檔案資源管理 (Resources)
+專案全面採用 Compose Multiplatform 資源系統：
+*   **字串資源**：定義於 `src/main/composeResources/values/strings.xml`，透過 `Res.string.xxx` 存取。
+*   **檔案資源**：定義於 `src/main/composeResources/files/`，包含預設設定 (`configs.ini`) 與替換規則 (`replacement_strings.xml`)，透過 `Res.readBytes("files/xxx")` 讀取。這確保了跨平台打包時檔案的正確性。
 
 #### 即時回饋機制
 為了讓使用者知道程式在背後做了什麼：

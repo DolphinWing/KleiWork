@@ -6,6 +6,7 @@
     <!-- Actions (Buttons & Menus) -->
     <string name="button_apply">Apply</string>
     <string name="button_cancel">Cancel</string>
+    <string name="button_close">Close</string>
     <string name="button_refresh">Refresh</string>
     <string name="button_save">Save</string>
     <string name="button_search">Search</string>

@@ -1,10 +1,9 @@
 package dolphin.desktop.apps.onitranslator.model
 
+import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File
-import java.io.InputStream
-import java.util.Properties
 
 /**
  * A stateless manager for handling the `configs.ini` file.
@@ -66,7 +65,7 @@ object ConfigManager {
 
 
         val configs = Configs(
-            stringMap = props[Incs.KEY_STRING_MAP] ?: "",
+            dataBankPath = props[Incs.KEY_STRING_MAP] ?: "",
             oniWorkshopDir = props[Incs.KEY_WORKSHOP_DIR_ONI] ?: "",
             oniAssetsDir = props[Incs.KEY_ASSETS_DIR_ONI] ?: "",
         )
@@ -90,7 +89,7 @@ object ConfigManager {
      */
     suspend fun save(configs: Configs, windowConfig: WindowConfig) = withContext(Dispatchers.IO) {
         val content = buildString {
-            appendLine("${Incs.KEY_STRING_MAP}=${configs.stringMap}")
+            appendLine("${Incs.KEY_STRING_MAP}=${configs.dataBankPath}")
             appendLine("${Incs.KEY_WORKSHOP_DIR_ONI}=${configs.oniWorkshopDir}")
             appendLine("${Incs.KEY_ASSETS_DIR_ONI}=${configs.oniAssetsDir}")
             appendLine("${Incs.KEY_WINDOW_POS_X}=${windowConfig.x}")
@@ -110,17 +109,10 @@ object ConfigManager {
         }
     }
 
-    private fun copyDefaultConfig() {
+    private suspend fun copyDefaultConfig() {
         try {
-            val inputStream: InputStream? =
-                this::class.java.getResourceAsStream(FilePaths.DEFAULT_CONFIG_PATH)
-            if (inputStream != null) {
-                configFile.outputStream().use { outputStream ->
-                    inputStream.copyTo(outputStream)
-                }
-            } else {
-                println("Default config resource not found.")
-            }
+            val bytes = Res.readBytes("files/configs.ini")
+            configFile.writeBytes(bytes)
         } catch (e: Exception) {
             println("Failed to copy default config: ${e.message}")
         }
