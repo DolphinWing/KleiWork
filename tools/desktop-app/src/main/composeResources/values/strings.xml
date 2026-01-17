@@ -38,6 +38,10 @@
     <string name="toolbar_simplified_text">CHS</string>
     <string name="toolbar_old_translated">CHT</string>
 
+    <!-- Empty States -->
+    <string name="empty_list_title">All caught up!</string>
+    <string name="empty_list_message">No modified items found. Tap search to browse all translations or refresh to check for changes.</string>
+
     <!-- Tooltips -->
     <string name="tooltip_copy_this_text">Copy this text</string>
     <string name="tooltip_theme_toggle">Toggle theme</string>

@@ -5,6 +5,7 @@ import androidx.compose.animation.core.snap
 import androidx.compose.animation.core.tween
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -22,9 +23,12 @@ import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.AssignmentTurnedIn
 import androidx.compose.material.icons.rounded.Refresh
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Surface
@@ -35,10 +39,12 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.composed
 import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextOverflow
@@ -46,14 +52,14 @@ import androidx.compose.ui.unit.dp
 import dolphin.desktop.apps.onitranslator.app.AppEvent
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.button_refresh
+import dolphin.desktop.apps.onitranslator.generated.resources.empty_list_message
+import dolphin.desktop.apps.onitranslator.generated.resources.empty_list_title
 import dolphin.desktop.apps.onitranslator.model.AppState
 import dolphin.desktop.apps.onitranslator.model.EditorData
 import dolphin.desktop.apps.onitranslator.model.EntryTagType
 import dolphin.desktop.apps.onitranslator.model.WordEntry
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.TextTag
-import dolphin.desktop.apps.onitranslator.widget.TooltipIconButton
-import dolphin.desktop.apps.onitranslator.widget.shimmerEffect
 import org.jetbrains.compose.resources.stringResource
 import kotlin.math.max
 
@@ -64,8 +70,13 @@ fun EntryListPane(
     modifier: Modifier = Modifier,
     listState: LazyListState = rememberLazyListState(),
 ) {
-    val list by remember(state.uiState.searchState.text, state.uiState.searchState.results, state.filteredList) {
-        mutableStateOf(if (state.uiState.searchState.text.isBlank()) state.filteredList else state.uiState.searchState.results)
+    val list by remember(
+        state.uiState.searchState.isActive,
+        state.uiState.searchState.text,
+        state.uiState.searchState.results,
+        state.filteredList
+    ) {
+        mutableStateOf(if (state.uiState.searchState.isActive) state.uiState.searchState.results else state.filteredList)
     }
 
     Surface(modifier = modifier, color = MaterialTheme.colorScheme.background) {
@@ -81,14 +92,39 @@ fun EntryListPane(
                 }
             }
         } else if (list.isEmpty()) {
-            Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                TooltipIconButton(
-                    icon = Icons.Rounded.Refresh,
-                    tooltip = stringResource(Res.string.button_refresh),
+            Box(modifier = modifier.fillMaxSize().padding(32.dp), contentAlignment = Alignment.Center) {
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
-                    onEvent(AppEvent.File.RefreshSource)
+                    Icon(
+                        Icons.Rounded.AssignmentTurnedIn,
+                        contentDescription = null,
+                        modifier = Modifier.width(64.dp).height(64.dp),
+                        tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.3f)
+                    )
+                    Text(
+                        text = stringResource(Res.string.empty_list_title),
+                        style = MaterialTheme.typography.headlineSmall,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                    Text(
+                        text = stringResource(Res.string.empty_list_message),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.fillMaxWidth(0.8f),
+                        textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    ElevatedButton(
+                        onClick = { onEvent(AppEvent.File.RefreshSource) },
+                        contentPadding = PaddingValues(horizontal = 24.dp, vertical = 12.dp)
+                    ) {
+                        Icon(Icons.Rounded.Refresh, contentDescription = null)
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(stringResource(Res.string.button_refresh))
+                    }
                 }
-
             }
         } else {
             // Show actual list
@@ -271,6 +307,20 @@ private fun EntryViewPlaceholderPreview() {
             EntryViewPlaceholder()
         }
     }
+}
+
+fun Modifier.shimmerEffect(): Modifier = composed {
+    background(
+        brush = Brush.linearGradient(
+            colors = listOf(
+                MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.6f),
+                MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.2f),
+                MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.6f),
+            ),
+            start = Offset.Zero,
+            end = Offset(x = 500f, y = 500f) // Adjust for effect size
+        )
+    )
 }
 
 @Composable

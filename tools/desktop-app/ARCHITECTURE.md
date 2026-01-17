@@ -81,6 +81,7 @@
     *   `searchState`: 搜尋關鍵字、結果與是否啟用搜尋模式。
     *   `editorData`: 右側編輯器當前選中的資料。
     *   `dialogState`: 控制對話框 (Config, Save Confirm) 的顯示。
+    *   **效能優化註記**：針對單純的視覺變更（如切換主題），ViewModel 採用 `updateThemeConfig` 僅寫入設定檔而不觸發重讀；僅在涉及檔案路徑變更 (`saveConfig`) 時才會執行全域資料重載。
 
 ### 4.2. 翻譯與檔案處理 (`PoHelper`)
 
@@ -109,6 +110,32 @@
     3.  閒置時顯示當前項目總數。
 *   完整 Log 列表保留在 `AppState.logs` 供查閱。
 
+### 4.4. 列表顯示與搜尋邏輯 (List & Search Logic)
+
+應用程式採用兩種模式來呈現資料，以平衡「工作效率」與「瀏覽需求」：
+
+1.  **待辦模式 (Default / Diff Mode)**
+    *   **觸發時機**：搜尋模式未啟用時（預設狀態）。
+    *   **顯示內容**：僅顯示「有變更」或「新增」的項目 (`filteredList`)。
+    *   **目的**：讓使用者專注於需要處理的差異，類似 To-Do List。
+
+2.  **全覽模式 (Search / Library Mode)**
+    *   **觸發時機**：啟用搜尋模式 (`AppEvent.Search.ActiveChange(true)`)。
+    *   **顯示內容**：
+        *   **剛進入時**：自動觸發空字串搜尋，載入**所有**資料項目。
+        *   **輸入文字時**：根據關鍵字在所有資料中進行篩選 (`searchState.results`)。
+    *   **目的**：提供完整的字典查詢功能，允許使用者檢視未變更的原廠翻譯。
+
+3.  **空狀態與刷新 (Empty State & Refresh)**
+    *   **空狀態**：當待辦列表為空時，顯示「一切就緒」的視覺引導，避免畫面過於單調。
+    *   **刷新機制**：支援透過空狀態按鈕或頂部選單 (`MoreActionsMenu`) 觸發 `AppEvent.File.RefreshSource`，強制重讀檔案以同步外部變更。
+
+### 4.5. 開發與除錯 (Debug Mode)
+*   **Debug Mode**：透過 `OniTranslatorViewModel(debugMode = true)` 啟動。
+*   **行為差異**：
+    *   **存檔路徑**：檔案會寫入系統暫存目錄 (Temp)，而非遊戲真實目錄，避免開發時汙染環境。
+    *   **除錯對話框**：存檔時會跳出 `DebugSaveDialog` 顯示寫入路徑。
+
 ---
 
 ## 5. 目錄結構 (Directory Structure)
@@ -127,6 +154,9 @@ src/main/kotlin/dolphin/desktop/apps/onitranslator/
 
 ## 6. 未來擴充指引
 
+*   **文件同步 (Critical for AI & Human)**：
+    *   任何涉及架構調整、邏輯變更或新功能實作，**必須同步更新本文件**。
+    *   **給 AI 的指令**：在完成上述類型的任務後，**請務必檢查並提醒使用者**更新此文檔，或主動提出更新建議。
 *   若要新增 UI 功能：請先在 `AppEvent` 定義意圖，再到 `ViewModel` 實作邏輯，最後更新 `UiState`。
 *   若要修改翻譯邏輯：請專注於 `PoHelper`，避免將邏輯洩漏到 ViewModel。
 *   若要調整樣式：請優先使用 `MaterialTheme` 的 tokens，保持設計一致性。

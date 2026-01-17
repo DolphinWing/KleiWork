@@ -16,13 +16,11 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilterChip
-import androidx.compose.material3.FilterChipDefaults
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHostState
@@ -35,7 +33,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
@@ -47,7 +44,6 @@ import dolphin.desktop.apps.onitranslator.model.AppState
 import dolphin.desktop.apps.onitranslator.model.LogEntry
 import dolphin.desktop.apps.onitranslator.model.LogType
 import dolphin.desktop.apps.onitranslator.model.OniDialogState
-import dolphin.desktop.apps.onitranslator.model.SearchType
 import dolphin.desktop.apps.onitranslator.pane.ConfigDialogContent
 import dolphin.desktop.apps.onitranslator.pane.EditorPane
 import dolphin.desktop.apps.onitranslator.pane.EntryListPane
@@ -83,15 +79,18 @@ fun OniTranslatorApp(
             ) { paddingValues ->
                 Column(Modifier.padding(paddingValues)) {
                     AnimatedVisibility(
-                        visible = state.uiState.searchState.isActive, // This should come from AppState
+                        visible = state.uiState.searchState.isActive,
                         enter = expandVertically(),
                         exit = shrinkVertically()
                     ) {
-                        SearchTypeRow(
-                            selected = state.uiState.searchState.type,
-                            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 4.dp),
-                        ) { searchType ->
-                            onEvent(AppEvent.Search.TextChange(state.uiState.searchState.text, searchType))
+                        Column(modifier = Modifier.background(MaterialTheme.colorScheme.surfaceContainer)) {
+                            SearchTypeRow(
+                                selected = state.uiState.searchState.type,
+                                modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp),
+                            ) { searchType ->
+                                onEvent(AppEvent.Search.TextChange(state.uiState.searchState.text, searchType))
+                            }
+                            HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
                         }
                     }
                     Row(modifier = Modifier.fillMaxSize()) {
@@ -102,7 +101,7 @@ fun OniTranslatorApp(
                         )
                         VerticalDivider(
                             modifier = Modifier.fillMaxHeight().width(1.dp),
-                            color = MaterialTheme.colorScheme.outline
+                            color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)
                         )
                         EditorPane(
                             entry = state.uiState.editorData,

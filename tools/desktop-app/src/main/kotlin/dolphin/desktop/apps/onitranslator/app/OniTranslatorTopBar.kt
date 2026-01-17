@@ -16,6 +16,7 @@ import androidx.compose.material.icons.rounded.DarkMode
 import androidx.compose.material.icons.rounded.Drafts
 import androidx.compose.material.icons.rounded.LightMode
 import androidx.compose.material.icons.rounded.MoreVert
+import androidx.compose.material.icons.rounded.Refresh
 import androidx.compose.material.icons.rounded.Report
 import androidx.compose.material.icons.rounded.Save
 import androidx.compose.material.icons.rounded.Search
@@ -26,6 +27,7 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -46,6 +48,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.button_refresh
 import dolphin.desktop.apps.onitranslator.generated.resources.button_search
 import dolphin.desktop.apps.onitranslator.generated.resources.content_description_back
 import dolphin.desktop.apps.onitranslator.generated.resources.content_description_clear
@@ -70,41 +73,44 @@ fun OniTranslatorTopBar(
     onEvent: (AppEvent) -> Unit,
     scrollBehavior: TopAppBarScrollBehavior? = null,
 ) {
-    if (state.uiState.searchState.isActive) {
-        SearchTopBar(
-            searchText = state.uiState.searchState.text,
-            onSearchTextChange = { onEvent(AppEvent.Search.TextChange(it, state.uiState.searchState.type)) },
-            onActiveChange = { onEvent(AppEvent.Search.ActiveChange(it)) }
-        )
-    } else {
-        val filteredList = state.filteredList
-        val changedList = state.filteredList
+    Column {
+        if (state.uiState.searchState.isActive) {
+            SearchTopBar(
+                searchText = state.uiState.searchState.text,
+                onSearchTextChange = { onEvent(AppEvent.Search.TextChange(it, state.uiState.searchState.type)) },
+                onActiveChange = { onEvent(AppEvent.Search.ActiveChange(it)) }
+            )
+        } else {
+            val filteredList = state.filteredList
+            val changedList = state.filteredList
 
-        TopAppBar(
-            title = { Text(stringResource(Res.string.toolbar_status, filteredList.size, changedList.size)) },
-            colors = TopAppBarDefaults.topAppBarColors(
-                containerColor = MaterialTheme.colorScheme.surface
-            ),
-            actions = {
-                TooltipIconButton(
-                    icon = Icons.Rounded.Search,
-                    tooltip = stringResource(Res.string.button_search)
-                ) {
-                    onEvent(AppEvent.Search.ActiveChange(true))
-                }
+            TopAppBar(
+                title = { Text(stringResource(Res.string.toolbar_status, filteredList.size, changedList.size)) },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.surfaceContainer
+                ),
+                actions = {
+                    TooltipIconButton(
+                        icon = Icons.Rounded.Search,
+                        tooltip = stringResource(Res.string.button_search)
+                    ) {
+                        onEvent(AppEvent.Search.ActiveChange(true))
+                    }
 
-                val isDark = state.uiState.darkTheme ?: isSystemInDarkTheme()
-                TooltipIconButton(
-                    icon = if (isDark) Icons.Rounded.LightMode else Icons.Rounded.DarkMode,
-                    tooltip = stringResource(Res.string.tooltip_theme_toggle)
-                ) {
-                    onEvent(AppEvent.Ui.ChangeTheme(!isDark))
-                }
+                    val isDark = state.uiState.darkTheme ?: isSystemInDarkTheme()
+                    TooltipIconButton(
+                        icon = if (isDark) Icons.Rounded.LightMode else Icons.Rounded.DarkMode,
+                        tooltip = stringResource(Res.string.tooltip_theme_toggle)
+                    ) {
+                        onEvent(AppEvent.Ui.ChangeTheme(!isDark))
+                    }
 
-                MoreActionsMenu(onEvent)
-            },
-            scrollBehavior = scrollBehavior
-        )
+                    MoreActionsMenu(onEvent)
+                },
+                scrollBehavior = scrollBehavior
+            )
+            HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = .5f))
+        }
     }
 }
 
@@ -138,6 +144,14 @@ private fun MoreActionsMenu(onEvent: (AppEvent) -> Unit) {
                     menuExpanded = false
                 },
                 leadingIcon = { Icon(Icons.Rounded.Drafts, contentDescription = null) }
+            )
+            DropdownMenuItem(
+                text = { Text(stringResource(Res.string.button_refresh)) },
+                onClick = {
+                    onEvent(AppEvent.File.RefreshSource)
+                    menuExpanded = false
+                },
+                leadingIcon = { Icon(Icons.Rounded.Refresh, contentDescription = null) }
             )
             DropdownMenuItem(
                 text = { Text(stringResource(Res.string.menu_show_logs)) },
@@ -177,49 +191,51 @@ private fun SearchTopBar(
         }
     }
 
-    Box(contentAlignment = Alignment.Center, modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)) {
-        DockedSearchBar(
-            inputField = {
-                SearchBarDefaults.InputField(
-                    query = query,
-                    onQueryChange = {
-                        query = it
-                        onSearchTextChange(it)
-                    },
-                    onSearch = { onSearchTextChange(it) },
-                    expanded = false,
-                    onExpandedChange = onActiveChange,
-                    placeholder = { Text(stringResource(Res.string.placeholder_search)) },
-                    leadingIcon = {
-                        IconButton(onClick = { onActiveChange(false) }) {
-                            Icon(
-                                Icons.Rounded.ArrowBackIosNew,
-                                contentDescription = stringResource(Res.string.content_description_back)
-                            )
-                        }
-                    },
-                    trailingIcon = {
-                        if (query.isNotEmpty()) {
-                            IconButton(onClick = {
-                                query = ""
-                                onSearchTextChange("")
-                            }) {
+    Surface(color = MaterialTheme.colorScheme.surfaceContainer) {
+        Box(contentAlignment = Alignment.Center, modifier = Modifier.padding(vertical = 8.dp, horizontal = 12.dp)) {
+            DockedSearchBar(
+                inputField = {
+                    SearchBarDefaults.InputField(
+                        query = query,
+                        onQueryChange = {
+                            query = it
+                            onSearchTextChange(it)
+                        },
+                        onSearch = { onSearchTextChange(it) },
+                        expanded = false,
+                        onExpandedChange = onActiveChange,
+                        placeholder = { Text(stringResource(Res.string.placeholder_search)) },
+                        leadingIcon = {
+                            IconButton(onClick = { onActiveChange(false) }) {
                                 Icon(
-                                    Icons.Rounded.Close,
-                                    contentDescription = stringResource(Res.string.content_description_clear)
+                                    Icons.Rounded.ArrowBackIosNew,
+                                    contentDescription = stringResource(Res.string.content_description_back)
                                 )
                             }
-                        }
-                    },
-                    modifier = Modifier.fillMaxWidth()
-                )
-            },
-            expanded = false,
-            onExpandedChange = onActiveChange,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            // Search results would go here, but we are doing a docked search bar
-            // that filters the main list, so this content is not used.
+                        },
+                        trailingIcon = {
+                            if (query.isNotEmpty()) {
+                                IconButton(onClick = {
+                                    query = ""
+                                    onSearchTextChange("")
+                                }) {
+                                    Icon(
+                                        Icons.Rounded.Close,
+                                        contentDescription = stringResource(Res.string.content_description_clear)
+                                    )
+                                }
+                            }
+                        },
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                },
+                expanded = false,
+                onExpandedChange = onActiveChange,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                // Search results would go here, but we are doing a docked search bar
+                // that filters the main list, so this content is not used.
+            }
         }
     }
 }

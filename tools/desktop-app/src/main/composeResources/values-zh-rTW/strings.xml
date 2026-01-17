@@ -38,6 +38,10 @@
     <string name="toolbar_simplified_text">簡中</string>
     <string name="toolbar_old_translated">舊翻</string>
 
+    <!-- Empty States -->
+    <string name="empty_list_title">一切就緒！</string>
+    <string name="empty_list_message">目前沒有已修改的項目。點擊搜尋瀏覽全部翻譯，或刷新以檢查變更。</string>
+
     <!-- Tooltips -->
     <string name="tooltip_copy_this_text">複製此文字</string>
     <string name="tooltip_theme_toggle">切換主題</string>

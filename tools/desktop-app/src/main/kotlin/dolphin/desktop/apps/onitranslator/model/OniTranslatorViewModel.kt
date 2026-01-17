@@ -102,13 +102,20 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                 updateUiState { it.copy(darkTheme = event.dark) }
                 val newConfig = _windowConfig.value.copy(darkTheme = event.dark)
                 _windowConfig.value = newConfig
-                saveConfig(state.value.configs)
+                // Only save the config, do not reload data
+                updateThemeConfig(newConfig)
             }
         }
     }
 
+    private suspend fun updateThemeConfig(newConfig: WindowConfig) = withContext(Dispatchers.IO) {
+        ConfigManager.save(state.value.configs, newConfig)
+    }
+
     private suspend fun onSearchActiveChange(isActive: Boolean) {
         if (isActive) {
+            // Trigger search with empty text to load ALL items when entering search mode
+            search("")
             updateUiState { it.copy(searchState = it.searchState.copy(isActive = true)) }
         } else {
             // clear search text when closing search
