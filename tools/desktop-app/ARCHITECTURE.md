@@ -52,8 +52,8 @@
     *   負責實際的資料讀寫與運算。
     *   **`PoHelper`**: 核心邏輯所在。負責讀取 `.po` 檔、合併草稿、執行簡繁轉換、寫入檔案。
     *   **`ConfigManager`**: 負責 `configs.ini` 的讀寫與視窗狀態保存。
-    *   **`TextRefinery`**: (原 TextConverter) 負責封裝 `opencc4j` 與 `DataBank` 的精煉邏輯，將原始文本轉化為目標翻譯。
-    *   **`DataBank`**: (原 ReplacementLoader) 負責從 `replacement_strings.xml` 載入替換規則與詞彙對照表。
+    *   **`TextRefinery`**: 負責封裝 `opencc4j` 與 `DataBank` 的精煉邏輯，將原始文本轉化為目標翻譯。
+    *   **`DataBank`**: 負責從 `replacement_strings.xml` 載入替換規則與詞彙對照表。
 
 ### 資料流向 (Unidirectional Data Flow)
 
@@ -143,8 +143,8 @@
 ```text
 src/main/kotlin/dolphin/desktop/apps/onitranslator/
 ├── app/          # 應用程式入口與全域 UI (Main, App, TopBar, BottomBar)
-├── model/        # 核心邏輯與資料模型 (ViewModel, PoHelper, Data Classes)
-├── pane/         # 主要 UI 區塊 (EntryList, Editor, Config)
+├── model/        # 核心邏輯與資料模型 (ViewModel, PoHelper, PoEntry)
+├── ui/           # 主要 UI 畫面 (EntryBrowser, EntryEditor, ConfigScreen)
 ├── theme/        # Material 3 主題設定
 ├── widget/       # 共用 UI 元件
 └── generated/    # Compose Resources 自動生成的代碼

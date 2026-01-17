@@ -16,7 +16,7 @@ import dolphin.desktop.apps.onitranslator.model.EntryTagType
 import org.jetbrains.compose.resources.stringResource
 
 @Composable
-fun TextTag(
+fun EntryTagChip(
     text: String,
     modifier: Modifier = Modifier,
     containerColor: Color = MaterialTheme.colorScheme.surfaceVariant,
@@ -38,8 +38,8 @@ fun TextTag(
 }
 
 @Composable
-fun TextTag(tagType: EntryTagType, modifier: Modifier = Modifier, text: String = stringResource(tagType.label)) {
-    TextTag(
+fun EntryTagChip(tagType: EntryTagType, modifier: Modifier = Modifier, text: String = stringResource(tagType.label)) {
+    EntryTagChip(
         text = text,
         modifier = modifier,
         containerColor = tagType.containerColor(MaterialTheme.colorScheme),

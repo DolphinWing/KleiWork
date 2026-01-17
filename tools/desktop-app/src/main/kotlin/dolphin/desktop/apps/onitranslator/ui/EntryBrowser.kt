@@ -1,4 +1,4 @@
-package dolphin.desktop.apps.onitranslator.pane
+package dolphin.desktop.apps.onitranslator.ui
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.snap
@@ -57,14 +57,14 @@ import dolphin.desktop.apps.onitranslator.generated.resources.empty_list_title
 import dolphin.desktop.apps.onitranslator.model.AppState
 import dolphin.desktop.apps.onitranslator.model.EditorData
 import dolphin.desktop.apps.onitranslator.model.EntryTagType
-import dolphin.desktop.apps.onitranslator.model.WordEntry
+import dolphin.desktop.apps.onitranslator.model.PoEntry
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
-import dolphin.desktop.apps.onitranslator.widget.TextTag
+import dolphin.desktop.apps.onitranslator.widget.EntryTagChip
 import org.jetbrains.compose.resources.stringResource
 import kotlin.math.max
 
 @Composable
-fun EntryListPane(
+fun EntryBrowser(
     state: AppState,
     onEvent: (AppEvent) -> Unit,
     modifier: Modifier = Modifier,
@@ -88,7 +88,7 @@ fun EntryListPane(
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 items(10) {
-                    EntryViewPlaceholder()
+                    EntryItemPlaceholder()
                 }
             }
         } else if (list.isEmpty()) {
@@ -140,7 +140,7 @@ fun EntryListPane(
                     val originalIndex = if (isSearchMode) -1 else index
                     val changedValue = if (isSearchMode) 0L else state.changedList.getOrNull(index) ?: 0L
                     val selected = state.uiState.editorData == entry
-                    M3EntryView(
+                    EntryItemView(
                         data = entry,
                         onItemClick = { onEvent(AppEvent.Editor.Select(it)) },
                         index = originalIndex, // Pass original index or -1 if not available
@@ -155,10 +155,10 @@ fun EntryListPane(
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
-private fun M3EntryView(
+private fun EntryItemView(
     data: EditorData,
     modifier: Modifier = Modifier,
-    onItemClick: (WordEntry) -> Unit = {},
+    onItemClick: (PoEntry) -> Unit = {},
     index: Int = 0,
     changed: Long = 0L,
     selected: Boolean = false,
@@ -215,7 +215,7 @@ private fun M3EntryView(
 
             // Main translated text - give it prominence
             Text(
-                text = data.target.translated(),
+                text = data.target.msgStr(),
                 style = MaterialTheme.typography.bodyLarge,
                 color = MaterialTheme.colorScheme.onSurface,
                 fontFamily = FontFamily.Monospace,
@@ -228,15 +228,15 @@ private fun M3EntryView(
                 horizontalAlignment = Alignment.Start,
                 verticalArrangement = Arrangement.spacedBy(4.dp),
             ) {
-                // Templated
-                TextTag(tagType = EntryTagType.Templated, text = data.templateText)
+                // Original
+                EntryTagChip(tagType = EntryTagType.Original, text = data.templateText)
                 // Simplified
                 data.referenceText?.let {
-                    TextTag(tagType = EntryTagType.Simplified, text = it)
+                    EntryTagChip(tagType = EntryTagType.Simplified, text = it)
                 }
                 // Old translated
                 data.draftText?.let {
-                    TextTag(tagType = EntryTagType.Translated, text = it)
+                    EntryTagChip(tagType = EntryTagType.Translated, text = it)
                 }
             }
         }
@@ -244,7 +244,7 @@ private fun M3EntryView(
 }
 
 @Composable
-private fun EntryViewPlaceholder(modifier: Modifier = Modifier) {
+private fun EntryItemPlaceholder(modifier: Modifier = Modifier) {
     OutlinedCard(
         modifier = modifier.fillMaxWidth(),
     ) {
@@ -268,8 +268,8 @@ private fun EntryViewPlaceholder(modifier: Modifier = Modifier) {
 // Previews for M3EntryListPane components
 @Preview
 @Composable
-private fun M3EntryViewPreview() {
-    val sampleEntry = WordEntry("STRINGS.UI.PREVIEW.KEY", "The quick brown fox jumps over the lazy dog.")
+private fun EntryItemPreview() {
+    val sampleEntry = PoEntry("STRINGS.UI.PREVIEW.KEY", "The quick brown fox jumps over the lazy dog.")
     val defaultViewData = EditorData(
         target = sampleEntry.copy(newly = false),
         templateText = "Template text <placeholde r>",
@@ -284,9 +284,9 @@ private fun M3EntryViewPreview() {
             OniTranslatorTheme(darkTheme = darkTheme) {
                 Surface(color = MaterialTheme.colorScheme.surfaceDim) {
                     Column(Modifier.width(360.dp).padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                        M3EntryView(data = defaultViewData, index = ++index)
-                        M3EntryView(data = newEntryViewData, index = ++index, changed = 1L)
-                        M3EntryView(data = defaultViewData, index = ++index, selected = true)
+                        EntryItemView(data = defaultViewData, index = ++index)
+                        EntryItemView(data = newEntryViewData, index = ++index, changed = 1L)
+                        EntryItemView(data = defaultViewData, index = ++index, selected = true)
                     }
                 }
             }
@@ -296,15 +296,15 @@ private fun M3EntryViewPreview() {
 
 @Preview
 @Composable
-private fun EntryViewPlaceholderPreview() {
+private fun EntryItemPlaceholderPreview() {
     Column(modifier = Modifier.padding(16.dp)) {
         OniTranslatorTheme(darkTheme = false) {
-            EntryViewPlaceholder()
-            EntryViewPlaceholder()
+            EntryItemPlaceholder()
+            EntryItemPlaceholder()
         }
         OniTranslatorTheme(darkTheme = true) {
-            EntryViewPlaceholder()
-            EntryViewPlaceholder()
+            EntryItemPlaceholder()
+            EntryItemPlaceholder()
         }
     }
 }

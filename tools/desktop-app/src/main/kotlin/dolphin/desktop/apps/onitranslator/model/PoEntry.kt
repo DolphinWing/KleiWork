@@ -10,7 +10,7 @@ package dolphin.desktop.apps.onitranslator.model
  * @property newly true if the entry is a new one in latest update
  * @property changed non-zero value as last changed time
  */
-data class WordEntry(
+data class PoEntry(
     val key: String,
     val text: String,
     val id: String,
@@ -22,7 +22,7 @@ data class WordEntry(
         /**
          * Convert 4-line data from Klei PO file.
          */
-        fun from(line1: String, line2: String, line3: String, line4: String): WordEntry? {
+        fun from(line1: String, line2: String, line3: String, line4: String): PoEntry? {
             val key = if (line1.startsWith("#.") or line1.startsWith("#:")) {
                 line1.substring(3)
             } else line1
@@ -36,18 +36,9 @@ data class WordEntry(
                 line4.substring(7)
             } else line4
             return if (key.isNotEmpty() and id.isNotEmpty() and str.isNotEmpty()) {
-                WordEntry(key, txt, id, str)
+                PoEntry(key, txt, id, str)
             } else null
         }
-
-//        fun from(line1: String, line3: String, line4: String): WordEntry? {
-//            return from(line1, "", line3, line4)
-//        }
-
-        /**
-         * @return default entry creator
-         */
-        fun default(): WordEntry = WordEntry("", "", "", "")
 
         /**
          * Drop quote from string start and string end.
@@ -66,7 +57,7 @@ data class WordEntry(
     override fun hashCode(): Int = id.hashCode() + str.hashCode()
 
     override fun equals(other: Any?): Boolean {
-        val that = other as? WordEntry
+        val that = other as? PoEntry
         return (that?.key == this.key && that.id == this.id && that.str == this.str)
     }
 
@@ -78,10 +69,10 @@ data class WordEntry(
     /**
      * @return entry text before translation
      */
-    fun origin(): String = id.dropQuote()
+    fun msgId(): String = id.dropQuote()
 
     /**
      * @return entry text after translation
      */
-    fun translated(): String = str.dropQuote()
+    fun msgStr(): String = str.dropQuote()
 }

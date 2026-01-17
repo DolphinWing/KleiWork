@@ -150,7 +150,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         }
     }
 
-    private fun loadEditorData(entry: WordEntry?) {
+    private fun loadEditorData(entry: PoEntry?) {
         val data = requestEditorData(entry)
         updateUiState { it.copy(editorData = data) }
     }
@@ -257,9 +257,9 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         updateUiState { it.copy(searchState = it.searchState.copy(text = text, type = type)) }
         val searchResult = helper?.allValues()?.filter { item ->
             when (type) {
-                SearchType.Origin -> item.origin()
+                SearchType.Origin -> item.msgId()
                 SearchType.Key -> item.key()
-                SearchType.Text -> item.translated()
+                SearchType.Text -> item.msgStr()
             }.contains(text, ignoreCase = true)
         }?.mapNotNull { entry -> requestEditorData(entry) } ?: emptyList()
         updateUiState { it.copy(searchState = it.searchState.copy(results = searchResult)) }
@@ -281,13 +281,13 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         }
     }
 
-    private fun requestEditorData(entry: WordEntry?): EditorData? {
+    private fun requestEditorData(entry: PoEntry?): EditorData? {
         val h = helper ?: return null
         return if (entry == null) null else {
             val key = entry.key
-            val templateText = h.templateText(key)?.origin() ?: entry.origin()
-            val referenceText = h.simplified(key)?.translated()
-            val draftText = h.drafted(key)?.translated()
+            val templateText = h.templateText(key)?.msgId() ?: entry.msgId()
+            val referenceText = h.simplified(key)?.msgStr()
+            val draftText = h.drafted(key)?.msgStr()
             EditorData(entry, templateText, referenceText, draftText)
         }
     }

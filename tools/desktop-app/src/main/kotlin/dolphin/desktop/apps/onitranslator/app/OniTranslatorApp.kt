@@ -44,9 +44,9 @@ import dolphin.desktop.apps.onitranslator.model.AppState
 import dolphin.desktop.apps.onitranslator.model.LogEntry
 import dolphin.desktop.apps.onitranslator.model.LogType
 import dolphin.desktop.apps.onitranslator.model.OniDialogState
-import dolphin.desktop.apps.onitranslator.pane.ConfigDialogContent
-import dolphin.desktop.apps.onitranslator.pane.EditorPane
-import dolphin.desktop.apps.onitranslator.pane.EntryListPane
+import dolphin.desktop.apps.onitranslator.ui.ConfigDialogContent
+import dolphin.desktop.apps.onitranslator.ui.EntryEditor
+import dolphin.desktop.apps.onitranslator.ui.EntryBrowser
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.OniSnackbarHost
 import org.jetbrains.compose.resources.stringResource
@@ -94,7 +94,7 @@ fun OniTranslatorApp(
                         }
                     }
                     Row(modifier = Modifier.fillMaxSize()) {
-                        EntryListPane(
+                        EntryBrowser(
                             state = state,
                             onEvent = onEvent,
                             modifier = Modifier.weight(0.4f),
@@ -103,7 +103,7 @@ fun OniTranslatorApp(
                             modifier = Modifier.fillMaxHeight().width(1.dp),
                             color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)
                         )
-                        EditorPane(
+                        EntryEditor(
                             entry = state.uiState.editorData,
                             modifier = Modifier.weight(0.6f),
                             onEvent = onEvent,

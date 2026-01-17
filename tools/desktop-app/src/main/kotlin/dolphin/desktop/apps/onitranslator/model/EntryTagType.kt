@@ -9,18 +9,18 @@ import dolphin.desktop.apps.onitranslator.generated.resources.toolbar_template_t
 import org.jetbrains.compose.resources.StringResource
 
 enum class EntryTagType(val label: StringResource) {
-    Templated(Res.string.toolbar_template_text),
+    Original(Res.string.toolbar_template_text),
     Simplified(Res.string.toolbar_simplified_text),
     Translated(Res.string.toolbar_old_translated);
 
     fun containerColor(colorScheme: ColorScheme): Color = when (this) {
-        Templated -> colorScheme.primaryContainer
+        Original -> colorScheme.primaryContainer
         Simplified -> colorScheme.secondaryContainer
         Translated -> colorScheme.tertiaryContainer
     }
 
     fun contentColor(colorScheme: ColorScheme): Color = when (this) {
-        Templated -> colorScheme.onPrimaryContainer
+        Original -> colorScheme.onPrimaryContainer
         Simplified -> colorScheme.onSecondaryContainer
         Translated -> colorScheme.onTertiaryContainer
     }

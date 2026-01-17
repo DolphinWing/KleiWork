@@ -1,4 +1,4 @@
-package dolphin.desktop.apps.onitranslator.pane
+package dolphin.desktop.apps.onitranslator.ui
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.Image
@@ -53,14 +53,14 @@ import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_show_link
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_use_this_text
 import dolphin.desktop.apps.onitranslator.model.EditorData
 import dolphin.desktop.apps.onitranslator.model.EntryTagType
-import dolphin.desktop.apps.onitranslator.model.WordEntry
+import dolphin.desktop.apps.onitranslator.model.PoEntry
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.TooltipIconButton
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 
 @Composable
-fun EditorPane(
+fun EntryEditor(
     entry: EditorData?,
     onEvent: (AppEvent) -> Unit,
     modifier: Modifier = Modifier,
@@ -77,19 +77,19 @@ fun EditorPane(
         }
     } else {
         key(entry) { // reset all states
-            EditorSection(entry, onEvent, onConvert, modifier)
+            EntryEditorSection(entry, onEvent, onConvert, modifier)
         }
     }
 }
 
 @Preview
 @Composable
-private fun M3EditorPanePreviewEmpty() {
+private fun EntryEditorPreviewEmpty() {
     Column {
         arrayOf(false, true).forEach { darkTheme ->
             OniTranslatorTheme(darkTheme) {
                 Surface {
-                    EditorPane(entry = null, modifier = Modifier.height(320.dp), onEvent = {})
+                    EntryEditor(entry = null, modifier = Modifier.height(320.dp), onEvent = {})
                 }
             }
         }
@@ -98,8 +98,8 @@ private fun M3EditorPanePreviewEmpty() {
 
 @Preview
 @Composable
-private fun M3EditorPanePreviewLight() {
-    val sampleEntry = WordEntry(
+private fun EntryEditorPreviewLight() {
+    val sampleEntry = PoEntry(
         key = "STRINGS.key",
         id = "This is sample text",
     )
@@ -107,15 +107,15 @@ private fun M3EditorPanePreviewLight() {
 
     OniTranslatorTheme(darkTheme = false) {
         Surface {
-            EditorPane(entry = data, onEvent = {})
+            EntryEditor(entry = data, onEvent = {})
         }
     }
 }
 
 @Preview
 @Composable
-private fun M3EditorPanePreviewDark() {
-    val sampleEntry = WordEntry(
+private fun EntryEditorPreviewDark() {
+    val sampleEntry = PoEntry(
         key = "STRINGS.key",
         text = "STRING.key",
         id = "This is sample text",
@@ -125,25 +125,25 @@ private fun M3EditorPanePreviewDark() {
 
     OniTranslatorTheme(darkTheme = true) {
         Surface {
-            EditorPane(entry = data, onEvent = {})
+            EntryEditor(entry = data, onEvent = {})
         }
     }
 }
 
 @Composable
-private fun EditorSection(
+private fun EntryEditorSection(
     entry: EditorData,
     onEvent: (AppEvent) -> Unit,
     onConvert: (String) -> String,
     modifier: Modifier = Modifier,
 ) {
-    var editedText by remember { mutableStateOf(entry.target.translated()) }
-    val isChanged = editedText != entry.target.translated()
+    var editedText by remember { mutableStateOf(entry.target.msgStr()) }
+    val isChanged = editedText != entry.target.msgStr()
     var showRefs by remember { mutableStateOf(true) }
     var showDraft by remember { mutableStateOf(true) }
 
     LaunchedEffect(entry) {
-        editedText = entry.target.translated()
+        editedText = entry.target.msgStr()
     }
 
     Column(
@@ -222,12 +222,12 @@ private fun ReferenceSection(
 ) {
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         ReferenceView(
-            entry.templateText, type = EntryTagType.Templated,
+            entry.templateText, type = EntryTagType.Original,
             onCopyToClipboard = { text ->
                 val textToCopy = text.ifBlank {
                     var t = "msgctxt \"${entry.target.key()}\"\n"
                     t += "msgid \"${entry.templateText}\"\n"
-                    t += "msgstr \"${entry.target.translated()}\""
+                    t += "msgstr \"${entry.target.msgStr()}\""
                     t
                 }
                 onCopyToClipboard.invoke(textToCopy)
@@ -269,7 +269,7 @@ private fun ReferenceView(
 
     if (linkSelector) {
         Dialog(onDismissRequest = { linkSelector = false }) {
-            AlertRegexLinkSelector(links, onSelected = {
+            LinkSelectorContent(links, onSelected = {
                 onCopyToClipboard?.invoke(it)
                 linkSelector = false
             })
@@ -319,7 +319,7 @@ private fun ReferenceView(
 
 @Preview
 @Composable
-private fun M3EditorPanePreviewReferenceView() {
+private fun ReferenceViewPreview() {
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         arrayOf(false, true).forEach { darkTheme ->
             OniTranslatorTheme(darkTheme) {
@@ -327,7 +327,7 @@ private fun M3EditorPanePreviewReferenceView() {
                     Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                         ReferenceView(
                             "template text <link=\\\"DATABANK\\\">Data Banks</link>",
-                            EntryTagType.Templated,
+                            EntryTagType.Original,
                             onCopyToClipboard = {})
                         ReferenceView("simplified text", EntryTagType.Simplified, onReplace = {})
                         ReferenceView("draft text", EntryTagType.Translated, onReplace = {})
@@ -365,7 +365,7 @@ private fun SimpleSwitch(
 
 @Preview
 @Composable
-private fun M3EditorPanePreviewSimpleSwitch() {
+private fun SimpleSwitchPreview() {
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         arrayOf(false, true).forEach { darkTheme ->
             OniTranslatorTheme(darkTheme) {
@@ -388,7 +388,7 @@ private fun M3EditorPanePreviewSimpleSwitch() {
 }
 
 @Composable
-private fun AlertRegexLinkSelector(links: Sequence<MatchResult>, onSelected: (String) -> Unit) {
+private fun LinkSelectorContent(links: Sequence<MatchResult>, onSelected: (String) -> Unit) {
     Column(
         modifier = Modifier
             .background(MaterialTheme.colorScheme.surface, MaterialTheme.shapes.medium)
@@ -410,7 +410,7 @@ private fun AlertRegexLinkSelector(links: Sequence<MatchResult>, onSelected: (St
 
 @Preview
 @Composable
-private fun M3EditorPanePreviewLinkSelector() {
+private fun LinkSelectorPreview() {
     val text = "Sample <link=\\\"DATABANK\\\">Data Banks</link> and <link=\\\"MAP\\\">Map</link>"
     val regex = Regex("<link=([^>]+)>([^<]+)</link>")
     val links = regex.findAll(text)
@@ -418,12 +418,12 @@ private fun M3EditorPanePreviewLinkSelector() {
     Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
         OniTranslatorTheme(darkTheme = false) {
             Surface {
-                AlertRegexLinkSelector(links = links, onSelected = {})
+                LinkSelectorContent(links = links, onSelected = {})
             }
         }
         OniTranslatorTheme(darkTheme = true) {
             Surface {
-                AlertRegexLinkSelector(links = links, onSelected = {})
+                LinkSelectorContent(links = links, onSelected = {})
             }
         }
     }

@@ -1,4 +1,4 @@
-package dolphin.desktop.apps.onitranslator.pane
+package dolphin.desktop.apps.onitranslator.ui
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.layout.Arrangement
@@ -36,7 +36,7 @@ import java.io.File
 import javax.swing.JFileChooser
 
 /**
- * M3ConfigPane provides a Material Design 3 interface for configuring application paths.
+ * ConfigScreen provides a Material Design 3 interface for configuring application paths.
  * It allows users to set paths for the strings.xml file, ONI workshop directory, and ONI assets directory.
  * It also supports a "GitHub Root" feature to auto-populate paths based on a selected root directory.
  *
@@ -48,7 +48,7 @@ import javax.swing.JFileChooser
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ConfigPane(
+fun ConfigScreen(
     configs: Configs,
     onConfigChange: ((configs: Configs) -> Unit)? = null,
     onApply: (Configs) -> Unit = {},
@@ -136,7 +136,7 @@ internal fun ConfigDialogContent(
         color = MaterialTheme.colorScheme.surface,
         shape = MaterialTheme.shapes.medium, // Apply rounded corners
     ) {
-        ConfigPane(
+        ConfigScreen(
             configs = configs,
             onConfigChange = onConfigChange,
             onCancel = onDismissRequest,
@@ -147,10 +147,10 @@ internal fun ConfigDialogContent(
 // Previews for M3ConfigPane components
 @Preview
 @Composable
-private fun M3ConfigPanePreviewLight() {
+private fun ConfigScreenPreviewLight() {
     OniTranslatorTheme(darkTheme = false) {
         Surface {
-            ConfigPane(
+            ConfigScreen(
                 configs = Configs(
                     dataBankPath = "/path/to/strings.xml",
                     oniWorkshopDir = "/path/to/workshop",
@@ -163,10 +163,10 @@ private fun M3ConfigPanePreviewLight() {
 
 @Preview
 @Composable
-private fun M3ConfigPanePreviewDark() {
+private fun ConfigScreenPreviewDark() {
     OniTranslatorTheme(darkTheme = true) {
         Surface {
-            ConfigPane(
+            ConfigScreen(
                 configs = Configs(
                     dataBankPath = "", // Test error case
                     oniWorkshopDir = "/path/to/workshop",

@@ -3,7 +3,7 @@ package dolphin.desktop.apps.onitranslator.app
 import dolphin.desktop.apps.onitranslator.model.Configs
 import dolphin.desktop.apps.onitranslator.model.SearchType
 import dolphin.desktop.apps.onitranslator.model.UiState
-import dolphin.desktop.apps.onitranslator.model.WordEntry
+import dolphin.desktop.apps.onitranslator.model.PoEntry
 
 /**
  * Represents all possible user interactions and system events that can trigger state changes
@@ -51,10 +51,10 @@ sealed interface AppEvent {
      */
     sealed interface Editor : AppEvent {
         // Select a specific translation entry to display in the editor panel
-        data class Select(val entry: WordEntry?) : Editor
+        data class Select(val entry: PoEntry?) : Editor
 
         // Update the content of a specific translation entry
-        data class Save(val entry: WordEntry, val newText: String) : Editor
+        data class Save(val entry: PoEntry, val newText: String) : Editor
     }
 
     /**

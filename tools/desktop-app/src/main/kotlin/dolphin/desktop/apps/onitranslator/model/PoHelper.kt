@@ -41,16 +41,16 @@ class PoHelper(
         private const val MAX_LOG_SIZE = 200
     }
 
-    private val templateMap = LinkedHashMap<String, WordEntry>()
-    private val simplifiedMap = HashMap<String, WordEntry>()
-    private val translatedEntries = HashMap<String, WordEntry>()
-    private val draftEntries = HashMap<String, WordEntry>()
-    private val wordList: MutableList<WordEntry> = mutableListOf()
+    private val templateMap = LinkedHashMap<String, PoEntry>()
+    private val simplifiedMap = HashMap<String, PoEntry>()
+    private val translatedEntries = HashMap<String, PoEntry>()
+    private val draftEntries = HashMap<String, PoEntry>()
+    private val entryList: MutableList<PoEntry> = mutableListOf()
 
-    fun templateText(key: String): WordEntry? = templateMap[key]
-    fun simplified(key: String): WordEntry? = simplifiedMap[key]
-    fun drafted(key: String): WordEntry? = draftEntries[key]
-    fun allValues(): List<WordEntry> = wordList.toList()
+    fun templateText(key: String): PoEntry? = templateMap[key]
+    fun simplified(key: String): PoEntry? = simplifiedMap[key]
+    fun drafted(key: String): PoEntry? = draftEntries[key]
+    fun allValues(): List<PoEntry> = entryList.toList()
 
     private val _loading = MutableStateFlow(true)
     val loading: StateFlow<Boolean> = _loading
@@ -75,9 +75,9 @@ class PoHelper(
         val startTime = System.currentTimeMillis()
 
         loadAllSources()
-        buildWordList()
+        buildPoList()
 
-        writeEntryToFile(getCachedFile(), wordList)
+        writeEntryToFile(getCachedFile(), entryList)
         val cost = System.currentTimeMillis() - startTime
         log("Translation process finished in $cost ms")
         _loading.emit(false)
@@ -107,23 +107,23 @@ class PoHelper(
         }
     }
 
-    private suspend fun buildWordList() {
+    private suspend fun buildPoList() {
         log("Building word list...")
-        wordList.clear()
+        entryList.clear()
         templateMap.values.filter { entry ->
-            (entry.translated().isEmpty() && entry.origin().isNotEmpty()) && // no translation
-                    !entry.translated().startsWith("only_used_by") // from dst
+            (entry.msgStr().isEmpty() && entry.msgId().isNotEmpty()) && // no translation
+                    !entry.msgStr().startsWith("only_used_by") // from dst
         }.forEach { entry ->
-            val newEntry = buildWordEntry(entry)
-            wordList.add(newEntry)
+            val newEntry = buildPoEntry(entry)
+            entryList.add(newEntry)
         }
-        log("New word list size: ${wordList.size}")
+        log("New word list size: ${entryList.size}")
     }
 
     /**
-     * Builds a single [WordEntry] by merging data from template, simplified, and translated sources.
+     * Builds a single [PoEntry] by merging data from template, simplified, and translated sources.
      */
-    private fun buildWordEntry(templateEntry: WordEntry): WordEntry {
+    private fun buildPoEntry(templateEntry: PoEntry): PoEntry {
         val key = templateEntry.key
         var isNewly = false
         var newStr = ""
@@ -141,7 +141,7 @@ class PoHelper(
 
         if (newStr.isEmpty()) {
             isNewly = true
-            newStr = simplifiedMap[key]?.str ?: templateEntry.origin()
+            newStr = simplifiedMap[key]?.str ?: templateEntry.msgId()
             newStr = TextRefinery.sc2tc(newStr)
         }
 
@@ -153,16 +153,16 @@ class PoHelper(
             isNewly = true
         }
 
-        return WordEntry(key, templateEntry.text, templateEntry.id, newStr, isNewly)
+        return PoEntry(key, templateEntry.text, templateEntry.id, newStr, isNewly)
     }
 
-    private fun loadAssetFile(name: String): List<WordEntry> {
+    private fun loadAssetFile(name: String): List<PoEntry> {
         val dir = if (name == ONI_PO) configs.oniWorkshopDir else configs.oniAssetsDir
         val file = File(dir, name)
         return loadFile(file)
     }
 
-    private fun loadFile(file: File): List<WordEntry> {
+    private fun loadFile(file: File): List<PoEntry> {
         log("Loading file: ${file.absolutePath}")
         return if (file.exists()) {
             try {
@@ -179,10 +179,10 @@ class PoHelper(
         }
     }
 
-    private fun parsePoFile(reader: BufferedReader): List<WordEntry> {
+    private fun parsePoFile(reader: BufferedReader): List<PoEntry> {
         // A more robust implementation would handle multi-line msgid/msgstr and other edge cases.
         // For now, this simple 4-line parser is retained.
-        val list = mutableListOf<WordEntry>()
+        val list = mutableListOf<PoEntry>()
         var line: String?
         while (reader.readLine().also { line = it } != null) {
             if (!line!!.startsWith("#.")) continue
@@ -192,23 +192,23 @@ class PoHelper(
             val line3 = reader.readLine() ?: break // msgid
             val line4 = reader.readLine() ?: break // msgstr
 
-            WordEntry.from(line1, line2, line3, line4)?.let { list.add(it) }
+            PoEntry.from(line1, line2, line3, line4)?.let { list.add(it) }
                 ?: log("Invalid PO entry starting with: $line1", LogType.Warning)
         }
         return list
     }
 
     fun update(key: String, value: String) {
-        wordList.find { it.key == key }?.apply {
+        entryList.find { it.key == key }?.apply {
             str = value
             changed = System.currentTimeMillis()
             log("Updated '$key'.")
         }
     }
 
-    fun buildChangeList(): List<WordEntry> = wordList.filter { it.changed > 0 || it.newly }
+    fun buildChangeList(): List<PoEntry> = entryList.filter { it.changed > 0 || it.newly }
 
-    suspend fun writeTranslationFile(output: File, list: List<WordEntry> = wordList): Boolean = withContext(Dispatchers.IO) {
+    suspend fun writeTranslationFile(output: File, list: List<PoEntry> = entryList): Boolean = withContext(Dispatchers.IO) {
         _loading.emit(true)
         val start = System.currentTimeMillis()
         val result = writeEntryToFile(output, list)
@@ -229,7 +229,7 @@ class PoHelper(
         return@withContext result
     }
 
-    private fun writeEntryToFile(output: File, list: List<WordEntry>): Boolean {
+    private fun writeEntryToFile(output: File, list: List<PoEntry>): Boolean {
         if (list.isEmpty()) return false
         try {
             output.bufferedWriter(StandardCharsets.UTF_8).use { writer ->

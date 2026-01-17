@@ -26,7 +26,7 @@ import dolphin.desktop.apps.onitranslator.generated.resources.status_loading
 import dolphin.desktop.apps.onitranslator.model.AppState
 import dolphin.desktop.apps.onitranslator.model.EntryTagType
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
-import dolphin.desktop.apps.onitranslator.widget.TextTag
+import dolphin.desktop.apps.onitranslator.widget.EntryTagChip
 import org.jetbrains.compose.resources.stringResource
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -68,7 +68,7 @@ fun OniTranslatorBottomBar(state: AppState, modifier: Modifier = Modifier) {
             VerticalDivider(modifier = Modifier.size(1.dp, 16.dp))
             Spacer(Modifier.width(4.dp))
             EntryTagType.entries.forEach { type ->
-                TextTag(tagType = type)
+                EntryTagChip(tagType = type)
                 Spacer(Modifier.width(4.dp))
             }
             VerticalDivider(modifier = Modifier.size(1.dp, 16.dp))

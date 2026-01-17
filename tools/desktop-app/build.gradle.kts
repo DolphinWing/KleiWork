@@ -12,8 +12,9 @@ plugins {
     alias(libs.plugins.versions.plugin)
 }
 
-group = "dolphin.desktop.apps"
-version = "1.0"
+val projectGroup: String by project
+group = projectGroup
+version = releaseAppVersion
 
 repositories {
     mavenCentral()
