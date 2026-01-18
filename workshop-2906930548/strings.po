@@ -7728,7 +7728,7 @@ msgstr "鑽探{0}：{1}"
 #. STRINGS.BUILDING.STATUSITEMS.SPACEPOIHARVESTING.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SPACEPOIHARVESTING.TOOLTIP"
 msgid "This <style=\"KKeyword\">Drillcone</style> is breaking up space debris into harvestable resources\n\nHarvestable resources can be retrieved by a a rocket equipped with a <style=\"KKeyword\">Cargo Bay</style> module"
-msgstr "這個<style=\"KKeyword\">鑽頭錐體</style>正在將太空碎片分解成可採集的資源\n\n可採集的資源可由裝備了<style=\"KKeyword\">貨艙</style>模組的火箭回收"
+msgstr "此<style=\"KKeyword\">鑽頭鼻錐</style>正將太空碎屑分解為可收穫資源\n\n可收穫資源可由裝備了<style=\"KKeyword\">貨艙</style>模組的火箭回收"
 
 #. STRINGS.BUILDING.STATUSITEMS.SPECIALCARGOBAYCLUSTERCRITTERSTORED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SPECIALCARGOBAYCLUSTERCRITTERSTORED.NAME"
@@ -17148,7 +17148,7 @@ msgstr "消耗{1}、{2}和{3}產出{0}。"
 #. STRINGS.BUILDINGS.PREFABS.MISSILELAUNCHER.BODY.CONTAINER1
 msgctxt "STRINGS.BUILDINGS.PREFABS.MISSILELAUNCHER.BODY.CONTAINER1"
 msgid "Fires <link=\"MISSILELAUNCHER\">Blastshot</link> shells at meteor showers to defend the colony from impact-related damage.\n\nRange: 16 tiles horizontally, 32 tiles vertically.\n\nMeteors that have been blown to smithereens leave behind no harvestable resources."
-msgstr "在流星雨期間發射<link=\"MISSILELAUNCHER\">爆破彈</link>以免受殖民地遭受撞擊損壞。\n\n範圍：水平16格，垂直32格。\n\n炸成碎片的流星不會留下可獲得的資源。"
+msgstr "在流星雨期間發射<link=\"MISSILELAUNCHER\">爆破彈</link>以免受殖民地遭受撞擊損壞。\n\n範圍：水平16格，垂直32格。\n\n炸成碎片的流星不會留下可收穫的資源。"
 
 #. STRINGS.BUILDINGS.PREFABS.MISSILELAUNCHER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.MISSILELAUNCHER.DESC"
@@ -33578,7 +33578,7 @@ msgstr "<link=\"ALGAESTEGO\">藻華豐足劍龍寶寶</link>"
 #. STRINGS.CREATURES.SPECIES.ALGAE_STEGO.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.ALGAE_STEGO.DESC"
 msgid "Blum Lumbs are non-hostile critters that produce <link=\"ALGAE\">Algae</link>.\n\nWhen they stomp heavily near <link=\"PLANTS\">plants</link>, the commotion causes harvestable items to fall to the ground."
-msgstr "藻華豐足劍龍是一種無害的生物，牠們會產生<link=\"ALGAE\">藻類</link>。\n\n當牠們靠近<link=\"PLANTS\">植物</link>重踏時，這種騷動會導致可收成的物品掉落地面。"
+msgstr "藻華豐足劍龍是一種無害的生物，牠們會產生<link=\"ALGAE\">藻類</link>。\n\n當牠們靠近<link=\"PLANTS\">植物</link>重踏時，這種騷動會導致可收穫的物品掉落地面。"
 
 #. STRINGS.CREATURES.SPECIES.ALGAE_STEGO.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.ALGAE_STEGO.EGG_NAME"
@@ -33668,7 +33668,7 @@ msgstr "<link=\"BEE\">輻射蜂</link>"
 #. STRINGS.CREATURES.SPECIES.BLUE_GRASS.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.BLUE_GRASS.DESC"
 msgid "Alveo Veras consume <link=\"CARBONDIOXIDE\">Carbon Dioxide</link> and <link=\"ICE\">Ice</link>, and form harvestable <link=\"OXYROCK\">Oxylite</link> deposits."
-msgstr "多孔蘆薈能消耗<link=\"CARBONDIOXIDE\">二氧化碳</link>和<link=\"ICE\">冰</link>，並形成可收成的<link=\"OXYROCK\">氧石</link>沉積物。"
+msgstr "多孔蘆薈能消耗<link=\"CARBONDIOXIDE\">二氧化碳</link>和<link=\"ICE\">冰</link>，並形成可收穫的<link=\"OXYROCK\">氧石</link>沉積物。"
 
 #. STRINGS.CREATURES.SPECIES.BLUE_GRASS.DOMESTICATEDDESC
 msgctxt "STRINGS.CREATURES.SPECIES.BLUE_GRASS.DOMESTICATEDDESC"
@@ -35603,7 +35603,7 @@ msgstr "<link=\"RAPTOR\">霸王鸚</link>"
 #. STRINGS.CREATURES.SPECIES.SALTPLANT.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SALTPLANT.DESC"
 msgid "Dasha Saltvines consume small amounts of <link=\"CHLORINEGAS\">Chlorine Gas</link> and form sodium deposits as they grow, producing harvestable <link=\"SALT\">Salt</link>."
-msgstr "沙鹽藤在生長時會消耗少量的<link=\"CHLORINE\">氯氣</link>，形成鈉結晶，產生可採集的<link=\"SALT\">鹽</link>。"
+msgstr "沙鹽藤在生長時會消耗少量的<link=\"CHLORINE\">氯氣</link>，形成鈉結晶，產生可收穫的<link=\"SALT\">鹽</link>。"
 
 #. STRINGS.CREATURES.SPECIES.SALTPLANT.DOMESTICATEDDESC
 msgctxt "STRINGS.CREATURES.SPECIES.SALTPLANT.DOMESTICATEDDESC"
@@ -36253,7 +36253,7 @@ msgstr "<link=\"STEGO\">豐足劍龍寶寶</link>"
 #. STRINGS.CREATURES.SPECIES.STEGO.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.STEGO.DESC"
 msgid "Lumbs are non-hostile critters that subsist on <link=\"VINEMOTHER\">Ovagro</link> vines.\n\nWhen they stomp heavily near <link=\"PLANTS\">plants</link>, the commotion causes harvestable items to fall to the ground."
-msgstr "豐足劍龍是沒有敵意的小動物，牠們以<link=\"VINEMOTHER\">蔓殖母藤</link>的藤蔓為生。\n\n當牠們靠近<link=\"PLANTS\">植物</link>重踏時，這種騷動會導致可收成的物品掉落地面。"
+msgstr "豐足劍龍是沒有敵意的小動物，牠們以<link=\"VINEMOTHER\">蔓殖母藤</link>的藤蔓為生。\n\n當牠們靠近<link=\"PLANTS\">植物</link>重踏時，這種騷動會導致可收穫的物品掉落地面。"
 
 #. STRINGS.CREATURES.SPECIES.STEGO.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.STEGO.EGG_NAME"
@@ -71053,7 +71053,7 @@ msgstr "冰窟生態"
 #. STRINGS.SUBWORLDS.ICECAVES.UTILITY
 msgctxt "STRINGS.SUBWORLDS.ICECAVES.UTILITY"
 msgid "The below-freezing climate in this biome keeps elements frozen solid, but once a colony has established the means necessary to melt the abundant <link=\"ICE\">Ice</link> deposits, it should be able to produce enough <link=\"WATER\">Water</link> to meet its needs. Initial scans reveal the presence of <link=\"CINNABAR\">Cinnabar Ore</link> that can be used in <link=\"POWER\">Power</link> systems.\n\n<link=\"STABLESNOW\">Snow</link> is a readily available construction material. Note that its structural integrity may be undermined if surrounding areas become hot enough to trigger a state change.\n\n<link=\"HARDSKINBERRY\">Pikeapple Bushes</link> feed both Duplicants and the native <link=\"WOODDEER\">Flox</link>, a critter whose <link=\"WOOD\">Wood</link>, antlers offer a renewable source of fuel and attractive temperature-stable construction materials.\n\nAlthough pockets of <link=\"OXYGEN\">Oxygen</link> allow Duplicants to begin the work of colony-building in this biome, the key to long-term survival is the cultivation of <link=\"BLUEGRASS\">Alveo Vera</link> plants. They produce harvestable <link=\"OXYROCK\">Oxylite</link> and their beauty--much like that of the dreamy <link=\"ICEFLOWER\">Idylla Flower</link>--is a wonderful salve for existential dread."
-msgstr "這種生態中零下環境使得一切都保持在冰凍狀態，但只要殖民地具有了融化豐富的<link=\"ICE\">冰</link>沉積物所需的手段，就能生產足量的<link=\"WATER\">水</link>，滿足殖民地的需要。初步的掃描發現了<link=\"CINNABAR\">辰砂</link>，可用於<link=\"POWER\">電力</link>系統。\n\n<link=\"STABLESNOW\">雪</link>是一種現成的建造材料。要注意，如果周圍環境很熱，導致物態變化，建築的完整性可能會受到破壞。\n\n<link=\"HARDSKINBERRY\">刺殼果灌木</link>既能讓複製人吃飽，也能讓當地的<link=\"WOODDEER\">狐鹿克斯</link>生存，後者的<link=\"WOOD\">木質</link>角提供了一種可再生的燃料來源，以及溫度穩定的吸引人的建築材料。\n\n儘管充滿<link=\"OXYGEN\">氧氣</link>的洞穴能讓複製人在這種生態開始殖民地的建設，但長期生存的關鍵是種植<link=\"BLUEGRASS\">多孔蘆薈</link>。多孔蘆薈能產生可收成的<link=\"OXYROCK\">氧石</link>，其外表的美麗——和夢幻的<link=\"ICEFLOWER\">恬靜花</link>類似——是緩解生存恐懼的絕妙靈藥。"
+msgstr "這種生態中零下環境使得一切都保持在冰凍狀態，但只要殖民地具有了融化豐富的<link=\"ICE\">冰</link>沉積物所需的手段，就能生產足量的<link=\"WATER\">水</link>，滿足殖民地的需要。初步的掃描發現了<link=\"CINNABAR\">辰砂</link>，可用於<link=\"POWER\">電力</link>系統。\n\n<link=\"STABLESNOW\">雪</link>是一種現成的建造材料。要注意，如果周圍環境很熱，導致物態變化，建築的完整性可能會受到破壞。\n\n<link=\"HARDSKINBERRY\">刺殼果灌木</link>既能讓複製人吃飽，也能讓當地的<link=\"WOODDEER\">狐鹿克斯</link>生存，後者的<link=\"WOOD\">木質</link>角提供了一種可再生的燃料來源，以及溫度穩定的吸引人的建築材料。\n\n儘管充滿<link=\"OXYGEN\">氧氣</link>的洞穴能讓複製人在這種生態開始殖民地的建設，但長期生存的關鍵是種植<link=\"BLUEGRASS\">多孔蘆薈</link>。多孔蘆薈能產生可收穫的<link=\"OXYROCK\">氧石</link>，其外表的美麗——和夢幻的<link=\"ICEFLOWER\">恬靜花</link>類似——是緩解生存恐懼的絕妙靈藥。"
 
 #. STRINGS.SUBWORLDS.JUNGLE.DESC
 msgctxt "STRINGS.SUBWORLDS.JUNGLE.DESC"
@@ -73138,7 +73138,7 @@ msgstr "自由漂浮的資源，可由配備貨物模組的火箭收集。\n\n�
 #. STRINGS.UI.CLUSTERMAP.HEXCELL_INVENTORY.NAME
 msgctxt "STRINGS.UI.CLUSTERMAP.HEXCELL_INVENTORY.NAME"
 msgid "Harvestable Resources"
-msgstr "可收集資源"
+msgstr "可收穫資源"
 
 #. STRINGS.UI.CLUSTERMAP.HEXCELL_INVENTORY.UI_PANEL.TITLE
 msgctxt "STRINGS.UI.CLUSTERMAP.HEXCELL_INVENTORY.UI_PANEL.TITLE"
@@ -89488,7 +89488,7 @@ msgstr "被摧毀的引力科技太空站"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.CARBONASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.CARBONASTEROIDFIELD.DESC"
 msgid "An asteroid containing <link=\"REFINEDCARBON\">Refined Carbon</link> and <link=\"CARBON\">Coal</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "含有<link=\"REFINEDCARBON\">精製炭</link>與<link=\"CARBON\">煤炭</link>的小行星。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "含有<link=\"REFINEDCARBON\">精製炭</link>與<link=\"CARBON\">煤炭</link>的小行星。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.CARBONASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.CARBONASTEROIDFIELD.NAME"
@@ -89498,7 +89498,7 @@ msgstr "碳精小行星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.CHLORINECLOUD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.CHLORINECLOUD.DESC"
 msgid "A cloud of harvestable debris containing <link=\"CHLORINEGAS\">Chlorine Gas</link> and <link=\"BLEACHSTONE\">Bleach Stone</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "可採集<link=\"CHLORINEGAS\">氯氣</link>與 <link=\"BLEACHSTONE\">漂白石</link> 的星雲。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "含有<link=\"CHLORINEGAS\">氯氣</link>與<link=\"BLEACHSTONE\">漂白石</link>的可收穫碎屑雲。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.CHLORINECLOUD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.CHLORINECLOUD.NAME"
@@ -89508,7 +89508,7 @@ msgstr "氯星雲"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC2CERESFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC2CERESFIELD.DESC"
 msgid "The harvestable remains of a planet containing <link=\"CINNABAR\">Cinnabar</link>, <link=\"ICE\">Ice</link> and <link=\"MERCURY\">Mercury</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "行星的可收穫殘骸內還有<link=\"CINNABAR\">辰砂</link>、<link=\"ICE\">冰</link>和<link=\"MERCURY\">汞</link>。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "含有<link=\"CINNABAR\">辰砂</link>、<link=\"ICE\">冰</link>和<link=\"MERCURY\">汞</link>的可收穫行星殘骸。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC2CERESFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC2CERESFIELD.NAME"
@@ -89518,7 +89518,7 @@ msgstr "結凍辰砂星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC2CERESOREFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC2CERESOREFIELD.DESC"
 msgid "An asteroid field containing <link=\"CINNABAR\">Cinnabar</link>, <link=\"ICE\">Ice</link> and <link=\"MERCURY\">Mercury</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片包含<link=\"CINNABAR\">辰砂</link>、<link=\"ICE\">冰</link>和<link=\"MERCURY\">汞</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"CINNABAR\">辰砂</link>、<link=\"ICE\">冰</link>和<link=\"MERCURY\">汞</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC2CERESOREFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC2CERESOREFIELD.NAME"
@@ -89528,7 +89528,7 @@ msgstr "凍汞小行星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4IMPACTORDEBRISFIELD1.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4IMPACTORDEBRISFIELD1.DESC"
 msgid "The solid harvestable remains of Demolior, containing <link=\"IRIDIUM\">Iridium</link>, <link=\"MAFICROCK\">Mafic Rock</link>, <link=\"GOLD\">Gold</link>, and <link=\"GRANITE\">Granite</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "毀神星的固體可開採殘骸，內含<link=\"IRIDIUM\">銥</link>、<link=\"MAFICROCK\">基岩</link>、<link=\"GOLD\">金</link>和<link=\"GRANITE\">花崗岩</link>。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "毀神星的固體可開採殘骸，內含<link=\"IRIDIUM\">銥</link>、<link=\"MAFICROCK\">基岩</link>、<link=\"GOLD\">金</link>和<link=\"GRANITE\">花崗岩</link>。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4IMPACTORDEBRISFIELD1.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4IMPACTORDEBRISFIELD1.NAME"
@@ -89538,7 +89538,7 @@ msgstr "毀神星碎片"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4IMPACTORDEBRISFIELD2.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4IMPACTORDEBRISFIELD2.DESC"
 msgid "The harvestable liquid remains of Demolior, containing <link=\"ISORESIN\">Isosap</link>, <link=\"PETROLEUM\">Petroleum</link>, and <link=\"LIQUIDSULFUR\">Liquid Sulfur</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "毀神星的可開採液體殘骸，內含<link=\"ISORESIN\">異構膠晶</link>、<link=\"PETROLEUM\">石油</link>和<link=\"LIQUIDSULFUR\">液態硫</link>。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "毀神星的可開採液體殘骸，內含<link=\"ISORESIN\">異構膠晶</link>、<link=\"PETROLEUM\">石油</link>和<link=\"LIQUIDSULFUR\">液態硫</link>。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4IMPACTORDEBRISFIELD2.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4IMPACTORDEBRISFIELD2.NAME"
@@ -89548,7 +89548,7 @@ msgstr "液體毀神星碎片"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4IMPACTORDEBRISFIELD3.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4IMPACTORDEBRISFIELD3.DESC"
 msgid "The harvestable molten remains of Demolior, containing <link=\"MOLTENIRIDIUM\">Molten Iridium</link>, <link=\"MAGMA\">Magma</link>, <link=\"LIQUIDOXYGEN\">Liquid Oxygen</link>, and <link=\"LIQUIDHYDROGEN\">Liquid Hydrogen</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "毀神星的可開採熔融殘骸，內含<link=\"LIQUIDIRIDIUM\">熔融銥</link>、<link=\"MAGMA\">岩漿</link>、<link=\"LIQUIDOXYGEN\">液態氧</link>和<link=\"LIQUIDHYDROGEN\">液態氫</link>。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "毀神星的可開採熔融殘骸，內含<link=\"LIQUIDIRIDIUM\">熔融銥</link>、<link=\"MAGMA\">岩漿</link>、<link=\"LIQUIDOXYGEN\">液態氧</link>和<link=\"LIQUIDHYDROGEN\">液態氫</link>。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4IMPACTORDEBRISFIELD3.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4IMPACTORDEBRISFIELD3.NAME"
@@ -89558,7 +89558,7 @@ msgstr "熔融毀神星碎片"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4PREHISTORICMIXINGFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4PREHISTORICMIXINGFIELD.DESC"
 msgid "An asteroid field containing <link=\"NICKELORE\">Nickel Ore</link>, <link=\"PEAT\">Peat</link>, <link=\"AMBER\">Amber</link> and <link=\"SHALE\">Shale</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片包含<link=\"NICKELORE\">鎳礦</link>、<link=\"PEAT\">泥炭</link>、<link=\"AMBER\">琥珀</link>和<link=\"SHALE\">頁岩</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"NICKELORE\">鎳礦</link>、<link=\"PEAT\">泥炭</link>、<link=\"AMBER\">琥珀</link>和<link=\"SHALE\">頁岩</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4PREHISTORICMIXINGFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4PREHISTORICMIXINGFIELD.NAME"
@@ -89568,7 +89568,7 @@ msgstr "導電礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4PREHISTORICOREFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4PREHISTORICOREFIELD.DESC"
 msgid "The harvestable remains of a planet containing <link=\"NICKELORE\">Nickel Ore</link>, <link=\"PEAT\">Peat</link>, <link=\"AMBER\">Amber</link> and <link=\"SHALE\">Shale</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一顆星球的可開採殘骸，內含<link=\"NICKELORE\">鎳礦石</link>、<link=\"PEAT\">泥炭</link>、<link=\"AMBER\">琥珀</link>和<link=\"SHALE\">頁岩</link>。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一顆星球的可開採殘骸，內含<link=\"NICKELORE\">鎳礦石</link>、<link=\"PEAT\">泥炭</link>、<link=\"AMBER\">琥珀</link>和<link=\"SHALE\">頁岩</link>。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4PREHISTORICOREFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC4PREHISTORICOREFIELD.NAME"
@@ -89578,7 +89578,7 @@ msgstr "琥珀礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.FORESTYOREFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.FORESTYOREFIELD.DESC"
 msgid "A field of harvestable resources containing <link=\"CARBONDIOXIDE\">Carbon Dioxide</link>, <link=\"IGNEOUSROCK\">Igneous Rock</link> and <link=\"ALUMINUMORE\">Aluminum Ore</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片可採集<link=\"CARBONDIOXIDE\">二氧化碳</link>、<link=\"IGNEOUSROCK\">火成岩</link>與<link=\"ALUMINUMORE\">鋁礦</link>的礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "含有<link=\"CARBONDIOXIDE\">二氧化碳</link>、<link=\"IGNEOUSROCK\">火成岩</link>與<link=\"ALUMINUMORE\">鋁礦</link>的可收穫資源區。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.FORESTYOREFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.FORESTYOREFIELD.NAME"
@@ -89588,7 +89588,7 @@ msgstr "森林礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.FROZENOREFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.FROZENOREFIELD.DESC"
 msgid "An asteroid field containing <link=\"DIRTYICE\">Polluted Ice</link>, <link=\"ICE\">Ice</link>, <link=\"SNOW\">Snow</link> and <link=\"ALUMINUMORE\">Aluminum Ore</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片包含<link=\"DIRTYICE\">汙冰</link>、<link=\"ICE\">冰</link>、<link=\"SNOW\">雪</link>與<link=\"ALUMINUMORE\">鋁礦</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"DIRTYICE\">汙冰</link>、<link=\"ICE\">冰</link>、<link=\"SNOW\">雪</link>與<link=\"ALUMINUMORE\">鋁礦</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.FROZENOREFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.FROZENOREFIELD.NAME"
@@ -89598,7 +89598,7 @@ msgstr "冰凍小行星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GASGIANTCLOUD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GASGIANTCLOUD.DESC"
 msgid "The harvestable remains of a planet containing <link=\"HYDROGEN\">Hydrogen</link> in <link=\"ELEMENTSGAS\">gas</link> form, and <link=\"SOLIDMETHANE\">Methane</link> in <link=\"ELEMENTSSOLID\">solid</link> and <link=\"ELEMENTSLIQUID\">liquid</link> form.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "可開採的小行星殘骸，含有<link=\"ELEMENTSGAS\">氣體</link>形態的<link=\"HYDROGEN\">氫氣</link>以及<link=\"ELEMENTSSOLID\">固體</link>與<link=\"ELEMENTSLIQUID\">液體</link>形態的<link=\"SOLIDMETHANE\">天然氣</link>。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "可開採的小行星殘骸，含有<link=\"ELEMENTSGAS\">氣體</link>形態的<link=\"HYDROGEN\">氫氣</link>以及<link=\"ELEMENTSSOLID\">固體</link>與<link=\"ELEMENTSLIQUID\">液體</link>形態的<link=\"SOLIDMETHANE\">天然氣</link>。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GASGIANTCLOUD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GASGIANTCLOUD.NAME"
@@ -89608,7 +89608,7 @@ msgstr "爆炸巨大星雲"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GILDEDASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GILDEDASTEROIDFIELD.DESC"
 msgid "An asteroid field containing <link=\"GOLD\">Gold</link>, <link=\"FULLERENE\">Fullerene</link>, <link=\"REGOLITH\">Regolith</link> and more.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片包含<link=\"GOLD\">金</link>、<link=\"FULLERENE\">富勒烯</link> 與 <link=\"REGOLITH\">表土</link>和其他東西的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"GOLD\">金</link>、<link=\"FULLERENE\">富勒烯</link> 與 <link=\"REGOLITH\">表土</link>和其他東西的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GILDEDASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GILDEDASTEROIDFIELD.NAME"
@@ -89618,7 +89618,7 @@ msgstr "鍍金小行星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GLIMMERINGASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GLIMMERINGASTEROIDFIELD.DESC"
 msgid "An asteroid field containing <link=\"TUNGSTEN\">Tungsten</link>, <link=\"WOLFRAMITE\">Wolframite</link> and more.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片包含<link=\"TUNGSTEN\">鎢</link>與<link=\"WOLFRAMITE\">黑鎢礦</link>和其他東西的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link> 需要一艘配備有 <link=\"NOSECONEHARVEST\">鑽頭鼻錐</link> 和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"TUNGSTEN\">鎢</link>與<link=\"WOLFRAMITE\">黑鎢礦</link>和其他東西的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link> 需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GLIMMERINGASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.GLIMMERINGASTEROIDFIELD.NAME"
@@ -89628,7 +89628,7 @@ msgstr "微光小行星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.HELIUMCLOUD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.HELIUMCLOUD.DESC"
 msgid "A cloud of resources containing <link=\"WATER\">Water</link> and <link=\"HYDROGEN\">Hydrogen Gas</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "含有<link=\"WATER\">水</link>、<link=\"HYDROGEN\">氫氣</link>。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "含有<link=\"WATER\">水</link>、<link=\"HYDROGEN\">氫氣</link>。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.HELIUMCLOUD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.HELIUMCLOUD.NAME"
@@ -89638,17 +89638,17 @@ msgstr "氦星雲"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ICEASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ICEASTEROIDFIELD.DESC"
 msgid "A cloud of planetary remains containing <link=\"ICE\">Ice</link>, <link=\"CARBONDIOXIDE\">Carbon Dioxide</link>, <link=\"OXYGEN\">Oxygen</link> and <link=\"METHANE\">Natural Gas</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一團含有<link=\"ICE\">冰</link>、<link=\"CARBONDIOXIDE\">二氧化碳</link>、<link=\"OXYGEN\">氧氣</link>與<link=\"METHANE\">天然氣</link>的行星殘骸。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一團含有<link=\"ICE\">冰</link>、<link=\"CARBONDIOXIDE\">二氧化碳</link>、<link=\"OXYGEN\">氧氣</link>與<link=\"METHANE\">天然氣</link>的行星殘骸。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ICEASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ICEASTEROIDFIELD.NAME"
 msgid "Exploded Ice Giant"
-msgstr "爆炸的巨大冰礦場"
+msgstr "碎裂冰巨星"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.INTERSTELLARICEFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.INTERSTELLARICEFIELD.DESC"
 msgid "An asteroid field containing <link=\"ICE\">Ice</link>, <link=\"CARBONDIOXIDE\">Carbon Dioxide</link> and <link=\"OXYGEN\">Oxygen</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片包含<link=\"ICE\">冰</link>、<link=\"CARBONDIOXIDE\">二氧化碳</link>與<link=\"OXYGEN\">氧氣</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"ICE\">冰</link>、<link=\"CARBONDIOXIDE\">二氧化碳</link>與<link=\"OXYGEN\">氧氣</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.INTERSTELLARICEFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.INTERSTELLARICEFIELD.NAME"
@@ -89658,7 +89658,7 @@ msgstr "冰原小行星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.INTERSTELLAROCEAN.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.INTERSTELLAROCEAN.DESC"
 msgid "An interplanetary body that consists of <link=\"SALTWATER\">Salt Water</link>, <link=\"BRINE\">Brine</link>, <link=\"SALT\">Salt</link> and <link=\"ICE\">Ice</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一個跨星際天體，由<link=\"SALTWATER\">鹽水</link>、<link=\"BRINE\">濃鹽水</link>、<link=\"SALT\">鹽</link>與<link=\"ICE\">冰</link>所組成。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一個跨星際天體，由<link=\"SALTWATER\">鹽水</link>、<link=\"BRINE\">濃鹽水</link>、<link=\"SALT\">鹽</link>與<link=\"ICE\">冰</link>所組成。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.INTERSTELLAROCEAN.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.INTERSTELLAROCEAN.NAME"
@@ -89668,7 +89668,7 @@ msgstr "星際海洋"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.METALLICASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.METALLICASTEROIDFIELD.DESC"
 msgid "An asteroid field containing <link=\"IRON\">Iron</link>, <link=\"COPPER\">Copper</link>, <link=\"LEAD\">Lead</link>, and <link=\"OBSIDIAN\">Obsidian</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片包含<link=\"IRON\">鐵</link>、<link=\"COPPER\">銅</link>、<link=\"LEAD\">鉛</link>與<link=\"OBSIDIAN\">黑曜石</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"IRON\">鐵</link>、<link=\"COPPER\">銅</link>、<link=\"LEAD\">鉛</link>與<link=\"OBSIDIAN\">黑曜石</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.METALLICASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.METALLICASTEROIDFIELD.NAME"
@@ -89678,7 +89678,7 @@ msgstr "金屬小行星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OILYASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OILYASTEROIDFIELD.DESC"
 msgid "An asteroid field containing <link=\"SOLIDMETHANE\">Solid Methane</link>, <link=\"CARBONDIOXIDE\">Carbon Dioxide</link> and <link=\"CRUDEOIL\">Crude Oil</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片包含<link=\"SOLIDMETHANE\">固態甲烷</link>、<link=\"CARBONDIOXIDE\">二氧化碳</link>和<link=\"CRUDEOIL\">原油</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"SOLIDMETHANE\">固態甲烷</link>、<link=\"CARBONDIOXIDE\">二氧化碳</link>和<link=\"CRUDEOIL\">原油</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OILYASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OILYASTEROIDFIELD.NAME"
@@ -89688,7 +89688,7 @@ msgstr "原油小行星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ORGANICMASSFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ORGANICMASSFIELD.DESC"
 msgid "A mass of harvestable resources containing <link=\"ALGAE\">Algae</link>, <link=\"SLIMEMOLD\">Slime</link>, <link=\"CONTAMINATEDOXYGEN\">Polluted Oxygen</link> and <link=\"DIRT\">Dirt</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片可收集的資源團塊，內含<link=\"ALGAE\">藻類</link>、<link=\"SLIMEMOLD\">軟泥</link>、<link=\"CONTAMINATEDOXYGEN\">汙氧</link>與<link=\"DIRT\">泥土</link>\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭"
+msgstr "含有<link=\"ALGAE\">藻類</link>、<link=\"SLIMEMOLD\">軟泥</link>、<link=\"CONTAMINATEDOXYGEN\">汙氧</link>與<link=\"DIRT\">泥土</link>的可收穫資源密集區。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ORGANICMASSFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ORGANICMASSFIELD.NAME"
@@ -89698,7 +89698,7 @@ msgstr "有機物礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OXIDIZEDASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OXIDIZEDASTEROIDFIELD.DESC"
 msgid "An asteroid field containing <link=\"CARBONDIOXIDE\">Carbon Dioxide</link> and <link=\"RUST\">Rust</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片包含<link=\"CARBONDIOXIDE\">二氧化碳</link>和<link=\"RUST\">鐵鏽</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"CARBONDIOXIDE\">二氧化碳</link>和<link=\"RUST\">鐵鏽</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OXIDIZEDASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OXIDIZEDASTEROIDFIELD.NAME"
@@ -89708,7 +89708,7 @@ msgstr "氧化小行星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OXYGENRICHASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OXYGENRICHASTEROIDFIELD.DESC"
 msgid "An asteroid field containing <link=\"ICE\">Ice</link>, <link=\"CONTAMINATEDOXYGEN\">Polluted Oxygen</link> and <link=\"WATER\">Water</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片包含<link=\"ICE\">冰</link>、<link=\"CONTAMINATEDOXYGEN\">汙氧</link>與<link=\"WATER\">水</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"ICE\">冰</link>、<link=\"CONTAMINATEDOXYGEN\">汙氧</link>與<link=\"WATER\">水</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OXYGENRICHASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.OXYGENRICHASTEROIDFIELD.NAME"
@@ -89728,7 +89728,7 @@ msgstr "{0}"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.RADIOACTIVEASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.RADIOACTIVEASTEROIDFIELD.DESC"
 msgid "An asteroid field containing <link=\"BLEACHSTONE\">Bleach Stone</link>, <link=\"RUST\">Rust</link>, <link=\"URANIUMORE\">Uranium Ore</link> and <link=\"SULFUR\">Sulfur</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片包含<link=\"BLEACHSTONE\">漂白石</link>，<link=\"RUST\">鐵鏽</link>，<link=\"URANIUMORE\">鈾礦</link>和<link=\"SULFUR\">硫</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"BLEACHSTONE\">漂白石</link>，<link=\"RUST\">鐵鏽</link>，<link=\"URANIUMORE\">鈾礦</link>和<link=\"SULFUR\">硫</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.RADIOACTIVEASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.RADIOACTIVEASTEROIDFIELD.NAME"
@@ -89738,7 +89738,7 @@ msgstr "輻射小行星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.RADIOACTIVEGASCLOUD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.RADIOACTIVEGASCLOUD.DESC"
 msgid "A cloud of resources containing <link=\"CHLORINEGAS\">Chlorine Gas</link>, <link=\"URANIUMORE\">Uranium Ore</link> and <link=\"CARBONDIOXIDE\">Carbon Dioxide</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片包含<link=\"CHLORINEGAS\">氯氣</link>、<link=\"URANIUMORE\">鈾礦</link>與<link=\"CARBONDIOXIDE\">二氧化碳</link>的星雲。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"CHLORINEGAS\">氯氣</link>、<link=\"URANIUMORE\">鈾礦</link>與<link=\"CARBONDIOXIDE\">二氧化碳</link>的星雲。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.RADIOACTIVEGASCLOUD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.RADIOACTIVEGASCLOUD.NAME"
@@ -89748,7 +89748,7 @@ msgstr "輻射氣體星雲"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ROCKYASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ROCKYASTEROIDFIELD.DESC"
 msgid "An asteroid field containing <link=\"GRANITE\">Granite</link>, <link=\"KATAIRITE\">Abyssalite</link>, <link=\"SEDIMENTARYROCK\">Sedimentary Rock</link>, and <link=\"IGNEOUSROCK\">Igneous Rock</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片包含<link=\"GRANITE\">花崗岩</link>、<link=\"KATAIRITE\">深淵水晶</link>、<link=\"SEDIMENTARYROCK\">沉積岩</link>與<link=\"IGNEOUSROCK\">火成岩</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"GRANITE\">花崗岩</link>、<link=\"KATAIRITE\">深淵水晶</link>、<link=\"SEDIMENTARYROCK\">沉積岩</link>與<link=\"IGNEOUSROCK\">火成岩</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ROCKYASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.ROCKYASTEROIDFIELD.NAME"
@@ -89758,7 +89758,7 @@ msgstr "岩石小行星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SALTYASTEROIDFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SALTYASTEROIDFIELD.DESC"
 msgid "A field of harvestable resources containing <link=\"SALTWATER\">Salt Water</link>,<link=\"BRINE\">Brine</link> and <link=\"CARBONDIOXIDE\">Carbon Dioxide</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一個可採集<link=\"SALTWATER\">鹽水</link>，<link=\"BRINE\">濃鹽水</link>與<link=\"CARBONDIOXIDE\">二氧化碳</link>的礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "含有<link=\"SALTWATER\">鹽水</link>、<link=\"BRINE\">濃鹽水</link>與<link=\"CARBONDIOXIDE\">二氧化碳</link>的可收穫資源區。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SALTYASTEROIDFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SALTYASTEROIDFIELD.NAME"
@@ -89768,12 +89768,12 @@ msgstr "鹽鹽小行星礦場"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SANDYOREFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SANDYOREFIELD.DESC"
 msgid "An asteroid field containing <link=\"SANDSTONE\">Sandstone</link>, <link=\"ALGAE\">Algae</link>, <link=\"CUPRITE\">Copper Ore</link> and <link=\"SAND\">Sand</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片包含<link=\"SANDSTONE\">砂岩</link>、<link=\"ALGAE\">藻類</link>、<link=\"CUPRITE\">銅礦</link>與<link=\"SAND\">沙子</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"SANDSTONE\">砂岩</link>、<link=\"ALGAE\">藻類</link>、<link=\"CUPRITE\">銅礦</link>與<link=\"SAND\">沙子</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SANDYOREFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SANDYOREFIELD.NAME"
 msgid "Sandy Ore Field"
-msgstr "沙礦場"
+msgstr "沙沙礦場"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SATELLITEFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SATELLITEFIELD.DESC"
@@ -89788,7 +89788,7 @@ msgstr "太空垃圾"
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SWAMPYOREFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SWAMPYOREFIELD.DESC"
 msgid "An asteroid field containing <link=\"MUD\">Mud</link>, <link=\"TOXICSAND\">Polluted Dirt</link> and <link=\"COBALTITE\">Cobalt Ore</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片包含<link=\"MUD\">泥土</link>、<link=\"TOXICSAND\">汙土</link>與<link=\"COBALTITE\">鈷礦</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和一個貨物模組的火箭。"
+msgstr "一片包含<link=\"MUD\">泥土</link>、<link=\"TOXICSAND\">汙土</link>與<link=\"COBALTITE\">鈷礦</link>的小行星礦場。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SWAMPYOREFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.SWAMPYOREFIELD.NAME"
@@ -89803,12 +89803,12 @@ msgstr "未選擇"
 #. STRINGS.UI.SPACEDESTINATIONS.ORBIT.NAME_FMT
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.ORBIT.NAME_FMT"
 msgid "Orbiting {Name}"
-msgstr "繞行 {Name}"
+msgstr "繞行{Name}"
 
 #. STRINGS.UI.SPACEDESTINATIONS.PLANETS.CHLORINEPLANET.DESCRIPTION
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.PLANETS.CHLORINEPLANET.DESCRIPTION"
 msgid "A noxious planet permeated by unbreathable chlorine."
-msgstr "一個有毒的行球，充滿不可呼吸的氯氣。"
+msgstr "一個有毒的星球，充滿不可呼吸的氯氣。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.PLANETS.CHLORINEPLANET.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.PLANETS.CHLORINEPLANET.NAME"
