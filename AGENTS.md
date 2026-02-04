@@ -9,7 +9,7 @@
 | `./workshop-2906930548` | Oxygen Not Included 正體中文 | 這是給 Oxygen Not Included 使用的正體中文翻譯模組 |
 | `./workshop-3046440992` | Oxygen Not Included 字型模組。新 | 這是搭配我的正體中文翻譯模組使用的字型模組 |
 | `./workshop-3413401611` | Oxygen Not Included Not 0K, But Pretty Cool Place | 這是給 Oxygen Not Included 使用的地圖模組，代號 ABZ |
-| `./workshop-3418019940` | Oxygen Not Included Moonlet Cluster - Superconductive | 這是給 Oxygen Not Included 使用的地圖模組 |
+| `./workshop-superconductive` | Oxygen Not Included Moonlet Cluster - Superconductive | 這是給 Oxygen Not Included 使用的地圖模組 |
 | `./workshop-3430682737` | Oxygen Not Included Voidria | 這是給 Oxygen Not Included 使用的地圖模組，代號 VOA |
 | `./tools/android-app` | 我的翻譯小工具 | 專門將 Klei 官方翻譯檔案和我的翻譯模組載入，讓我在版本更新時比較容易編輯的小工具，目前已經停止維護 |
 | `./tools/desktop-app` | 我的翻譯小工具 | 專門將 Klei 官方翻譯檔案和我的翻譯模組載入，讓我在版本更新時比較容易編輯的小工具 |
