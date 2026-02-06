@@ -1,0 +1,16 @@
+biomeNoise: expansion1::noise/Sponge
+temperatureRange: VeryHot
+density:
+  min: 50
+  max: 65
+avoidRadius: 20.0
+sampleBehaviour: PoissonDisk
+borderOverride: heliconiaBorder
+biomes:
+  - name: expansion1::biomes/Heliconia/VeryHot_Sulfur
+    weight: 3
+  - name: biomes/Heliconia/VeryHot_Default
+    weight: 1
+tags:
+  - HeliconiaDeepHot
+zoneType: Wasteland

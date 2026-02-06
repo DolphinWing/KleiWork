@@ -1,0 +1,13 @@
+# keys to remove from in-memory structure when this file is loaded
+remove: [] 
+# elements to add from in-memory structure when this file is loaded
+add:
+  TG_SuperHot:
+    min: 573.0
+    max: 1073.0
+  TG_SuperSuperHot:
+    min: 1073.0
+    max: 1500.0
+  TG_ExtremeHot:
+    min: 1800.0
+    max: 2400.0

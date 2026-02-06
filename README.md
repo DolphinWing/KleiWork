@@ -16,10 +16,10 @@ This is a personal project that includes my mod work for the games by Klei Enter
 ![Steam Favorites](https://img.shields.io/steam/favorites/3413401611?logo=steam) <br />
 [workshop-3413401611](workshop-3413401611) is a map mod for 0K challenge feat. with [TorchGod](https://github.com/TorchGod531).
 * ONI [Moonlet Cluster - Superconductive](https://steamcommunity.com/sharedfiles/filedetails/?id=3418019940) (衛星星團－超導星)<br />
-![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/DolphinWing/KleiWork?filename=workshop-3418019940%2Fpackage.json&logo=github) 
+![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/DolphinWing/KleiWork?filename=workshop-superconductive%2Fpackage.json&logo=github) 
 ![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3418019940?logo=steam) 
 ![Steam Favorites](https://img.shields.io/steam/favorites/3418019940?logo=steam) <br />
-[workshop-3418019940](workshop-3418019940) is a map mod for Superconductive starting world.
+[workshop-superconductive](workshop-superconductive) is a map mod for Superconductive starting world.
 * ONI [Voidria](https://steamcommunity.com/sharedfiles/filedetails/?id=3430682737) (無多利亞)<br />
 ![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/DolphinWing/KleiWork?filename=workshop-3430682737%2Fpackage.json&logo=github) 
 ![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3430682737?logo=steam) 

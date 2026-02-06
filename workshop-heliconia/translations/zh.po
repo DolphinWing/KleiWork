@@ -1,0 +1,44 @@
+#. Heliconia.Heliconia.NAME
+msgctxt "Heliconia.Heliconia.NAME"
+msgid "Helicnoia"
+msgstr "Helicnoia"
+
+#. Heliconia.Heliconia.MOD_DESC
+msgctxt "Heliconia.Heliconia.MOD_DESC"
+msgid "Helicnoia mod"
+msgstr "Helicnoia mod"
+
+#. Heliconia.Heliconia.DESCRIPTION
+msgctxt "Heliconia.Heliconia.DESCRIPTION"
+msgid "Helicnoia desc"
+msgstr "Helicnoia desc"
+
+#. Heliconia.Heliconia.BIOME_DESC
+msgctxt "Heliconia.Heliconia.BIOME_DESC"
+msgid "Helicnoia biome"
+msgstr "Helicnoia biome"
+
+#. Heliconia.Heliconia.UTILITY_DESC
+msgctxt "Heliconia.Heliconia.UTILITY_DESC"
+msgid "Helicnoia biome desc"
+msgstr "Helicnoia biome desc"
+
+#. Heliconia.HeliconiaOptions.GiftedAreaTitle
+msgctxt "Heliconia.HeliconiaOptions.GiftedAreaTitle"
+msgid "Shelter Cave"
+msgstr "避難洞穴"
+
+#. Heliconia.HeliconiaOptions.GiftedAreaTooltip
+msgctxt "Heliconia.HeliconiaOptions.GiftedAreaTooltip"
+msgid "A small refuge space to avoid freezing to death."
+msgstr "一個避免被凍死的小小避難空間。"
+
+#. Heliconia.HeliconiaOptions.CrittersCaveTitle
+msgctxt "Heliconia.HeliconiaOptions.CrittersCaveTitle"
+msgid "Critter Cave"
+msgstr "小動物洞穴"
+
+#. Heliconia.HeliconiaOptions.CrittersCaveTooltip
+msgctxt "Heliconia.HeliconiaOptions.CrittersCaveTooltip"
+msgid "A small refuge space for critters and plants."
+msgstr "一個給小動物和植物的小避難空間。"

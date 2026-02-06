@@ -1,0 +1,17 @@
+biomeNoise: noise/HeliconiaFlow # Flat-ish
+temperatureRange: TG_ExtremeHot
+density:
+  min: 40
+  max: 60
+avoidRadius: 20.0
+sampleBehaviour: PoissonDisk
+borderOverride: diamondBorder
+biomes:
+  - name: biomes/Heliconia/Core
+    weight: 2
+  - name: biomes/Magma/MagmaBedNoUnobtanium
+    weight: 3
+tags:
+  - HeliconiaSurface
+  - AtSurface
+zoneType: MagmaCore

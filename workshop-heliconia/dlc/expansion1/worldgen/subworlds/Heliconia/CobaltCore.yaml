@@ -1,0 +1,17 @@
+biomeNoise: noise/HeliconiaPockets
+temperatureRange: TG_ExtremeHot
+density:
+  min: 50
+  max: 80
+avoidRadius: 30.0
+sampleBehaviour: PoissonDisk
+borderOverride: diamondBorder
+biomes:
+  - name: expansion1::biomes/Heliconia/Core_Cobalt
+    weight: 1
+  - name: biomes/Magma/MagmaBed
+    weight: 3
+tags:
+  - HeliconiaCore
+  - AtDepths
+zoneType: MagmaCore

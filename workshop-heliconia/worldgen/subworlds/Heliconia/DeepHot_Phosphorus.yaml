@@ -1,0 +1,16 @@
+biomeNoise: noise/SandstoneStart
+temperatureRange: VeryHot # Need ~533K (260C)
+density:
+  min: 50
+  max: 65
+avoidRadius: 20.0
+sampleBehaviour: PoissonDisk
+borderOverride: wolframiteBorder
+biomes:
+  - name: biomes/Heliconia/VeryHot_Phosphorus
+    weight: 3
+  - name: biomes/Heliconia/VeryHot_Default
+    weight: 1
+tags:
+  - HeliconiaDeepHot
+zoneType: OilField

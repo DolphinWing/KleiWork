@@ -1,0 +1,49 @@
+TerrainBiomeLookupTable:
+  add:
+    Core_Cobalt:
+    - content: MoltenCobalt
+      bandSize: 0.3
+      overrides:
+        massOverride: 7800
+    - content: Obsidian
+      bandSize: 0.5
+    - content: Wolframite
+      bandSize: 0.1
+    - content: Glass # Added
+      bandSize: 0.1
+    - content: Diamond
+      bandSize: 0.1
+    - content: RefinedCarbon # Added
+      bandSize: 0.2
+    - content: CarbonDioxide
+      bandSize: 0.1
+
+    Core_Aluminum:
+    - content: MoltenAluminum
+      bandSize: 0.3
+      overrides:
+        massOverride: 2700
+    - content: Obsidian
+      bandSize: 0.4
+    - content: Wolframite
+      bandSize: 0.2
+    - content: Glass # Added
+      bandSize: 0.1
+    - content: Diamond
+      bandSize: 0.2
+
+    VeryHot_Sulfur:
+    - content: Sandstone
+      bandSize: 0.2
+    - content: LiquidSulfur
+      bandSize: 0.4
+      overrides:
+        massOverride: 1000
+    - content: MaficRock
+      bandSize: 0.1
+    - content: Sucrose
+      bandSize: 0.3
+    - content: MaficRock
+      bandSize: 0.4
+    - content: Sand
+      bandSize: 0.1

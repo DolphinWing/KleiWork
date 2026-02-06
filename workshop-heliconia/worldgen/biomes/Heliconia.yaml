@@ -1,0 +1,192 @@
+TerrainBiomeLookupTable:
+  # keys to remove from in-memory structure when this file is loaded
+  remove: [] 
+  # elements to add from in-memory structure when this file is loaded
+  add:
+    Start:
+    - content: SandStone
+      bandSize: 0.1
+    - content: IgneousRock
+      bandSize: 0.3
+    - content: Dirt
+      bandSize: 0.1
+    - content: Algae
+      bandSize: 0.4
+    - content: IronOre
+      bandSize: 0.1
+    - content: Cuprite
+      bandSize: 0.06
+      overrides:
+        massOverride: 350
+    - content: Oxygen
+      bandSize: 1.3
+    - content: Carbon
+      bandSize: 0.1
+
+    Hot_Default:
+    - content: IgneousRock
+      bandSize: 0.4
+    - content: Granite
+      bandSize: 0.2
+    - content: SandStone
+      bandSize: 0.1
+    - content: Carbon
+      bandSize: 0.1
+    - content: RefinedCarbon # Added
+      bandSize: 0.2
+    - content: IronOre
+      bandSize: 0.4
+    - content: CarbonDioxide
+      bandSize: 0.2
+
+    Hot_Rust:
+    - content: Rust
+      bandSize: 0.4
+    - content: IronOre
+      bandSize: 0.4
+    - content: MaficRock
+      bandSize: 0.4
+    - content: Ethanol
+      bandSize: 0.1
+    - content: CarbonDioxide
+      bandSize: 0.2
+
+    VeryHot_Default:
+    - content: IgneousRock
+      bandSize: 0.3
+    - content: Obsidian
+      bandSize: 0.3
+    - content: RefinedCarbon # Added
+      bandSize: 0.05
+    - content: MaficRock
+      bandSize: 0.3
+    - content: Fossil # Added
+      bandSize: 0.1
+    - content: GoldAmalgam
+      bandSize: 0.2
+    - content: Hydrogen
+      bandSize: 0.1
+    - content: ChlorineGas
+      bandSize: 0.1
+
+    VeryHot_Crystal:
+    - content: Obsidian
+      bandSize: 0.3
+    - content: BleachStone
+      bandSize: 0.2
+    - content: Salt
+      bandSize: 0.2
+    - content: Granite
+      bandSize: 0.4
+    - content: OxyRock
+      bandSize: 0.1
+    - content: MaficRock
+      bandSize: 0.3
+
+    VeryHot_Phosphorus:
+    - content: IgneousRock
+      bandSize: 0.4
+    - content: LiquidPhosphorus
+      bandSize: 0.4
+      overrides:
+        massOverride: 1000
+    - content: RefinedCarbon
+      bandSize: 0.2
+    - content: CarbonDioxide
+      bandSize: 0.1
+    - content: Sand
+      bandSize: 0.2
+    - content: Fossil # Added
+      bandSize: 0.1
+
+    Hell_Lead:
+    - content: Obsidian
+      bandSize: 0.4
+    - content: Diamond
+      bandSize: 0.3
+    - content: Wolframite
+      bandSize: 0.1
+    - content: Ceramic
+      bandSize: 0.2
+    - content: Steel # Added
+      bandSize: 0.1
+    - content: Lime # Added
+      bandSize: 0.05
+    - content: MoltenLead
+      bandSize: 0.3
+      overrides:
+        massOverride: 2000
+    - content: SourGas
+      bandSize: 0.1
+    - content: Fossil # Added
+      bandSize: 0.2
+
+    Hell_Salt:
+    - content: Obsidian
+      bandSize: 0.5
+    - content: MoltenSalt
+      bandSize: 0.3
+      overrides:
+        massOverride: 2000
+    - content: Salt
+      bandSize: 0.1
+    - content: Lime # Added
+      bandSize: 0.1
+    - content: ChlorineGas
+      bandSize: 0.1
+
+    Core:
+    - content: MoltenIron
+      bandSize: 0.4
+      overrides:
+        massOverride: 7800
+    - content: Obsidian
+      bandSize: 0.5
+    - content: Wolframite
+      bandSize: 0.2
+    - content: Glass
+      bandSize: 0.2
+    - content: Diamond
+      bandSize: 0.2
+    - content: SourGas
+      bandSize: 0.1
+    - content: Sand
+      bandSize: 0.1
+
+    Core_Copper:
+    - content: MoltenCopper
+      bandSize: 0.4
+      overrides:
+        massOverride: 7800
+    - content: Obsidian
+      bandSize: 0.6
+    - content: Wolframite
+      bandSize: 0.2
+    - content: Glass
+      bandSize: 0.2
+    - content: Diamond
+      bandSize: 0.3
+    - content: RefinedCarbon # Added
+      bandSize: 0.3
+    - content: CarbonDioxide
+      bandSize: 0.1
+
+    Core_Gold:
+    - content: MoltenGold
+      bandSize: 0.4
+      overrides:
+        massOverride: 7800
+    - content: Obsidian
+      bandSize: 0.4
+    - content: Wolframite
+      bandSize: 0.3
+    - content: Glass
+      bandSize: 0.2
+    - content: Diamond
+      bandSize: 0.3
+    - content: Steel # Added
+      bandSize: 0.2
+    - content: OxyRock
+      bandSize: 0.1
+    - content: Steam
+      bandSize: 0.1

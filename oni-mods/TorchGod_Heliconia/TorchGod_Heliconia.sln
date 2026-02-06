@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.36602.28
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heliconia", "Heliconia.csproj", "{3338D3C9-41FA-4282-B7E6-C55AE0FFE288}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3338D3C9-41FA-4282-B7E6-C55AE0FFE288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3338D3C9-41FA-4282-B7E6-C55AE0FFE288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3338D3C9-41FA-4282-B7E6-C55AE0FFE288}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3338D3C9-41FA-4282-B7E6-C55AE0FFE288}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A239D166-FC03-4ED9-A81D-5826B5BC4F43}
+	EndGlobalSection
+EndGlobal

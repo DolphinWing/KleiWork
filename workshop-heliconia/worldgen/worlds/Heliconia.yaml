@@ -1,0 +1,159 @@
+name: STRINGS.WORLDS.VANILLAVOLCANIC.NAME
+description: STRINGS.WORLDS.VANILLAVOLCANIC.DESCRIPTION
+nameTables: [ MAGMA ]
+asteroidIcon: asteroid_vanilla_volcanic_kanim
+
+worldTraitScale: 1
+worldsize:
+  X: 256
+  Y: 384
+layoutMethod: PowerTree
+
+defaultsOverrides:
+  startingWorldElements: []
+
+subworldFiles:
+  - name: subworlds/heliconia/Start
+  - name: subworlds/heliconia/HotMid
+  - name: subworlds/heliconia/HotMid_Rust
+  - name: subworlds/heliconia/DeepHot
+  - name: subworlds/heliconia/DeepHot_Crystal
+  - name: subworlds/heliconia/DeepHot_Phosphorus
+  - name: subworlds/heliconia/Hell
+  - name: subworlds/heliconia/Hell_Salt
+  - name: subworlds/magma/MagmaVent
+  - name: subworlds/heliconia/IronCore
+  - name: subworlds/heliconia/CopperCore
+  - name: subworlds/heliconia/GoldCore
+  - name: subworlds/heliconia/IronSurface
+  - name: subworlds/space/Space
+
+startSubworldName: subworlds/heliconia/Start
+startingBaseTemplate: bases/sandstoneBase
+
+subworldMixingRules: []
+
+seasons:
+  - MeteorShowers
+
+worldTraitRules:
+  - min: 2
+    max: 4
+    forbiddenTags:
+      - Surface
+      - NonStartWorld
+      - FrozenCore
+      - GlaciersLarge
+      - SubsurfaceOcean
+      - LushCore
+
+unknownCellsAllowedSubworlds: 
+  # 1. Start (R=0)
+  - tagcommand: Default
+    command: Replace
+    subworldNames:
+      - subworlds/heliconia/Start
+  
+  # 2. Hot Mid (R=1)
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - subworlds/heliconia/HotMid
+      - subworlds/heliconia/HotMid_Rust
+
+  # 3. Deep Hot (R=2)
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 2
+    maxDistance: 2
+    command: Replace
+    subworldNames:
+      - subworlds/heliconia/DeepHot
+      - subworlds/heliconia/DeepHot_Crystal
+      - subworlds/heliconia/DeepHot_Phosphorus
+
+  # 4. Hell (R=3+)
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 3
+    maxDistance: 999
+    command: Replace
+    subworldNames:
+      - subworlds/heliconia/Hell
+      - subworlds/heliconia/Hell_Salt
+      - subworlds/magma/MagmaVent
+
+  # Core (Iron/Copper/Gold ONLY)
+  - tagcommand: AtTag
+    tag: AtDepths
+    command: Replace
+    subworldNames:
+      - subworlds/heliconia/IronCore
+      - subworlds/heliconia/CopperCore
+      - subworlds/heliconia/GoldCore
+  
+  # Above Core Buffer
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 1
+    maxDistance: 2
+    command: Replace
+    subworldNames:
+      - subworlds/heliconia/Hell
+      - subworlds/heliconia/Hell_Salt
+      - subworlds/magma/MagmaVent
+
+  # Space (Vanilla Space Logic)
+  - tagcommand: AtTag
+    tag: AtSurface
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+
+  # Surface
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - subworlds/heliconia/IronSurface
+
+worldTemplateRules:
+  # Leaky Oil Fissure (Guaranteed)
+  - names:
+    - geysers/oil_drip
+    listRule: GuaranteeOne
+    priority: 100
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 1
+        maxDistance: 2
+      - command: ExceptWith
+        tagcommand: NotAtTag
+        tag: NoGlobalFeatureSpawning
+
+  # Hot Geysers Pool (Replaces Generic) - Vanilla List
+  - names:
+    - geysers/hot_steam
+    - geysers/steam
+    - geysers/hot_co2
+    - geysers/hot_hydrogen
+    - geysers/hot_po2
+    - geysers/big_volcano
+    - geysers/small_volcano
+    - geysers/molten_iron
+    - geysers/molten_copper
+    - geysers/molten_gold
+    listRule: TryOne
+    times: 12
+    allowDuplicates: true
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: NotAtTag
+        tag: NoGlobalFeatureSpawning

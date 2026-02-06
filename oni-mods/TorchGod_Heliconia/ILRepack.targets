@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <!-- ILRepack -->
+    <Target Name="ILRepacker" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
+        <ItemGroup>
+			<InputAssemblies Include="$(OutputPath)\TorchGod_Heliconia.dll" />
+            <InputAssemblies Include="$(OutputPath)\PLib.dll" />
+        </ItemGroup>
+    
+        <ILRepack
+			AllowDuplicateResources="false"
+			DebugInfo="false"
+            Parallel="true"
+            Internalize="true"
+			LibraryPath="$(SolutionDir)lib"
+			ExcludeInternalizeSerializable="false"
+            InputAssemblies="@(InputAssemblies)"
+            TargetKind="Dll"
+			TargetPlatformVersion="v4"
+            OutputFile="$(OutputPath)\Heliconia.dll"
+        />
+    </Target>
+    <!-- /ILRepack -->
+</Project>
