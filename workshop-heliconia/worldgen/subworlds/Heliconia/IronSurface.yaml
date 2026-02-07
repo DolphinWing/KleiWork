@@ -7,11 +7,16 @@ avoidRadius: 20.0
 sampleBehaviour: PoissonDisk
 borderOverride: diamondBorder
 biomes:
-  - name: biomes/Heliconia/Core
-    weight: 2
-  - name: biomes/Magma/MagmaBedNoUnobtanium
+  - name: biomes/Heliconia/Core_Iron
     weight: 3
+  - name: biomes/Magma/MagmaBedNoUnobtanium
+    weight: 1
 tags:
   - HeliconiaSurface
   - AtSurface
+  - IgnoreCaveOverride
+# - ErodePointToBorderInv
+  - ErodePointToWorldTop
+  - NoGlobalFeatureSpawning
+  - RemoveWorldBorderOverVacuum
 zoneType: MagmaCore

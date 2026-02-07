@@ -12,3 +12,8 @@ add:
       weight: 3
     - element: Wolframite
       weight: 1
+  coreBorder:
+    - element: Diamond
+      weight: 3
+    - element: RefinedCarbon
+      weight: 1

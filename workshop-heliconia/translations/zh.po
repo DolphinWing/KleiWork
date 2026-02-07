@@ -42,3 +42,63 @@ msgstr "小動物洞穴"
 msgctxt "Heliconia.HeliconiaOptions.CrittersCaveTooltip"
 msgid "A small refuge space for critters and plants."
 msgstr "一個給小動物和植物的小避難空間。"
+
+#. Heliconia.HeliconiaOptions.InstantModeTitle
+msgctxt "Heliconia.HeliconiaOptions.InstantModeTitle"
+msgid "Instant temperature balanced"
+msgstr "立即平衡溫度"
+
+#. Heliconia.HeliconiaOptions.InstantModeTooltip
+msgctxt "Heliconia.HeliconiaOptions.InstantModeTooltip"
+msgid "Instant temperature balanced right after worldgen."
+msgstr "世界生成後立即平衡溫度。"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE"
+msgid "Temperature Mode"
+msgstr "溫度模式"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_DESC
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_DESC"
+msgid "Select starting biome temperature"
+msgstr "選擇初始生態系溫度"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_BALANCED
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_BALANCED"
+msgid "Balanced"
+msgstr "平衡"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_BALANCED_DESC
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_BALANCED_DESC"
+msgid "balanced but still quite a chanllege."
+msgstr "雖平衡但仍具挑戰性。"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_EASY
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_EASY"
+msgid "Easy"
+msgstr "簡單"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_EASY_DESC
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_EASY_DESC"
+msgid "a bit taste of Heliconia"
+msgstr "稍微體驗 Heliconia 的滋味"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_CRAZY
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_CRAZY"
+msgid "Crazy"
+msgstr "瘋狂"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_CRAZY_DESC
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_CRAZY_DESC"
+msgid "I bet you are crazy about this game."
+msgstr "我打賭你對這遊戲著了迷。"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_INSANE
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_INSANE"
+msgid "Insane"
+msgstr "絕望"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_INSANE_DESC
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_INSANE_DESC"
+msgid "Only hardcore gamer can do this."
+msgstr "只有硬核玩家才能辦到。"

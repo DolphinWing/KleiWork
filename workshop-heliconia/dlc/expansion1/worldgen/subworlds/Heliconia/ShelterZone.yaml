@@ -1,0 +1,28 @@
+biomeNoise: noise/subworldForest
+temperatureRange: Hot
+pdWeight: 2.0
+density:
+  min: 60
+  max: 65
+avoidRadius: 20.0
+doAvoidPoints: false
+dontRelaxChildren: true
+sampleBehaviour: PoissonDisk
+borderOverride: heliconiaBorder
+biomes:
+  - name: biomes/Heliconia/Start
+    weight: 1
+    tags:
+      - StartWorld
+      - NoGlobalFeatureSpawning
+tags:
+  - StartWorld
+  - IgnoreCaveOverride
+  - NoGlobalFeatureSpawning
+  - HCA_Shelter
+subworldTemplateRules:
+  - names:
+      - expansion1::bases/ABZShelterSO
+    listRule: GuaranteeOne
+    priority: 500
+zoneType: Forest

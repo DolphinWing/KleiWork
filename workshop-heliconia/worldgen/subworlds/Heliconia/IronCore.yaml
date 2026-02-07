@@ -1,16 +1,14 @@
-biomeNoise: noise/HeliconiaFlow
-temperatureRange: TG_ExtremeHot # ~1500K+
+biomeNoise: noise/subworldFrozen
+temperatureRange: TG_SuperSuperHot
 density:
   min: 50
   max: 80
 avoidRadius: 30.0
 sampleBehaviour: PoissonDisk
-borderOverride: diamondBorder
+borderOverride: coreBorder
 biomes:
-  - name: biomes/Heliconia/Core
-    weight: 1
-  - name: biomes/Magma/MagmaBed
-    weight: 3
+  - name: biomes/Heliconia/Core_Iron
+    weight: 2
 tags:
   - HeliconiaCore
   - AtDepths

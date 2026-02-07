@@ -18,8 +18,8 @@ namespace Heliconia
         internal static void Postfix(MutatedWorldData __instance)
         {
             var world = __instance.world;
-            if (world.name.StartsWith("STRINGS.WORLDS.HELICONIA") == false) return; // no need to check further
-                                                                                    //PUtil.LogDebug("Checking for " + world.name);
+            if (Heliconia.IsHcaWorld(world) == false) return; // no need to check further
+            //PUtil.LogDebug("Checking for " + world.name);
 
             var dlcMixing = CustomGameSettings.Instance.GetCurrentDlcMixingIds();
             var frosty = dlcMixing.Contains(DlcManager.DLC2_ID);
@@ -28,16 +28,13 @@ namespace Heliconia
 
             var options = HeliconiaOptions.GetInstance();
             PUtil.LogDebug("Heliconia Shelter=" + options.Shelter + ", Critter=" + options.Critter);
+            PUtil.LogDebug("  InstantMode=" + options.InstantMode);
+            PUtil.LogDebug("  MapMode=" + options.Mode);
 
             var removing = new List<ProcGen.World.TemplateSpawnRules>();
             if (world.worldTemplateRules != null)
                 foreach (var rule in world.worldTemplateRules)
                 {
-                    if (rule.ruleId?.StartsWith("hca_shelter") == true)
-                    {
-                        PUtil.LogDebug("... checking " + rule.ruleId);
-                        if (options.Shelter == false) removing.Add(rule);
-                    }
                     if (rule.ruleId?.StartsWith("hca_critter") == true)
                     {
                         PUtil.LogDebug("... checking " + rule.ruleId);
@@ -70,6 +67,23 @@ namespace Heliconia
                 {
                     world.worldTemplateRules?.Remove(rule);
                 }
+
+            // Remove subworldTemplateRules from subworlds tagged with HCA_Shelter if option is disabled
+            if (options.Shelter == false && __instance.subworlds != null)
+            {
+                foreach (var pair in __instance.subworlds)
+                {
+                    var subworld = pair.Value;
+                    if (subworld.tags != null && subworld.tags.Contains("HCA_Shelter"))
+                    {
+                        if (subworld.subworldTemplateRules != null)
+                        {
+                            PUtil.LogDebug("... clearing subworldTemplateRules from tagged subworld " + subworld.name);
+                            subworld.subworldTemplateRules.Clear();
+                        }
+                    }
+                }
+            }
         }
     }
 }

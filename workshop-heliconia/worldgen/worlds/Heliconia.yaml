@@ -13,22 +13,22 @@ defaultsOverrides:
   startingWorldElements: []
 
 subworldFiles:
-  - name: subworlds/heliconia/Start
-  - name: subworlds/heliconia/HotMid
-  - name: subworlds/heliconia/HotMid_Rust
-  - name: subworlds/heliconia/DeepHot
-  - name: subworlds/heliconia/DeepHot_Crystal
-  - name: subworlds/heliconia/DeepHot_Phosphorus
-  - name: subworlds/heliconia/Hell
-  - name: subworlds/heliconia/Hell_Salt
+  - name: subworlds/Heliconia/Start
+  - name: subworlds/Heliconia/HotMid
+  - name: subworlds/Heliconia/HotMid_Rust
+  - name: subworlds/Heliconia/DeepHot
+  - name: subworlds/Heliconia/DeepHot_Crystal
+  - name: subworlds/Heliconia/DeepHot_Phosphorus
+  - name: subworlds/Heliconia/Hell
+  - name: subworlds/Heliconia/Hell_Salt
   - name: subworlds/magma/MagmaVent
-  - name: subworlds/heliconia/IronCore
-  - name: subworlds/heliconia/CopperCore
-  - name: subworlds/heliconia/GoldCore
-  - name: subworlds/heliconia/IronSurface
+  - name: subworlds/Heliconia/IronCore
+  - name: subworlds/Heliconia/CopperCore
+  - name: subworlds/Heliconia/GoldCore
+  - name: subworlds/Heliconia/IronSurface
   - name: subworlds/space/Space
 
-startSubworldName: subworlds/heliconia/Start
+startSubworldName: subworlds/Heliconia/Start
 startingBaseTemplate: bases/sandstoneBase
 
 subworldMixingRules: []
@@ -52,7 +52,7 @@ unknownCellsAllowedSubworlds:
   - tagcommand: Default
     command: Replace
     subworldNames:
-      - subworlds/heliconia/Start
+      - subworlds/Heliconia/Start
   
   # 2. Hot Mid (R=1)
   - tagcommand: DistanceFromTag
@@ -61,8 +61,8 @@ unknownCellsAllowedSubworlds:
     maxDistance: 1
     command: Replace
     subworldNames:
-      - subworlds/heliconia/HotMid
-      - subworlds/heliconia/HotMid_Rust
+      - subworlds/Heliconia/HotMid
+      - subworlds/Heliconia/HotMid_Rust
 
   # 3. Deep Hot (R=2)
   - tagcommand: DistanceFromTag
@@ -71,9 +71,9 @@ unknownCellsAllowedSubworlds:
     maxDistance: 2
     command: Replace
     subworldNames:
-      - subworlds/heliconia/DeepHot
-      - subworlds/heliconia/DeepHot_Crystal
-      - subworlds/heliconia/DeepHot_Phosphorus
+      - subworlds/Heliconia/DeepHot
+      - subworlds/Heliconia/DeepHot_Crystal
+      - subworlds/Heliconia/DeepHot_Phosphorus
 
   # 4. Hell (R=3+)
   - tagcommand: DistanceFromTag
@@ -82,8 +82,8 @@ unknownCellsAllowedSubworlds:
     maxDistance: 999
     command: Replace
     subworldNames:
-      - subworlds/heliconia/Hell
-      - subworlds/heliconia/Hell_Salt
+      - subworlds/Heliconia/Hell
+      - subworlds/Heliconia/Hell_Salt
       - subworlds/magma/MagmaVent
 
   # Core (Iron/Copper/Gold ONLY)
@@ -91,9 +91,9 @@ unknownCellsAllowedSubworlds:
     tag: AtDepths
     command: Replace
     subworldNames:
-      - subworlds/heliconia/IronCore
-      - subworlds/heliconia/CopperCore
-      - subworlds/heliconia/GoldCore
+      - subworlds/Heliconia/IronCore
+      - subworlds/Heliconia/CopperCore
+      - subworlds/Heliconia/GoldCore
   
   # Above Core Buffer
   - tagcommand: DistanceFromTag
@@ -102,8 +102,8 @@ unknownCellsAllowedSubworlds:
     maxDistance: 2
     command: Replace
     subworldNames:
-      - subworlds/heliconia/Hell
-      - subworlds/heliconia/Hell_Salt
+      - subworlds/Heliconia/Hell
+      - subworlds/Heliconia/Hell_Salt
       - subworlds/magma/MagmaVent
 
   # Space (Vanilla Space Logic)
@@ -120,7 +120,7 @@ unknownCellsAllowedSubworlds:
     maxDistance: 1
     command: Replace
     subworldNames:
-      - subworlds/heliconia/IronSurface
+      - subworlds/Heliconia/IronSurface
 
 worldTemplateRules:
   # Leaky Oil Fissure (Guaranteed)

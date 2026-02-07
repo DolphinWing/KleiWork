@@ -1,0 +1,25 @@
+biomeNoise: expansion1::noise/Radioactive
+temperatureRange: TG_SuperHot
+density:
+  min: 12
+  max: 17
+avoidRadius: 12
+doAvoidPoints: false
+dontRelaxChildren: true
+sampleBehaviour: PoissonDisk
+borderOverride: heliconiaBorder
+biomes:
+  - name: expansion1::biomes/Heliconia/Radioactive_Basic
+    weight: 1
+    tags:
+      - ToePlant
+      - ToePlantSeed
+      - LightBug
+      - ColdBreather
+      - ColdBreatherSeed
+      - CritterTrapPlant
+features:
+  - type: expansion1::features/radioactive/BeeBubble
+tags:
+  - IgnoreCaveOverride
+zoneType: Radioactive

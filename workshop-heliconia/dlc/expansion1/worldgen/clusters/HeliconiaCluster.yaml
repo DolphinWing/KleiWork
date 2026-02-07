@@ -9,7 +9,7 @@ clusterCategory: SpacedOutVanillaStyle
 startWorldIndex: 0
 numRings: 12
 worldPlacements:
-- world: expansion1::worlds/Heliconia
+- world: expansion1::worlds/HeliconiaClassic
   buffer: 2
   locationType: StartWorld
   allowedRings:

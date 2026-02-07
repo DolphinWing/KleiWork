@@ -1,0 +1,15 @@
+biomeNoise: noise/HeliconiaPockets
+temperatureRange: TG_SuperHot
+density:
+  min: 50
+  max: 80
+avoidRadius: 20.0
+sampleBehaviour: PoissonDisk
+borderOverride: coreBorder
+biomes:
+  - name: expansion1::biomes/Heliconia/Core_Radioactive
+    weight: 2
+tags:
+  - AtDepths
+  - NoGravitasFeatures
+zoneType: Radioactive

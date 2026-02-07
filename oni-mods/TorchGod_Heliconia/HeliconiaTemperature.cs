@@ -38,7 +38,7 @@ namespace Heliconia
         private static float GetMinTemperature(Element element, WorldGen worldGen)
         {
             var world = worldGen?.Settings?.world;
-            return Heliconia.IsHcaWorld(world) ? 1000.0f : element.lowTemp;
+            return Heliconia.IsHcaWorld(world) ? element.lowTemp * 10f : element.lowTemp;
         }
 
         // refs: https://github.com/peterhaneve/ONIMods/blob/main/Challenge100K/Challenge100K.cs
@@ -52,11 +52,13 @@ namespace Heliconia
             internal static IEnumerable<CodeInstruction> Transpiler(
                     IEnumerable<CodeInstruction> method)
             {
+				var options = HeliconiaOptions.GetInstance();
                 var target = typeof(Element).GetFieldSafe(nameof(Element.lowTemp), false);
                 var replacement = typeof(HeliconiaTemperature).GetMethodSafe(nameof(
                     GetMinTemperature), true, typeof(Element), typeof(WorldGen));
                 foreach (var instruction in method)
-                    if (instruction.opcode == OpCodes.Ldfld &&
+					if (options.InstantMode == false) yield return instruction;
+                    else if (instruction.opcode == OpCodes.Ldfld &&
                         target != null && target == (FieldInfo)instruction.operand)
                     {
                         // With the Element on the stack, push the WorldGen (first arg)
@@ -97,24 +99,60 @@ namespace Heliconia
     [HarmonyPatch(typeof(TerrainCell), "GetTemperatureRange", typeof(WorldGen))]
     public static class TerrainCell_GetTemperatureRange_Patch
     {
+        private static Temperature.Range GetR0Temperature(HeliconiaOptions.MapMode mode)
+        {
+            switch (mode)
+            {
+                case HeliconiaOptions.MapMode.Crazy:
+                    return Temperature.Range.Hot;
+                case HeliconiaOptions.MapMode.Insane:
+                    return Temperature.Range.VeryHot;
+                case HeliconiaOptions.MapMode.Easy:
+                    return Temperature.Range.Mild;
+                default:
+                    return Temperature.Range.HumanHot;
+            }
+        }
+
+        private static Temperature.Range GetR1Temperature(HeliconiaOptions.MapMode mode)
+        {
+            switch (mode)
+            {
+                case HeliconiaOptions.MapMode.Crazy:
+                    return Temperature.Range.VeryHot;
+                case HeliconiaOptions.MapMode.Insane:
+                    return HeliconiaTemperature.TG_SuperHot;
+                case HeliconiaOptions.MapMode.Easy:
+                    return Temperature.Range.HumanHot;
+                default:
+                    return Temperature.Range.Hot;
+            }
+        }
+
         private static Temperature.Range GetStartingBiomeTemperature(Temperature.Range temp)
         {
             var options = POptions.ReadSettings<HeliconiaOptions>();
             HeliconiaOptions.MapMode mode = options != null ? options.Mode : HeliconiaOptions.MapMode.Balanced;
-            if (temp == Temperature.Range.Mild)
+            switch (temp)
             {
-                // starting biome keeps dupes survival
-                switch (mode)
-                {
-                    case HeliconiaOptions.MapMode.Crazy:
-                        return HeliconiaTemperature.TG_SuperSuperHot;
-                    case HeliconiaOptions.MapMode.Easy:
-                        return temp;
-                    default:
-                        return Temperature.Range.HumanHot;
-                }
+                case Temperature.Range.Mild: // R=0
+                    return GetR0Temperature(mode);
+
+                case Temperature.Range.Hot: // R=1
+                    return GetR1Temperature(mode);
+
+                default: // others
+                    switch (mode)
+                    {
+                        case HeliconiaOptions.MapMode.Crazy:
+                            return HeliconiaTemperature.TG_SuperSuperHot;
+                        case HeliconiaOptions.MapMode.Insane:
+                            return HeliconiaTemperature.TG_ExtremeHot;
+                        default:
+                            return temp;
+                    }
             }
-            return mode == HeliconiaOptions.MapMode.Crazy ? HeliconiaTemperature.TG_SuperSuperHot : temp;
+            //return temp;
         }
 
         /// <summary>

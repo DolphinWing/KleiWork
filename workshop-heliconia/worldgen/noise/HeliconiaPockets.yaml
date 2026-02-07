@@ -43,7 +43,7 @@ filters:
     frequency: 0.18 # Lowered from 0.35 to make pockets larger (target 4-6 tiles)
     lacunarity: 2
     octaves: 1
-    gain: 0
+    gain: 0.5
     offset: -0.1
     exponent: 0.9
     name: StartAreaFilter

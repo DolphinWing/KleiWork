@@ -1,0 +1,33 @@
+biomeNoise: noise/subworldForest
+temperatureRange: TG_SuperHot
+density:
+  min: 10
+  max: 15
+avoidRadius: 20.0
+minChildCount: 4
+sampleBehaviour: PoissonDisk
+borderOverride: heliconiaBorder
+biomes:
+  - name: biomes/Forest/Metal
+    weight: 2
+    tags:
+      - OxyfernSeed
+      - ForestTree     
+      - ForestTreeSeed
+      - LeafyPlantSeed
+      - BasicSingleHarvestPlantSeed
+      - ForestForagePlantPlanted
+  - name: biomes/Forest/Basic
+    weight: 1
+    tags:
+      - OxyfernSeed
+      - ForestTree     
+      - ForestTreeSeed
+      - LeafyPlantSeed
+      - BasicSingleHarvestPlantSeed
+      - ForestForagePlantPlanted
+tags:
+  - IgnoreCaveOverride
+features:
+  - type: features/forest/PhosphoriteLump
+zoneType: Forest

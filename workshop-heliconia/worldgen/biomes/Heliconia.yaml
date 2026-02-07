@@ -28,8 +28,8 @@ TerrainBiomeLookupTable:
       bandSize: 0.4
     - content: Granite
       bandSize: 0.2
-    - content: SandStone
-      bandSize: 0.1
+    - content: ToxicSand
+      bandSize: 0.2
     - content: Carbon
       bandSize: 0.1
     - content: RefinedCarbon # Added
@@ -127,7 +127,7 @@ TerrainBiomeLookupTable:
     - content: MoltenSalt
       bandSize: 0.3
       overrides:
-        massOverride: 2000
+        massOverride: 1000
     - content: Salt
       bandSize: 0.1
     - content: Lime # Added
@@ -135,58 +135,221 @@ TerrainBiomeLookupTable:
     - content: ChlorineGas
       bandSize: 0.1
 
-    Core:
-    - content: MoltenIron
-      bandSize: 0.4
-      overrides:
-        massOverride: 7800
+    Core_Iron:
     - content: Obsidian
-      bandSize: 0.5
+      bandSize: 0.25
+    - content: Katairite
+      bandSize: 0.3
+    - content: Iron
+      bandSize: 0.35
+      overrides:
+        massOverride: 4000
     - content: Wolframite
-      bandSize: 0.2
-    - content: Glass
-      bandSize: 0.2
-    - content: Diamond
-      bandSize: 0.2
+      bandSize: 0.05
     - content: SourGas
-      bandSize: 0.1
-    - content: Sand
-      bandSize: 0.1
+      bandSize: 0.05
 
     Core_Copper:
-    - content: MoltenCopper
-      bandSize: 0.4
-      overrides:
-        massOverride: 7800
     - content: Obsidian
-      bandSize: 0.6
-    - content: Wolframite
-      bandSize: 0.2
-    - content: Glass
-      bandSize: 0.2
-    - content: Diamond
+      bandSize: 0.25
+    - content: Katairite
       bandSize: 0.3
-    - content: RefinedCarbon # Added
-      bandSize: 0.3
+    - content: Copper
+      bandSize: 0.35
+      overrides:
+        massOverride: 4000
+    - content: RefinedCarbon
+      bandSize: 0.05
     - content: CarbonDioxide
-      bandSize: 0.1
+      bandSize: 0.05
 
     Core_Gold:
-    - content: MoltenGold
-      bandSize: 0.4
-      overrides:
-        massOverride: 7800
     - content: Obsidian
-      bandSize: 0.4
-    - content: Wolframite
+      bandSize: 0.25
+    - content: Katairite
       bandSize: 0.3
-    - content: Glass
-      bandSize: 0.2
+    - content: Gold
+      bandSize: 0.35
+      overrides:
+        massOverride: 4000
     - content: Diamond
-      bandSize: 0.3
-    - content: Steel # Added
-      bandSize: 0.2
-    - content: OxyRock
-      bandSize: 0.1
+      bandSize: 0.05
+    - content: Steam
+      bandSize: 0.05
+
+    Frozen_Wet:
     - content: Steam
       bandSize: 0.1
+    - content: Glass
+      bandSize: 0.2
+    - content: Salt
+      bandSize: 0.15
+    - content: Glass
+      bandSize: 0.2
+    - content: Salt
+      bandSize: 0.2
+    - content: CarbonDioxide
+      bandSize: 0.7
+
+    Frozen_Dry:
+    - content: Wolframite
+      bandSize: 0.1
+    - content: BleachStone
+      bandSize: 0.15
+    - content: Granite
+      bandSize: 0.3
+    - content: BleachStone
+      bandSize: 0.3
+    - content: Salt
+      bandSize: 0.2
+    - content: CarbonDioxide
+      bandSize: 0.7
+
+    Marsh_Hot:
+    - content: Phosphorite
+      bandSize: 0.1
+    - content: Ceramic
+      bandSize: 0.3
+    - content: Phosphorite
+      bandSize: 0.2
+    - content: Ceramic
+      bandSize: 0.3
+    - content: ToxicSand
+      bandSize: 0.125
+    - content: ToxicSand
+      bandSize: 0.125
+    - content: Phosphorite
+      bandSize: 0.2
+    - content: Ceramic
+      bandSize: 0.3
+    - content: ToxicSand
+      bandSize: 0.2
+    - content: Ceramic
+      bandSize: 0.3
+    - content: ToxicSand
+      bandSize: 0.2
+    - content: Ceramic
+      bandSize: 0.4
+    - content: ToxicSand
+      bandSize: 2
+    - content: SedimentaryRock
+      bandSize: 1
+    - content: GoldAmalgam
+      bandSize: 1
+    - content: ToxicSand
+      bandSize: 0.125
+    - content: ContaminatedOxygen
+      bandSize: 1
+    - content: DirtyWater
+      bandSize: 0.125
+    - content: CarbonDioxide
+      bandSize: 1
+    - content: DirtyWater
+      bandSize: 0.75
+
+    Jungle_Hot:
+    - content: Fossil
+      bandSize: 1
+    - content: RefinedCarbon
+      bandSize: 0.5
+    - content: IgneousRock
+      bandSize: 1.5
+    - content: IronOre
+      bandSize: 0.5
+    - content: OxyRock
+      bandSize: 0.25
+    - content: ChlorineGas
+      bandSize: 0.5
+    - content: Hydrogen
+      bandSize: 0.5
+    - content: SourGas
+      bandSize: 0.2
+    - content: Fossil
+      bandSize: 0.5
+    - content: RefinedCarbon
+      bandSize: 0.5
+    - content: IgneousRock
+      bandSize: 1.5
+    - content: OxyRock
+      bandSize: 0.25
+    - content: IronOre
+      bandSize: 0.5
+    - content: ChlorineGas
+      bandSize: 0.5
+    - content: Hydrogen
+      bandSize: 0.5
+    - content: Fossil
+      bandSize: 1
+    - content: RefinedCarbon
+      bandSize: 0.5
+    - content: IgneousRock
+      bandSize: 1.5
+    - content: ChlorineGas
+      bandSize: 0.5
+    - content: Hydrogen
+      bandSize: 0.5
+    - content: OxyRock
+      bandSize: 0.25
+
+    Ocean_Basic:
+    - content: Granite
+      bandSize: 0.05
+    - content: SedimentaryRock
+      bandSize: 0.10
+    - content: BleachStone
+      bandSize: 0.05
+    - content: Glass
+      bandSize: 0.25
+    - content: CarbonDioxide
+      bandSize: 0.1
+    - content: Hydrogen
+      bandSize: 0.25
+    - content: Steam
+      bandSize: 0.45
+
+    Frozen_Solid:
+    - content: OxyRock
+      bandSize: 0.1
+    - content: Glass
+      bandSize: 0.5
+    - content: Salt
+      bandSize: 0.15
+    - content: CarbonDioxide
+      bandSize: 0.1
+    - content: Glass
+      bandSize: 0.5
+    - content: Salt
+      bandSize: 0.2
+    - content: Wolframite
+      bandSize: 0.1
+
+    Rust_Ethanol:
+    - content: IronOre
+      bandSize: 0.03
+    - content: MaficRock
+      bandSize: 0.1
+    - content: Rust
+      bandSize: 0.35  
+    - content: Ethanol
+      bandSize: 0.05
+    - content: CarbonDioxide
+      bandSize: 0.75
+      overrides:
+        massMultiplier: 0.5
+
+    OilField_Hot:
+    - content: Fossil
+      bandSize: 0.2
+    - content: Petroleum
+      bandSize: 0.125
+      overrides:
+        massOverride: 200
+    - content: Obsidian
+      bandSize: 0.25
+    - content: Lead
+      bandSize: 0.5    
+    - content: Petroleum
+      bandSize: 3
+      overrides:
+        massMultiplier: 30
+        massOverride: 800

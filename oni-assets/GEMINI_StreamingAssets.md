@@ -108,3 +108,38 @@ ONI world generation is a multi-layered procedural system based on **Noise Field
 *   **`expansion1::noise/Swamp`**: Irregular, thick organic-looking chunks.
 *   **`expansion1::noise/Metallic`**: Sharp, flattened, layered geometry.
 *   **`expansion1::noise/Radioactive`**: High-detail, rough edges (sinusoidal fractal).
+
+---
+
+## 6. Advanced Implementation Lessons (2026 Update)
+
+### 6.1 Template Placement: Global vs. Local
+*   **The Problem**: Using global `worldTemplateRules` (in `worlds/`) for critical structures (like Start Shelters) often fails in crowded rings due to lack of valid contiguous space or noise fragmentation.
+*   **The Fix**: Use **`subworldTemplateRules`** inside a dedicated Subworld file.
+    *   Create a "Shelter Zone" subworld with high `density` and moderate `avoidRadius`.
+    *   Define the template inside the subworld's YAML:
+        ```yaml
+        subworldTemplateRules:
+          - names: [ "expansion1::bases/MyShelter" ]
+            listRule: GuaranteeOne
+            priority: 500
+        ```
+    *   This guarantees placement because the subworld effectively "reserves" the space specifically for the template during generation.
+
+### 6.2 The `centralFeature` Limitation
+*   **Limitation**: `centralFeature` expects a `Feature` type geometry definition, NOT a direct Template path. While some versions support `type: Template`, it is less reliable than `subworldTemplateRules`.
+*   **Modding Control**: `centralFeature` is protected in C#. To modify it via Harmony (e.g., for toggle options), use **Reflection** or **Traverse** (`traverse.Property("centralFeature").SetValue(null)`).
+
+### 6.3 DLC Biome Referencing (`expansion1::` Prefix Trap)
+*   **The Trap**: When defining a Subworld in the DLC folder, one might assume Biome references need the `expansion1::` prefix (e.g., `name: expansion1::biomes/MyBiome`).
+*   **The Reality**: **DO NOT** use the prefix for Biome names inside Subworld files.
+    *   Correct: `name: biomes/MyMod/MyBiome`
+    *   Incorrect: `name: expansion1::biomes/MyMod/MyBiome` (Causes "Assert failed: Node didn't get assigned a biome" crash).
+    *   *Reason*: The prefix is only for file loading paths (in `subworldFiles`), not for the internal ID key used by the generator once loaded.
+
+### 6.4 Noise & Core Layering
+*   **Tilted Layers**: `noise/subworldFrozen` uses `RotatePoint: 60` and extreme `Scale2d` to create diagonal bands. This is superior for holding liquids (Magma/Molten Metal) compared to pockets or vertical flows.
+*   **Biome Element Order**: The **first element** in a Biome list often dominates the generation if noise values are skewed low.
+    *   *Strategy*: Place the primary visual element (e.g., Iron) first, followed by the structural element (e.g., Obsidian).
+    *   *Shielding*: To create a heat shield, use a distinct band (0.15~0.3) of `Katairite` (Abyssalite) in the biome definition.
+

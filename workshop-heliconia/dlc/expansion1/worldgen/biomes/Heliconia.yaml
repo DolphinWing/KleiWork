@@ -1,36 +1,30 @@
 TerrainBiomeLookupTable:
   add:
     Core_Cobalt:
-    - content: MoltenCobalt
-      bandSize: 0.3
-      overrides:
-        massOverride: 7800
     - content: Obsidian
-      bandSize: 0.5
-    - content: Wolframite
-      bandSize: 0.1
-    - content: Glass # Added
-      bandSize: 0.1
+      bandSize: 0.3
+    - content: Cobalt
+      bandSize: 0.4
+    - content: Katairite
+      bandSize: 0.15
     - content: Diamond
+      bandSize: 0.05
+    - content: RefinedCarbon
       bandSize: 0.1
-    - content: RefinedCarbon # Added
-      bandSize: 0.2
     - content: CarbonDioxide
-      bandSize: 0.1
+      bandSize: 0.05
 
     Core_Aluminum:
-    - content: MoltenAluminum
-      bandSize: 0.3
-      overrides:
-        massOverride: 2700
     - content: Obsidian
+      bandSize: 0.3
+    - content: Katairite
+      bandSize: 0.15
+    - content: Aluminum
       bandSize: 0.4
-    - content: Wolframite
-      bandSize: 0.2
-    - content: Glass # Added
-      bandSize: 0.1
     - content: Diamond
-      bandSize: 0.2
+      bandSize: 0.1
+    - content: Glass
+      bandSize: 0.05
 
     VeryHot_Sulfur:
     - content: Sandstone
@@ -47,3 +41,155 @@ TerrainBiomeLookupTable:
       bandSize: 0.4
     - content: Sand
       bandSize: 0.1
+
+    Core_Radioactive:
+    - content: Obsidian
+      bandSize: 0.4
+    - content: Glass # Added
+      bandSize: 0.4
+    - content: MoltenUranium
+      bandSize: 0.2
+    - content: NuclearWaste
+      bandSize: 0.2
+    - content: Corium
+      bandSize: 0.2
+    - content: Lead
+      bandSize: 0.05
+    - content: Diamond
+      bandSize: 0.05
+    - content: Fallout
+      bandSize: 0.1
+
+    Wasteland_Hot:
+    - content: Obsidian
+      bandSize: 0.1
+    - content: IgneousRock
+      bandSize: 0.2
+    - content: Glass
+      bandSize: 0.1
+    - content: LiquidSulfur
+      bandSize: 0.27
+      overrides:
+        massOverride: 1000
+    - content: MaficRock
+      bandSize: 0.08
+    - content: Cuprite
+      bandSize: 0.12
+    - content: CarbonDioxide
+      bandSize: 0.13
+
+    Wasteland_Snowy:
+    - content: Obsidian
+      bandSize: 0.1
+    - content: IgneousRock
+      bandSize: 0.2
+    - content: Glass
+      bandSize: 0.1
+    - content: LiquidSulfur
+      bandSize: 0.27
+      overrides:
+        massOverride: 1000
+    - content: MaficRock
+      bandSize: 0.08
+    - content: Cuprite
+      bandSize: 0.1
+    - content: Salt
+      bandSize: 0.02
+    - content: CarbonDioxide
+      bandSize: 0.13
+
+    Rust_Ethanol:
+    - content: IronOre
+      bandSize: 0.03
+    - content: MaficRock
+      bandSize: 0.1
+    - content: Rust
+      bandSize: 0.35  
+    - content: Ethanol
+      bandSize: 0.05
+    - content: CarbonDioxide
+      bandSize: 0.75
+      overrides:
+        massMultiplier: 0.5
+
+    Swamp_Basic:
+    - content: SedimentaryRock
+      bandSize: 0.05
+    - content: ToxicSand
+      bandSize: 0.30
+    - content: Dirt
+      bandSize: 0.05
+    - content: Sand
+      bandSize: 0.15
+    - content: Steam
+      bandSize: 0.1
+    - content: ContaminatedOxygen
+      bandSize: 0.7
+
+    Swamp_Water:
+    - content: SedimentaryRock
+      bandSize: 0.05
+    - content: Phosphorite
+      bandSize: 0.05
+      overrides:
+        massOverride: 200
+    - content: ToxicSand
+      bandSize: 0.15
+    - content: Sand
+      bandSize: 0.2
+    - content: ToxicSand
+      bandSize: 0.35
+    - content: Fertilizer
+      bandSize: 0.05
+    - content: Steam
+      bandSize: 0.6
+    - content: CarbonDioxide
+      bandSize: 0.4
+
+    Radioactive_Basic:
+    - content: UraniumOre
+      bandSize: 0.02
+    - content: Glass
+      bandSize: 0.03
+    - content: LiquidSulfur
+      bandSize: 0.03
+      overrides:
+        massOverride: 1000
+    - content: Rust
+      bandSize: 0.025
+    - content: UraniumOre
+      bandSize: 0.03
+    - content: Ceramic
+      bandSize: 0.10
+    - content: Glass
+      bandSize: 0.05
+    - content: UraniumOre
+      bandSize: 0.10
+    - content: BleachStone
+      bandSize: 0.03
+    - content: CarbonDioxide
+      bandSize: 0.15
+    - content: Chlorine
+      bandSize: 0.15
+      overrides:
+        massOverride: 2
+    - content: Glass
+      bandSize: 0.1
+    - content: LiquidSulfur
+      bandSize: 0.05
+      overrides:
+        massOverride: 1000
+    - content: Rust
+      bandSize: 0.03
+    - content: UraniumOre
+      bandSize: 0.03
+    - content: Rust
+      bandSize: 0.03
+    - content: BleachStone
+      bandSize: 0.02
+    - content: NuclearWaste
+      bandSize: 0.05
+      overrides:
+        massOverride: 1000
+    - content: UraniumOre
+      bandSize: 0.01

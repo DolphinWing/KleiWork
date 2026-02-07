@@ -1,0 +1,31 @@
+biomeNoise: noise/subworldForest
+temperatureRange: Hot
+pdWeight: 0.5
+density:
+  min: 10
+  max: 15
+avoidRadius: 25.0
+doAvoidPoints: false
+dontRelaxChildren: true
+sampleBehaviour: PoissonDisk
+borderOverride: organicCrust
+biomes:
+  - name: biomes/Forest/Metal
+    weight: 2
+    tags:
+      - Oxyfern
+      - ForestTree     
+      - BasicSingleHarvestPlant
+      - BasicSingleHarvestPlantSeed
+      - ForestForagePlantPlanted
+      - LightBug
+      - LeafyPlant        
+      - LeafyPlantSeed
+      - Squirrel          
+tags:
+  - StartWorld
+  - IgnoreCaveOverride
+  - NoGlobalFeatureSpawning
+centralFeature:
+features: []
+zoneType: Forest

@@ -42,3 +42,63 @@ msgstr "Critter Cave"
 msgctxt "Heliconia.HeliconiaOptions.CrittersCaveTooltip"
 msgid "A small refuge space for critters and plants."
 msgstr "A small refuge space for critters and plants."
+
+#. Heliconia.HeliconiaOptions.InstantModeTitle
+msgctxt "Heliconia.HeliconiaOptions.InstantModeTitle"
+msgid "Instant temperature balanced"
+msgstr "Instant Temp Balancing"
+
+#. Heliconia.HeliconiaOptions.InstantModeTooltip
+msgctxt "Heliconia.HeliconiaOptions.InstantModeTooltip"
+msgid "Instant temperature balanced right after worldgen."
+msgstr "Instantly balances temperature right after world generation."
+
+#. Heliconia.HeliconiaOptions.MAP_MODE
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE"
+msgid "Temperature Mode"
+msgstr "Temperature Mode"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_DESC
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_DESC"
+msgid "Select starting biome temperature"
+msgstr "Select starting biome temperature"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_BALANCED
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_BALANCED"
+msgid "Balanced"
+msgstr "Balanced"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_BALANCED_DESC
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_BALANCED_DESC"
+msgid "balanced but still quite a chanllege."
+msgstr "Balanced, but still quite a challenge."
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_EASY
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_EASY"
+msgid "Easy"
+msgstr "Easy"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_EASY_DESC
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_EASY_DESC"
+msgid "a bit taste of Heliconia"
+msgstr "A little taste of Heliconia."
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_CRAZY
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_CRAZY"
+msgid "Crazy"
+msgstr "Crazy"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_CRAZY_DESC
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_CRAZY_DESC"
+msgid "I bet you are crazy about this game."
+msgstr "I bet you are crazy about this game."
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_INSANE
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_INSANE"
+msgid "Insane"
+msgstr "Insane"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_INSANE_DESC
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_INSANE_DESC"
+msgid "Only hardcore gamer can do this."
+msgstr "Only hardcore gamer can do this."

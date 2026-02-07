@@ -1,4 +1,4 @@
-biomeNoise: noise/SandstoneStart
+biomeNoise: noise/subworldForest
 temperatureRange: Mild
 pdWeight: 2
 density:
@@ -9,7 +9,7 @@ minChildCount: 6
 doAvoidPoints: false
 dontRelaxChildren: true
 sampleBehaviour: PoissonDisk
-borderOverride: rocky
+borderOverride: organicCrust
 biomes:
   - name: biomes/Heliconia/Start
     weight: 1
@@ -24,14 +24,22 @@ biomes:
       - BasicSingleHarvestPlant
       - BasicForagePlant
       - BasicForagePlantPlanted
+  - name: biomes/Forest/Metal
+    weight: 2
+    tags:
+      - Oxyfern
+      - LeafyPlant        
+      - LeafyPlantSeed
+      - BasicSingleHarvestPlantSeed
+      - ForestForagePlantPlanted
 centralFeature:
   type: features/generic/StartLocation
 features:
-  - type: features/sedimentary/SmallLake
-  - type: features/sedimentary/FlatLake
+  - type: features/forest/SmallLake
+  - type: features/forest/OxyfernCave
 tags:
   - IgnoreCaveOverride
   - NoGlobalFeatureSpawning
   - StartWorld
   - AtStart
-zoneType: Sandstone
+zoneType: Forest
