@@ -23,118 +23,6 @@ TerrainBiomeLookupTable:
     - content: Carbon
       bandSize: 0.1
 
-    Hot_Default:
-    - content: IgneousRock
-      bandSize: 0.4
-    - content: Granite
-      bandSize: 0.2
-    - content: ToxicSand
-      bandSize: 0.2
-    - content: Carbon
-      bandSize: 0.1
-    - content: RefinedCarbon # Added
-      bandSize: 0.2
-    - content: IronOre
-      bandSize: 0.4
-    - content: CarbonDioxide
-      bandSize: 0.2
-
-    Hot_Rust:
-    - content: Rust
-      bandSize: 0.4
-    - content: IronOre
-      bandSize: 0.4
-    - content: MaficRock
-      bandSize: 0.4
-    - content: Ethanol
-      bandSize: 0.1
-    - content: CarbonDioxide
-      bandSize: 0.2
-
-    VeryHot_Default:
-    - content: IgneousRock
-      bandSize: 0.3
-    - content: Obsidian
-      bandSize: 0.3
-    - content: RefinedCarbon # Added
-      bandSize: 0.05
-    - content: MaficRock
-      bandSize: 0.3
-    - content: Fossil # Added
-      bandSize: 0.1
-    - content: GoldAmalgam
-      bandSize: 0.2
-    - content: Hydrogen
-      bandSize: 0.1
-    - content: ChlorineGas
-      bandSize: 0.1
-
-    VeryHot_Crystal:
-    - content: Obsidian
-      bandSize: 0.3
-    - content: BleachStone
-      bandSize: 0.2
-    - content: Salt
-      bandSize: 0.2
-    - content: Granite
-      bandSize: 0.4
-    - content: OxyRock
-      bandSize: 0.1
-    - content: MaficRock
-      bandSize: 0.3
-
-    VeryHot_Phosphorus:
-    - content: IgneousRock
-      bandSize: 0.4
-    - content: LiquidPhosphorus
-      bandSize: 0.4
-      overrides:
-        massOverride: 1000
-    - content: RefinedCarbon
-      bandSize: 0.2
-    - content: CarbonDioxide
-      bandSize: 0.1
-    - content: Sand
-      bandSize: 0.2
-    - content: Fossil # Added
-      bandSize: 0.1
-
-    Hell_Lead:
-    - content: Obsidian
-      bandSize: 0.4
-    - content: Diamond
-      bandSize: 0.3
-    - content: Wolframite
-      bandSize: 0.1
-    - content: Ceramic
-      bandSize: 0.2
-    - content: Steel # Added
-      bandSize: 0.1
-    - content: Lime # Added
-      bandSize: 0.05
-    - content: MoltenLead
-      bandSize: 0.3
-      overrides:
-        massOverride: 2000
-    - content: SourGas
-      bandSize: 0.1
-    - content: Fossil # Added
-      bandSize: 0.2
-
-    Hell_Salt:
-    - content: Obsidian
-      bandSize: 0.5
-    - content: MoltenSalt
-      bandSize: 0.3
-      overrides:
-        massOverride: 1000
-    - content: Salt
-      bandSize: 0.1
-    - content: Lime # Added
-      bandSize: 0.1
-    - content: ChlorineGas
-      bandSize: 0.1
-
     Core_Iron:
     - content: Obsidian
       bandSize: 0.25
@@ -173,8 +61,8 @@ TerrainBiomeLookupTable:
       overrides:
         massOverride: 4000
     - content: Diamond
-      bandSize: 0.05
-    - content: Steam
+      bandSize: 0.1
+    - content: OxyRock
       bandSize: 0.05
 
     Frozen_Wet:

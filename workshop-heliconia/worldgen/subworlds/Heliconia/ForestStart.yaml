@@ -1,0 +1,69 @@
+biomeNoise: noise/subworldForest
+temperatureRange: Mild
+pdWeight: 4
+density:
+  min: 10
+  max: 20
+avoidRadius: 20.0
+extraBiomeChildren: 6
+minChildCount: 8
+doAvoidPoints: false
+dontRelaxChildren: true
+sampleBehaviour: PoissonDisk
+borderOverride: organicCrust
+biomes:
+  - name: biomes/Heliconia/Start
+    weight: 1
+    tags:
+      - StartWorld
+      - Hatch
+      - PrickleFlower
+      - PrickleFlowerSeed
+      - PrickleGrass
+      - PrickleGrassSeed
+      - BasicSingleHarvestPlantSeed
+      - BasicSingleHarvestPlant
+      - BasicForagePlant
+      - BasicForagePlantPlanted
+  - name: biomes/Forest/BasicOxy
+    weight: 2
+    tags:
+      - Oxyfern
+      - ForestTree     
+      - BasicSingleHarvestPlant
+      - BasicSingleHarvestPlantSeed
+      - ForestForagePlantPlanted
+      - LightBug
+      - LeafyPlant        
+      - LeafyPlantSeed
+  - name: biomes/Forest/Basic
+    weight: 2
+    tags:
+      - Oxyfern
+      - ForestTree     
+      - BasicSingleHarvestPlant
+      - BasicSingleHarvestPlantSeed
+      - ForestForagePlantPlanted
+      - LightBug
+      - LeafyPlant        
+      - LeafyPlantSeed
+      - ForestForagePlant
+  - name: biomes/Forest/Metal
+    weight: 2
+    tags:
+      - Oxyfern
+      - LeafyPlant        
+      - LeafyPlantSeed
+      - BasicSingleHarvestPlantSeed
+      - ForestForagePlantPlanted
+tags:
+  - StartWorld
+  - IgnoreCaveOverride
+  - NoGlobalFeatureSpawning
+centralFeature:
+  type: features/generic/StartLocation
+features:
+  - type: features/forest/SmallLake
+  - type: features/forest/OxyfernCave
+  - type: features/forest/PhosphoriteLump
+zoneType: Forest

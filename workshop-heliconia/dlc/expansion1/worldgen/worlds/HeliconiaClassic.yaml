@@ -12,14 +12,14 @@ layoutMethod: PowerTree
 defaultsOverrides:
   startingWorldElements: []
 
-startSubworldName: subworlds/Heliconia/Start
-startingBaseTemplate: bases/sandstoneBase
+startSubworldName: subworlds/Heliconia/ForestStart
+startingBaseTemplate: bases/forestBase
 startingBasePositionHorizontal:
   min: 0.5
   max: 0.5
 startingBasePositionVertical:
-  min: 0.35
-  max: 0.45
+  min: 0.3
+  max: 0.4
 
 worldTraitRules:
   - min: 0
@@ -42,7 +42,7 @@ worldTraitRules:
 
 # List all the subworld files to load
 subworldFiles:
-  - name: subworlds/Heliconia/Start
+  - name: subworlds/Heliconia/ForestStart
   - name: subworlds/Heliconia/Marsh
   - name: subworlds/Heliconia/Barren
   - name: subworlds/Heliconia/Desert
@@ -94,7 +94,7 @@ unknownCellsAllowedSubworlds:
   - tagcommand: Default
     command: Replace
     subworldNames:
-      - subworlds/Heliconia/Start
+      - subworlds/Heliconia/ForestStart
 
   - tagcommand: DistanceFromTag
     tag: AtStart

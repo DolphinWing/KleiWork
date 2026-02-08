@@ -130,12 +130,12 @@ ONI world generation is a multi-layered procedural system based on **Noise Field
 *   **Limitation**: `centralFeature` expects a `Feature` type geometry definition, NOT a direct Template path. While some versions support `type: Template`, it is less reliable than `subworldTemplateRules`.
 *   **Modding Control**: `centralFeature` is protected in C#. To modify it via Harmony (e.g., for toggle options), use **Reflection** or **Traverse** (`traverse.Property("centralFeature").SetValue(null)`).
 
-### 6.3 DLC Biome Referencing (`expansion1::` Prefix Trap)
-*   **The Trap**: When defining a Subworld in the DLC folder, one might assume Biome references need the `expansion1::` prefix (e.g., `name: expansion1::biomes/MyBiome`).
-*   **The Reality**: **DO NOT** use the prefix for Biome names inside Subworld files.
-    *   Correct: `name: biomes/MyMod/MyBiome`
-    *   Incorrect: `name: expansion1::biomes/MyMod/MyBiome` (Causes "Assert failed: Node didn't get assigned a biome" crash).
-    *   *Reason*: The prefix is only for file loading paths (in `subworldFiles`), not for the internal ID key used by the generator once loaded.
+### 6.3 DLC Biome Referencing (The `expansion1::` Prefix Requirement)
+*   **The Rule**: When defining a Subworld inside the DLC (`expansion1`) directory, all Biome references defined within the DLC's `biomes/*.yaml` **MUST** include the `expansion1::` prefix.
+*   **The Reality**: If the prefix is missing, the game engine will fail to resolve the path relative to the `worldgen` root, leading to "Node didn't get assigned a biome" or file-not-found errors.
+    *   **Correct**: `name: expansion1::biomes/MyMod/MyBiome`
+    *   **Incorrect**: `name: biomes/MyMod/MyBiome`
+    *   *Note*: This applies to all assets (Templates, Noise, Features) referenced within DLC-specific YAML files.
 
 ### 6.4 Noise & Core Layering
 *   **Tilted Layers**: `noise/subworldFrozen` uses `RotatePoint: 60` and extreme `Scale2d` to create diagonal bands. This is superior for holding liquids (Magma/Molten Metal) compared to pockets or vertical flows.

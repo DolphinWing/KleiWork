@@ -1,9 +1,9 @@
 biomeNoise: noise/subworldForest
 temperatureRange: Hot
-pdWeight: 2.0
+pdWeight: 1.5
 density:
-  min: 60
-  max: 65
+  min: 10
+  max: 20
 avoidRadius: 20.0
 doAvoidPoints: false
 dontRelaxChildren: true

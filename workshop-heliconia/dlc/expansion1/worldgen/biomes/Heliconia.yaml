@@ -1,45 +1,27 @@
 TerrainBiomeLookupTable:
   add:
     Core_Cobalt:
-    - content: Obsidian
-      bandSize: 0.3
-    - content: Cobalt
-      bandSize: 0.4
     - content: Katairite
       bandSize: 0.15
+    - content: Obsidian
+      bandSize: 0.35
+    - content: Cobalt
+      bandSize: 0.4
     - content: Diamond
       bandSize: 0.05
     - content: RefinedCarbon
       bandSize: 0.1
-    - content: CarbonDioxide
-      bandSize: 0.05
 
     Core_Aluminum:
-    - content: Obsidian
-      bandSize: 0.3
     - content: Katairite
       bandSize: 0.15
+    - content: Obsidian
+      bandSize: 0.3
     - content: Aluminum
-      bandSize: 0.4
-    - content: Diamond
+      bandSize: 0.35
+    - content: Katairite
       bandSize: 0.1
     - content: Glass
-      bandSize: 0.05
-
-    VeryHot_Sulfur:
-    - content: Sandstone
-      bandSize: 0.2
-    - content: LiquidSulfur
-      bandSize: 0.4
-      overrides:
-        massOverride: 1000
-    - content: MaficRock
-      bandSize: 0.1
-    - content: Sucrose
-      bandSize: 0.3
-    - content: MaficRock
-      bandSize: 0.4
-    - content: Sand
       bandSize: 0.1
 
     Core_Radioactive:
@@ -49,12 +31,14 @@ TerrainBiomeLookupTable:
       bandSize: 0.4
     - content: MoltenUranium
       bandSize: 0.2
-    - content: NuclearWaste
+    - content: Steel
       bandSize: 0.2
     - content: Corium
       bandSize: 0.2
-    - content: Lead
+    - content: MoltenLead
       bandSize: 0.05
+      overrides:
+        massOverride: 2000
     - content: Diamond
       bandSize: 0.05
     - content: Fallout
@@ -147,25 +131,23 @@ TerrainBiomeLookupTable:
       bandSize: 0.4
 
     Radioactive_Basic:
-    - content: UraniumOre
+    - content: EnrichedUranium
       bandSize: 0.02
     - content: Glass
       bandSize: 0.03
-    - content: LiquidSulfur
+    - content: Dirt
       bandSize: 0.03
-      overrides:
-        massOverride: 1000
     - content: Rust
       bandSize: 0.025
-    - content: UraniumOre
+    - content: EnrichedUranium
       bandSize: 0.03
-    - content: Ceramic
+    - content: ToxicSand
       bandSize: 0.10
     - content: Glass
       bandSize: 0.05
-    - content: UraniumOre
+    - content: EnrichedUranium
       bandSize: 0.10
-    - content: BleachStone
+    - content: Corium
       bandSize: 0.03
     - content: CarbonDioxide
       bandSize: 0.15
@@ -175,21 +157,19 @@ TerrainBiomeLookupTable:
         massOverride: 2
     - content: Glass
       bandSize: 0.1
-    - content: LiquidSulfur
+    - content: Dirt
       bandSize: 0.05
-      overrides:
-        massOverride: 1000
     - content: Rust
       bandSize: 0.03
-    - content: UraniumOre
+    - content: EnrichedUranium
       bandSize: 0.03
     - content: Rust
       bandSize: 0.03
-    - content: BleachStone
+    - content: Corium
       bandSize: 0.02
     - content: NuclearWaste
       bandSize: 0.05
       overrides:
         massOverride: 1000
-    - content: UraniumOre
+    - content: EnrichedUranium
       bandSize: 0.01

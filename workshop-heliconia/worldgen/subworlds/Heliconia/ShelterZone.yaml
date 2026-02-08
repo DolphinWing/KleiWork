@@ -1,10 +1,10 @@
 biomeNoise: noise/subworldForest
 temperatureRange: Hot
-pdWeight: 10.0
+pdWeight: 1.5
 density:
-  min: 65
-  max: 65
-avoidRadius: 10.0
+  min: 10
+  max: 25
+avoidRadius: 20.0
 doAvoidPoints: false
 dontRelaxChildren: true
 sampleBehaviour: PoissonDisk
