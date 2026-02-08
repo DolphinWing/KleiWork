@@ -1,27 +1,37 @@
 #. Heliconia.Heliconia.NAME
 msgctxt "Heliconia.Heliconia.NAME"
-msgid "Helicnoia"
-msgstr "Helicnoia"
+msgid "Heliconia"
+msgstr "Heliconia"
 
 #. Heliconia.Heliconia.MOD_DESC
 msgctxt "Heliconia.Heliconia.MOD_DESC"
-msgid "Helicnoia mod"
-msgstr "Helicnoia mod"
+msgid "Heliconia mod"
+msgstr "Heliconia Mod"
 
 #. Heliconia.Heliconia.DESCRIPTION
 msgctxt "Heliconia.Heliconia.DESCRIPTION"
-msgid "Helicnoia desc"
-msgstr "Helicnoia desc"
+msgid "Heliconia desc"
+msgstr "盡可能熾熱的地獄。\n\n<smallcaps>複製人必須工作到死，才能讓殖民地再次繁榮。</smallcaps>"
 
 #. Heliconia.Heliconia.BIOME_DESC
 msgctxt "Heliconia.Heliconia.BIOME_DESC"
-msgid "Helicnoia biome"
-msgstr "Helicnoia biome"
+msgid "Heliconia biome"
+msgstr "Heliconia 生態系"
 
 #. Heliconia.Heliconia.UTILITY_DESC
 msgctxt "Heliconia.Heliconia.UTILITY_DESC"
-msgid "Helicnoia biome desc"
-msgstr "Helicnoia biome desc"
+msgid "Heliconia biome desc"
+msgstr "極致高溫的煉獄"
+
+#. Heliconia.Heliconia.WARP_NAME
+msgctxt "Heliconia.Heliconia.WARP_NAME"
+msgid "Heliconia Warp"
+msgstr "Heliconia 傳送星球"
+
+#. Heliconia.Heliconia.WARP_DESCRIPTION
+msgctxt "Heliconia.Heliconia.WARP_DESCRIPTION"
+msgid "Heliconia warp world"
+msgstr "充滿放射性廢土與高壓蒸汽的傳送星球。"
 
 #. Heliconia.HeliconiaOptions.GiftedAreaTitle
 msgctxt "Heliconia.HeliconiaOptions.GiftedAreaTitle"
@@ -30,8 +40,8 @@ msgstr "避難洞穴"
 
 #. Heliconia.HeliconiaOptions.GiftedAreaTooltip
 msgctxt "Heliconia.HeliconiaOptions.GiftedAreaTooltip"
-msgid "A small refuge space to avoid freezing to death."
-msgstr "一個避免被凍死的小小避難空間。"
+msgid "A small refuge space to avoid hot to death."
+msgstr "一個避免被燙死的小小避難空間。"
 
 #. Heliconia.HeliconiaOptions.CrittersCaveTitle
 msgctxt "Heliconia.HeliconiaOptions.CrittersCaveTitle"

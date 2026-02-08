@@ -28,11 +28,11 @@ namespace Heliconia
 
             var options = HeliconiaOptions.GetInstance();
             PUtil.LogDebug("Heliconia Shelter=" + options.Shelter + ", Critter=" + options.Critter);
-            PUtil.LogDebug("  InstantMode=" + options.InstantMode);
-            PUtil.LogDebug("  MapMode=" + options.Mode);
+            PUtil.LogDebug("  MapMode=" + options.Mode + ", InstantMode=" + options.InstantMode);
 
             var removing = new List<ProcGen.World.TemplateSpawnRules>();
             if (world.worldTemplateRules != null)
+            {
                 foreach (var rule in world.worldTemplateRules)
                 {
                     if (rule.ruleId?.StartsWith("hca_critter") == true)
@@ -40,7 +40,7 @@ namespace Heliconia
                         PUtil.LogDebug("... checking " + rule.ruleId);
                         if (options.Critter == false)
                             removing.Add(rule);
-                        else
+                        else if (rule.ruleId?.StartsWith("hca_critters_base") == true) // only in base asteroid
                         {
                             if (frosty)
                             {
@@ -61,12 +61,15 @@ namespace Heliconia
                         }
                     }
                 }
+            }
 
             if (removing.Count > 0) // remove them from list
+            {
                 foreach (var rule in removing)
                 {
                     world.worldTemplateRules?.Remove(rule);
                 }
+            }
 
             // Remove subworldTemplateRules from subworlds tagged with HCA_Shelter if option is disabled
             if (options.Shelter == false && __instance.subworlds != null)

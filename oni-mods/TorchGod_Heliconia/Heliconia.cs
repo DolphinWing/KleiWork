@@ -10,11 +10,14 @@ namespace Heliconia
 {
     class Heliconia : KMod.UserMod2
     {
-        public static LocString NAME = (LocString)"Helicnoia";
+        public static LocString NAME = (LocString)"Heliconia";
         public static LocString MOD_DESC = (LocString)"Hell as hot as possible.";
         public static LocString DESCRIPTION = (LocString)"Hell as hot as possible.\n\n<smallcaps>Duplicants MUST work to DEATH to make the colony thrive again.</smallcaps>";
         public static LocString BIOME_DESC = (LocString)"Hell as hot as possible.";
         public static LocString UTILITY_DESC = (LocString)"Hell as hot as possible.";
+
+        public static LocString WARP_NAME = (LocString)"Heliconia Warp";
+        public static LocString WARP_DESCRIPTION = (LocString)"Heliconia warp world";
 
         public override void OnLoad(Harmony harmony)
         {
@@ -33,7 +36,7 @@ namespace Heliconia
 		[PLibMethod(RunAt.AfterDbInit)]
         internal static void InitStrings()
         {
-            Strings.Add("Helicnoia worldgen", NAME);
+            Strings.Add("Heliconia worldgen", NAME);
             Strings.Add("Hell as hot as possible.", MOD_DESC);
             Strings.Add("STRINGS.CLUSTER_NAMES.HELICONIA.NAME", NAME);
             Strings.Add("STRINGS.CLUSTER_NAMES.HELICONIA.DESCRIPTION", DESCRIPTION);
@@ -44,11 +47,13 @@ namespace Heliconia
             Strings.Add("STRINGS.WORLDS.HELICONIA.DESCRIPTION", DESCRIPTION);
             Strings.Add("STRINGS.WORLDS.HELICONIASO.NAME", NAME);
             Strings.Add("STRINGS.WORLDS.HELICONIASO.DESCRIPTION", DESCRIPTION);
+            Strings.Add("STRINGS.WORLDS.HELICONIAWARP.NAME", WARP_NAME);
+            Strings.Add("STRINGS.WORLDS.HELICONIAWARP.DESCRIPTION", WARP_DESCRIPTION);
 
             //var sprite = Assets.GetSprite("biomeIconSpace");
             //if (sprite != null)
             //{
-            //    Assets.Sprites.Add("biomeIconHelicnoia", sprite);
+            //    Assets.Sprites.Add("biomeIconHeliconia", sprite);
             //}
         }
 

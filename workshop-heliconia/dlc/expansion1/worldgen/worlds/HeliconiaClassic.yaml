@@ -362,8 +362,9 @@ worldTemplateRules:
     - critters/tg_slime_sour
     - critters/tg_mole_hole
     - critters/tg_wheat_wort
+    - expansion1::critters/tg_beeta_hive
     listRule: TryAll
-    ruleId: hca_critters
+    ruleId: hca_critters_base
     priority: 80
     allowedCellsFilter:
       - command: Replace

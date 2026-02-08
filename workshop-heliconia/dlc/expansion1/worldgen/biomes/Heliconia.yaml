@@ -173,3 +173,37 @@ TerrainBiomeLookupTable:
         massOverride: 1000
     - content: EnrichedUranium
       bandSize: 0.01
+
+    Radioactive_Nuclear:
+    - content: EnrichedUranium
+      bandSize: 0.02
+    - content: ToxicSand
+      bandSize: 0.03
+    - content: EnrichedUranium
+      bandSize: 0.03
+    - content: CarbonDioxide
+      bandSize: 0.15
+    - content: Wolframite
+      bandSize: 0.10
+    - content: ToxicSand
+      bandSize: 0.05
+    - content: EnrichedUranium
+      bandSize: 0.10
+    - content: CarbonDioxide
+      bandSize: 0.15
+    - content: Corium
+      bandSize: 0.15
+      overrides:
+        massOverride: 2
+    - content: ToxicSand
+      bandSize: 0.1
+    - content: EnrichedUranium
+      bandSize: 0.03
+    - content: ToxicSand
+      bandSize: 0.05
+    - content: CarbonDioxide
+      bandSize: 0.15
+      overrides:
+        massOverride: 8
+    - content: EnrichedUranium
+      bandSize: 0.04

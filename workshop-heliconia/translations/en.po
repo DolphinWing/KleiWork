@@ -1,27 +1,37 @@
 #. Heliconia.Heliconia.NAME
 msgctxt "Heliconia.Heliconia.NAME"
-msgid "Helicnoia"
-msgstr "Helicnoia"
+msgid "Heliconia"
+msgstr "Heliconia"
 
 #. Heliconia.Heliconia.MOD_DESC
 msgctxt "Heliconia.Heliconia.MOD_DESC"
-msgid "Helicnoia mod"
-msgstr "Helicnoia mod"
+msgid "Heliconia mod"
+msgstr "Hell as hot as possible."
 
 #. Heliconia.Heliconia.DESCRIPTION
 msgctxt "Heliconia.Heliconia.DESCRIPTION"
-msgid "Helicnoia desc"
-msgstr "Helicnoia desc"
+msgid "Heliconia desc"
+msgstr "Hell as hot as possible.\n\n<smallcaps>Duplicants MUST work to DEATH to make the colony thrive again.</smallcaps>"
 
 #. Heliconia.Heliconia.BIOME_DESC
 msgctxt "Heliconia.Heliconia.BIOME_DESC"
-msgid "Helicnoia biome"
-msgstr "Helicnoia biome"
+msgid "Heliconia biome"
+msgstr "Hell as hot as possible."
 
 #. Heliconia.Heliconia.UTILITY_DESC
 msgctxt "Heliconia.Heliconia.UTILITY_DESC"
-msgid "Helicnoia biome desc"
-msgstr "Helicnoia biome desc"
+msgid "Heliconia biome desc"
+msgstr "Hell as hot as possible."
+
+#. Heliconia.Heliconia.WARP_NAME
+msgctxt "Heliconia.Heliconia.WARP_NAME"
+msgid "Heliconia Warp"
+msgstr "Heliconia Warp"
+
+#. Heliconia.Heliconia.WARP_DESCRIPTION
+msgctxt "Heliconia.Heliconia.WARP_DESCRIPTION"
+msgid "Heliconia warp world"
+msgstr "Heliconia warp world"
 
 #. Heliconia.HeliconiaOptions.GiftedAreaTitle
 msgctxt "Heliconia.HeliconiaOptions.GiftedAreaTitle"

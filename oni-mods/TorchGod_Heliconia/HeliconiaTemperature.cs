@@ -129,10 +129,8 @@ namespace Heliconia
             }
         }
 
-        private static Temperature.Range GetStartingBiomeTemperature(Temperature.Range temp)
+        private static Temperature.Range GetStartingBiomeTemperature(HeliconiaOptions.MapMode mode, Temperature.Range temp)
         {
-            var options = POptions.ReadSettings<HeliconiaOptions>();
-            HeliconiaOptions.MapMode mode = options != null ? options.Mode : HeliconiaOptions.MapMode.Balanced;
             switch (temp)
             {
                 case Temperature.Range.Mild: // R=0
@@ -155,6 +153,19 @@ namespace Heliconia
             //return temp;
         }
 
+        private static Temperature.Range GetModedTemperature(HeliconiaOptions.MapMode mode, Temperature.Range temp)
+        {
+            switch (mode)
+            {
+                case HeliconiaOptions.MapMode.Crazy:
+                    return HeliconiaTemperature.TG_SuperSuperHot;
+                case HeliconiaOptions.MapMode.Insane:
+                    return HeliconiaTemperature.TG_ExtremeHot;
+                default:
+                    return temp;
+            }
+        }
+
         /// <summary>
         /// Applied after GetTemperatureRange runs.
         /// </summary>
@@ -170,13 +181,16 @@ namespace Heliconia
             var temp = __result; // override all temperatures
             if (temp >= Temperature.Range.ExtremelyCold && temp <= Temperature.Range.VeryHot)
             {
-                if (worldGen.isStartingWorld /*|| NotZeroK.IsMyWorld(world)*/)
+                var options = POptions.ReadSettings<HeliconiaOptions>();
+                HeliconiaOptions.MapMode mode = options != null ? options.Mode : HeliconiaOptions.MapMode.Balanced;
+
+                if (worldGen.isStartingWorld || Heliconia.IsHcaWorld(world))
                 {
-                    __result = GetStartingBiomeTemperature(temp);
+                    __result = GetStartingBiomeTemperature(mode, temp);
                 }
                 else
                 {
-                    __result = HeliconiaTemperature.TG_SuperSuperHot; // Override temp
+                    __result = GetModedTemperature(mode, temp);
                 }
             }
         }
