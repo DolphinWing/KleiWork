@@ -1,22 +1,22 @@
 #. Heliconia.Heliconia.NAME
 msgctxt "Heliconia.Heliconia.NAME"
 msgid "Heliconia"
-msgstr "Heliconia"
+msgstr "赫礫焦娜"
 
 #. Heliconia.Heliconia.MOD_DESC
 msgctxt "Heliconia.Heliconia.MOD_DESC"
 msgid "Heliconia mod"
-msgstr "Heliconia Mod"
+msgstr "極致高溫的煉獄"
 
 #. Heliconia.Heliconia.DESCRIPTION
 msgctxt "Heliconia.Heliconia.DESCRIPTION"
 msgid "Heliconia desc"
-msgstr "盡可能熾熱的地獄。\n\n<smallcaps>複製人必須工作到死，才能讓殖民地再次繁榮。</smallcaps>"
+msgstr "極致高溫的煉獄。\n\n<smallcaps>複製人必須工作到死，才能讓殖民地再次繁榮。</smallcaps>"
 
 #. Heliconia.Heliconia.BIOME_DESC
 msgctxt "Heliconia.Heliconia.BIOME_DESC"
 msgid "Heliconia biome"
-msgstr "Heliconia 生態系"
+msgstr "極致高溫的煉獄"
 
 #. Heliconia.Heliconia.UTILITY_DESC
 msgctxt "Heliconia.Heliconia.UTILITY_DESC"
@@ -26,12 +26,12 @@ msgstr "極致高溫的煉獄"
 #. Heliconia.Heliconia.WARP_NAME
 msgctxt "Heliconia.Heliconia.WARP_NAME"
 msgid "Heliconia Warp"
-msgstr "Heliconia 傳送星球"
+msgstr "輻射沼澤小行星"
 
 #. Heliconia.Heliconia.WARP_DESCRIPTION
 msgctxt "Heliconia.Heliconia.WARP_DESCRIPTION"
 msgid "Heliconia warp world"
-msgstr "充滿放射性廢土與高壓蒸汽的傳送星球。"
+msgstr "一個廣闊、擁有放射性核心的世界。"
 
 #. Heliconia.HeliconiaOptions.GiftedAreaTitle
 msgctxt "Heliconia.HeliconiaOptions.GiftedAreaTitle"

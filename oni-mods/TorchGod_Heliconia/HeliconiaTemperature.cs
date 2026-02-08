@@ -15,12 +15,14 @@ namespace Heliconia
         public const Temperature.Range TG_SuperHot = (Temperature.Range)31; // not to clash with other mods
         public const Temperature.Range TG_SuperSuperHot = (Temperature.Range)32; // not to clash with other mods
         public const Temperature.Range TG_ExtremeHot = (Temperature.Range)33; // not to clash with other mods
+        public const Temperature.Range TG_AbsoluteZero = (Temperature.Range)34; // not to clash with other mods
 
         public static void AddToHashTable() 
         {
             AddHashToTable(TG_SuperHot, "TG_SuperHot");
             AddHashToTable(TG_SuperSuperHot, "TG_SuperSuperHot");
             AddHashToTable(TG_ExtremeHot, "TG_ExtremeHot");
+            AddHashToTable(TG_AbsoluteZero, "TG_AbsoluteZero");
         }
 
         private static void AddHashToTable(Temperature.Range hash, string id)
@@ -157,6 +159,23 @@ namespace Heliconia
         {
             switch (mode)
             {
+                case HeliconiaOptions.MapMode.Balanced:
+                    return HeliconiaTemperature.TG_SuperHot;
+                case HeliconiaOptions.MapMode.Crazy:
+                    return HeliconiaTemperature.TG_SuperSuperHot;
+                case HeliconiaOptions.MapMode.Insane:
+                    return HeliconiaTemperature.TG_ExtremeHot;
+                default:
+                    return temp;
+            }
+        }
+
+        private static Temperature.Range GetAbzTemperature(HeliconiaOptions.MapMode mode, Temperature.Range temp)
+        {
+            switch (mode)
+            {
+                case HeliconiaOptions.MapMode.Balanced:
+                    return HeliconiaTemperature.TG_AbsoluteZero;
                 case HeliconiaOptions.MapMode.Crazy:
                     return HeliconiaTemperature.TG_SuperSuperHot;
                 case HeliconiaOptions.MapMode.Insane:
@@ -183,14 +202,20 @@ namespace Heliconia
             {
                 var options = POptions.ReadSettings<HeliconiaOptions>();
                 HeliconiaOptions.MapMode mode = options != null ? options.Mode : HeliconiaOptions.MapMode.Balanced;
-
-                if (worldGen.isStartingWorld || Heliconia.IsHcaWorld(world))
+                var type = Heliconia.IdentifyWorld(world);
+                switch (type)
                 {
-                    __result = GetStartingBiomeTemperature(mode, temp);
-                }
-                else
-                {
-                    __result = GetModedTemperature(mode, temp);
+                    case AsteroidType.HeliconiaBase:
+                    case AsteroidType.HeliconiaWarp:
+                        __result = GetStartingBiomeTemperature(mode, temp);
+                        break;
+                    case AsteroidType.WaterMoonlet:
+                    case AsteroidType.TundraMoonlet:
+                        __result = GetAbzTemperature(mode, temp);
+                        break;
+                    default:
+                        __result = GetModedTemperature(mode, temp);
+                        break;
                 }
             }
         }

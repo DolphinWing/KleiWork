@@ -5,9 +5,26 @@ using PeterHan.PLib.Database;
 using PeterHan.PLib.Options;
 using PeterHan.PLib.PatchManager;
 using ProcGen;
+using System;
 
 namespace Heliconia
 {
+    public enum AsteroidType
+    {
+        HeliconiaBase,          // All Heliconia-branded starts worlds
+        HeliconiaWarp,          // All Heliconia-branded warp worlds
+
+        // Klei Outer Asteroids (Expansion 1)
+        TundraMoonlet,
+        MarshyMoonlet,
+        NiobiumMoonlet,
+        WaterMoonlet,
+        MooMoonlet,
+        RegolithMoonlet,
+
+        Unknown
+    }
+
     class Heliconia : KMod.UserMod2
     {
         public static LocString NAME = (LocString)"Heliconia";
@@ -65,6 +82,34 @@ namespace Heliconia
             ClusterLayout clusterData = SettingsCache.clusterLayouts.GetClusterData(current.id);
             string prefix = clusterData.GetCoordinatePrefix();
             return prefix.StartsWith("HCA-TG-"); // B: base game. C: Spaced Out classic. M: Spaced Out style.
+        }
+
+        public static AsteroidType IdentifyWorld(ProcGen.World world)
+        {
+            if (world == null) return AsteroidType.Unknown;
+
+            string name = world.name.ToUpper();
+
+            if (name.StartsWith("HELICONIA."))
+            {
+                // [11:45:06.026] [1] [INFO] [PLib/Heliconia] Heliconia.Heliconia.NAME: HeliconiaBase
+                // [11:45:06.104] [1] [INFO] [PLib/Heliconia] Heliconia.Heliconia.WARP_NAME: HeliconiaWarp
+                return name.Contains("WARP") ? AsteroidType.HeliconiaWarp : AsteroidType.HeliconiaBase;
+            }
+
+            // [11:45:06.340][1][INFO][PLib / Heliconia] STRINGS.WORLDS.MARSHYMOONLET.NAME: MarshyMoonlet
+            // [11:45:06.409][1][INFO][PLib / Heliconia] STRINGS.WORLDS.NIOBIUMMOONLET.NAME: NiobiumMoonlet
+            // [11:45:06.477][1][INFO][PLib / Heliconia] STRINGS.WORLDS.MOOMOONLET.NAME: MooMoonlet
+            // [11:45:06.548][1][INFO][PLib / Heliconia] STRINGS.WORLDS.WATERMOONLET.NAME: WaterMoonlet
+            // [11:45:06.715][1][INFO][PLib / Heliconia] STRINGS.WORLDS.REGOLITHMOONLET.NAME: RegolithMoonlet
+            if (name.Contains("TUNDRA")) return AsteroidType.TundraMoonlet;
+            if (name.Contains("MARSHY")) return AsteroidType.MarshyMoonlet;
+            if (name.Contains("NIOBIUM")) return AsteroidType.NiobiumMoonlet;
+            if (name.Contains("WATER")) return AsteroidType.WaterMoonlet;
+            if (name.Contains("REGOLITH")) return AsteroidType.RegolithMoonlet;
+            if (name.Contains("MOOMOON")) return AsteroidType.MooMoonlet;
+
+            return AsteroidType.Unknown;
         }
 
         public static bool IsHcaWorld(ProcGen.World world)

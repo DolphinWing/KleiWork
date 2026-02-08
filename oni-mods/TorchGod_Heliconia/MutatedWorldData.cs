@@ -18,6 +18,9 @@ namespace Heliconia
         internal static void Postfix(MutatedWorldData __instance)
         {
             var world = __instance.world;
+            // var type = Heliconia.IdentifyWorld(world);
+            // PUtil.LogDebug(world.name + ": " + type);
+
             if (Heliconia.IsHcaWorld(world) == false) return; // no need to check further
             //PUtil.LogDebug("Checking for " + world.name);
 

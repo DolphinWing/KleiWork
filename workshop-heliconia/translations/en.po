@@ -6,7 +6,7 @@ msgstr "Heliconia"
 #. Heliconia.Heliconia.MOD_DESC
 msgctxt "Heliconia.Heliconia.MOD_DESC"
 msgid "Heliconia mod"
-msgstr "Hell as hot as possible."
+msgstr "Hell as hot as possible"
 
 #. Heliconia.Heliconia.DESCRIPTION
 msgctxt "Heliconia.Heliconia.DESCRIPTION"
@@ -26,12 +26,12 @@ msgstr "Hell as hot as possible."
 #. Heliconia.Heliconia.WARP_NAME
 msgctxt "Heliconia.Heliconia.WARP_NAME"
 msgid "Heliconia Warp"
-msgstr "Heliconia Warp"
+msgstr "Radioactive Swamp Asteroid"
 
 #. Heliconia.Heliconia.WARP_DESCRIPTION
 msgctxt "Heliconia.Heliconia.WARP_DESCRIPTION"
 msgid "Heliconia warp world"
-msgstr "Heliconia warp world"
+msgstr "A world with a radioactive core."
 
 #. Heliconia.HeliconiaOptions.GiftedAreaTitle
 msgctxt "Heliconia.HeliconiaOptions.GiftedAreaTitle"

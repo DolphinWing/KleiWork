@@ -1,5 +1,5 @@
-name: Heliconia.Heliconia.WRAP_NAME
-description: Heliconia.Heliconia.WRAP_DESCRIPTION
+name: Heliconia.Heliconia.WARP_NAME
+description: Heliconia.Heliconia.WARP_DESCRIPTION
 nameTables: [ SWAMP, RADIOACTIVE, VOLCANIC ]
 asteroidIcon: asteroid_vanilla_sandstone_warp_kanim
 
