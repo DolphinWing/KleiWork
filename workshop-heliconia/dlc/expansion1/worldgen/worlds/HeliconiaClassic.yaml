@@ -1,7 +1,7 @@
 name: Heliconia.Heliconia.NAME
 description: Heliconia.Heliconia.DESCRIPTION
 nameTables: [ MAGMA ]
-asteroidIcon: asteroid_vanilla_volcanic_kanim
+asteroidIcon: asteroid_heliconia_kanim
 
 worldTraitScale: 0.9
 worldsize:
