@@ -66,6 +66,7 @@ subworldFiles:
   - name: subworlds/Heliconia/ForestMiniOxy
     minCount: 1
   - name: subworlds/space/SpaceNoBorder
+  - name: subworlds/magma/Bottom
   - name: expansion1::subworlds/Heliconia/FrozenMedium
   - name: expansion1::subworlds/Heliconia/Rust
   - name: expansion1::subworlds/Heliconia/JungleHot
@@ -184,6 +185,14 @@ unknownCellsAllowedSubworlds:
   # Core
   - tagcommand: AtTag
     tag: AtDepths
+    command: Replace
+    subworldNames:
+      - subworlds/magma/Bottom
+  # Above Core
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 0
+    maxDistance: 0
     command: Replace
     subworldNames:
       - subworlds/Heliconia/IronCore

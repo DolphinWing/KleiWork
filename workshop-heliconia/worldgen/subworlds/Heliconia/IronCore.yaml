@@ -1,4 +1,4 @@
-biomeNoise: noise/subworldFrozen
+biomeNoise: noise/HeliconiaPoiContainer
 temperatureRange: TG_ExtremeHot
 density:
   min: 50
@@ -9,6 +9,16 @@ borderOverride: coreBorder
 biomes:
   - name: biomes/Heliconia/Core_Iron
     weight: 2
+subworldTemplateRules:
+  - names:
+      - poi/iron/furnace
+      - poi/iron/small_a
+      - poi/iron/small_b
+    listRule: TrySome
+    someCount: 12
+    priority: 100
+features:
+  - type: features/Heliconia/IronPocket
 tags:
   - HeliconiaCore
   - AtDepths

@@ -1,0 +1,70 @@
+name: small_a
+info:
+  size:
+    X: 6
+    Y: 2
+  area: 12
+cells:
+# Row 0: Base
+- element: RefinedCarbon
+  mass: 2100
+  temperature: 2000
+  location_x: -2
+  location_y: 0
+- element: RefinedCarbon
+  mass: 1850
+  temperature: 2000
+  location_x: -1
+  location_y: 0
+- element: Diamond
+  mass: 2400
+  temperature: 2000
+  location_x: 0
+  location_y: 0
+- element: RefinedCarbon
+  mass: 1920
+  temperature: 2000
+  location_x: 1
+  location_y: 0
+- element: RefinedCarbon
+  mass: 2250
+  temperature: 2000
+  location_x: 2
+  location_y: 0
+- element: RefinedCarbon
+  mass: 1780
+  temperature: 2000
+  location_x: 3
+  location_y: 0
+
+# Row 1: Walls + Content
+- element: RefinedCarbon
+  mass: 2300
+  temperature: 2000
+  location_x: -2
+  location_y: 1
+- element: MoltenGlass
+  mass: 520
+  temperature: 2000
+  location_x: -1
+  location_y: 1
+- element: MoltenGlass
+  mass: 480
+  temperature: 2000
+  location_x: 0
+  location_y: 1
+- element: MoltenGlass
+  mass: 550
+  temperature: 2000
+  location_x: 1
+  location_y: 1
+- element: MoltenGlass
+  mass: 450
+  temperature: 2000
+  location_x: 2
+  location_y: 1
+- element: RefinedCarbon
+  mass: 2150
+  temperature: 2000
+  location_x: 3
+  location_y: 1

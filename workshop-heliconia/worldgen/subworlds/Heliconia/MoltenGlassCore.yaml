@@ -1,4 +1,4 @@
-biomeNoise: noise/HeliconiaPOIContainer
+biomeNoise: noise/HeliconiaPoiContainer
 temperatureRange: TG_ExtremeHot
 minChildCount: 8
 density:
@@ -12,10 +12,14 @@ biomes:
     weight: 2
 subworldTemplateRules:
   - names:
-      - poi/HcaGlassFurnace
+      - poi/glass/furnace
+      - poi/glass/small_a
+      - poi/glass/small_b
     listRule: TrySome
-    someCount: 8
+    someCount: 12
     priority: 100
+features:
+  - type: features/Heliconia/GlassPocket
 tags:
   - HeliconiaCore
   - AtDepths

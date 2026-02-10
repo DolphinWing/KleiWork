@@ -1,4 +1,4 @@
-biomeNoise: noise/subworldFrozen
+biomeNoise: noise/HeliconiaPoiContainer
 temperatureRange: TG_SuperSuperHot
 density:
   min: 50
@@ -9,6 +9,16 @@ borderOverride: coreBorder
 biomes:
   - name: expansion1::biomes/Heliconia/Core_Aluminum
     weight: 2
+subworldTemplateRules:
+  - names:
+      - expansion1::poi/aluminum/furnace
+      - expansion1::poi/aluminum/small_a
+      - expansion1::poi/aluminum/small_b
+    listRule: TrySome
+    someCount: 12
+    priority: 100
+features:
+  - type: expansion1::features/Heliconia/AluminumPocket
 tags:
   - HeliconiaCore
   - AtDepths

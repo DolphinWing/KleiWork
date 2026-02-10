@@ -7,7 +7,7 @@ settings:
   upperBound:
     X: 4
     Y: 4
-  name: HeliconiaPOIContainer
+  name: HeliconiaPoiContainer
 links:
 - target:
     type: Filter

@@ -1,4 +1,4 @@
-biomeNoise: noise/subworldFrozen
+biomeNoise: noise/HeliconiaPoiContainer
 temperatureRange: TG_SuperSuperHot
 density:
   min: 50
@@ -9,6 +9,16 @@ borderOverride: coreBorder
 biomes:
   - name: biomes/Heliconia/Core_Gold
     weight: 2
+subworldTemplateRules:
+  - names:
+      - poi/gold/furnace
+      - poi/gold/small_a
+      - poi/gold/small_b
+    listRule: TrySome
+    someCount: 12
+    priority: 100
+features:
+  - type: features/Heliconia/GoldPocket
 tags:
   - HeliconiaCore
   - AtDepths

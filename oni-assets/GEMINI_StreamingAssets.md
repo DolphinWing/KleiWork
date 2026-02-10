@@ -163,8 +163,14 @@ ONI world generation is a multi-layered procedural system based on **Noise Field
 *   **The Solution**: Use a low-frequency, highly stretched noise (X: 20+, Y: 0.1) specifically for "container" subworlds. This creates broad, flat "runways" that maximize the success rate of horizontal POI generation.
 *   **Rule of Thumb**: Template size should never exceed 50% of the typical subworld height/width defined by the noise scale.
 
-### 6.8 The "Furnace Layer" Breakthrough (Success Case)
-*   **Result**: Combining `HeliconiaPOIContainer` (X: 20, Y: 0.1, Freq: 0.1) with `subworldTemplateRules` (someCount: 8) and a Magma fallback effectively created a high-density industrial layered core.
-*   **Key Finding**: Lowering `avoidRadius` to ~12.0 for POIs within a flattened subworld maximizes the number of successful placements, creating the "Layered POI" visual style without overlapping errors.
-*   **Fallback Efficacy**: Using `subworlds/magma/Bottom` as a fallback in `unknownCellsAllowedSubworlds` successfully converted geometric generation gaps into natural-looking magma pockets, eliminating gray vacuum artifacts.
+### 6.9 Template vs. Feature 混用策略 (Hybrid Generation)
+*   **Template (POI)**: 用於建立具備**結構性**的視覺焦點（如包含底座、牆壁、液體的多層熔爐）。適合固定尺寸、人造感強的物件。
+*   **Feature**: 用於建立**自然有機**的細節（如隨機形狀的液體坑、礦脈）。
+    *   *優點*: 使用 `shape: Blob` 可以產生比 POI 更自然的邊緣。
+    *   *組合策略*: 在核心區域使用高 Priority 的大型 POI (12x6 或 8x3) 作為地標，並搭配大量的低 Priority 小型 Feature (blobSize: 1.5~2.5) 填充背景空間。
+    *   *成果*: 此舉能同時解決地圖過於「方正」的問題，並在保持資源密度的同時大幅提升視覺上的破碎感與探索樂趣。
+
+### 6.10 Feature 的液體控制
+*   在固體核心（如 Obsidian/Katairite）中使用液體 Feature 時，Feature 會自動替換原有固體格，形成自然的液體口袋。
+*   **Mass & Temp**: 務必在 Feature 的 `overrides` 中顯式定義 `massOverride` 與 `temperatureOverride`，否則生成的液體可能會因為預設值過低而顯得稀薄，或因溫度不匹配造成地圖生成後的熱震盪。
 
