@@ -1,30 +1,36 @@
 This is a personal project that includes my mod work for the games by Klei Entertainment.
 
-### Steam Workshop
-* ONI [正體中文](https://steamcommunity.com/sharedfiles/filedetails/?id=2906930548) <br />
+### Steam Workshop / Oxygen Not Included
+* [正體中文](https://steamcommunity.com/sharedfiles/filedetails/?id=2906930548) <br />
 ![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/DolphinWing/KleiWork?filename=workshop-2906930548%2Fpackage.json&logo=github) 
 ![Steam Subscriptions](https://img.shields.io/steam/subscriptions/2906930548?logo=steam) 
 ![Steam Favorites](https://img.shields.io/steam/favorites/2906930548?logo=steam) <br />
 [workshop-2906930548](workshop-2906930548) is an ONI language pack mod. 
-* ONI [字型模組。新](https://steamcommunity.com/sharedfiles/filedetails/?id=3046440992) <br />
+* [字型模組。新](https://steamcommunity.com/sharedfiles/filedetails/?id=3046440992) <br />
 ![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3046440992?logo=steam) 
 ![Steam Favorites](https://img.shields.io/steam/favorites/3046440992?logo=steam) <br />
 [workshop-3046440992](workshop-3046440992) is a quick fix update to [Font Loader for Traditional Chinese](https://steamcommunity.com/workshop/filedetails/?id=2119648603) after Oct 2023 QoL.
-* ONI [Not 0K, But Pretty Cool Place](https://steamcommunity.com/sharedfiles/filedetails/?id=3413401611) (不 0K，但冷酷地)<br />
+* [Not 0K, But Pretty Cool Place](https://steamcommunity.com/sharedfiles/filedetails/?id=3413401611) (不 0K，但冷酷地)<br />
 ![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/DolphinWing/KleiWork?filename=workshop-3413401611%2Fpackage.json&logo=github) 
 ![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3413401611?logo=steam) 
 ![Steam Favorites](https://img.shields.io/steam/favorites/3413401611?logo=steam) <br />
 [workshop-3413401611](workshop-3413401611) is a map mod for 0K challenge feat. with [TorchGod](https://github.com/TorchGod531).
-* ONI [Moonlet Cluster - Superconductive](https://steamcommunity.com/sharedfiles/filedetails/?id=3418019940) (衛星星團－超導星)<br />
+* [Moonlet Cluster - Superconductive](https://steamcommunity.com/sharedfiles/filedetails/?id=3418019940) (衛星星團－超導星)<br />
 ![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/DolphinWing/KleiWork?filename=workshop-superconductive%2Fpackage.json&logo=github) 
 ![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3418019940?logo=steam) 
 ![Steam Favorites](https://img.shields.io/steam/favorites/3418019940?logo=steam) <br />
 [workshop-superconductive](workshop-superconductive) is a map mod for Superconductive starting world.
-* ONI [Voidria](https://steamcommunity.com/sharedfiles/filedetails/?id=3430682737) (無多利亞)<br />
+* [Voidria](https://steamcommunity.com/sharedfiles/filedetails/?id=3430682737) (無多利亞)<br />
 ![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/DolphinWing/KleiWork?filename=workshop-3430682737%2Fpackage.json&logo=github) 
 ![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3430682737?logo=steam) 
 ![Steam Favorites](https://img.shields.io/steam/favorites/3430682737?logo=steam) <br />
 [workshop-3430682737](workshop-3430682737) is a map mod for Voidria clusters feat. with [TorchGod](https://github.com/TorchGod531).
+* [Heliconia](https://steamcommunity.com/sharedfiles/filedetails/?id=3663491695) (赫礫焦娜)<br />
+![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/DolphinWing/KleiWork?filename=workshop-3663491695%2Fpackage.json&logo=github) 
+![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3663491695?logo=steam) 
+![Steam Favorites](https://img.shields.io/steam/favorites/3663491695?logo=steam) <br />
+[workshop-heliconia](workshop-heliconia) is a map mod for Heliconia clusters feat. with [TorchGod](https://github.com/TorchGod531).
+
 
 * [FontLoader](oni-mods/FontLoader) is the .NET project referenced from [古靈精怪的字型模組](https://github.com/dershiuan/ONI-Mods/tree/v2.0.4/FontLoader)
 * [Niobium_Start](oni-mods/Niobium_Start), [Rime_Extreme_2](oni-mods/Rime_Extreme_2) and [oni-mods/TorchGod_Voidria](TorchGod_Voidria) are for modded maps.

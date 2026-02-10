@@ -1,0 +1,15 @@
+name: Heliconia.Heliconia.NAME
+description: Heliconia.Heliconia.DESCRIPTION
+coordinatePrefix: VOLCA
+forbiddenDlcIds: [EXPANSION1_ID]
+
+clusterCategory: Vanilla
+difficulty: 6
+menuOrder: -10
+
+startWorldIndex: 0
+worldPlacements:
+- world: worlds/HeliconiaVanilla
+  allowedRings:
+    min: 0
+    max: 0
