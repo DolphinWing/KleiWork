@@ -143,3 +143,28 @@ ONI world generation is a multi-layered procedural system based on **Noise Field
     *   *Strategy*: Place the primary visual element (e.g., Iron) first, followed by the structural element (e.g., Obsidian).
     *   *Shielding*: To create a heat shield, use a distinct band (0.15~0.3) of `Katairite` (Abyssalite) in the biome definition.
 
+### 6.5 Horizontal Layering Design
+*   **Concept**: To create a "sedimentary" or "compressed core" look, noise must be extremely stretched along the X-axis and compressed on the Y-axis.
+*   **Formula**:
+    *   `modifyType: Scale2d` with `X: 5.0 - 20.0` and `Y: 0.1 - 0.5`.
+    *   Must be followed by `transformerType: RotatePoint` with `vector: Y: 90` to align the stretched bands horizontally.
+*   **Frequency Impact**: Higher frequency (0.8+) creates thinner, more frequent "veins" of metal, perfect for high-mass elements (`massOverride: 4000`) where you want visual density without excessive resource clusters.
+
+### 6.6 Diagnosing World Gaps (The "Vacuum Triangle" Problem)
+*   **Observation**: Regular geometric (triangular/trapezoidal) gaps showing background vacuum or flat colors.
+*   **Cause**: **Subworld Allocation Failure**. The Voronoi diagram failed to assign a subworld to that specific coordinate because sample points (Seeds) were too sparse or `avoidRadius` was too large for the available space.
+*   **The Fixes**:
+    1.  **Fallback Subworld**: Add a generic subworld (e.g., `subworlds/magma/Bottom`) to the `AtDepths` or relevant layer in `worlds/*.yaml`'s `unknownCellsAllowedSubworlds` list. This acts as a "canvas" if specific subworlds fail to claim space.
+    2.  **Density Tuning**: Lower `avoidRadius` (to 15.0 - 20.0) and ensure `density` is moderate (30 - 50). Avoid extreme values like `density: 80` + `radius: 30`.
+    3.  **`minChildCount`**: Set to at least 4-8 to force the subworld to branch out and occupy more space.
+
+### 6.7 POI-Friendly Noise Architecture
+*   **The Conflict**: Complex, fragmented noise (like high-frequency fractal) breaks subworlds into small pieces, preventing large rectangular Templates (e.g., 12x6 POIs) from finding valid placement space.
+*   **The Solution**: Use a low-frequency, highly stretched noise (X: 20+, Y: 0.1) specifically for "container" subworlds. This creates broad, flat "runways" that maximize the success rate of horizontal POI generation.
+*   **Rule of Thumb**: Template size should never exceed 50% of the typical subworld height/width defined by the noise scale.
+
+### 6.8 The "Furnace Layer" Breakthrough (Success Case)
+*   **Result**: Combining `HeliconiaPOIContainer` (X: 20, Y: 0.1, Freq: 0.1) with `subworldTemplateRules` (someCount: 8) and a Magma fallback effectively created a high-density industrial layered core.
+*   **Key Finding**: Lowering `avoidRadius` to ~12.0 for POIs within a flattened subworld maximizes the number of successful placements, creating the "Layered POI" visual style without overlapping errors.
+*   **Fallback Efficacy**: Using `subworlds/magma/Bottom` as a fallback in `unknownCellsAllowedSubworlds` successfully converted geometric generation gaps into natural-looking magma pockets, eliminating gray vacuum artifacts.
+

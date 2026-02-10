@@ -1,0 +1,67 @@
+settings:
+  zoom: 1
+  normalise: true
+  lowerBound:
+    X: 2
+    Y: 2
+  upperBound:
+    X: 4
+    Y: 4
+  name: HeliconiaPOIContainer
+links:
+- target:
+    type: Filter
+    name: BaseFilter
+  source0:
+    type: Primitive
+    name: BasePrimitive
+- target:
+    type: Terminator
+    name: TERMINATOR
+  source0:
+    type: Transformer
+    name: RotateHorizontal
+- target:
+    type: Transformer
+    name: RotateHorizontal
+  source0:
+    type: Modifier
+    name: ExtremeStretch
+- target:
+    type: Modifier
+    name: ExtremeStretch
+  source0:
+    type: Filter
+    name: BaseFilter
+primitives:
+  BasePrimitive:
+    primative: SimplexPerlin
+    quality: Best
+    seed: 999
+    offset: 1
+    name: BasePrimitive
+filters:
+  BaseFilter:
+    filter: RidgedMultiFractal
+    frequency: 0.1 # 頻率更低，空間更完整
+    lacunarity: 2
+    octaves: 2
+    gain: 0.5
+    offset: 0
+    exponent: 0.9
+    name: BaseFilter
+modifiers:
+  ExtremeStretch:
+    modifyType: Scale2d
+    scale: 1
+    scale2d:
+      X: 20.0 # 極端水平拉伸
+      Y: 0.1  # 極端垂直壓縮
+    name: ExtremeStretch
+transformers:
+  RotateHorizontal:
+    transformerType: RotatePoint
+    power: 1
+    vector:
+      Y: 90
+    name: RotateHorizontal

@@ -1,14 +1,21 @@
-biomeNoise: noise/subworldFrozen
+biomeNoise: noise/HeliconiaPOIContainer
 temperatureRange: TG_ExtremeHot
+minChildCount: 8
 density:
-  min: 50
-  max: 80
-avoidRadius: 30.0
+  min: 30
+  max: 50
+avoidRadius: 12.0
 sampleBehaviour: PoissonDisk
 borderOverride: coreBorder
 biomes:
   - name: biomes/Heliconia/Core_MoltenGlass
     weight: 2
+subworldTemplateRules:
+  - names:
+      - poi/HcaGlassFurnace
+    listRule: TrySome
+    someCount: 8
+    priority: 100
 tags:
   - HeliconiaCore
   - AtDepths

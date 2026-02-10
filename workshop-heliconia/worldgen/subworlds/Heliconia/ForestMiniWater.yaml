@@ -21,7 +21,6 @@ biomes:
       - LightBug
       - LeafyPlant
       - LeafyPlantSeed
-      - Squirrel
 tags:
   - StartWorld
   - IgnoreCaveOverride
