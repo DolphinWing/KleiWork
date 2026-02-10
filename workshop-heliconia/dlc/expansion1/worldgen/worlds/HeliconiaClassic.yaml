@@ -13,7 +13,7 @@ defaultsOverrides:
   startingWorldElements: []
 
 startSubworldName: subworlds/Heliconia/ForestStart
-startingBaseTemplate: bases/forestBase
+startingBaseTemplate: bases/HcaForestBase
 startingBasePositionHorizontal:
   min: 0.5
   max: 0.5
@@ -78,6 +78,8 @@ subworldFiles:
   - name: subworlds/Heliconia/IronCore
   - name: subworlds/Heliconia/CopperCore
   - name: subworlds/Heliconia/GoldCore
+  - name: subworlds/Heliconia/MoltenGlassCore
+    minCount: 2
   - name: expansion1::subworlds/Heliconia/CobaltCore
   - name: expansion1::subworlds/Heliconia/AluminumCore
   - name: expansion1::subworlds/Heliconia/RadioactiveCore
@@ -187,6 +189,7 @@ unknownCellsAllowedSubworlds:
       - subworlds/Heliconia/IronCore
       - subworlds/Heliconia/CopperCore
       - subworlds/Heliconia/GoldCore
+      - subworlds/Heliconia/MoltenGlassCore
       - expansion1::subworlds/Heliconia/CobaltCore
       - expansion1::subworlds/Heliconia/AluminumCore
 
@@ -198,6 +201,7 @@ unknownCellsAllowedSubworlds:
     command: Replace
     subworldNames:
       - subworlds/Heliconia/Oil
+      - subworlds/Heliconia/MoltenGlassCore
       - expansion1::subworlds/Heliconia/RadioactiveCore
 
   # Space

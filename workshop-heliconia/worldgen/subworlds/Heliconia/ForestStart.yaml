@@ -1,11 +1,11 @@
 biomeNoise: noise/subworldForest
 temperatureRange: Mild
-pdWeight: 4
+pdWeight: 3
 density:
   min: 10
   max: 20
 avoidRadius: 20.0
-extraBiomeChildren: 6
+extraBiomeChildren: 4
 minChildCount: 8
 doAvoidPoints: false
 dontRelaxChildren: true
@@ -17,15 +17,15 @@ biomes:
     tags:
       - StartWorld
       - Hatch
-      - PrickleFlower
-      - PrickleFlowerSeed
+      - EvilFlower
+      - EvilFlowerSeed
       - PrickleGrass
       - PrickleGrassSeed
       - BasicSingleHarvestPlantSeed
       - BasicSingleHarvestPlant
       - BasicForagePlant
       - BasicForagePlantPlanted
-  - name: biomes/Forest/BasicOxy
+  - name: biomes/Heliconia/Forest_BasicOxy_Hca
     weight: 2
     tags:
       - Oxyfern
@@ -34,9 +34,9 @@ biomes:
       - BasicSingleHarvestPlantSeed
       - ForestForagePlantPlanted
       - LightBug
-      - LeafyPlant        
-      - LeafyPlantSeed
-  - name: biomes/Forest/Basic
+      - EvilFlower        
+      - EvilFlowerSeed
+  - name: biomes/Heliconia/Forest_Basic_Hca
     weight: 2
     tags:
       - Oxyfern
@@ -45,15 +45,15 @@ biomes:
       - BasicSingleHarvestPlantSeed
       - ForestForagePlantPlanted
       - LightBug
-      - LeafyPlant        
-      - LeafyPlantSeed
+      - EvilFlower        
+      - EvilFlowerSeed
       - ForestForagePlant
-  - name: biomes/Forest/Metal
+  - name: biomes/Heliconia/Forest_Metal_Hca
     weight: 2
     tags:
       - Oxyfern
-      - LeafyPlant        
-      - LeafyPlantSeed
+      - EvilFlower        
+      - EvilFlowerSeed
       - BasicSingleHarvestPlantSeed
       - ForestForagePlantPlanted
 tags:
@@ -65,5 +65,5 @@ centralFeature:
 features:
   - type: features/forest/SmallLake
   - type: features/forest/OxyfernCave
-  - type: features/forest/PhosphoriteLump
+  - type: features/Heliconia/PhosphoriteDeposit
 zoneType: Forest

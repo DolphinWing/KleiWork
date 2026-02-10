@@ -19,6 +19,7 @@ biomes:
       - BasicFabricMaterialPlantSeed
       - Pacu
       - BulbPlantSeed
+      - EvilFlower
 tags:
   - IgnoreCaveOverride
 subworldTemplateRules:

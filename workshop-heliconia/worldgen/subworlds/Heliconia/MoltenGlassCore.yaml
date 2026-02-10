@@ -7,7 +7,7 @@ avoidRadius: 30.0
 sampleBehaviour: PoissonDisk
 borderOverride: coreBorder
 biomes:
-  - name: biomes/Heliconia/Core_Iron
+  - name: biomes/Heliconia/Core_MoltenGlass
     weight: 2
 tags:
   - HeliconiaCore

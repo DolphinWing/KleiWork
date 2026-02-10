@@ -1,6 +1,6 @@
 name: Heliconia.Heliconia.NAME
 description: Heliconia.Heliconia.DESCRIPTION
-coordinatePrefix: VOLCA
+coordinatePrefix: HCA-TG-B
 forbiddenDlcIds: [EXPANSION1_ID]
 
 clusterCategory: Vanilla

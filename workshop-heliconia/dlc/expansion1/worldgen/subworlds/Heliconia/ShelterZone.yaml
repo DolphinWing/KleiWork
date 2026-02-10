@@ -22,7 +22,7 @@ tags:
   - HCA_Shelter
 subworldTemplateRules:
   - names:
-      - expansion1::bases/ABZShelterSO
+      - expansion1::bases/HcaShelterSO
     listRule: GuaranteeOne
     priority: 500
 zoneType: Forest

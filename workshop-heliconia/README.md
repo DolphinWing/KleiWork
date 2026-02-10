@@ -34,8 +34,8 @@
 [b] 赫礫焦娜 [/b]上的每種元素都被激發到了物理極限。
 
 [b]水：[/b]不以液態存在，僅餘滾燙的[b] 灼熱蒸汽[/b]。
-[b]金屬：[/b]化作液態，如同暴雨般從天空傾瀉。
-[b]植被：[/b]僅有極少數變異的[b] 胡椒草 [/b]於藍焰中掙扎求生。
+[b]金屬：[/b]化作液態，如同暴雨般肆意傾瀉。
+[b]植被：[/b]僅有極少數變異的[b] 惡魔花 [/b]於閃焰中掙扎求生。
 
 [b]系統殖民指令：[/b] 
 
@@ -45,7 +45,7 @@
 [*] 主動冷卻不再是選項，而是生存的唯一前提條件。
 [/list] 
 
-列印門在融熔玻璃海中碰散慘白強光，好似人類傲慢的墓誌銘。 
+列印門在融熔玻璃海中迸散慘白強光，好似人類傲慢的墓誌銘。
 喜歡能量？現在有取之不盡的能量。 
 問題不再是產生熱能... 而是如何在冷卻液沸騰前，找到一處能讓肺部呼吸的角落。
 
@@ -91,8 +91,8 @@ The resulting shockwave did not destroy the planet—it ignited it.
 Every element on Heliconia has been energized to its breaking point.
 
 [b]Water[/b] does not exist here; only scalding [b] Steam[/b].
-[b]Metal[/b] rain from the sky as liquid precipitation.
-[b] Flora: [/b] Only the most heat-resistant mutations of Pincha Pepperplants survive, burning with an internal blue flame.
+[b]Metal[/b] pouring everywhere as liquid precipitation.
+[b]Flora:[/b] Only the most heat-resistant mutations of [b] Sporechid [/b] survive, burning with an internal blue flame.
 
 [b]Automated Colony Directive:[/b]
 Standard thermal insulation tiles are insufficient.

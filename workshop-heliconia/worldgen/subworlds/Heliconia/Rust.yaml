@@ -13,6 +13,7 @@ biomes:
     tags:
       - BeanPlantSeed
       - ColdBreatherSparse
+      - EvilFlower
 tags:
   - IgnoreCaveOverride
 zoneType: Rust

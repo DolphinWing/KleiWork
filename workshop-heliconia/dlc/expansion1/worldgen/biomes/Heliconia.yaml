@@ -2,26 +2,26 @@ TerrainBiomeLookupTable:
   add:
     Core_Cobalt:
     - content: Katairite
-      bandSize: 0.15
-    - content: Obsidian
-      bandSize: 0.35
+      bandSize: 0.25
+    - content: RefinedCarbon
+      bandSize: 0.25
     - content: Cobalt
       bandSize: 0.4
     - content: Diamond
       bandSize: 0.05
-    - content: RefinedCarbon
+    - content: Glass
       bandSize: 0.1
 
     Core_Aluminum:
     - content: Katairite
-      bandSize: 0.15
-    - content: Obsidian
-      bandSize: 0.3
+      bandSize: 0.25
     - content: Aluminum
-      bandSize: 0.35
+      bandSize: 0.2
     - content: Katairite
+      bandSize: 0.35
+    - content: Obsidian
       bandSize: 0.1
-    - content: Glass
+    - content: RefinedCarbon
       bandSize: 0.1
 
     Core_Radioactive:

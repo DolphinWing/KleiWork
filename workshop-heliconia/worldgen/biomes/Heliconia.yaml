@@ -4,14 +4,14 @@ TerrainBiomeLookupTable:
   # elements to add from in-memory structure when this file is loaded
   add:
     Start:
-    - content: SandStone
+    - content: SedimentaryRock
       bandSize: 0.1
-    - content: IgneousRock
+    - content: MaficRock
       bandSize: 0.3
-    - content: Dirt
-      bandSize: 0.1
+    - content: Phosphorite
+      bandSize: 0.2
     - content: Algae
-      bandSize: 0.4
+      bandSize: 0.3
     - content: IronOre
       bandSize: 0.1
     - content: Cuprite
@@ -55,14 +55,26 @@ TerrainBiomeLookupTable:
     - content: Obsidian
       bandSize: 0.25
     - content: Katairite
-      bandSize: 0.3
+      bandSize: 0.4
     - content: Gold
-      bandSize: 0.35
+      bandSize: 0.25
       overrides:
         massOverride: 4000
+    - content: RefinedCarbon
+      bandSize: 0.1
+    - content: Diamond
+      bandSize: 0.05
+
+    Core_MoltenGlass:
+    - content: Katairite
+      bandSize: 0.25
+    - content: RefinedCarbon
+      bandSize: 0.3
+    - content: MoltenGlass
+      bandSize: 0.30
     - content: Diamond
       bandSize: 0.1
-    - content: OxyRock
+    - content: CarbonDioxide
       bandSize: 0.05
 
     Frozen_Wet:
@@ -241,3 +253,71 @@ TerrainBiomeLookupTable:
       overrides:
         massMultiplier: 30
         massOverride: 800
+
+    Forest_Basic_Hca:
+    - content: AluminumOre
+      bandSize: 0.02
+    - content: MaficRock
+      bandSize: 0.03
+    - content: Dirt
+      bandSize: 0.025
+    - content: MaficRock
+      bandSize: 0.03
+    - content: SlimeMold
+      bandSize: 0.10
+    - content: MaficRock
+      bandSize: 0.05
+    - content: SlimeMold
+      bandSize: 0.10
+    - content: MaficRock
+      bandSize: 0.03
+    - content: Oxygen
+      bandSize: 0.35
+    - content: CarbonDioxide
+      bandSize: 0.35
+
+    Forest_BasicOxy_Hca:
+    - content: AluminumOre
+      bandSize: 0.02
+    - content: MaficRock
+      bandSize: 0.03
+    - content: Dirt
+      bandSize: 0.025
+    - content: MaficRock
+      bandSize: 0.03
+    - content: Algae
+      bandSize: 0.10
+    - content: MaficRock
+      bandSize: 0.05
+    - content: SlimeMold
+      bandSize: 0.10
+    - content: MaficRock
+      bandSize: 0.03
+    - content: OxyRock
+      bandSize: 0.018
+    - content: Oxygen
+      bandSize: 0.35
+    - content: CarbonDioxide
+      bandSize: 0.35
+
+    Forest_Metal_Hca:
+    - content: AluminumOre
+      bandSize: 0.04
+    - content: MaficRock
+      bandSize: 0.025
+    - content: Dirt
+      bandSize: 0.225
+      overrides:
+        massOverride: 200
+    - content: MaficRock
+      bandSize: 0.005
+    - content: Dirt
+      bandSize: 0.075
+      overrides:
+        massOverride: 200
+    - content: MaficRock
+      bandSize: 0.03
+    - content: Oxygen
+      bandSize: 0.35
+    - content: CarbonDioxide
+      bandSize: 0.35

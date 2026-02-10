@@ -1,0 +1,15 @@
+tags:
+  - AllowExceedNodeBorders
+shape: Blob
+borders:
+blobSize:
+  min: 2.0
+  max: 2.5
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Phosphorite
+        weight: 1
+        overrides:
+          massOverride: 800

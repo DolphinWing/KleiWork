@@ -10,7 +10,7 @@ dontRelaxChildren: true
 sampleBehaviour: PoissonDisk
 borderOverride: organicCrust
 biomes:
-  - name: biomes/Forest/BasicOxy
+  - name: biomes/Heliconia/Forest_BasicOxy_Hca
     weight: 2
     tags:
       - Oxyfern
@@ -21,12 +21,12 @@ biomes:
       - LightBug
       - LeafyPlant        
       - LeafyPlantSeed
-      - Squirrel          
+      - EvilFlower
 tags:
   - StartWorld
   - IgnoreCaveOverride
   - NoGlobalFeatureSpawning
 centralFeature:
 features:
-  - type: features/forest/PhosphoriteLump
+  - type: features/Heliconia/PhosphoriteDeposit
 zoneType: Forest

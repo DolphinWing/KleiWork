@@ -21,6 +21,7 @@ biomes:
       - SwampLilySeed
       - SpiceVineSeed
       - LeafyPlantSeed
+      - EvilFlower
   - name: biomes/Heliconia/Jungle_Hot
     weight: 1
     tags:
@@ -28,6 +29,7 @@ biomes:
       - SwampLilySeed
       - SpiceVineSeed
       - LeafyPlantSeed
+      - EvilFlower
 tags:
   - IgnoreCaveOverride
 subworldTemplateRules:

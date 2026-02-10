@@ -410,7 +410,6 @@ cells:
   temperature: 293.149994
   location_x: -9
   location_y: -1
-  preventFoWReveal: true
 - element: Vacuum
   location_x: -8
   location_y: -1
@@ -1896,7 +1895,7 @@ buildings:
   location_y: 1
   element: Cuprite
   temperature: 293.149994
-- id: SpaceHeater
+- id: IceCooledFan
   location_x: 6
   location_y: 1
   element: Cuprite

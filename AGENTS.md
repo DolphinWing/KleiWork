@@ -4,19 +4,21 @@
 
 本專案的主要程式碼、設定與輸出檔案位於以下資料夾：
 
-| 資料夾路徑 | 內容描述 | 備註 |
-| :--- | :--- | :--- |
-| `./workshop-2906930548` | Oxygen Not Included 正體中文 | 這是給 Oxygen Not Included 使用的正體中文翻譯模組 |
-| `./workshop-3046440992` | Oxygen Not Included 字型模組。新 | 這是搭配我的正體中文翻譯模組使用的字型模組 |
-| `./workshop-3413401611` | Oxygen Not Included Not 0K, But Pretty Cool Place | 這是給 Oxygen Not Included 使用的地圖模組，代號 ABZ |
-| `./workshop-superconductive` | Oxygen Not Included Moonlet Cluster - Superconductive | 這是給 Oxygen Not Included 使用的地圖模組 |
-| `./workshop-3430682737` | Oxygen Not Included Voidria | 這是給 Oxygen Not Included 使用的地圖模組，代號 VOA |
+| 資料夾路徑 | 內容描述 | Steam ID | 備註 |
+| :--- | :--- | :--- | :--- |
+| `./workshop-2906930548` | Oxygen Not Included 正體中文 | 2906930548 | 翻譯模組 |
+| `./workshop-3046440992` | Oxygen Not Included 字型模組。新 | 3046440992 | 搭配翻譯模組使用的字型模組 |
+| `./workshop-3413401611` | Oxygen Not Included Not 0K, But Pretty Cool Place | 3413401611 | 地圖模組，代號 ABZ |
+| `./workshop-superconductive` | Oxygen Not Included Moonlet Cluster - Superconductive | 3418019940 | 地圖模組 |
+| `./workshop-3430682737` | Oxygen Not Included Voidria | 3430682737 | 地圖模組，代號 VOA |
+| `./workshop-heliconia` | Oxygen Not Included Heliconia | 3663491695 | 地圖模組，代號 HCA |
 | `./tools/android-app` | 我的翻譯小工具 | 專門將 Klei 官方翻譯檔案和我的翻譯模組載入，讓我在版本更新時比較容易編輯的小工具，目前已經停止維護 |
 | `./tools/desktop-app` | 我的翻譯小工具 | 專門將 Klei 官方翻譯檔案和我的翻譯模組載入，讓我在版本更新時比較容易編輯的小工具 |
 | `./oni-mods/FontLoader` | workshop-3046440992 使用的模組原始碼 | 字型模組。新的模組需要 Harmony 載入的部分 |
 | `./oni-mods/Rime_Extreme_2` | workshop-3413401611 使用的模組原始碼 | Not 0K, But Pretty Cool Place 模組需要 Harmony 載入的部分 |
-| `./oni-mods/Niobium_Start` | workshop-3418019940 使用的模組原始碼 | Moonlet Cluster - Superconductive模組需要 Harmony 載入的部分 |
+| `./oni-mods/Niobium_Start` | workshop-superconductive 使用的模組原始碼 | Moonlet Cluster - Superconductive 模組需要 Harmony 載入的部分 |
 | `./oni-mods/TorchGod_Voidria` | workshop-3430682737 使用的模組原始碼 | Voidria 模組需要 Harmony 載入的部分 |
+| `./oni-mods/TorchGod_Heliconia` | workshop-heliconia 使用的模組原始碼 | Heliconia 模組需要 Harmony 載入的部分 |
 
 ## 📚 參考與靜態資料 (Reference and Static Data)
 

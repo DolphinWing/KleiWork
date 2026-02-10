@@ -10,7 +10,7 @@ dontRelaxChildren: true
 sampleBehaviour: PoissonDisk
 borderOverride: organicCrust
 biomes:
-  - name: biomes/Forest/Metal
+  - name: biomes/Heliconia/Forest_Metal_Hca
     weight: 2
     tags:
       - Oxyfern
@@ -19,13 +19,14 @@ biomes:
       - BasicSingleHarvestPlantSeed
       - ForestForagePlantPlanted
       - LightBug
-      - LeafyPlant        
+      - LeafyPlant
       - LeafyPlantSeed
-      - Squirrel          
+      - Squirrel
 tags:
   - StartWorld
   - IgnoreCaveOverride
   - NoGlobalFeatureSpawning
 centralFeature:
-features: []
+features:
+  - type: features/Heliconia/PhosphoriteDeposit
 zoneType: Forest

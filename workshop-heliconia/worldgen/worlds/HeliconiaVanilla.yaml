@@ -13,7 +13,7 @@ defaultsOverrides:
   startingWorldElements: []
 
 startSubworldName: subworlds/Heliconia/ForestStart
-startingBaseTemplate: bases/forestBase
+startingBaseTemplate: bases/HcaForestBase
 startingBasePositionHorizontal:
   min: 0.5
   max: 0.5
@@ -67,6 +67,8 @@ subworldFiles:
   - name: subworlds/Heliconia/IronCore
   - name: subworlds/Heliconia/CopperCore
   - name: subworlds/Heliconia/GoldCore
+  - name: subworlds/Heliconia/MoltenGlassCore
+    minCount: 2
 
 fixedTraits:
   - sunlightVeryVeryLow
@@ -159,6 +161,7 @@ unknownCellsAllowedSubworlds:
       - subworlds/Heliconia/IronCore
       - subworlds/Heliconia/CopperCore
       - subworlds/Heliconia/GoldCore
+      - subworlds/Heliconia/MoltenGlassCore
 
   # Above Core
   - tagcommand: DistanceFromTag
@@ -168,6 +171,7 @@ unknownCellsAllowedSubworlds:
     command: Replace
     subworldNames:
       - subworlds/Heliconia/Oil
+      - subworlds/Heliconia/MoltenGlassCore
 
   # Space
   - tagcommand: AtTag
