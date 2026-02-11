@@ -54,19 +54,18 @@ subworldFiles:
     minCount: 1
     maxCount: 1
   - name: subworlds/Heliconia/Ocean
-    minCount: 1
+    #minCount: 1
   - name: subworlds/Heliconia/Oil
   - name: subworlds/Heliconia/Rust
-    minCount: 1
+    #minCount: 1
   - name: subworlds/Heliconia/Sandstone
   - name: subworlds/Heliconia/ForestMiniMetal
-    minCount: 1
+    #minCount: 1
   - name: subworlds/Heliconia/ForestMiniWater
-    minCount: 1
+    #minCount: 1
   - name: subworlds/Heliconia/ForestMiniOxy
-    minCount: 1
-  - name: subworlds/space/SpaceNoBorder
-  - name: subworlds/magma/Bottom
+    #minCount: 1
+  - name: subworlds/Heliconia/SpaceVast
   - name: expansion1::subworlds/Heliconia/FrozenMedium
   - name: expansion1::subworlds/Heliconia/Rust
   - name: expansion1::subworlds/Heliconia/JungleHot
@@ -84,6 +83,8 @@ subworldFiles:
   - name: expansion1::subworlds/Heliconia/CobaltCore
   - name: expansion1::subworlds/Heliconia/AluminumCore
   - name: expansion1::subworlds/Heliconia/RadioactiveCore
+    minCount: 1
+  - name: expansion1::subworlds/Heliconia/IronSurface
 
 fixedTraits:
   - sunlightVeryVeryLow
@@ -99,6 +100,7 @@ unknownCellsAllowedSubworlds:
     subworldNames:
       - subworlds/Heliconia/ForestStart
 
+  # Ring-1
   - tagcommand: DistanceFromTag
     tag: AtStart
     minDistance: 1
@@ -110,7 +112,7 @@ unknownCellsAllowedSubworlds:
       - subworlds/Heliconia/ForestMiniOxy
       - expansion1::subworlds/Heliconia/ShelterZone
 
-  # Ring-1
+  # Ring-2
   - tagcommand: DistanceFromTag
     tag: AtStart
     minDistance: 2
@@ -124,7 +126,7 @@ unknownCellsAllowedSubworlds:
       - subworlds/Heliconia/Rust
       - expansion1::subworlds/Heliconia/JungleHot
 
-  # Ring-2
+  # Ring-3
   - tagcommand: DistanceFromTag
     tag: AtStart
     minDistance: 3
@@ -140,7 +142,7 @@ unknownCellsAllowedSubworlds:
       - expansion1::subworlds/Heliconia/Swamp
       - expansion1::subworlds/Heliconia/Wasteland
 
-  # Ring-3
+  # Ring-4
   - tagcommand: DistanceFromTag
     tag: AtStart
     minDistance: 4
@@ -158,7 +160,7 @@ unknownCellsAllowedSubworlds:
       - expansion1::subworlds/Heliconia/Swamp
       - expansion1::subworlds/Heliconia/Wasteland
 
-  # Ring-4
+  # Ring-5
   - tagcommand: DistanceFromTag
     tag: AtStart
     minDistance: 5
@@ -187,14 +189,6 @@ unknownCellsAllowedSubworlds:
     tag: AtDepths
     command: Replace
     subworldNames:
-      - subworlds/magma/Bottom
-  # Above Core
-  - tagcommand: DistanceFromTag
-    tag: AtDepths
-    minDistance: 0
-    maxDistance: 0
-    command: Replace
-    subworldNames:
       - subworlds/Heliconia/IronCore
       - subworlds/Heliconia/CopperCore
       - subworlds/Heliconia/GoldCore
@@ -218,14 +212,14 @@ unknownCellsAllowedSubworlds:
     tag: AtSurface
     command: Replace
     subworldNames:
-      - subworlds/space/SpaceNoBorder
+      - subworlds/Heliconia/SpaceVast
   - tagcommand: DistanceFromTag
     tag: AtSurface
     minDistance: 1
     maxDistance: 1
     command: Replace
     subworldNames:
-      - subworlds/space/SpaceNoBorder
+      - subworlds/Heliconia/SpaceVast
 
   # Surface
   - tagcommand: DistanceFromTag
@@ -235,6 +229,7 @@ unknownCellsAllowedSubworlds:
     command: Replace
     subworldNames:
       - subworlds/Heliconia/IronSurface
+      - expansion1::subworlds/Heliconia/IronSurface
 
 worldTemplateRules:
   # Jungle
@@ -244,7 +239,7 @@ worldTemplateRules:
     priority: 100
     allowedCellsFilter:
       - command: Replace
-        zoneTypes: [ MagmaCore, OilField, ToxicJungle ]
+        zoneTypes: [ MagmaCore, OilField, ToxicJungle, Ocean ]
 
   # Marsh
   - names:
@@ -253,7 +248,7 @@ worldTemplateRules:
     priority: 100
     allowedCellsFilter:
       - command: Replace
-        zoneTypes: [ MagmaCore, OilField, BoggyMarsh ]
+        zoneTypes: [ MagmaCore, OilField, BoggyMarsh, Rust ]
 
   # Oil
   - names:
@@ -275,7 +270,6 @@ worldTemplateRules:
         tag: AtDepths
         minDistance: 1
         maxDistance: 3
-#        zoneTypes: [ MagmaCore, OilField ]
 
   # Gravitas
   - names:

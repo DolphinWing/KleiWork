@@ -1,26 +1,33 @@
 biomeNoise: noise/HeliconiaPoiContainer
 temperatureRange: TG_ExtremeHot
-minChildCount: 8
+#pdWeight: 0.8
 density:
-  min: 30
-  max: 50
+  min: 40
+  max: 60
 avoidRadius: 12.0
 sampleBehaviour: PoissonDisk
 borderOverride: coreBorder
 biomes:
   - name: biomes/Heliconia/Core_MoltenGlass
-    weight: 2
+    weight: 1
 subworldTemplateRules:
+  - names:
+      - poi/glass/island
+    listRule: TryOne
+    priority: 80
   - names:
       - poi/glass/furnace
       - poi/glass/small_a
       - poi/glass/small_b
     listRule: TrySome
-    someCount: 12
-    priority: 100
+    someCount: 4
+    priority: 50
 features:
   - type: features/Heliconia/GlassPocket
+  - type: features/Heliconia/MetalVein
 tags:
   - HeliconiaCore
   - AtDepths
+  - IgnoreCaveOverride
+  - NoGlobalFeatureSpawning
 zoneType: MagmaCore

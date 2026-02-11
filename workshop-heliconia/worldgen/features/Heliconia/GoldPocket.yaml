@@ -3,8 +3,8 @@ tags:
   - AllowExceedNodeBorders
 shape: Blob
 blobSize:
-  min: 1.5
-  max: 2.5
+  min: 1.0
+  max: 2.0
 ElementChoiceGroups:
   RoomCenterElements:
     selectionMethod: WeightedResample

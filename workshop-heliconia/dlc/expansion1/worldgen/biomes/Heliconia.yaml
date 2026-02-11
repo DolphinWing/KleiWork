@@ -3,39 +3,39 @@ TerrainBiomeLookupTable:
     Core_Cobalt:
     - content: Katairite
       bandSize: 0.25
-    - content: RefinedCarbon
+    - content: Wolframite
+      bandSize: 0.35
+    - content: MoltenCobalt
       bandSize: 0.25
-    - content: Cobalt
-      bandSize: 0.4
     - content: Diamond
-      bandSize: 0.05
-    - content: Glass
       bandSize: 0.1
+    - content: Steel
+      bandSize: 0.05
 
     Core_Aluminum:
     - content: Katairite
       bandSize: 0.25
-    - content: Aluminum
+    - content: Diamond
       bandSize: 0.2
-    - content: Katairite
+    - content: MoltenAluminum
       bandSize: 0.35
     - content: Obsidian
       bandSize: 0.1
-    - content: RefinedCarbon
-      bandSize: 0.1
+    - content: Sand
+      bandSize: 0.05
 
     Core_Radioactive:
-    - content: Obsidian
+    - content: Glass
       bandSize: 0.4
-    - content: Glass # Added
+    - content: Obsidian
       bandSize: 0.4
     - content: MoltenUranium
       bandSize: 0.2
     - content: Steel
       bandSize: 0.2
-    - content: Corium
+    - content: ToxicSand
       bandSize: 0.2
-    - content: MoltenLead
+    - content: Rust
       bandSize: 0.05
       overrides:
         massOverride: 2000

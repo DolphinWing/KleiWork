@@ -1,0 +1,78 @@
+name: RadHeart
+info:
+  size:
+    X: 5
+    Y: 5
+  area: 25
+cells:
+# 外層 - 鉛與黑曜岩交錯 (不規則感)
+- element: Lead
+  mass: 1000
+  location_x: -2
+  location_y: -2
+- element: Obsidian
+  mass: 2000
+  location_x: -1
+  location_y: -2
+- element: Lead
+  mass: 1000
+  location_y: -2
+- element: Obsidian
+  mass: 2000
+  location_x: 1
+  location_y: -2
+- element: Lead
+  mass: 1000
+  location_x: 2
+  location_y: -2
+
+# 內層 - 濃縮鈾核心 (驚喜)
+- element: EnrichedUranium
+  mass: 500
+  temperature: 1500
+  location_x: -1
+  location_y: -1
+- element: EnrichedUranium
+  mass: 500
+  temperature: 1500
+  location_y: -1
+- element: EnrichedUranium
+  mass: 500
+  temperature: 1500
+  location_x: 1
+  location_y: -1
+- element: EnrichedUranium
+  mass: 500
+  temperature: 1500
+  location_x: -1
+- element: EnrichedUranium
+  mass: 800 # 核心中的核心
+  temperature: 2000
+- element: EnrichedUranium
+  mass: 500
+  temperature: 1500
+  location_x: 1
+
+# 零散的 Corium (熔毀質感)
+- element: Corium
+  mass: 200
+  temperature: 2500
+  location_x: -2
+  location_y: 1
+- element: Corium
+  mass: 200
+  temperature: 2500
+  location_x: 2
+  location_y: 1
+- element: Corium
+  mass: 200
+  temperature: 2500
+  location_y: 2
+- element: Lead
+  mass: 1000
+  location_x: -1
+  location_y: 2
+- element: Lead
+  mass: 1000
+  location_x: 1
+  location_y: 2

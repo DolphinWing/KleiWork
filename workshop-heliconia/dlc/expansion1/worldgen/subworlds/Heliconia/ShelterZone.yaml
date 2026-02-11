@@ -13,8 +13,11 @@ biomes:
   - name: biomes/Heliconia/Start
     weight: 1
     tags:
-      - StartWorld
-      - NoGlobalFeatureSpawning
+      - Oxyfern
+      - ForestTree   
+      - EvilFlower
+      - EvilFlowerSeed
+      - ForestForagePlantPlanted
 tags:
   - StartWorld
   - IgnoreCaveOverride

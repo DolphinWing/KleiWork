@@ -7,14 +7,14 @@ settings:
   upperBound:
     X: 4
     Y: 4
-  name: HeliconiaPoiContainer
+  name: HeliconiaCoreLayered
 links:
 - target:
     type: Filter
-    name: BaseFilter
+    name: LayerFilter
   source0:
     type: Primitive
-    name: BasePrimitive
+    name: CoreDensityPrimitive
 - target:
     type: Terminator
     name: TERMINATOR
@@ -26,38 +26,38 @@ links:
     name: RotateHorizontal
   source0:
     type: Modifier
-    name: ExtremeStretch
+    name: LayerStretch
 - target:
     type: Modifier
-    name: ExtremeStretch
+    name: LayerStretch
   source0:
     type: Filter
-    name: BaseFilter
+    name: LayerFilter
 primitives:
-  BasePrimitive:
+  CoreDensityPrimitive:
     primative: SimplexPerlin
     quality: Best
-    seed: 999
+    seed: 123
     offset: 1
-    name: BasePrimitive
+    name: CoreDensityPrimitive
 filters:
-  BaseFilter:
+  LayerFilter:
     filter: RidgedMultiFractal
-    frequency: 0.2 # 稍微增加頻率
+    frequency: 0.8
     lacunarity: 2
-    octaves: 2
+    octaves: 4
     gain: 0.5
     offset: 0
     exponent: 0.9
-    name: BaseFilter
+    name: LayerFilter
 modifiers:
-  ExtremeStretch:
+  LayerStretch:
     modifyType: Scale2d
     scale: 1
     scale2d:
-      X: 10.0 # 拉伸從 20 降到 5
-      Y: 0.2 # 壓縮從 0.1 升到 0.5
-    name: ExtremeStretch
+      X: 10.0
+      Y: 0.2
+    name: LayerStretch
 transformers:
   RotateHorizontal:
     transformerType: RotatePoint

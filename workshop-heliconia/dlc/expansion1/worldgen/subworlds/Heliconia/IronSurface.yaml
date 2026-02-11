@@ -1,19 +1,18 @@
-biomeNoise: noise/HeliconiaFlow # Flat-ish
+biomeNoise: expansion1::noise/LayeredNoise
 temperatureRange: TG_ExtremeHot
-pdWeight: 5
 density:
-  min: 40
-  max: 60
-avoidRadius: 20.0
+  min: 20
+  max: 40
+avoidRadius: 12.0
 sampleBehaviour: PoissonDisk
 borderOverride: wolframiteBorder
 biomes:
   - name: biomes/Heliconia/Core_Iron
-    weight: 3
-  - name: biomes/Magma/MagmaBedNoUnobtanium
     weight: 1
 features:
   - type: features/Heliconia/IronPocket
+  - type: features/Heliconia/MetalVein
+  - type: expansion1::features/Heliconia/RadSludge
 tags:
   - HeliconiaSurface
   - AtSurface

@@ -4,16 +4,18 @@ add:
       weight: 1
   diamondBorder:
     - element: Obsidian
-      weight: 3
+      weight: 2
     - element: Diamond
-      weight: 1
+      weight: 2
   wolframiteBorder:
     - element: Obsidian
-      weight: 3
+      weight: 2
     - element: Wolframite
-      weight: 1
+      weight: 2
   coreBorder:
     - element: Diamond
-      weight: 3
-    - element: RefinedCarbon
       weight: 1
+    - element: RefinedCarbon
+      weight: 3
+    - element: Salt
+      weight: 2

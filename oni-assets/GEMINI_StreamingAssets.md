@@ -174,3 +174,18 @@ ONI world generation is a multi-layered procedural system based on **Noise Field
 *   在固體核心（如 Obsidian/Katairite）中使用液體 Feature 時，Feature 會自動替換原有固體格，形成自然的液體口袋。
 *   **Mass & Temp**: 務必在 Feature 的 `overrides` 中顯式定義 `massOverride` 與 `temperatureOverride`，否則生成的液體可能會因為預設值過低而顯得稀薄，或因溫度不匹配造成地圖生成後的熱震盪。
 
+### 6.11 Subworld 防護標籤 (Protective Tags) —— 真空缺口的關鍵解法
+*   **核心發現**: 地圖生成中出現的幾何三角形或梯形「真空缺口」，通常是因為全域特質 (World Traits) 試圖在核心層挖洞或撒點，但與自訂 Subworld 衝突導致生成失敗。
+*   **解決方案**: 必須在 Subworld 的 `tags` 列表裡加上防護標籤來「防禦」這些全域規則。
+*   **`IgnoreCaveOverride`**: 防止程序化洞穴生成器在實心核心裡挖洞，是消除不規則真空塊的主力。
+*   **`NoGlobalFeatureSpawning`**: 禁止全域 Feature（如隨機晶洞、火山）在區域內生成，確保水平分層不被切斷。
+*   **`NoGravitasFeatures`**: 禁止生成 Gravitas 設施殘骸。
+*   **結論**: **這三者是維持高密度核心層視覺完整性的唯一解法**，設定正確後即可解決 90% 以上的區域遺失問題。
+
+### 6.12 Template 實體序列化規則
+*   **報錯診斷**: 若出現 `Requested value 'X' was not found during deserialization`，通常是因為將實體 ID 放錯了列表。
+*   **規則**: 
+    *   `cells`: 僅用於地塊元素。
+    *   `buildings`: 用於建築物。
+    *   **`otherEntities`**: 所有植物 (EvilFlower)、動物、間歇泉或特殊物件必須放在此列表中，且需補齊 `units`, `rottable: {}`, `amounts: []`, `storage: []` 等屬性。
+

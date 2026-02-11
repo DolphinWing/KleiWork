@@ -6,10 +6,14 @@ TerrainBiomeLookupTable:
     Start:
     - content: SedimentaryRock
       bandSize: 0.1
+      overrides:
+        massOverride: 1200
     - content: MaficRock
       bandSize: 0.3
     - content: Phosphorite
       bandSize: 0.2
+      overrides:
+        massOverride: 800
     - content: Algae
       bandSize: 0.3
     - content: IronOre
@@ -17,7 +21,7 @@ TerrainBiomeLookupTable:
     - content: Cuprite
       bandSize: 0.06
       overrides:
-        massOverride: 350
+        massOverride: 800
     - content: Oxygen
       bandSize: 1.3
     - content: Carbon
@@ -29,50 +33,52 @@ TerrainBiomeLookupTable:
     - content: Katairite
       bandSize: 0.3
     - content: Iron
-      bandSize: 0.35
+      bandSize: 0.3
       overrides:
         massOverride: 4000
     - content: Wolframite
-      bandSize: 0.05
+      bandSize: 0.1
     - content: SourGas
       bandSize: 0.05
 
     Core_Copper:
-    - content: Obsidian
-      bandSize: 0.25
     - content: Katairite
+      bandSize: 0.25
+    - content: Obsidian
       bandSize: 0.3
     - content: Copper
-      bandSize: 0.35
-      overrides:
-        massOverride: 4000
-    - content: RefinedCarbon
-      bandSize: 0.05
-    - content: CarbonDioxide
-      bandSize: 0.05
-
-    Core_Gold:
-    - content: Obsidian
-      bandSize: 0.25
-    - content: Katairite
-      bandSize: 0.4
-    - content: Gold
-      bandSize: 0.25
+      bandSize: 0.3
       overrides:
         massOverride: 4000
     - content: RefinedCarbon
       bandSize: 0.1
+    - content: CarbonDioxide
+      bandSize: 0.05
+
+    Core_Gold:
+    - content: Katairite
+      bandSize: 0.25
     - content: Diamond
+      bandSize: 0.3
+    - content: Gold
+      bandSize: 0.3
+      overrides:
+        massOverride: 4000
+    - content: Obsidian
+      bandSize: 0.1
+    - content: Glass
       bandSize: 0.05
 
     Core_MoltenGlass:
-    - content: Katairite
-      bandSize: 0.25
     - content: RefinedCarbon
-      bandSize: 0.3
-    - content: MoltenGlass
-      bandSize: 0.30
+      bandSize: 0.25
     - content: Diamond
+      bandSize: 0.3
+      overrides:
+        massOverride: 400
+    - content: MoltenGlass
+      bandSize: 0.3
+    - content: Katairite
       bandSize: 0.1
     - content: CarbonDioxide
       bandSize: 0.05

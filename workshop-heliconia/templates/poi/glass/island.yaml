@@ -1,0 +1,71 @@
+info:
+  size:
+    X: 5
+    Y: 3
+  min:
+    X: -2
+  area: 13
+cells:
+- element: MoltenGlass
+  mass: 1770
+  temperature: 2291.1499
+  location_x: -2
+- element: MoltenGlass
+  mass: 500
+  temperature: 2291.46069
+  location_x: -1
+- element: MoltenGlass
+  mass: 500
+  temperature: 2291.46069
+- element: MoltenGlass
+  mass: 500
+  temperature: 2291.46069
+  location_x: 1
+- element: MoltenGlass
+  mass: 1770
+  temperature: 2291.1499
+  location_x: 2
+- element: MoltenGlass
+  mass: 550
+  temperature: 2291.1499
+  location_x: -2
+  location_y: 1
+- element: Katairite
+  mass: 2000
+  temperature: 300.150452
+  location_x: -1
+  location_y: 1
+- element: Katairite
+  mass: 2000
+  temperature: 300.150452
+  location_y: 1
+- element: Katairite
+  mass: 2000
+  temperature: 300.150452
+  location_x: 1
+  location_y: 1
+- element: MoltenGlass
+  mass: 550
+  temperature: 2291.1499
+  location_x: 2
+  location_y: 1
+- element: Vacuum
+  location_x: -1
+  location_y: 2
+- element: Vacuum
+  location_y: 2
+- element: Vacuum
+  location_x: 1
+  location_y: 2
+otherEntities:
+- id: EvilFlower
+  location_y: 2
+  element: Creature
+  temperature: 293
+  units: 1
+  type: Other
+  amounts:
+  - id: AirPressure
+    value: 0.699999988
+  - id: Temperature
+    value: 293

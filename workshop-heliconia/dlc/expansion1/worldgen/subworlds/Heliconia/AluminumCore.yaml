@@ -1,9 +1,9 @@
-biomeNoise: noise/HeliconiaPoiContainer
+biomeNoise: expansion1::noise/LayeredNoise
 temperatureRange: TG_SuperSuperHot
 density:
-  min: 50
-  max: 80
-avoidRadius: 30.0
+  min: 40
+  max: 60
+avoidRadius: 12.0
 sampleBehaviour: PoissonDisk
 borderOverride: coreBorder
 biomes:
@@ -15,11 +15,14 @@ subworldTemplateRules:
       - expansion1::poi/aluminum/small_a
       - expansion1::poi/aluminum/small_b
     listRule: TrySome
-    someCount: 12
-    priority: 100
+    someCount: 6
+    priority: 50
 features:
   - type: expansion1::features/Heliconia/AluminumPocket
+  - type: features/Heliconia/MetalVein
 tags:
   - HeliconiaCore
   - AtDepths
+  - IgnoreCaveOverride
+  - NoGlobalFeatureSpawning
 zoneType: MagmaCore

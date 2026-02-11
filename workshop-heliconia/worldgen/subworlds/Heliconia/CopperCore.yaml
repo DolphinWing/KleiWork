@@ -1,9 +1,10 @@
 biomeNoise: noise/HeliconiaPoiContainer
 temperatureRange: TG_SuperSuperHot
+pdWeight: 0.5
 density:
-  min: 50
-  max: 80
-avoidRadius: 30.0
+  min: 40
+  max: 60
+avoidRadius: 12.0
 sampleBehaviour: PoissonDisk
 borderOverride: coreBorder
 biomes:
@@ -14,12 +15,18 @@ subworldTemplateRules:
       - poi/copper/furnace
       - poi/copper/small_a
       - poi/copper/small_b
+      - poi/copper/cluster
+      - poi/copper/pipe
     listRule: TrySome
-    someCount: 12
-    priority: 100
+    someCount: 6
+    priority: 50
 features:
   - type: features/Heliconia/CopperPocket
+  - type: features/Heliconia/MetalVein
 tags:
   - HeliconiaCore
   - AtDepths
+  - IgnoreCaveOverride
+  - NoGlobalFeatureSpawning
+  - NoGravitasFeatures
 zoneType: MagmaCore

@@ -1,0 +1,25 @@
+name: HcaGoldNugget
+info:
+  size:
+    X: 4
+    Y: 4
+  area: 16
+cells:
+- element: Diamond
+  mass: 1000
+  location_x: -1
+  location_y: -1
+- element: Diamond
+  mass: 1000
+  location_y: -1
+- element: Gold
+  mass: 2000
+  location_x: -1
+- element: Gold
+  mass: 2000
+- element: Diamond
+  mass: 1000
+  location_x: 1
+- element: Diamond
+  mass: 1000
+  location_y: 1

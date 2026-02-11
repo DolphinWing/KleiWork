@@ -3,7 +3,7 @@ tags:
   - AllowExceedNodeBorders
 shape: Blob
 blobSize:
-  min: 1.5
+  min: 1.0
   max: 2.5
 ElementChoiceGroups:
   RoomCenterElements:

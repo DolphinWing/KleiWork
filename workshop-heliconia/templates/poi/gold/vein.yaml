@@ -1,0 +1,30 @@
+name: HcaGoldVein
+info:
+  size:
+    X: 8
+    Y: 2
+  area: 16
+cells:
+- element: Gold
+  mass: 3000
+  location_x: -3
+- element: Gold
+  mass: 3000
+  location_x: -2
+- element: Gold
+  mass: 3000
+  location_x: -1
+- element: Gold
+  mass: 3000
+- element: Gold
+  mass: 3000
+  location_x: 1
+- element: Gold
+  mass: 3000
+  location_x: 2
+- element: Gold
+  mass: 3000
+  location_x: 3
+- element: Gold
+  mass: 3000
+  location_x: 4
