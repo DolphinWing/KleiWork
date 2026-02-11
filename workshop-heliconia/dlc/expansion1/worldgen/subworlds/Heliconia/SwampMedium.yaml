@@ -7,7 +7,7 @@ avoidRadius: 20.0
 extraBiomeChildren: 1
 doAvoidPoints: false
 sampleBehaviour: PoissonDisk
-borderOverride: heliconiaBorder
+borderOverride: organicCrust
 biomes:
   - name: expansion1::biomes/Heliconia/Swamp_Basic
     weight: 2

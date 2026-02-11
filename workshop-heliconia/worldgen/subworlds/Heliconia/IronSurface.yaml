@@ -1,6 +1,6 @@
-biomeNoise: noise/HeliconiaFlow # Flat-ish
+biomeNoise: noise/HeliconiaFlow
 temperatureRange: TG_ExtremeHot
-pdWeight: 5
+#pdWeight: 2
 density:
   min: 40
   max: 60
@@ -12,6 +12,13 @@ biomes:
     weight: 3
   - name: biomes/Magma/MagmaBedNoUnobtanium
     weight: 1
+subworldTemplateRules:
+  - names:
+      - poi/iron/small_a
+      - poi/iron/small_b
+    listRule: TrySome
+    someCount: 4
+    priority: 50
 features:
   - type: features/Heliconia/IronPocket
 tags:
@@ -19,7 +26,7 @@ tags:
   - AtSurface
   - IgnoreCaveOverride
 # - ErodePointToBorderInv
-  - ErodePointToWorldTop
+# - ErodePointToWorldTop
   - NoGlobalFeatureSpawning
   - RemoveWorldBorderOverVacuum
 zoneType: MagmaCore

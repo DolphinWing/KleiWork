@@ -62,7 +62,7 @@ subworldFiles:
     #minCount: 1
   - name: subworlds/Heliconia/ForestMiniOxy
     #minCount: 1
-  - name: subworlds/Heliconia/SpaceVast
+  - name: subworlds/space/SpaceNoBorder
   - name: subworlds/Heliconia/IronSurface
   - name: subworlds/Heliconia/IronCore
   - name: subworlds/Heliconia/CopperCore
@@ -179,20 +179,11 @@ unknownCellsAllowedSubworlds:
     tag: AtSurface
     command: Replace
     subworldNames:
-      - subworlds/Heliconia/SpaceVast
+      - subworlds/space/SpaceNoBorder
   - tagcommand: DistanceFromTag
     tag: AtSurface
     minDistance: 1
     maxDistance: 1
-    command: Replace
-    subworldNames:
-      - subworlds/Heliconia/SpaceVast
-
-  # Surface
-  - tagcommand: DistanceFromTag
-    tag: AtSurface
-    minDistance: 2
-    maxDistance: 2
     command: Replace
     subworldNames:
       - subworlds/Heliconia/IronSurface

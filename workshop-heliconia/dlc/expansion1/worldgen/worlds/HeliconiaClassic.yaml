@@ -65,7 +65,7 @@ subworldFiles:
     #minCount: 1
   - name: subworlds/Heliconia/ForestMiniOxy
     #minCount: 1
-  - name: subworlds/Heliconia/SpaceVast
+  - name: subworlds/space/SpaceNoBorder
   - name: expansion1::subworlds/Heliconia/FrozenMedium
   - name: expansion1::subworlds/Heliconia/Rust
   - name: expansion1::subworlds/Heliconia/JungleHot
@@ -212,20 +212,11 @@ unknownCellsAllowedSubworlds:
     tag: AtSurface
     command: Replace
     subworldNames:
-      - subworlds/Heliconia/SpaceVast
+      - subworlds/space/SpaceNoBorder
   - tagcommand: DistanceFromTag
     tag: AtSurface
     minDistance: 1
     maxDistance: 1
-    command: Replace
-    subworldNames:
-      - subworlds/Heliconia/SpaceVast
-
-  # Surface
-  - tagcommand: DistanceFromTag
-    tag: AtSurface
-    minDistance: 2
-    maxDistance: 2
     command: Replace
     subworldNames:
       - subworlds/Heliconia/IronSurface

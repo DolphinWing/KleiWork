@@ -16,15 +16,15 @@ biomes:
     weight: 1
     tags:
       - StartWorld
-      - Hatch
+      - EvilFlower
+      - EvilFlowerSeed
       - PrickleGrass
       - PrickleGrassSeed
       - BasicSingleHarvestPlantSeed
       - BasicSingleHarvestPlant
       - BasicForagePlant
       - BasicForagePlantPlanted
-      - EvilFlower
-      - EvilFlowerSeed
+      - Hatch
   - name: biomes/Heliconia/Forest_BasicOxy_Hca
     weight: 2
     tags:

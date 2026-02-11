@@ -6,7 +6,7 @@ density:
 avoidRadius: 20.0
 minChildCount: 2
 sampleBehaviour: PoissonDisk
-borderOverride: heliconiaBorder
+borderOverride: organicCrust
 biomes:
   - name: biomes/Heliconia/Jungle_Hot
     weight: 1

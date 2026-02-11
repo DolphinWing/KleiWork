@@ -13,7 +13,6 @@ biomes:
     weight: 1
     tags:
       - Oxyfern
-      - ForestTree   
       - EvilFlower
       - EvilFlowerSeed
       - ForestForagePlantPlanted

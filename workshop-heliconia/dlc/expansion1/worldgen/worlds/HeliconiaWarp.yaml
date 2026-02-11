@@ -335,3 +335,11 @@ worldTemplateRules:
         tag: AtSurface
         minDistance: 0
         maxDistance: 1
+  - names:
+    - events/strangeasteroid/frozen_vacillator
+    listRule: TryOne
+    priority: 150
+    allowedCellsFilter:
+      - command: IntersectWith
+        zoneTypes: [ Radioactive, MagmaCore ]
+
