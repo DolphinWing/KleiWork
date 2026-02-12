@@ -9,7 +9,7 @@ dontRelaxChildren: true
 sampleBehaviour: PoissonDisk
 borderOverride: heliconiaBorder
 biomes:
-  - name: biomes/Sedimentary/Basic
+  - name: biomes/Heliconia/Sedimentary_Basic
     weight: 4
     tags:
       - PrickleFlowerSeed
@@ -17,12 +17,12 @@ biomes:
       - HatchBuried  
       - BasicSingleHarvestPlantSeed
       - BasicForagePlant
-  - name: biomes/Sedimentary/Metal_CO2
+  - name: biomes/Heliconia/Sedimentary_Metal_CO2
     weight: 2
     tags:   
       - HatchBuried
       - BasicForagePlantPlanted
-  - name: biomes/Sedimentary/Basic_CO2
+  - name: biomes/Heliconia/Sedimentary_Basic_CO2
     weight: 1
     tags:
       - HatchBuried

@@ -8,7 +8,7 @@ minChildCount: 4
 sampleBehaviour: PoissonDisk
 borderOverride: heliconiaBorder
 biomes:
-  - name: biomes/Forest/Metal
+  - name: biomes/Heliconia/Forest_Metal_Hca
     weight: 2
     tags:
       - OxyfernSeed
@@ -17,7 +17,7 @@ biomes:
       - LeafyPlantSeed
       - BasicSingleHarvestPlantSeed
       - ForestForagePlantPlanted
-  - name: biomes/Forest/Basic
+  - name: biomes/Heliconia/Forest_Basic_Hca
     weight: 1
     tags:
       - OxyfernSeed

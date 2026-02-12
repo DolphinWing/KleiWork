@@ -34,8 +34,8 @@ biomes:
       - BasicSingleHarvestPlantSeed
       - ForestForagePlantPlanted
       - LightBug
-      - EvilFlower        
-      - EvilFlowerSeed
+      - LeafyPlant
+      - LeafyPlantSeed
   - name: biomes/Heliconia/Forest_Basic_Hca
     weight: 2
     tags:
@@ -48,12 +48,12 @@ biomes:
       - LeafyPlant
       - LeafyPlantSeed
       - ForestForagePlant
-  - name: biomes/Heliconia/Forest_Metal_Hca
+  - name: biomes/Heliconia/Forest_Metal_Start
     weight: 2
     tags:
       - Oxyfern
-      - LeafyPlant
-      - LeafyPlantSeed
+      - EvilFlower
+      - EvilFlowerSeed
       - BasicSingleHarvestPlantSeed
       - ForestForagePlantPlanted
 tags:

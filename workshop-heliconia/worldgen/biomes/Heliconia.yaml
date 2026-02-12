@@ -306,7 +306,7 @@ TerrainBiomeLookupTable:
     - content: CarbonDioxide
       bandSize: 0.35
 
-    Forest_Metal_Hca:
+    Forest_Metal_Start:
     - content: AluminumOre
       bandSize: 0.04
     - content: MaficRock
@@ -327,3 +327,79 @@ TerrainBiomeLookupTable:
       bandSize: 0.35
     - content: CarbonDioxide
       bandSize: 0.35
+      
+    Forest_Metal_Hca:
+    - content: AluminumOre
+      bandSize: 0.04
+    - content: MaficRock
+      bandSize: 0.025
+    - content: ToxicSand
+      bandSize: 0.225
+    - content: MaficRock
+      bandSize: 0.005
+    - content: ToxicSand
+      bandSize: 0.075
+    - content: MaficRock
+      bandSize: 0.03
+    - content: Oxygen
+      bandSize: 0.35
+    - content: CarbonDioxide
+      bandSize: 0.35
+
+    Sedimentary_Basic:
+    - content: SandStone
+      bandSize: 0.2
+    - content: Glass
+      bandSize: 0.15
+    - content: ToxicSand
+      bandSize: 0.2
+    - content: Carbon
+      bandSize: 0.4
+    - content: Cuprite
+      bandSize: 0.06
+      overrides:
+        massOverride: 350
+    - content: OxyRock
+      bandSize: 0.04
+    - content: Oxygen
+      bandSize: 1.3
+
+    Sedimentary_Basic_CO2:
+    - content: SandStone
+      bandSize: 0.2
+    - content: Cuprite
+      bandSize: 0.15
+      overrides:
+        massOverride: 350
+    - content: ToxicSand
+      bandSize: 0.2
+    - content: Carbon
+      bandSize: 0.4
+    - content: Cuprite
+      bandSize: 0.06
+      overrides:
+        massOverride: 350
+    - content: CarbonDioxide
+      bandSize: 1
+
+    Sedimentary_Metal_CO2:
+    - content: SandStone
+      bandSize: 0.2
+    - content: Glass
+      bandSize: 0.15
+    - content: ToxicSand
+      bandSize: 0.1
+    - content: Cuprite
+      bandSize: 0.25
+      overrides:
+        massOverride: 350
+    - content: IronOre
+      bandSize: 0.2
+    - content: CarbonDioxide
+      bandSize: 0.7
+    - content: Cuprite
+      bandSize: 0.8
+      overrides:
+        massOverride: 350
+    - content: ToxicSand
+      bandSize: 0.2

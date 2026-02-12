@@ -13,7 +13,7 @@ biomes:
   - name: biomes/Heliconia/Forest_BasicOxy_Hca
     weight: 2
     tags:
-      - Oxyfern
+      - EvilFlower
       - ForestTree     
       - BasicSingleHarvestPlant
       - BasicSingleHarvestPlantSeed
@@ -21,7 +21,7 @@ biomes:
       - LightBug
       - LeafyPlant        
       - LeafyPlantSeed
-      - EvilFlower
+      - Oxyfern
 tags:
   - StartWorld
   - IgnoreCaveOverride

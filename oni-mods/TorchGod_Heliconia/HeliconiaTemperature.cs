@@ -105,10 +105,8 @@ namespace Heliconia
         {
             switch (mode)
             {
-                case HeliconiaOptions.MapMode.Crazy:
-                    return Temperature.Range.Hot;
-                case HeliconiaOptions.MapMode.Insane:
-                    return Temperature.Range.VeryHot;
+                // case HeliconiaOptions.MapMode.TabeYuriko:
+                //     return Temperature.Range.Hot; // Temperature.Range.VeryHot;
                 case HeliconiaOptions.MapMode.Easy:
                     return Temperature.Range.Mild;
                 default:
@@ -120,10 +118,8 @@ namespace Heliconia
         {
             switch (mode)
             {
-                case HeliconiaOptions.MapMode.Crazy:
-                    return Temperature.Range.VeryHot;
-                case HeliconiaOptions.MapMode.Insane:
-                    return HeliconiaTemperature.TG_SuperHot;
+                case HeliconiaOptions.MapMode.TabeYuriko:
+                    return Temperature.Range.VeryHot; // HeliconiaTemperature.TG_SuperHot;
                 case HeliconiaOptions.MapMode.Easy:
                     return Temperature.Range.HumanHot;
                 default:
@@ -144,9 +140,7 @@ namespace Heliconia
                 default: // others
                     switch (mode)
                     {
-                        case HeliconiaOptions.MapMode.Crazy:
-                            return HeliconiaTemperature.TG_SuperSuperHot;
-                        case HeliconiaOptions.MapMode.Insane:
+                        case HeliconiaOptions.MapMode.TabeYuriko:
                             return HeliconiaTemperature.TG_ExtremeHot;
                         default:
                             return temp;
@@ -160,10 +154,8 @@ namespace Heliconia
             switch (mode)
             {
                 case HeliconiaOptions.MapMode.Balanced:
-                    return HeliconiaTemperature.TG_SuperHot;
-                case HeliconiaOptions.MapMode.Crazy:
                     return HeliconiaTemperature.TG_SuperSuperHot;
-                case HeliconiaOptions.MapMode.Insane:
+                case HeliconiaOptions.MapMode.TabeYuriko:
                     return HeliconiaTemperature.TG_ExtremeHot;
                 default:
                     return temp;
@@ -174,14 +166,12 @@ namespace Heliconia
         {
             switch (mode)
             {
-                case HeliconiaOptions.MapMode.Balanced:
+                case HeliconiaOptions.MapMode.Easy:
                     return HeliconiaTemperature.TG_AbsoluteZero;
-                case HeliconiaOptions.MapMode.Crazy:
-                    return HeliconiaTemperature.TG_SuperSuperHot;
-                case HeliconiaOptions.MapMode.Insane:
+                case HeliconiaOptions.MapMode.TabeYuriko:
                     return HeliconiaTemperature.TG_ExtremeHot;
                 default:
-                    return temp;
+                    return HeliconiaTemperature.TG_SuperHot; // temp;
             }
         }
 
@@ -197,11 +187,12 @@ namespace Heliconia
             var world = worldGen.Settings?.world;
             if (world == null) return; // unknown world
 
+            var options = POptions.ReadSettings<HeliconiaOptions>();
+            HeliconiaOptions.MapMode mode = options != null ? options.Mode : HeliconiaOptions.MapMode.Balanced;
+
             var temp = __result; // override all temperatures
             if (temp >= Temperature.Range.ExtremelyCold && temp <= Temperature.Range.VeryHot)
             {
-                var options = POptions.ReadSettings<HeliconiaOptions>();
-                HeliconiaOptions.MapMode mode = options != null ? options.Mode : HeliconiaOptions.MapMode.Balanced;
                 var type = Heliconia.IdentifyWorld(world);
                 switch (type)
                 {

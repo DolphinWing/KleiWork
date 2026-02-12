@@ -20,6 +20,7 @@ subworldTemplateRules:
 features:
   - type: expansion1::features/Heliconia/CobaltPocket
   - type: features/Heliconia/MetalVein
+  - type: expansion1::features/Heliconia/RadSludge
 tags:
   - HeliconiaCore
   - AtDepths

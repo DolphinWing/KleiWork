@@ -67,11 +67,11 @@ namespace Heliconia
             Strings.Add("STRINGS.WORLDS.HELICONIAWARP.NAME", WARP_NAME);
             Strings.Add("STRINGS.WORLDS.HELICONIAWARP.DESCRIPTION", WARP_DESCRIPTION);
 
-            //var sprite = Assets.GetSprite("biomeIconSpace");
-            //if (sprite != null)
-            //{
-            //    Assets.Sprites.Add("biomeIconHeliconia", sprite);
-            //}
+            var sprite = Assets.GetSprite("biomeIconBarren");
+            if (sprite != null)
+            {
+                Assets.Sprites.Add("biomeIconHeliconia", sprite);
+            }
         }
 
         public static bool IsHcaCluster()

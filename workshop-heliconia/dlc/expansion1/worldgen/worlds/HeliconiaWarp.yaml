@@ -340,6 +340,18 @@ worldTemplateRules:
     listRule: TryOne
     priority: 150
     allowedCellsFilter:
-      - command: IntersectWith
-        zoneTypes: [ Radioactive, MagmaCore ]
-
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 1
+  - names:
+    - expansion1::poi/radioactive/uranium_centrifuge
+    listRule: GuaranteeOne
+    priority: 200
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 0

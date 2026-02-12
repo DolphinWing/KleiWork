@@ -103,7 +103,7 @@ TerrainBiomeLookupTable:
       bandSize: 0.30
     - content: Dirt
       bandSize: 0.05
-    - content: Sand
+    - content: Clay
       bandSize: 0.15
     - content: Steam
       bandSize: 0.1
@@ -119,11 +119,11 @@ TerrainBiomeLookupTable:
         massOverride: 200
     - content: ToxicSand
       bandSize: 0.15
-    - content: Sand
+    - content: Clay
       bandSize: 0.2
     - content: ToxicSand
       bandSize: 0.35
-    - content: Fertilizer
+    - content: Carbon
       bandSize: 0.05
     - content: Steam
       bandSize: 0.6

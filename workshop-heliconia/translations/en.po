@@ -102,13 +102,3 @@ msgstr "Crazy"
 msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_CRAZY_DESC"
 msgid "I bet you are crazy about this game."
 msgstr "I bet you are crazy about this game."
-
-#. Heliconia.HeliconiaOptions.MAP_MODE_INSANE
-msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_INSANE"
-msgid "Insane"
-msgstr "Insane"
-
-#. Heliconia.HeliconiaOptions.MAP_MODE_INSANE_DESC
-msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_INSANE_DESC"
-msgid "Only hardcore gamer can do this."
-msgstr "Only hardcore gamer can do this."

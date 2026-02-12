@@ -45,17 +45,14 @@ namespace Heliconia
 
         public enum MapMode
         {
-            [Option("Heliconia.HeliconiaOptions.MAP_MODE_BALANCED", "Heliconia.HeliconiaOptions.MAP_MODE_BALANCED_DESC")]
-            Balanced,
-
             [Option("Heliconia.HeliconiaOptions.MAP_MODE_EASY", "Heliconia.HeliconiaOptions.MAP_MODE_EASY_DESC")]
             Easy,
 
-            [Option("Heliconia.HeliconiaOptions.MAP_MODE_CRAZY", "Heliconia.HeliconiaOptions.MAP_MODE_CRAZY_DESC")]
-            Crazy,
+            [Option("Heliconia.HeliconiaOptions.MAP_MODE_BALANCED", "Heliconia.HeliconiaOptions.MAP_MODE_BALANCED_DESC")]
+            Balanced,
 
-			[Option("Heliconia.HeliconiaOptions.MAP_MODE_INSANE", "Heliconia.HeliconiaOptions.MAP_MODE_INSANE_DESC")]
-            Insane,
+            [Option("Heliconia.HeliconiaOptions.MAP_MODE_CRAZY", "Heliconia.HeliconiaOptions.MAP_MODE_CRAZY_DESC")]
+            TabeYuriko,
         }
 
         [Option("Heliconia.HeliconiaOptions.MAP_MODE", "Heliconia.HeliconiaOptions.MAP_MODE_DESC")]
