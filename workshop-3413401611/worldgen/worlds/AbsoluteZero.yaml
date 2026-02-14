@@ -234,7 +234,7 @@ worldTemplateRules:
         zoneTypes: [FrozenWastes]
   # Ocean
   - names:
-      - poi/poi_ocean_geyser_saltwater
+      - abz_ocean_geyser_saltwater
     listRule: TryOne
     priority: 100 
     allowedCellsFilter:
@@ -256,7 +256,12 @@ worldTemplateRules:
     priority: 100
     allowedCellsFilter:
       - command: Replace
-        zoneTypes: [OilField]
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 1
+      #- command: Replace
+      #  zoneTypes: [OilField, FrozenWastes]
   # Gravitas
   - names:
     - poi/poi_gravitas

@@ -269,7 +269,7 @@ worldTemplateRules:
         zoneTypes: [FrozenWastes]
   # Ocean
   - names:
-      - poi/poi_ocean_geyser_saltwater
+      - abz_ocean_geyser_saltwater
     listRule: TryOne
     priority: 50 
     allowedCellsFilter:
@@ -291,7 +291,7 @@ worldTemplateRules:
     priority: 100
     allowedCellsFilter:
       - command: Replace
-        zoneTypes: [OilField]
+        zoneTypes: [OilField, FrozenWastes]
   # Gravitas
   - names:
     - expansion1::poi/warp/sender
@@ -339,6 +339,7 @@ worldTemplateRules:
     - geysers/liquid_co2
     - geysers/slush_water
     - geysers/chlorine_gas
+    - geysers/chlorine_gas_cool
     - geysers/methane
     - expansion1::geysers/dirty_slush
     - expansion1::geysers/slush_salt_water
