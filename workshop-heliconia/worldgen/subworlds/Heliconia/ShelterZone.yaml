@@ -21,9 +21,4 @@ tags:
   - IgnoreCaveOverride
   - NoGlobalFeatureSpawning
   - HCA_Shelter
-subworldTemplateRules:
-  - names:
-      - bases/HcaShelter
-    listRule: GuaranteeOne
-    priority: 500
 zoneType: Forest

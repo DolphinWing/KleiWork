@@ -1,6 +1,6 @@
 name: Heliconia.Heliconia.WARP_NAME
 description: Heliconia.Heliconia.WARP_DESCRIPTION
-nameTables: [ SWAMP, RADIOACTIVE, VOLCANIC ]
+nameTables: [ SWAMP, RADIOACTIVE ]
 asteroidIcon: asteroid_vanilla_sandstone_warp_kanim
 
 worldTraitScale: 0.3
@@ -210,7 +210,7 @@ worldTemplateRules:
         tagcommand: DistanceFromTag
         tag: AtStart
         minDistance: 1
-        maxDistance: 2
+        maxDistance: 3
       - command: IntersectWith
         zoneTypes: [ Swamp, Rust, Forest ]
       - command: ExceptWith

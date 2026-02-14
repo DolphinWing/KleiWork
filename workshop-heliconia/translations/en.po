@@ -25,13 +25,13 @@ msgstr "Hell as hot as possible."
 
 #. Heliconia.Heliconia.WARP_NAME
 msgctxt "Heliconia.Heliconia.WARP_NAME"
-msgid "Heliconia Warp"
-msgstr "Radioactive Swamp Asteroid"
+msgid "Phlegethon"
+msgstr "Phlegethon"
 
 #. Heliconia.Heliconia.WARP_DESCRIPTION
 msgctxt "Heliconia.Heliconia.WARP_DESCRIPTION"
-msgid "Heliconia warp world"
-msgstr "A world with a radioactive core."
+msgid "The River of Eternal Scorch."
+msgstr "The River of Eternal Scorch.\n\n<smallcaps>A satellite born from the overflow of Hell. Its gravity bleeds thermal energy, ensuring the fire never ends.</smallcaps>"
 
 #. Heliconia.HeliconiaOptions.GiftedAreaTitle
 msgctxt "Heliconia.HeliconiaOptions.GiftedAreaTitle"

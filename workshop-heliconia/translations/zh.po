@@ -25,13 +25,13 @@ msgstr "極致高溫的煉獄"
 
 #. Heliconia.Heliconia.WARP_NAME
 msgctxt "Heliconia.Heliconia.WARP_NAME"
-msgid "Heliconia Warp"
-msgstr "輻射沼澤小行星"
+msgid "Phlegethon"
+msgstr "費雷格索"
 
 #. Heliconia.Heliconia.WARP_DESCRIPTION
 msgctxt "Heliconia.Heliconia.WARP_DESCRIPTION"
-msgid "Heliconia warp world"
-msgstr "一個廣闊、擁有放射性核心的世界。"
+msgid "The River of Eternal Scorch."
+msgstr "永恆焦灼之河。\n\n<smallcaps>從地獄溢流而出的衛星。其重力不斷榨取著熱能，確保這場烈焰永無止盡。</smallcaps>"
 
 #. Heliconia.HeliconiaOptions.GiftedAreaTitle
 msgctxt "Heliconia.HeliconiaOptions.GiftedAreaTitle"

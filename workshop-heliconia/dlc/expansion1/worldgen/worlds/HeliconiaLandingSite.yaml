@@ -1,0 +1,240 @@
+name: STRINGS.WORLDS.SWAMPYLANDINGSITE.NAME
+description: STRINGS.WORLDS.SWAMPYLANDINGSITE.DESCRIPTION
+nameTables: [ SWAMP, RADIOACTIVE ]
+asteroidIcon: asteroid_forest_rocket_kanim
+
+worldTraitScale: 0.20 # Adjust with worldSize. Traits are tuned to base game world sizes.
+worldsize:
+  X: 128
+  Y: 153
+layoutMethod: PowerTree
+
+defaultsOverrides:
+  data:
+    DrawWorldBorderForce: false
+    DrawWorldBorder: true
+    WorldBorderThickness: 5
+    WorldBorderRange: 2
+    OverworldDensityMin: 18
+    OverworldDensityMax: 18
+    OverworldAvoidRadius: 5
+    OverworldSampleBehaviour: PoissonDisk
+    poiPadding: 1
+
+startSubworldName: expansion1::subworlds/Heliconia/SwampyChasmStart
+startingBaseTemplate:  poi/poi_satellite_3_a
+startingBasePositionHorizontal:
+  min: 0.45
+  max: 0.55
+startingBasePositionVertical:
+  min: 0.65
+  max: 0.65
+
+worldTraitRules:
+  - min: 1
+    max: 2
+    forbiddenTags:
+      - StartWorldOnly
+      - GenericGeysers
+      - Oil
+      - LargeWorld
+      - Surface
+      - Crust
+      - Challenge
+      - Core # would reduce too much uranium
+      - StartChange
+
+subworldMixingRules:
+ - name: (Mixing4)
+   minCount: 1
+   maxCount: 2
+
+fixedTraits:
+  - sunlightLow
+  - cosmicRadiationVeryLow
+
+seasons:
+  - SpacedOutStyleRocketMeteorShowers
+  - SwampyLandingSiteMeteorShowers # unused
+  
+
+# List all the subworld files to load
+subworldFiles:
+  - name: expansion1::subworlds/Heliconia/SwampyChasmStart
+  - name: expansion1::subworlds/Heliconia/SwampMedium
+  - name: subworlds/space/Space
+  - name: subworlds/space/SpaceNoBorder
+  - name: expansion1::subworlds/Heliconia/CobaltCore
+    overridePower: 1.25
+  - name: subworlds/Heliconia/Sandstone
+    overridePower: 1.5
+    minCount: 2
+  - name: expansion1::subworlds/Heliconia/FrozenMedium
+    minCount: 2
+  - name: expansion1::subworlds/Heliconia/Radioactive
+    minCount: 3
+    priority: 1
+  - name: expansion1::subworlds/Heliconia/FrozenCore
+  - name: expansion1::subworlds/Heliconia/RadioactiveMedium
+  - name: expansion1::subworlds/Heliconia/RadioactiveFieldsMedium
+    minCount: 2
+    
+unknownCellsAllowedSubworlds: 
+  - tagcommand: Default
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/Heliconia/SwampyChasmStart
+      - expansion1::subworlds/Heliconia/SwampMedium
+      - subworlds/Heliconia/Sandstone
+      - (Mixing4)
+  - tagcommand: DistanceFromTag
+    tag: AtEdge
+    minDistance: 2
+    maxDistance: 2
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/Heliconia/FrozenMedium
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/Heliconia/Radioactive
+      - expansion1::subworlds/Heliconia/RadioactiveMedium
+      - expansion1::subworlds/Heliconia/RadioactiveFieldsMedium
+  - tagcommand: AtTag
+    tag: AtSurface
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - subworlds/space/SpaceNoBorder
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 2
+    maxDistance: 2
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/Heliconia/CobaltCore
+      - (Mixing4)
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 0
+    maxDistance: 0
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/Heliconia/FrozenCore
+      - expansion1::subworlds/Heliconia/FrozenMedium
+      - expansion1::subworlds/Heliconia/RadioactiveFieldsMedium
+
+worldTemplateRules:
+  # SwampyRenewableMetallic
+  - names:
+    - expansion1::poi/poi_molten_gold_volcano
+    - expansion1::poi/poi_molten_cobalt_volcano
+    listRule: GuaranteeAll
+    priority: 100
+    allowedCellsFilter:
+      - command: Replace
+        zoneTypes: [ Swamp, Radioactive ]
+      - command: IntersectWith
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 1
+        maxDistance: 3
+  - names: # Extra if there is space
+    - expansion1::poi/poi_molten_gold_volcano
+    - expansion1::poi/poi_molten_cobalt_volcano
+    listRule: TryAll
+    allowDuplicates: true
+    priority: 100
+    allowedCellsFilter:
+      - command: Replace
+        zoneTypes: [ Radioactive, MagmaCore ]
+      - command: IntersectWith
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 1
+        maxDistance: 3
+  # Frozen Uranium
+  - names:
+      - expansion1::poi/radioactive/uranium_fields_liquid_co2_geyser
+      - expansion1::poi/radioactive/uranium_fields_liquid_co2_geyser_b
+      - expansion1::poi/radioactive/uranium_fields_liquid_co2_geyser_c
+    listRule: GuaranteeSomeTryMore
+    someCount: 1
+    moreCount: 1
+    priority: 100
+    allowExtremeTemperatureOverlap: true # This is acceptable
+    allowedCellsFilter:
+      - command: Replace
+        zoneTypes: [Radioactive]
+      - command: IntersectWith
+        subworldNames:
+          - expansion1::subworlds/Heliconia/RadioactiveMedium
+          - expansion1::subworlds/Heliconia/RadioactiveFieldsMedium
+  # Boons
+  - names:
+    - expansion1::poi/boon/bedroom
+    - expansion1::poi/boon/washroom
+    - expansion1::poi/boon/power
+    - expansion1::poi/boon/kitchen
+    - expansion1::poi/boon/well
+    - expansion1::poi/boon/farm
+    listRule: TrySome
+    someCount: 2
+    priority: 50
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 0
+        maxDistance: 5
+      - command: IntersectWith
+        zoneTypes: [ Swamp, Rust ]
+      - command: ExceptWith
+        subworldNames:
+          - expansion1::subworlds/Heliconia/SwampyChasmStart
+          - expansion1::subworlds/Heliconia/SwampMedium
+  # Curated Geysers
+  - names:
+    - geysers/chlorine_gas
+    - geysers/methane
+    - geysers/hot_po2
+    - geysers/slimy_po2
+    - geysers/small_volcano
+    - geysers/hot_hydrogen
+    - geysers/filthy_water
+    - geysers/molten_copper
+    listRule: TryOne
+    times: 3
+    allowDuplicates: true
+    priority: 10
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 2
+        maxDistance: 10
+      - command: ExceptWith
+        zoneTypes: [ Space ]        
+      - command: ExceptWith
+        subworldNames:
+          - expansion1::subworlds/Heliconia/SwampyChasmStart
+          - expansion1::subworlds/Heliconia/SwampMedium
+  - names:
+    - expansion1::poi/radioactive/uranium_centrifuge
+    listRule: GuaranteeOne
+    priority: 200
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 0

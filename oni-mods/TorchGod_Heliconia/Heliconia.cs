@@ -29,12 +29,12 @@ namespace Heliconia
     {
         public static LocString NAME = (LocString)"Heliconia";
         public static LocString MOD_DESC = (LocString)"Hell as hot as possible.";
-        public static LocString DESCRIPTION = (LocString)"Hell as hot as possible.\n\n<smallcaps>Duplicants MUST work to DEATH to make the colony thrive again.</smallcaps>";
+        public static LocString DESCRIPTION = (LocString)"Hell as hot as possible.";
         public static LocString BIOME_DESC = (LocString)"Hell as hot as possible.";
         public static LocString UTILITY_DESC = (LocString)"Hell as hot as possible.";
 
-        public static LocString WARP_NAME = (LocString)"Heliconia Warp";
-        public static LocString WARP_DESCRIPTION = (LocString)"Heliconia warp world";
+        public static LocString WARP_NAME = (LocString)"Phlegethon";
+        public static LocString WARP_DESCRIPTION = (LocString)"The River of Eternal Scorch.";
 
         public override void OnLoad(Harmony harmony)
         {

@@ -115,16 +115,21 @@ ONI world generation is a multi-layered procedural system based on **Noise Field
 
 ### 6.1 Template Placement: Global vs. Local
 *   **The Problem**: Using global `worldTemplateRules` (in `worlds/`) for critical structures (like Start Shelters) often fails in crowded rings due to lack of valid contiguous space or noise fragmentation.
-*   **The Fix**: Use **`subworldTemplateRules`** inside a dedicated Subworld file.
-    *   Create a "Shelter Zone" subworld with high `density` and moderate `avoidRadius`.
-    *   Define the template inside the subworld's YAML:
+*   **The Fix**: Use **`tag`** inside a dedicated Subworld file.
+    *   Create a "Shelter Zone" subworld with high `density` and moderate `avoidRadius`. Define a special tag `HCA_Shelter` for this subworld.
+    *   Define the poi inside the world's YAML :
         ```yaml
-        subworldTemplateRules:
-          - names: [ "expansion1::bases/MyShelter" ]
-            listRule: GuaranteeOne
-            priority: 500
+  - names:
+      - expansion1::bases/HcaShelterSO
+    listRule: GuaranteeOne
+    ruleId: hca_shelter
+    priority: 500
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: AtTag
+        tag: HCA_Shelter
         ```
-    *   This guarantees placement because the subworld effectively "reserves" the space specifically for the template during generation.
+    *   This guarantees placement because the subworld effectively "reserves" the space specifically for the template during generation. (Put the POI directly in the dedicated subworld.)
 
 ### 6.2 The `centralFeature` Limitation
 *   **Limitation**: `centralFeature` expects a `Feature` type geometry definition, NOT a direct Template path. While some versions support `type: Template`, it is less reliable than `subworldTemplateRules`.

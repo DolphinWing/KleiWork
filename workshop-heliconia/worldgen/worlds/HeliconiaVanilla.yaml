@@ -18,8 +18,8 @@ startingBasePositionHorizontal:
   min: 0.5
   max: 0.5
 startingBasePositionVertical:
-  min: 0.3
-  max: 0.4
+  min: 0.35
+  max: 0.40
 
 worldTraitRules:
   - min: 0
@@ -62,6 +62,7 @@ subworldFiles:
     #minCount: 1
   - name: subworlds/Heliconia/ForestMiniOxy
     #minCount: 1
+  - name: subworlds/space/Space
   - name: subworlds/space/SpaceNoBorder
   - name: subworlds/Heliconia/IronSurface
   - name: subworlds/Heliconia/IronCore
@@ -71,10 +72,10 @@ subworldFiles:
     minCount: 3
 
 fixedTraits:
-  - sunlightVeryVeryLow
-  - cosmicRadiationVeryLow
+  - largeImpactorFragmentsAllowed
 
 seasons:
+  - LargeImpactor
   - ClassicStyleStartMeteorShowers
 
 # Specify where subworlds can spawn. These rules are processed in order and their effects are cumulative.
@@ -179,11 +180,18 @@ unknownCellsAllowedSubworlds:
     tag: AtSurface
     command: Replace
     subworldNames:
-      - subworlds/space/SpaceNoBorder
+      - subworlds/space/Space
   - tagcommand: DistanceFromTag
     tag: AtSurface
     minDistance: 1
     maxDistance: 1
+    command: Replace
+    subworldNames:
+      - subworlds/space/SpaceNoBorder
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 2
+    maxDistance: 2
     command: Replace
     subworldNames:
       - subworlds/Heliconia/IronSurface
@@ -277,6 +285,24 @@ worldTemplateRules:
         tagcommand: NotAtTag
         tag: NoGlobalFeatureSpawning
 
+  # Shelter
+  - names:
+      - bases/HcaShelter
+    listRule: GuaranteeOne
+    ruleId: hca_shelter
+    priority: 500
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 0
+        maxDistance: 1
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 5
+
   # Critter Caves
   - names:
     - critters/tg_bean_sleat
@@ -306,10 +332,24 @@ worldTemplateRules:
         tagcommand: DistanceFromTag
         tag: AtDepths
         minDistance: 0
-        maxDistance: 3
+        maxDistance: 2
       - command: ExceptWith
         tagcommand: DistanceFromTag
         tag: AtSurface
         minDistance: 0
-        maxDistance: 3
+        maxDistance: 2
 
+modifyLayoutTags:
+  - addTags:
+      - NoGlobalFeatureSpawning
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 5
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtEdge
+        minDistance: 0
+        maxDistance: 1

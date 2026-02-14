@@ -4,7 +4,7 @@ pdWeight: 1.5
 density:
   min: 10
   max: 20
-avoidRadius: 20.0
+avoidRadius: 24.0
 doAvoidPoints: false
 dontRelaxChildren: true
 sampleBehaviour: PoissonDisk
@@ -22,9 +22,4 @@ tags:
   - IgnoreCaveOverride
   - NoGlobalFeatureSpawning
   - HCA_Shelter
-subworldTemplateRules:
-  - names:
-      - expansion1::bases/HcaShelterSO
-    listRule: GuaranteeOne
-    priority: 500
 zoneType: Forest

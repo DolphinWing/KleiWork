@@ -4,8 +4,8 @@ pdWeight: 1
 density:
   min: 10
   max: 20
-avoidRadius: 20.0
-extraBiomeChildren: 4
+avoidRadius: 15.0
+#extraBiomeChildren: 4
 minChildCount: 4
 doAvoidPoints: false
 dontRelaxChildren: true
@@ -18,12 +18,8 @@ biomes:
       - StartWorld
       - EvilFlower
       - EvilFlowerSeed
-      - PrickleGrass
-      - PrickleGrassSeed
       - BasicSingleHarvestPlantSeed
       - BasicSingleHarvestPlant
-      - BasicForagePlant
-      - BasicForagePlantPlanted
       - Hatch
   - name: biomes/Heliconia/Forest_BasicOxy_Hca
     weight: 2
@@ -45,8 +41,8 @@ biomes:
       - BasicSingleHarvestPlantSeed
       - ForestForagePlantPlanted
       - LightBug
-      - LeafyPlant
-      - LeafyPlantSeed
+      - EvilFlower
+      - EvilFlowerSeed
       - ForestForagePlant
   - name: biomes/Heliconia/Forest_Metal_Start
     weight: 2
@@ -63,6 +59,6 @@ tags:
 centralFeature:
   type: features/generic/StartLocation
 features:
-  - type: features/forest/SmallLake
+#  - type: features/forest/SmallLake
   - type: features/forest/OxyfernCave
 zoneType: Forest

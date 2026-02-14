@@ -38,6 +38,11 @@ namespace Heliconia
             {
                 foreach (var rule in world.worldTemplateRules)
                 {
+                    if (rule.ruleId?.StartsWith("hca_shelter") == true)
+                    {
+                        if (options.Shelter == false)
+                            removing.Add(rule);
+                    }
                     if (rule.ruleId?.StartsWith("hca_critter") == true)
                     {
                         PUtil.LogDebug("... checking " + rule.ruleId);
@@ -74,22 +79,22 @@ namespace Heliconia
                 }
             }
 
-            // Remove subworldTemplateRules from subworlds tagged with HCA_Shelter if option is disabled
-            if (options.Shelter == false && __instance.subworlds != null)
-            {
-                foreach (var pair in __instance.subworlds)
-                {
-                    var subworld = pair.Value;
-                    if (subworld.tags != null && subworld.tags.Contains("HCA_Shelter"))
-                    {
-                        if (subworld.subworldTemplateRules != null)
-                        {
-                            PUtil.LogDebug("... clearing subworldTemplateRules from tagged subworld " + subworld.name);
-                            subworld.subworldTemplateRules.Clear();
-                        }
-                    }
-                }
-            }
+            //// Remove subworldTemplateRules from subworlds tagged with HCA_Shelter if option is disabled
+            //if (options.Shelter == false && __instance.subworlds != null)
+            //{
+            //    foreach (var pair in __instance.subworlds)
+            //    {
+            //        var subworld = pair.Value;
+            //        if (subworld.tags != null && subworld.tags.Contains("HCA_Shelter"))
+            //        {
+            //            if (subworld.subworldTemplateRules != null)
+            //            {
+            //                PUtil.LogDebug("... clearing subworldTemplateRules from tagged subworld " + subworld.name);
+            //                subworld.subworldTemplateRules.Clear();
+            //            }
+            //        }
+            //    }
+            //}
         }
     }
 }
