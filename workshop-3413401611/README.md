@@ -19,7 +19,7 @@ The world is silent. Laws of thermodynamics have never been broken, but have bee
 *Retrieving transmission logs from the Tele-Coordinate functionality.* *Weak connection due to superconductive interference.*
 
 ### 🎙️ Recovered Audio Transcript @0x00_FROZEN
-```yaml
+```
 "Sir, the contact with ABZ Printing Pod has established."
 "...Execute."
 "But as predicted, the desolated land had lost all its heat… with its surface temperature approaching absolute zero."
@@ -28,7 +28,7 @@ The world is silent. Laws of thermodynamics have never been broken, but have bee
 "... Is there any chance of their survival?"
 "..."
 "... Life finds a way..."
-
+```
 ---
 
 ## 🌡️ Current State: Thermodynamics Denied
@@ -87,7 +87,7 @@ They also support **Frosty Planet Pack, Bionic Booster Pack, and Prehistoric Pla
 *正在調閱遠程座標功能的傳輸日誌。由於超導干擾，連線極不穩定。*
 
 ### 🎙️ 已修復語音記錄 @0x00_FROZEN
-```yaml
+```
 「長官，已成功與 ABZ 列印設備取得聯繫」
 「...執行」
 「但就如同預測，這黯淡天地已經失去了所有熱...地表溫度接近絕對零度。」
@@ -96,7 +96,7 @@ They also support **Frosty Planet Pack, Bionic Booster Pack, and Prehistoric Pla
 「...他們有倖存的可能性嗎？」
 「...」 
 「...生命會自行找到出路...」
-
+```
 ---
 
 ## 🌡️ 當前現狀：熱量恆寂
