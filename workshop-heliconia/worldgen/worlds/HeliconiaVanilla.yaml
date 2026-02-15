@@ -288,8 +288,9 @@ worldTemplateRules:
   # Shelter
   - names:
       - bases/HcaShelter
+      - bases/HcaShelter_t
     listRule: GuaranteeOne
-    ruleId: hca_shelter
+    ruleId: hca_shelter_base
     priority: 500
     allowedCellsFilter:
       - command: Replace

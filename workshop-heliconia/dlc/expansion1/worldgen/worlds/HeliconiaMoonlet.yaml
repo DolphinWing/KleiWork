@@ -71,8 +71,6 @@ subworldFiles:
   - name: expansion1::subworlds/Heliconia/Swamp
   - name: expansion1::subworlds/Heliconia/Wasteland
   - name: subworlds/Heliconia/IronSurface
-  - name: subworlds/Heliconia/CopperCore
-  - name: subworlds/Heliconia/GoldCore
   - name: subworlds/Heliconia/MoltenGlassCore
   - name: expansion1::subworlds/Heliconia/CobaltCore
   - name: expansion1::subworlds/Heliconia/AluminumCore
@@ -262,8 +260,9 @@ worldTemplateRules:
   # Shelter
   - names:
       - expansion1::bases/HcaShelterSO
+      - expansion1::bases/HcaShelterSO_t
     listRule: GuaranteeOne
-    ruleId: hca_shelter
+    ruleId: hca_shelter_so
     priority: 500
     allowedCellsFilter:
       - command: Replace

@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Heliconia for Oxygen Not Included")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("DolphinWing")]
-[assembly: AssemblyProduct("Heliconia")]
+[assembly: AssemblyProduct("Heliconia for Oxygen Not Included")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -30,5 +30,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2026.2.14.0")]
-[assembly: AssemblyFileVersion("2026.2.14.0")]
+[assembly: AssemblyVersion("2026.2.15.0")]
+[assembly: AssemblyFileVersion("2026.2.15.0")]

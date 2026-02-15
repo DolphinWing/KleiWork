@@ -22,7 +22,7 @@ namespace Heliconia
             // PUtil.LogDebug(world.name + ": " + type);
 
             if (Heliconia.IsHcaWorld(world) == false) return; // no need to check further
-            //PUtil.LogDebug("Checking for " + world.name);
+            PUtil.LogDebug("Checking for " + world.name);
 
             var dlcMixing = CustomGameSettings.Instance.GetCurrentDlcMixingIds();
             var frosty = dlcMixing.Contains(DlcManager.DLC2_ID);
@@ -41,13 +41,27 @@ namespace Heliconia
                     if (rule.ruleId?.StartsWith("hca_shelter") == true)
                     {
                         if (options.Shelter == false)
+                        {
                             removing.Add(rule);
+                        }
+                        else if (options.Mode == HeliconiaOptions.MapMode.TabeYuriko)
+                        {
+                            rule.names.Remove("expansion1::bases/HcaShelterSO"); // no ration version
+                            rule.names.Remove("bases/HcaShelter"); // no ration version
+                        }
+                        else
+                        {
+                            rule.names.Remove("expansion1::bases/HcaShelterSO_t"); // extra ration version
+                            rule.names.Remove("bases/HcaShelter_t"); // extra ration version
+                        }
                     }
                     if (rule.ruleId?.StartsWith("hca_critter") == true)
                     {
                         PUtil.LogDebug("... checking " + rule.ruleId);
                         if (options.Critter == false)
+                        {
                             removing.Add(rule);
+                        }
                         else if (rule.ruleId?.StartsWith("hca_critters_base") == true) // only in base asteroid
                         {
                             if (frosty)
@@ -76,6 +90,7 @@ namespace Heliconia
                 foreach (var rule in removing)
                 {
                     world.worldTemplateRules?.Remove(rule);
+                    PUtil.LogDebug("Removing " + rule.ruleId);
                 }
             }
 

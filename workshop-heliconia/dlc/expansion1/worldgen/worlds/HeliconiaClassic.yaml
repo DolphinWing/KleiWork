@@ -360,8 +360,9 @@ worldTemplateRules:
   # Shelter
   - names:
       - expansion1::bases/HcaShelterSO
+      - expansion1::bases/HcaShelterSO_t
     listRule: GuaranteeOne
-    ruleId: hca_shelter
+    ruleId: hca_shelter_so
     priority: 500
     allowedCellsFilter:
       - command: Replace

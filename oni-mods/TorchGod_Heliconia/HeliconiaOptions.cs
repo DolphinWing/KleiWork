@@ -40,9 +40,6 @@ namespace Heliconia
         public static LocString MAP_MODE_CRAZY = (LocString)"Crazy";
         public static LocString MAP_MODE_CRAZY_DESC = (LocString)"I bet you are crazy about this game.";
 
-        public static LocString MAP_MODE_INSANE = (LocString)"Insane";
-        public static LocString MAP_MODE_INSANE_DESC = (LocString)"Only hardcore gamer can do this.";
-
         public enum MapMode
         {
             [Option("Heliconia.HeliconiaOptions.MAP_MODE_EASY", "Heliconia.HeliconiaOptions.MAP_MODE_EASY_DESC")]
