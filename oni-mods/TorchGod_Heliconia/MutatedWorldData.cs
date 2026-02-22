@@ -46,13 +46,21 @@ namespace Heliconia
                         }
                         else if (options.Mode == HeliconiaOptions.MapMode.TabeYuriko)
                         {
-                            rule.names.Remove("expansion1::bases/HcaShelterSO"); // no ration version
-                            rule.names.Remove("bases/HcaShelter"); // no ration version
+                            var r = false;
+                            r |= rule.names.Remove("expansion1::bases/HcaShelterSoR20"); // low ration version
+                            r |= rule.names.Remove("expansion1::bases/HcaShelterSoL20"); // low ration version
+                            r |= rule.names.Remove("bases/HcaShelterR20"); // low ration version
+                            r |= rule.names.Remove("bases/HcaShelterL20"); // low ration version
+                            PUtil.LogDebug("... Removing low ration support. RESPECT! " + r);
                         }
                         else
                         {
-                            rule.names.Remove("expansion1::bases/HcaShelterSO_t"); // extra ration version
-                            rule.names.Remove("bases/HcaShelter_t"); // extra ration version
+                            var r = false;
+                            r |= rule.names.Remove("expansion1::bases/HcaShelterSoR80"); // extra ration version
+                            r |= rule.names.Remove("expansion1::bases/HcaShelterSoL80"); // extra ration version
+                            r |= rule.names.Remove("bases/HcaShelterR80"); // extra ration version
+                            r |= rule.names.Remove("bases/HcaShelterL80"); // extra ration version
+                            PUtil.LogDebug("... Removing high ration support. " + r);
                         }
                     }
                     if (rule.ruleId?.StartsWith("hca_critter") == true)
@@ -93,23 +101,6 @@ namespace Heliconia
                     PUtil.LogDebug("Removing " + rule.ruleId);
                 }
             }
-
-            //// Remove subworldTemplateRules from subworlds tagged with HCA_Shelter if option is disabled
-            //if (options.Shelter == false && __instance.subworlds != null)
-            //{
-            //    foreach (var pair in __instance.subworlds)
-            //    {
-            //        var subworld = pair.Value;
-            //        if (subworld.tags != null && subworld.tags.Contains("HCA_Shelter"))
-            //        {
-            //            if (subworld.subworldTemplateRules != null)
-            //            {
-            //                PUtil.LogDebug("... clearing subworldTemplateRules from tagged subworld " + subworld.name);
-            //                subworld.subworldTemplateRules.Clear();
-            //            }
-            //        }
-            //    }
-            //}
         }
     }
 }

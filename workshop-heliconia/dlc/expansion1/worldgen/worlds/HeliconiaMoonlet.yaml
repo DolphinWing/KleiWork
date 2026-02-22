@@ -237,7 +237,7 @@ worldTemplateRules:
     #- geysers/hot_steam
     - geysers/hot_co2
     - geysers/hot_hydrogen
-    #- geysers/hot_po2
+    - geysers/hot_po2
     - geysers/big_volcano
     - geysers/small_volcano
     listRule: TryOne
@@ -259,8 +259,10 @@ worldTemplateRules:
 
   # Shelter
   - names:
-      - expansion1::bases/HcaShelterSO
-      - expansion1::bases/HcaShelterSO_t
+      - expansion1::bases/HcaShelterSoR20
+      - expansion1::bases/HcaShelterSoL20
+      - expansion1::bases/HcaShelterSoR80
+      - expansion1::bases/HcaShelterSoL80
     listRule: GuaranteeOne
     ruleId: hca_shelter_so
     priority: 500
@@ -298,7 +300,7 @@ worldTemplateRules:
         tagcommand: DistanceFromTag
         tag: AtDepths
         minDistance: 0
-        maxDistance: 1
+        maxDistance: 0
       - command: ExceptWith
         tagcommand: DistanceFromTag
         tag: AtSurface

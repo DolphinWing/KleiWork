@@ -50,8 +50,8 @@ startingBasePositionHorizontal:
   min: 0.4
   max: 0.6
 startingBasePositionVertical:
-  min: 0.40
-  max: 0.45
+  min: 0.38
+  max: 0.42
 
 # List all the subworld files to load
 subworldFiles:
@@ -62,7 +62,8 @@ subworldFiles:
   - name: subworlds/space/Space
   - name: expansion1::subworlds/Heliconia/SpaceWithSaltyBorder
   - name: expansion1::subworlds/Heliconia/AluminumCore
-  - name: expansion1::subworlds/Heliconia/RadioactiveCore
+    maxCount: 2
+  #- name: expansion1::subworlds/Heliconia/RadioactiveCore
   - name: expansion1::subworlds/Heliconia/OilSparse
   - name: expansion1::subworlds/Heliconia/OilWells
   - name: expansion1::subworlds/Heliconia/RustMedium
@@ -128,7 +129,7 @@ unknownCellsAllowedSubworlds:
     subworldNames:
       - expansion1::subworlds/Heliconia/OilWells
       - expansion1::subworlds/Heliconia/AluminumCore
-      - expansion1::subworlds/Heliconia/RadioactiveCore
+      #- expansion1::subworlds/Heliconia/RadioactiveCore
 
 worldTemplateRules:
   # Ocean
@@ -182,7 +183,7 @@ worldTemplateRules:
         tagcommand: DistanceFromTag
         tag: AtDepths
         minDistance: 0
-        maxDistance: 1
+        maxDistance: 0
   # Boons
   - names:
     - expansion1::poi/boon/bedroom
@@ -202,10 +203,10 @@ worldTemplateRules:
         maxDistance: 3
       - command: IntersectWith
         zoneTypes: [ Swamp, Ocean, Rust ]
-  # Guaranteed Sulfur geyser
+  # Sulfur geyser
   - names:
     - expansion1::geysers/liquid_sulfur
-    listRule: GuaranteeAll
+    listRule: TryAll
     priority: 200
     allowedCellsFilter:
       - command: Replace

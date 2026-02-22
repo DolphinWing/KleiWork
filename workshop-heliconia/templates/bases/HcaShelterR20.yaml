@@ -2056,6 +2056,17 @@ buildings:
   location_y: -1
   element: IgneousRock
   temperature: 293.149994
+- id: Refrigerator
+  location_x: -7
+  location_y: 1
+  element: SandStone
+  temperature: 293.149994
+  storage:
+  - id: FieldRation
+    element: Creature
+    units: 20
+    temperature: 295
+    rottable: {}
 pickupables:
 - id: Squirrel
   location_x: -1

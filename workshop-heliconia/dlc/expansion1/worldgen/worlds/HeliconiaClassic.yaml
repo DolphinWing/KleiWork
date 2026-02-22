@@ -359,8 +359,10 @@ worldTemplateRules:
 
   # Shelter
   - names:
-      - expansion1::bases/HcaShelterSO
-      - expansion1::bases/HcaShelterSO_t
+      - expansion1::bases/HcaShelterSoR20
+      - expansion1::bases/HcaShelterSoL20
+      - expansion1::bases/HcaShelterSoR80
+      - expansion1::bases/HcaShelterSoL80
     listRule: GuaranteeOne
     ruleId: hca_shelter_so
     priority: 500
@@ -399,12 +401,12 @@ worldTemplateRules:
         tagcommand: DistanceFromTag
         tag: AtDepths
         minDistance: 0
-        maxDistance: 2
+        maxDistance: 1
       - command: ExceptWith
         tagcommand: DistanceFromTag
         tag: AtSurface
         minDistance: 0
-        maxDistance: 2
+        maxDistance: 1
 
 modifyLayoutTags:
   - addTags:

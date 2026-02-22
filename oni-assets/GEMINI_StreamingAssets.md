@@ -194,3 +194,16 @@ ONI world generation is a multi-layered procedural system based on **Noise Field
     *   `buildings`: 用於建築物。
     *   **`otherEntities`**: 所有植物 (EvilFlower)、動物、間歇泉或特殊物件必須放在此列表中，且需補齊 `units`, `rottable: {}`, `amounts: []`, `storage: []` 等屬性。
 
+### 6.13 UtilityConnections Bitmask (電線/管路連通邏輯)
+*   **核心發現**: ONI 的連通位元遮罩與標準 Unity 定義不同。
+*   **映射表**:
+    *   **Bit 1**: Left (左)
+    *   **Bit 2**: Right (右)
+    *   **Bit 4**: Up (上)
+    *   **Bit 8**: Down (下)
+*   **鏡像處理策略**:
+    *   **水平對稱**: 互換 Bit 1 與 Bit 2。
+    *   **垂直對稱**: 互換 Bit 4 與 Bit 8。
+*   **建築物座標補償**: 由於錨點在左下角，鏡像時需依建築寬度 $W$ 進行補償。
+    *   公式: $X_{new} = 2 - X_{old} - W$。
+

@@ -287,8 +287,10 @@ worldTemplateRules:
 
   # Shelter
   - names:
-      - bases/HcaShelter
-      - bases/HcaShelter_t
+      - bases/HcaShelterR20
+      - bases/HcaShelterR80
+      - bases/HcaShelterL20
+      - bases/HcaShelterL80
     listRule: GuaranteeOne
     ruleId: hca_shelter_base
     priority: 500
