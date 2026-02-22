@@ -5888,7 +5888,7 @@ msgstr "複製人駕駛<b>技能</b>： +{0} 速度提升"
 #. STRINGS.BUILDING.STATUSITEMS.INFLIGHTPILOTED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.INFLIGHTPILOTED.NAME"
 msgid "Piloted"
-msgstr "駕駛"
+msgstr "駕駛中"
 
 #. STRINGS.BUILDING.STATUSITEMS.INFLIGHTPILOTED.ROBO_TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.INFLIGHTPILOTED.ROBO_TOOLTIP"
@@ -5898,12 +5898,12 @@ msgstr "由一個<style=\"KKeyword\">自動飛行員</style>駕駛"
 #. STRINGS.BUILDING.STATUSITEMS.INFLIGHTSUPERPILOT.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.INFLIGHTSUPERPILOT.NAME"
 msgid "Multi-Piloted"
-msgstr "多人駕駛"
+msgstr "協同駕駛"
 
 #. STRINGS.BUILDING.STATUSITEMS.INFLIGHTSUPERPILOT.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.INFLIGHTSUPERPILOT.TOOLTIP"
 msgid "This rocket is being piloted by a Duplicant and a <style=\"KKeyword\">Robo-Pilot</style>\n    • Multi-Piloted: +{1} speed boost\n    • Duplicant pilot skill: +{0} speed boost"
-msgstr "這艘火箭被一名複製人和一個<style=\"KKeyword\">自動飛行員</style>駕駛\n    • 多人駕駛： +{1} 速度提升\n    • 複製人駕駛技能： +{0} 速度提升"
+msgstr "這艘火箭被一名複製人和一個<style=\"KKeyword\">自動飛行員</style>駕駛\n    • 協同駕駛： +{1} 速度提升\n    • 複製人駕駛技能： +{0} 速度提升"
 
 #. STRINGS.BUILDING.STATUSITEMS.INFLIGHTUNPILOTED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.INFLIGHTUNPILOTED.NAME"
@@ -5913,7 +5913,7 @@ msgstr "無人駕駛"
 #. STRINGS.BUILDING.STATUSITEMS.INFLIGHTUNPILOTED.ROBO_PILOT_ONLY_TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.INFLIGHTUNPILOTED.ROBO_PILOT_ONLY_TOOLTIP"
 msgid "<style=\"KKeyword\">Robo-Pilot</style> has run out of <style=\"KKeyword\">Data Banks</style>\n\nThis rocket is stranded"
-msgstr "<style=\"KKeyword\">自動飛行員</style>已經用盡了<style=\"KKeyword\">行動電源</style>\n\n這艘火箭擱淺了"
+msgstr "<style=\"KKeyword\">自動飛行員</style>已經用盡了<style=\"KKeyword\">資料磁片</style>\n\n這艘火箭擱淺了"
 
 #. STRINGS.BUILDING.STATUSITEMS.INFLIGHTUNPILOTED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.INFLIGHTUNPILOTED.TOOLTIP"
