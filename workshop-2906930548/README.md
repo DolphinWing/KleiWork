@@ -18,15 +18,15 @@
 >    5. 開啟遊戲，重新選取翻譯。
 
 這裡是正體中文的翻譯模組，在作者還在努力此遊戲時，會嘗試追上一直持續更新的 Klei。
-所有內容文字以 Klei 簡體中文文檔為參考，並以 [Oxygen Not Included Wiki](https://oxygennotincluded.wiki.gg/wiki/Oxygen_Not_Included_Wiki) 
-和 [缺氧 Wiki](https://oxygennotincluded.wiki.gg/zh/wiki/) ，以及一些自己覺得適當的修改。
+所有內容文字以 Klei 英文模板文檔為基準，並使用 Google Gemini 輔助，同時參考 [Oxygen Not Included Wiki](https://oxygennotincluded.wiki.gg/wiki/Oxygen_Not_Included_Wiki) 
+和 [缺氧 Wiki](https://oxygennotincluded.wiki.gg/zh/wiki/) 。
 
 需要特別感謝幾位前輩過去所做的翻譯文本，有了這些作為參考依據，讓我有著如此良好的基礎。
 包括 [Camel 繁體中文](https://steamcommunity.com/sharedfiles/filedetails/?id=2679329370) 
-及 古靈精怪的 [繁體中文語言包](https://steamcommunity.com/sharedfiles/filedetails/?id=929305589) ，讓我可以借用他們以往的努力，再加上自己的潤色而成。
-將我的成果分享出來，假如有人想要提供其他協助，歡迎大家一起加入缺氧家庭。
+及 **古靈精怪** 的 [繁體中文語言包](https://steamcommunity.com/sharedfiles/filedetails/?id=929305589) ，讓我可以借用他們以往的努力，再加上自己的潤色而成。
+同時將我的成果分享出來，假如有人想要提供其他協助，歡迎大家一起加入缺氧家庭。
 
-請記得需要一併安裝「[字型模組。新](https://steamcommunity.com/sharedfiles/filedetails/?id=3046440992)」才能正確顯示所有文字。
+請記得 **需要一併安裝**「[字型模組。新](https://steamcommunity.com/sharedfiles/filedetails/?id=3046440992)」才能正確顯示所有文字。
 因為原本遊戲內的內建字型只能顯示簡體中文。當沒有對應的正體中文字可以顯示的時候，就會使用簡體字型顯示或變成白豆腐。
 該模組會載入「[粉圓體](https://justfont.com/huninn/)」 作為遊戲中的預設字體，這樣便能正確顯示正體中文字。
 如果安裝之後還是無法解決，請再回報給我。
@@ -43,5 +43,4 @@
 - [史前行星包](https://store.steampowered.com/app/3655420/) (Prehistoric Planet Pack)
 
 #### 不相容於
-- DGSM / CGSM / WGSM
-- Visual Fixes N Tweaks
+- DGSM / CGSM / WGSM by Ony

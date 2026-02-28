@@ -5998,7 +5998,7 @@ msgstr "<link=\"WOOD\">木材</link>不足"
 #. STRINGS.BUILDING.STATUSITEMS.KETTLEINSUFICIENTFUEL.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.KETTLEINSUFICIENTFUEL.TOOLTIP"
 msgid "Colder <link=\"ICE\">Ice</link> increases the amount of <link=\"WOODLOG\">Wood</link> required for melting\n\nCurrent requirement: minimum {0} <link=\"WOODLOG\">Wood</link>"
-msgstr "更冷的<link=\"ICE\">冰</link>增加了融化所需的<link=\"WOODLOG\">木材</link>量\n\n當前需求：至少{0}<link=\"WOODLOG\">木材</link>"
+msgstr "溫度較低的<link=\"ICE\">冰</link>會增加融化所需的<link=\"WOODLOG\">木材</link>量\n\n目前需求：至少 {0}<link=\"WOODLOG\">木材</link>"
 
 #. STRINGS.BUILDING.STATUSITEMS.KETTLEINSUFICIENTLIQUIDSPACE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.KETTLEINSUFICIENTLIQUIDSPACE.NAME"
@@ -6008,7 +6008,7 @@ msgstr "需要清空"
 #. STRINGS.BUILDING.STATUSITEMS.KETTLEINSUFICIENTLIQUIDSPACE.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.KETTLEINSUFICIENTLIQUIDSPACE.TOOLTIP"
 msgid "This <link=\"ICEKETTLE\">Ice Liquefier</link> needs to be emptied of <link=\"WATER\">Water</link> in order to resume function\n\nIt requires at least {2} of storage space in order to function properly\n\nCurrently storing {0} of a maximum {1} <link=\"WATER\">Water</link>"
-msgstr "這個<link=\"ICEKETTLE\">融冰壺</link>需要清空<link=\"WATER\">水</link>才能恢復運作\n\n需要至少 {2}儲存空間才能正常運作\n\n當前儲存了 {0}<link=\"WATER\">水</link>，至多 {1}"
+msgstr "這台<link=\"ICEKETTLE\">融冰壺</link>需要清空內部的<link=\"WATER\">水</link>才能恢復運作\n\n需要至少 {2}儲存空間才能正常運作\n\n目前儲存了 {0}，最大容量為 {1}<link=\"WATER\">水</link>"
 
 #. STRINGS.BUILDING.STATUSITEMS.KETTLEINSUFICIENTSOLIDS.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.KETTLEINSUFICIENTSOLIDS.NAME"
@@ -6018,7 +6018,7 @@ msgstr "<link=\"ICE\">冰</link>不足"
 #. STRINGS.BUILDING.STATUSITEMS.KETTLEINSUFICIENTSOLIDS.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.KETTLEINSUFICIENTSOLIDS.TOOLTIP"
 msgid "This building requires a minimum of {0} <link=\"ICE\">Ice</link> in order to function\n\nDeliver more <link=\"ICE\">Ice</link> to operate this building"
-msgstr "這個建築需要至少 {0}<link=\"ICE\">冰</link>才能運作\n\n運送更多的<link=\"ICE\">冰</link>以使建築運作"
+msgstr "此建築需要至少 {0}<link=\"ICE\">冰</link>才能運作\n\n運送更多的<link=\"ICE\">冰</link>以讓此建築恢復運轉"
 
 #. STRINGS.BUILDING.STATUSITEMS.KETTLEMELTING.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.KETTLEMELTING.NAME"
@@ -6028,7 +6028,7 @@ msgstr "融冰"
 #. STRINGS.BUILDING.STATUSITEMS.KETTLEMELTING.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.KETTLEMELTING.TOOLTIP"
 msgid "This building is currently melting stored <link=\"ICE\">Ice</link> to produce <link=\"WATER\">Water</link>\n\n<link=\"WATER\">Water</link> output temperature: {0}"
-msgstr "這個建築當前正將儲存的<link=\"ICE\">冰</link>融化以產生<link=\"WATER\">水</link>\n\n<link=\"WATER\">水</link>輸出溫度：{0}"
+msgstr "此建築目前正在融化儲存的<link=\"ICE\">冰</link>以產生<link=\"WATER\">水</link>\n\n<link=\"WATER\">水</link>輸出溫度：{0}"
 
 #. STRINGS.BUILDING.STATUSITEMS.LANDEDROCKETLACKSPASSENGERMODULE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.LANDEDROCKETLACKSPASSENGERMODULE.NAME"
@@ -6038,7 +6038,7 @@ msgstr "火箭缺少乘員艙"
 #. STRINGS.BUILDING.STATUSITEMS.LANDEDROCKETLACKSPASSENGERMODULE.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.LANDEDROCKETLACKSPASSENGERMODULE.TOOLTIP"
 msgid "A rocket must have a spacefarer module"
-msgstr "火箭必須有乘員艙"
+msgstr "火箭必須擁有乘員艙"
 
 #. STRINGS.BUILDING.STATUSITEMS.LIMITVALVELIMITNOTREACHED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.LIMITVALVELIMITNOTREACHED.NAME"
@@ -6048,7 +6048,7 @@ msgstr "剩餘數量：{0}"
 #. STRINGS.BUILDING.STATUSITEMS.LIMITVALVELIMITNOTREACHED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.LIMITVALVELIMITNOTREACHED.TOOLTIP"
 msgid "This building will stop transferring Mass when the amount remaining reaches 0"
-msgstr "當剩餘數量為 0 時，這個建築會停止運送物質"
+msgstr "當剩餘量達到 0 時，此建築將停止運送物質"
 
 #. STRINGS.BUILDING.STATUSITEMS.LIMITVALVELIMITREACHED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.LIMITVALVELIMITREACHED.NAME"
@@ -6088,7 +6088,7 @@ msgstr "排水口阻塞"
 #. STRINGS.BUILDING.STATUSITEMS.LIQUIDVENTOBSTRUCTED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.LIQUIDVENTOBSTRUCTED.TOOLTIP"
 msgid "A <style=\"KKeyword\">Pipe</style> has been obstructed and is preventing <style=\"KKeyword\">Liquid</style> flow to this vent"
-msgstr "<style=\"KKeyword\">管道</style>已阻塞，並正阻礙<style=\"KKeyword\">液體</style>流出這個排水口"
+msgstr "<style=\"KKeyword\">管道</style>已阻塞，正阻礙<style=\"KKeyword\">液體</style>流出此排水口"
 
 #. STRINGS.BUILDING.STATUSITEMS.LIQUIDVENTOVERPRESSURE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.LIQUIDVENTOVERPRESSURE.NAME"
@@ -6098,7 +6098,7 @@ msgstr "排水口壓力過高"
 #. STRINGS.BUILDING.STATUSITEMS.LIQUIDVENTOVERPRESSURE.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.LIQUIDVENTOVERPRESSURE.TOOLTIP"
 msgid "High <style=\"KKeyword\">Gas</style> or <style=\"KKeyword\">Liquid</style> pressure in this area is preventing further <style=\"KKeyword\">Liquid</style> emission\nReduce pressure by pumping <style=\"KKeyword\">Liquid</style> away or clearing more space"
-msgstr "這塊區域高壓的<style=\"KKeyword\">氣體</style>或<style=\"KKeyword\">液體</style>阻礙了<style=\"KKeyword\">液體</style>排放\n將<style=\"KKeyword\">液體</style>抽走或清出更多空間以減少壓力"
+msgstr "此區域的高壓<style=\"KKeyword\">氣體</style>或<style=\"KKeyword\">液體</style>正阻礙<style=\"KKeyword\">液體</style>排放\n將<style=\"KKeyword\">液體</style>抽走或清出更多空間以減少壓力"
 
 #. STRINGS.BUILDING.STATUSITEMS.LOGIC.LOGIC_CONTROLLED_DISABLED
 msgctxt "STRINGS.BUILDING.STATUSITEMS.LOGIC.LOGIC_CONTROLLED_DISABLED"
@@ -6118,7 +6118,7 @@ msgstr "閉合迴路"
 #. STRINGS.BUILDING.STATUSITEMS.LOGIC_FEEDBACK_LOOP.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.LOGIC_FEEDBACK_LOOP.TOOLTIP"
 msgid "Feedback loops prevent automation grids from functioning\n\nFeedback loops occur when the <style=\"KKeyword\">Output</style> of an automated building connects back to its own <style=\"KKeyword\">Input</style> through the Automation grid"
-msgstr "閉合迴路阻止自動化系統運作\n\n當一個自動化建築物的<style=\"KKeyword\">訊號輸出端</style>，透過訊號線連回自己的<style=\"KKeyword\">訊號輸入端</style>，就會出現閉合迴路"
+msgstr "閉合迴路會導致自動化網路無法運作\n\n當自動化建築的<style=\"KKeyword\">輸出端</style>，透過自動化網路連回自身的<style=\"KKeyword\">輸入端</style>時，就會產生閉合迴路"
 
 #. STRINGS.BUILDING.STATUSITEMS.LOGICOVERLOADED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.LOGICOVERLOADED.NAME"
@@ -6128,7 +6128,7 @@ msgstr "受損：超載"
 #. STRINGS.BUILDING.STATUSITEMS.LOGICOVERLOADED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.LOGICOVERLOADED.TOOLTIP"
 msgid "This <style=\"KKeyword\">Logic Wire</style> is taking damage\n\nLimit the output to one Bit, or replace it with <style=\"KKeyword\">Logic Ribbon</style> to prevent further damage"
-msgstr "這個<style=\"KKeyword\">邏輯電路</style>正在受損\n\n使用一條<style=\"KKeyword\">邏輯排線</style>取代可避免受損，或是限制為只輸出一個位元的訊號"
+msgstr "此<style=\"KKeyword\">訊號線</style>正在受損\n\n將輸出限制為一個位元，或改用<style=\"KKeyword\">訊號排線</style>取代以防止進一步受損"
 
 #. STRINGS.BUILDING.STATUSITEMS.LOGICSENSORSTATUSACTIVE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.LOGICSENSORSTATUSACTIVE.NAME"
@@ -17523,7 +17523,7 @@ msgstr "在單座鼻錐之上。"
 #. STRINGS.BUILDINGS.PREFABS.MONUMENTBOTTOM.FACADES.OPTION_P.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.MONUMENTBOTTOM.FACADES.OPTION_P.NAME"
 msgid "Spacefarer Stance"
-msgstr "太空艙姿態"
+msgstr "乘員艙姿態"
 
 #. STRINGS.BUILDINGS.PREFABS.MONUMENTBOTTOM.FACADES.OPTION_Q.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.MONUMENTBOTTOM.FACADES.OPTION_Q.DESC"
