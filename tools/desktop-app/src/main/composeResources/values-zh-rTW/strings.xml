@@ -52,6 +52,14 @@
     <string name="tooltip_smart_paste">從剪貼簿智慧貼上 AI 翻譯 (msgstr)</string>
     <string name="tooltip_undo_paste">復原智慧貼上</string>
 
+    <!-- NisbetPeek Quotes -->
+    <string name="peek_quote_1">這段翻譯看起來不錯！</string>
+    <string name="peek_quote_2">Nisbet 覺得妳翻得超級精準！</string>
+    <string name="peek_quote_3">呼，這段長文辛苦妳了。</string>
+    <string name="peek_quote_4">複製人絕對看得懂這段文字！</string>
+    <string name="peek_quote_5">這段文字讀起來充滿了氧氣。</string>
+    <string name="peek_title">Nisbet 正在幫妳偷看...</string>
+
     <!-- Content Descriptions -->
     <string name="content_description_back">返回</string>
     <string name="content_description_clear">清除</string>

@@ -22,9 +22,11 @@ import androidx.compose.material.icons.rounded.ContentCopy
 import androidx.compose.material.icons.rounded.ContentPaste
 import androidx.compose.material.icons.rounded.Link
 import androidx.compose.material.icons.rounded.SettingsBackupRestore
+import androidx.compose.material.icons.rounded.Visibility
+import androidx.compose.material.icons.rounded.VisibilityOff
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
@@ -43,6 +45,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -50,14 +53,22 @@ import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
-import java.awt.datatransfer.DataFlavor
-import java.awt.datatransfer.Transferable
 import dolphin.desktop.apps.onitranslator.app.AppEvent
+import dolphin.desktop.apps.onitranslator.generated.resources.NisbetAnticipate
+import dolphin.desktop.apps.onitranslator.generated.resources.NisbetHigh
+import dolphin.desktop.apps.onitranslator.generated.resources.NisbetSorry
+import dolphin.desktop.apps.onitranslator.generated.resources.NisbetThinking
+import dolphin.desktop.apps.onitranslator.generated.resources.NisbetWhistle
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.button_apply
 import dolphin.desktop.apps.onitranslator.generated.resources.button_cancel
 import dolphin.desktop.apps.onitranslator.generated.resources.label_translated_text
 import dolphin.desktop.apps.onitranslator.generated.resources.nisbet_ponder
+import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_1
+import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_2
+import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_3
+import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_4
+import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_5
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_this_text
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_show_link
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_smart_paste
@@ -71,10 +82,10 @@ import dolphin.desktop.apps.onitranslator.model.PoEntry
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.TooltipIconButton
 import kotlinx.coroutines.launch
-import org.jetbrains.compose.resources.stringResource
-import androidx.compose.runtime.rememberCoroutineScope
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
+import java.awt.datatransfer.DataFlavor
+import java.awt.datatransfer.Transferable
 
 @Composable
 fun EntryEditor(
@@ -158,128 +169,175 @@ private fun EntryEditorSection(
     var backupText by remember { mutableStateOf<String?>(null) }
     var showRefs by remember { mutableStateOf(true) }
     var showDraft by remember { mutableStateOf(true) }
+    var isPeeking by remember { mutableStateOf(false) }
     val isChanged = editedText != (entry.target.str.trim())
     val clipboard = LocalClipboard.current
     val scope = rememberCoroutineScope()
 
+    // Random quote and emotion for NisbetPeek
+    val (peekQuote, peekAvatar) = remember(isPeeking) {
+        if (isPeeking) {
+            val quote = listOf(
+                Res.string.peek_quote_1,
+                Res.string.peek_quote_2,
+                Res.string.peek_quote_3,
+                Res.string.peek_quote_4,
+                Res.string.peek_quote_5
+            ).random()
+
+            val avatar = listOf(
+                Res.drawable.NisbetAnticipate,
+                Res.drawable.NisbetHigh,
+                Res.drawable.NisbetThinking,
+                Res.drawable.NisbetSorry,
+                Res.drawable.NisbetWhistle,
+            ).random()
+
+            quote to avatar
+        } else null to null
+    }
+
     LaunchedEffect(entry.target.key) {
         editedText = entry.target.msgStr()
         backupText = null // Reset backup when switching entries
+        isPeeking = false // Reset preview when switching entries
     }
 
-    Column(
-        modifier = modifier
-            .fillMaxSize()
-            .verticalScroll(rememberScrollState())
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp),
-    ) {
-        Text(
-            entry.target.key,
-            style = MaterialTheme.typography.titleMedium,
-            color = MaterialTheme.colorScheme.primary,
-            modifier = Modifier.fillMaxWidth()
-        )
-
-        ReferenceSection(
-            entry,
-            onCopyToClipboard = { onEvent(AppEvent.Ui.CopyToClipboard(it)) },
-            onReplace = { editedText = onConvert(it) },
-            refsVisible = showRefs,
-            draftVisible = showDraft,
-        )
-
-        OutlinedTextField(
-            value = editedText,
-            onValueChange = { editedText = it },
-            label = { Text(stringResource(Res.string.label_translated_text)) },
-            modifier = Modifier.fillMaxWidth().weight(1f),
-            minLines = 5,
-            textStyle = MaterialTheme.typography.bodyMedium.copy(fontFamily = FontFamily.Monospace),
-            shape = MaterialTheme.shapes.medium,
-            colors = TextFieldDefaults.colors(
-                focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
-                unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
+    Box(modifier = modifier.fillMaxSize()) {
+        // Main Editor Layer
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+                .padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+        ) {
+            Text(
+                entry.target.key,
+                style = MaterialTheme.typography.titleMedium,
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.fillMaxWidth()
             )
-        )
 
-        Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-            entry.referenceText?.let {
-                SimpleSwitch(
-                    checked = showRefs,
-                    onCheckedChange = { showRefs = it },
-                    type = EntryTagType.Simplified
+            ReferenceSection(
+                entry,
+                onCopyToClipboard = { onEvent(AppEvent.Ui.CopyToClipboard(it)) },
+                onReplace = { editedText = onConvert(it) },
+                refsVisible = showRefs,
+                draftVisible = showDraft,
+            )
+
+            OutlinedTextField(
+                value = editedText,
+                onValueChange = { editedText = it },
+                label = { Text(stringResource(Res.string.label_translated_text)) },
+                modifier = Modifier.fillMaxWidth().weight(1f),
+                minLines = 5,
+                textStyle = MaterialTheme.typography.bodyMedium.copy(fontFamily = FontFamily.Monospace),
+                shape = MaterialTheme.shapes.medium,
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
+                    unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
                 )
-            }
-            Spacer(Modifier.width(8.dp))
-            entry.draftText?.let {
-                SimpleSwitch(
-                    checked = showDraft,
-                    onCheckedChange = { showDraft = it },
-                    type = EntryTagType.Translated
-                )
-            }
+            )
 
-            Spacer(Modifier.width(16.dp))
+            Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                entry.referenceText?.let {
+                    SimpleSwitch(
+                        checked = showRefs,
+                        onCheckedChange = { showRefs = it },
+                        type = EntryTagType.Simplified
+                    )
+                }
+                Spacer(Modifier.width(8.dp))
+                entry.draftText?.let {
+                    SimpleSwitch(
+                        checked = showDraft,
+                        onCheckedChange = { showDraft = it },
+                        type = EntryTagType.Translated
+                    )
+                }
 
-            // Smart Paste from Clipboard (Gemini Gems format) - Auto Apply
-            TooltipIconButton(
-                icon = Icons.Rounded.AutoAwesome,
-                tooltip = stringResource(Res.string.tooltip_smart_paste),
-                onClick = {
-                    scope.launch {
-                        try {
+                Spacer(Modifier.width(16.dp))
+
+                // NisbetPeek Toggle: Shown only when entry has tags or long text
+                if (editedText.shouldPeek()) {
+                    TooltipIconButton(
+                        icon = if (isPeeking) Icons.Rounded.VisibilityOff else Icons.Rounded.Visibility,
+                        tooltip = if (isPeeking) "Close NisbetPeek" else "Let Nisbet peek",
+                        onClick = { isPeeking = !isPeeking }
+                    )
+                }
+
+                // Smart Paste from Clipboard (Gemini Gems format) - Auto Apply
+                TooltipIconButton(
+                    icon = Icons.Rounded.AutoAwesome,
+                    tooltip = stringResource(Res.string.tooltip_smart_paste),
+                    onClick = {
+                        scope.launch {
                             // Using the modern LocalClipboard API
                             // Ref: https://medium.com/@yamin.khan.mahdi/reading-clipboard-text-across-all-platforms-in-compose-multiplatform-cmp-7474ffc03f09
-                            clipboard.getClipEntry()?.let { clipEntry ->
-                                // On Desktop, ClipEntry wraps java.awt.datatransfer.Transferable
-                                // The property is accessible as nativeClipEntry in recent CMP versions
-                                val transferable = clipEntry.nativeClipEntry as? Transferable
-                                if (transferable != null && transferable.isDataFlavorSupported(DataFlavor.stringFlavor)) {
-                                    val clipboardText = transferable.getTransferData(DataFlavor.stringFlavor) as? String
-                                    if (clipboardText != null) {
-                                        extractMsgStr(clipboardText)?.let { parsedText ->
-                                            backupText = editedText // Save current manual text for undo
-                                            editedText = parsedText
-                                            // Auto Apply: trigger save event immediately
-                                            onEvent(AppEvent.Editor.Save(entry.target, parsedText))
+                            try {
+                                clipboard.getClipEntry()?.let { clipEntry ->
+                                    // On Desktop, ClipEntry wraps java.awt.datatransfer.Transferable
+                                    // The property is accessible as nativeClipEntry in recent CMP versions
+                                    val transferable = clipEntry.nativeClipEntry as? Transferable
+                                    if (transferable != null && transferable.isDataFlavorSupported(DataFlavor.stringFlavor)) {
+                                        val clipboardText =
+                                            transferable.getTransferData(DataFlavor.stringFlavor) as? String
+                                        if (clipboardText != null) {
+                                            extractMsgStr(clipboardText)?.let { parsedText ->
+                                                backupText = editedText // Save current manual text for undo
+                                                editedText = parsedText
+                                                // Auto Apply: trigger save event immediately
+                                                onEvent(AppEvent.Editor.Save(entry.target, parsedText))
+                                            }
                                         }
                                     }
                                 }
+                            } catch (e: Exception) {
+                                // Silent fail for clipboard access issues
                             }
-                        } catch (e: Exception) {
-                            // Silent fail for clipboard access issues
                         }
                     }
-                }
-            )
-
-            // Undo Smart Paste - Auto Apply back
-            if (backupText != null) {
-                TooltipIconButton(
-                    icon = Icons.Rounded.SettingsBackupRestore,
-                    tooltip = stringResource(Res.string.tooltip_undo_paste),
-                    onClick = {
-                        val textToRestore = backupText ?: ""
-                        editedText = textToRestore
-                        // Auto Apply: trigger save event to revert back
-                        onEvent(AppEvent.Editor.Save(entry.target, textToRestore))
-                        backupText = null // Clear backup after restore
-                    }
                 )
-            }
 
-            Spacer(Modifier.weight(1f))
-            TextButton(onClick = { onEvent(AppEvent.Editor.Select(null)) }) {
-                Text(stringResource(Res.string.button_cancel))
-            }
-            TextButton(
-                onClick = { onEvent(AppEvent.Editor.Save(entry.target, editedText)) },
-                enabled = isChanged,
-            ) {
-                Text(stringResource(Res.string.button_apply))
+                // Undo Smart Paste - Auto Apply back
+                if (backupText != null) {
+                    TooltipIconButton(
+                        icon = Icons.Rounded.SettingsBackupRestore,
+                        tooltip = stringResource(Res.string.tooltip_undo_paste),
+                        onClick = {
+                            val textToRestore = backupText ?: ""
+                            editedText = textToRestore
+                            // Auto Apply: trigger save event to revert back
+                            onEvent(AppEvent.Editor.Save(entry.target, textToRestore))
+                            backupText = null // Clear backup after restore
+                        }
+                    )
+                }
+
+                Spacer(Modifier.weight(1f))
+                TextButton(onClick = { onEvent(AppEvent.Editor.Select(null)) }) {
+                    Text(stringResource(Res.string.button_cancel))
+                }
+                TextButton(
+                    onClick = { onEvent(AppEvent.Editor.Save(entry.target, editedText)) },
+                    enabled = isChanged,
+                ) {
+                    Text(stringResource(Res.string.button_apply))
+                }
             }
         }
+
+        // NisbetPeek: Side Drawer Component
+        NisbetPeekDrawer(
+            visible = isPeeking && editedText.shouldPeek(),
+            text = editedText,
+            avatar = peekAvatar?.let { painterResource(it) },
+            quote = peekQuote,
+            modifier = Modifier.align(Alignment.CenterEnd)
+        )
     }
 }
 

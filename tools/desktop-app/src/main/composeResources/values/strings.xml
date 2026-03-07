@@ -52,6 +52,14 @@
     <string name="tooltip_smart_paste">Smart Paste from AI (msgstr)</string>
     <string name="tooltip_undo_paste">Undo Smart Paste</string>
 
+    <!-- NisbetPeek Quotes -->
+    <string name="peek_quote_1">This translation looks great!</string>
+    <string name="peek_quote_2">Nisbet thinks you nailed it!</string>
+    <string name="peek_quote_3">Phew, long story! Well done.</string>
+    <string name="peek_quote_4">Duplicants can definitely read this!</string>
+    <string name="peek_quote_5">This text feels full of oxygen.</string>
+    <string name="peek_title">Nisbet is peeking...</string>
+
     <!-- Content Descriptions -->
     <string name="content_description_back">Back</string>
     <string name="content_description_clear">Clear</string>

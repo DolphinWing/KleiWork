@@ -154,6 +154,11 @@
     *   **反悔機制 (Smart Undo)**：在智慧貼上後，會自動保存貼上前的手動內容。點擊「復原」按鈕可一鍵將文字框與檔案狀態同時還原。
     *   **技術實作**：採用現代化的 `LocalClipboard` API 配合 Java AWT `Transferable` 轉型，實現非同步且穩定的剪貼簿存取。
 
+*   **NisbetPeek 視覺預覽系統**：
+    *   **智慧感應 (Smart Sensor)**：系統會自動偵測翻譯內容是否包含換行符號 (`\n`)、遊戲標籤 (如 `<color>`, `<link>`) 或長度是否值得預覽。若符合條件，右上角將浮現預覽圖示。
+    *   **對話式預覽 (Conversational UI)**：採用右側滑入式抽屜 (Side Drawer)，模擬遊戲中的資料庫面板。面板下方整合了 Nisbet 的情緒系統，每次開啟都會隨機出現不同表情的頭像（如 Anticipate, High, Thinking）與多語系鼓勵語錄。
+    *   **渲染引擎 (Rendering Engine)**：獨立模組 `NisbetPeek.kt` 負責將原始碼轉化為 `AnnotatedString`。支援標籤染色、粗體處理與視覺化換行，並定義了一套符合遊戲截圖規格的「ONI 調色盤 (OniColor)」。
+
 ---
 
 ## 5. 目錄結構 (Directory Structure)
