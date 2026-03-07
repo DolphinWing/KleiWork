@@ -77,7 +77,6 @@ class PoHelper(
         loadAllSources()
         buildPoList()
 
-        writeEntryToFile(getCachedFile(), entryList)
         val cost = System.currentTimeMillis() - startTime
         log("Translation process finished in $cost ms")
         _loading.emit(false)
@@ -86,74 +85,98 @@ class PoHelper(
 
     private suspend fun loadAllSources() {
         log("Loading Simplified Chinese PO...")
+        simplifiedMap.clear()
         simplifiedMap.putAll(loadAssetFile(ONI_CHS_PO).associateBy { it.key })
         log("Simplified Chinese PO size: ${simplifiedMap.size}")
 
         log("Loading PO Template...")
+        templateMap.clear()
         templateMap.putAll(loadAssetFile(ONI_PO_TEMPLATE).associateBy { it.key })
         log("PO Template size: ${templateMap.size}")
 
-        log("Loading existing translations...")
-        translatedEntries.putAll(
-            loadAssetFile(ONI_PO).filter { it.id != "\"\"" && it.str != "\"\"" }.associateBy { it.key }
-        )
-        log("Previous translations size: ${translatedEntries.size}")
+        log("Loading existing translations (strings.po)...")
+        translatedEntries.clear()
+        translatedEntries.putAll(loadAssetFile(ONI_PO).associateBy { it.key })
+        log("Previous translations (strings.po) size: ${translatedEntries.size}")
 
         val draftFile = getCachedFile()
         if (draftFile.exists()) {
             log("Loading Draft...")
+            draftEntries.clear()
             draftEntries.putAll(loadFile(draftFile).associateBy { it.key })
             log("Draft entries size: ${draftEntries.size}")
         }
     }
 
     private suspend fun buildPoList() {
-        log("Building word list...")
+        log("Building word list (Template: ${templateMap.size}, Existing: ${translatedEntries.size})...")
         entryList.clear()
-        templateMap.values.filter { entry ->
-            (entry.msgStr().isEmpty() && entry.msgId().isNotEmpty()) && // no translation
-                    !entry.msgStr().startsWith("only_used_by") // from dst
-        }.forEach { entry ->
-            val newEntry = buildPoEntry(entry)
+
+        // Check for removed keys (present in strings.po but not in template)
+        translatedEntries.keys.forEach { key ->
+            if (!templateMap.containsKey(key)) {
+                log("Entry '$key' is removed from template.", LogType.Info)
+            }
+        }
+
+        // Process ALL entries from the template to maintain a 1:1 mapping
+        templateMap.values.forEach { templateEntry ->
+            val newEntry = buildPoEntry(templateEntry)
             entryList.add(newEntry)
         }
-        log("New word list size: ${entryList.size}")
+        log("Final word list size: ${entryList.size}")
     }
 
     /**
      * Builds a single [PoEntry] by merging data from template, simplified, and translated sources.
+     * The priority of content is: Draft > Existing Translation > Simplified (converted) > Template Origin.
      */
     private fun buildPoEntry(templateEntry: PoEntry): PoEntry {
         val key = templateEntry.key
         var isNewly = false
+        var isMsgidChanged = false
         var newStr = ""
 
         val draftEntry = draftEntries[key]
         val existingTranslation = translatedEntries[key]
 
-        if (draftEntry != null && draftEntry.str.isNotEmpty()) {
+        // 1. Identify if it's a completely new key
+        if (existingTranslation == null) {
+            isNewly = true
+        }
+
+        // 2. Identify if the original English text (msgid) has changed
+        if (existingTranslation != null && existingTranslation.id != templateEntry.id) {
+            log("Found msgid changed for key '$key': ${existingTranslation.id} -> ${templateEntry.id}")
+            isMsgidChanged = true
+        }
+
+        // 3. Determine the string content based on priority: Draft > Existing > Simplified fallback
+        if (draftEntry != null && draftEntry.str.isNotBlank()) {
             newStr = draftEntry.str.trim()
         }
 
-        if (newStr.isEmpty() && existingTranslation != null) {
+        if (newStr.isBlank() && existingTranslation != null) {
             newStr = existingTranslation.str.trim()
         }
 
-        if (newStr.isEmpty()) {
-            isNewly = true
+        // Fallback to Simplified Chinese conversion or msgid if absolutely no translation exists
+        if (newStr.isBlank()) {
             newStr = simplifiedMap[key]?.str ?: templateEntry.msgId()
             newStr = TextRefinery.sc2tc(newStr)
         }
 
+        // Apply custom refinery rules
         newStr = textRefinery.refactor(newStr)
 
-        val id = existingTranslation?.id ?: templateEntry.id
-        if (id != templateEntry.id) {
-            println("Found msgid changed for key '$key': $id -> ${templateEntry.id}")
-            isNewly = true
-        }
-
-        return PoEntry(key, templateEntry.text, templateEntry.id, newStr, isNewly)
+        return PoEntry(
+            key = key,
+            text = templateEntry.text,
+            id = templateEntry.id,
+            str = newStr,
+            newly = isNewly,
+            msgidChanged = isMsgidChanged
+        )
     }
 
     private fun loadAssetFile(name: String): List<PoEntry> {
@@ -180,21 +203,53 @@ class PoHelper(
     }
 
     private fun parsePoFile(reader: BufferedReader): List<PoEntry> {
-        // A more robust implementation would handle multi-line msgid/msgstr and other edge cases.
-        // For now, this simple 4-line parser is retained.
         val list = mutableListOf<PoEntry>()
         var line: String?
+        
+        var currentKey = ""
+        var currentCtxt = ""
+        var currentId = ""
+        var currentStr = ""
+        
         while (reader.readLine().also { line = it } != null) {
-            if (!line!!.startsWith("#.")) continue
-
-            val line1 = line
-            val line2 = reader.readLine() ?: break // msgctxt
-            val line3 = reader.readLine() ?: break // msgid
-            val line4 = reader.readLine() ?: break // msgstr
-
-            PoEntry.from(line1, line2, line3, line4)?.let { list.add(it) }
-                ?: log("Invalid PO entry starting with: $line1", LogType.Warning)
+            val trimmedLine = line!!.trim()
+            
+            when {
+                trimmedLine.startsWith("#. ") || trimmedLine.startsWith("#: ") -> {
+                    // Start of a new entry, but first save the previous one if it exists
+                    if (currentKey.isNotEmpty()) {
+                        PoEntry.from("#. $currentKey", currentCtxt, currentId, currentStr)?.let { list.add(it) }
+                    }
+                    currentKey = trimmedLine.substring(3).trim()
+                    currentCtxt = ""
+                    currentId = ""
+                    currentStr = ""
+                }
+                trimmedLine.startsWith("msgctxt ") -> {
+                    currentCtxt = trimmedLine
+                }
+                trimmedLine.startsWith("msgid ") -> {
+                    currentId = trimmedLine
+                }
+                trimmedLine.startsWith("msgstr ") -> {
+                    currentStr = trimmedLine
+                }
+                // Handle basic multi-line (very simple implementation)
+                trimmedLine.startsWith("\"") -> {
+                    when {
+                        currentStr.isNotEmpty() && currentId.isNotEmpty() -> currentStr += trimmedLine
+                        currentId.isNotEmpty() -> currentId += trimmedLine
+                        currentCtxt.isNotEmpty() -> currentCtxt += trimmedLine
+                    }
+                }
+            }
         }
+        
+        // Don't forget the last entry
+        if (currentKey.isNotEmpty()) {
+            PoEntry.from("#. $currentKey", currentCtxt, currentId, currentStr)?.let { list.add(it) }
+        }
+        
         return list
     }
 
@@ -206,7 +261,22 @@ class PoHelper(
         }
     }
 
-    fun buildChangeList(): List<PoEntry> = entryList.filter { it.changed > 0 || it.newly }
+    /**
+     * Filters entries that require user attention in the 'To-Do' mode.
+     * Formula: (newly || msgidChanged || hasActualDraftChange || modifiedInSession) && msgidNotEmpty
+     */
+    fun buildChangeList(): List<PoEntry> = entryList.filter { entry ->
+        val existingStr = translatedEntries[entry.key]?.str?.trim()
+        val draftStr = draftEntries[entry.key]?.str?.trim()
+
+        // Check if there is a real difference between draft and existing translation
+        val hasActualDraftChange = draftStr != null && draftStr != existingStr
+
+        val isTarget = entry.newly || entry.msgidChanged || entry.changed > 0 || hasActualDraftChange
+
+        // Only show items that actually have an English source text to translate
+        isTarget && entry.msgId().isNotBlank()
+    }
 
     suspend fun writeTranslationFile(output: File, list: List<PoEntry> = entryList): Boolean = withContext(Dispatchers.IO) {
         _loading.emit(true)

@@ -47,6 +47,8 @@
     <string name="tooltip_theme_toggle">Toggle theme</string>
     <string name="tooltip_show_link">Show link</string>
     <string name="tooltip_use_this_text">Use this text</string>
+    <string name="tooltip_toggle_simplified">Show/Hide Simplified Chinese reference</string>
+    <string name="tooltip_toggle_translated">Show/Hide Draft or Existing translation</string>
 
     <!-- Content Descriptions -->
     <string name="content_description_back">Back</string>

@@ -7,7 +7,8 @@ package dolphin.desktop.apps.onitranslator.model
  * @property text entry text (msgctxt). Usually it is the same to the key.
  * @property id entry id (msgid). It presents original text in English.
  * @property str entry value (msgstr). It is also the translated text.
- * @property newly true if the entry is a new one in latest update
+ * @property newly true if the entry is a new one in latest update (missing from strings.po)
+ * @property msgidChanged true if the entry's msgid has changed since last translation
  * @property changed non-zero value as last changed time
  */
 data class PoEntry(
@@ -16,6 +17,7 @@ data class PoEntry(
     val id: String,
     var str: String,
     val newly: Boolean = false,
+    val msgidChanged: Boolean = false,
     var changed: Long = 0L,
 ) {
     companion object {
@@ -35,7 +37,8 @@ data class PoEntry(
             val str = if (line4.startsWith("msgstr")) {
                 line4.substring(7)
             } else line4
-            return if (key.isNotEmpty() and id.isNotEmpty() and str.isNotEmpty()) {
+            // We allow empty str now to accurately track existing keys in strings.po
+            return if (key.isNotEmpty() && id.isNotEmpty()) {
                 PoEntry(key, txt, id, str)
             } else null
         }
@@ -54,11 +57,20 @@ data class PoEntry(
 
     constructor(key: String, id: String, newly: Boolean = true) : this(key, key, id, id, newly)
 
-    override fun hashCode(): Int = id.hashCode() + str.hashCode()
+    override fun hashCode(): Int {
+        var result = key.hashCode()
+        result = 31 * result + id.hashCode()
+        result = 31 * result + str.hashCode()
+        result = 31 * result + newly.hashCode()
+        result = 31 * result + msgidChanged.hashCode()
+        return result
+    }
 
     override fun equals(other: Any?): Boolean {
-        val that = other as? PoEntry
-        return (that?.key == this.key && that.id == this.id && that.str == this.str)
+        if (this === other) return true
+        if (other !is PoEntry) return false
+        return (other.key == this.key && other.id == this.id && other.str == this.str &&
+                other.newly == this.newly && other.msgidChanged == this.msgidChanged)
     }
 
     /**

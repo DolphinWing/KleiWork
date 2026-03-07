@@ -27,8 +27,17 @@ fun TooltipIconButton(
     TooltipBox(
         positionProvider = TooltipDefaults.rememberTooltipPositionProvider(TooltipAnchorPosition.Below),
         tooltip = {
-            Surface(tonalElevation = 4.dp, shape = MaterialTheme.shapes.small) {
-                Text(tooltip, modifier = Modifier.Companion.padding(horizontal = 8.dp, vertical = 4.dp))
+            Surface(
+                color = MaterialTheme.colorScheme.inverseSurface,
+                contentColor = MaterialTheme.colorScheme.inverseOnSurface,
+                tonalElevation = 4.dp,
+                shape = MaterialTheme.shapes.extraSmall
+            ) {
+                Text(
+                    tooltip,
+                    style = MaterialTheme.typography.bodyMedium,
+                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                )
             }
         },
         state = rememberTooltipState(),

@@ -22,6 +22,7 @@ import androidx.compose.material.icons.rounded.ContentPaste
 import androidx.compose.material.icons.rounded.Link
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
@@ -30,6 +31,10 @@ import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextFieldDefaults
+import androidx.compose.material3.TooltipAnchorPosition
+import androidx.compose.material3.TooltipBox
+import androidx.compose.material3.TooltipDefaults
+import androidx.compose.material3.rememberTooltipState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -50,6 +55,8 @@ import dolphin.desktop.apps.onitranslator.generated.resources.label_translated_t
 import dolphin.desktop.apps.onitranslator.generated.resources.nisbet_ponder
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_this_text
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_show_link
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_toggle_simplified
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_toggle_translated
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_use_this_text
 import dolphin.desktop.apps.onitranslator.model.EditorData
 import dolphin.desktop.apps.onitranslator.model.EntryTagType
@@ -338,6 +345,7 @@ private fun ReferenceViewPreview() {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun SimpleSwitch(
     checked: Boolean,
@@ -345,22 +353,46 @@ private fun SimpleSwitch(
     type: EntryTagType,
     modifier: Modifier = Modifier
 ) {
-    Switch(
-        checked = checked,
-        onCheckedChange = onCheckedChange,
-        colors = SwitchDefaults.colors(
-            // When checked: dot = content color, track = container color
-            checkedThumbColor = type.contentColor(MaterialTheme.colorScheme).copy(alpha = 0.4f),
-            checkedTrackColor = type.containerColor(MaterialTheme.colorScheme),
-            checkedBorderColor = type.contentColor(MaterialTheme.colorScheme).copy(alpha = 0.4f),
+    TooltipBox(
+        positionProvider = TooltipDefaults.rememberTooltipPositionProvider(TooltipAnchorPosition.Above),
+        tooltip = {
+            val tooltipText = when (type) {
+                EntryTagType.Simplified -> stringResource(Res.string.tooltip_toggle_simplified)
+                EntryTagType.Translated -> stringResource(Res.string.tooltip_toggle_translated)
+                else -> stringResource(type.label)
+            }
+            Surface(
+                color = MaterialTheme.colorScheme.inverseSurface,
+                contentColor = MaterialTheme.colorScheme.inverseOnSurface,
+                tonalElevation = 4.dp,
+                shape = MaterialTheme.shapes.extraSmall
+            ) {
+                Text(
+                    tooltipText,
+                    style = MaterialTheme.typography.bodyMedium,
+                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                )
+            }
+        },
+        state = rememberTooltipState(),
+    ) {
+        Switch(
+            checked = checked,
+            onCheckedChange = onCheckedChange,
+            colors = SwitchDefaults.colors(
+                // When checked: dot = content color, track = container color
+                checkedThumbColor = type.contentColor(MaterialTheme.colorScheme).copy(alpha = 0.4f),
+                checkedTrackColor = type.containerColor(MaterialTheme.colorScheme),
+                checkedBorderColor = type.contentColor(MaterialTheme.colorScheme).copy(alpha = 0.4f),
 
-            // When unchecked: use standard outline/surface variant colors
-            uncheckedThumbColor = MaterialTheme.colorScheme.outline,
-            uncheckedTrackColor = type.containerColor(MaterialTheme.colorScheme).copy(alpha = 0.6f),
-            uncheckedBorderColor = MaterialTheme.colorScheme.outline.copy(alpha = 0.8f),
-        ),
-        modifier = modifier,
-    )
+                // When unchecked: use standard outline/surface variant colors
+                uncheckedThumbColor = MaterialTheme.colorScheme.outline,
+                uncheckedTrackColor = type.containerColor(MaterialTheme.colorScheme).copy(alpha = 0.6f),
+                uncheckedBorderColor = MaterialTheme.colorScheme.outline.copy(alpha = 0.8f),
+            ),
+            modifier = modifier,
+        )
+    }
 }
 
 @Preview

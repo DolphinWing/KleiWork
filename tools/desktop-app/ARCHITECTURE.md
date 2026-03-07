@@ -12,7 +12,8 @@
 - **簡繁轉換**：自動將簡體中文來源轉換為繁體中文。
 - **詞彙替換**：透過 `replacement_strings.xml` 定義專有詞彙的自動修正規則。
 - **草稿機制**：支援未完成的編輯作業自動存檔。
-- **差異比對**：能識別原廠檔案的變更 (msgid change)。
+- **差異比對**：能識別原廠檔案的變更 (msgid change)，確保翻譯能追蹤英文原文的更新。
+- **強韌解析**：採用狀態機 (State-machine) 解析器，支援 PO 檔案 Header 處理與不規則空行。
 
 ---
 
@@ -93,6 +94,12 @@
 
 **合併邏輯**：Draft > Existing Translation > Simplified (converted) > Template Origin。
 
+**差異判定 (Diff Logic)**：
+為了精確篩選出「待辦項目」，`PoHelper` 採用以下判定公式：
+*   **Newly**: Key 存在於 Template 但完全不存在於 `strings.po`。
+*   **MsgidChanged**: Key 在兩邊皆存在，但英文原文 (`msgid`) 已變動。
+*   **DraftChanged**: 暫存檔內容與正式翻譯檔內容不一致。
+
 ### 4.3. 資源與日誌系統
 
 #### 多語系與檔案資源管理 (Resources)
@@ -116,8 +123,8 @@
 
 1.  **待辦模式 (Default / Diff Mode)**
     *   **觸發時機**：搜尋模式未啟用時（預設狀態）。
-    *   **顯示內容**：僅顯示「有變更」或「新增」的項目 (`filteredList`)。
-    *   **目的**：讓使用者專注於需要處理的差異，類似 To-Do List。
+    *   **顯示內容**：僅顯示符合「差異判定」公式的項目：`(Newly || MsgidChanged || DraftChanged || SessionModified) && OriginalNotEmpty`。
+    *   **目的**：讓使用者專注於需要處理的差異，排除掉 2 萬多條已完成或無須翻譯的背景資料。
 
 2.  **全覽模式 (Search / Library Mode)**
     *   **觸發時機**：啟用搜尋模式 (`AppEvent.Search.ActiveChange(true)`)。
@@ -135,6 +142,12 @@
 *   **行為差異**：
     *   **存檔路徑**：檔案會寫入系統暫存目錄 (Temp)，而非遊戲真實目錄，避免開發時汙染環境。
     *   **除錯對話框**：存檔時會跳出 `DebugSaveDialog` 顯示寫入路徑。
+
+### 4.6. UI 互動細節 (UI Interactions)
+
+*   **Tooltip 系統**：
+    *   為了提升辨識度，全域採用「反轉色 (Inverse Surface)」與較大的字體 (`bodyMedium`)。
+    *   **邊界優化**：在靠近 Status Bar 的編輯器開關處，Tooltip 會自動調整至上方 (`Above`) 顯示，避免視覺遮擋。
 
 ---
 
