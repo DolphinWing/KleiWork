@@ -149,6 +149,11 @@
     *   為了提升辨識度，全域採用「反轉色 (Inverse Surface)」與較大的字體 (`bodyMedium`)。
     *   **邊界優化**：在靠近 Status Bar 的編輯器開關處，Tooltip 會自動調整至上方 (`Above`) 顯示，避免視覺遮擋。
 
+*   **AI 協作工作流 (AI-Assisted Workflow)**：
+    *   **智慧貼上 (Smart Paste)**：專為 Gemini Gems 網頁版設計。點擊魔法按鈕後，程式會自動從剪貼簿提取 `msgstr` 內容，解析轉義字元，並自動執行 `Save` 事件以達到「一鍵同步」。
+    *   **反悔機制 (Smart Undo)**：在智慧貼上後，會自動保存貼上前的手動內容。點擊「復原」按鈕可一鍵將文字框與檔案狀態同時還原。
+    *   **技術實作**：採用現代化的 `LocalClipboard` API 配合 Java AWT `Transferable` 轉型，實現非同步且穩定的剪貼簿存取。
+
 ---
 
 ## 5. 目錄結構 (Directory Structure)

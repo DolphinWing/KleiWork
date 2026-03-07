@@ -17,9 +17,11 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.AutoAwesome
 import androidx.compose.material.icons.rounded.ContentCopy
 import androidx.compose.material.icons.rounded.ContentPaste
 import androidx.compose.material.icons.rounded.Link
+import androidx.compose.material.icons.rounded.SettingsBackupRestore
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -44,9 +46,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
+import java.awt.datatransfer.DataFlavor
+import java.awt.datatransfer.Transferable
 import dolphin.desktop.apps.onitranslator.app.AppEvent
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.button_apply
@@ -55,14 +60,19 @@ import dolphin.desktop.apps.onitranslator.generated.resources.label_translated_t
 import dolphin.desktop.apps.onitranslator.generated.resources.nisbet_ponder
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_this_text
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_show_link
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_smart_paste
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_toggle_simplified
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_toggle_translated
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_undo_paste
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_use_this_text
 import dolphin.desktop.apps.onitranslator.model.EditorData
 import dolphin.desktop.apps.onitranslator.model.EntryTagType
 import dolphin.desktop.apps.onitranslator.model.PoEntry
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.TooltipIconButton
+import kotlinx.coroutines.launch
+import org.jetbrains.compose.resources.stringResource
+import androidx.compose.runtime.rememberCoroutineScope
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 
@@ -145,12 +155,16 @@ private fun EntryEditorSection(
     modifier: Modifier = Modifier,
 ) {
     var editedText by remember { mutableStateOf(entry.target.msgStr()) }
-    val isChanged = editedText != entry.target.msgStr()
+    var backupText by remember { mutableStateOf<String?>(null) }
     var showRefs by remember { mutableStateOf(true) }
     var showDraft by remember { mutableStateOf(true) }
+    val isChanged = editedText != (entry.target.str.trim())
+    val clipboard = LocalClipboard.current
+    val scope = rememberCoroutineScope()
 
-    LaunchedEffect(entry) {
+    LaunchedEffect(entry.target.key) {
         editedText = entry.target.msgStr()
+        backupText = null // Reset backup when switching entries
     }
 
     Column(
@@ -189,7 +203,7 @@ private fun EntryEditorSection(
             )
         )
 
-        Row(modifier = Modifier.fillMaxWidth()) {
+        Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
             entry.referenceText?.let {
                 SimpleSwitch(
                     checked = showRefs,
@@ -205,6 +219,56 @@ private fun EntryEditorSection(
                     type = EntryTagType.Translated
                 )
             }
+
+            Spacer(Modifier.width(16.dp))
+
+            // Smart Paste from Clipboard (Gemini Gems format) - Auto Apply
+            TooltipIconButton(
+                icon = Icons.Rounded.AutoAwesome,
+                tooltip = stringResource(Res.string.tooltip_smart_paste),
+                onClick = {
+                    scope.launch {
+                        try {
+                            // Using the modern LocalClipboard API
+                            // Ref: https://medium.com/@yamin.khan.mahdi/reading-clipboard-text-across-all-platforms-in-compose-multiplatform-cmp-7474ffc03f09
+                            clipboard.getClipEntry()?.let { clipEntry ->
+                                // On Desktop, ClipEntry wraps java.awt.datatransfer.Transferable
+                                // The property is accessible as nativeClipEntry in recent CMP versions
+                                val transferable = clipEntry.nativeClipEntry as? Transferable
+                                if (transferable != null && transferable.isDataFlavorSupported(DataFlavor.stringFlavor)) {
+                                    val clipboardText = transferable.getTransferData(DataFlavor.stringFlavor) as? String
+                                    if (clipboardText != null) {
+                                        extractMsgStr(clipboardText)?.let { parsedText ->
+                                            backupText = editedText // Save current manual text for undo
+                                            editedText = parsedText
+                                            // Auto Apply: trigger save event immediately
+                                            onEvent(AppEvent.Editor.Save(entry.target, parsedText))
+                                        }
+                                    }
+                                }
+                            }
+                        } catch (e: Exception) {
+                            // Silent fail for clipboard access issues
+                        }
+                    }
+                }
+            )
+
+            // Undo Smart Paste - Auto Apply back
+            if (backupText != null) {
+                TooltipIconButton(
+                    icon = Icons.Rounded.SettingsBackupRestore,
+                    tooltip = stringResource(Res.string.tooltip_undo_paste),
+                    onClick = {
+                        val textToRestore = backupText ?: ""
+                        editedText = textToRestore
+                        // Auto Apply: trigger save event to revert back
+                        onEvent(AppEvent.Editor.Save(entry.target, textToRestore))
+                        backupText = null // Clear backup after restore
+                    }
+                )
+            }
+
             Spacer(Modifier.weight(1f))
             TextButton(onClick = { onEvent(AppEvent.Editor.Select(null)) }) {
                 Text(stringResource(Res.string.button_cancel))
@@ -217,6 +281,18 @@ private fun EntryEditorSection(
             }
         }
     }
+}
+
+/**
+ * Extracts msgstr content from a PO-formatted string.
+ * Supports multi-line format and preserves escape characters like \n.
+ */
+private fun extractMsgStr(text: String): String? {
+    // Look for msgstr "..." pattern. 
+    // This regex matches the content inside the first msgstr found.
+    val regex = Regex("""msgstr\s+"((?:[^"\\]|\\.)*)"""")
+    val match = regex.find(text)
+    return match?.groupValues?.get(1) // Return the raw captured content, preserving \n
 }
 
 @Composable
