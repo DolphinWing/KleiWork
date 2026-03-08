@@ -22,10 +22,11 @@ fun TooltipIconButton(
     icon: ImageVector,
     tooltip: String,
     enabled: Boolean = true,
+    position: TooltipAnchorPosition = TooltipAnchorPosition.Below,
     onClick: () -> Unit,
 ) {
     TooltipBox(
-        positionProvider = TooltipDefaults.rememberTooltipPositionProvider(TooltipAnchorPosition.Below),
+        positionProvider = TooltipDefaults.rememberTooltipPositionProvider(position),
         tooltip = {
             Surface(
                 color = MaterialTheme.colorScheme.inverseSurface,

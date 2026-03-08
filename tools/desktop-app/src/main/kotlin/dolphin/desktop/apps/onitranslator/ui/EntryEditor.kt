@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalMaterial3Api::class)
+
 package dolphin.desktop.apps.onitranslator.ui
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
@@ -60,6 +62,8 @@ import dolphin.desktop.apps.onitranslator.generated.resources.button_cancel
 import dolphin.desktop.apps.onitranslator.generated.resources.label_translated_text
 import dolphin.desktop.apps.onitranslator.generated.resources.nisbet_ponder
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_this_text
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_peek_close
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_peek_open
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_show_link
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_smart_paste
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_toggle_simplified
@@ -259,7 +263,8 @@ private fun EditorActionRow(
         if (editedText.shouldPeek()) {
             TooltipIconButton(
                 icon = if (isPeeking) Icons.Rounded.VisibilityOff else Icons.Rounded.Visibility,
-                tooltip = if (isPeeking) "Stop peeking" else "Let Nisbet peek",
+                tooltip = if (isPeeking) stringResource(Res.string.tooltip_peek_close) else stringResource(Res.string.tooltip_peek_open),
+                position = TooltipAnchorPosition.Above,
                 onClick = { onPeekingChange(!isPeeking) }
             )
         }
@@ -267,6 +272,7 @@ private fun EditorActionRow(
         TooltipIconButton(
             icon = Icons.Rounded.AutoAwesome,
             tooltip = stringResource(Res.string.tooltip_smart_paste),
+            position = TooltipAnchorPosition.Above,
             onClick = {
                 performSmartPaste(
                     scope = scope,
@@ -286,6 +292,7 @@ private fun EditorActionRow(
             TooltipIconButton(
                 icon = Icons.Rounded.SettingsBackupRestore,
                 tooltip = stringResource(Res.string.tooltip_undo_paste),
+                position = TooltipAnchorPosition.Above,
                 onClick = {
                     onEditedTextChange(backupText)
                     onEvent(AppEvent.Editor.Save(entry.target, backupText))

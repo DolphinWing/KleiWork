@@ -51,6 +51,8 @@
     <string name="tooltip_toggle_translated">Show/Hide Draft or Existing translation</string>
     <string name="tooltip_smart_paste">Smart Paste from AI (msgstr)</string>
     <string name="tooltip_undo_paste">Undo Smart Paste</string>
+    <string name="tooltip_peek_open">Let Nisbet peek</string>
+    <string name="tooltip_peek_close">Stop peeking</string>
 
     <!-- NisbetPeek Quotes -->
     <string name="peek_quote_1">This translation looks great!</string>

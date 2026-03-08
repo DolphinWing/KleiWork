@@ -6,6 +6,7 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.desktop.ui.tooling.preview.Preview
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -62,6 +63,35 @@ import org.jetbrains.compose.resources.stringResource
 
 /**
  * NisbetPeek: The cute WYSIWYG preview for ONI strings.
+ * 
+ * [ONI Syntax Samples]
+ * 
+ * [Supported]
+ * - Color:   "Select <color=#ffff00>Blueprint</color>"
+ * - Link:    "<link=\"PLANTS\">Plants</link> can grow..."
+ * - Bold:    "Press <b>[P]</b> to focus."
+ * - Italic:  "<i>Italic text</i>"
+ * - Style:   "<style=\"KKeyword\">Skill</style>"
+ * - Newline: "First line.\\nSecond line."
+ * - Sub/Sup: "(O<sub>2</sub>)", "Relic<sup>TM</sup>"
+ * - Dynamic: "Press {Hotkey/Pan} to move"
+ * 
+ * [Pending/Analysis]
+ * - <b><style=\"logic_off\">Red Signal</style></b>: Set signal path to <b>up</b> position
+ * - This Duplicant receives a free <style=\"KKeyword\">Skill</style>
+ * - I can use {Hotkey/AnalogCamera} to pan my view.
+ * - (O<sub>2</sub>) Polluted Oxygen is dirty, unfiltered air.\n\nIt is breathable.
+ * - RelicAAAA<sup>AAAGHH</sup>
+ * - <smallcaps>「風化小行星」有頻繁的流星雨，且富含風化層，這是一種極為有用的過濾材料。</smallcaps>
+ * - <smallcaps>To: <b>Harold P. Moreson, PhD</b><alpha=#AA><size=12> <hmoreson@gravitas.nova></size></color>
+ * - <b>Your VIP package includes:</b><indent=5%>\n\n- An exclusive set of bespoke survival-supporting technology!
+ * - <size=11><i>*Discount applies to new memberships only. Standard joiner fees apply.</size></i>
+ * 
+ * [Analysis from Screenshots]
+ * - 0001.PNG: Lore/Email metadata uses gray text.
+ * - 0002.PNG: Item links use a distinct pink/magenta color.
+ * - 0003.PNG: Shortcuts and focus items use red or orange highlights.
+ * - 0004.PNG: Logic signals use green/red.
  */
 
 // ONI Game UI Color Palette
@@ -277,13 +307,14 @@ fun NisbetPeekDrawer(
         visible = visible,
         enter = slideInHorizontally { it } + fadeIn(),
         exit = slideOutHorizontally { it } + fadeOut(),
-        modifier = modifier.fillMaxHeight().width(320.dp)
+        modifier = modifier.fillMaxHeight().width(360.dp)
     ) {
         Surface(
             modifier = Modifier.fillMaxSize(),
-            color = MaterialTheme.colorScheme.surface.copy(alpha = 0.95f),
-            tonalElevation = 8.dp,
-            shadowElevation = 16.dp,
+            color = MaterialTheme.colorScheme.surfaceVariant,
+            tonalElevation = 4.dp,
+            shadowElevation = 8.dp,
+            // border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
         ) {
             Column(modifier = Modifier.padding(16.dp).verticalScroll(rememberScrollState())) {
                 Text(
@@ -297,32 +328,42 @@ fun NisbetPeekDrawer(
 
                 Spacer(Modifier.height(24.dp))
 
-                // Chat-style Interaction
+                // Chat-style Interaction: More lightweight and conversational
                 Row(
-                    verticalAlignment = Alignment.CenterVertically,
+                    verticalAlignment = Alignment.Bottom, // Align to bottom for a grounded feel
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     emotion?.let {
                         Image(
                             painter = painterResource(it.icon),
                             contentDescription = null,
-                            modifier = Modifier.size(64.dp).padding(end = 12.dp)
+                            modifier = Modifier
+                                .size(80.dp) // Slightly larger
+                                .padding(bottom = 4.dp)
                         )
                     }
 
                     Surface(
                         shape = RoundedCornerShape(
-                            topStart = 0.dp, topEnd = 12.dp, bottomStart = 12.dp, bottomEnd = 12.dp
+                            topStart = 16.dp, 
+                            topEnd = 16.dp, 
+                            bottomStart = 4.dp, 
+                            bottomEnd = 16.dp
                         ),
-                        color = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.4f),
-                        modifier = Modifier.weight(1f)
+                        color = MaterialTheme.colorScheme.surface, // Cleaner background
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.3f)),
+                        modifier = Modifier
+                            .weight(1f)
+                            .padding(bottom = 16.dp, end = 12.dp)
                     ) {
                         emotion?.let {
                             Text(
                                 stringResource(it.quote),
-                                style = MaterialTheme.typography.bodySmall,
-                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
-                                color = MaterialTheme.colorScheme.onSecondaryContainer
+                                style = MaterialTheme.typography.bodyMedium.copy(
+                                    // fontStyle = FontStyle.Italic // "Murmur" vibe
+                                ),
+                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 10.dp),
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
                         }
                     }
@@ -340,8 +381,8 @@ fun NisbetPeekCard(
     Surface(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(8.dp),
-        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f),
-        border = androidx.compose.foundation.BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
+        color = MaterialTheme.colorScheme.surface, // .copy(alpha = 0.3f),
+        border = BorderStroke(2.dp, MaterialTheme.colorScheme.outlineVariant)
     ) {
         Box(modifier = Modifier.padding(12.dp)) {
             Text(

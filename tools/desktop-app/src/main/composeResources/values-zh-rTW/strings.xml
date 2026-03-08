@@ -51,6 +51,8 @@
     <string name="tooltip_toggle_translated">顯示/隱藏 草稿或既有翻譯</string>
     <string name="tooltip_smart_paste">從剪貼簿智慧貼上 AI 翻譯 (msgstr)</string>
     <string name="tooltip_undo_paste">復原智慧貼上</string>
+    <string name="tooltip_peek_open">讓 Nisbet 偷看</string>
+    <string name="tooltip_peek_close">關閉預覽</string>
 
     <!-- NisbetPeek Quotes -->
     <string name="peek_quote_1">這段翻譯看起來不錯！</string>
