@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -49,26 +48,17 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.Clipboard
 import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import dolphin.desktop.apps.onitranslator.app.AppEvent
-import dolphin.desktop.apps.onitranslator.generated.resources.NisbetAnticipate
-import dolphin.desktop.apps.onitranslator.generated.resources.NisbetHigh
-import dolphin.desktop.apps.onitranslator.generated.resources.NisbetSorry
-import dolphin.desktop.apps.onitranslator.generated.resources.NisbetThinking
-import dolphin.desktop.apps.onitranslator.generated.resources.NisbetWhistle
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.button_apply
 import dolphin.desktop.apps.onitranslator.generated.resources.button_cancel
 import dolphin.desktop.apps.onitranslator.generated.resources.label_translated_text
 import dolphin.desktop.apps.onitranslator.generated.resources.nisbet_ponder
-import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_1
-import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_2
-import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_3
-import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_4
-import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_5
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_this_text
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_show_link
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_smart_paste
@@ -81,6 +71,7 @@ import dolphin.desktop.apps.onitranslator.model.EntryTagType
 import dolphin.desktop.apps.onitranslator.model.PoEntry
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.TooltipIconButton
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
@@ -110,50 +101,39 @@ fun EntryEditor(
     }
 }
 
-@Preview
-@Composable
-private fun EntryEditorPreviewEmpty() {
-    Column {
-        arrayOf(false, true).forEach { darkTheme ->
-            OniTranslatorTheme(darkTheme) {
-                Surface {
-                    EntryEditor(entry = null, modifier = Modifier.height(320.dp), onEvent = {})
+/**
+ * Internal logic for handling Smart Paste from clipboard.
+ */
+private fun performSmartPaste(
+    scope: CoroutineScope,
+    clipboard: Clipboard,
+    target: PoEntry,
+    onParsed: (String) -> Unit,
+    onSave: (PoEntry, String) -> Unit,
+    onError: (String) -> Unit
+) {
+    scope.launch {
+        try {
+            // Using the modern LocalClipboard API
+            // Ref: https://medium.com/@yamin.khan.mahdi/reading-clipboard-text-across-all-platforms-in-compose-multiplatform-cmp-7474ffc03f09
+            clipboard.getClipEntry()?.let { clipEntry ->
+                val transferable = clipEntry.nativeClipEntry as? Transferable
+                if (transferable != null && transferable.isDataFlavorSupported(DataFlavor.stringFlavor)) {
+                    val clipboardText = transferable.getTransferData(DataFlavor.stringFlavor) as? String
+                    if (clipboardText != null) {
+                        extractMsgStr(clipboardText)?.let { parsedText ->
+                            onParsed(parsedText)
+                            onSave(target, parsedText)
+                        } ?: onError("Invalid msgstr format. $clipboardText")
+                    } else {
+                        onError("No clip entry available.")
+                    }
+                } else {
+                    onError("No such clip entry.")
                 }
-            }
-        }
-    }
-}
-
-@Preview
-@Composable
-private fun EntryEditorPreviewLight() {
-    val sampleEntry = PoEntry(
-        key = "STRINGS.key",
-        id = "This is sample text",
-    )
-    val data = EditorData(sampleEntry, "sample text", "simplified text", "draftText text")
-
-    OniTranslatorTheme(darkTheme = false) {
-        Surface {
-            EntryEditor(entry = data, onEvent = {})
-        }
-    }
-}
-
-@Preview
-@Composable
-private fun EntryEditorPreviewDark() {
-    val sampleEntry = PoEntry(
-        key = "STRINGS.key",
-        text = "STRING.key",
-        id = "This is sample text",
-        str = "This is translated text",
-    )
-    val data = EditorData(sampleEntry, "sample text", "reference text")
-
-    OniTranslatorTheme(darkTheme = true) {
-        Surface {
-            EntryEditor(entry = data, onEvent = {})
+            } ?: onError("No clip entry found.")
+        } catch (e: Exception) {
+            onError(e.message ?: "fail to get clip entry")
         }
     }
 }
@@ -174,42 +154,20 @@ private fun EntryEditorSection(
     val clipboard = LocalClipboard.current
     val scope = rememberCoroutineScope()
 
-    // Random quote and emotion for NisbetPeek
-    val (peekQuote, peekAvatar) = remember(isPeeking) {
-        if (isPeeking) {
-            val quote = listOf(
-                Res.string.peek_quote_1,
-                Res.string.peek_quote_2,
-                Res.string.peek_quote_3,
-                Res.string.peek_quote_4,
-                Res.string.peek_quote_5
-            ).random()
-
-            val avatar = listOf(
-                Res.drawable.NisbetAnticipate,
-                Res.drawable.NisbetHigh,
-                Res.drawable.NisbetThinking,
-                Res.drawable.NisbetSorry,
-                Res.drawable.NisbetWhistle,
-            ).random()
-
-            quote to avatar
-        } else null to null
+    // emotion state is now encapsulated
+    val emotion = remember(isPeeking, editedText) {
+        if (isPeeking) NisbetEmotion.random(editedText) else null
     }
 
     LaunchedEffect(entry.target.key) {
         editedText = entry.target.msgStr()
-        backupText = null // Reset backup when switching entries
-        isPeeking = false // Reset preview when switching entries
+        backupText = null
+        isPeeking = false
     }
 
     Box(modifier = modifier.fillMaxSize()) {
-        // Main Editor Layer
         Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-                .padding(16.dp),
+            modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
             Text(
@@ -241,103 +199,111 @@ private fun EntryEditorSection(
                 )
             )
 
-            Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                entry.referenceText?.let {
-                    SimpleSwitch(
-                        checked = showRefs,
-                        onCheckedChange = { showRefs = it },
-                        type = EntryTagType.Simplified
-                    )
-                }
-                Spacer(Modifier.width(8.dp))
-                entry.draftText?.let {
-                    SimpleSwitch(
-                        checked = showDraft,
-                        onCheckedChange = { showDraft = it },
-                        type = EntryTagType.Translated
-                    )
-                }
-
-                Spacer(Modifier.width(16.dp))
-
-                // NisbetPeek Toggle: Shown only when entry has tags or long text
-                if (editedText.shouldPeek()) {
-                    TooltipIconButton(
-                        icon = if (isPeeking) Icons.Rounded.VisibilityOff else Icons.Rounded.Visibility,
-                        tooltip = if (isPeeking) "Close NisbetPeek" else "Let Nisbet peek",
-                        onClick = { isPeeking = !isPeeking }
-                    )
-                }
-
-                // Smart Paste from Clipboard (Gemini Gems format) - Auto Apply
-                TooltipIconButton(
-                    icon = Icons.Rounded.AutoAwesome,
-                    tooltip = stringResource(Res.string.tooltip_smart_paste),
-                    onClick = {
-                        scope.launch {
-                            // Using the modern LocalClipboard API
-                            // Ref: https://medium.com/@yamin.khan.mahdi/reading-clipboard-text-across-all-platforms-in-compose-multiplatform-cmp-7474ffc03f09
-                            try {
-                                clipboard.getClipEntry()?.let { clipEntry ->
-                                    // On Desktop, ClipEntry wraps java.awt.datatransfer.Transferable
-                                    // The property is accessible as nativeClipEntry in recent CMP versions
-                                    val transferable = clipEntry.nativeClipEntry as? Transferable
-                                    if (transferable != null && transferable.isDataFlavorSupported(DataFlavor.stringFlavor)) {
-                                        val clipboardText =
-                                            transferable.getTransferData(DataFlavor.stringFlavor) as? String
-                                        if (clipboardText != null) {
-                                            extractMsgStr(clipboardText)?.let { parsedText ->
-                                                backupText = editedText // Save current manual text for undo
-                                                editedText = parsedText
-                                                // Auto Apply: trigger save event immediately
-                                                onEvent(AppEvent.Editor.Save(entry.target, parsedText))
-                                            }
-                                        }
-                                    }
-                                }
-                            } catch (e: Exception) {
-                                // Silent fail for clipboard access issues
-                            }
-                        }
-                    }
-                )
-
-                // Undo Smart Paste - Auto Apply back
-                if (backupText != null) {
-                    TooltipIconButton(
-                        icon = Icons.Rounded.SettingsBackupRestore,
-                        tooltip = stringResource(Res.string.tooltip_undo_paste),
-                        onClick = {
-                            val textToRestore = backupText ?: ""
-                            editedText = textToRestore
-                            // Auto Apply: trigger save event to revert back
-                            onEvent(AppEvent.Editor.Save(entry.target, textToRestore))
-                            backupText = null // Clear backup after restore
-                        }
-                    )
-                }
-
-                Spacer(Modifier.weight(1f))
-                TextButton(onClick = { onEvent(AppEvent.Editor.Select(null)) }) {
-                    Text(stringResource(Res.string.button_cancel))
-                }
-                TextButton(
-                    onClick = { onEvent(AppEvent.Editor.Save(entry.target, editedText)) },
-                    enabled = isChanged,
-                ) {
-                    Text(stringResource(Res.string.button_apply))
-                }
-            }
+            EditorActionRow(
+                entry = entry,
+                editedText = editedText,
+                showRefs = showRefs,
+                onShowRefsChange = { showRefs = it },
+                showDraft = showDraft,
+                onShowDraftChange = { showDraft = it },
+                isPeeking = isPeeking,
+                onPeekingChange = { isPeeking = it },
+                backupText = backupText,
+                onEditedTextChange = { editedText = it },
+                onBackupTextChange = { backupText = it },
+                isChanged = isChanged,
+                onEvent = onEvent,
+                clipboard = clipboard,
+                scope = scope
+            )
         }
 
-        // NisbetPeek: Side Drawer Component
         NisbetPeekDrawer(
             visible = isPeeking && editedText.shouldPeek(),
             text = editedText,
-            avatar = peekAvatar?.let { painterResource(it) },
-            quote = peekQuote,
+            emotion = emotion,
             modifier = Modifier.align(Alignment.CenterEnd)
         )
+    }
+}
+
+@Composable
+private fun EditorActionRow(
+    entry: EditorData,
+    editedText: String,
+    showRefs: Boolean,
+    onShowRefsChange: (Boolean) -> Unit,
+    showDraft: Boolean,
+    onShowDraftChange: (Boolean) -> Unit,
+    isPeeking: Boolean,
+    onPeekingChange: (Boolean) -> Unit,
+    backupText: String?,
+    onEditedTextChange: (String) -> Unit,
+    onBackupTextChange: (String?) -> Unit,
+    isChanged: Boolean,
+    onEvent: (AppEvent) -> Unit,
+    clipboard: Clipboard,
+    scope: CoroutineScope
+) {
+    Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+        entry.referenceText?.let {
+            SimpleSwitch(checked = showRefs, onCheckedChange = onShowRefsChange, type = EntryTagType.Simplified)
+        }
+        Spacer(Modifier.width(8.dp))
+        entry.draftText?.let {
+            SimpleSwitch(checked = showDraft, onCheckedChange = onShowDraftChange, type = EntryTagType.Translated)
+        }
+
+        Spacer(Modifier.width(16.dp))
+
+        if (editedText.shouldPeek()) {
+            TooltipIconButton(
+                icon = if (isPeeking) Icons.Rounded.VisibilityOff else Icons.Rounded.Visibility,
+                tooltip = if (isPeeking) "Stop peeking" else "Let Nisbet peek",
+                onClick = { onPeekingChange(!isPeeking) }
+            )
+        }
+
+        TooltipIconButton(
+            icon = Icons.Rounded.AutoAwesome,
+            tooltip = stringResource(Res.string.tooltip_smart_paste),
+            onClick = {
+                performSmartPaste(
+                    scope = scope,
+                    clipboard = clipboard,
+                    target = entry.target,
+                    onParsed = { parsed ->
+                        onBackupTextChange(editedText)
+                        onEditedTextChange(parsed)
+                    },
+                    onSave = { target, text -> onEvent(AppEvent.Editor.Save(target, text)) },
+                    onError = { onEvent(AppEvent.Editor.SmartCopyError(it)) }
+                )
+            }
+        )
+
+        if (backupText != null) {
+            TooltipIconButton(
+                icon = Icons.Rounded.SettingsBackupRestore,
+                tooltip = stringResource(Res.string.tooltip_undo_paste),
+                onClick = {
+                    onEditedTextChange(backupText)
+                    onEvent(AppEvent.Editor.Save(entry.target, backupText))
+                    onBackupTextChange(null)
+                }
+            )
+        }
+
+        Spacer(Modifier.weight(1f))
+        TextButton(onClick = { onEvent(AppEvent.Editor.Select(null)) }) {
+            Text(stringResource(Res.string.button_cancel))
+        }
+        TextButton(
+            onClick = { onEvent(AppEvent.Editor.Save(entry.target, editedText)) },
+            enabled = isChanged,
+        ) {
+            Text(stringResource(Res.string.button_apply))
+        }
     }
 }
 

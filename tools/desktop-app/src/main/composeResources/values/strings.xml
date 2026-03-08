@@ -58,6 +58,9 @@
     <string name="peek_quote_3">Phew, long story! Well done.</string>
     <string name="peek_quote_4">Duplicants can definitely read this!</string>
     <string name="peek_quote_5">This text feels full of oxygen.</string>
+    <string name="peek_quote_error_1">Oops, did you forget to close a tag?</string>
+    <string name="peek_quote_error_2">Nisbet is a bit confused by this syntax...</string>
+    <string name="peek_quote_error_3">Is this a new type of tag? I don\'t recognize it.</string>
     <string name="peek_title">Nisbet is peeking...</string>
 
     <!-- Content Descriptions -->

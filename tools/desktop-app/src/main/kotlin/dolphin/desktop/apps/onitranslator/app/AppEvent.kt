@@ -55,6 +55,9 @@ sealed interface AppEvent {
 
         // Update the content of a specific translation entry
         data class Save(val entry: PoEntry, val newText: String) : Editor
+
+        // Smart Copy from AI
+        data class SmartCopyError(val message: String) : Editor
     }
 
     /**

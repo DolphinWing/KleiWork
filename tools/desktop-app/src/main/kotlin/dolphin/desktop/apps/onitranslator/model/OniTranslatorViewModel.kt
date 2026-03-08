@@ -69,6 +69,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                 // Editor
                 is AppEvent.Editor.Select -> loadEditorData(event.entry)
                 is AppEvent.Editor.Save -> edit(event.entry.key, event.newText)
+                is AppEvent.Editor.SmartCopyError -> SnackbarManager.showMessage(event.message)
 
                 // UI & System
                 is AppEvent.Ui -> onUiEvent(event)

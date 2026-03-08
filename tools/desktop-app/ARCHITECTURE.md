@@ -155,9 +155,11 @@
     *   **技術實作**：採用現代化的 `LocalClipboard` API 配合 Java AWT `Transferable` 轉型，實現非同步且穩定的剪貼簿存取。
 
 *   **NisbetPeek 視覺預覽系統**：
-    *   **智慧感應 (Smart Sensor)**：系統會自動偵測翻譯內容是否包含換行符號 (`\n`)、遊戲標籤 (如 `<color>`, `<link>`) 或長度是否值得預覽。若符合條件，右上角將浮現預覽圖示。
-    *   **對話式預覽 (Conversational UI)**：採用右側滑入式抽屜 (Side Drawer)，模擬遊戲中的資料庫面板。面板下方整合了 Nisbet 的情緒系統，每次開啟都會隨機出現不同表情的頭像（如 Anticipate, High, Thinking）與多語系鼓勵語錄。
-    *   **渲染引擎 (Rendering Engine)**：獨立模組 `NisbetPeek.kt` 負責將原始碼轉化為 `AnnotatedString`。支援標籤染色、粗體處理與視覺化換行，並定義了一套符合遊戲截圖規格的「ONI 調色盤 (OniColor)」。
+    *   **架構設計 (Logic/UI Separation)**：系統分為純邏輯解析層 (`toOniTokens`) 與 UI 渲染層 (`peek`)。解析層將原始碼拆解為 `OniToken` 列表，完全不依賴 UI 框架，便於執行高效率的單元測試。
+    *   **標籤守護 (Tag Safety)**：渲染引擎內建 `tagStack` 機制，能精確處理巢狀標籤並修正未閉合或錯位的語法（如 Klei 原廠文件中的 Bug）。
+    *   **智慧感應與偵錯 (Smart Sensor & Debug)**：系統除了自動偵測預覽時機外，還能預檢語法錯誤 (`hasOniSyntaxError`)。未知標籤會以「紅色底線」高亮，多餘或錯誤標籤則會以「淡紅色」顯示。
+    *   **情緒化回饋 (Emotional Interaction)**：整合 `NisbetEmotion` 選擇器。當偵測到語法錯誤時，Nisbet 會自動切換至「抱歉 (NisbetSorry)」表情，並給予針對性的糾錯建議語錄；正常時則隨機展現期待、興奮或沉思等動態情緒。
+    *   **渲染規格**：定義了獨立的「ONI 調色盤 (OniColor)」，模擬遊戲中連結 (Pink)、警告 (Red)、關鍵字 (Orange) 與插值 (Blue) 的真實視覺感。
 
 ---
 

@@ -54,11 +54,14 @@
 
     <!-- NisbetPeek Quotes -->
     <string name="peek_quote_1">這段翻譯看起來不錯！</string>
-    <string name="peek_quote_2">Nisbet 覺得妳翻得超級精準！</string>
-    <string name="peek_quote_3">呼，這段長文辛苦妳了。</string>
+    <string name="peek_quote_2">Nisbet 覺得翻得超級精準！</string>
+    <string name="peek_quote_3">呼，這段長文辛苦了。</string>
     <string name="peek_quote_4">複製人絕對看得懂這段文字！</string>
     <string name="peek_quote_5">這段文字讀起來充滿了氧氣。</string>
-    <string name="peek_title">Nisbet 正在幫妳偷看...</string>
+    <string name="peek_quote_error_1">哎呀，標籤好像忘了關？</string>
+    <string name="peek_quote_error_2">Nisbet 有點看不懂這段語法...</string>
+    <string name="peek_quote_error_3">這是新出的標籤嗎？我不認識它。</string>
+    <string name="peek_title">Nisbet 正在偷看...</string>
 
     <!-- Content Descriptions -->
     <string name="content_description_back">返回</string>
