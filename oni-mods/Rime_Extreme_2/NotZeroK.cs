@@ -252,5 +252,23 @@ namespace NotZeroK
                     }
             }
         }
+
+        [HarmonyPatch(typeof(ClusterPOIManager), "RegisterTemporalTear")]
+        public static class ClusterPOIManager_RegisterTemporalTear_Patch
+        {
+            public static void Postfix(TemporalTear temporalTear, ClusterPOIManager __instance)
+            {
+                // PUtil.LogDebug("ClusterPOIManager_RegisterTemporalTear_Patch.Postfix");
+
+                if (NotZeroK.IsMe() == false) return; // we only cares about ABZ
+
+                var options = POptions.ReadSettings<NotZeroOptions>() ?? new NotZeroOptions();
+                if (options.Critter)
+                {
+                    PUtil.LogDebug("Spawn all to save all backwalls devs need.");
+                    SaveGame.Instance.worldGenSpawner.SpawnEverything();
+                }
+            }
+        }
     }
 }
