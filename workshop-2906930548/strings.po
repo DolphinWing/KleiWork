@@ -10158,7 +10158,7 @@ msgstr "當免受太空真空的干擾時，更容易專注於工作。"
 #. STRINGS.BUILDINGS.PREFABS.CLUSTERTELESCOPEENCLOSED.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.CLUSTERTELESCOPEENCLOSED.EFFECT"
 msgid "Reveals visitable Planetoids in space and produces <link=\"DATABANK\">Data Banks</link>... in comfort!\n\nAssigned Duplicants must possess the <link=\"ASTRONOMY\">Astronomy</link> skill.\n\nExcellent sunburn protection (100%), partial <link=\"RADIATION\">Radiation</link> protection (50%) .\n\nBuilding must be exposed to space to function."
-msgstr "揭露太空中可拜訪的小行星，並產出<link=\"DATABANK\">資料磁片</link>…而且很舒適！\n\n分配的複製人必須具備<link=\"ASTRONOMY\">天文學</link>技能。\n\n極佳的曬傷保護 (100%) 與部分<link=\"RADIATION\">輻射</link>保護 (50%)。\n\n建築必須暴露在太空中才能運作。"
+msgstr "舒適地揭露太空中可拜訪的小行星，並產生 <link=\"DATABANK\">資料磁片</link>。\n\n指派的複製人必須具備 <link=\"ASTRONOMY\">天文學</link> 技能。\n\n提供極佳的曬傷保護 (100%) 與部分 <link=\"RADIATION\">輻射</link> 防護 (50%)。\n\n建築物必須暴露在太空中才能運作。"
 
 #. STRINGS.BUILDINGS.PREFABS.CLUSTERTELESCOPEENCLOSED.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.CLUSTERTELESCOPEENCLOSED.NAME"

@@ -10,32 +10,39 @@ namespace FontLoader.Utils
     {
         public static TMP_FontAsset LoadFontAsset(FontConfig config)
         {
-            TMP_FontAsset font = null;
-            AssetBundle ab = null;
             try
             {
                 var platform = Application.platform == RuntimePlatform.WindowsPlayer ? "win": "other";
                 var assetPath = Path.Combine(ConfigManager.Instance.configPath, "Assets", platform, config.Filename);
                 Debug.Log("[FontLoader] " + platform + " " + assetPath);
-                ab = AssetBundle.LoadFromFile(assetPath);
+
+                AssetBundle ab = AssetBundle.LoadFromFile(assetPath);
 
                 if (ab == null) {
                     Debug.LogWarning("[FontLoader] Unable to load font asset.");
                     return null;
                 }
 
-                var assets = ab.LoadAllAssets<TMP_FontAsset>();
-                if (assets.Length <= 0) {
-                    Debug.LogWarning("[FontLoader] Unable to load all assets.");
+                // 2. 獲取字體
+                var font = ab.LoadAsset<TMP_FontAsset>(ab.GetAllAssetNames()[0]);
+                if (font == null)
+                {
+                    Debug.LogWarning("[FontLoader] TMP_FontAsset not found in bundle.");
+                    ab.Unload(true);
                     return null;
                 }
 
-                font = assets[0];
-                font.fontInfo.Scale = config.Scale;
+                // font.faceInfo.scale = config.Scale;
 
                 if (Application.platform == RuntimePlatform.LinuxPlayer) {
-                    font.material.shader = Resources.Load<TMP_FontAsset>("RobotoCondensed-Regular").material.shader;
+                    var sourceFont = Resources.Load<TMP_FontAsset>("RobotoCondensed-Regular");
+                    if (sourceFont != null)
+                    {
+                        font.material.shader = sourceFont.material.shader;
+                    }
                 }
+                
+                return font;
             }
             catch (Exception e)
             {
@@ -43,7 +50,7 @@ namespace FontLoader.Utils
             }
 
             AssetBundle.UnloadAllAssetBundles(false);
-            return font;
+            return null;
         }
     }
 }

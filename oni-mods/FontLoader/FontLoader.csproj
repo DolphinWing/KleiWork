@@ -1,60 +1,39 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <Authors>DolphinWing</Authors>
-    <Copyright>Copyright@2020</Copyright>
+    <Copyright>Copyright @ 2026</Copyright>
     <Description>ONI Font Loader. rebuilt by DolphinWing.</Description>
+    
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    
     <AssemblyTitle>FontLoader</AssemblyTitle>
-    <AssemblyVersion>2025.05.25.0</AssemblyVersion>
-    <FileVersion>2025.03.25.0</FileVersion>
-    <Product>ONI FontLoader</Product>
-    <Version>2.1.0</Version>
-    <Company />
+    <Version>2.2.0</Version>
+    <FileVersion>2026.03.13.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Assets\**" />
-    <EmbeddedResource Remove="Assets\**" />
-    <None Remove="Assets\**" />
+    <PackageReference Include="PLib" Version="4.19.0" /> 
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="README.md" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="PLib" Version="4.17.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>lib\0Harmony.dll</HintPath>
+    <Reference Include="0Harmony" HintPath="lib\0Harmony.dll" Private="True" />
+    <Reference Include="Assembly-CSharp" HintPath="lib\Assembly-CSharp.dll" Private="True" />
+    <Reference Include="Assembly-CSharp-firstpass" HintPath="lib\Assembly-CSharp-firstpass.dll" Private="True" />
+    <Reference Include="UnityEngine" HintPath="lib\UnityEngine.dll" Private="True" />
+    <Reference Include="UnityEngine.AssetBundleModule" HintPath="lib\UnityEngine.AssetBundleModule.dll" Private="True" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="lib\UnityEngine.CoreModule.dll" Private="True" />
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>lib\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>lib\Assembly-CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>lib\Assembly-CSharp-firstpass.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json.dll">
+    <Reference Include="UnityEngine.UI" HintPath="lib\UnityEngine.UI.dll" Private="True" />
+    <Reference Include="Unity.TextMeshPro" HintPath="lib\Unity.TextMeshPro.dll" Private="True" />
+    <Reference Include="Newtonsoft.Json">
       <HintPath>lib\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine">
-      <HintPath>lib\UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>lib\UnityEngine.AssetBundleModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>lib\UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>lib\UnityEngine.UI.dll</HintPath>
-    </Reference>
-      <Reference Include="Unity.TextMeshPro">
-      <HintPath>lib\Unity.TextMeshPro.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
 
