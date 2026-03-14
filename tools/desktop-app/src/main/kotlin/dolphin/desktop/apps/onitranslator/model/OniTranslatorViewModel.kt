@@ -258,10 +258,11 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         updateUiState { it.copy(searchState = it.searchState.copy(text = text, type = type)) }
         val searchResult = helper?.allValues()?.filter { item ->
             when (type) {
-                SearchType.Origin -> item.msgId()
-                SearchType.Key -> item.key()
-                SearchType.Text -> item.msgStr()
-            }.contains(text, ignoreCase = true)
+                SearchType.Origin -> item.msgId().contains(text, ignoreCase = true)
+                SearchType.Key -> item.key().contains(text, ignoreCase = true)
+                SearchType.Text -> item.msgStr().contains(text, ignoreCase = true)
+                SearchType.Diagnostic -> item.diagnostic?.hasIssue == true
+            }
         }?.mapNotNull { entry -> requestEditorData(entry) } ?: emptyList()
         updateUiState { it.copy(searchState = it.searchState.copy(results = searchResult)) }
     }

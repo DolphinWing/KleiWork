@@ -65,6 +65,14 @@
     <string name="peek_quote_error_3">Is this a new type of tag? I don\'t recognize it.</string>
     <string name="peek_title">Nisbet is peeking...</string>
 
+    <!-- Tag Sensor -->
+    <string name="tag_sensor_title">Tag Sensor Report</string>
+    <string name="tag_sensor_label">Tag Sensor</string>
+    <string name="tag_sensor_source_error">• Source tag syntax error (Klei Bug)</string>
+    <string name="tag_sensor_target_error">• Target tag syntax error</string>
+    <string name="tag_sensor_mismatch">• %1$s: Source(%2$d) vs Target(%3$d)</string>
+    <string name="content_description_tag_sensor_warning">Tag Sensor Warning</string>
+
     <!-- Content Descriptions -->
     <string name="content_description_back">Back</string>
     <string name="content_description_clear">Clear</string>

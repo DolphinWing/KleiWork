@@ -73,6 +73,8 @@ import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_use_this_t
 import dolphin.desktop.apps.onitranslator.model.EditorData
 import dolphin.desktop.apps.onitranslator.model.EntryTagType
 import dolphin.desktop.apps.onitranslator.model.PoEntry
+import dolphin.desktop.apps.onitranslator.model.TagDiagnostic
+import dolphin.desktop.apps.onitranslator.model.TagSensor
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.TooltipIconButton
 import kotlinx.coroutines.CoroutineScope
@@ -163,6 +165,11 @@ private fun EntryEditorSection(
         if (isPeeking) NisbetEmotion.random(editedText) else null
     }
 
+    // Live tag sensor diagnostic
+    val liveDiagnostic = remember(editedText, entry.templateText) {
+        TagSensor.diagnose(entry.templateText, editedText)
+    }
+
     LaunchedEffect(entry.target.key) {
         editedText = entry.target.msgStr()
         backupText = null
@@ -218,14 +225,17 @@ private fun EntryEditorSection(
                 isChanged = isChanged,
                 onEvent = onEvent,
                 clipboard = clipboard,
-                scope = scope
+                scope = scope,
+                diagnostic = liveDiagnostic
             )
         }
 
         NisbetPeekDrawer(
-            visible = isPeeking && editedText.shouldPeek(),
+            visible = isPeeking && editedText.shouldPeek(liveDiagnostic),
             text = editedText,
             emotion = emotion,
+            diagnostic = liveDiagnostic,
+            onDismiss = { isPeeking = false },
             modifier = Modifier.align(Alignment.CenterEnd)
         )
     }
@@ -247,7 +257,8 @@ private fun EditorActionRow(
     isChanged: Boolean,
     onEvent: (AppEvent) -> Unit,
     clipboard: Clipboard,
-    scope: CoroutineScope
+    scope: CoroutineScope,
+    diagnostic: TagDiagnostic? = null,
 ) {
     Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
         entry.referenceText?.let {
@@ -260,7 +271,7 @@ private fun EditorActionRow(
 
         Spacer(Modifier.width(16.dp))
 
-        if (editedText.shouldPeek()) {
+        if (editedText.shouldPeek(diagnostic)) {
             TooltipIconButton(
                 icon = if (isPeeking) Icons.Rounded.VisibilityOff else Icons.Rounded.Visibility,
                 tooltip = if (isPeeking) stringResource(Res.string.tooltip_peek_close) else stringResource(Res.string.tooltip_peek_open),

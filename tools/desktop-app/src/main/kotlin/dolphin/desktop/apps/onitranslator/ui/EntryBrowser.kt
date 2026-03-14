@@ -25,6 +25,8 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.AssignmentTurnedIn
 import androidx.compose.material.icons.rounded.Refresh
+import androidx.compose.material.icons.rounded.Search
+import androidx.compose.material.icons.rounded.SensorWindow
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -52,6 +54,8 @@ import androidx.compose.ui.unit.dp
 import dolphin.desktop.apps.onitranslator.app.AppEvent
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.button_refresh
+import dolphin.desktop.apps.onitranslator.generated.resources.button_search
+import dolphin.desktop.apps.onitranslator.generated.resources.content_description_tag_sensor_warning
 import dolphin.desktop.apps.onitranslator.generated.resources.empty_list_message
 import dolphin.desktop.apps.onitranslator.generated.resources.empty_list_title
 import dolphin.desktop.apps.onitranslator.model.AppState
@@ -116,13 +120,24 @@ fun EntryBrowser(
                         textAlign = androidx.compose.ui.text.style.TextAlign.Center
                     )
                     Spacer(modifier = Modifier.height(8.dp))
-                    ElevatedButton(
-                        onClick = { onEvent(AppEvent.File.RefreshSource) },
-                        contentPadding = PaddingValues(horizontal = 24.dp, vertical = 12.dp)
-                    ) {
-                        Icon(Icons.Rounded.Refresh, contentDescription = null)
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Text(stringResource(Res.string.button_refresh))
+                    Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                        ElevatedButton(
+                            onClick = { onEvent(AppEvent.File.RefreshSource) },
+                            contentPadding = PaddingValues(horizontal = 24.dp, vertical = 12.dp)
+                        ) {
+                            Icon(Icons.Rounded.Refresh, contentDescription = null)
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text(stringResource(Res.string.button_refresh))
+                        }
+
+                        ElevatedButton(
+                            onClick = { onEvent(AppEvent.Search.ActiveChange(true)) },
+                            contentPadding = PaddingValues(horizontal = 24.dp, vertical = 12.dp)
+                        ) {
+                            Icon(Icons.Rounded.Search, contentDescription = null)
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text(stringResource(Res.string.button_search))
+                        }
                     }
                 }
             }
@@ -208,6 +223,20 @@ private fun EntryItemView(
                         modifier = Modifier.padding(horizontal = 8.dp)
                     )
                 }
+
+                // Tag Sensor Indicator
+                data.target.diagnostic?.let { diag ->
+                    if (diag.hasIssue) {
+                        val tint = if (diag.hasMismatch) OniColor.Warning else OniColor.Highlight
+                        Icon(
+                            Icons.Rounded.SensorWindow,
+                            contentDescription = stringResource(Res.string.content_description_tag_sensor_warning),
+                            tint = tint,
+                            modifier = Modifier.padding(horizontal = 4.dp).width(14.dp).height(14.dp)
+                        )
+                    }
+                }
+
                 Text((index + 1).toString(), style = MaterialTheme.typography.labelSmall)
             }
 

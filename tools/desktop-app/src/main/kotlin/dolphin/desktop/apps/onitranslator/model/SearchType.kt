@@ -1,5 +1,5 @@
 package dolphin.desktop.apps.onitranslator.model
 
 enum class SearchType {
-    Key, Origin, Text,
+    Key, Origin, Text, Diagnostic,
 }

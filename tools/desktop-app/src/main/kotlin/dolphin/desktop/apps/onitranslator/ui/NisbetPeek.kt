@@ -23,6 +23,10 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.Close
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -46,6 +50,7 @@ import dolphin.desktop.apps.onitranslator.generated.resources.NisbetSorry
 import dolphin.desktop.apps.onitranslator.generated.resources.NisbetThinking
 import dolphin.desktop.apps.onitranslator.generated.resources.NisbetWhistle
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.button_close
 import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_1
 import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_2
 import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_3
@@ -55,6 +60,11 @@ import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_error_1
 import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_error_2
 import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_error_3
 import dolphin.desktop.apps.onitranslator.generated.resources.peek_title
+import dolphin.desktop.apps.onitranslator.generated.resources.tag_sensor_mismatch
+import dolphin.desktop.apps.onitranslator.generated.resources.tag_sensor_source_error
+import dolphin.desktop.apps.onitranslator.generated.resources.tag_sensor_target_error
+import dolphin.desktop.apps.onitranslator.generated.resources.tag_sensor_title
+import dolphin.desktop.apps.onitranslator.model.TagDiagnostic
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
@@ -160,13 +170,20 @@ fun String.toOniTokens(): List<OniToken> {
         }
 
         val value = match.value
-        when {
-            value.startsWith("{") -> tokens.add(OniToken.Dynamic(value))
-            value.startsWith("</") -> tokens.add(OniToken.ClosingTag(value.substring(2, value.length - 1).lowercase()))
-            else -> {
-                val tagName = value.substring(1, value.length - 1).split("=")[0].split(" ")[0].lowercase()
+        if (value.startsWith("{") && value.endsWith("}")) {
+            tokens.add(OniToken.Dynamic(value))
+        } else if (value.startsWith("</") && value.endsWith(">")) {
+            tokens.add(OniToken.ClosingTag(value.substring(2, value.length - 1).lowercase()))
+        } else if (value.startsWith("<") && value.endsWith(">")) {
+            if (value.contains("@")) { // High probability of being an email address
+                tokens.add(OniToken.Plain(match.value))
+            } else {
+                val content = value.substring(1, value.length - 1)
+                val tagName = content.split("=")[0].split(" ")[0].lowercase()
                 tokens.add(OniToken.OpeningTag(tagName, value))
             }
+        } else {
+            tokens.add(OniToken.Plain(value))
         }
         currentIndex = match.range.last + 1
     }
@@ -235,6 +252,8 @@ fun String.peek(): AnnotatedString {
 
                         "alpha" -> SpanStyle(color = MaterialTheme.colorScheme.onSurface.copy(alpha = defaultAlpha))
                         "size" -> SpanStyle(fontSize = 12.sp)
+                        "smallcaps" -> SpanStyle(fontFeatureSettings = "smcp")
+                        "indent" -> SpanStyle(baselineShift = BaselineShift.None) // Indent is hard to simulate in SpanStyle, but we keep it safe
                         else -> {
                             SpanStyle(
                                 color = OniColor.Warning,
@@ -244,7 +263,7 @@ fun String.peek(): AnnotatedString {
                         }
                     }
 
-                    if (token.name in listOf("b", "i", "link", "sub", "sup", "style", "color", "alpha", "size")) {
+                    if (token.name in listOf("b", "i", "link", "sub", "sup", "style", "color", "alpha", "size", "smallcaps", "indent")) {
                         tagStack.add(token.name)
                         pushStyle(style)
                     } else {
@@ -262,9 +281,10 @@ fun String.peek(): AnnotatedString {
 /**
  * The smart sensor that decides if an entry is interesting enough for Nisbet to peek.
  */
-fun String.shouldPeek(): Boolean {
+fun String.shouldPeek(diagnostic: TagDiagnostic? = null): Boolean {
     if (this.isBlank()) return false
-    val hasNewline = this.contains("\\n")
+    if (diagnostic?.hasIssue == true) return true // Always peek if there are tag issues
+    val hasNewline = this.contains("\\n") || this.contains("\n")
     val hasTags = this.contains("<") || this.contains("{")
     val isLong = this.length > 100
     return hasNewline || hasTags || isLong
@@ -276,7 +296,7 @@ fun String.shouldPeek(): Boolean {
 fun String.hasOniSyntaxError(): Boolean {
     val tokens = this.toOniTokens()
     val tagStack = mutableListOf<String>()
-    val knownTags = listOf("b", "i", "link", "sub", "sup", "style", "color", "alpha", "size")
+    val knownTags = listOf("b", "i", "link", "sub", "sup", "style", "color", "alpha", "size", "smallcaps", "indent")
 
     tokens.forEach { token ->
         when (token) {
@@ -301,6 +321,8 @@ fun NisbetPeekDrawer(
     visible: Boolean,
     text: String,
     emotion: NisbetEmotion?,
+    diagnostic: TagDiagnostic? = null,
+    onDismiss: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     AnimatedVisibility(
@@ -317,14 +339,36 @@ fun NisbetPeekDrawer(
             // border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
         ) {
             Column(modifier = Modifier.padding(16.dp).verticalScroll(rememberScrollState())) {
-                Text(
-                    stringResource(Res.string.peek_title),
-                    style = MaterialTheme.typography.titleSmall,
-                    color = MaterialTheme.colorScheme.secondary,
-                    modifier = Modifier.padding(bottom = 12.dp)
-                )
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        stringResource(Res.string.peek_title),
+                        style = MaterialTheme.typography.titleSmall,
+                        color = MaterialTheme.colorScheme.secondary,
+                        modifier = Modifier.padding(bottom = 12.dp)
+                    )
+                    IconButton(onClick = onDismiss, modifier = Modifier.size(24.dp)) {
+                        Icon(
+                            Icons.Rounded.Close,
+                            contentDescription = stringResource(Res.string.button_close),
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+
+                }
 
                 NisbetPeekCard(text = text)
+
+                // Tag Sensor Report
+                diagnostic?.let { diag ->
+                    if (diag.hasIssue) {
+                        Spacer(Modifier.height(16.dp))
+                        DiagnosticReport(diag)
+                    }
+                }
 
                 Spacer(Modifier.height(24.dp))
 
@@ -345,9 +389,9 @@ fun NisbetPeekDrawer(
 
                     Surface(
                         shape = RoundedCornerShape(
-                            topStart = 16.dp, 
-                            topEnd = 16.dp, 
-                            bottomStart = 4.dp, 
+                            topStart = 16.dp,
+                            topEnd = 16.dp,
+                            bottomStart = 4.dp,
                             bottomEnd = 16.dp
                         ),
                         color = MaterialTheme.colorScheme.surface, // Cleaner background
@@ -369,6 +413,52 @@ fun NisbetPeekDrawer(
                     }
                 }
             }
+        }
+    }
+}
+
+@Composable
+fun DiagnosticReport(diagnostic: TagDiagnostic) {
+    Surface(
+        color = MaterialTheme.colorScheme.surface,
+        shape = RoundedCornerShape(8.dp),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.3f))
+    ) {
+        Column(modifier = Modifier.padding(12.dp)) {
+            Text(
+                stringResource(Res.string.tag_sensor_title),
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.primary,
+                fontWeight = FontWeight.Bold
+            )
+            Spacer(Modifier.height(8.dp))
+
+            if (diagnostic.sourceError) {
+                Text(
+                    stringResource(Res.string.tag_sensor_source_error),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = OniColor.Highlight
+                )
+            }
+
+            if (diagnostic.targetError) {
+                Text(
+                    stringResource(Res.string.tag_sensor_target_error),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = OniColor.Warning
+                )
+            }
+
+            val report = diagnostic.getDiffReport()
+            report.forEach { (tag, diff) ->
+                Text(
+                    stringResource(Res.string.tag_sensor_mismatch, tag, diff.first, diff.second),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = if (diff.first == diff.second) MaterialTheme.colorScheme.onSurface 
+                            else OniColor.Warning
+                )
+            }
+
         }
     }
 }

@@ -11,8 +11,8 @@
     <string name="button_save">儲存</string>
     <string name="button_search">搜尋</string>
     <string name="menu_save_file">儲存檔案</string>
-    <string name="menu_draft">草稿</string>
-    <string name="menu_show_logs">顯示日誌</string>
+    <string name="menu_draft">儲存草稿</string>
+    <string name="menu_show_logs">查看日誌</string>
     <string name="menu_settings">設定</string>
     <string name="quick_setup">快速設定</string>
     <string name="manual_setup">手動設定</string>
@@ -64,6 +64,14 @@
     <string name="peek_quote_error_2">Nisbet 有點看不懂這段語法...</string>
     <string name="peek_quote_error_3">這是新出的標籤嗎？我不認識它。</string>
     <string name="peek_title">Nisbet 正在偷看...</string>
+
+    <!-- Tag Sensor -->
+    <string name="tag_sensor_title">標籤感測報告</string>
+    <string name="tag_sensor_label">標籤診斷</string>
+    <string name="tag_sensor_source_error">• 原文標籤語法錯誤 (Klei Bug)</string>
+    <string name="tag_sensor_target_error">• 譯文標籤語法錯誤</string>
+    <string name="tag_sensor_mismatch">• %1$s: 原文(%2$d) vs 譯文(%3$d)</string>
+    <string name="content_description_tag_sensor_warning">標籤感測器警告</string>
 
     <!-- Content Descriptions -->
     <string name="content_description_back">返回</string>

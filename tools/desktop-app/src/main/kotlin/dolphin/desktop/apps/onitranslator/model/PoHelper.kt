@@ -176,7 +176,9 @@ class PoHelper(
             str = newStr,
             newly = isNewly,
             msgidChanged = isMsgidChanged
-        )
+        ).apply {
+            diagnostic = TagSensor.diagnose(msgId(), msgStr())
+        }
     }
 
     private fun loadAssetFile(name: String): List<PoEntry> {
@@ -257,6 +259,7 @@ class PoHelper(
         entryList.find { it.key == key }?.apply {
             str = value
             changed = System.currentTimeMillis()
+            diagnostic = TagSensor.diagnose(msgId(), msgStr())
             log("Updated '$key'.")
         }
     }
