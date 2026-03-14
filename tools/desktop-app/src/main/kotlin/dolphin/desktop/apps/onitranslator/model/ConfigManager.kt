@@ -68,6 +68,7 @@ object ConfigManager {
             dataBankPath = props[Incs.KEY_STRING_MAP] ?: "",
             oniWorkshopDir = props[Incs.KEY_WORKSHOP_DIR_ONI] ?: "",
             oniAssetsDir = props[Incs.KEY_ASSETS_DIR_ONI] ?: "",
+            glossaryDir = props[Incs.KEY_GLOSSARY_DIR] ?: "",
         )
 
         val windowConfig = WindowConfig(
@@ -92,6 +93,7 @@ object ConfigManager {
             appendLine("${Incs.KEY_STRING_MAP}=${configs.dataBankPath}")
             appendLine("${Incs.KEY_WORKSHOP_DIR_ONI}=${configs.oniWorkshopDir}")
             appendLine("${Incs.KEY_ASSETS_DIR_ONI}=${configs.oniAssetsDir}")
+            appendLine("${Incs.KEY_GLOSSARY_DIR}=${configs.glossaryDir}")
             appendLine("${Incs.KEY_WINDOW_POS_X}=${windowConfig.x}")
             appendLine("${Incs.KEY_WINDOW_POS_Y}=${windowConfig.y}")
             appendLine("${Incs.KEY_WINDOW_WIDTH}=${windowConfig.width}")

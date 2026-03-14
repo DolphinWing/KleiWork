@@ -66,6 +66,14 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                     }
                     translate()
                 }
+                is AppEvent.File.ExportGlossary -> {
+                    val file = helper?.exportGlossary()
+                    if (file != null) {
+                        SnackbarManager.showMessage(Res.string.toast_write_success, file.name, 0)
+                    } else {
+                        SnackbarManager.showMessage(Res.string.toast_write_failed)
+                    }
+                }
 
                 // Configuration
                 is AppEvent.Config.Change -> saveConfig(event.configs)

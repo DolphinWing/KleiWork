@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.button_close
 import dolphin.desktop.apps.onitranslator.generated.resources.draft_path
+import dolphin.desktop.apps.onitranslator.generated.resources.glossary_dir
 import dolphin.desktop.apps.onitranslator.generated.resources.github_root
 import dolphin.desktop.apps.onitranslator.generated.resources.manual_setup
 import dolphin.desktop.apps.onitranslator.generated.resources.oni_asset_dir
@@ -76,6 +77,7 @@ fun ConfigScreen(
                         dataBankPath = "${file}${s}tools${s}desktop-app${s}src${s}main${s}composeResources${s}files${s}replacement_strings.xml",
                         oniWorkshopDir = "${file}${s}workshop-2906930548", // workshop folder name
                         oniAssetsDir = "${file}${s}oni-assets",
+                        glossaryDir = "${file}${s}oni-assets",
                     )
                 )
             },
@@ -101,6 +103,14 @@ fun ConfigScreen(
             label = stringResource(Res.string.oni_asset_dir),
             path = configs.oniAssetsDir,
             onPathChange = { onConfigChange?.invoke(configs.copy(oniAssetsDir = it)) },
+            selectionMode = JFileChooser.DIRECTORIES_ONLY,
+        )
+        Spacer(Modifier.height(8.dp))
+
+        FilePicker(
+            label = stringResource(Res.string.glossary_dir),
+            path = configs.glossaryDir,
+            onPathChange = { onConfigChange?.invoke(configs.copy(glossaryDir = it)) },
             selectionMode = JFileChooser.DIRECTORIES_ONLY,
         )
         Spacer(Modifier.height(8.dp))

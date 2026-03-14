@@ -8,6 +8,7 @@ object Incs {
     const val KEY_STRING_MAP = "stringMap"
     const val KEY_WORKSHOP_DIR_ONI = "workshopDir_oni"
     const val KEY_ASSETS_DIR_ONI = "assetsDir_oni"
+    const val KEY_GLOSSARY_DIR = "glossaryDir"
     const val KEY_WINDOW_POS_X = "windowPosX"
     const val KEY_WINDOW_POS_Y = "windowPosY"
     const val KEY_WINDOW_WIDTH = "windowWidth"

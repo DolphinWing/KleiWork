@@ -337,6 +337,66 @@ class PoHelper(
 
     private fun getCachedFile(): File = File(System.getProperty("java.io.tmpdir"), ONI_PO)
 
+    /**
+     * Exports a terminology glossary to a TSV file.
+     */
+    suspend fun exportGlossary(): File? = withContext(Dispatchers.IO) {
+        val dir = configs.glossaryDir.ifBlank { configs.oniAssetsDir }
+        val outputFile = File(dir, "glossary.tsv")
+        val seenNames = mutableSetOf<String>()
+        val results = mutableListOf<String>()
+        
+        // Header
+        results.add("Category\tEnglish\tChinese\tPath")
+
+        val singleLevelExceptions = listOf("BLUEPRINTS", "ELEMENTS", "WORLD_TRAITS", "WORLDS")
+        val blacklist = listOf(
+            "MISC.", "GAMEPLAY_EVENTS.", "EQUIPMENT.PREFABS", "BUILDINGS.PREFABS",
+            "BLUEPRINTS", "UI.SANDBOXTOOLS", "UI.OUTFITS", "ROOMS.DETAILS", "INPUT_BINDINGS.",
+            "UI.SPACEARTIFACTS", "UI.KEEPSAKES"
+        )
+        val tagRegex = Regex("<[^>]+>")
+
+        entryList.forEach { entry ->
+            val key = entry.key()
+            val isBlacklisted = blacklist.any { key.contains(it) }
+            
+            if (key.endsWith(".NAME") && !isBlacklisted) {
+                val eng = entry.msgId().replace(tagRegex, "").replace("\\\"", "\"").trim()
+                val cht = entry.msgStr().replace(tagRegex, "").replace("\\\"", "\"").trim()
+
+                // Filter out entries with colons or placeholders
+                if (eng.contains(":") || eng.contains("{") || eng.contains("}")) {
+                    return@forEach
+                }
+
+                if (eng.isNotBlank() && cht.isNotBlank() && eng != cht && !seenNames.contains(eng)) {
+                    seenNames.add(eng)
+
+                    // Category logic
+                    val parts = key.split(".")
+                    val category = if (parts.size >= 3) {
+                        val mainCat = parts[1]
+                        if (mainCat in singleLevelExceptions) mainCat else "${parts[1]}.${parts[2]}"
+                    } else if (parts.size >= 2) {
+                        parts[1]
+                    } else "GENERAL"
+
+                    results.add("$category\t$eng\t$cht\t$key")
+                }
+            }
+        }
+
+        return@withContext try {
+            outputFile.writeText(results.joinToString("\n"), StandardCharsets.UTF_8)
+            log("Glossary exported to ${outputFile.absolutePath}")
+            outputFile
+        } catch (e: Exception) {
+            log("Failed to export glossary: ${e.message}", LogType.Error)
+            null
+        }
+    }
+
     fun isConfigValid(): Boolean = configs.isValid()
 
     /**

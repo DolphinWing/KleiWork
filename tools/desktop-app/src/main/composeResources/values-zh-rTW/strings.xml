@@ -13,6 +13,7 @@
     <string name="menu_save_file">儲存檔案</string>
     <string name="menu_draft">儲存草稿</string>
     <string name="menu_delete_draft">刪除草稿</string>
+    <string name="menu_export_glossary">匯出詞彙表</string>
     <string name="menu_show_logs">查看日誌</string>
     <string name="menu_settings">設定</string>
     <string name="quick_setup">快速設定</string>
@@ -24,6 +25,7 @@
     <string name="github_root">GitHub 根目錄</string>
     <string name="oni_workshop_dir">ONI 模組目錄</string>
     <string name="oni_asset_dir">ONI 素材目錄</string>
+    <string name="glossary_dir">詞彙表匯出目錄</string>
     <string name="draft_path">草稿存放路徑 (唯讀)</string>
 
     <!-- Messages & Dialogs -->
@@ -39,7 +41,7 @@
     <string name="toolbar_status">全部: %1$d, 已變更: %2$d</string>
     <string name="toolbar_template_text">模板</string>
     <string name="toolbar_simplified_text">簡中</string>
-    <string name="toolbar_old_translated">舊翻</string>
+    <string name="toolbar_old_translated">舊譯</string>
 
     <!-- Empty States -->
     <string name="empty_list_title">一切就緒！</string>

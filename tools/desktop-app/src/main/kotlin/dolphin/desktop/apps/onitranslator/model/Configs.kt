@@ -7,11 +7,13 @@ import java.io.File
  * @param dataBankPath Path to replacement_strings.xml.
  * @param oniWorkshopDir Path to the ONI workshop directory.
  * @param oniAssetsDir Path to the ONI assets directory.
+ * @param glossaryDir
  */
 data class Configs(
     val dataBankPath: String = "",
     val oniWorkshopDir: String = "",
     val oniAssetsDir: String = "",
+    val glossaryDir: String = oniAssetsDir, // by default
 ) {
     fun isValid(): Boolean {
         return dataBankPath.isNotBlank() && File(dataBankPath).isFile &&

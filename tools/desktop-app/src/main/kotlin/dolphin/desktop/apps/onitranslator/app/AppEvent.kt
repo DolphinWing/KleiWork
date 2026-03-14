@@ -36,6 +36,9 @@ sealed interface AppEvent {
 
         // Delete the temporary draft file
         object DeleteDraft : File
+
+        // Export a terminology glossary (TSV)
+        object ExportGlossary : File
     }
 
     /**
