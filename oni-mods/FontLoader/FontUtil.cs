@@ -14,7 +14,7 @@ namespace FontLoader.Utils
             {
                 var platform = Application.platform == RuntimePlatform.WindowsPlayer ? "win": "other";
                 var assetPath = Path.Combine(ConfigManager.Instance.configPath, "Assets", platform, config.Filename);
-                Debug.Log("[FontLoader] " + platform + " " + assetPath);
+                Debug.Log($"[FontLoader] {platform} {assetPath}");
 
                 AssetBundle ab = AssetBundle.LoadFromFile(assetPath);
 
@@ -24,7 +24,16 @@ namespace FontLoader.Utils
                 }
 
                 // 2. 獲取字體
-                var font = ab.LoadAsset<TMP_FontAsset>(ab.GetAllAssetNames()[0]);
+                var assets = ab.GetAllAssetNames();
+                if (assets == null || assets.Length <= 0)
+                {
+                    Debug.LogWarning($"[FontLoader] Unable to load font asset. {assets?.Length}");
+                    ab.Unload(true);
+                    return null;
+                }
+
+                Debug.Log($"[FontLoader] {assets[0]}");
+                var font = ab.LoadAsset<TMP_FontAsset>(assets[0]);
                 if (font == null)
                 {
                     Debug.LogWarning("[FontLoader] TMP_FontAsset not found in bundle.");
@@ -34,14 +43,20 @@ namespace FontLoader.Utils
 
                 // font.faceInfo.scale = config.Scale;
 
-                if (Application.platform == RuntimePlatform.LinuxPlayer) {
-                    var sourceFont = Resources.Load<TMP_FontAsset>("RobotoCondensed-Regular");
-                    if (sourceFont != null)
-                    {
-                        font.material.shader = sourceFont.material.shader;
-                    }
-                }
-                
+                //if (Application.platform == RuntimePlatform.LinuxPlayer) {
+                //    var sourceFont = Resources.Load<TMP_FontAsset>("RobotoCondensed-Regular");
+                //    if (sourceFont != null)
+                //    {
+                //        font.material.shader = sourceFont.material.shader;
+                //    }
+                //}
+
+                Debug.Log($"[FontLoader] Font Name: {font.name}");
+                ab.LoadAllAssets();
+                //Debug.Log($"[FontLoader] Atlas: {font.atlasTexture?.name ?? "NULL!"}");
+                //Debug.Log($"[FontLoader] Material Shader: {font.material?.shader?.name ?? "NULL!"}");
+                //Debug.Log($"[FontLoader] Character Count: {font.characterTable?.Count ?? 0}");
+                Debug.Log($"[FontLoader] Font Name: {font.name} LoadAllAssets.");
                 return font;
             }
             catch (Exception e)
@@ -49,7 +64,7 @@ namespace FontLoader.Utils
                 Debug.LogError($"[FontLoader] {e.Message}");
             }
 
-            AssetBundle.UnloadAllAssetBundles(false);
+            // AssetBundle.UnloadAllAssetBundles(false);
             return null;
         }
     }

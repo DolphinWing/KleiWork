@@ -11,6 +11,7 @@ namespace FontLoader.Config
         public string Code { get; set; }
         public bool LeftToRight { get; set; }
         public float Scale { get; set; }
+        public bool InitString { get; set; }
 
         public FontConfig(string filename, string code, bool leftToRight, float scale)
         {
@@ -18,6 +19,7 @@ namespace FontLoader.Config
             this.Code = code;
             this.LeftToRight = leftToRight;
             this.Scale = scale;
+            this.InitString = true;
         }
     }
 
