@@ -11,7 +11,8 @@
     <string name="button_save">Save</string>
     <string name="button_search">Search</string>
     <string name="menu_save_file">Save file</string>
-    <string name="menu_draft">Draft</string>
+    <string name="menu_draft">Save Draft</string>
+    <string name="menu_delete_draft">Delete draft</string>
     <string name="menu_show_logs">Show logs</string>
     <string name="menu_settings">Settings</string>
     <string name="quick_setup">Quick Setup</string>
@@ -23,6 +24,7 @@
     <string name="github_root">GitHub root</string>
     <string name="oni_workshop_dir">ONI workshop dir</string>
     <string name="oni_asset_dir">ONI asset dir</string>
+    <string name="draft_path">Draft path (Read-only)</string>
 
     <!-- Messages & Dialogs -->
     <string name="status_loading">Loading…</string>
@@ -30,6 +32,7 @@
     <string name="debug_save_dialog_title">Write to %1$s?</string>
     <string name="toast_write_success">Wrote %1$s in %2$d ms</string>
     <string name="toast_write_failed">Write failed!</string>
+    <string name="toast_draft_cleared">All drafts cleared</string>
     <string name="string_map_path_cannot_be_empty">Path to strings.xml cannot be empty</string>
 
     <!-- Toolbar Status -->

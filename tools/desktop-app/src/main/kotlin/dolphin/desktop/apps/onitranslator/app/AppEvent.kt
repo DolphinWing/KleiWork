@@ -33,6 +33,9 @@ sealed interface AppEvent {
 
         // Force a reload of the source translation files from disk
         object RefreshSource : File
+
+        // Delete the temporary draft file
+        object DeleteDraft : File
     }
 
     /**

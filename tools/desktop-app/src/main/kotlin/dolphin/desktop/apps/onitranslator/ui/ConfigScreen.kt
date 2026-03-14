@@ -14,14 +14,19 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.button_close
+import dolphin.desktop.apps.onitranslator.generated.resources.draft_path
 import dolphin.desktop.apps.onitranslator.generated.resources.github_root
 import dolphin.desktop.apps.onitranslator.generated.resources.manual_setup
 import dolphin.desktop.apps.onitranslator.generated.resources.oni_asset_dir
@@ -29,6 +34,7 @@ import dolphin.desktop.apps.onitranslator.generated.resources.oni_workshop_dir
 import dolphin.desktop.apps.onitranslator.generated.resources.quick_setup
 import dolphin.desktop.apps.onitranslator.generated.resources.string_map_path_cannot_be_empty
 import dolphin.desktop.apps.onitranslator.model.Configs
+import dolphin.desktop.apps.onitranslator.model.PoHelper
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.FilePicker
 import org.jetbrains.compose.resources.stringResource
@@ -96,6 +102,23 @@ fun ConfigScreen(
             path = configs.oniAssetsDir,
             onPathChange = { onConfigChange?.invoke(configs.copy(oniAssetsDir = it)) },
             selectionMode = JFileChooser.DIRECTORIES_ONLY,
+        )
+        Spacer(Modifier.height(8.dp))
+
+        // Draft path (read-only)
+        val draftPath = File(System.getProperty("java.io.tmpdir"), PoHelper.ONI_PO).absolutePath
+        OutlinedTextField(
+            value = draftPath,
+            onValueChange = {},
+            label = { Text(stringResource(Res.string.draft_path)) },
+            readOnly = true,
+            modifier = Modifier.fillMaxWidth(),
+            singleLine = true,
+            textStyle = MaterialTheme.typography.bodyMedium,
+            colors = TextFieldDefaults.colors(
+                focusedContainerColor = Color.Transparent,
+                unfocusedContainerColor = Color.Transparent,
+            )
         )
         Spacer(Modifier.height(8.dp))
 

@@ -338,4 +338,23 @@ class PoHelper(
     private fun getCachedFile(): File = File(System.getProperty("java.io.tmpdir"), ONI_PO)
 
     fun isConfigValid(): Boolean = configs.isValid()
+
+    /**
+     * Deletes the temporary draft file and clears the memory cache.
+     */
+    suspend fun clearDrafts(): Boolean = withContext(Dispatchers.IO) {
+        val cachedFile = getCachedFile()
+        draftEntries.clear()
+        if (cachedFile.exists()) {
+            val deleted = cachedFile.delete()
+            if (deleted) {
+                log("All drafts cleared.")
+            } else {
+                log("Failed to clear drafts.", LogType.Warning)
+            }
+            return@withContext deleted
+        }
+        log("No draft file to clear.")
+        return@withContext true
+    }
 }

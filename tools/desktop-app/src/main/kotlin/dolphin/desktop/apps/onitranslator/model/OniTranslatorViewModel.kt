@@ -6,6 +6,7 @@ import androidx.compose.ui.window.WindowPosition
 import androidx.compose.ui.window.WindowState
 import dolphin.desktop.apps.onitranslator.app.AppEvent
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.toast_draft_cleared
 import dolphin.desktop.apps.onitranslator.generated.resources.toast_write_failed
 import dolphin.desktop.apps.onitranslator.generated.resources.toast_write_success
 import kotlinx.coroutines.CoroutineScope
@@ -58,6 +59,13 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                 // File I/O
                 is AppEvent.File.SaveDraft -> saveFileInternal(useCache = true)
                 is AppEvent.File.Save -> onSaveFileRequest(event.useCache)
+                is AppEvent.File.DeleteDraft -> {
+                    val result = helper?.clearDrafts() == true
+                    if (result) {
+                        SnackbarManager.showMessage(Res.string.toast_draft_cleared)
+                    }
+                    translate()
+                }
 
                 // Configuration
                 is AppEvent.Config.Change -> saveConfig(event.configs)

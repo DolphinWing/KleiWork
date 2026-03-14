@@ -13,6 +13,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.ArrowBackIosNew
 import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material.icons.rounded.DarkMode
+import androidx.compose.material.icons.rounded.DeleteForever
 import androidx.compose.material.icons.rounded.Drafts
 import androidx.compose.material.icons.rounded.LightMode
 import androidx.compose.material.icons.rounded.MoreVert
@@ -54,6 +55,7 @@ import dolphin.desktop.apps.onitranslator.generated.resources.content_descriptio
 import dolphin.desktop.apps.onitranslator.generated.resources.content_description_clear
 import dolphin.desktop.apps.onitranslator.generated.resources.content_description_more_actions
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_draft
+import dolphin.desktop.apps.onitranslator.generated.resources.menu_delete_draft
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_save_file
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_settings
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_show_logs
@@ -149,6 +151,20 @@ private fun MoreActionsMenu(onEvent: (AppEvent) -> Unit) {
                     menuExpanded = false
                 },
                 leadingIcon = { Icon(Icons.Rounded.Drafts, contentDescription = null) }
+            )
+            DropdownMenuItem(
+                text = { Text(stringResource(Res.string.menu_delete_draft)) },
+                onClick = {
+                    onEvent(AppEvent.File.DeleteDraft)
+                    menuExpanded = false
+                },
+                leadingIcon = {
+                    Icon(
+                        Icons.Rounded.DeleteForever,
+                        contentDescription = null,
+                        // tint = MaterialTheme.colorScheme.error
+                    )
+                }
             )
             DropdownMenuItem(
                 text = { Text(stringResource(Res.string.button_refresh)) },
