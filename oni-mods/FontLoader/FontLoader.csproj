@@ -12,7 +12,7 @@
     
     <AssemblyTitle>FontLoader</AssemblyTitle>
     <Version>2.2.0</Version>
-    <FileVersion>2026.03.13.0</FileVersion>
+    <FileVersion>2026.315.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

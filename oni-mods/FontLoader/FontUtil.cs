@@ -13,7 +13,8 @@ namespace FontLoader.Utils
             try
             {
                 var platform = Application.platform == RuntimePlatform.WindowsPlayer ? "win": "other";
-                var assetPath = Path.Combine(ConfigManager.Instance.configPath, "Assets", platform, config.Filename);
+                var fileName = (config.Filename == "openhuninn") ? "openhuninn.u6" : config.Filename;
+                var assetPath = Path.Combine(ConfigManager.Instance.configPath, "Assets", platform, fileName);
                 Debug.Log($"[FontLoader] {platform} {assetPath}");
 
                 AssetBundle ab = AssetBundle.LoadFromFile(assetPath);
