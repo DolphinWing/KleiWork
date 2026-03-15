@@ -99465,7 +99465,7 @@ msgstr ""
 
 #. STRINGS.UI.USERMENUACTIONS.READLORE.SEARCH_SPACEPOI_SUCCESS.SEARCH3
 msgctxt "STRINGS.UI.USERMENUACTIONS.READLORE.SEARCH_SPACEPOI_SUCCESS.SEARCH3"
-msgid "While investigating the software of this wreckage, a compelling file comes to m  y attention.\n\nNew Database Entry unlocked."
+msgid "While investigating the software of this wreckage, a compelling file comes to my attention.\n\nNew Database Entry unlocked."
 msgstr ""
 
 #. STRINGS.UI.USERMENUACTIONS.READLORE.SEARCH_SPACEPOI_SUCCESS.SEARCH4

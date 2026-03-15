@@ -7,7 +7,7 @@ This is a personal project that includes my mod work for the games by Klei Enter
     *   Mod: [workshop-2906930548](workshop-2906930548)
 
 *   **[字型模組。新](https://steamcommunity.com/sharedfiles/filedetails/?id=3046440992)** is a quick fix update to [Font Loader for Traditional Chinese](https://steamcommunity.com/workshop/filedetails/?id=2119648603) after Oct 2023 QoL.
-    *   ![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3046440992?logo=steam) ![Steam Favorites](https://img.shields.io/steam/favorites/3046440992?logo=steam)
+    *   ![GitHub package.json version](https://img.shields.io/github/package-json/v/DolphinWing/KleiWork?filename=workshop-3046440992%2Fpackage.json&logo=github) ![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3046440992?logo=steam) ![Steam Favorites](https://img.shields.io/steam/favorites/3046440992?logo=steam)
     *   Mod: [workshop-3046440992](workshop-3046440992)
     *   Source: [oni-mods/FontLoader](oni-mods/FontLoader)
 
