@@ -12,27 +12,28 @@
     
     <AssemblyTitle>FontLoader</AssemblyTitle>
     <Version>2.2.0</Version>
-    <FileVersion>2026.315.0</FileVersion>
+    <FileVersion>2026.321.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="PLib" Version="4.19.0" /> 
+    <PackageReference Include="Lib.Harmony" Version="2.4.2" /> 
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="0Harmony" HintPath="lib\0Harmony.dll" Private="True" />
-    <Reference Include="Assembly-CSharp" HintPath="lib\Assembly-CSharp.dll" Private="True" />
-    <Reference Include="Assembly-CSharp-firstpass" HintPath="lib\Assembly-CSharp-firstpass.dll" Private="True" />
-    <Reference Include="UnityEngine" HintPath="lib\UnityEngine.dll" Private="True" />
-    <Reference Include="UnityEngine.AssetBundleModule" HintPath="lib\UnityEngine.AssetBundleModule.dll" Private="True" />
-    <Reference Include="UnityEngine.CoreModule" HintPath="lib\UnityEngine.CoreModule.dll" Private="True" />
+    <!--<Reference Include="0Harmony" HintPath="..\OniManagedLibs\0Harmony.dll" Private="False" />-->
+    <Reference Include="Assembly-CSharp" HintPath="..\OniManagedLibs\Assembly-CSharp.dll" Private="False" />
+    <Reference Include="Assembly-CSharp-firstpass" HintPath="..\OniManagedLibs\Assembly-CSharp-firstpass.dll" Private="False" />
+    <Reference Include="UnityEngine" HintPath="..\OniManagedLibs\UnityEngine.dll" Private="False" />
+    <Reference Include="UnityEngine.AssetBundleModule" HintPath="..\OniManagedLibs\UnityEngine.AssetBundleModule.dll" Private="False" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="..\OniManagedLibs\UnityEngine.CoreModule.dll" Private="False" />
     <Reference Include="UnityEngine.TextCoreFontEngineModule">
-      <HintPath>lib\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+      <HintPath>..\OniManagedLibs\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+	  <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.UI" HintPath="lib\UnityEngine.UI.dll" Private="True" />
-    <Reference Include="Unity.TextMeshPro" HintPath="lib\Unity.TextMeshPro.dll" Private="True" />
+    <Reference Include="UnityEngine.UI" HintPath="..\OniManagedLibs\UnityEngine.UI.dll" Private="False" />
+    <Reference Include="Unity.TextMeshPro" HintPath="..\OniManagedLibs\Unity.TextMeshPro.dll" Private="False" />
     <Reference Include="Newtonsoft.Json">
-      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\OniManagedLibs\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
