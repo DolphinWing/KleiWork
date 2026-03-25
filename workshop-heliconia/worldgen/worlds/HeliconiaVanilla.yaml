@@ -258,8 +258,6 @@ worldTemplateRules:
     - geysers/molten_copper
     - geysers/molten_gold
     - geysers/oil_drip
-    - expansion1::geysers/molten_aluminum
-    - expansion1::geysers/molten_cobalt
     listRule: TryOne
     times: 8
     ruleId: GenericGeysers
