@@ -325,4 +325,4 @@ worldTemplateRules:
         tagcommand: DistanceFromTag
         tag: AtSurface
         minDistance: 0
-        maxDistance: 2
+        maxDistance: 1

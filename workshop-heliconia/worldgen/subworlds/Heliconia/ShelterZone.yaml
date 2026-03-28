@@ -4,7 +4,7 @@ pdWeight: 1.5
 density:
   min: 10
   max: 25
-avoidRadius: 20.0
+avoidRadius: 24.0
 doAvoidPoints: false
 dontRelaxChildren: true
 sampleBehaviour: PoissonDisk

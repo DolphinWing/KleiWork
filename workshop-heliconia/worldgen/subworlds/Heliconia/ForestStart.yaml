@@ -3,7 +3,7 @@ temperatureRange: Mild
 pdWeight: 1
 density:
   min: 10
-  max: 20
+  max: 40
 avoidRadius: 20.0
 extraBiomeChildren: 4
 minChildCount: 4
