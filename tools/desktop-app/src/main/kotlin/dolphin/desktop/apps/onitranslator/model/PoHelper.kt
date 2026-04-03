@@ -50,6 +50,7 @@ class PoHelper(
     fun templateText(key: String): PoEntry? = templateMap[key]
     fun simplified(key: String): PoEntry? = simplifiedMap[key]
     fun drafted(key: String): PoEntry? = draftEntries[key]
+    fun official(key: String): PoEntry? = translatedEntries[key]
     fun allValues(): List<PoEntry> = entryList.toList()
 
     private val _loading = MutableStateFlow(true)

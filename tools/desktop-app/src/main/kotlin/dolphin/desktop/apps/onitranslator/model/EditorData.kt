@@ -5,4 +5,5 @@ data class EditorData(
     val templateText: String,
     val referenceText: String? = null,
     val draftText: String? = null,
+    val officialText: String? = null,
 )

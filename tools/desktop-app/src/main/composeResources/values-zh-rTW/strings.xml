@@ -78,6 +78,9 @@
     <string name="tag_sensor_mismatch">• %1$s: 原文(%2$d) vs 譯文(%3$d)</string>
     <string name="content_description_tag_sensor_warning">標籤感測器警告</string>
 
+    <string name="label_new">新項目</string>
+    <string name="label_modified">已修改</string>
+
     <!-- Content Descriptions -->
     <string name="content_description_back">返回</string>
     <string name="content_description_clear">清除</string>

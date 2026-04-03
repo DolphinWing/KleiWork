@@ -78,6 +78,9 @@
     <string name="tag_sensor_mismatch">• %1$s: Source(%2$d) vs Target(%3$d)</string>
     <string name="content_description_tag_sensor_warning">Tag Sensor Warning</string>
 
+    <string name="label_new">NEW</string>
+    <string name="label_modified">MODIFIED</string>
+
     <!-- Content Descriptions -->
     <string name="content_description_back">Back</string>
     <string name="content_description_clear">Clear</string>

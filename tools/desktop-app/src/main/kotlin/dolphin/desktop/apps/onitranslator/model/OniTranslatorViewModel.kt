@@ -64,8 +64,8 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                     if (result) {
                         SnackbarManager.showMessage(Res.string.toast_draft_cleared)
                     }
-                    translate()
                 }
+
                 is AppEvent.File.ExportGlossary -> {
                     val file = helper?.exportGlossary()
                     if (file != null) {
@@ -97,6 +97,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         when (event) {
             is AppEvent.Ui.ShowConfig ->
                 updateUiState { it.copy(dialogState = OniDialogState.ConfigDialog(state.value.configs)) }
+
             is AppEvent.Ui.ShowDebugSaveDialog -> {
                 val save = requestSaveData()
                 if (save != null) {
@@ -110,8 +111,10 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                     }
                 }
             }
+
             is AppEvent.Ui.ShowLogWindow ->
                 updateUiState { it.copy(dialogState = OniDialogState.LogWindow(logs = state.value.logs)) }
+
             is AppEvent.Ui.DismissDialog -> updateUiState { it.copy(dialogState = null) }
             is AppEvent.Ui.UpdateState -> updateUiState { event.uiState }
             is AppEvent.Ui.CopyToClipboard -> copyToClipboard(event.text)
@@ -258,7 +261,13 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     private suspend fun refreshDataSource() = withContext(Dispatchers.IO) {
         val filtered = helper?.buildChangeList()?.mapNotNull { requestEditorData(it) } ?: emptyList()
         val list = filtered.map { it.target.changed }
-        _state.update { it.copy(filteredList = filtered, changedList = list) }
+        _state.update {
+            it.copy(
+                filteredList = filtered,
+                changedList = list,
+                uiState = it.uiState.copy(editorData = null)
+            )
+        }
     }
 
     private suspend fun save(cacheIt: Boolean = false): Pair<String, Long> = withContext(Dispatchers.IO) {
@@ -270,18 +279,19 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         return@withContext Pair(exported.absolutePath, if (result) cost else -1)
     }
 
-    private suspend fun search(text: String, type: SearchType = state.value.uiState.searchState.type) = withContext(Dispatchers.IO) {
-        updateUiState { it.copy(searchState = it.searchState.copy(text = text, type = type)) }
-        val searchResult = helper?.allValues()?.filter { item ->
-            when (type) {
-                SearchType.Origin -> item.msgId().contains(text, ignoreCase = true)
-                SearchType.Key -> item.key().contains(text, ignoreCase = true)
-                SearchType.Text -> item.msgStr().contains(text, ignoreCase = true)
-                SearchType.Diagnostic -> item.diagnostic?.hasIssue == true
-            }
-        }?.mapNotNull { entry -> requestEditorData(entry) } ?: emptyList()
-        updateUiState { it.copy(searchState = it.searchState.copy(results = searchResult)) }
-    }
+    private suspend fun search(text: String, type: SearchType = state.value.uiState.searchState.type) =
+        withContext(Dispatchers.IO) {
+            updateUiState { it.copy(searchState = it.searchState.copy(text = text, type = type)) }
+            val searchResult = helper?.allValues()?.filter { item ->
+                when (type) {
+                    SearchType.Origin -> item.msgId().contains(text, ignoreCase = true)
+                    SearchType.Key -> item.key().contains(text, ignoreCase = true)
+                    SearchType.Text -> item.msgStr().contains(text, ignoreCase = true)
+                    SearchType.Diagnostic -> item.diagnostic?.hasIssue == true
+                }
+            }?.mapNotNull { entry -> requestEditorData(entry) } ?: emptyList()
+            updateUiState { it.copy(searchState = it.searchState.copy(results = searchResult)) }
+        }
 
     suspend fun rememberLastWindowState(windowState: WindowState) {
         val pos = windowState.position
@@ -306,7 +316,8 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
             val templateText = h.templateText(key)?.msgId() ?: entry.msgId()
             val referenceText = h.simplified(key)?.msgStr()
             val draftText = h.drafted(key)?.msgStr()
-            EditorData(entry, templateText, referenceText, draftText)
+            val officialText = h.official(key)?.msgStr()
+            EditorData(entry, templateText, referenceText, draftText, officialText)
         }
     }
 

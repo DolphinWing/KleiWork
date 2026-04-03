@@ -58,6 +58,8 @@ import dolphin.desktop.apps.onitranslator.generated.resources.button_search
 import dolphin.desktop.apps.onitranslator.generated.resources.content_description_tag_sensor_warning
 import dolphin.desktop.apps.onitranslator.generated.resources.empty_list_message
 import dolphin.desktop.apps.onitranslator.generated.resources.empty_list_title
+import dolphin.desktop.apps.onitranslator.generated.resources.label_modified
+import dolphin.desktop.apps.onitranslator.generated.resources.label_new
 import dolphin.desktop.apps.onitranslator.model.AppState
 import dolphin.desktop.apps.onitranslator.model.EditorData
 import dolphin.desktop.apps.onitranslator.model.EntryTagType
@@ -151,7 +153,7 @@ fun EntryBrowser(
                 state = listState
             ) {
                 itemsIndexed(list) { index, entry ->
-                    val isSearchMode = state.uiState.searchState.text.isNotBlank()
+                    val isSearchMode = state.uiState.searchState.isActive
                     val originalIndex = if (isSearchMode) -1 else index
                     val changedValue = if (isSearchMode) 0L else state.changedList.getOrNull(index) ?: 0L
                     val selected = state.uiState.editorData == entry
@@ -161,6 +163,7 @@ fun EntryBrowser(
                         index = originalIndex, // Pass original index or -1 if not available
                         changed = changedValue,
                         selected = selected,
+                        isSearchMode = isSearchMode,
                     )
                 }
             }
@@ -177,6 +180,7 @@ private fun EntryItemView(
     index: Int = 0,
     changed: Long = 0L,
     selected: Boolean = false,
+    isSearchMode: Boolean = false,
 ) {
     val isChanged = changed > 0
     val cardBorderColor = if (selected) {
@@ -215,12 +219,23 @@ private fun EntryItemView(
                     overflow = TextOverflow.Ellipsis,
                     fontFamily = FontFamily.Monospace,
                 )
-                if (data.target.newly) {
+                if (data.target.newly && !isSearchMode) {
                     Text(
-                        text = "NEW", // A more explicit "NEW" tag
+                        text = stringResource(Res.string.label_new),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.error,
-                        modifier = Modifier.padding(horizontal = 8.dp)
+                        modifier = Modifier.padding(horizontal = 4.dp)
+                    )
+                }
+
+                val isModified = data.officialText != null &&
+                        data.target.str.trim() != data.officialText.trim()
+                if (isModified && !data.target.newly && !isSearchMode) {
+                    Text(
+                        text = stringResource(Res.string.label_modified),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.tertiary,
+                        modifier = Modifier.padding(horizontal = 4.dp)
                     )
                 }
 
