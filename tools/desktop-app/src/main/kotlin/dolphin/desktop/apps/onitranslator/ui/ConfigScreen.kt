@@ -15,20 +15,24 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Slider
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.button_close
 import dolphin.desktop.apps.onitranslator.generated.resources.draft_path
-import dolphin.desktop.apps.onitranslator.generated.resources.glossary_dir
 import dolphin.desktop.apps.onitranslator.generated.resources.github_root
+import dolphin.desktop.apps.onitranslator.generated.resources.glossary_dir
+import dolphin.desktop.apps.onitranslator.generated.resources.label_auto_save
+import dolphin.desktop.apps.onitranslator.generated.resources.label_auto_save_interval
 import dolphin.desktop.apps.onitranslator.generated.resources.manual_setup
 import dolphin.desktop.apps.onitranslator.generated.resources.oni_asset_dir
 import dolphin.desktop.apps.onitranslator.generated.resources.oni_workshop_dir
@@ -113,7 +117,7 @@ fun ConfigScreen(
             onPathChange = { onConfigChange?.invoke(configs.copy(glossaryDir = it)) },
             selectionMode = JFileChooser.DIRECTORIES_ONLY,
         )
-        Spacer(Modifier.height(8.dp))
+        Spacer(Modifier.height(16.dp))
 
         // Draft path (read-only)
         val draftPath = File(System.getProperty("java.io.tmpdir"), PoHelper.ONI_PO).absolutePath
@@ -130,6 +134,52 @@ fun ConfigScreen(
                 unfocusedContainerColor = Color.Transparent,
             )
         )
+        Spacer(Modifier.height(16.dp))
+
+        // Auto-save Settings
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column {
+                Text(
+                    stringResource(Res.string.label_auto_save),
+                    style = MaterialTheme.typography.bodyLarge
+                )
+                Text(
+                    stringResource(Res.string.label_auto_save_interval, configs.autoSaveIntervalMinutes),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+            Switch(
+                checked = configs.autoSaveEnabled,
+                onCheckedChange = { onConfigChange?.invoke(configs.copy(autoSaveEnabled = it)) }
+            )
+        }
+
+        if (configs.autoSaveEnabled) {
+            Spacer(Modifier.height(8.dp))
+            Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp)) {
+                Slider(
+                    value = configs.autoSaveIntervalMinutes.toFloat(),
+                    onValueChange = { newValue ->
+                        onConfigChange?.invoke(configs.copy(autoSaveIntervalMinutes = newValue.toInt()))
+                    },
+                    valueRange = 1f..30f,
+                    steps = 28 // 30 - 1 - 1 = 28 steps to make it 1-minute increments
+                )
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text("1", style = MaterialTheme.typography.labelSmall)
+                    Text("30", style = MaterialTheme.typography.labelSmall)
+                }
+            }
+        }
+
         Spacer(Modifier.height(8.dp))
 
         // replacement_strings.xml file path with error handling
@@ -187,7 +237,8 @@ private fun ConfigScreenPreviewLight() {
                 configs = Configs(
                     dataBankPath = "/path/to/strings.xml",
                     oniWorkshopDir = "/path/to/workshop",
-                    oniAssetsDir = "/path/to/assets"
+                    oniAssetsDir = "/path/to/assets",
+                    autoSaveEnabled = true,
                 ),
             )
         }

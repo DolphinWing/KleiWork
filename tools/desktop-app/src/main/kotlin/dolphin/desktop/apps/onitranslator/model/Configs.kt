@@ -14,6 +14,8 @@ data class Configs(
     val oniWorkshopDir: String = "",
     val oniAssetsDir: String = "",
     val glossaryDir: String = oniAssetsDir, // by default
+    val autoSaveEnabled: Boolean = false,
+    val autoSaveIntervalMinutes: Int = 5,
 ) {
     fun isValid(): Boolean {
         return dataBankPath.isNotBlank() && File(dataBankPath).isFile &&

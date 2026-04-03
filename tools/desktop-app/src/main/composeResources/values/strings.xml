@@ -27,6 +27,8 @@
     <string name="oni_asset_dir">ONI asset dir</string>
     <string name="glossary_dir">Glossary export dir</string>
     <string name="draft_path">Draft path (Read-only)</string>
+    <string name="label_auto_save">Enable Auto-save (Idle)</string>
+    <string name="label_auto_save_interval">Interval %1$d minutes</string>
 
     <!-- Messages & Dialogs -->
     <string name="status_loading">Loading…</string>

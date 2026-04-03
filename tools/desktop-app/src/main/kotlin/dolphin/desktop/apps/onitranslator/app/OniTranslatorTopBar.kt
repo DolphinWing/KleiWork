@@ -114,7 +114,7 @@ fun OniTranslatorTopBar(
                         onEvent(AppEvent.Ui.ChangeTheme(!isDark))
                     }
 
-                    MoreActionsMenu(onEvent)
+                    MoreActionsMenu(state, onEvent)
                 },
                 scrollBehavior = scrollBehavior
             )
@@ -124,7 +124,7 @@ fun OniTranslatorTopBar(
 }
 
 @Composable
-private fun MoreActionsMenu(onEvent: (AppEvent) -> Unit) {
+private fun MoreActionsMenu(state: AppState, onEvent: (AppEvent) -> Unit) {
     var menuExpanded by remember { mutableStateOf(false) }
 
     Box {
@@ -160,6 +160,7 @@ private fun MoreActionsMenu(onEvent: (AppEvent) -> Unit) {
                     onEvent(AppEvent.File.DeleteDraft)
                     menuExpanded = false
                 },
+                enabled = state.hasDraft,
                 leadingIcon = {
                     Icon(
                         Icons.Rounded.DeleteForever,

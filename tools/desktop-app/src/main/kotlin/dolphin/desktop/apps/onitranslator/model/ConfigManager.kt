@@ -69,6 +69,8 @@ object ConfigManager {
             oniWorkshopDir = props[Incs.KEY_WORKSHOP_DIR_ONI] ?: "",
             oniAssetsDir = props[Incs.KEY_ASSETS_DIR_ONI] ?: "",
             glossaryDir = props[Incs.KEY_GLOSSARY_DIR] ?: "",
+            autoSaveEnabled = props[Incs.KEY_AUTO_SAVE_ENABLED]?.toBooleanStrictOrNull() ?: false,
+            autoSaveIntervalMinutes = props[Incs.KEY_AUTO_SAVE_INTERVAL]?.toIntOrNull() ?: 5,
         )
 
         val windowConfig = WindowConfig(
@@ -94,6 +96,8 @@ object ConfigManager {
             appendLine("${Incs.KEY_WORKSHOP_DIR_ONI}=${configs.oniWorkshopDir}")
             appendLine("${Incs.KEY_ASSETS_DIR_ONI}=${configs.oniAssetsDir}")
             appendLine("${Incs.KEY_GLOSSARY_DIR}=${configs.glossaryDir}")
+            appendLine("${Incs.KEY_AUTO_SAVE_ENABLED}=${configs.autoSaveEnabled}")
+            appendLine("${Incs.KEY_AUTO_SAVE_INTERVAL}=${configs.autoSaveIntervalMinutes}")
             appendLine("${Incs.KEY_WINDOW_POS_X}=${windowConfig.x}")
             appendLine("${Incs.KEY_WINDOW_POS_Y}=${windowConfig.y}")
             appendLine("${Incs.KEY_WINDOW_WIDTH}=${windowConfig.width}")

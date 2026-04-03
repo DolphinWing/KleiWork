@@ -27,6 +27,8 @@
     <string name="oni_asset_dir">ONI 素材目錄</string>
     <string name="glossary_dir">詞彙表匯出目錄</string>
     <string name="draft_path">草稿存放路徑 (唯讀)</string>
+    <string name="label_auto_save">啟動自動暫存 (閒置觸發)</string>
+    <string name="label_auto_save_interval">閒置時間 %1$d 分鐘</string>
 
     <!-- Messages & Dialogs -->
     <string name="status_loading">載入中…</string>

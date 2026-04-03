@@ -11,7 +11,7 @@
 它不只是一個純文字編輯器，還整合了：
 - **簡繁轉換**：自動將簡體中文來源轉換為繁體中文。
 - **詞彙替換**：透過 `replacement_strings.xml` 定義專有詞彙的自動修正規則。
-- **草稿機制**：支援未完成的編輯作業自動存檔。
+- **安全暫存**：支援閒置自動存檔與手動草稿管理，並具備版本衝突視覺提示。
 - **差異比對**：能識別原廠檔案的變更 (msgid change)，確保翻譯能追蹤英文原文的更新。
 - **Tag Sensor (標籤感測器)**：自動對比原文與譯文的標籤數量，確保 `link`, `style`, `color` 等關鍵標籤對稱。
 - **強韌解析**：採用狀態機 (State-machine) 解析器，支援 PO 檔案 Header 處理與不規則空行。
@@ -75,7 +75,8 @@
 *   **`AppState`**: 全域應用程式狀態。
     *   `configs`: 設定檔資料。
     *   `logs`: 歷史日誌 (`List<LogEntry>`)。
-    *   `filteredList`: 當前顯示的編輯列表。
+    *   `filteredList`: 當前顯示的編輯列表 (`EditorData`)。
+    *   `hasDraft`: 目前硬碟上是否存在實體草稿檔。
     *   `uiState`: 包含下方的 UI 狀態。
 *   **`UiState`**: 純 UI 相關的短暫狀態。
     *   `isLoading`: 是否正在處理中。
@@ -83,7 +84,6 @@
     *   `searchState`: 搜尋關鍵字、結果與是否啟用搜尋模式。
     *   `editorData`: 右側編輯器當前選中的資料。
     *   `dialogState`: 控制對話框 (Config, Save Confirm) 的顯示。
-    *   **效能優化註記**：針對單純的視覺變更（如切換主題），ViewModel 採用 `updateThemeConfig` 僅寫入設定檔而不觸發重讀；僅在涉及檔案路徑變更 (`saveConfig`) 時才會執行全域資料重載。
 
 ### 4.2. 翻譯與檔案處理 (`PoHelper`)
 
@@ -99,50 +99,39 @@
 為了精確篩選出「待辦項目」，`PoHelper` 採用以下判定公式：
 *   **Newly**: Key 存在於 Template 但完全不存在於 `strings.po`。
 *   **MsgidChanged**: Key 在兩邊皆存在，但英文原文 (`msgid`) 已變動。
-*   **DraftChanged**: 暫存檔內容與正式翻譯檔內容不一致。
+*   **Modified**: 目前記憶體內容與 `PoSave` (正式檔) 不一致。
 
 ### 4.3. 資源與日誌系統
 
 #### 多語系與檔案資源管理 (Resources)
 專案全面採用 Compose Multiplatform 資源系統：
-*   **字串資源**：定義於 `src/main/composeResources/values/strings.xml`，透過 `Res.string.xxx` 存取。
-*   **檔案資源**：定義於 `src/main/composeResources/files/`，包含預設設定 (`configs.ini`) 與替換規則 (`replacement_strings.xml`)，透過 `Res.readBytes("files/xxx")` 讀取。這確保了跨平台打包時檔案的正確性。
+*   **字串資源**：定義於 `src/main/composeResources/values/strings.xml`，支援多國語系切換。
+*   **檔案資源**：預設設定與替換規則透過 `Res.readBytes` 讀取，確保跨平台打包一致性。
 
 #### 即時回饋機制
 為了讓使用者知道程式在背後做了什麼：
-*   `PoHelper` 內部產生 `LogEntry` (Info/Warning/Error)。
-*   `ViewModel` 監聽 `PoHelper.logs`，並將最新的一條訊息轉發到 `UiState.processStatus`。
-*   **`OniTranslatorBottomBar`** 負責呈現此狀態，並具備 Fallback 邏輯：
-    1.  優先顯示 `processStatus`。
-    2.  若為空，顯示 `isLoading` 狀態。
-    3.  閒置時顯示當前項目總數。
-*   完整 Log 列表保留在 `AppState.logs` 供查閱。
+*   `PoHelper` 內部產生 `LogEntry` (Info/Warning/Error)，並開放 `log()` 方法供 ViewModel 呼叫。
+*   **`OniTranslatorBottomBar`** 負責呈現最新狀態，閒置時顯示當前項目總數。
 
 ### 4.4. 列表顯示與搜尋邏輯 (List & Search Logic)
 
-應用程式採用兩種模式來呈現資料，以平衡「工作效率」與「瀏覽需求」：
-
 1.  **待辦模式 (Default / Diff Mode)**
-    *   **觸發時機**：搜尋模式未啟用時（預設狀態）。
-    *   **顯示內容**：僅顯示符合「差異判定」公式的項目：`(Newly || MsgidChanged || DraftChanged || SessionModified) && OriginalNotEmpty`。
-    *   **目的**：讓使用者專注於需要處理的差異，排除掉 2 萬多條已完成或無須翻譯的背景資料。
+    *   **觸發時機**：搜尋模式未啟用時。
+    *   **視覺標記**：
+        *   `MODIFIED`: 內容與正式檔 `PoSave` 不同時顯示。
+        *   `NEW`: 範本中新增的 Key。
+        *   `Draft Chip`: 下方顯示草稿檔中的原始內容，供比對。
 
 2.  **全覽模式 (Search / Library Mode)**
-    *   **觸發時機**：啟用搜尋模式 (`AppEvent.Search.ActiveChange(true)`)。
-    *   **顯示內容**：
-        *   **剛進入時**：自動觸發空字串搜尋，載入**所有**資料項目。
-        *   **輸入文字時**：根據關鍵字在所有資料中進行篩選 (`searchState.results`)。
-    *   **目的**：提供完整的字典查詢功能，允許使用者檢視未變更的原廠翻譯。
+    *   **觸發時機**：啟用搜尋模式 (`isActive = true`)。
+    *   **行為**：自動隱藏 `MODIFIED`/`NEW` 標籤，提供純淨的字典查詢體驗。
 
-3.  **空狀態與刷新 (Empty State & Refresh)**
-    *   **空狀態**：當待辦列表為空時，顯示「一切就緒」的視覺引導，避免畫面過於單調。
-    *   **刷新機制**：支援透過空狀態按鈕或頂部選單 (`MoreActionsMenu`) 觸發 `AppEvent.File.RefreshSource`，強制重讀檔案以同步外部變更。
+3.  **重新整理 (Refresh)**：
+    *   觸發 `RefreshSource` 時會清空編輯器狀態，確保 UI 一致性。
 
 ### 4.5. 開發與除錯 (Debug Mode)
 *   **Debug Mode**：透過 `OniTranslatorViewModel(debugMode = true)` 啟動。
-*   **行為差異**：
-    *   **存檔路徑**：檔案會寫入系統暫存目錄 (Temp)，而非遊戲真實目錄，避免開發時汙染環境。
-    *   **除錯對話框**：存檔時會跳出 `DebugSaveDialog` 顯示寫入路徑。
+*   **行為差異**：存檔路徑會導向系統暫存目錄，並彈出 `DebugSaveDialog` 確認路徑。
 
 ### 4.6. UI 互動細節 (UI Interactions)
 
@@ -175,14 +164,17 @@
 
 ### 4.7. 草稿與進度管理 (Draft Management)
 
-為了確保翻譯作業的靈活性與安全性：
-*   **自動暫存**：所有編輯變更會即時寫入系統暫存目錄的 `strings.po` 檔案。
-*   **草稿清除**：提供「刪除所有草稿」功能，允許使用者一鍵捨棄所有未正式存檔的變更，將專案狀態恢復至正式翻譯檔內容。
-*   **狀態列同步**：左下角狀態列會根據當前模式（待辦或搜尋）自動切換顯示數量，提供精確的進度回饋。
+為了確保翻譯作業的安全性，專案實作了多層防護：
+*   **閒置自動暫存**：
+    *   可於設定中開啟，支援 1-30 分鐘閒置觸發。
+    *   採用 Debounce 機制，每次編輯後重設計時器，僅在使用者停下工作時執行背景寫入。
+*   **行為安全優化**：
+    *   「刪除草稿」僅移除硬碟實體檔案，**保留記憶體中的編輯進度**，避免做白工。
+    *   選單按鈕會根據硬碟上是否存在草稿檔自動切換 `Enabled` 狀態。
 
 ### 4.8. 品質保證 (Testing)
 
-核心邏輯（如 `TagSensor`）配備了完整的單元測試套件 (`TagSensorTest.kt`)，涵蓋標籤計數、變數比對、Email 偵測與各種邊界情況，確保解析邏輯的穩健性。
+核心邏輯（如 `TagSensor`, `NisbetPeek` 解析層）配備單元測試，確保複雜標籤語法處理的穩健性。
 
 
 ---

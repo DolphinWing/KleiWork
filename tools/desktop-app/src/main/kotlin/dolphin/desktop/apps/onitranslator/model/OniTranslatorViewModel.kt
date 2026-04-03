@@ -41,6 +41,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
 
     private val scope = CoroutineScope(Dispatchers.Default)
     private var autoClearJob: Job? = null
+    private var autoSaveJob: Job? = null
 
     init {
         scope.launch {
@@ -63,6 +64,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                     val result = helper?.clearDrafts() == true
                     if (result) {
                         SnackbarManager.showMessage(Res.string.toast_draft_cleared)
+                        refreshDataSource()
                     }
                 }
 
@@ -165,6 +167,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         val (path, cost) = save(useCache)
         if (cost > 0) {
             SnackbarManager.showMessage(Res.string.toast_write_success, path, cost)
+            refreshDataSource()
         } else {
             SnackbarManager.showMessage(Res.string.toast_write_failed)
         }
@@ -256,15 +259,33 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     private suspend fun edit(key: String, value: String) {
         helper?.update(key, value)
         refreshDataSource()
+        scheduleAutoSave()
+    }
+
+    private fun scheduleAutoSave() {
+        val configs = state.value.configs
+        if (!configs.autoSaveEnabled) return
+
+        autoSaveJob?.cancel()
+        autoSaveJob = scope.launch {
+            delay(configs.autoSaveIntervalMinutes * 60 * 1000L)
+            // Only auto-save if there are unsaved changes in this session
+            if (state.value.changedList.isNotEmpty()) {
+                saveFileInternal(useCache = true)
+                helper?.log("Auto-saved draft after ${configs.autoSaveIntervalMinutes} minutes of idle.")
+            }
+        }
     }
 
     private suspend fun refreshDataSource() = withContext(Dispatchers.IO) {
         val filtered = helper?.buildChangeList()?.mapNotNull { requestEditorData(it) } ?: emptyList()
         val list = filtered.map { it.target.changed }
+        val hasDraft = helper?.hasDraft() ?: false
         _state.update {
             it.copy(
                 filteredList = filtered,
                 changedList = list,
+                hasDraft = hasDraft,
                 uiState = it.uiState.copy(editorData = null)
             )
         }

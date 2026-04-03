@@ -59,7 +59,7 @@ class PoHelper(
     private val _logs = MutableStateFlow<List<LogEntry>>(emptyList())
     val logs: StateFlow<List<LogEntry>> = _logs.asStateFlow()
 
-    private fun log(message: String, type: LogType = LogType.Info) {
+    fun log(message: String, type: LogType = LogType.Info) {
         val entry = LogEntry(message, type = type)
         _logs.update { currentList ->
             val newList = currentList + entry
