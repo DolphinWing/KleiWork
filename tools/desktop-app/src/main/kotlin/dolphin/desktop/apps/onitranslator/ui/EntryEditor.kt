@@ -154,7 +154,7 @@ private fun EntryEditorSection(
     var editedText by remember { mutableStateOf(entry.target.msgStr()) }
     var backupText by remember { mutableStateOf<String?>(null) }
     var showRefs by remember { mutableStateOf(true) }
-    var showDraft by remember { mutableStateOf(true) }
+    var showPoSave by remember { mutableStateOf(true) }
     var isPeeking by remember { mutableStateOf(false) }
     val isChanged = editedText != (entry.target.str.trim())
     val clipboard = LocalClipboard.current
@@ -166,8 +166,8 @@ private fun EntryEditorSection(
     }
 
     // Live tag sensor diagnostic
-    val liveDiagnostic = remember(editedText, entry.templateText) {
-        TagSensor.diagnose(entry.templateText, editedText)
+    val liveDiagnostic = remember(editedText, entry.sourceText) {
+        TagSensor.diagnose(entry.sourceText, editedText)
     }
 
     LaunchedEffect(entry.target.key) {
@@ -192,8 +192,8 @@ private fun EntryEditorSection(
                 entry,
                 onCopyToClipboard = { onEvent(AppEvent.Ui.CopyToClipboard(it)) },
                 onReplace = { editedText = onConvert(it) },
-                refsVisible = showRefs,
-                draftVisible = showDraft,
+                chsRefsVisible = showRefs,
+                poSaveVisible = showPoSave,
             )
 
             OutlinedTextField(
@@ -215,8 +215,8 @@ private fun EntryEditorSection(
                 editedText = editedText,
                 showRefs = showRefs,
                 onShowRefsChange = { showRefs = it },
-                showDraft = showDraft,
-                onShowDraftChange = { showDraft = it },
+                showPoSave = showPoSave,
+                onShowPoSaveChange = { showPoSave = it },
                 isPeeking = isPeeking,
                 onPeekingChange = { isPeeking = it },
                 backupText = backupText,
@@ -247,8 +247,8 @@ private fun EditorActionRow(
     editedText: String,
     showRefs: Boolean,
     onShowRefsChange: (Boolean) -> Unit,
-    showDraft: Boolean,
-    onShowDraftChange: (Boolean) -> Unit,
+    showPoSave: Boolean,
+    onShowPoSaveChange: (Boolean) -> Unit,
     isPeeking: Boolean,
     onPeekingChange: (Boolean) -> Unit,
     backupText: String?,
@@ -261,12 +261,12 @@ private fun EditorActionRow(
     diagnostic: TagDiagnostic? = null,
 ) {
     Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-        entry.referenceText?.let {
-            SimpleSwitch(checked = showRefs, onCheckedChange = onShowRefsChange, type = EntryTagType.Simplified)
+        entry.chsReference?.let {
+            SimpleSwitch(checked = showRefs, onCheckedChange = onShowRefsChange, type = EntryTagType.ChsRef)
         }
         Spacer(Modifier.width(8.dp))
-        entry.draftText?.let {
-            SimpleSwitch(checked = showDraft, onCheckedChange = onShowDraftChange, type = EntryTagType.Translated)
+        entry.poText?.let {
+            SimpleSwitch(checked = showPoSave, onCheckedChange = onShowPoSaveChange, type = EntryTagType.PoSave)
         }
 
         Spacer(Modifier.width(16.dp))
@@ -342,36 +342,36 @@ private fun ReferenceSection(
     entry: EditorData,
     onCopyToClipboard: (String) -> Unit,
     onReplace: ((String) -> Unit),
-    refsVisible: Boolean = true,
-    draftVisible: Boolean = true,
+    chsRefsVisible: Boolean = true,
+    poSaveVisible: Boolean = true,
 ) {
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         ReferenceView(
-            entry.templateText, type = EntryTagType.Original,
+            entry.sourceText, type = EntryTagType.Source,
             onCopyToClipboard = { text ->
                 val textToCopy = text.ifBlank {
                     var t = "msgctxt \"${entry.target.key()}\"\n"
-                    t += "msgid \"${entry.templateText}\"\n"
+                    t += "msgid \"${entry.sourceText}\"\n"
                     t += "msgstr \"${entry.target.msgStr()}\""
                     t
                 }
                 onCopyToClipboard.invoke(textToCopy)
             }
         )
-        entry.referenceText?.let { text ->
-            if (text.isNotBlank() && refsVisible) {
+        entry.chsReference?.let { text ->
+            if (text.isNotBlank() && chsRefsVisible) {
                 ReferenceView(
                     text,
-                    type = EntryTagType.Simplified,
+                    type = EntryTagType.ChsRef,
                     onReplace = { onReplace.invoke(text) },
                 )
             }
         }
-        entry.draftText?.let { text ->
-            if (text.isNotBlank() && draftVisible) {
+        entry.poText?.let { text ->
+            if (text.isNotBlank() && poSaveVisible) {
                 ReferenceView(
                     text,
-                    type = EntryTagType.Translated,
+                    type = EntryTagType.PoSave,
                     onReplace = { onReplace.invoke(text) },
                 )
             }
@@ -452,10 +452,10 @@ private fun ReferenceViewPreview() {
                     Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                         ReferenceView(
                             "template text <link=\\\"DATABANK\\\">Data Banks</link>",
-                            EntryTagType.Original,
+                            EntryTagType.Source,
                             onCopyToClipboard = {})
-                        ReferenceView("simplified text", EntryTagType.Simplified, onReplace = {})
-                        ReferenceView("draft text", EntryTagType.Translated, onReplace = {})
+                        ReferenceView("simplified text", EntryTagType.ChsRef, onReplace = {})
+                        ReferenceView("translated text", EntryTagType.PoSave, onReplace = {})
                     }
                 }
             }
@@ -475,8 +475,8 @@ private fun SimpleSwitch(
         positionProvider = TooltipDefaults.rememberTooltipPositionProvider(TooltipAnchorPosition.Above),
         tooltip = {
             val tooltipText = when (type) {
-                EntryTagType.Simplified -> stringResource(Res.string.tooltip_toggle_simplified)
-                EntryTagType.Translated -> stringResource(Res.string.tooltip_toggle_translated)
+                EntryTagType.ChsRef -> stringResource(Res.string.tooltip_toggle_simplified)
+                EntryTagType.PoSave -> stringResource(Res.string.tooltip_toggle_translated)
                 else -> stringResource(type.label)
             }
             Surface(

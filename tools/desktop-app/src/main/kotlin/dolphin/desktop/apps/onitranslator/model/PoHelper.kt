@@ -47,11 +47,12 @@ class PoHelper(
     private val draftEntries = HashMap<String, PoEntry>()
     private val entryList: MutableList<PoEntry> = mutableListOf()
 
-    fun templateText(key: String): PoEntry? = templateMap[key]
-    fun simplified(key: String): PoEntry? = simplifiedMap[key]
-    fun drafted(key: String): PoEntry? = draftEntries[key]
-    fun official(key: String): PoEntry? = translatedEntries[key]
-    fun allValues(): List<PoEntry> = entryList.toList()
+    fun sourceEntry(key: String): PoEntry? = templateMap[key]
+    fun chsEntry(key: String): PoEntry? = simplifiedMap[key]
+    fun draftEntry(key: String): PoEntry? = draftEntries[key]
+    fun poEntry(key: String): PoEntry? = translatedEntries[key]
+    fun allEntries(): List<PoEntry> = entryList.toList()
+    fun hasDraft(): Boolean = getCachedFile().exists()
 
     private val _loading = MutableStateFlow(true)
     val loading: StateFlow<Boolean> = _loading

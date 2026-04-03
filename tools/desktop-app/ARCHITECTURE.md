@@ -87,13 +87,13 @@
 
 ### 4.2. 翻譯與檔案處理 (`PoHelper`)
 
-這是本專案最核心的「大腦」。它維護了四個主要的 Map：
-1.  `templateMap` (`LinkedHashMap`): 來自 `strings_template.pot`，決定了輸出的順序與 Key。
-2.  `simplifiedMap`: 來自原廠簡中檔案，作為翻譯參考。
-3.  `translatedEntries`: 來自使用者目前的 `strings.po`。
-4.  `draftEntries`: 來自暫存檔 (Draft)。
+這是本專案最核心的「大腦」。它維護了四個主要來源 (Maps)：
+1.  **`Source`** (`templateMap`): 來自 `strings_template.pot`，決定了輸出的順序與 Key。
+2.  **`ChsRef`** (`simplifiedMap`): 來自原廠簡中檔案，作為翻譯參考。
+3.  **`PoSave`** (`translatedEntries`): 來自遊戲目錄下的 `strings.po`（已儲存的譯文）。
+4.  **`Draft`** (`draftEntries`): 來自系統暫存目錄下的 `.po` 暫存檔。
 
-**合併邏輯**：Draft > Existing Translation > Simplified (converted) > Template Origin。
+**合併邏輯**：Draft > PoSave > ChsRef (converted) > Source (English)。
 
 **差異判定 (Diff Logic)**：
 為了精確篩選出「待辦項目」，`PoHelper` 採用以下判定公式：
@@ -133,34 +133,18 @@
 *   **Debug Mode**：透過 `OniTranslatorViewModel(debugMode = true)` 啟動。
 *   **行為差異**：存檔路徑會導向系統暫存目錄，並彈出 `DebugSaveDialog` 確認路徑。
 
-### 4.6. UI 互動細節 (UI Interactions)
+### 4.6. UI 互動與視覺安全感
 
-*   **Tooltip 系統**：
-    *   為了提升辨識度，全域採用「反轉色 (Inverse Surface)」與較大的字體 (`bodyMedium`)。
-    *   **邊界優化**：在靠近 Status Bar 的編輯器開關處，Tooltip 會自動調整至上方 (`Above`) 顯示，避免視覺遮擋。
+*   **視覺對位系統**：
+    *   編輯器下方列出 `Source`, `ChsRef`, `PoSave` 三重參考，並可手動切換顯示。
+    *   列表項目採用 Tertiary 色系標記「已修改」狀態，與 `PoSave` 標籤產生視覺連動。
 
-*   **AI 協作工作流 (AI-Assisted Workflow)**：
-    *   **智慧貼上 (Smart Paste)**：專為 Gemini Gems 網頁版設計。點擊魔法按鈕後，程式會自動從剪貼簿提取 `msgstr` 內容，解析轉義字元，並自動執行 `Save` 事件以達到「一鍵同步」。
-    *   **反悔機制 (Smart Undo)**：在智慧貼上後，會自動保存貼上前的手動內容。點擊「復原」按鈕可一鍵將文字框與檔案狀態同時還原。
-    *   **技術實作**：採用現代化的 `LocalClipboard` API 配合 Java AWT `Transferable` 轉型，實現非同步且穩定的剪貼簿存取。
+*   **AI 協作與智慧貼上**：
+    *   支援從剪貼簿提取 `msgstr` 並自動解析轉義字元，實現一鍵同步。
 
-*   **NisbetPeek 視覺預覽系統**：
-    *   **架構設計 (Logic/UI Separation)**：系統分為純邏輯解析層 (`toOniTokens`) 與 UI 渲染層 (`peek`)。解析層將原始碼拆解為 `OniToken` 列表，完全不依賴 UI 框架，便於執行高效率的單元測試。
-    *   **標籤守護 (Tag Safety)**：渲染引擎內建 `tagStack` 機制，能精確處理巢狀標籤並修正未閉合或錯位的語法（如 Klei 原廠文件中的 Bug）。
-    *   **智慧感應與偵錯 (Smart Sensor & Debug)**：系統除了自動偵測預覽時機外，還能預檢語法錯誤 (`hasOniSyntaxError`)。未知標籤會以「紅色底線」高亮，多餘或錯誤標籤則會以「淡紅色」顯示。
-    *   **情緒化回饋 (Emotional Interaction)**：整合 `NisbetEmotion` 選擇器。當偵測到語法錯誤時，Nisbet 會自動切換至「抱歉 (NisbetSorry)」表情，並給予針對性的糾錯建議語錄；正常時則隨機展現期待、興奮或沉思等動態情緒。
-    *   **渲染規格**：定義了獨立的「ONI 調色盤 (OniColor)」，模擬遊戲中連結 (Pink)、警告 (Red)、關鍵字 (Orange) 與插值 (Blue) 的真實視覺感。
-
-    *   **Tag Sensor 診斷系統 (Tag Sensor Diagnostic)**：
-        *   **自動對帳**：內建於 `PoHelper` 的處理流程中。自動提取並比對 `msgid` 與 `msgstr` 的標籤 (`OpeningTag`) 與動態變數 (`{Hotkey}`) 數量。
-        *   **智慧偵測**：解析器會自動識別並忽略被 `< >` 包裹的 Email 地址，減少在 Lore 條目中的誤報。
-        *   **雙重判定**：區分「原文錯誤 (Source Issue)」與「譯文偏差 (Mismatch)」，讓使用者能快速識別是 Klei 的鍋還是自己的筆誤。
-        *   **即時回饋**：編輯器支援 Live Diagnostic，在 `NisbetPeek` 抽屜中即時顯示字級較大、清晰易讀的差異報告。
-        *   **搜尋整合**：在「全覽模式」下可透過「標籤診斷」Chip 快速過濾出所有有問題的條目。
-
-    *   **NisbetPeek 渲染增強**：
-        *   **Small Caps 支援**：實作 `smallcaps` 標籤的 OpenType 渲染 (`smcp`)。
-        *   **強制預覽**：當診斷系統偵測到標籤問題時，即便字串簡短，系統也會強制允許開啟預覽，確保使用者能看見診斷報告。
+*   **NisbetPeek 預覽系統**：
+    *   模擬遊戲內渲染效果（顏色、連結、插值）。
+    *   內建 `Tag Sensor` 診斷，即時提示標籤不對稱或語法錯誤。
 
 ### 4.7. 草稿與進度管理 (Draft Management)
 
@@ -195,9 +179,5 @@ src/main/kotlin/dolphin/desktop/apps/onitranslator/
 
 ## 6. 未來擴充指引
 
-*   **文件同步 (Critical for AI & Human)**：
-    *   任何涉及架構調整、邏輯變更或新功能實作，**必須同步更新本文件**。
-    *   **給 AI 的指令**：在完成上述類型的任務後，**請務必檢查並提醒使用者**更新此文檔，或主動提出更新建議。
-*   若要新增 UI 功能：請先在 `AppEvent` 定義意圖，再到 `ViewModel` 實作邏輯，最後更新 `UiState`。
-*   若要修改翻譯邏輯：請專注於 `PoHelper`，避免將邏輯洩漏到 ViewModel。
-*   若要調整樣式：請優先使用 `MaterialTheme` 的 tokens，保持設計一致性。
+*   **文件同步 (Critical)**：任何涉及架構調整、邏輯變更或新功能實作，**必須同步更新本文件**。
+*   **自動備份建議**：若未來需實作版本回溯，可考慮在手動儲存草稿時產生 `.po.bak` 檔案。

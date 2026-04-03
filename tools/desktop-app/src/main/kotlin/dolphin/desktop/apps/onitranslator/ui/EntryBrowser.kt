@@ -228,8 +228,8 @@ private fun EntryItemView(
                     )
                 }
 
-                val isModified = data.officialText != null &&
-                        data.target.str.trim() != data.officialText.trim()
+                val isModified = data.poText != null &&
+                        data.target.str.trim() != data.poText.trim()
                 if (isModified && !data.target.newly && !isSearchMode) {
                     Text(
                         text = stringResource(Res.string.label_modified),
@@ -272,15 +272,21 @@ private fun EntryItemView(
                 horizontalAlignment = Alignment.Start,
                 verticalArrangement = Arrangement.spacedBy(4.dp),
             ) {
-                // Original
-                EntryTagChip(tagType = EntryTagType.Original, text = data.templateText)
-                // Simplified
-                data.referenceText?.let {
-                    EntryTagChip(tagType = EntryTagType.Simplified, text = it)
+                // Original English Source
+                EntryTagChip(tagType = EntryTagType.Source, text = data.sourceText)
+                // Simplified Reference
+                data.chsReference?.let {
+                    EntryTagChip(tagType = EntryTagType.ChsRef, text = it)
                 }
-                // Old translated
-                data.draftText?.let {
-                    EntryTagChip(tagType = EntryTagType.Translated, text = it)
+                // Existing Translation from strings.po
+                data.poText?.let {
+                    EntryTagChip(tagType = EntryTagType.PoSave, text = it)
+                }
+                // Draft Translation (if exists and differs from poText)
+                data.draftText?.let { draft ->
+                    if (draft.trim() != data.poText?.trim()) {
+                        EntryTagChip(tagType = EntryTagType.Draft, text = draft)
+                    }
                 }
             }
         }
@@ -316,11 +322,11 @@ private fun EntryItemPreview() {
     val sampleEntry = PoEntry("STRINGS.UI.PREVIEW.KEY", "The quick brown fox jumps over the lazy dog.")
     val defaultViewData = EditorData(
         target = sampleEntry.copy(newly = false),
-        templateText = "Template text <placeholde r>",
-        referenceText = "Simplified",
-        draftText = "Translated text that might be a bit long."
+        sourceText = "Template text <placeholde r>",
+        chsReference = "Simplified",
+        poText = "Translated text that might be a bit long."
     )
-    val newEntryViewData = defaultViewData.copy(target = sampleEntry, draftText = null, referenceText = null)
+    val newEntryViewData = defaultViewData.copy(target = sampleEntry, poText = null, chsReference = null)
     var index = 0
 
     Row(modifier = Modifier.padding(16.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {

@@ -8,8 +8,9 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Close
+import androidx.compose.material.icons.rounded.Done
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -27,7 +28,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
-import dolphin.desktop.apps.onitranslator.generated.resources.button_close
+import dolphin.desktop.apps.onitranslator.generated.resources.button_apply
+import dolphin.desktop.apps.onitranslator.generated.resources.button_cancel
 import dolphin.desktop.apps.onitranslator.generated.resources.draft_path
 import dolphin.desktop.apps.onitranslator.generated.resources.github_root
 import dolphin.desktop.apps.onitranslator.generated.resources.glossary_dir
@@ -195,13 +197,25 @@ fun ConfigScreen(
             } else null
         )
 
-        Spacer(Modifier.height(8.dp))
+        Spacer(Modifier.height(16.dp))
 
         // Action buttons
-        Row(horizontalArrangement = Arrangement.End, modifier = Modifier.fillMaxWidth()) {
+        Row(
+            horizontalArrangement = Arrangement.End,
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.fillMaxWidth()
+        ) {
             TextButton(onClick = onCancel) {
-                Icon(Icons.Rounded.Close, contentDescription = null)
-                Text(stringResource(Res.string.button_close))
+                Text(stringResource(Res.string.button_cancel))
+            }
+            Spacer(Modifier.width(8.dp))
+            TextButton(
+                onClick = { onApply(configs) },
+                enabled = !isStringMapError
+            ) {
+                Icon(Icons.Rounded.Done, contentDescription = null)
+                Spacer(Modifier.width(4.dp))
+                Text(stringResource(Res.string.button_apply))
             }
         }
     }
@@ -211,23 +225,24 @@ fun ConfigScreen(
 internal fun ConfigDialogContent(
     configs: Configs,
     onConfigChange: (configs: Configs) -> Unit = {},
+    onApply: (Configs) -> Unit = {},
     onDismissRequest: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Surface(
         modifier = modifier.fillMaxWidth(),
         color = MaterialTheme.colorScheme.surface,
-        shape = MaterialTheme.shapes.medium, // Apply rounded corners
+        shape = MaterialTheme.shapes.medium,
     ) {
         ConfigScreen(
             configs = configs,
             onConfigChange = onConfigChange,
+            onApply = onApply,
             onCancel = onDismissRequest,
         )
     }
 }
 
-// Previews for M3ConfigPane components
 @Preview
 @Composable
 private fun ConfigScreenPreviewLight() {
@@ -252,7 +267,7 @@ private fun ConfigScreenPreviewDark() {
         Surface {
             ConfigScreen(
                 configs = Configs(
-                    dataBankPath = "", // Test error case
+                    dataBankPath = "",
                     oniWorkshopDir = "/path/to/workshop",
                     oniAssetsDir = "/path/to/assets"
                 ),

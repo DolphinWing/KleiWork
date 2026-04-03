@@ -78,9 +78,20 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                 }
 
                 // Configuration
-                is AppEvent.Config.Change -> saveConfig(event.configs)
+                is AppEvent.Config.Change -> {
+                    _state.update { it.copy(configs = event.configs) }
+                }
                 is AppEvent.Config.Saved -> {
-                    saveConfig(event.configs)
+                    val oldConfigs = state.value.configs
+                    val newConfigs = event.configs
+                    _state.update { it.copy(configs = newConfigs) }
+
+                    // Only reload data if paths have changed
+                    val pathChanged = oldConfigs.oniWorkshopDir != newConfigs.oniWorkshopDir ||
+                            oldConfigs.oniAssetsDir != newConfigs.oniAssetsDir ||
+                            oldConfigs.dataBankPath != newConfigs.dataBankPath
+
+                    saveConfig(newConfigs, shouldReload = pathChanged)
                     updateUiState { it.copy(dialogState = null) }
                 }
 
@@ -242,17 +253,19 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         _state.update { it.copy(uiState = block(it.uiState)) }
     }
 
-    private suspend fun saveConfig(newConfigs: Configs) = withContext(Dispatchers.IO) {
+    private suspend fun saveConfig(newConfigs: Configs, shouldReload: Boolean = true) = withContext(Dispatchers.IO) {
         ConfigManager.save(newConfigs, windowConfig.value)
-        // Reload everything with the new configuration
-        loadInitialData()
+        if (shouldReload) {
+            // Reload everything with the new configuration
+            loadInitialData()
+        }
     }
 
     private suspend fun translate() = withContext(Dispatchers.IO) {
         updateStatus("Translating...")
         helper?.runTranslationProcess()
         refreshDataSource()
-        val results = helper?.allValues()?.mapNotNull { entry -> requestEditorData(entry) } ?: emptyList()
+        val results = helper?.allEntries()?.mapNotNull { entry -> requestEditorData(entry) } ?: emptyList()
         updateUiState { it.copy(searchState = it.searchState.copy(results = results)) }
     }
 
@@ -303,7 +316,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     private suspend fun search(text: String, type: SearchType = state.value.uiState.searchState.type) =
         withContext(Dispatchers.IO) {
             updateUiState { it.copy(searchState = it.searchState.copy(text = text, type = type)) }
-            val searchResult = helper?.allValues()?.filter { item ->
+            val searchResult = helper?.allEntries()?.filter { item ->
                 when (type) {
                     SearchType.Origin -> item.msgId().contains(text, ignoreCase = true)
                     SearchType.Key -> item.key().contains(text, ignoreCase = true)
@@ -334,11 +347,17 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         val h = helper ?: return null
         return if (entry == null) null else {
             val key = entry.key
-            val templateText = h.templateText(key)?.msgId() ?: entry.msgId()
-            val referenceText = h.simplified(key)?.msgStr()
-            val draftText = h.drafted(key)?.msgStr()
-            val officialText = h.official(key)?.msgStr()
-            EditorData(entry, templateText, referenceText, draftText, officialText)
+            val sourceText = h.sourceEntry(key)?.msgId() ?: entry.msgId()
+            val chsReference = h.chsEntry(key)?.msgStr()
+            val draftText = h.draftEntry(key)?.msgStr()
+            val poText = h.poEntry(key)?.msgStr()
+            EditorData(
+                target = entry,
+                sourceText = sourceText,
+                chsReference = chsReference,
+                poText = poText,
+                draftText = draftText
+            )
         }
     }
 
