@@ -53,6 +53,16 @@ msgctxt "Heliconia.HeliconiaOptions.CrittersCaveTooltip"
 msgid "A small refuge space for critters and plants."
 msgstr "A small refuge space for critters and plants."
 
+#. Heliconia.HeliconiaOptions.CrittersSaveTitle
+msgctxt "Heliconia.HeliconiaOptions.CrittersSaveTitle"
+msgid "Critter Save"
+msgstr "Critter Save"
+
+#. Heliconia.HeliconiaOptions.CrittersSaveTooltip
+msgctxt "Heliconia.HeliconiaOptions.CrittersSaveTooltip"
+msgid "Spawn everything to save critters and plants."
+msgstr "Spawn everything to save critters and plants."
+
 #. Heliconia.HeliconiaOptions.InstantModeTitle
 msgctxt "Heliconia.HeliconiaOptions.InstantModeTitle"
 msgid "Instant temperature balanced"

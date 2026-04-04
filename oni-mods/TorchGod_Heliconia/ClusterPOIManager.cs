@@ -19,7 +19,7 @@ namespace Heliconia
             if (Heliconia.IsHcaCluster() == false) return; // we only cares about ABZ
 
             var options = HeliconiaOptions.GetInstance();
-            if (options.Critter)
+            if (options.Critter && options.SpawnAll)
             {
                 PUtil.LogDebug("Spawn all to save all backwalls devs need.");
                 SaveGame.Instance.worldGenSpawner.SpawnEverything();

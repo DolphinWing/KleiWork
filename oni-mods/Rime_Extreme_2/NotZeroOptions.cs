@@ -25,11 +25,16 @@ namespace NotZeroK
         [JsonProperty]
         public bool Critter { get; set; }
 
+        [Option("NotZeroK.WorldConstants.CRITTER_SAVE", "NotZeroK.WorldConstants.CRITTER_SAVE_DESC")]
+        [JsonProperty]
+        public bool SpawnAll { get; set; }
+
         public NotZeroOptions()
         {
             Mode = MapMode.Balanced; // TerrainCell_GetTemperatureRange_Patch
             Shelter = true; // MutatedWorldData_Constructor_Patch
             Critter = true; // MutatedWorldData_Constructor_Patch
+            SpawnAll = true; // ClusterPOIManager_RegisterTemporalTear_Patch
 
 #if ENABLE_INSTANT_MODE
             InstantMode = true; // TerrainCell_ApplyBackground_Patch

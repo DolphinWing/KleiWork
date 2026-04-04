@@ -10,10 +10,13 @@ namespace Heliconia
         public static LocString GiftedAreaTitle = (LocString)"Treasure Room";
         public static LocString GiftedAreaTooltip = (LocString)"Discover gifts from the developer";
 
-        public static LocString CrittersCaveTitle = (LocString)"Critter Shalter";
+        public static LocString CrittersCaveTitle = (LocString)"Critter Cave";
         public static LocString CrittersCaveTooltip = (LocString)"Let critters have their own pleasure";
-		
-		public static LocString InstantModeTitle = (LocString)"Instant temperature balanced";
+
+        public static LocString CrittersSaveTitle = (LocString)"Critter Save";
+        public static LocString CrittersSaveTooltip = (LocString)"Spawn everything to save critters and plants";
+
+        public static LocString InstantModeTitle = (LocString)"Instant temperature balanced";
         public static LocString InstantModeTooltip = (LocString)"Instant temperature balanced right after worldgen";
 
         [Option("Heliconia.HeliconiaOptions.GiftedAreaTitle", "Heliconia.HeliconiaOptions.GiftedAreaTooltip", "STRINGS.UI.DETAILTABS.SIMPLEINFO.GROUPNAME_WORLDTRAITS")]
@@ -23,8 +26,12 @@ namespace Heliconia
         [Option("Heliconia.HeliconiaOptions.CrittersCaveTitle", "Heliconia.HeliconiaOptions.CrittersCaveTooltip", "STRINGS.UI.DETAILTABS.SIMPLEINFO.GROUPNAME_WORLDTRAITS")]
         [JsonProperty]
         public bool Critter { get; set; }
-		
-		[Option("Heliconia.HeliconiaOptions.InstantModeTitle", "Heliconia.HeliconiaOptions.InstantModeTooltip", "STRINGS.UI.DETAILTABS.SIMPLEINFO.GROUPNAME_WORLDTRAITS")]
+
+        [Option("Heliconia.HeliconiaOptions.CrittersSaveTitle", "Heliconia.HeliconiaOptions.CrittersSaveTooltip", "STRINGS.UI.DETAILTABS.SIMPLEINFO.GROUPNAME_WORLDTRAITS")]
+        [JsonProperty]
+        public bool SpawnAll { get; set; }
+
+        [Option("Heliconia.HeliconiaOptions.InstantModeTitle", "Heliconia.HeliconiaOptions.InstantModeTooltip", "STRINGS.UI.DETAILTABS.SIMPLEINFO.GROUPNAME_WORLDTRAITS")]
         [JsonProperty]
         public bool InstantMode { get; set; }
 
@@ -61,6 +68,7 @@ namespace Heliconia
         {
             Shelter = true; // MutatedWorldData_Constructor_Patch
             Critter = true; // MutatedWorldData_Constructor_Patch
+            SpawnAll = true; // ClusterPOIManager_RegisterTemporalTear_Patch
             Mode = MapMode.Balanced; // TerrainCell_GetTemperatureRange_Patch
         }
 

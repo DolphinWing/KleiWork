@@ -88,7 +88,7 @@ unknownCellsAllowedSubworlds:
   - tagcommand: Default
     command: Replace
     subworldNames:
-      - subworlds/Heliconia/med_ForestStart
+      - expansion1::subworlds/Heliconia/med_ForestStart
 
   # Ring-1
   - tagcommand: DistanceFromTag

@@ -263,7 +263,7 @@ namespace NotZeroK
                 if (NotZeroK.IsMe() == false) return; // we only cares about ABZ
 
                 var options = POptions.ReadSettings<NotZeroOptions>() ?? new NotZeroOptions();
-                if (options.Critter)
+                if (options.Critter && options.SpawnAll)
                 {
                     PUtil.LogDebug("Spawn all to save all backwalls devs need.");
                     SaveGame.Instance.worldGenSpawner.SpawnEverything();

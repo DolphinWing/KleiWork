@@ -68,6 +68,16 @@ msgctxt "NotZeroK.WorldConstants.CRITTER_DESC"
 msgid "A small refuge space for critters and plants."
 msgstr "一個給小動物和植物的小避難空間。"
 
+#. NotZeroK.WorldConstants.CRITTER_SAVE
+msgctxt "NotZeroK.WorldConstants.CRITTER_SAVE"
+msgid "Critter Save"
+msgstr "拯救萬物"
+
+#. NotZeroK.WorldConstants.CRITTER_SAVE_DESC
+msgctxt "NotZeroK.WorldConstants.CRITTER_SAVE_DESC"
+msgid "Spawn everything to save critters and plants."
+msgstr "世界生成時拯救一切。"
+
 #. NotZeroK.WorldConstants.CLUSTER_NAME
 msgctxt "NotZeroK.WorldConstants.CLUSTER_NAME"
 msgid "Not 0K Classic"

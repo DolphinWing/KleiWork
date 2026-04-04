@@ -23,6 +23,9 @@
         public static LocString CRITTER = (LocString)"Critter Cave";
         public static LocString CRITTER_DESC = (LocString)"A small refuge space for critters and plants.";
 
+        public static LocString CRITTER_SAVE = (LocString)"Critter Save";
+        public static LocString CRITTER_SAVE_DESC = (LocString)"Spawn everything to save critters and plants.";
+
         public static LocString CLUSTER_NAME = (LocString)"Not 0K Classic";
         public static LocString CLUSTER_DESCRIPTION = (LocString)"0K challenge";
 
