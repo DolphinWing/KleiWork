@@ -1,18 +1,12 @@
 info:
   size:
-    X: 11
+    X: 7
     Y: 6
   min:
     X: -3
     Y: -2
-  area: 43
+  area: 42
 cells:
-- element: Polypropylene
-  mass: 100
-  temperature: 292.936493
-  location_x: 7
-  location_y: 3
-  preventFoWReveal: true
 - element: Polypropylene
   mass: 100
   temperature: 292.142365
@@ -198,11 +192,6 @@ cells:
   location_x: 3
   location_y: 3
 buildings:
-- id: TilePOI
-  location_x: 7
-  location_y: 3
-  element: Polypropylene
-  temperature: 292.936493
 - id: InsulatedLiquidConduit
   location_x: -2
   element: Cuprite

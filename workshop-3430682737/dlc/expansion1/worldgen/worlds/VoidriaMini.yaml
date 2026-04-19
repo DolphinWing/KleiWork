@@ -12,15 +12,15 @@ layoutMethod: PowerTree # Note: We need to add weights to the items in the layer
 
 defaultsOverrides:
   data:
+    DrawWorldBorderForce: false
+    DrawWorldBorder: true
+    WorldBorderThickness: 5
+    WorldBorderRange: 2
+    OverworldDensityMin: 18
+    OverworldDensityMax: 18
     OverworldAvoidRadius: 5
     OverworldSampleBehaviour: PoissonDisk
-    OverworldDensityMin: 10
-    OverworldDensityMax: 10
-    DrawWorldBorder: true
-    DrawWorldBorderForce: false
-    WorldBorderThickness: 1
-    WorldBorderRange: 0
-#    OverworldMinNodes: 1
+    poiPadding: 1
   startingWorldElements: [] # remove the algae check
 
 # List all the subworld files to load
