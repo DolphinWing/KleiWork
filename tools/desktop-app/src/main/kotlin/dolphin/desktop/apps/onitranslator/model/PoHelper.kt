@@ -381,9 +381,10 @@ class PoHelper(
 
         val singleLevelExceptions = listOf("BLUEPRINTS", "ELEMENTS", "WORLD_TRAITS", "WORLDS")
         val blacklist = listOf(
-            "MISC.", "GAMEPLAY_EVENTS.", "EQUIPMENT.PREFABS", "BUILDINGS.PREFABS",
-            "BLUEPRINTS", "UI.SANDBOXTOOLS", "UI.OUTFITS", "ROOMS.DETAILS", "INPUT_BINDINGS.",
-            "UI.SPACEARTIFACTS", "UI.KEEPSAKES"
+            "MISC.", "GAMEPLAY_EVENTS.", "BLUEPRINTS", "ROOMS.DETAILS", "INPUT_BINDINGS.",
+            "UI.SPACEARTIFACTS", "UI.KEEPSAKES", "UI.OUTFITS", "UI.SANDBOXTOOLS",
+            ".STATUSITEMS", "ROOMS.CRITERIA",
+            "UI.FRONTEND", "UI.TOOLTIPS", ".FACADES", ".FACADE"
         )
         val tagRegex = Regex("<[^>]+>")
 

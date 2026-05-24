@@ -3958,7 +3958,7 @@ msgstr "<link=\"EXTERIORWALL\">像素劍龍</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_NEUTRONIUM.DESC"
 msgid "This sumptuously tufted wall panel transforms basic colony spaces into palatial throne rooms."
-msgstr "這款豪華的簇絨背景牆，能將基礎的殖民地空間轉變為宮殿般的王座室。"
+msgstr "這款豪華的簇絨牆板，能將基礎的殖民地空間轉變為宮殿般的王座室。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_NEUTRONIUM.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_NEUTRONIUM.NAME"
@@ -6568,12 +6568,12 @@ msgstr "在這個建築下面建造<style=\"KKeyword\">磚塊</style>可恢復�
 #. STRINGS.BUILDING.STATUSITEMS.MISSINGFOUNDATIONBACKWALL.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.MISSINGFOUNDATIONBACKWALL.NAME"
 msgid "Missing Back Wall"
-msgstr "缺少背景牆"
+msgstr "缺少牆板"
 
 #. STRINGS.BUILDING.STATUSITEMS.MISSINGFOUNDATIONBACKWALL.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.MISSINGFOUNDATIONBACKWALL.TOOLTIP"
 msgid "Build a <style=\"KKeyword\">Drywall</style> or <style=\"KKeyword\">Tempshift Plate</style> behind this building to regain function\n\nThey can be found in the <b>Base Tab</b> {Hotkey/Plan1} and <b>Utilities Tab</b> {Hotkey/Plan11} of the Build Menu"
-msgstr "建造一個<style=\"KKeyword\">背景牆</style>或<style=\"KKeyword\">散熱板</style>在這座建築物後面，以恢復功能\n\n它們可以在建造選單的<b>基地</b> {Hotkey/Plan1} 和<b>實用</b> {Hotkey/Plan11} 中找到"
+msgstr "建造一個<style=\"KKeyword\">牆板</style>或<style=\"KKeyword\">散熱板</style>在這座建築物後面，以恢復功能\n\n它們可以在建造選單的<b>基地</b> {Hotkey/Plan1} 和<b>實用</b> {Hotkey/Plan11} 中找到"
 
 #. STRINGS.BUILDING.STATUSITEMS.MISSINGGANTRY.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.MISSINGGANTRY.NAME"
@@ -11373,12 +11373,12 @@ msgstr "<link=\"EXOBASEHEADQUARTERS\">小型列印元</link>"
 #. STRINGS.BUILDINGS.PREFABS.EXTERIORWALL.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.EXTERIORWALL.DESC"
 msgid "Drywall can be used in conjunction with tiles to build airtight rooms on the surface."
-msgstr "背景牆可與磚塊結合使用，在星球表面建造氣密的房間。"
+msgstr "牆板可與磚塊結合使用，在星球表面建造氣密的房間。"
 
 #. STRINGS.BUILDINGS.PREFABS.EXTERIORWALL.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.EXTERIORWALL.EFFECT"
 msgid "Prevents <link=\"ELEMENTSGAS\">Gas</link> and <link=\"ELEMENTSLIQUID\">Liquid</link> loss in space.\n\nBuilds an insulating backwall behind buildings."
-msgstr "阻止<link=\"ELEMENTSGAS\">氣體</link>與<link=\"ELEMENTSLIQUID\">液體</link>在太空中流失。\n\n在建築的背面建造隔絕背景牆。"
+msgstr "阻止<link=\"ELEMENTSGAS\">氣體</link>與<link=\"ELEMENTSLIQUID\">液體</link>在太空中流失。\n\n在建築的背面建造隔絕背牆。"
 
 #. STRINGS.BUILDINGS.PREFABS.EXTERIORWALL.FACADES.AQUATICMOSAIC.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.EXTERIORWALL.FACADES.AQUATICMOSAIC.DESC"
@@ -11588,7 +11588,7 @@ msgstr "它完成了它的使命。"
 #. STRINGS.BUILDINGS.PREFABS.EXTERIORWALL.FACADES.DEFAULT_EXTERIORWALL.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.EXTERIORWALL.FACADES.DEFAULT_EXTERIORWALL.NAME"
 msgid "<link=\"EXTERIORWALL\">Drywall</link>"
-msgstr "<link=\"EXTERIORWALL\">乾壁牆</link>"
+msgstr "<link=\"EXTERIORWALL\">牆板</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.EXTERIORWALL.FACADES.DIAGONAL_BLUE_COBALT_WHITE.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.EXTERIORWALL.FACADES.DIAGONAL_BLUE_COBALT_WHITE.DESC"
@@ -12333,7 +12333,7 @@ msgstr "<link=\"EXTERIORWALL\">多汁西瓜</link>"
 #. STRINGS.BUILDINGS.PREFABS.EXTERIORWALL.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.EXTERIORWALL.NAME"
 msgid "<link=\"EXTERIORWALL\">Drywall</link>"
-msgstr "<link=\"EXTERIORWALL\">乾壁牆</link>"
+msgstr "<link=\"EXTERIORWALL\">牆板</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.FABRICATEDWOODMAKER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.FABRICATEDWOODMAKER.DESC"
@@ -13778,17 +13778,17 @@ msgstr "<link=\"CEILINGLIGHT\">玻璃吸頂燈</link>"
 #. STRINGS.BUILDINGS.PREFABS.GLASSEXTERIORWALL.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.GLASSEXTERIORWALL.DESC"
 msgid "Glass Backwall adds a touch of elegance while sealing rooms from the vacuum of space."
-msgstr "玻璃背景牆既能隔離房間與太空真空，又能增添一絲優雅。"
+msgstr "玻璃牆板既能隔離房間與太空真空，又能增添一絲優雅。"
 
 #. STRINGS.BUILDINGS.PREFABS.GLASSEXTERIORWALL.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.GLASSEXTERIORWALL.EFFECT"
 msgid "Prevents <link=\"ELEMENTSGAS\">Gas</link> and <link=\"ELEMENTSLIQUID\">Liquid</link> loss in space.\n\nBuilds a transparent backwall behind buildings.\n\nProvides higher <link=\"DECOR\">Decor</link> than standard drywall."
-msgstr "防止太空中的<link=\"ELEMENTSGAS\">氣體</link>和<link=\"ELEMENTSLIQUID\">液體</link>流失。\n\n於建築後方建造透明背景牆。\n\n提供比標準背景牆更高的<link=\"DECOR\">裝飾度</link>。"
+msgstr "防止太空中的<link=\"ELEMENTSGAS\">氣體</link>和<link=\"ELEMENTSLIQUID\">液體</link>流失。\n\n於建築後方建造透明牆板。\n\n提供比標準牆板更高的<link=\"DECOR\">裝飾度</link>。"
 
 #. STRINGS.BUILDINGS.PREFABS.GLASSEXTERIORWALL.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.GLASSEXTERIORWALL.NAME"
 msgid "<link=\"GLASSEXTERIORWALL\">Glass Backwall</link>"
-msgstr "<link=\"EXTERIORWALL\">玻璃背景牆</link>"
+msgstr "<link=\"EXTERIORWALL\">玻璃牆板</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.GLASSFORGE.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.GLASSFORGE.DESC"
@@ -21023,7 +21023,7 @@ msgstr "即使在清空的時候，它看起來也很棒。"
 #. STRINGS.BUILDINGS.PREFABS.SHELF.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.SHELF.EFFECT"
 msgid "Displays cherished items and increases <link=\"DECOR\">Decor</link>, contributing to <link=\"MORALE\">Morale</link>.\n\nMust be installed on a back wall."
-msgstr "展示珍藏的物品，增加<link=\"DECOR\">裝飾度</link>，藉此提升<link=\"MORALE\">士氣</link>。\n\n必須安裝在背景牆上。"
+msgstr "展示珍藏的物品，增加<link=\"DECOR\">裝飾度</link>，藉此提升<link=\"MORALE\">士氣</link>。\n\n必須安裝在牆板上。"
 
 #. STRINGS.BUILDINGS.PREFABS.SHELF.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.SHELF.NAME"
@@ -36373,7 +36373,7 @@ msgstr "一處高壓噴孔，定期噴出沸騰的<link=\"MURKYBRINE\">汙染濃
 #. STRINGS.CREATURES.SPECIES.GEYSER.MURKY_BRINE.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.MURKY_BRINE.NAME"
 msgid "<link=\"GEYSERGENERICMURKYBRINE\">Polluted Brine Vent</link>"
-msgstr "<link=\"GEYSERGENERICMURKYBRINE\">汙染濃鹽水噴口</link>"
+msgstr "<link=\"GEYSERGENERICMURKYBRINE\">汙染濃鹽水噴泉</link>"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.NAME"
@@ -37258,12 +37258,12 @@ msgstr "<link=\"OXYFERN\">氧氣蕨</link>"
 #. STRINGS.CREATURES.SPECIES.PACU.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.PACU.BABY.DESC"
 msgid "A wriggly little Pacu Fry.\n\nIn time, it will mature into an adult <link=\"PACU\">Pacu</link>."
-msgstr "一隻無辜的小帕庫魚苗。\n\n隨著時間經過，牠會成長為一隻成年的<link=\"PACU\">帕庫</link>。"
+msgstr "一隻無辜的小帕庫苗。\n\n隨著時間經過，牠會成長為一隻成年的<link=\"PACU\">帕庫</link>。"
 
 #. STRINGS.CREATURES.SPECIES.PACU.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.PACU.BABY.NAME"
 msgid "<link=\"PACU\">Pacu Fry</link>"
-msgstr "<link=\"PACU\">帕庫魚苗</link>"
+msgstr "<link=\"PACU\">帕庫苗</link>"
 
 #. STRINGS.CREATURES.SPECIES.PACU.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.PACU.DESC"
@@ -37283,12 +37283,12 @@ msgstr "<link=\"PACU\">帕庫</link>"
 #. STRINGS.CREATURES.SPECIES.PACU.VARIANT_CLEANER.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.PACU.VARIANT_CLEANER.BABY.DESC"
 msgid "A wriggly little Gulp Fry.\n\nIn time, it will mature into an adult <link=\"PACUCLEANER\">Gulp Fish</link>."
-msgstr "一隻無辜的寒帶帕庫寶寶。\n\n隨著時間經過，牠會成長為一隻成年的<link=\"PACUCLEANER\">寒帶帕庫</link>。"
+msgstr "一隻無辜的寒帶帕庫苗。\n\n隨著時間經過，牠會成長為一隻成年的<link=\"PACUCLEANER\">寒帶帕庫</link>。"
 
 #. STRINGS.CREATURES.SPECIES.PACU.VARIANT_CLEANER.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.PACU.VARIANT_CLEANER.BABY.NAME"
 msgid "<link=\"PACUCLEANER\">Gulp Fry</link>"
-msgstr "<link=\"PACUCLEANER\">寒帶帕庫寶寶</link>"
+msgstr "<link=\"PACUCLEANER\">寒帶帕庫苗</link>"
 
 #. STRINGS.CREATURES.SPECIES.PACU.VARIANT_CLEANER.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.PACU.VARIANT_CLEANER.DESC"
@@ -37308,12 +37308,12 @@ msgstr "<link=\"PACUCLEANER\">寒帶帕庫</link>"
 #. STRINGS.CREATURES.SPECIES.PACU.VARIANT_TROPICAL.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.PACU.VARIANT_TROPICAL.BABY.DESC"
 msgid "A wriggly little Tropical Fry.\n\nIn time it will mature into an adult Pacu morph, the <link=\"PACUTROPICAL\">Tropical Pacu</link>."
-msgstr "一隻無辜的熱帶帕庫寶寶。\n\n隨著時間經過，牠會成長為一隻成年的<link=\"PACUTROPICAL\">熱帶帕庫</link>。"
+msgstr "一隻無辜的熱帶帕庫苗。\n\n隨著時間經過，牠會成長為一隻成年的<link=\"PACUTROPICAL\">熱帶帕庫</link>。"
 
 #. STRINGS.CREATURES.SPECIES.PACU.VARIANT_TROPICAL.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.PACU.VARIANT_TROPICAL.BABY.NAME"
 msgid "<link=\"PACUTROPICAL\">Tropical Fry</link>"
-msgstr "<link=\"PACUTROPICAL\">熱帶帕庫寶寶</link>"
+msgstr "<link=\"PACUTROPICAL\">熱帶帕庫苗</link>"
 
 #. STRINGS.CREATURES.SPECIES.PACU.VARIANT_TROPICAL.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.PACU.VARIANT_TROPICAL.DESC"
@@ -37343,7 +37343,7 @@ msgstr "<link=\"PACUEGG\">帕庫蛋</link>"
 #. STRINGS.CREATURES.SPECIES.PARROTFISH.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.PARROTFISH.BABY.DESC"
 msgid "A wriggly little Beakon Fry.\n\nIn time, it will mature into an adult <link=\"PARROTFISH\">Beakon</link>."
-msgstr "一條扭動著的小燈喙魚苗。\n\n隨著時間推移，它將成長為<link=\"PARROTFISH\">燈喙魚</link>成體。"
+msgstr "一條扭動著的小燈喙魚苗。\n\n隨著時間經過，牠會成長為一隻成年的<link=\"PARROTFISH\">燈喙魚</link>。"
 
 #. STRINGS.CREATURES.SPECIES.PARROTFISH.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.PARROTFISH.BABY.NAME"
@@ -37498,7 +37498,7 @@ msgstr "<link=\"GEYSERS\">丙烷噴口</link>"
 #. STRINGS.CREATURES.SPECIES.PUFFERFISH.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.PUFFERFISH.BABY.DESC"
 msgid "A precious little Blowter Fry.\n\nIn time, it will mature into an adult <link=\"PUFFERFISH\">Blowter</link>."
-msgstr "一條珍貴的小鼓氣魚苗。\n\n隨著時間推移，它將成長為<link=\"PUFFERFISH\">鼓氣魚</link>成體。"
+msgstr "一條珍貴的小鼓氣魚苗。\n\n隨著時間經過，牠會成長為一隻成年的<link=\"PUFFERFISH\">鼓氣魚</link>。"
 
 #. STRINGS.CREATURES.SPECIES.PUFFERFISH.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.PUFFERFISH.BABY.NAME"
@@ -37698,7 +37698,7 @@ msgstr "<link=\"SEAFAIRY\">藻蝌蚪</link>"
 #. STRINGS.CREATURES.SPECIES.SEAHORSE.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEAHORSE.BABY.DESC"
 msgid "A flouncy little Seaquine Fry.\n\nIn time, it will mature into an adult <link=\"SEAHORSE\">Seaquine</link>."
-msgstr "一隻俏皮的海馬魚苗。\n\n隨著時間推移，它將會成熟並長成<link=\"SEAHORSE\">海馬</link>。"
+msgstr "一隻俏皮的海馬魚苗。\n\n隨著時間經過，牠會成長為一隻成年的<link=\"SEAHORSE\">海馬</link>。"
 
 #. STRINGS.CREATURES.SPECIES.SEAHORSE.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SEAHORSE.BABY.NAME"
@@ -38388,7 +38388,7 @@ msgstr "<link=\"SNAIL\">緩螺</link>"
 #. STRINGS.CREATURES.SPECIES.SNAIL.VARIANT_IRON.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SNAIL.VARIANT_IRON.BABY.DESC"
 msgid "A tiny little Gildgo Baby.\n\nIn time it will mature into a fully grown <link=\"SNAILIRON\">Gildgo</link>."
-msgstr "一隻小小的鍍鐵螺寶寶。\n\n隨著時間推移，牠會成熟並長成<link=\"SNAILIRON\">鍍鐵螺</link>。"
+msgstr "一隻小小的鍍鐵螺寶寶。\n\n隨著時間經過，牠會成長為一隻成年的<link=\"SNAILIRON\">鍍鐵螺</link>。"
 
 #. STRINGS.CREATURES.SPECIES.SNAIL.VARIANT_IRON.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SNAIL.VARIANT_IRON.BABY.NAME"
@@ -38493,7 +38493,7 @@ msgstr "<link=\"SQUIRREL\">樹鼠</link>"
 #. STRINGS.CREATURES.SPECIES.SQUIRREL.VARIANT_HUG.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SQUIRREL.VARIANT_HUG.BABY.DESC"
 msgid "A fuzzy little Cuddle Pipsqueak.\n\nIn time it will mature into a fully grown <link=\"SQUIRREL\">Cuddle Pip</link>."
-msgstr "一隻嗷嗷叫的抱抱樹鼠寶寶。\n\n隨著時間，牠會長大成為一隻成年的<link=\"SQUIRREL\">抱抱樹鼠</link>。"
+msgstr "一隻嗷嗷叫的抱抱樹鼠寶寶。\n\n隨著時間經過，牠會成長為一隻成年的<link=\"SQUIRREL\">抱抱樹鼠</link>。"
 
 #. STRINGS.CREATURES.SPECIES.SQUIRREL.VARIANT_HUG.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SQUIRREL.VARIANT_HUG.BABY.NAME"
@@ -38518,7 +38518,7 @@ msgstr "<link=\"SQUIRREL\">抱抱樹鼠</link>"
 #. STRINGS.CREATURES.SPECIES.STATERPILLAR.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.STATERPILLAR.BABY.DESC"
 msgid "A chubby little Plug Sluglet.\n\nIn time it will mature into a fully grown <link=\"STATERPILLAR\">Plug Slug</link>."
-msgstr "一隻圓滾滾的電氣蛞蝓寶寶。\n\n隨著時間，牠會長大成為一隻成年的<link=\"STATERPILLAR\">電氣蛞蝓</link>。"
+msgstr "一隻圓滾滾的電氣蛞蝓寶寶。\n\n隨著時間經過，牠會成長為一隻成年的<link=\"STATERPILLAR\">電氣蛞蝓</link>。"
 
 #. STRINGS.CREATURES.SPECIES.STATERPILLAR.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.STATERPILLAR.BABY.NAME"
@@ -38543,7 +38543,7 @@ msgstr "<link=\"STATERPILLAR\">電氣蛞蝓</link>"
 #. STRINGS.CREATURES.SPECIES.STATERPILLAR.VARIANT_GAS.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.STATERPILLAR.VARIANT_GAS.BABY.DESC"
 msgid "A tubby little Smog Sluglet.\n\nIn time it will mature into a fully grown <link=\"STATERPILLAR\">Smog Slug</link>."
-msgstr "一隻胖嘟嘟的煙霧蛞蝓寶寶。\n\n隨著時間，牠會長大成為一隻成年的<link=\"STATERPILLAR\">煙霧蛞蝓</link>。"
+msgstr "一隻胖嘟嘟的煙霧蛞蝓寶寶。\n\n隨著時間經過，牠會成長為一隻成年的<link=\"STATERPILLAR\">煙霧蛞蝓</link>。"
 
 #. STRINGS.CREATURES.SPECIES.STATERPILLAR.VARIANT_GAS.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.STATERPILLAR.VARIANT_GAS.BABY.NAME"
@@ -38568,7 +38568,7 @@ msgstr "<link=\"STATERPILLAR\">煙霧蛞蝓</link>"
 #. STRINGS.CREATURES.SPECIES.STATERPILLAR.VARIANT_LIQUID.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.STATERPILLAR.VARIANT_LIQUID.BABY.DESC"
 msgid "A chonky little Sponge Sluglet.\n\nIn time it will mature into a fully grown <link=\"STATERPILLAR\">Sponge Slug</link>."
-msgstr "一隻結實的海綿蛞蝓寶寶。\n\n隨著時間，牠會長大成為一隻成年的<link=\"STATERPILLAR\">海綿蛞蝓</link>。"
+msgstr "一隻結實的海綿蛞蝓寶寶。\n\n隨著時間經過，牠會成長為一隻成年的<link=\"STATERPILLAR\">海綿蛞蝓</link>。"
 
 #. STRINGS.CREATURES.SPECIES.STATERPILLAR.VARIANT_LIQUID.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.STATERPILLAR.VARIANT_LIQUID.BABY.NAME"
@@ -38828,7 +38828,7 @@ msgstr "<link=\"FORESTTREE\">喬木樹枝</link>"
 #. STRINGS.CREATURES.SPECIES.WOODDEER.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.WOODDEER.BABY.DESC"
 msgid "A little yipping Flox Fawn.\n\nIn time it will mature into a fully grown <link=\"WOODDEER\">Flox</link>."
-msgstr "一隻嚎叫的狐鹿克斯寶寶。\n\n隨著時間，牠會長大成為一隻成年的<link=\"WOODDEER\">狐鹿克斯</link>。"
+msgstr "一隻嚎叫的狐鹿克斯寶寶。\n\n隨著時間經過，牠會成長為一隻成年的<link=\"WOODDEER\">狐鹿克斯</link>。"
 
 #. STRINGS.CREATURES.SPECIES.WOODDEER.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.WOODDEER.BABY.NAME"
@@ -66368,7 +66368,7 @@ msgstr "{Mass}"
 #. STRINGS.MISC.STATUSITEMS.BACKWALLMASS.TOOLTIP
 msgctxt "STRINGS.MISC.STATUSITEMS.BACKWALLMASS.TOOLTIP"
 msgid "This backwall has a mass of <b>{Mass}</b>"
-msgstr "這個背景牆質量為 <b>{Mass}</b>"
+msgstr "這個背牆質量為 <b>{Mass}</b>"
 
 #. STRINGS.MISC.STATUSITEMS.BACKWALLTEMPERATURE.NAME
 msgctxt "STRINGS.MISC.STATUSITEMS.BACKWALLTEMPERATURE.NAME"
@@ -66378,7 +66378,7 @@ msgstr "{Temp}"
 #. STRINGS.MISC.STATUSITEMS.BACKWALLTEMPERATURE.TOOLTIP
 msgctxt "STRINGS.MISC.STATUSITEMS.BACKWALLTEMPERATURE.TOOLTIP"
 msgid "This backwall is currently <b>{Temp}</b>"
-msgstr "這個背景牆當前為<b>{Temp}</b>"
+msgstr "這個背牆當前為<b>{Temp}</b>"
 
 #. STRINGS.MISC.STATUSITEMS.BIONICEXPLORERBOOSTER.NAME
 msgctxt "STRINGS.MISC.STATUSITEMS.BIONICEXPLORERBOOSTER.NAME"
@@ -67168,7 +67168,7 @@ msgstr "文物"
 #. STRINGS.MISC.TAGS.BACKWALLSEED
 msgctxt "STRINGS.MISC.TAGS.BACKWALLSEED"
 msgid "Backwall Seed"
-msgstr "背景牆種子"
+msgstr "背牆種子"
 
 #. STRINGS.MISC.TAGS.BAGABLECREATURE
 msgctxt "STRINGS.MISC.TAGS.BAGABLECREATURE"
@@ -73148,17 +73148,17 @@ msgstr "<link=\"REQUIREMENTCLASSINDUSTRIALMACHINERY\">工業機械</link>"
 #. STRINGS.ROOMS.CRITERIA.IS_BACKWALLED.CONFLICT_DESCRIPTION
 msgctxt "STRINGS.ROOMS.CRITERIA.IS_BACKWALLED.CONFLICT_DESCRIPTION"
 msgid "Has backwall tiles"
-msgstr "有背景牆"
+msgstr "有背牆磚"
 
 #. STRINGS.ROOMS.CRITERIA.IS_BACKWALLED.DESCRIPTION
 msgctxt "STRINGS.ROOMS.CRITERIA.IS_BACKWALLED.DESCRIPTION"
 msgid "Must be covered in backwall tiles"
-msgstr "必須有背景牆覆蓋"
+msgstr "必須有背牆磚覆蓋"
 
 #. STRINGS.ROOMS.CRITERIA.IS_BACKWALLED.NAME
 msgctxt "STRINGS.ROOMS.CRITERIA.IS_BACKWALLED.NAME"
 msgid "Has backwall tiles"
-msgstr "存在背景牆"
+msgstr "存在背牆磚"
 
 #. STRINGS.ROOMS.CRITERIA.LIGHTDUTYGENERATORTYPE.CONFLICT_DESCRIPTION
 msgctxt "STRINGS.ROOMS.CRITERIA.LIGHTDUTYGENERATORTYPE.CONFLICT_DESCRIPTION"
@@ -88003,12 +88003,12 @@ msgstr ""
 #. STRINGS.UI.NEWBUILDCATEGORIES.TILES.BUILDMENUTITLE
 msgctxt "STRINGS.UI.NEWBUILDCATEGORIES.TILES.BUILDMENUTITLE"
 msgid "Tiles and Drywall"
-msgstr "磚塊與背景牆"
+msgstr "磚塊與牆板"
 
 #. STRINGS.UI.NEWBUILDCATEGORIES.TILES.NAME
 msgctxt "STRINGS.UI.NEWBUILDCATEGORIES.TILES.NAME"
 msgid "Tiles and Drywall"
-msgstr "磚塊與背景牆"
+msgstr "磚塊與牆板"
 
 #. STRINGS.UI.NEWBUILDCATEGORIES.TILES.TOOLTIP
 msgctxt "STRINGS.UI.NEWBUILDCATEGORIES.TILES.TOOLTIP"
@@ -92018,7 +92018,7 @@ msgstr "目標層"
 #. STRINGS.UI.SANDBOXTOOLS.SETTINGS.TARGET_LAYER.TOOLTIP
 msgctxt "STRINGS.UI.SANDBOXTOOLS.SETTINGS.TARGET_LAYER.TOOLTIP"
 msgid "Adjust which layer the brush tools will affect\n\nL- Backwall\nR- Far backwall"
-msgstr "調整刷子工具將作用於哪一層：\n\nL - 背景牆\nR - 遠處背景牆"
+msgstr "調整刷子工具將作用於哪一層：\n\nL - 背牆\nR - 遠處背牆"
 
 #. STRINGS.UI.SANDBOXTOOLS.SETTINGS.TEMPERATURE.NAME
 msgctxt "STRINGS.UI.SANDBOXTOOLS.SETTINGS.TEMPERATURE.NAME"
@@ -96118,12 +96118,12 @@ msgstr "僅顯示雜項元素"
 #. STRINGS.UI.TOOLS.FILTERLAYERS.NATURALBACKWALL.NAME
 msgctxt "STRINGS.UI.TOOLS.FILTERLAYERS.NATURALBACKWALL.NAME"
 msgid "Natural Backwall"
-msgstr "天然背景牆"
+msgstr "天然背牆"
 
 #. STRINGS.UI.TOOLS.FILTERLAYERS.NATURALBACKWALL.TOOLTIP
 msgctxt "STRINGS.UI.TOOLS.FILTERLAYERS.NATURALBACKWALL.TOOLTIP"
 msgid "Natural backwall tiles only"
-msgstr "僅天然背景牆格子"
+msgstr "僅天然背牆格子"
 
 #. STRINGS.UI.TOOLS.FILTERLAYERS.OPERATE.NAME
 msgctxt "STRINGS.UI.TOOLS.FILTERLAYERS.OPERATE.NAME"
@@ -96258,12 +96258,12 @@ msgstr "{Port}    <style=\"hovercard_element\">（{Name}）</style>"
 #. STRINGS.UI.TOOLS.GENERIC.NATURAL_BACKWALL_LABEL
 msgctxt "STRINGS.UI.TOOLS.GENERIC.NATURAL_BACKWALL_LABEL"
 msgid "BACKWALL"
-msgstr "背景牆"
+msgstr "背牆"
 
 #. STRINGS.UI.TOOLS.GENERIC.NATURAL_BACKWALL_LABEL_TITLECASE
 msgctxt "STRINGS.UI.TOOLS.GENERIC.NATURAL_BACKWALL_LABEL_TITLECASE"
 msgid "Backwall"
-msgstr "背景牆"
+msgstr "背牆"
 
 #. STRINGS.UI.TOOLS.GENERIC.UNKNOWN
 msgctxt "STRINGS.UI.TOOLS.GENERIC.UNKNOWN"
@@ -96733,7 +96733,7 @@ msgstr "必須建造重疊於{0}"
 #. STRINGS.UI.TOOLTIPS.HELP_BUILDLOCATION_BACK_WALL
 msgctxt "STRINGS.UI.TOOLTIPS.HELP_BUILDLOCATION_BACK_WALL"
 msgid "Obstructed by back wall"
-msgstr "被背景牆擋住"
+msgstr "被牆板擋住"
 
 #. STRINGS.UI.TOOLTIPS.HELP_BUILDLOCATION_BACK_WALL_REQUIRED
 msgctxt "STRINGS.UI.TOOLTIPS.HELP_BUILDLOCATION_BACK_WALL_REQUIRED"
