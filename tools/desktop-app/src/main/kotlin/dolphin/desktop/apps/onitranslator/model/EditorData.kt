@@ -6,6 +6,7 @@ package dolphin.desktop.apps.onitranslator.model
  *
  * @param target The current version of the translation entry.
  * @param sourceText Original English text from template.
+ * @param oldSourceText Original English text before updates (if changed).
  * @param chsReference Simplified Chinese reference text (if available).
  * @param poText The existing translation text from the strings.po file.
  * @param draftText The unsaved modification from the draft file.
@@ -13,6 +14,7 @@ package dolphin.desktop.apps.onitranslator.model
 data class EditorData(
     val target: PoEntry,
     val sourceText: String,
+    val oldSourceText: String? = null,
     val chsReference: String? = null,
     val poText: String? = null,
     val draftText: String? = null,

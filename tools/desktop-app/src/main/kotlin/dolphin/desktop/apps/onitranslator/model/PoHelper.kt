@@ -154,16 +154,16 @@ class PoHelper(
         }
 
         // 3. Determine the string content based on priority: Draft > Existing > Simplified fallback
-        if (draftEntry != null && draftEntry.str.isNotBlank()) {
-            newStr = draftEntry.str.trim()
+        if (draftEntry != null && draftEntry.str.isNotEmpty()) {
+            newStr = draftEntry.str
         }
 
-        if (newStr.isBlank() && existingTranslation != null) {
-            newStr = existingTranslation.str.trim()
+        if (newStr.isEmpty() && existingTranslation != null) {
+            newStr = existingTranslation.str
         }
 
         // Fallback to Simplified Chinese conversion or msgid if absolutely no translation exists
-        if (newStr.isBlank()) {
+        if (newStr.isEmpty()) {
             newStr = simplifiedMap[key]?.str ?: templateEntry.msgId()
             newStr = TextRefinery.sc2tc(newStr)
         }
@@ -206,54 +206,78 @@ class PoHelper(
         }
     }
 
-    private fun parsePoFile(reader: BufferedReader): List<PoEntry> {
+    private enum class ActiveField { NONE, CTX, ID, STR }
+
+    fun unescapePoQuote(input: String): String = input.replace("\\\"", "\"")
+    fun escapePoQuote(input: String): String = input.replace("\"", "\\\"")
+
+    fun parsePoFile(reader: BufferedReader): List<PoEntry> {
         val list = mutableListOf<PoEntry>()
         var line: String?
         
         var currentKey = ""
-        var currentCtxt = ""
-        var currentId = ""
-        var currentStr = ""
+        val currentCtxt = StringBuilder()
+        val currentId = StringBuilder()
+        val currentStr = StringBuilder()
+        var activeField = ActiveField.NONE
         
+        fun saveEntry() {
+            if (currentKey.isNotEmpty()) {
+                list.add(PoEntry(
+                    key = currentKey,
+                    text = currentCtxt.toString(),
+                    id = currentId.toString(),
+                    str = currentStr.toString()
+                ))
+            }
+        }
+
+        fun extractContent(trimmed: String, prefix: String): String {
+            val content = trimmed.removePrefix(prefix).trim()
+            return if (content.startsWith("\"") && content.endsWith("\"")) {
+                content.substring(1, content.length - 1)
+            } else content
+        }
+
         while (reader.readLine().also { line = it } != null) {
             val trimmedLine = line!!.trim()
+            if (trimmedLine.isEmpty()) continue
             
             when {
                 trimmedLine.startsWith("#. ") || trimmedLine.startsWith("#: ") -> {
-                    // Start of a new entry, but first save the previous one if it exists
-                    if (currentKey.isNotEmpty()) {
-                        PoEntry.from("#. $currentKey", currentCtxt, currentId, currentStr)?.let { list.add(it) }
-                    }
+                    saveEntry()
                     currentKey = trimmedLine.substring(3).trim()
-                    currentCtxt = ""
-                    currentId = ""
-                    currentStr = ""
+                    currentCtxt.clear()
+                    currentId.clear()
+                    currentStr.clear()
+                    activeField = ActiveField.NONE
                 }
                 trimmedLine.startsWith("msgctxt ") -> {
-                    currentCtxt = trimmedLine
+                    activeField = ActiveField.CTX
+                    currentCtxt.append(unescapePoQuote(extractContent(trimmedLine, "msgctxt")))
                 }
                 trimmedLine.startsWith("msgid ") -> {
-                    currentId = trimmedLine
+                    activeField = ActiveField.ID
+                    currentId.append(unescapePoQuote(extractContent(trimmedLine, "msgid")))
                 }
                 trimmedLine.startsWith("msgstr ") -> {
-                    currentStr = trimmedLine
+                    activeField = ActiveField.STR
+                    currentStr.append(unescapePoQuote(extractContent(trimmedLine, "msgstr")))
                 }
-                // Handle basic multi-line (very simple implementation)
-                trimmedLine.startsWith("\"") -> {
-                    when {
-                        currentStr.isNotEmpty() && currentId.isNotEmpty() -> currentStr += trimmedLine
-                        currentId.isNotEmpty() -> currentId += trimmedLine
-                        currentCtxt.isNotEmpty() -> currentCtxt += trimmedLine
+                trimmedLine.startsWith("\"") && trimmedLine.endsWith("\"") -> {
+                    val content = trimmedLine.substring(1, trimmedLine.length - 1)
+                    val unescaped = unescapePoQuote(content)
+                    when (activeField) {
+                        ActiveField.CTX -> currentCtxt.append(unescaped)
+                        ActiveField.ID -> currentId.append(unescaped)
+                        ActiveField.STR -> currentStr.append(unescaped)
+                        ActiveField.NONE -> {}
                     }
                 }
             }
         }
         
-        // Don't forget the last entry
-        if (currentKey.isNotEmpty()) {
-            PoEntry.from("#. $currentKey", currentCtxt, currentId, currentStr)?.let { list.add(it) }
-        }
-        
+        saveEntry()
         return list
     }
 
@@ -316,12 +340,16 @@ class PoHelper(
                 writer.appendLine("MIME-Version: 1.0")
                 writer.appendLine("Content-Type: text/plain; charset=UTF-8")
                 list.forEach { entry ->
-                    val str = if (entry.str.startsWith("\"") && entry.str.endsWith("\"")) entry.str else "\"${entry.str}\""
+                    val formattedStr = "\"${escapePoQuote(entry.str)}\""
+                    val templateId = templateMap[entry.key]?.id ?: entry.id
+                    val formattedId = "\"${escapePoQuote(templateId)}\""
+                    val formattedCtxt = "\"${escapePoQuote(entry.text)}\""
+                    
                     writer.newLine()
                     writer.appendLine("#. ${entry.key}")
-                    writer.appendLine("msgctxt ${entry.text}")
-                    writer.appendLine("msgid ${templateMap[entry.key]?.id ?: entry.id}")
-                    writer.appendLine("msgstr $str")
+                    writer.appendLine("msgctxt $formattedCtxt")
+                    writer.appendLine("msgid $formattedId")
+                    writer.appendLine("msgstr $formattedStr")
                 }
             }
             return true

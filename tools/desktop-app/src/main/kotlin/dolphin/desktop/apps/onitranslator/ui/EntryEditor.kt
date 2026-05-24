@@ -153,8 +153,8 @@ private fun EntryEditorSection(
 ) {
     var editedText by remember { mutableStateOf(entry.target.msgStr()) }
     var backupText by remember { mutableStateOf<String?>(null) }
-    var showRefs by remember { mutableStateOf(true) }
-    var showPoSave by remember { mutableStateOf(true) }
+    var showRefs by remember { mutableStateOf(false) }
+    var showPoSave by remember { mutableStateOf(false) }
     var isPeeking by remember { mutableStateOf(false) }
     val isChanged = editedText != (entry.target.str.trim())
     val clipboard = LocalClipboard.current
@@ -358,6 +358,14 @@ private fun ReferenceSection(
                 onCopyToClipboard.invoke(textToCopy)
             }
         )
+        entry.oldSourceText?.let { text ->
+            if (text.isNotBlank()) {
+                ReferenceView(
+                    text,
+                    type = EntryTagType.OldSource
+                )
+            }
+        }
         entry.chsReference?.let { text ->
             if (text.isNotBlank() && chsRefsVisible) {
                 ReferenceView(
@@ -416,12 +424,6 @@ private fun ReferenceView(
             )
 
             onCopyToClipboard?.let { listener ->
-                TooltipIconButton(
-                    icon = Icons.Rounded.ContentCopy,
-                    tooltip = stringResource(Res.string.tooltip_copy_this_text),
-                ) {
-                    listener.invoke("")
-                }
                 if (links.count() > 0) {
                     TooltipIconButton(
                         icon = Icons.Rounded.Link,
@@ -429,6 +431,12 @@ private fun ReferenceView(
                     ) {
                         linkSelector = !linkSelector
                     }
+                }
+                TooltipIconButton(
+                    icon = Icons.Rounded.ContentCopy,
+                    tooltip = stringResource(Res.string.tooltip_copy_this_text),
+                ) {
+                    listener.invoke("")
                 }
             }
             onReplace?.let { listener ->
@@ -454,6 +462,7 @@ private fun ReferenceViewPreview() {
                             "template text <link=\\\"DATABANK\\\">Data Banks</link>",
                             EntryTagType.Source,
                             onCopyToClipboard = {})
+                        ReferenceView("old template text", EntryTagType.OldSource)
                         ReferenceView("simplified text", EntryTagType.ChsRef, onReplace = {})
                         ReferenceView("translated text", EntryTagType.PoSave, onReplace = {})
                     }
@@ -578,3 +587,34 @@ private fun LinkSelectorPreview() {
         }
     }
 }
+
+@Preview
+@Composable
+private fun EntryEditorPreview() {
+    val entry = EditorData(
+        target = PoEntry(
+            key = "STRINGS.BUILDINGS.PREFABS.BASE_OUTHOUSE.NAME",
+            text = "STRINGS.BUILDINGS.PREFABS.BASE_OUTHOUSE.NAME",
+            id = "Outhouse",
+            str = "戶外廁所",
+            msgidChanged = true
+        ),
+        sourceText = "Outhouse (New)",
+        oldSourceText = "Outhouse",
+        chsReference = "旱厕",
+        poText = "戶外廁所"
+    )
+    Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        OniTranslatorTheme(darkTheme = false) {
+            Surface {
+                EntryEditor(entry = entry, onEvent = {})
+            }
+        }
+        OniTranslatorTheme(darkTheme = true) {
+            Surface {
+                EntryEditor(entry = entry, onEvent = {})
+            }
+        }
+    }
+}
+

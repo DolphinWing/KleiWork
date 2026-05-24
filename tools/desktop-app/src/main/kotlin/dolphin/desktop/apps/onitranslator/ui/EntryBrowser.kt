@@ -184,7 +184,7 @@ private fun EntryItemView(
 ) {
     val isChanged = changed > 0
     val cardBorderColor = if (selected) {
-        MaterialTheme.colorScheme.primary
+        MaterialTheme.colorScheme.secondary
     } else if (isChanged) {
         MaterialTheme.colorScheme.primary.copy(alpha = 0.5f)
     } else {

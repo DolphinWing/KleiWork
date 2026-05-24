@@ -7878,7 +7878,7 @@ msgstr "內容物：{0}"
 #. STRINGS.BUILDING.STATUSITEMS.SPECIALCARGOBAYCLUSTERCRITTERSTORED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SPECIALCARGOBAYCLUSTERCRITTERSTORED.TOOLTIP"
 msgid ""
-msgstr "msgid """
+msgstr ""
 
 #. STRINGS.BUILDING.STATUSITEMS.SPICEGRINDERACCEPTSMUTANTSEEDS.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SPICEGRINDERACCEPTSMUTANTSEEDS.NAME"
@@ -26223,7 +26223,7 @@ msgstr "凝露藤"
 #. STRINGS.CODEX.DEWPALM.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.DEWPALM.BODY.CONTAINER1"
 msgid "Gum Palms have developed an eye-catching defense mechanism similar to that of poisonous amphibians.\n\nBright reddish coloring displayed in their leaves and sharp ornamental bark scales deter most predators, who recognize the warning signs of toxicity. <link=\"PACU\">Pacus</link>, however, consider the tree's highly toxic seed a spicy treat."
-msgstr "黏膠棕櫚已經演化出了一種類似有毒兩棲動物的醒目防禦機制。\n\n葉片上鮮豔的紅色與樹皮上鋒利的觀賞性鱗片，能讓大多數捕食者望而卻步，因為牠們能辨識出這些有毒的警告訊號。然而，<link="PACU">帕庫</link>卻將這種樹的劇毒種子視為辛辣的美味。"
+msgstr "黏膠棕櫚已經演化出了一種類似有毒兩棲動物的醒目防禦機制。\n\n葉片上鮮豔的紅色與樹皮上鋒利的觀賞性鱗片，能讓大多數捕食者望而卻步，因為牠們能辨識出這些有毒的警告訊號。然而，<link=\"PACU\">帕庫</link>卻將這種樹的劇毒種子視為辛辣的美味。"
 
 #. STRINGS.CODEX.DEWPALM.SUBTITLE
 msgctxt "STRINGS.CODEX.DEWPALM.SUBTITLE"
@@ -26588,7 +26588,7 @@ msgstr "{0} {1}"
 #. STRINGS.CODEX.FORMAT_STRINGS.MOLTED
 msgctxt "STRINGS.CODEX.FORMAT_STRINGS.MOLTED"
 msgid "{Amount}\n<size=66%>when happy</size>"
-msgstr """{Amount}\n""<size=66%>處於快樂狀態時</size>"
+msgstr "{Amount}\n<size=66%>處於快樂狀態時</size>"
 
 #. STRINGS.CODEX.FORMAT_STRINGS.OFFGASS_NAME
 msgctxt "STRINGS.CODEX.FORMAT_STRINGS.OFFGASS_NAME"
@@ -29768,7 +29768,7 @@ msgstr "<link=\"GENERATORTYPE\">發電機</link>"
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.INDUSTRIALMACHINERY.CONFLICTINGROOMS
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.INDUSTRIALMACHINERY.CONFLICTINGROOMS"
 msgid "    • <link=\"LATRINE\">Latrine</link>\n    • <link=\"PLUMBEDBATHROOM\">Washroom</link>\n    • <link=\"BARRACKS\">Barracks</link>\n    • <link=\"BEDROOM\">Luxury Barracks</link>\n    • <link=\"PRIVATE BEDROOM\">Private Bedroom</link>\n    • <link=\"MESSHALL\">Mess Hall</link>\n    • <link=\"GREATHALL\">Great Hall</link>\n    • <link=\"MASSAGECLINIC\">Massage Clinic</link>\n    • <link=\"HOSPITAL\">Hospital</link>\n    • <link=\"LABORATORY\">Laboratory</link>\n    • <link=\"RECROOM\">Recreation Room</link>"
-msgstr "    • <link=\"LATRINE\">廁間</link>\n • <link=\"PLUMBEDBATHROOM\">洗手間</link>\n • <link=\"BARRACKS\">臥室</link>\n • <link=\"BEDROOM\">高級臥室</link>\n • <link=\"PRIVATE BEDROOM\">私人臥室</link>\n • <link=\"MESSHALL\">餐廳</link>\n • <link=\"GREATHALL\">高級餐廳</link>\n • <link=\"MASSAGECLINIC\">按摩間</link>\n • <link=\"HOSPITAL\ ">醫院</link>\n • <link=\"LABORATORY\">實驗室</link>\n • <link=\"RECROOM\">娛樂室</link>"
+msgstr "    • <link=\"LATRINE\">廁間</link>\n • <link=\"PLUMBEDBATHROOM\">洗手間</link>\n • <link=\"BARRACKS\">臥室</link>\n • <link=\"BEDROOM\">高級臥室</link>\n • <link=\"PRIVATE BEDROOM\">私人臥室</link>\n • <link=\"MESSHALL\">餐廳</link>\n • <link=\"GREATHALL\">高級餐廳</link>\n • <link=\"MASSAGECLINIC\">按摩間</link>\n • <link=\"HOSPITAL\">醫院</link>\n • <link=\"LABORATORY\">實驗室</link>\n • <link=\"RECROOM\">娛樂室</link>"
 
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.INDUSTRIALMACHINERY.DESCRIPTION
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.INDUSTRIALMACHINERY.DESCRIPTION"
@@ -37228,7 +37228,7 @@ msgstr "<link=\"OILSPOUT\">原油噴口</link>"
 #. STRINGS.CREATURES.SPECIES.OXYCORAL.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.OXYCORAL.DESC"
 msgid "Flue Corals are aquatic organisms that use <link=\"LIGHT\">Light</link> to produce <link=\"OXYGEN\">Oxygen</link>.\n\n"
-msgstr "煙囪珊瑚是一種會利用<link="LIGHT">光</link>來產生<link="OXYGEN">氧氣</link>的水生生物。\n\n"
+msgstr "煙囪珊瑚是一種會利用<link=\"LIGHT\">光</link>來產生<link=\"OXYGEN\">氧氣</link>的水生生物。\n\n"
 
 #. STRINGS.CREATURES.SPECIES.OXYCORAL.DOMESTICATEDDESC
 msgctxt "STRINGS.CREATURES.SPECIES.OXYCORAL.DOMESTICATEDDESC"
@@ -37818,7 +37818,7 @@ msgstr "<link=\"SEATURTLE\">礦甲龜</link>"
 #. STRINGS.CREATURES.SPECIES.SEAURCHIN.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEAURCHIN.DESC"
 msgid "Pinpoki grow in <link=\"URCHINPLANT\">Pinpokets</link>.\n\nThey can be harvested for <link=\"URCHINMEAT\">Uni</link> and <link=\"DIAMOND\">Diamond</link>."
-msgstr "針膽生長於<link=\"URCHINPLANT\">針膽團</link>。\n\n採收後可獲得<link="URCHINMEAT">針膽黃</link>與<link="DIAMOND">鑽石</link>。"
+msgstr "針膽生長於<link=\"URCHINPLANT\">針膽團</link>。\n\n採收後可獲得<link=\"URCHINMEAT\">針膽黃</link>與<link=\"DIAMOND\">鑽石</link>。"
 
 #. STRINGS.CREATURES.SPECIES.SEAURCHIN.DOMESTICATEDDESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEAURCHIN.DOMESTICATEDDESC"
@@ -55738,7 +55738,7 @@ msgstr "<link=\"KATAIRITE\">深淵水晶</link>"
 #. STRINGS.ELEMENTS.LATEX.DESC
 msgctxt "STRINGS.ELEMENTS.LATEX.DESC"
 msgid "Latex is a naturally derived colloidal dispersion of polymer particles in <link=\"ELEMENTSLIQUID\">Liquid</link>.\n\nIt can be used to produce <link=\"RUBBER\">Rubber</link>."
-msgstr """膠乳是一種聚合物顆粒在<link=\"ELEMENTSLIQUID\">液體</link>中形成的天然膠體分散體。\n""\n""它可以用於生產<link=\"RUBBER\">橡膠</link>。"
+msgstr "膠乳是一種聚合物顆粒在<link=\"ELEMENTSLIQUID\">液體</link>中形成的天然膠體分散體。\n\n它可以用於生產<link=\"RUBBER\">橡膠</link>。"
 
 #. STRINGS.ELEMENTS.LATEX.NAME
 msgctxt "STRINGS.ELEMENTS.LATEX.NAME"
@@ -63208,7 +63208,7 @@ msgstr "<link=\"DRECKO\">龍鱗蜥</link>產下的蛋。"
 #. STRINGS.ITEMS.FOOD.EDAMAME.DESC
 msgctxt "STRINGS.ITEMS.FOOD.EDAMAME.DESC"
 msgid "Raw <link=\"BEANPLANTSEED\">Nosh Beans</link> sprinkled with <link=\"SALTYSTICKSPLANT\">Sodicane</link> shavings.\n\nSimple and satisfying."
-msgstr "撒了<link=\"SALTYSTICKSPLANT\">鹹蔗</link>的生<link=\"BEANPLANTSEED\">小吃豆</link>。\n""\n""簡單而令人滿足。"
+msgstr "撒了<link=\"SALTYSTICKSPLANT\">鹹蔗</link>的生<link=\"BEANPLANTSEED\">小吃豆</link>。\n\n簡單而令人滿足。"
 
 #. STRINGS.ITEMS.FOOD.EDAMAME.NAME
 msgctxt "STRINGS.ITEMS.FOOD.EDAMAME.NAME"
@@ -74818,7 +74818,7 @@ msgstr "<link=\"RAPTORSPECIES\">霸王鸚</link>是一種肉食性的小動物�
 #. STRINGS.SUBWORLDS.REEF.DESC
 msgctxt "STRINGS.SUBWORLDS.REEF.DESC"
 msgid "This tropical biome is filled with vast <link=\"SALTWATER\">Salt Water</link> stores and fascinating wildlife. Dry land is almost non-existent, so <link=\"SWIMMER\">Swimming</link> will be an important skill for my Duplicants to acquire.\n\n"
-msgstr "這片熱帶生態遍佈廣闊的<link=\"SALTWATER\">鹽水</link>儲層與迷人的野生生物。乾燥的陸地幾乎難覓蹤影，因此學會<link="SWIMMER">游泳</link>對我的複製人來說將是一項至關重要的技能。\n\n"
+msgstr "這片熱帶生態遍佈廣闊的<link=\"SALTWATER\">鹽水</link>儲層與迷人的野生生物。乾燥的陸地幾乎難覓蹤影，因此學會<link=\"SWIMMER\">游泳</link>對我的複製人來說將是一項至關重要的技能。\n\n"
 
 #. STRINGS.SUBWORLDS.REEF.NAME
 msgctxt "STRINGS.SUBWORLDS.REEF.NAME"
@@ -74828,7 +74828,7 @@ msgstr "珊瑚生態"
 #. STRINGS.SUBWORLDS.REEF.UTILITY
 msgctxt "STRINGS.SUBWORLDS.REEF.UTILITY"
 msgid "Duplicants can breathe easy here, as <link=\"OXYCORAL\">Flue Coral</link> continuously converts <link=\"LIGHT\">Light</link> from the <link=\"PARROTFISH\">Beakon</link> fish into a steady stream of <link=\"OXYGEN\">Oxygen</link> that accumulates in cave ceilings.\n\n<link=\"PUFFERFISHSPECIES\">Blowters'</link> delicate digestive systems cause them to bloat with <link=\"OXYGEN\">Oxygen</link> after consuming <link=\"SEALETTUCE\">Waterweed</link>. If my Duplicants are suffocating underwater and an oxygen-bloated Blowter is within reach, they will instinctively commandeer the fish's stored gas in order to survive.\n\nMassive <link=\"CLAM\">Clampum</link> produce <link=\"PEARL\">Pearls</link> that can be used as an attractive construction material. Unused pearls will be eaten by <link=\"SEAHORSESPECIES\">Seaquines</link> who can then be brought to an <link=\"UNDERWATERMILKINGSTATION\">Aquatic Milking Station</link> to obtain <link=\"FISHMILK\">Ovolene</link>."
-msgstr "複製人在此可以安心呼吸，因為<link=\"OXYCORAL\">煙囪珊瑚</link>持續將來自<link=\"PARROTFISH\">燈喙魚</link>的<link=\"LIGHT\">光</link>轉化為穩定的<link=\"OXYGEN\">氧氣</link>流，並積聚於洞穴頂部。\n""\n""<link=\"PUFFERFISHSPECIES\">鼓氣魚</link>脆弱的消化系統使它們在吃下<link=\"SEALETTUCE\">水草</link>後，體內會因<link=\"OXYGEN\">氧氣</link>而膨脹。如果我的複製人在水下窒息，且附近恰好有一隻充滿氧氣的鼓氣魚，他們就會本能地使用鼓氣魚儲存的氣體以求生存。\n""\n""巨型的<link=\"CLAM\">巨鉗貝</link>能產出<link=\"PEARL\">珍珠</link>，可作為美觀的建築材料。未被使用的珍珠會被<link=\"SEAHORSESPECIES\">海馬</link>食用，海馬可帶至<link=\"UNDERWATERMILKINGSTATION\">水生擠奶站</link>獲取<link=\"FISHMILK\">卵漿</link>。"
+msgstr "複製人在此可以安心呼吸，因為<link=\"OXYCORAL\">煙囪珊瑚</link>持續將來自<link=\"PARROTFISH\">燈喙魚</link>的<link=\"LIGHT\">光</link>轉化為穩定的<link=\"OXYGEN\">氧氣</link>流，並積聚於洞穴頂部。\n\n<link=\"PUFFERFISHSPECIES\">鼓氣魚</link>脆弱的消化系統使它們在吃下<link=\"SEALETTUCE\">水草</link>後，體內會因<link=\"OXYGEN\">氧氣</link>而膨脹。如果我的複製人在水下窒息，且附近恰好有一隻充滿氧氣的鼓氣魚，他們就會本能地使用鼓氣魚儲存的氣體以求生存。\n\n巨型的<link=\"CLAM\">巨鉗貝</link>能產出<link=\"PEARL\">珍珠</link>，可作為美觀的建築材料。未被使用的珍珠會被<link=\"SEAHORSESPECIES\">海馬</link>食用，海馬可帶至<link=\"UNDERWATERMILKINGSTATION\">水生擠奶站</link>獲取<link=\"FISHMILK\">卵漿</link>。"
 
 #. STRINGS.SUBWORLDS.REGOLITH.DESC
 msgctxt "STRINGS.SUBWORLDS.REGOLITH.DESC"
@@ -77563,12 +77563,12 @@ msgstr "查看損壞電源"
 #. STRINGS.UI.COLONY_DIAGNOSTICS.BATTERYDIAGNOSTIC.CRITERIA_CHECK_CAPACITY.FAIL
 msgctxt "STRINGS.UI.COLONY_DIAGNOSTICS.BATTERYDIAGNOSTIC.CRITERIA_CHECK_CAPACITY.FAIL"
 msgid ""
-msgstr "msgid """
+msgstr ""
 
 #. STRINGS.UI.COLONY_DIAGNOSTICS.BATTERYDIAGNOSTIC.CRITERIA_CHECK_CAPACITY.PASS
 msgctxt "STRINGS.UI.COLONY_DIAGNOSTICS.BATTERYDIAGNOSTIC.CRITERIA_CHECK_CAPACITY.PASS"
 msgid ""
-msgstr "msgid """
+msgstr ""
 
 #. STRINGS.UI.COLONY_DIAGNOSTICS.BATTERYDIAGNOSTIC.DEAD_BATTERY
 msgctxt "STRINGS.UI.COLONY_DIAGNOSTICS.BATTERYDIAGNOSTIC.DEAD_BATTERY"
@@ -94423,7 +94423,7 @@ msgstr "太空人"
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.CARGO_TRANSFER_COMPLETE.STATUS.FAILURE
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.CARGO_TRANSFER_COMPLETE.STATUS.FAILURE"
 msgid ""
-msgstr "msgid """
+msgstr ""
 
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.CARGO_TRANSFER_COMPLETE.STATUS.READY
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.CARGO_TRANSFER_COMPLETE.STATUS.READY"
@@ -94438,7 +94438,7 @@ msgstr "貨物轉移完成"
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.CARGO_TRANSFER_COMPLETE.TOOLTIP.FAILURE
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.CARGO_TRANSFER_COMPLETE.TOOLTIP.FAILURE"
 msgid ""
-msgstr "msgid """
+msgstr ""
 
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.CARGO_TRANSFER_COMPLETE.TOOLTIP.READY
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.CARGO_TRANSFER_COMPLETE.TOOLTIP.READY"
@@ -100753,7 +100753,7 @@ msgstr "• 火箭上方的空間被阻擋"
 #. STRINGS.UI.UISIDESCREENS.SELECTMODULESIDESCREEN.CONSTRAINTS.TOP_ONLY.COMPLETE
 msgctxt "STRINGS.UI.UISIDESCREENS.SELECTMODULESIDESCREEN.CONSTRAINTS.TOP_ONLY.COMPLETE"
 msgid ""
-msgstr "msgid """
+msgstr ""
 
 #. STRINGS.UI.UISIDESCREENS.SELECTMODULESIDESCREEN.CONSTRAINTS.TOP_ONLY.FAILED
 msgctxt "STRINGS.UI.UISIDESCREENS.SELECTMODULESIDESCREEN.CONSTRAINTS.TOP_ONLY.FAILED"

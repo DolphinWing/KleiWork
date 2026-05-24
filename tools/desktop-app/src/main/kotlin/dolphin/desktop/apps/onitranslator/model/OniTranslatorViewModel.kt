@@ -146,6 +146,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     }
 
     private suspend fun onSearchActiveChange(isActive: Boolean) {
+        if (state.value.uiState.searchState.isActive == isActive) return
         if (isActive) {
             // Trigger search with empty text to load ALL items when entering search mode
             search("")
@@ -316,16 +317,32 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     private suspend fun search(text: String, type: SearchType = state.value.uiState.searchState.type) =
         withContext(Dispatchers.IO) {
             updateUiState { it.copy(searchState = it.searchState.copy(text = text, type = type)) }
+            val normalizedQuery = text.normalizeForSearch()
             val searchResult = helper?.allEntries()?.filter { item ->
                 when (type) {
-                    SearchType.Origin -> item.msgId().contains(text, ignoreCase = true)
-                    SearchType.Key -> item.key().contains(text, ignoreCase = true)
-                    SearchType.Text -> item.msgStr().contains(text, ignoreCase = true)
+                    SearchType.Origin -> item.msgId().normalizeForSearch().contains(normalizedQuery, ignoreCase = true)
+                    SearchType.Key -> {
+                        val normalizedKey = item.key().normalizeKeyForSearch()
+                        val normalizedKeyQuery = text.normalizeKeyForSearch()
+                        normalizedKey.contains(normalizedKeyQuery, ignoreCase = true)
+                    }
+                    SearchType.Text -> item.msgStr().normalizeForSearch().contains(normalizedQuery, ignoreCase = true)
                     SearchType.Diagnostic -> item.diagnostic?.hasIssue == true
                 }
             }?.mapNotNull { entry -> requestEditorData(entry) } ?: emptyList()
             updateUiState { it.copy(searchState = it.searchState.copy(results = searchResult)) }
         }
+
+    private fun String.normalizeForSearch(): String {
+        val noTags = this.replace(Regex("<[^>]+>"), "")
+        val unescapedQuotes = noTags.replace("\\\"", "\"")
+        val noNewlines = unescapedQuotes.replace("\\n", " ").replace("\n", " ").replace("\r", " ").replace("\t", " ")
+        return noNewlines.replace(Regex("\\s+"), " ").trim()
+    }
+
+    private fun String.normalizeKeyForSearch(): String {
+        return this.replace(".", "").replace("_", "").replace(" ", "").trim()
+    }
 
     suspend fun rememberLastWindowState(windowState: WindowState) {
         val pos = windowState.position
@@ -348,12 +365,14 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         return if (entry == null) null else {
             val key = entry.key
             val sourceText = h.sourceEntry(key)?.msgId() ?: entry.msgId()
+            val oldSourceText = if (entry.msgidChanged) h.poEntry(key)?.msgId() else null
             val chsReference = h.chsEntry(key)?.msgStr()
             val draftText = h.draftEntry(key)?.msgStr()
             val poText = h.poEntry(key)?.msgStr()
             EditorData(
                 target = entry,
                 sourceText = sourceText,
+                oldSourceText = oldSourceText,
                 chsReference = chsReference,
                 poText = poText,
                 draftText = draftText

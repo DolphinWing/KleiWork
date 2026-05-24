@@ -44,6 +44,7 @@
     <string name="toolbar_template_text">模板</string>
     <string name="toolbar_simplified_text">簡中</string>
     <string name="toolbar_old_translated">舊譯</string>
+    <string name="toolbar_old_template">舊原</string>
 
     <!-- Empty States -->
     <string name="empty_list_title">一切就緒！</string>
@@ -81,7 +82,7 @@
     <string name="content_description_tag_sensor_warning">標籤感測器警告</string>
 
     <string name="label_new">新項目</string>
-    <string name="label_modified">已修改</string>
+    <string name="label_modified">已變更</string>
 
     <!-- Content Descriptions -->
     <string name="content_description_back">返回</string>

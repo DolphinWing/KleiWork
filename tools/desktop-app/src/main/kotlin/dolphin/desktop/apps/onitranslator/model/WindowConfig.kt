@@ -15,8 +15,8 @@ import androidx.compose.ui.window.WindowPosition
 data class WindowConfig(
     val x: Float = 0f,
     val y: Float = 0f,
-    val width: Float = 1200f,
-    val height: Float = 800f,
+    val width: Float = 1280f,
+    val height: Float = 960f,
     val darkTheme: Boolean? = null,
 ) {
     /**
