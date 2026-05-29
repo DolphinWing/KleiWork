@@ -554,7 +554,7 @@ private fun LinkSelectorContent(links: Sequence<MatchResult>, onSelected: (Strin
             .padding(16.dp)
     ) {
         links.forEach {
-            val link = it.groupValues[1].substring(2, it.groupValues[1].length - 2)
+            val link = it.groupValues[1].trim { c -> c == '"' || c == '\\' }
             Row(verticalAlignment = Alignment.CenterVertically) {
                 TextButton(onClick = { onSelected(link) }) {
                     Text(link)

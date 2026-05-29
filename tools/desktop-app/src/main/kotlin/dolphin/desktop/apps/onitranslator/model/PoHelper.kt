@@ -138,6 +138,7 @@ class PoHelper(
         var isNewly = false
         var isMsgidChanged = false
         var newStr = ""
+        var shouldRefineQuotes = false
 
         val draftEntry = draftEntries[key]
         val existingTranslation = translatedEntries[key]
@@ -145,12 +146,14 @@ class PoHelper(
         // 1. Identify if it's a completely new key
         if (existingTranslation == null) {
             isNewly = true
+            shouldRefineQuotes = true
         }
 
         // 2. Identify if the original English text (msgid) has changed
         if (existingTranslation != null && existingTranslation.id != templateEntry.id) {
             log("Found msgid changed for key '$key': ${existingTranslation.id} -> ${templateEntry.id}")
             isMsgidChanged = true
+            shouldRefineQuotes = true
         }
 
         // 3. Determine the string content based on priority: Draft > Existing > Simplified fallback
@@ -166,10 +169,14 @@ class PoHelper(
         if (newStr.isEmpty()) {
             newStr = simplifiedMap[key]?.str ?: templateEntry.msgId()
             newStr = TextRefinery.sc2tc(newStr)
+            shouldRefineQuotes = true
         }
 
         // Apply custom refinery rules
         newStr = textRefinery.refactor(newStr)
+        if (shouldRefineQuotes) {
+            newStr = textRefinery?.refineQuotes(newStr) ?: newStr
+        }
 
         return PoEntry(
             key = key,
@@ -208,27 +215,30 @@ class PoHelper(
 
     private enum class ActiveField { NONE, CTX, ID, STR }
 
-    fun unescapePoQuote(input: String): String = input.replace("\\\"", "\"")
-    fun escapePoQuote(input: String): String = input.replace("\"", "\\\"")
+    fun sanitizeLoadedQuote(input: String): String = input.replace("\\\\\"", "\\\"")
+
+    fun escapePoQuote(input: String): String = input.replace(Regex("(?<!\\\\)\""), "\\\\\"")
 
     fun parsePoFile(reader: BufferedReader): List<PoEntry> {
         val list = mutableListOf<PoEntry>()
         var line: String?
-        
+
         var currentKey = ""
         val currentCtxt = StringBuilder()
         val currentId = StringBuilder()
         val currentStr = StringBuilder()
         var activeField = ActiveField.NONE
-        
+
         fun saveEntry() {
             if (currentKey.isNotEmpty()) {
-                list.add(PoEntry(
-                    key = currentKey,
-                    text = currentCtxt.toString(),
-                    id = currentId.toString(),
-                    str = currentStr.toString()
-                ))
+                list.add(
+                    PoEntry(
+                        key = currentKey,
+                        text = currentCtxt.toString(),
+                        id = currentId.toString(),
+                        str = currentStr.toString()
+                    )
+                )
             }
         }
 
@@ -242,7 +252,7 @@ class PoHelper(
         while (reader.readLine().also { line = it } != null) {
             val trimmedLine = line!!.trim()
             if (trimmedLine.isEmpty()) continue
-            
+
             when {
                 trimmedLine.startsWith("#. ") || trimmedLine.startsWith("#: ") -> {
                     saveEntry()
@@ -252,31 +262,35 @@ class PoHelper(
                     currentStr.clear()
                     activeField = ActiveField.NONE
                 }
+
                 trimmedLine.startsWith("msgctxt ") -> {
                     activeField = ActiveField.CTX
-                    currentCtxt.append(unescapePoQuote(extractContent(trimmedLine, "msgctxt")))
+                    currentCtxt.append(sanitizeLoadedQuote(extractContent(trimmedLine, "msgctxt")))
                 }
+
                 trimmedLine.startsWith("msgid ") -> {
                     activeField = ActiveField.ID
-                    currentId.append(unescapePoQuote(extractContent(trimmedLine, "msgid")))
+                    currentId.append(sanitizeLoadedQuote(extractContent(trimmedLine, "msgid")))
                 }
+
                 trimmedLine.startsWith("msgstr ") -> {
                     activeField = ActiveField.STR
-                    currentStr.append(unescapePoQuote(extractContent(trimmedLine, "msgstr")))
+                    currentStr.append(sanitizeLoadedQuote(extractContent(trimmedLine, "msgstr")))
                 }
+
                 trimmedLine.startsWith("\"") && trimmedLine.endsWith("\"") -> {
                     val content = trimmedLine.substring(1, trimmedLine.length - 1)
-                    val unescaped = unescapePoQuote(content)
+                    val sanitized = sanitizeLoadedQuote(content)
                     when (activeField) {
-                        ActiveField.CTX -> currentCtxt.append(unescaped)
-                        ActiveField.ID -> currentId.append(unescaped)
-                        ActiveField.STR -> currentStr.append(unescaped)
+                        ActiveField.CTX -> currentCtxt.append(sanitized)
+                        ActiveField.ID -> currentId.append(sanitized)
+                        ActiveField.STR -> currentStr.append(sanitized)
                         ActiveField.NONE -> {}
                     }
                 }
             }
         }
-        
+
         saveEntry()
         return list
     }
@@ -307,26 +321,27 @@ class PoHelper(
         isTarget && entry.msgId().isNotBlank()
     }
 
-    suspend fun writeTranslationFile(output: File, list: List<PoEntry> = entryList): Boolean = withContext(Dispatchers.IO) {
-        _loading.emit(true)
-        val start = System.currentTimeMillis()
-        val result = writeEntryToFile(output, list)
-        val cost = System.currentTimeMillis() - start
-        log("Wrote to ${output.absolutePath} in $cost ms. Result: $result")
+    suspend fun writeTranslationFile(output: File, list: List<PoEntry> = entryList): Boolean =
+        withContext(Dispatchers.IO) {
+            _loading.emit(true)
+            val start = System.currentTimeMillis()
+            val result = writeEntryToFile(output, list)
+            val cost = System.currentTimeMillis() - start
+            log("Wrote to ${output.absolutePath} in $cost ms. Result: $result")
 
-        // If we are saving to the real location (not cache), delete the draft file
-        val cachedFile = getCachedFile()
-        if (result && output.absolutePath != cachedFile.absolutePath && cachedFile.exists()) {
-            if (cachedFile.delete()) {
-                log("Deleted draft file: ${cachedFile.absolutePath}")
-            } else {
-                log("Failed to delete draft file: ${cachedFile.absolutePath}", LogType.Warning)
+            // If we are saving to the real location (not cache), delete the draft file
+            val cachedFile = getCachedFile()
+            if (result && output.absolutePath != cachedFile.absolutePath && cachedFile.exists()) {
+                if (cachedFile.delete()) {
+                    log("Deleted draft file: ${cachedFile.absolutePath}")
+                } else {
+                    log("Failed to delete draft file: ${cachedFile.absolutePath}", LogType.Warning)
+                }
             }
-        }
 
-        _loading.emit(false)
-        return@withContext result
-    }
+            _loading.emit(false)
+            return@withContext result
+        }
 
     private fun writeEntryToFile(output: File, list: List<PoEntry>): Boolean {
         if (list.isEmpty()) return false
@@ -344,7 +359,7 @@ class PoHelper(
                     val templateId = templateMap[entry.key]?.id ?: entry.id
                     val formattedId = "\"${escapePoQuote(templateId)}\""
                     val formattedCtxt = "\"${escapePoQuote(entry.text)}\""
-                    
+
                     writer.newLine()
                     writer.appendLine("#. ${entry.key}")
                     writer.appendLine("msgctxt $formattedCtxt")
@@ -375,7 +390,7 @@ class PoHelper(
         val outputFile = File(dir, "glossary.tsv")
         val seenNames = mutableSetOf<String>()
         val results = mutableListOf<String>()
-        
+
         // Header
         results.add("Category\tEnglish\tChinese\tPath")
 
@@ -391,7 +406,7 @@ class PoHelper(
         entryList.forEach { entry ->
             val key = entry.key()
             val isBlacklisted = blacklist.any { key.contains(it) }
-            
+
             if (key.endsWith(".NAME") && !isBlacklisted) {
                 val eng = entry.msgId().replace(tagRegex, "").replace("\\\"", "\"").trim()
                 val cht = entry.msgStr().replace(tagRegex, "").replace("\\\"", "\"").trim()

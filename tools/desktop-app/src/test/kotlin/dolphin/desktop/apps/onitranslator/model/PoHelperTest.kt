@@ -16,13 +16,23 @@ class PoHelperTest {
     private val helper = PoHelper(mockConfigs, mockRefinery)
 
     @Test
-    fun testUnescapeAndEscapeQuotes() {
+    fun testEscapeQuotes() {
         val original = """He said "Hello" and <link="METALORE">Metal</link>."""
         val escaped = helper.escapePoQuote(original)
         assertEquals("""He said \"Hello\" and <link=\"METALORE\">Metal</link>.""", escaped)
 
-        val unescaped = helper.unescapePoQuote(escaped)
-        assertEquals(original, unescaped)
+        // Test mixed: should not double-escape already escaped backslashes
+        val mixed = """He said \"Hello\" and <link="METALORE">Metal</link>."""
+        val escapedMixed = helper.escapePoQuote(mixed)
+        assertEquals("""He said \"Hello\" and <link=\"METALORE\">Metal</link>.""", escapedMixed)
+    }
+
+    @Test
+    fun testSanitizeCorruptedQuotes() {
+        // Corrupted sequence with double backslashes \\" should be sanitized to single backslash \"
+        val corrupted = """He said \\"Hello\\" and <link=\\"METALORE\\">Metal</link>."""
+        val sanitized = helper.sanitizeLoadedQuote(corrupted)
+        assertEquals("""He said \"Hello\" and <link=\"METALORE\">Metal</link>.""", sanitized)
     }
 
     @Test
@@ -50,11 +60,11 @@ class PoHelperTest {
         assertEquals("STRINGS.BUILDINGS.PREFABS.BASE_OUTHOUSE.NAME", entry.text)
         
         // Verify msgid: should not have extra quotes, and \n should remain as \n literal character (\\n)
-        val expectedId = "(Zn) Zinc Ore is a malleable raw <link=\"METALORE\">Metal</link>.\\n\\nIt is suitable for building <link=\"POWER\">Power</link> systems."
+        val expectedId = "(Zn) Zinc Ore is a malleable raw <link=\\\"METALORE\\\">Metal</link>.\\n\\nIt is suitable for building <link=\\\"POWER\\\">Power</link> systems."
         assertEquals(expectedId, entry.id)
         
         // Verify msgstr: should not have extra quotes, and \n should remain as \n literal character (\\n)
-        val expectedStr = "(Zn) 锌矿是一种易塑的<link=\"METALORE\">金属</link>原料。\\n\\n它可用于建造<link=\"POWER\">电力</link>系统。"
+        val expectedStr = "(Zn) 锌矿是一种易塑的<link=\\\"METALORE\\\">金属</link>原料。\\n\\n它可用于建造<link=\\\"POWER\\\">电力</link>系统。"
         assertEquals(expectedStr, entry.str)
     }
 

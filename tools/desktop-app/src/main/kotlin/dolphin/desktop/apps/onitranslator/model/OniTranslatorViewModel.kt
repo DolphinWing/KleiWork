@@ -390,7 +390,8 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     fun onConvert(text: String): String {
         val converter = textRefinery ?: return text
         val traditional = TextRefinery.sc2tc(text)
-        return converter.refactor(traditional)
+        val replaced = converter.refactor(traditional)
+        return converter.refineQuotes(replaced)
     }
 
     /**

@@ -400,6 +400,36 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_CIRCUIT.NAME"
 msgid "Bionic Atmo Belt"
 msgstr "仿生太空腰帶"
 
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_DIVING_TAN.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_DIVING_TAN.DESC"
+msgid "Ideal for lurking unseen in hostile environments."
+msgstr "非常適合在險惡環境中隱密潛伏。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_DIVING_TAN.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_DIVING_TAN.NAME"
+msgid "Abyss Atmo Belt"
+msgstr "深淵太空腰帶"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_DUCKIE_GASBALL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_DUCKIE_GASBALL.DESC"
+msgid "Like a cheerful pal who's always by your side...or around your waist, rather."
+msgstr "就像一個總是陪在你身邊的開朗夥伴……更精確地說，是纏在你的腰上。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_DUCKIE_GASBALL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_DUCKIE_GASBALL.NAME"
+msgid "Ducky Atmo Belt"
+msgstr "小鴨太空腰帶"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_FLOATIE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_FLOATIE.DESC"
+msgid "A high-tech safety donut that has no actual effect on buoyancy."
+msgstr "一款高科技安全甜甜圈，但實際上對浮力沒有任何效果。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_FLOATIE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_FLOATIE.NAME"
+msgid "Floatie Atmo Belt"
+msgstr "泳圈太空腰帶"
+
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_NEUTRONIUM.DESC"
 msgid "The only acceptable atmo belt for exalted space explorers."
@@ -440,6 +470,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_STEGO.NAME"
 msgid "Lumb Atmo Belt"
 msgstr "劍龍太空腰帶"
 
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_TURTLE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_TURTLE.DESC"
+msgid "Goes swimmingly with the Orehull "
+msgstr "跟礦甲龜簡直是如魚得水般地絕配"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_TURTLE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_TURTLE.NAME"
+msgid "Orehull Atmo Belt"
+msgstr "礦甲龜太空腰帶"
+
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_80S.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_80S.DESC"
 msgid "A funky fresh pair of hand coverings."
@@ -469,6 +509,26 @@ msgstr "額外增加的指尖縫線對某些人來說簡直是感官上的夢魘
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_CHAMELEO.NAME"
 msgid "Dartle Atmo Gloves"
 msgstr "逸蜥太空手套"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_DIVING_KHAKI_TAN.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_DIVING_KHAKI_TAN.DESC"
+msgid "The wrist rivets have a tendency to get caught on things."
+msgstr "手腕上的鉚釘很容易勾到東西。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_DIVING_KHAKI_TAN.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_DIVING_KHAKI_TAN.NAME"
+msgid "Antique Atmo Gloves"
+msgstr "古典太空手套"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_ELECTRO.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_ELECTRO.DESC"
+msgid "Electric blue gloves for hostile environments."
+msgstr "適合險惡環境的電光藍手套"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_ELECTRO.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_ELECTRO.NAME"
+msgid "Electro Atmo Gloves"
+msgstr "電流太空手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_NEUTRONIUM.DESC"
@@ -520,6 +580,26 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_STEGO.NAME"
 msgid "Lumb Atmo Gloves"
 msgstr "劍龍太空手套"
 
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_TAP_01.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_TAP_01.DESC"
+msgid "Thick rubber cuffs keep hostile atmospheres out, and sweaty fingers in."
+msgstr "厚實的橡膠袖口能將險惡的敵對環境擋在外面，並把滿是手汗的手指關在裡麵。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_TAP_01.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_TAP_01.NAME"
+msgid "Rubberized Atmo Gloves"
+msgstr "橡膠太空手套"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_TURTLE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_TURTLE.DESC"
+msgid "Perfect for giving carapace scritches to aquatic critters."
+msgstr "非常適合用來幫水生小動物抓抓牠們的甲殼。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_TURTLE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_TURTLE.NAME"
+msgid "Orehull Atmo Gloves"
+msgstr "礦甲龜太空手套"
+
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_80S.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_80S.DESC"
 msgid "A choice lid keeps things copacetic out here in the cosmos."
@@ -549,6 +629,16 @@ msgstr "惡作劇者常將小物品插在其中一隻角上，看看佩戴者多
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_CHAMELEO.NAME"
 msgid "Dartle Atmo Helmet"
 msgstr "逸蜥太空頭盔"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_DIVING_KHAKI_TAN.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_DIVING_KHAKI_TAN.DESC"
+msgid "There might still be a mothball or two inside."
+msgstr "裡麵可能還殘留著一兩顆樟腦丸。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_DIVING_KHAKI_TAN.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_DIVING_KHAKI_TAN.NAME"
+msgid "Antique Atmo Helmet"
+msgstr "古典太空頭盔"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_GAUDYSWEATER_PURPLE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_GAUDYSWEATER_PURPLE.DESC"
@@ -600,6 +690,36 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_STEGO.NAME"
 msgid "Lumb Atmo Helmet"
 msgstr "劍龍太空頭盔"
 
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_TAP_01.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_TAP_01.DESC"
+msgid "Brightly colored headgear for Duplicants who err on the side of hope."
+msgstr "色彩鮮豔的頭部裝備，適合 those 寧可選擇抱持希望的複製人。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_TAP_01.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_TAP_01.NAME"
+msgid "Optimist Atmo Helmet"
+msgstr "樂觀者太空頭盔"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_TAP_ELECTRO_RUBBLE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_TAP_ELECTRO_RUBBLE.DESC"
+msgid "In the right liquid environments, it makes excellent camouflage."
+msgstr "在特定的液體環境中，它能提供極佳的偽裝效果。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_TAP_ELECTRO_RUBBLE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_TAP_ELECTRO_RUBBLE.NAME"
+msgid "Electro Atmo Helmet"
+msgstr "電流太空頭盔"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_TURTLE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_TURTLE.DESC"
+msgid "For aquatic ranchers who really want to get inside the critter's head."
+msgstr "專為那些真的很想看透小動物心思——或者該說，很想把頭伸進小動物腦袋裡的的水生畜牧員所設計。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_TURTLE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_TURTLE.NAME"
+msgid "Orehull Atmo Helmet"
+msgstr "礦甲龜太空頭盔"
+
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_80S.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_80S.DESC"
 msgid "Can you do the Running Man in space? With these, maybe."
@@ -609,6 +729,16 @@ msgstr "你能在太空裡 Running Man 嗎？有了這些，也許吧。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_80S.NAME"
 msgid "Radical Atmo Boots"
 msgstr "激進太空靴"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_BASIC_ELECTRO.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_BASIC_ELECTRO.DESC"
+msgid "The contrast zippers on the side act as \"This Side Up\" arrows for distracted Duplicants."
+msgstr "側面的撞色拉鍊可以充當「此面朝上」的箭頭，用來提醒注意力不集中的複製人。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_BASIC_ELECTRO.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_BASIC_ELECTRO.NAME"
+msgid "Electro Atmo Boots"
+msgstr "電流太空靴"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_BASIC_GREEN.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_BASIC_GREEN.DESC"
@@ -639,6 +769,16 @@ msgstr "用於在惡劣環境中安全地蜿蜒行進。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_CHAMELEO.NAME"
 msgid "Dartle Atmo Boots"
 msgstr "逸蜥太空靴"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_DIVING_TAN.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_DIVING_TAN.DESC"
+msgid "Cutting-edge protective footwear with rusting-edge styling."
+msgstr "頂尖技術的防護鞋類，配上流露著「生鏽邊緣」的復古造型。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_DIVING_TAN.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_DIVING_TAN.NAME"
+msgid "Antique Atmo Boots"
+msgstr "古典太空靴"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_NEUTRONIUM.DESC"
@@ -680,6 +820,26 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_STEGO.NAME"
 msgid "Lumb Atmo Boots"
 msgstr "劍龍太空靴"
 
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_TAP_01.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_TAP_01.DESC"
+msgid "Abstract pops of color turn hostile atmospheres into haute-style atmospheres."
+msgstr "抽象的跳脫色彩點綴，將險惡的敵對環境化為頂級的高級時裝秀。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_TAP_01.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_TAP_01.NAME"
+msgid "Hotspot Atmo Boots"
+msgstr "熱點太空靴"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_TURTLE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_TURTLE.DESC"
+msgid "Like a coupla little foot shells."
+msgstr "就像是兩片小小的腳部外殼。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_TURTLE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_TURTLE.NAME"
+msgid "Orehull Atmo Boots"
+msgstr "礦甲龜太空靴"
+
 #. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_80S.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_80S.DESC"
 msgid "It's truly excellent, dude."
@@ -710,6 +870,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_BASIC_PURPLE_WILDBERRY.NAME"
 msgid "Crisp Violet Atmo Suit"
 msgstr "清爽紫羅蘭太空衣"
 
+#. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_BASIC_RUBBLE_ELECTRO.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_BASIC_RUBBLE_ELECTRO.DESC"
+msgid "A sleek gray suit with a pop of electro blue."
+msgstr "一款時尚的灰色太空服，搭配一抹亮眼的電流藍點綴。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_BASIC_RUBBLE_ELECTRO.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_BASIC_RUBBLE_ELECTRO.NAME"
+msgid "Electro Atmo Suit"
+msgstr "電流太空衣"
+
 #. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_CHAMELEO.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_CHAMELEO.DESC"
 msgid "Slow and steady wins the (space) race, right?"
@@ -719,6 +889,16 @@ msgstr "穩紮穩打贏得（太空）競賽，對吧？"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_CHAMELEO.NAME"
 msgid "Dartle Atmo Suit"
 msgstr "逸蜥太空衣"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_DIVING_KHAKI_TAN.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_DIVING_KHAKI_TAN.DESC"
+msgid "Makes the wearer look like a legitimate atmo suit collector."
+msgstr "讓穿戴者看起來就像個貨真價實的太空衣收藏家。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_DIVING_KHAKI_TAN.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_DIVING_KHAKI_TAN.NAME"
+msgid "Antique Atmo Suit"
+msgstr "古典太空衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_NEUTRONIUM.DESC"
@@ -760,6 +940,26 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_STEGO.NAME"
 msgid "Lumb Atmo Suit"
 msgstr "劍龍太空衣"
 
+#. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_TAP_01.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_TAP_01.DESC"
+msgid "This atmo suit features colorful fabric reinforcement patches in high-wear areas."
+msgstr "這款太空服在容易磨損的部位特別採用了彩色的布料補強貼片。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_TAP_01.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_TAP_01.NAME"
+msgid "Hotspot Atmo Suit"
+msgstr "熱點太空衣"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_TURTLE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_TURTLE.DESC"
+msgid "Looks right at home in a kelp forest."
+msgstr "身處海帶森林之中，看起來就像在自己家一樣自在。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_TURTLE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_TURTLE.NAME"
+msgid "Orehull Atmo Suit"
+msgstr "礦甲龜太空衣"
+
 #. STRINGS.BLUEPRINTS.PERMIT_BALLOON_BABYRHEX_EGG.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BALLOON_BABYRHEX_EGG.DESC"
 msgid "These balloons are so cute that they often get popped by overenthusiastic critter fans."
@@ -779,6 +979,46 @@ msgstr "一份快樂的三合一充氣小動物。現在還會吐舌頭喔。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BALLOON_BABYSTEGO_EGG.NAME"
 msgid "Bug-Eyed Blep"
 msgstr "凸眼吐舌怪"
+
+#. STRINGS.BLUEPRINTS.PERMIT_BALLOON_BLOWFISH_EGG.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_BALLOON_BLOWFISH_EGG.DESC"
+msgid "Please do not attempt to siphon air from these balloons. They are not a source of oxygen."
+msgstr "請勿嘗試從這些氣球中抽取氣體。它們並非氧氣來源。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_BALLOON_BLOWFISH_EGG.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_BALLOON_BLOWFISH_EGG.NAME"
+msgid "Blown-Up Bloaties"
+msgstr "充氣胖嘟嘟"
+
+#. STRINGS.BLUEPRINTS.PERMIT_BEACH_CHAIR_BEAKON.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_BEACH_CHAIR_BEAKON.DESC"
+msgid "Everything feels lighter and brighter after a little R&R."
+msgstr "稍微休息放鬆一下，一切感覺都變得更輕鬆、更明亮了。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_BEACH_CHAIR_BEAKON.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_BEACH_CHAIR_BEAKON.NAME"
+msgid "<link=\"BEACHCHAIR\">Beakon Beach Chair</link>"
+msgstr "<link=\"BEACHCHAIR\">燈喙魚海灘躺椅</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_BEACH_CHAIR_KRAKEN.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_BEACH_CHAIR_KRAKEN.DESC"
+msgid "Some people find the threat of imminent danger quite relaxing, actually."
+msgstr "事實上，有些人反而覺得這種迫在眉睫的危險感滿放鬆的。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_BEACH_CHAIR_KRAKEN.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_BEACH_CHAIR_KRAKEN.NAME"
+msgid "<link=\"BEACHCHAIR\">Kraken Beach Chair</link>"
+msgstr "<link=\"BEACHCHAIR\">北海巨妖海灘躺椅</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_BEACH_CHAIR_POKESHELL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_BEACH_CHAIR_POKESHELL.DESC"
+msgid "Feeling crabby? Come take a load off."
+msgstr "覺得渾身帶刺、心情暴躁嗎？來這好好放鬆一下吧。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_BEACH_CHAIR_POKESHELL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_BEACH_CHAIR_POKESHELL.NAME"
+msgid "<link=\"BEACHCHAIR\">Pokeshell Beach Chair</link>"
+msgstr "<link=\"BEACHCHAIR\">戳殼蟹海灘躺椅</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_BED_COTTAGE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_COTTAGE.DESC"
@@ -990,6 +1230,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_NEUTRONIUM.NAME"
 msgid "<link=\"CORNERMOULDING\">Regal Neutronium Corner Trim</link>"
 msgstr "<link=\"CORNERMOULDING\">帝王零號邊角飾件</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_RETRO_NAUTICAL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_RETRO_NAUTICAL.DESC"
+msgid "A rising tide directs all eyes to the ceiling, where they'll land on this magnificent maritime corner trim."
+msgstr "上漲的潮水讓所有目光都投向天花板，進而注意到這款華麗的航海牆角飾條。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_RETRO_NAUTICAL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_RETRO_NAUTICAL.NAME"
+msgid "<link=\"CORNERMOULDING\">Nautical Corner Trim</link>"
+msgstr "<link=\"CORNERMOULDING\">航海牆角飾條</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_CRAFTINGSTATION_CYBERPUNK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CRAFTINGSTATION_CYBERPUNK.DESC"
 msgid "Building a better tomorrow, today."
@@ -1010,6 +1260,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_NEUTRONIUM.NAME"
 msgid "<link=\"CROWNMOULDING\">Regal Neutronium Ceiling Trim</link>"
 msgstr "<link=\"CROWNMOULDING\">帝王零號天花板飾件</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_RETRO_NAUTICAL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_RETRO_NAUTICAL.DESC"
+msgid "Top-notch deckhead decor fit for a captain's quarters. Or a luxury barracks."
+msgstr "配得上船長室的頂級艙頂裝飾。或者是，一間高級臥室。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_RETRO_NAUTICAL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_RETRO_NAUTICAL.NAME"
+msgid "<link=\"CROWNMOULDING\">Nautical Ceiling Trim</link>"
+msgstr "<link=\"CROWNMOULDING\">航海造型飾條</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_DRESS_FUTURESPACE_BLUE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_DRESS_FUTURESPACE_BLUE.DESC"
 msgid "Handcrafted from decommissioned rockets."
@@ -1020,6 +1280,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_DRESS_FUTURESPACE_BLUE.NAME"
 msgid "Sculpted Steel Dress"
 msgstr "雕刻鋼連身裙"
 
+#. STRINGS.BLUEPRINTS.PERMIT_DRESS_SAILOR_WHITE_NAUTICAL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_DRESS_SAILOR_WHITE_NAUTICAL.DESC"
+msgid "Expert pleating ensures this skirt maintains its shape no matter what the universe throws at it."
+msgstr "專業的打褶工藝，確保這條裙子無論面對宇宙的任何考驗都能維持版型。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_DRESS_SAILOR_WHITE_NAUTICAL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_DRESS_SAILOR_WHITE_NAUTICAL.NAME"
+msgid "Sailor Dress"
+msgstr "水手連身裙"
+
 #. STRINGS.BLUEPRINTS.PERMIT_ELECTROLYZER_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELECTROLYZER_NEUTRONIUM.DESC"
 msgid "The oxygenated air produced by this building smells...superior, somehow."
@@ -1029,6 +1299,16 @@ msgstr "這座建築生產的含氧空氣聞起來...不知怎地，就是更優
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELECTROLYZER_NEUTRONIUM.NAME"
 msgid "<link=\"ELECTROLYZER\">Regal Neutronium Electrolyzer</link>"
 msgstr "<link=\"ELECTROLYZER\">帝王零號電解器</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_CLAM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_CLAM.DESC"
+msgid "permit_elegantbed_clam description"
+msgstr "permit_elegantbed_clam description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_CLAM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_CLAM.NAME"
+msgid "<link=\"LUXURYBED\">permit_elegantbed_clam name</link>"
+msgstr "<link=\"LUXURYBED\">permit_elegantbed_clam name</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_HATCH.DESC"
@@ -1049,6 +1329,16 @@ msgstr "非常適合側睡和蜷睡的人。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_PIPSQUEAK.NAME"
 msgid "<link=\"LUXURYBED\">Pipsqueak Bed</link>"
 msgstr "<link=\"LUXURYBED\">樹鼠寶寶床</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_SUBMARINE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_SUBMARINE.DESC"
+msgid "permit_elegantbed_submarine description"
+msgstr "permit_elegantbed_submarine description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_SUBMARINE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_SUBMARINE.NAME"
+msgid "<link=\"LUXURYBED\">permit_elegantbed_submarine name</link>"
+msgstr "<link=\"LUXURYBED\">permit_elegantbed_submarine name</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOORLAMP_COTTAGE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOORLAMP_COTTAGE.DESC"
@@ -1110,6 +1400,26 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_NEUTRONIUM.NAME"
 msgid "<link=\"REFRIGERATOR\">Regal Neutronium Refrigerator</link>"
 msgstr "<link=\"REFRIGERATOR\">帝王零號冰箱</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_FRIDGE_STRIPES_NAUTICAL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_STRIPES_NAUTICAL.DESC"
+msgid "Because Duplicants will keel over if they don't get enough calories."
+msgstr "因為複製人如果沒有攝取足夠的熱量，可是會當場翻船的。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_FRIDGE_STRIPES_NAUTICAL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_STRIPES_NAUTICAL.NAME"
+msgid "<link=\"REFRIGERATOR\">Nautical Stripe Refrigerator</link>"
+msgstr "<link=\"REFRIGERATOR\">航海條紋冰箱</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_FRIDGE_WATERBUBBLES.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_WATERBUBBLES.DESC"
+msgid "Holds enough food to tide over a small colony."
+msgstr "存放的食物足夠讓一個小型殖民地度過難關。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_FRIDGE_WATERBUBBLES.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_WATERBUBBLES.NAME"
+msgid "<link=\"REFRIGERATOR\">Ripple Refrigerator</link>"
+msgstr "<link=\"REFRIGERATOR\">漣漪冰箱</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_DARTLE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_DARTLE.DESC"
 msgid "The splotchy parts have an unsettlingly leather-like texture."
@@ -1129,6 +1439,26 @@ msgstr "不亂踩。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_LUMB.NAME"
 msgid "<link=\"GASRESERVOIR\">Lumb Gas Reservoir</link>"
 msgstr "<link=\"GASRESERVOIR\">劍龍儲氣庫</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_STRIPES_NAUTICAL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_STRIPES_NAUTICAL.DESC"
+msgid "Classically striped storage is a mainstay of maritime colony management."
+msgstr "經典條紋設計的儲存槽，是海洋殖民地管理的支柱。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_STRIPES_NAUTICAL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_STRIPES_NAUTICAL.NAME"
+msgid "<link=\"GASRESERVOIR\">Nautical Stripe Gas Reservoir</link>"
+msgstr "<link=\"GASRESERVOIR\">航海條紋儲氣庫</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_WATERBUBBLES.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_WATERBUBBLES.DESC"
+msgid "This style has been making waves in colonies across the universe for who knows how long."
+msgstr "這種風格天曉得在全宇宙的殖民地裡掀起了多大的波瀾。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_WATERBUBBLES.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_WATERBUBBLES.NAME"
+msgid "<link=\"GASRESERVOIR\">Ripple Gas Reservoir</link>"
+msgstr "<link=\"GASRESERVOIR\">漣漪儲氣庫</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_A.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_A.DESC"
@@ -1160,6 +1490,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_CYBERPUNK.NAME"
 msgid "<link=\"MANUALGENERATOR\">Retro LED Manual Generator</link>"
 msgstr "<link=\"MANUALGENERATOR\">復古 LED 人力發電機</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_NAUTICAL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_NAUTICAL.DESC"
+msgid "Time spent operating this building does nothing to help Duplicants get their sea legs."
+msgstr "在這座建築上踩得再久，也沒辦法幫複製人練出不暈船的水手腿。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_NAUTICAL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_NAUTICAL.NAME"
+msgid "<link=\"MANUALGENERATOR\">Nautical Manual Generator</link>"
+msgstr "<link=\"MANUALGENERATOR\">航海人力發電機</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_NEUTRONIUM.DESC"
 msgid "Some folks climb up the corporate ladder, others race on the aristocratic wheel."
@@ -1180,6 +1520,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_ROCK.NAME"
 msgid "<link=\"MANUALGENERATOR\">Rustic Manual Generator</link>"
 msgstr "<link=\"MANUALGENERATOR\">淳樸人力發電機</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_WATERBUBBLES.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_WATERBUBBLES.DESC"
+msgid "Out here, \"all hands on deck\" also means \"all feet on generator pedals.\""
+msgstr "在這裡，「全員各就各位」 也代表「雙腳踩上發電機踏板」。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_WATERBUBBLES.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_WATERBUBBLES.NAME"
+msgid "<link=\"MANUALGENERATOR\">Ripple Manual Generator</link>"
+msgstr "<link=\"MANUALGENERATOR\">漣漪人力發電機</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_GENERATORPHOS_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORPHOS_NEUTRONIUM.DESC"
 msgid "This building's high-gloss finish never loses its shine, no matter how many layers of coal dust it's coated in."
@@ -1189,6 +1539,36 @@ msgstr "這座建築的高光澤飾面永不失色，無論它被多少層煤塵
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORPHOS_NEUTRONIUM.NAME"
 msgid "<link=\"GENERATOR\">Regal Neutronium Coal Generator</link>"
 msgstr "<link=\"GENERATOR\">帝王零號燃煤發電機</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GLASSCEILINGLIGHT_JELLY_BLUE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLASSCEILINGLIGHT_JELLY_BLUE.DESC"
+msgid "Soft blue overhead light uplifts the Duplicant soul."
+msgstr "柔和的藍色頂光，能振奮複製人的心靈。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GLASSCEILINGLIGHT_JELLY_BLUE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLASSCEILINGLIGHT_JELLY_BLUE.NAME"
+msgid "<link=\"GLASSCEILINGLIGHT\">Hush Jelly Ceiling Light</link>"
+msgstr "<link=\"GLASSCEILINGLIGHT\">寂靜水母吸頂燈</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GLASSCEILINGLIGHT_JELLY_PINK.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLASSCEILINGLIGHT_JELLY_PINK.DESC"
+msgid "It's like rose-colored glasses for the whole room."
+msgstr "就像為整個房間戴上了一副玫瑰色眼鏡。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GLASSCEILINGLIGHT_JELLY_PINK.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLASSCEILINGLIGHT_JELLY_PINK.NAME"
+msgid "<link=\"GLASSCEILINGLIGHT\">Rosy Jelly Ceiling Light</link>"
+msgstr "<link=\"GLASSCEILINGLIGHT\">玫瑰水母吸頂燈</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GLOVES_BASIC_BLUE_NAUTICAL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_BASIC_BLUE_NAUTICAL.DESC"
+msgid "A good, solid pair of nautical blue gloves that go with everything."
+msgstr "一雙品質扎實的航海藍手套，不管怎麼搭都好看。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GLOVES_BASIC_BLUE_NAUTICAL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_BASIC_BLUE_NAUTICAL.NAME"
+msgid "Basic Nautical Gloves"
+msgstr "基礎航海手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_BASIC_BLUE_WHEEZEWORT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_BASIC_BLUE_WHEEZEWORT.DESC"
@@ -1219,6 +1599,16 @@ msgstr "一雙百搭的結實棕色手套。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_BASIC_GRIME.NAME"
 msgid "Basic Grime Gloves"
 msgstr "基礎汙漬手套"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GLOVES_BASIC_NAVY.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_BASIC_NAVY.DESC"
+msgid "A good, solid pair of navy blue gloves that go with everything."
+msgstr "一雙品質扎實的海軍藍手套，不管怎麼搭都好看。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GLOVES_BASIC_NAVY.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_BASIC_NAVY.NAME"
+msgid "Basic Navy Gloves"
+msgstr "基礎海軍藍手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_CUFFLESS_SHINY_ALGAE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_CUFFLESS_SHINY_ALGAE.DESC"
@@ -1512,13 +1902,23 @@ msgstr "鹵水手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_GOLD.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_GOLD.DESC"
-msgid "PERMIT_GLOVES_SWIM_GOLD desc"
-msgstr "PERMIT_GLOVES_SWIM_GOLD desc"
+msgid "It's all in the wrist!"
+msgstr "訣竅全在手腕！"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_GOLD.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_GOLD.NAME"
-msgid "PERMIT_GLOVES_SWIM_GOLD name"
-msgstr "PERMIT_GLOVES_SWIM_GOLD name"
+msgid "Gold Fin Gloves"
+msgstr "黃金鰭型手套"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WHEEZY.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WHEEZY.DESC"
+msgid "A finny pair of Wheezewort-blue gloves for swimming with the fishes."
+msgstr "一雙冰樹藍的鰭型手套，適合用來與魚共游。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WHEEZY.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WHEEZY.NAME"
+msgid "Wheezy Fin Gloves"
+msgstr "冰樹鰭型手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_VSUIT_STELLAR.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_VSUIT_STELLAR.DESC"
@@ -1540,10 +1940,15 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_HEADQUARTERS_CERES.NAME"
 msgid "<link=\"HEADQUARTERS\">Frosty Printing Pod</link>"
 msgstr "<link=\"HEADQUARTERS\">寒霜列印元</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_HQBASE_AQUATIC.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_AQUATIC.DESC"
+msgid "It looks like it belongs in an underwater research facility."
+msgstr "它看起來就像是屬於水下研究設施的一部分。"
+
 #. STRINGS.BLUEPRINTS.PERMIT_HQBASE_AQUATIC.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_AQUATIC.NAME"
-msgid "Marine Printing Pod"
-msgstr "海洋列印艙"
+msgid "<link=\"HEADQUARTERS\">Aquarius Printing Pod name</link>"
+msgstr "<link=\"EADQUARTER\">水瓶座列印元</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_HQBASE_CYBERPUNK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_CYBERPUNK.DESC"
@@ -2315,6 +2720,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_MASSEUR_PREHISTORIC.NAME"
 msgid "<link=\"MASSAGETABLE\">Foot Massage Table</link>"
 msgstr "<link=\"MASSAGETABLE\">足部按摩床</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_MECHANICAL_SURFBOARD_JAWS.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MECHANICAL_SURFBOARD_JAWS.DESC"
+msgid "permit_mechanical_surfboard_jaws description"
+msgstr "permit_mechanical_surfboard_jaws description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_MECHANICAL_SURFBOARD_JAWS.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MECHANICAL_SURFBOARD_JAWS.NAME"
+msgid "<link=\"MECHANICALSURFBOARD\">permit_mechanical_surfboard_jaws name</link>"
+msgstr "<link=\"MECHANICALSURFBOARD\">permit_mechanical_surfboard_jaws name</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_METALREFINERY_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_METALREFINERY_NEUTRONIUM.DESC"
 msgid "Some say it's the most refined-looking metal refinery that ever refined metal."
@@ -2425,6 +2840,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_MITTENS_KNIT_YELLOWCAKE.NAME"
 msgid "Yellowcake Mittens"
 msgstr "黃餅手套"
 
+#. STRINGS.BLUEPRINTS.PERMIT_MONUMENT_BASE_A_AQUATIC.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_BASE_A_AQUATIC.DESC"
+msgid "permit_monument_base_a_aquatic description"
+msgstr "permit_monument_base_a_aquatic description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_MONUMENT_BASE_A_AQUATIC.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_BASE_A_AQUATIC.NAME"
+msgid "permit_monument_base_a_aquatic name"
+msgstr "permit_monument_base_a_aquatic name"
+
 #. STRINGS.BLUEPRINTS.PERMIT_MONUMENT_BASE_A_BIONIC.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_BASE_A_BIONIC.DESC"
 msgid "It's a bit greasy."
@@ -2444,6 +2869,16 @@ msgstr "羽葉向上捲曲，方便清潔人員清掃其周圍的地板。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_BASE_A_FROSTY.NAME"
 msgid "Squash Stand"
 msgstr "南瓜基座"
+
+#. STRINGS.BLUEPRINTS.PERMIT_MONUMENT_BASE_B_AQUATIC.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_BASE_B_AQUATIC.DESC"
+msgid "permit_monument_base_b_aquatic description"
+msgstr "permit_monument_base_b_aquatic description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_MONUMENT_BASE_B_AQUATIC.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_BASE_B_AQUATIC.NAME"
+msgid "permit_monument_base_b_aquatic name"
+msgstr "permit_monument_base_b_aquatic name"
 
 #. STRINGS.BLUEPRINTS.PERMIT_MONUMENT_BASE_B_BIONIC.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_BASE_B_BIONIC.DESC"
@@ -2485,6 +2920,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_BASE_C_FROSTY.NAME"
 msgid "Patty Pose"
 msgstr "金姿勢"
 
+#. STRINGS.BLUEPRINTS.PERMIT_MONUMENT_MID_A_AQUATIC.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_MID_A_AQUATIC.DESC"
+msgid "permit_monument_mid_a_aquatic description"
+msgstr "permit_monument_mid_a_aquatic description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_MONUMENT_MID_A_AQUATIC.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_MID_A_AQUATIC.NAME"
+msgid "permit_monument_mid_a_aquatic name"
+msgstr "permit_monument_mid_a_aquatic name"
+
 #. STRINGS.BLUEPRINTS.PERMIT_MONUMENT_MID_A_BIONIC.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_MID_A_BIONIC.DESC"
 msgid "Featuring the fluttery palms of a delighted Bionic Duplicant."
@@ -2504,6 +2949,16 @@ msgstr "雕刻的雪莓與真正的雪莓一樣美味。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_MID_A_FROSTY.NAME"
 msgid "Berry Bounty Trunk"
 msgstr "莓果賞金箱"
+
+#. STRINGS.BLUEPRINTS.PERMIT_MONUMENT_MID_B_AQUATIC.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_MID_B_AQUATIC.DESC"
+msgid "permit_monument_mid_b_aquatic description"
+msgstr "permit_monument_mid_b_aquatic description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_MONUMENT_MID_B_AQUATIC.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_MID_B_AQUATIC.NAME"
+msgid "permit_monument_mid_b_aquatic name"
+msgstr "permit_monument_mid_b_aquatic name"
 
 #. STRINGS.BLUEPRINTS.PERMIT_MONUMENT_MID_B_BIONIC.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_MID_B_BIONIC.DESC"
@@ -2545,6 +3000,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_MID_C_FROSTY.NAME"
 msgid "Recoiling"
 msgstr "後退"
 
+#. STRINGS.BLUEPRINTS.PERMIT_MONUMENT_UPPER_A_AQUATIC.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_UPPER_A_AQUATIC.DESC"
+msgid "A tip of the cap to interspecies heroism."
+msgstr "向跨物種的英雄主義脫帽致敬。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_MONUMENT_UPPER_A_AQUATIC.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_UPPER_A_AQUATIC.NAME"
+msgid "Kiss of Life Noggin"
+msgstr "生命之吻紀念碑頂部"
+
 #. STRINGS.BLUEPRINTS.PERMIT_MONUMENT_UPPER_A_BIONIC.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_UPPER_A_BIONIC.DESC"
 msgid "Each individual ringlet is heavy enough to crush a Duplicant."
@@ -2574,6 +3039,16 @@ msgstr "強大到連真正的霸王鸚都會為之顫抖的紀念碑頂部。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_UPPER_A_PREHISTORIC.NAME"
 msgid "Rhex Noggin"
 msgstr "霸王鸚頭部"
+
+#. STRINGS.BLUEPRINTS.PERMIT_MONUMENT_UPPER_B_AQUATIC.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_UPPER_B_AQUATIC.DESC"
+msgid "permit_monument_upper_b_aquatic description"
+msgstr "permit_monument_upper_b_aquatic description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_MONUMENT_UPPER_B_AQUATIC.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_UPPER_B_AQUATIC.NAME"
+msgid "Minnow Noggin"
+msgstr "Minnow 頭部"
 
 #. STRINGS.BLUEPRINTS.PERMIT_MONUMENT_UPPER_B_BIONIC.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_UPPER_B_BIONIC.DESC"
@@ -2625,6 +3100,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_MONUMENT_UPPER_C_FROSTY.NAME"
 msgid "Liam Noggin"
 msgstr "Liam 頭部"
 
+#. STRINGS.BLUEPRINTS.PERMIT_PAINTING_ART_AQUATIC.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_PAINTING_ART_AQUATIC.DESC"
+msgid "permit_painting_art_aquatic description"
+msgstr "permit_painting_art_aquatic description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_PAINTING_ART_AQUATIC.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_PAINTING_ART_AQUATIC.NAME"
+msgid "permit_painting_art_aquatic name"
+msgstr "permit_painting_art_aquatic name"
+
 #. STRINGS.BLUEPRINTS.PERMIT_PAINTING_ART_CERES_A.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PAINTING_ART_CERES_A.DESC"
 msgid "You cannot choose your family, but you can choose your friends."
@@ -2644,6 +3129,16 @@ msgstr "如果這名複製人有他們自己的私人冰箱，這就是會貼在
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PAINTING_ART_STEGO.NAME"
 msgid "Safari Selfie"
 msgstr "野生自拍"
+
+#. STRINGS.BLUEPRINTS.PERMIT_PAINTING_TALL_ART_AQUATIC.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_PAINTING_TALL_ART_AQUATIC.DESC"
+msgid "permit_painting_tall_art_aquatic description"
+msgstr "permit_painting_tall_art_aquatic description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_PAINTING_TALL_ART_AQUATIC.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_PAINTING_TALL_ART_AQUATIC.NAME"
+msgid "permit_painting_tall_art_aquatic name"
+msgstr "permit_painting_tall_art_aquatic name"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PAINTING_TALL_ART_CERES_A.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PAINTING_TALL_ART_CERES_A.DESC"
@@ -2675,6 +3170,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_PAINTING_WIDE_ART_RHEX.NAME"
 msgid "Hide and Seek"
 msgstr "捉迷藏"
 
+#. STRINGS.BLUEPRINTS.PERMIT_PAINTING_WIDE_ART_VENUS.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_PAINTING_WIDE_ART_VENUS.DESC"
+msgid "permit_painting_wide_art_venus description"
+msgstr "permit_painting_wide_art_venus description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_PAINTING_WIDE_ART_VENUS.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_PAINTING_WIDE_ART_VENUS.NAME"
+msgid "permit_painting_wide_art_venus name"
+msgstr "permit_painting_wide_art_venus name"
+
 #. STRINGS.BLUEPRINTS.PERMIT_PANTS_EXTENDEDWAIST_BLUE_WHEEZEWORT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PANTS_EXTENDEDWAIST_BLUE_WHEEZEWORT.DESC"
 msgid "The built-in invisible elastic waistband supports deep belly breathing."
@@ -2684,6 +3189,16 @@ msgstr "內建隱形彈性腰帶可支援深腹式呼吸。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PANTS_EXTENDEDWAIST_BLUE_WHEEZEWORT.NAME"
 msgid "High-Waisted Wheezy Pants"
 msgstr "高腰冰樹褲子"
+
+#. STRINGS.BLUEPRINTS.PERMIT_PANTS_NAUTICAL_WHITE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_PANTS_NAUTICAL_WHITE.DESC"
+msgid "Twice the usual number of buttons, and zero pockets."
+msgstr "鈕扣數量是平常的兩倍，而且完全沒有口袋。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_PANTS_NAUTICAL_WHITE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_PANTS_NAUTICAL_WHITE.NAME"
+msgid "High-Waisted Nautical Pants"
+msgstr "高腰航海褲子"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PANTS_SNAPJACKET_BRINE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PANTS_SNAPJACKET_BRINE.DESC"
@@ -2707,13 +3222,13 @@ msgstr "擁抱喬木長褲"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PANTS_SWIM_BLACK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PANTS_SWIM_BLACK.DESC"
-msgid "PERMIT_PANTS_SWIM_BLACK desc"
-msgstr "PERMIT_PANTS_SWIM_BLACK desc"
+msgid "Monochromatic bottoms with just the subtlest hint of whimsy."
+msgstr "這款單色褲子帶著一絲極其微妙的奇幻趣味。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PANTS_SWIM_BLACK.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PANTS_SWIM_BLACK.NAME"
-msgid "PERMIT_PANTS_SWIM_BLACK name"
-msgstr "PERMIT_PANTS_SWIM_BLACK name"
+msgid "Black Merfolk Pants"
+msgstr "黑色人魚褲子"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PANTS_WADER_ALGAE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PANTS_WADER_ALGAE.DESC"
@@ -2785,16 +3300,6 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_PEDESTAL_SCREW_CHROME.NAME"
 msgid "<link=\"ITEMPEDESTAL\">Chrome Pedestal</link>"
 msgstr "<link=\"ITEMPEDESTAL\">鍍鉻臺座</link>"
 
-#. STRINGS.BLUEPRINTS.PERMIT_PERMIT_SHOES_SWIM_RED.DESC
-msgctxt "STRINGS.BLUEPRINTS.PERMIT_PERMIT_SHOES_SWIM_RED.DESC"
-msgid "PERMIT_PERMIT_SHOES_SWIM_RED desc"
-msgstr "PERMIT_PERMIT_SHOES_SWIM_RED desc"
-
-#. STRINGS.BLUEPRINTS.PERMIT_PERMIT_SHOES_SWIM_RED.NAME
-msgctxt "STRINGS.BLUEPRINTS.PERMIT_PERMIT_SHOES_SWIM_RED.NAME"
-msgid "PERMIT_PERMIT_SHOES_SWIM_RED name"
-msgstr "PERMIT_PERMIT_SHOES_SWIM_RED name"
-
 #. STRINGS.BLUEPRINTS.PERMIT_PJ_BIOCIRCUIT_WILDBERRY.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PJ_BIOCIRCUIT_WILDBERRY.DESC"
 msgid "This plush onesie soothes workers who feel really wired."
@@ -2834,6 +3339,16 @@ msgstr "裡面的標籤寫著：「如果你一開始睡不著，試、試、再
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PJ_DINO3.NAME"
 msgid "Triassic Jammies"
 msgstr "三疊紀睡衣"
+
+#. STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_AQUATIC.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_AQUATIC.DESC"
+msgid "Built to withstand the undertow of cosmic oceans."
+msgstr "專為抵禦宇宙海洋的強烈暗流而建造。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_AQUATIC.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_AQUATIC.NAME"
+msgid "<link=\"EXOBASEHEADQUARTERS\">Aquarius Mini-Pod</link>"
+msgstr "<link=\"EXOBASEHEADQUARTERS\">水瓶座迷你列印元</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_CYBERPUNK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_CYBERPUNK.DESC"
@@ -2935,6 +3450,36 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_RESPECCER_NEUTRONIUM.NAME"
 msgid "<link=\"RESETSKILLSSTATION\">Regal Neutronium Skill Scrubber</link>"
 msgstr "<link=\"RESETSKILLSSTATION\">帝王零號技能重置機</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_MARBLE_ATLAS_HAUL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_MARBLE_ATLAS_HAUL.DESC"
+msgid "permit_sculpture_marble_atlas_haul description"
+msgstr "permit_sculpture_marble_atlas_haul description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_MARBLE_ATLAS_HAUL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_MARBLE_ATLAS_HAUL.NAME"
+msgid "permit_sculpture_marble_atlas_haul name"
+msgstr "permit_sculpture_marble_atlas_haul name"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_MARBLE_SEQUINE_SQUAD.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_MARBLE_SEQUINE_SQUAD.DESC"
+msgid "permit_sculpture_marble_sequine_squad description"
+msgstr "permit_sculpture_marble_sequine_squad description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_MARBLE_SEQUINE_SQUAD.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_MARBLE_SEQUINE_SQUAD.NAME"
+msgid "permit_sculpture_marble_sequine_squad name"
+msgstr "permit_sculpture_marble_sequine_squad name"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_MARBLE_SWILING_PACUS.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_MARBLE_SWILING_PACUS.DESC"
+msgid "permit_sculpture_marble_swiling_pacus description"
+msgstr "permit_sculpture_marble_swiling_pacus description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_MARBLE_SWILING_PACUS.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_MARBLE_SWILING_PACUS.NAME"
+msgid "permit_sculpture_marble_swiling_pacus name"
+msgstr "permit_sculpture_marble_swiling_pacus name"
+
 #. STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_WOOD_AMAZING_ACTION_GULP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_WOOD_AMAZING_ACTION_GULP.DESC"
 msgid "The mighty Pacu refuses to explain its philosophy. It simply embodies it."
@@ -3035,6 +3580,26 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_WOOD_OKAY_MID_ONE.NAME"
 msgid "Wood Grain"
 msgstr "木頭麥粒"
 
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_BASIC_BLUE_NAUTICAL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_BASIC_BLUE_NAUTICAL.DESC"
+msgid "A shipshape pair of nautical blue shoes that go with everything."
+msgstr "一雙井井有條的航海藍鞋子，不管怎麼搭都好看。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_BASIC_BLUE_NAUTICAL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_BASIC_BLUE_NAUTICAL.NAME"
+msgid "Basic Nautical Shoes"
+msgstr "基礎航海鞋子"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_BASIC_BLUE_NAVY.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_BASIC_BLUE_NAVY.DESC"
+msgid "A shipshape pair of navy blue shoes that go with everything."
+msgstr "一雙井井有條的海軍藍鞋子，不管怎麼搭都好看。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_BASIC_BLUE_NAVY.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_BASIC_BLUE_NAVY.NAME"
+msgid "Basic Navy Shoes"
+msgstr "基礎海軍藍鞋子"
+
 #. STRINGS.BLUEPRINTS.PERMIT_SHOES_BASIC_BLUE_WHEEZY.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_BASIC_BLUE_WHEEZY.DESC"
 msgid "A fresh pair of Wheezewort-blue shoes that go with everything."
@@ -3054,6 +3619,16 @@ msgstr "一雙百搭的全新棕色鞋子。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_BASIC_FRASS.NAME"
 msgid "Basic Frass Shoes"
 msgstr "基礎蟲屑鞋"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_BOOTS_SAILOR_NAUTICAL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_BOOTS_SAILOR_NAUTICAL.DESC"
+msgid "This pair of shoes passes inspection every time."
+msgstr "這雙皮鞋每次都能順利通過服裝儀容檢查。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_BOOTS_SAILOR_NAUTICAL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_BOOTS_SAILOR_NAUTICAL.NAME"
+msgid "Nautical Dress Shoes"
+msgstr "航海正裝皮鞋"
 
 #. STRINGS.BLUEPRINTS.PERMIT_SHOES_FUTURESPACE_BLUE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_FUTURESPACE_BLUE.DESC"
@@ -3094,6 +3669,56 @@ msgstr "內建襪子！"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SCOUT_BROWN.NAME"
 msgid "Lace-Up Trekkers"
 msgstr "繫帶徒步鞋"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_BLUE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_BLUE.DESC"
+msgid "A pair of thick blue boots that slosh with every step."
+msgstr "一雙厚實的藍色靴子，每走一步都會發出踩水的啪嗒聲。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_BLUE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_BLUE.NAME"
+msgid "Blue Neoprene Boots"
+msgstr "藍色潛水料靴子"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_GREEN.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_GREEN.DESC"
+msgid "A pair of thick green boots that slosh with every step."
+msgstr "一雙厚實的綠色靴子，每走一步都會發出踩水的啪嗒聲。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_GREEN.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_GREEN.NAME"
+msgid "Green Neoprene Boots"
+msgstr "綠色潛水料靴子"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_RED.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_RED.DESC"
+msgid "A pair of thick red boots that slosh with every step."
+msgstr "一雙厚實的紅色靴子，每走一步都會發出踩水的啪嗒聲。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_RED.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_RED.NAME"
+msgid "Red Neoprene Boots"
+msgstr "紅色潛水料靴子"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_WHEEZY.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_WHEEZY.DESC"
+msgid "A pair of thick Wheezewort-blue boots that slosh with every step."
+msgstr "一雙厚實的冰樹藍靴子，每走一步都會發出踩水的啪嗒聲。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_WHEEZY.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_WHEEZY.NAME"
+msgid "Wheezy Neoprene Boots"
+msgstr "冰樹潛水料靴子"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_YELLOW.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_YELLOW.DESC"
+msgid "A pair of thick yellow boots that slosh with every step."
+msgstr "一雙厚實的黃色靴子，每走一步都會發出踩水的啪嗒聲。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_YELLOW.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_YELLOW.NAME"
+msgid "Yellow Neoprene Boots"
+msgstr "黃色潛水料靴子"
 
 #. STRINGS.BLUEPRINTS.PERMIT_SHOES_VSUIT_STELLAR.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_VSUIT_STELLAR.DESC"
@@ -3324,6 +3949,46 @@ msgstr "當外觀如此奢華時，誰還會在乎裡面裝了什麼？"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_NEUTRONIUM.NAME"
 msgid "<link=\"STORAGELOCKER\">Regal Neutronium Storage Bin</link>"
 msgstr "<link=\"STORAGELOCKER\">帝王零號儲存箱</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_STRIPES_NAUTICAL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_STRIPES_NAUTICAL.DESC"
+msgid "Without proper storage, colony floors would be chock-a-block with flotsam and jetsam."
+msgstr "要是沒有妥善的儲物空間，殖民地的地板早就會被各種雜物與廢棄物塞得水洩不通。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_STRIPES_NAUTICAL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_STRIPES_NAUTICAL.NAME"
+msgid "<link=\"STORAGELOCKER\">Nautical Stripe Storage Bin</link>"
+msgstr "<link=\"STORAGELOCKER\">航海條紋儲物箱</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_WATERBUBBLES.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_WATERBUBBLES.DESC"
+msgid "It's impossible not to go overboard on marine-themed storage styles."
+msgstr "面對海洋主題的儲物風格，真的很難不讓人為之瘋狂。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_WATERBUBBLES.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_WATERBUBBLES.NAME"
+msgid "<link=\"STORAGELOCKER\">Ripple Storage Bin</link>"
+msgstr "<link=\"STORAGELOCKER\">漣漪儲物箱</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SWIMSUIT_MERM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SWIMSUIT_MERM.DESC"
+msgid "The epaulettes are reinforced with real fishbones!"
+msgstr "肩章可是用真正的魚骨強化過的呢！"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SWIMSUIT_MERM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SWIMSUIT_MERM.NAME"
+msgid "Merfolk Aquasuit"
+msgstr "人魚潛水衣"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SWIMSUIT_WAVECRESTS.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SWIMSUIT_WAVECRESTS.DESC"
+msgid "One cannot control the waves, but one can learn to dress as though one has learned to swim."
+msgstr "人無法控制海浪，但至少可以學著穿得像是自己已經學會游泳一樣。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SWIMSUIT_WAVECRESTS.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SWIMSUIT_WAVECRESTS.NAME"
+msgid "Breaker Aquasuit"
+msgstr "碎浪潛水衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_FLANNEL_BLACK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_FLANNEL_BLACK.DESC"
@@ -3655,6 +4320,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_METAL_GREY.NAME"
 msgid "All-Metal Jacket"
 msgstr "全金屬外套"
 
+#. STRINGS.BLUEPRINTS.PERMIT_TOP_NAUTICAL_BLUE_WHITE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_NAUTICAL_BLUE_WHITE.DESC"
+msgid "A coastal classic for maritime colonists."
+msgstr "為航海殖民者打造的海岸經典款式。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_TOP_NAUTICAL_BLUE_WHITE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_NAUTICAL_BLUE_WHITE.NAME"
+msgid "Seafarer Sweater"
+msgstr "航海家毛衣"
+
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_REGAL_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_REGAL_NEUTRONIUM.DESC"
 msgid "The unofficial dress uniform of the super-regal, with a solid gold belt and collar. It's not comfortable, but wow, does it ever look good."
@@ -3715,15 +4390,45 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWEATER_WADER_LTBLUE.NAME"
 msgid "Woolly Fishing Sweater"
 msgstr "羊毛釣魚毛衣"
 
-#. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_RED.DESC
-msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_RED.DESC"
-msgid "PERMIT_TOP_SWIM_RED desc"
-msgstr "PERMIT_TOP_SWIM_RED desc"
+#. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_AXON.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_AXON.DESC"
+msgid "A thick axon-blue swimming top that zips all the way up to the chin."
+msgstr "一件厚實的軸突藍潛水上衣，拉鍊可以一路拉到下巴。"
 
-#. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_RED.NAME
-msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_RED.NAME"
-msgid "PERMIT_TOP_SWIM_RED name"
-msgstr "PERMIT_TOP_SWIM_RED name"
+#. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_AXON.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_AXON.NAME"
+msgid "Axon Neoprene Zip-up"
+msgstr "軸突潛水料拉鍊上衣"
+
+#. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_BLUE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_BLUE.DESC"
+msgid "A thick blue swimming top that zips all the way up to the chin."
+msgstr "一件厚實的藍色潛水上衣，拉鍊可以一路拉到下巴。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_BLUE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_BLUE.NAME"
+msgid "Blue Neoprene Zip-up"
+msgstr "藍色潛水料拉鍊上衣"
+
+#. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_GREEN.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_GREEN.DESC"
+msgid "A thick green swimming top that zips all the way up to the chin."
+msgstr "一件厚實的綠色潛水上衣，拉鍊可以一路拉到下巴。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_GREEN.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_GREEN.NAME"
+msgid "Green Neoprene Zip-up"
+msgstr "綠色潛水料拉鍊上衣"
+
+#. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_YELLOW.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_YELLOW.DESC"
+msgid "A thick yellow swimming top that zips all the way up to the chin."
+msgstr "一件厚實的黃色潛水上衣，拉鍊可以一路拉到下巴。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_YELLOW.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_YELLOW.NAME"
+msgid "Yellow Neoprene Zip-up"
+msgstr "黃色潛水料拉鍊上衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_VEST_PUFFER_ORANGE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_VEST_PUFFER_ORANGE.DESC"
@@ -3734,6 +4439,16 @@ msgstr "保持核心溫暖，讓腋下透氣。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_VEST_PUFFER_ORANGE.NAME"
 msgid "Cadmium Vest"
 msgstr "鎘背心"
+
+#. STRINGS.BLUEPRINTS.PERMIT_UNDERWATER_CRITTER_CONDO_AQUATIC.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_UNDERWATER_CRITTER_CONDO_AQUATIC.DESC"
+msgid "Critters love to nap inside the mouths of these giant volcanic ash faces."
+msgstr "小動物們非常喜歡在 these 巨大火山灰人臉的嘴巴裡睡午覺。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_UNDERWATER_CRITTER_CONDO_AQUATIC.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_UNDERWATER_CRITTER_CONDO_AQUATIC.NAME"
+msgid "<link=\"UNDERWATERCRITTERCONDO\">Bignoggin Aquatic Critter Condo</link>"
+msgstr "<link=\"UNDERWATERCRITTERCONDO\">大頭水生小動物公寓</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_UTILITIES_ELECTRIC_CONDUCT_DIAMOND_ORCHID.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_UTILITIES_ELECTRIC_CONDUCT_DIAMOND_ORCHID.DESC"
@@ -3795,6 +4510,126 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_UTILITYELECTRICBRIDGECONDUCTIVE_SCALE_LIME.NA
 msgid "Leach Conductive Wire Bridge"
 msgstr "溶蝕電線橋接器"
 
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_BEAKER.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_BEAKER.DESC"
+msgid "permit_walls_aqua_beaker description"
+msgstr "permit_walls_aqua_beaker description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_BEAKER.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_BEAKER.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_aqua_beaker name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_aqua_beaker name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_BLANK.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_BLANK.DESC"
+msgid "permit_walls_aqua_blank description"
+msgstr "permit_walls_aqua_blank description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_BLANK.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_BLANK.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_aqua_blank name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_aqua_blank name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_BUBBLES.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_BUBBLES.DESC"
+msgid "permit_walls_aqua_bubbles description"
+msgstr "permit_walls_aqua_bubbles description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_BUBBLES.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_BUBBLES.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_aqua_bubbles name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_aqua_bubbles name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_JELLYFISH.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_JELLYFISH.DESC"
+msgid "permit_walls_aqua_jellyfish description"
+msgstr "permit_walls_aqua_jellyfish description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_JELLYFISH.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_JELLYFISH.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_aqua_jellyfish name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_aqua_jellyfish name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_KELP.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_KELP.DESC"
+msgid "permit_walls_aqua_kelp description"
+msgstr "permit_walls_aqua_kelp description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_KELP.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_KELP.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_aqua_kelp name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_aqua_kelp name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_KELP_SILT.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_KELP_SILT.DESC"
+msgid "permit_walls_aqua_kelp_silt description"
+msgstr "permit_walls_aqua_kelp_silt description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_KELP_SILT.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_KELP_SILT.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_aqua_kelp_silt name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_aqua_kelp_silt name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_KELP_TOP.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_KELP_TOP.DESC"
+msgid "permit_walls_aqua_kelp_top description"
+msgstr "permit_walls_aqua_kelp_top description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_KELP_TOP.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_KELP_TOP.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_aqua_kelp_top name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_aqua_kelp_top name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_PACU.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_PACU.DESC"
+msgid "permit_walls_aqua_pacu description"
+msgstr "permit_walls_aqua_pacu description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_PACU.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_PACU.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_aqua_pacu name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_aqua_pacu name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_PUFFER.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_PUFFER.DESC"
+msgid "permit_walls_aqua_puffer description"
+msgstr "permit_walls_aqua_puffer description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_PUFFER.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_PUFFER.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_aqua_puffer name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_aqua_puffer name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_SILT.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_SILT.DESC"
+msgid "permit_walls_aqua_silt description"
+msgstr "permit_walls_aqua_silt description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_SILT.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_SILT.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_aqua_silt name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_aqua_silt name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_SILT_TOP.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_SILT_TOP.DESC"
+msgid "permit_walls_aqua_silt_top description"
+msgstr "permit_walls_aqua_silt_top description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_SILT_TOP.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_SILT_TOP.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_aqua_silt_top name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_aqua_silt_top name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_TURTLE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_TURTLE.DESC"
+msgid "permit_walls_aqua_turtle description"
+msgstr "permit_walls_aqua_turtle description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_TURTLE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_TURTLE.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_aqua_turtle name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_aqua_turtle name</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_ARCADE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_ARCADE.DESC"
 msgid "For those who miss the carpet-burned elbows of their home planet."
@@ -3805,6 +4640,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_ARCADE.NAME"
 msgid "<link=\"EXTERIORWALL\">Arcade</link>"
 msgstr "<link=\"EXTERIORWALL\">拱廊</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_BASIC_BLUE_NAUTICAL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_BASIC_BLUE_NAUTICAL.DESC"
+msgid "permit_walls_basic_blue_nautical description"
+msgstr "permit_walls_basic_blue_nautical description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_BASIC_BLUE_NAUTICAL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_BASIC_BLUE_NAUTICAL.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_basic_blue_nautical name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_basic_blue_nautical name</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_CHAMELEO.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_CHAMELEO.DESC"
 msgid "The only known image of an adult Dartle with both eyes wide open. So awake!"
@@ -3814,6 +4659,26 @@ msgstr "這是目前唯一一張成年逸蜥雙眼圓睜的照片。精神真好
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_CHAMELEO.NAME"
 msgid "<link=\"EXTERIORWALL\">Pixel Dartle</link>"
 msgstr "<link=\"EXTERIORWALL\">像素逸蜥</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_CIRCLE_BLUE_NAUTICAL_WHITE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_CIRCLE_BLUE_NAUTICAL_WHITE.DESC"
+msgid "permit_walls_circle_blue_nautical_white description"
+msgstr "permit_walls_circle_blue_nautical_white description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_CIRCLE_BLUE_NAUTICAL_WHITE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_CIRCLE_BLUE_NAUTICAL_WHITE.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_circle_blue_nautical_white name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_circle_blue_nautical_white name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_CIRCLE_WHITE_BLUE_NAUTICAL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_CIRCLE_WHITE_BLUE_NAUTICAL.DESC"
+msgid "permit_walls_circle_white_blue_nautical description"
+msgstr "permit_walls_circle_white_blue_nautical description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_CIRCLE_WHITE_BLUE_NAUTICAL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_CIRCLE_WHITE_BLUE_NAUTICAL.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_circle_white_blue_nautical name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_circle_white_blue_nautical name</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_CIRCUIT_BOGEY.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_CIRCUIT_BOGEY.DESC"
@@ -3844,6 +4709,16 @@ msgstr "以設計師最喜歡的噬菌病毒命名。"
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_CIRCUIT_PUNK.NAME"
 msgid "<link=\"EXTERIORWALL\">Phage Circuit</link>"
 msgstr "<link=\"EXTERIORWALL\">噬菌體電路</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_DIAGONAL_BLUE_NAUTICAL_WHITE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_DIAGONAL_BLUE_NAUTICAL_WHITE.DESC"
+msgid "permit_walls_diagonal_blue_nautical_white description"
+msgstr "permit_walls_diagonal_blue_nautical_white description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_DIAGONAL_BLUE_NAUTICAL_WHITE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_DIAGONAL_BLUE_NAUTICAL_WHITE.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_diagonal_blue_nautical_white name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_diagonal_blue_nautical_white name</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_FOREST.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_FOREST.DESC"
@@ -3915,6 +4790,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_PACULACANTH.NAME"
 msgid "<link=\"EXTERIORWALL\">Pixel Jawbo</link>"
 msgstr "<link=\"EXTERIORWALL\">像素顎魚</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_PLUS_BLUE_NAUTICAL_WHITE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_PLUS_BLUE_NAUTICAL_WHITE.DESC"
+msgid "permit_walls_plus_blue_nautical_white description"
+msgstr "permit_walls_plus_blue_nautical_white description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_PLUS_BLUE_NAUTICAL_WHITE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_PLUS_BLUE_NAUTICAL_WHITE.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_plus_blue_nautical_white name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_plus_blue_nautical_white name</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_RAPTOR.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_RAPTOR.DESC"
 msgid "Never before has this huge predator looked so much like an escapee from a petting zoo."
@@ -3924,6 +4809,56 @@ msgstr "這隻巨型掠食者從未看起來如此像一隻從寵物動物園逃
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_RAPTOR.NAME"
 msgid "<link=\"EXTERIORWALL\">Pixel Rhex</link>"
 msgstr "<link=\"EXTERIORWALL\">像素霸王鸚</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA.DESC"
+msgid "permit_walls_sea description"
+msgstr "permit_walls_sea description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_sea name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_sea name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA_ANCHOR.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA_ANCHOR.DESC"
+msgid "permit_walls_sea_anchor description"
+msgstr "permit_walls_sea_anchor description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA_ANCHOR.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA_ANCHOR.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_sea_anchor name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_sea_anchor name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA_COMPASS.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA_COMPASS.DESC"
+msgid "permit_walls_sea_compass description"
+msgstr "permit_walls_sea_compass description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA_COMPASS.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA_COMPASS.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_sea_compass name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_sea_compass name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA_LIFEPRESERVER.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA_LIFEPRESERVER.DESC"
+msgid "permit_walls_sea_lifepreserver description"
+msgstr "permit_walls_sea_lifepreserver description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA_LIFEPRESERVER.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA_LIFEPRESERVER.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_sea_lifepreserver name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_sea_lifepreserver name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA_WHEEL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA_WHEEL.DESC"
+msgid "permit_walls_sea_wheel description"
+msgstr "permit_walls_sea_wheel description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA_WHEEL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA_WHEEL.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_sea_wheel name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_sea_wheel name</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_SILHOUETTE_PREHISTORICCRITTERS.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_SILHOUETTE_PREHISTORICCRITTERS.DESC"
@@ -3945,6 +4880,26 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_SOUTHWEST.NAME"
 msgid "<link=\"EXTERIORWALL\">Southwest</link>"
 msgstr "<link=\"EXTERIORWALL\">西南</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_SQUARE_BLUE_NAUTICAL_WHITE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_SQUARE_BLUE_NAUTICAL_WHITE.DESC"
+msgid "permit_walls_square_blue_nautical_white description"
+msgstr "permit_walls_square_blue_nautical_white description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_SQUARE_BLUE_NAUTICAL_WHITE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_SQUARE_BLUE_NAUTICAL_WHITE.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_square_blue_nautical_white name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_square_blue_nautical_white name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_SQUARES_BLUE_NAUTICAL_WHITE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_SQUARES_BLUE_NAUTICAL_WHITE.DESC"
+msgid "permit_walls_squares_blue_nautical_white description"
+msgstr "permit_walls_squares_blue_nautical_white description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_SQUARES_BLUE_NAUTICAL_WHITE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_SQUARES_BLUE_NAUTICAL_WHITE.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_squares_blue_nautical_white name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_squares_blue_nautical_white name</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_STEGO.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STEGO.DESC"
 msgid "Instead of having blank walls, consider blank-stare walls!"
@@ -3955,6 +4910,36 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STEGO.NAME"
 msgid "<link=\"EXTERIORWALL\">Pixel Lumb</link>"
 msgstr "<link=\"EXTERIORWALL\">像素劍龍</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_CIRCLE_NAUTICAL_WHITE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_CIRCLE_NAUTICAL_WHITE.DESC"
+msgid "permit_walls_stripes_circle_nautical_white description"
+msgstr "permit_walls_stripes_circle_nautical_white description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_CIRCLE_NAUTICAL_WHITE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_CIRCLE_NAUTICAL_WHITE.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_stripes_circle_nautical_white name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_stripes_circle_nautical_white name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_CIRCLE_WHITE_NAUTICAL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_CIRCLE_WHITE_NAUTICAL.DESC"
+msgid "permit_walls_stripes_circle_white_nautical description"
+msgstr "permit_walls_stripes_circle_white_nautical description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_CIRCLE_WHITE_NAUTICAL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_CIRCLE_WHITE_NAUTICAL.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_stripes_circle_white_nautical name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_stripes_circle_white_nautical name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_DIAGONAL_WHITE_NAUTICAL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_DIAGONAL_WHITE_NAUTICAL.DESC"
+msgid "permit_walls_stripes_diagonal_white_nautical description"
+msgstr "permit_walls_stripes_diagonal_white_nautical description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_DIAGONAL_WHITE_NAUTICAL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_DIAGONAL_WHITE_NAUTICAL.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_stripes_diagonal_white_nautical name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_stripes_diagonal_white_nautical name</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_NEUTRONIUM.DESC"
 msgid "This sumptuously tufted wall panel transforms basic colony spaces into palatial throne rooms."
@@ -3964,6 +4949,16 @@ msgstr "這款豪華的簇絨牆板，能將基礎的殖民地空間轉變為宮
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_NEUTRONIUM.NAME"
 msgid "<link=\"EXTERIORWALL\">Regal Neutronium Tuft</link>"
 msgstr "<link=\"EXTERIORWALL\">帝王零號嵌飾</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_WHITE_NAUTICAL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_WHITE_NAUTICAL.DESC"
+msgid "permit_walls_stripes_white_nautical description"
+msgstr "permit_walls_stripes_white_nautical description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_WHITE_NAUTICAL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_STRIPES_WHITE_NAUTICAL.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_stripes_white_nautical name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_stripes_white_nautical name</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_CHARCOAL_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_CHARCOAL_WHITE.DESC"
@@ -4024,6 +5019,16 @@ msgstr "一種有著俐落白色凹角的亮黃色壁紙，用於模組化風格
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_LEMON_WHITE.NAME"
 msgid "<link=\"EXTERIORWALL\">Brightslug Corner</link>"
 msgstr "<link=\"EXTERIORWALL\">亮蛞蝓凹角</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_NAUTICAL_WHITE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_NAUTICAL_WHITE.DESC"
+msgid "permit_walls_triangle_nautical_white description"
+msgstr "permit_walls_triangle_nautical_white description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_NAUTICAL_WHITE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_NAUTICAL_WHITE.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_triangle_nautical_white name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_triangle_nautical_white name</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_SATSUMA_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_SATSUMA_WHITE.DESC"
@@ -4095,6 +5100,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_LEMON.NAME"
 msgid "<link=\"EXTERIORWALL\">Brightslug Point</link>"
 msgstr "<link=\"EXTERIORWALL\">亮蛞蝓凸尖</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_NAUTICAL.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_NAUTICAL.DESC"
+msgid "permit_walls_triangle_white_nautical description"
+msgstr "permit_walls_triangle_white_nautical description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_NAUTICAL.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_NAUTICAL.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_triangle_white_nautical name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_triangle_white_nautical name</link>"
+
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_SATSUMA.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_SATSUMA.DESC"
 msgid "This wallpaper features a safety-orange triangle pointing into a vast expanse of nothingness."
@@ -4104,6 +5119,86 @@ msgstr "這種壁紙以安全橙色三角形為主題，指向無垠的虛空。
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_WHITE_SATSUMA.NAME"
 msgid "<link=\"EXTERIORWALL\">Hi-Vis Point</link>"
 msgstr "<link=\"EXTERIORWALL\">高能見凸尖</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVES.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVES.DESC"
+msgid "permit_walls_waves description"
+msgstr "permit_walls_waves description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVES.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVES.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_waves name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_waves name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVES_HALF.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVES_HALF.DESC"
+msgid "permit_walls_waves_half description"
+msgstr "permit_walls_waves_half description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVES_HALF.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVES_HALF.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_waves_half name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_waves_half name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVES01.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVES01.DESC"
+msgid "permit_walls_waves01 description"
+msgstr "permit_walls_waves01 description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVES01.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVES01.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_waves01 name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_waves01 name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVES02.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVES02.DESC"
+msgid "permit_walls_waves02 description"
+msgstr "permit_walls_waves02 description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVES02.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVES02.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_waves02 name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_waves02 name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVESCRASHING.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVESCRASHING.DESC"
+msgid "permit_walls_wavescrashing description"
+msgstr "permit_walls_wavescrashing description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVESCRASHING.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVESCRASHING.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_wavescrashing name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_wavescrashing name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVESCRESTS.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVESCRESTS.DESC"
+msgid "permit_walls_wavescrests description"
+msgstr "permit_walls_wavescrests description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVESCRESTS.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVESCRESTS.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_wavescrests name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_wavescrests name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVESCRESTS_HALF.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVESCRESTS_HALF.DESC"
+msgid "permit_walls_wavescrests_half description"
+msgstr "permit_walls_wavescrests_half description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVESCRESTS_HALF.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVESCRESTS_HALF.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_wavescrests_half name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_wavescrests_half name</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVESSWIRLS.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVESSWIRLS.DESC"
+msgid "permit_walls_wavesswirls description"
+msgstr "permit_walls_wavesswirls description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVESSWIRLS.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_WAVESSWIRLS.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_wavesswirls name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_wavesswirls name</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_WOOD_PANEL.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_WOOD_PANEL.DESC"
@@ -4174,6 +5269,16 @@ msgstr "這種壁紙上的亮黃色三角既像標記地點的「X」，又像�
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_LEMON_WHITE.NAME"
 msgid "<link=\"EXTERIORWALL\">Brightslug X</link>"
 msgstr "<link=\"EXTERIORWALL\">亮蛞蝓 X 形</link>"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_X_NAUTICAL_WHITE.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_NAUTICAL_WHITE.DESC"
+msgid "permit_walls_x_nautical_white description"
+msgstr "permit_walls_x_nautical_white description"
+
+#. STRINGS.BLUEPRINTS.PERMIT_WALLS_X_NAUTICAL_WHITE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_NAUTICAL_WHITE.NAME"
+msgid "<link=\"EXTERIORWALL\">permit_walls_x_nautical_white name</link>"
+msgstr "<link=\"EXTERIORWALL\">permit_walls_x_nautical_white name</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_X_SATSUMA_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_SATSUMA_WHITE.DESC"
@@ -11228,7 +12333,7 @@ msgstr "<link=\"EGGCRACKER\">燒杯裂蛋器</link>"
 #. STRINGS.BUILDINGS.PREFABS.EGGCRACKER.FACADES.DEFAULT_EGGCRACKER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.EGGCRACKER.FACADES.DEFAULT_EGGCRACKER.DESC"
 msgid "It cracks eggs."
-msgstr "能將蛋打裂。"
+msgstr "用於敲開蛋殼。"
 
 #. STRINGS.BUILDINGS.PREFABS.EGGCRACKER.FACADES.DEFAULT_EGGCRACKER.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.EGGCRACKER.FACADES.DEFAULT_EGGCRACKER.NAME"
@@ -13762,8 +14867,8 @@ msgstr "<link=\"GEOTUNER\">地理調諧儀</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.GLASSCEILINGLIGHT.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.GLASSCEILINGLIGHT.DESC"
-msgid "Light reduces Duplicant stress and is required to grow certain plants."
-msgstr "光照可降低複製人的壓力，且為某些植物生長所必需。"
+msgid "It's an attractive way to add overhead lighting in aquatic spaces."
+msgstr "這是在水生空間增加頂部照明的一種美觀方式。"
 
 #. STRINGS.BUILDINGS.PREFABS.GLASSCEILINGLIGHT.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.GLASSCEILINGLIGHT.EFFECT"
@@ -13772,8 +14877,8 @@ msgstr "<link=\"POWER\">通電</link>時提供<link=\"LIGHT\">光照</link>。\n
 
 #. STRINGS.BUILDINGS.PREFABS.GLASSCEILINGLIGHT.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.GLASSCEILINGLIGHT.NAME"
-msgid "<link=\"GLASSCEILINGLIGHT\">Glass Ceiling Light</link>"
-msgstr "<link=\"CEILINGLIGHT\">玻璃吸頂燈</link>"
+msgid "<link=\"GLASSCEILINGLIGHT\">Glass Jelly Ceiling Light</link>"
+msgstr "<link=\"GLASSCEILINGLIGHT\">水母玻璃天花板燈</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.GLASSEXTERIORWALL.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.GLASSEXTERIORWALL.DESC"
@@ -19212,8 +20317,8 @@ msgstr "複製人可在<link=\"LIGHT\">陽光</link>下休憩以放鬆身心。\
 
 #. STRINGS.BUILDINGS.PREFABS.PROPBEACHCHAIR.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.PROPBEACHCHAIR.NAME"
-msgid "<link=\"PROPBEACHCHAIR\">Tattered Beach Chair</link>"
-msgstr "<link=\"PROPBEACHCHAIR\">破舊的沙灘椅</link>"
+msgid "<link=\"BEACHCHAIR\">Tattered Beach Chair</link>"
+msgstr "<link=\"BEACHCHAIR\">破舊的沙灘椅</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.PROPCERESPOSTERA.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.PROPCERESPOSTERA.DESC"
@@ -20097,8 +21202,8 @@ msgstr "使殖民地能夠依靠清潔能源運作。"
 
 #. STRINGS.BUILDINGS.PREFABS.REEFGENERATOR.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.REEFGENERATOR.EFFECT"
-msgid "Converts the kinetic energy from a <link=\"REEFGEYSER\">Tidal Spring</link> below it into electrical <link=\"POWER\">Power</link>."
-msgstr "將其下方<link=\"REEFGEYSER\">潮汐泉</link>的動能轉化為<link=\"POWER\">電力</link>。"
+msgid "Converts the kinetic energy from a <link=\"SMALLREEFGEYSER\">Tidal Spring</link> below it into electrical <link=\"POWER\">Power</link>."
+msgstr "將其下方<link=\"SMALLREEFGEYSER\">潮汐泉</link>的動能轉化為<link=\"POWER\">電力</link>。"
 
 #. STRINGS.BUILDINGS.PREFABS.REEFGENERATOR.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.REEFGENERATOR.NAME"
@@ -22864,6 +23969,11 @@ msgstr "<link=\"WATERCOOLER\">嘔吐黃飲水機</link>"
 msgctxt "STRINGS.BUILDINGS.PREFABS.WATERCOOLER.NAME"
 msgid "<link=\"WATERCOOLER\">Water Cooler</link>"
 msgstr "<link=\"WATERCOOLER\">飲水機</link>"
+
+#. STRINGS.BUILDINGS.PREFABS.WATERCOOLER.OPTION_TOOLTIPS.INK
+msgctxt "STRINGS.BUILDINGS.PREFABS.WATERCOOLER.OPTION_TOOLTIPS.INK"
+msgid "<link=\"INK\">Squid Ink</link>\nA thick, dark elixir"
+msgstr "<link=\"INK\">魷魚墨汁</link>\n一種濃稠的深色靈藥"
 
 #. STRINGS.BUILDINGS.PREFABS.WATERCOOLER.OPTION_TOOLTIPS.MILK
 msgctxt "STRINGS.BUILDINGS.PREFABS.WATERCOOLER.OPTION_TOOLTIPS.MILK"
@@ -27892,8 +29002,8 @@ msgstr "法律信函"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC5_FRIDGENOTE.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FRIDGENOTE.BODY.CONTAINER1"
-msgid "pls stop stealing my Jell-O cups. I brought one for each day we're down here and there's only two of us aboard so it's not like I don't notice - thx\n\n<indent=15px>- F.</indent>p.s. the blue ones aren't even Jell-O"
-msgstr "別再偷我的果凍杯了，拜託。我為這趟下潛的每一天都帶了一個，船上就我們兩個人，我又不是不會發現——謝啦。\n\n<indent=15px>- F.</indent>附註：藍色的那個根本不是果凍。"
+msgid "pls stop stealing my Jell-O cups. I brought one for each day we're down here and there's only two of us aboard so it's not like I don't notice - thx\n\np.s. the blue ones aren't even Jell-O"
+msgstr "別再偷我的果凍杯了，拜託。我為這趟下潛的每一天都帶了一個，船上就我們兩個人，我又不是不會發現——謝啦。\n\附註：藍色的那個根本不是果凍。"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC5_FRIDGENOTE.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FRIDGENOTE.SUBTITLE"
@@ -27907,8 +29017,8 @@ msgstr "冰箱便條"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC5_HOAX.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_HOAX.BODY.CONTAINER1"
-msgid "Acclaimed alumnae of Elion University of Science and Technology are speaking out against academic malfeasance in the world of theoretical physics.\n\nJackie Stern and Olivia Broussard, co-valedictorians of last year's graduating class, recently revealed that one of the articles they co-authored under Dr. Emil Schleichen's supervision was, in fact, a demonstrative scholarly hoax. The two women are accusing Dr. Guttenberg of building his career on ideas plagiarized from his PhD students.\n\n\"Professors like him claim to be passionate about innovation,\" Stern declared, in a recording sent to more than a dozen scientific media outlets. \"Yet they make it impossible for others to establish their own reputations and access funding for the research projects that could hold the answer to humanity's survival.\"\n\nStern and Broussard also denounced the lack of critical lens applied to papers attached to such notable names as Dr. Schleichen's. \"We intentionally featured several debunked scientific theories, none of which the editors questioned,\" says Broussard.\n\nEditors of <i>The Journal of Theoretical Physics</i> did not respond to our requests for comment.\n\nDr. Schleichen has also declined to be interviewed, though the Dean of EUST published a formal statement indicating that Dr. Schleichen is currently on paid leave while the administration investigates the matter.\n\nEUST also indicated that Stern and Broussard may face repercussions for publicly undermining the university's reputation."
-msgstr "埃利昂科技大學（EUST）的知名校友正公開聲討理論物理學界的學術不端行為。\n\nJackie Stern 與 Olivia Broussard，即去年畢業班的並列畢業生代表，近日披露她們在 Emil Schleichen 博士指導下合著的一篇論文，實際上是一場示範性的學術騙局。兩人指控 Guttenberg 博士的學術生涯建立在剽竊其博士生創意的基礎上。\n\n「像他這樣的教授嘴上說著熱衷於創新，」Stern 在一段傳送給十餘家科學媒體的錄音中表示，「卻讓其他人幾乎無法建立自己的學術聲譽，也無法為那些可能關係到人類存續的研究專案爭取資助。」\n\nStern 與 Broussard 同樣譴責了對某些掛名論文缺乏批判性審視的現狀，諸如 Schleichen 博士這類知名學者名下的文章亦不例外。「我們刻意在論文中安插了多項早已被證偽的科學理論，編輯們對此卻無一提出質疑，」Broussard 表示。\n\n<i>《理論物理期刊》</i> 的編輯未回應置評請求。\n\nSchleichen 博士同樣拒絕了採訪，不過 EUST 的教務長發表了一份正式聲明，稱 Schleichen 博士目前正處於帶薪休假狀態，校方正在對此事進行調查。\n\nEUST 亦表示，Stern 與 Broussard 或因公開損害大學聲譽而面臨後續處分。"
+msgid "Acclaimed alumnae of Elion University of Science and Technology are speaking out against academic malfeasance in the world of theoretical physics.\n\nJackie Stern and Olivia Broussard, co-valedictorians of last year's graduating class, recently revealed that one of the articles they co-authored under Dr. Emil Schleichen's supervision was, in fact, a demonstrative scholarly hoax. The two women are accusing Dr. Schleichen of building his career on ideas plagiarized from his PhD students.\n\n\"Professors like him claim to be passionate about innovation,\" Stern declared, in a recording sent to more than a dozen scientific media outlets. \"Yet they make it impossible for others to establish their own reputations and access funding for the research projects that could hold the answer to humanity's survival.\"\n\nStern and Broussard also denounced the lack of critical lens applied to papers attached to such notable names as Dr. Schleichen's. \"We intentionally featured several debunked scientific theories, none of which the editors questioned,\" says Broussard.\n\nEditors of <i>The Journal of Theoretical Physics</i> did not respond to our requests for comment.\n\nDr. Schleichen has also declined to be interviewed, though the Dean of EUST published a formal statement indicating that Dr. Schleichen is currently on paid leave while the administration investigates the matter.\n\nEUST also indicated that Stern and Broussard may face repercussions for publicly undermining the university's reputation."
+msgstr "埃利昂科技大學的知名女校友正起而反對理論物理學界的學術不端行為。\n\nJackie Stern 與 Olivia Broussard 作為去年畢業班的並列畢業生代表，近日披露她們在 Emil Schleichen 博士指導下合著的一篇論文，實際上是一場示範性的學術騙局。這兩位女性指控 Schleichen 博士的學術生涯完全是建立在剽竊其博士生創意的基礎上。\n\n「像他這樣的教授嘴上說著熱衷於創新，」 Stern 在一段傳送給十餘家科學媒體的錄音中表示。「卻讓其他人無法建立自己的學術聲譽，也無法為那些可能關係到人類存續的研究專案爭取資助。」\n\nStern 與 Olivia Broussard 同樣譴責了對掛名如 Schleichen 博士這種知名學者名下的論文缺乏批判性審視的現狀。「我們刻意在論文中安插了多項早已被證偽的科學理論，編輯們對此卻無一提出質疑，」 Broussard 表示。\n\n<i>《理論物理學期刊》</i> 的編輯未回應置評請求。\n\nSchleichen 博士同樣拒絕了採訪，不過 EUST 的院長發表了一份正式聲明，指出 Schleichen 博士目前正處於帶薪休假狀態，校方行政部門正在對此事進行調查。\n\nEUST 亦表示，Stern 與 Broussard 或因公開損害大學聲譽而面臨後續處分。"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC5_HOAX.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_HOAX.SUBTITLE"
@@ -27937,8 +29047,8 @@ msgstr "有用異常"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC5_RESEARCHPORTAL.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_RESEARCHPORTAL.BODY.CONTAINER1"
-msgid "Got a quick draft done - let me know what you think. Feels like we're getting way ahead of ourselves, tbh.\n\n- E\n\n----------------------\n\n<b>WIP DRAFT:</b>\n\nIn the extremely unlikely event that this emergency is a direct result of Gravitas equipment malfunction, please contact your resettlement agent.\n\nThey will review the situation and recommend a course of action custom-designed to suit your unique needs. This process may take up to four business days.\n\nOur office is open 24/7, 364 days a year. We are closed from 00:01 to 23:59 CEST on November 7 every year.\n\nBest wishes!\n\n<indent=5%><smallcaps>- Catalina Rosado\n  Gravitas Resettlement Manager</smallcaps></indent>\n\n----------------------\n\n"
-msgstr "快速擬了個初稿——你們看看怎麼樣。老實說，感覺我們有點操之過急了。\n\n- E\n\n----------------------\n\n<b>初稿：</b>\n\n在極不可能的情況下，若此緊急事件是因引力科技設備故障所直接導致，請聯繫您的安置專員。\n\n他們將評估具體情況，並為您量身規劃行動方案。此流程最多可能需要四個工作日。\n\n我們的辦公室全年 364 天、全天 24 小時開放。我們於每年 11 月 7 日的 CEST 00:01 至 23:59 休息。\n\n祝好！\n\n<indent=5%><smallcaps>- Catalina Rosado\n  引力科技安置經理</smallcaps></indent>"
+msgid "Got a quick draft done - let me know what you think. Feels like we're getting way ahead of ourselves.\n\n- E\n\n----------------------\n\n<b>WIP DRAFT:</b>\n\nIn the extremely unlikely event that this emergency is a direct result of Gravitas equipment malfunction, please contact your resettlement agent.\n\nThey will review the situation and recommend a course of action custom-designed to suit your unique needs. This process may take up to four business days.\n\nOur office is open 24/7, 364 days a year. We are closed from 00:01 to 23:59 CEST on November 7 every year.\n\nBest wishes!\n\n<indent=5%><smallcaps>- Catalina Rosado\n  Gravitas Resettlement Manager</smallcaps></indent>\n\n----------------------\n\n"
+msgstr "快速擬了個初稿——你們看看怎麼樣。老實說，感覺我們有點操之過急了。\n\n- E\n\n----------------------\n\n<b>初稿：</b>\n\n在極不可能的情況下，若此緊急事件是因引力科技設備故障所直接導致，請聯繫您的安置專員。\n\n他們將評估具體情況，並為您量身規劃行動方案。此流程最多可能需要四個工作日。\n\n我們的辦公室全年 364 天、全天 24 小時開放。我們於每年 11 月 7 日的 CEST 00:01 至 23:59 休息。\n\n祝好！\n\n<indent=5%><smallcaps>- Catalina Rosado\n  引力科技安置經理</smallcaps></indent>\n\n----------------------\n\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC5_RESEARCHPORTAL.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_RESEARCHPORTAL.SUBTITLE"
@@ -28877,8 +29987,8 @@ msgstr "查無資料"
 
 #. STRINGS.CODEX.PARROTFISH.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.PARROTFISH.BODY.CONTAINER1"
-msgid "Beakons are highly sought-after by ichthyophiles due to their flamboyant coloring and unusually intense bioluminescence.\n\nThese lampshade-gilled critters have a symbiotic relationship with <link=\"OXYCORAL\">Flue Coral</link>, which provides both habitat and nutrition in return for fertilization. Some <link=\"PARROTFISHSPECIES\">Beakons</link> have even been known to nap atop their preferred coral formation. Such sightings are extremely rare."
-msgstr "燈喙魚因其豔麗的色彩與異常強烈的生物發光能力，深受魚類愛好者的追捧。\n\n這些長著燈罩狀鰓的生物與<link=\"OXYCORAL\">煙囪珊瑚</link>存在共生關係，珊瑚為其提供棲息地與食物，作為回報，燈喙魚則提供施肥作用。據說，一些<link=\"PARROTFISHSPECIES\">燈喙魚</link>甚至會選擇在它們鍾情的珊瑚頂端小憩；這種景象極為罕見。"
+msgid "Beakons are highly sought-after by ichthyophiles due to their radiant bioluminescence and unusual habit of surfacing for <link=\"OXYGEN\">Oxygen</link>.\n\nThese brilliant critters enjoy the tickle of air in their gills, and are happiest cohabiting with bubbly <link=\"OXYCORAL\">Flue Coral</link> that provide abundant air pockets for their entertainment.\n\nSome <link=\"PARROTFISHSPECIES\">Beakons</link> have even been known to nap atop their preferred coral formation. Such sightings are extremely rare."
+msgstr "燈喙魚因其耀眼的生物發光，以及會浮出水面吸取<link=\"OXYGEN\">氧</link>的奇特習性，深受魚類愛好者追捧。\n\n這些光彩奪目的小動物喜歡空氣在鰓中發癢的感覺，且最喜歡與能提供豐富氣泡供其玩耍的<link=\"OXYCORAL\">煙囪珊瑚</link>同居。\n\n據說有些<link=\"PARROTFISHSPECIES\">燈喙魚</link>甚至會在牠們鍾愛的珊瑚礁頂端小憩。這種景象極為罕見"
 
 #. STRINGS.CODEX.PARROTFISH.SPECIES_SUBTITLE
 msgctxt "STRINGS.CODEX.PARROTFISH.SPECIES_SUBTITLE"
@@ -28968,7 +30078,7 @@ msgstr "溫和發光蟲"
 #. STRINGS.CODEX.PLANETARYECHOES.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.PLANETARYECHOES.BODY.CONTAINER1"
 msgid "Olivia: We've double-checked our observational equipment and the computer's warm-up is almost finished. We have precautionary personnel in place ready to start a shutdown in the event of a failure.\n\nOlivia: It's time.\n\nJackie: Right.\n\nJackie: Spin the machine up slowly so we can monitor for any abnormal power fluctuations. We start on \"3\".\n\nJackie: \"1\"... \"2\"...\n\nJackie: \"3\".\n\n[There's a metallic clunk. The baritone whirr of machinery can be heard.]\n\nJackie: Something's not right.\n\nOlivia: It's the container... the atom is vibrating too fast.\n\n[The whir of the machinery peels up an octave into a mechanical screech.]\n\nOlivia: W-we have to abort!\n\nJackie: No, not yet. Drop power from the coolant system and use it to bolster the container. It'll stabilize.\n\nOlivia: But without coolant--\n\nJackie: It will stabilize!\n\n[There's a sharp crackle of electricity.]\n\nOlivia: Drop 40% power from the coolant systems, reroute everything we have to the atomic container! \n\n[The whirring reaches a crescendo, then calms into a steady hum.]\n\nOlivia: That did it. The container is stabilizing.\n\n[Jackie sighs in relief.]\n\nOlivia: But... Look at these numbers.\n\nJackie: My god. Are these real?\n\nOlivia: Yes, I'm certain of it. Jackie, I think we did it.\n\nOlivia: I think we created an infinite energy source.\n------------------\n"
-msgstr "Olivia：我們仔細檢查了觀測設備，電腦也即將暖好機了。我們的預防人員隨時待命，在發生故障時可以關機。\n\nOlivia：是時候了。\n\nJackie：對的。\n\nJackie：慢慢的起動機器，我們可以監控任何異常的能源波動。我們數到 \"3\"。\n\nJackie：「1」…「2」…\n\nJackie：「3」。\n\n[有個金屬塊。可以聽到機械聲響。]\n\nJackie：有點不對勁。\n\nOlivia：是容器…原子的振動太快。\n\n[機器的運作聲突然高了八度變得尖銳。]\n\nOlivia：我們必須關掉！\n\nJackie：不要，再等等。降低冷卻系統的功率，將能源用來支撐容器。它會穩定下來的。\n\nOlivia：但是沒有冷卻系統的話ーー\n\nJackie：它會穩定的！\n\n[刺耳的電流聲。]\n\nOlivia：將冷卻系統功率降低 40%，所有的能源輸向原子容器！\n\n[嗡嗡聲漸漸變強，接著慢慢穩定下來。]\n\nOlivia：做到了。容器目前很穩定。\n\n[Jackie 鬆了一個氣。]\n\nOlivia：不過…看看這些數據。\n\nJackie：天啊。真的嗎？\n\nOlivia：是的，我確定。Jackie，我想我們做到了。\n\nOlivia：我想我們創造了一種無限的能源。\n------------------\n"
+msgstr "Olivia：我們仔細檢查了觀測設備，電腦也即將暖好機了。我們的預防人員隨時待命，在發生故障時可以關機。\n\nOlivia：是時候了。\n\nJackie：對的。\n\nJackie：慢慢的起動機器，我們可以監控任何異常的能源波動。我們數到 「3」。\n\nJackie：「1」…「2」…\n\nJackie：「3」。\n\n[有個金屬塊。可以聽到機械聲響。]\n\nJackie：有點不對勁。\n\nOlivia：是容器…原子的振動太快。\n\n[機器的運作聲突然高了八度變得尖銳。]\n\nOlivia：我們必須關掉！\n\nJackie：不要，再等等。降低冷卻系統的功率，將能源用來支撐容器。它會穩定下來的。\n\nOlivia：但是沒有冷卻系統的話ーー\n\nJackie：它會穩定的！\n\n[刺耳的電流聲。]\n\nOlivia：將冷卻系統功率降低 40%，所有的能源輸向原子容器！\n\n[嗡嗡聲漸漸變強，接著慢慢穩定下來。]\n\nOlivia：做到了。容器目前很穩定。\n\n[Jackie 鬆了一個氣。]\n\nOlivia：不過…看看這些數據。\n\nJackie：天啊。真的嗎？\n\nOlivia：是的，我確定。Jackie，我想我們做到了。\n\nOlivia：我想我們創造了一種無限的能源。\n------------------\n"
 
 #. STRINGS.CODEX.PLANETARYECHOES.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.PLANETARYECHOES.BODY.CONTAINER2"
@@ -29785,6 +30895,26 @@ msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.INDUSTRIALMACHINERY.TITLE"
 msgid "Industrial Machinery"
 msgstr "工業機械"
 
+#. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.KITCHENREFRIGERATOR.DESCRIPTION
+msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.KITCHENREFRIGERATOR.DESCRIPTION"
+msgid "Buildings that store perishable <link=\"FOOD\">Food</link> items at <link=\"HEAT\">temperatures</link> that to prevent spoilage."
+msgstr "可在防止變質的<link=\"HEAT\">溫度</link>下，用來儲存易腐敗<link=\"FOOD\">食物</link>品項的建築物。"
+
+#. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.KITCHENREFRIGERATOR.FLAVOUR
+msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.KITCHENREFRIGERATOR.FLAVOUR"
+msgid ""
+msgstr ""
+
+#. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.KITCHENREFRIGERATOR.ROOMSREQUIRING
+msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.KITCHENREFRIGERATOR.ROOMSREQUIRING"
+msgid "    • <link=\"ROOMSFOOD\">Kitchen</link>"
+msgstr "    • <link=\"ROOMSFOOD\">廚房</link>"
+
+#. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.KITCHENREFRIGERATOR.TITLE
+msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.KITCHENREFRIGERATOR.TITLE"
+msgid "Refrigerator"
+msgstr "冰箱"
+
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.LIGHTSOURCE.DESCRIPTION
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.LIGHTSOURCE.DESCRIPTION"
 msgid "Buildings that produce light, either by design or as a result of their primary operations."
@@ -29940,20 +31070,20 @@ msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SHARED.ROOMS_REQUIRED_LIST_TITLE"
 msgid "Required in:"
 msgstr "需要在："
 
-#. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUBMERSIBLE.DESCRIPTION
-msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUBMERSIBLE.DESCRIPTION"
+#. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUBMERGIBLE.DESCRIPTION
+msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUBMERGIBLE.DESCRIPTION"
 msgid "Buildings that can operate while submerged in liquid without becoming flooded."
-msgstr "被液體浸沒也能正常運作的建築。"
+msgstr "可在浸沒於液體中時運作，且不會進入淹沒狀態的建築物。"
 
-#. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUBMERSIBLE.FLAVOUR
-msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUBMERSIBLE.FLAVOUR"
+#. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUBMERGIBLE.FLAVOUR
+msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUBMERGIBLE.FLAVOUR"
 msgid ""
 msgstr ""
 
-#. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUBMERSIBLE.TITLE
-msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUBMERSIBLE.TITLE"
-msgid "<link=\"REQUIREMENTCLASSSUBMERSIBLE\">Submersible</link>"
-msgstr "<link=\"REQUIREMENTCLASSSUBMERSIBLE\">可潛水建築</link>"
+#. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUBMERGIBLE.TITLE
+msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUBMERGIBLE.TITLE"
+msgid "<link=\"REQUIREMENTCLASSSUBMERGIBLE\">Submergible</link>"
+msgstr "<link=\"REQUIREMENTCLASSSUBMERGIBLE\">可潛水</link>"
 
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.TOILETTYPE.DESCRIPTION
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.TOILETTYPE.DESCRIPTION"
@@ -32547,7 +33677,7 @@ msgstr "重連熱幫浦"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.ACTIVATEGEOTHERMALPLANT.BUTTONS.REPAIR_CONTROLLER_TOOLTIP
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.ACTIVATEGEOTHERMALPLANT.BUTTONS.REPAIR_CONTROLLER_TOOLTIP"
-msgid "Reconnect this building's  <style=\"KKeyword\">Steel</style> plumbing system to restore function"
+msgid "Reconnect this building's <style=\"KKeyword\">Steel</style> plumbing system to restore function"
 msgstr "重連這個建築的<style=\"KKeyword\">鋼</style>製管道系統以恢復功能"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.ACTIVATEGEOTHERMALPLANT.DESCRIPTION
@@ -32975,6 +34105,66 @@ msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FAILED_THIS_COLONY"
 msgid "The current colony cannot fulfill this Initiative"
 msgstr "這個殖民地無法完成這個目標"
 
+#. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_A
+msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_A"
+msgid "Delivered pearls to the survivor Duplicant"
+msgstr "已將珍珠運送給生還的複製人"
+
+#. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_A_HIDDEN
+msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_A_HIDDEN"
+msgid "Requirement will become visible once discovered"
+msgstr "發現後將顯示達成條件"
+
+#. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B
+msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B"
+msgid "Delivered sushi to the survivor Duplicant"
+msgstr "已將壽司運送給生還的複製人"
+
+#. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B_HIDDEN
+msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B_HIDDEN"
+msgid "Requirement will become visible once discovered"
+msgstr "發現後將顯示達成條件"
+
+#. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C
+msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C"
+msgid "Delivered squid ink to the survivor Duplicant"
+msgstr "已將魷魚墨汁運送給生還的複製人"
+
+#. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C_HIDDEN
+msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C_HIDDEN"
+msgid "Requirement will become visible once discovered"
+msgstr "發現後將顯示達成條件"
+
+#. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_A
+msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_A"
+msgid "Deliver {AMOUNT} Pearls"
+msgstr "運送 {AMOUNT} 顆珍珠"
+
+#. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_A_HIDDEN
+msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_A_HIDDEN"
+msgid "Unknown Requirement"
+msgstr "未知的需求"
+
+#. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_B
+msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_B"
+msgid "Deliver {AMOUNT} Sushi Rolls"
+msgstr "運送 {AMOUNT} 份壽司卷"
+
+#. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_B_HIDDEN
+msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_B_HIDDEN"
+msgid "Unknown Requirement"
+msgstr "未知的需求"
+
+#. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_C
+msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_C"
+msgid "Deliver {AMOUNT} Squid Ink"
+msgstr "運送 {AMOUNT} 份魷魚墨汁"
+
+#. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_C_HIDDEN
+msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_C_HIDDEN"
+msgid "Unknown Requirement"
+msgstr "未知的需求"
+
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.DESCRIPTION"
 msgid ""
@@ -32987,8 +34177,8 @@ msgstr "太棒了！我們已向這位倖存者證明，我們的殖民地值得
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.MESSAGE_TITLE
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.MESSAGE_TITLE"
-msgid "COMPLETED: WELCOME MINNOW"
-msgstr "已達成：歡迎 Minnow"
+msgid "IN GOOD COMPANY"
+msgstr "德不孤必有鄰"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.NAME
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.NAME"
@@ -33054,16 +34244,6 @@ msgstr "我的複製人在探索深淵生態域時發現了這位倖存者。她
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_C_TITLE"
 msgid "Recruit Survivor: {0}/{1}"
 msgstr "招募自由潛水員：{0}/{1}"
-
-#. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.REQUIREMENT_DESCRIPTION
-msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.REQUIREMENT_DESCRIPTION"
-msgid "Fulfilled Minnow's recruitment requests: {0}/{1}"
-msgstr "已完成 Minnow 的招募請求：{0}/{1}"
-
-#. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.REQUIREMENT_NAME
-msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.REQUIREMENT_NAME"
-msgid "Recruit Minnow"
-msgstr "招募 Minnow"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.MISC_REQUIREMENTS.AUTOMATE_A_BUILDING
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.MISC_REQUIREMENTS.AUTOMATE_A_BUILDING"
@@ -34675,16 +35855,6 @@ msgctxt "STRINGS.CREATURES.MODIFIERS.BUTTERFLYPOLLINATED.TOOLTIP"
 msgid "A <link=\"BUTTERFLY\">Mimika</link> visited this <style=\"KKeyword\">Plant</style>, boosting its growth"
 msgstr "一隻<link=\"BUTTERFLY\">擬葉蛾</link>照料了這株<style=\"KKeyword\">植物</style>，增強了其生長速度"
 
-#. STRINGS.CREATURES.MODIFIERS.CAVIAREXTRACTED.NAME
-msgctxt "STRINGS.CREATURES.MODIFIERS.CAVIAREXTRACTED.NAME"
-msgid "Caviar Extracted"
-msgstr "已提取魚子醬"
-
-#. STRINGS.CREATURES.MODIFIERS.CAVIAREXTRACTED.TOOLTIP
-msgctxt "STRINGS.CREATURES.MODIFIERS.CAVIAREXTRACTED.TOOLTIP"
-msgid "This critter recently visited the caviar extractor"
-msgstr "這隻小動物剛經過魚子醬提取器的處理"
-
 #. STRINGS.CREATURES.MODIFIERS.CRITTER_MOSQUITO_BITE.NAME
 msgctxt "STRINGS.CREATURES.MODIFIERS.CRITTER_MOSQUITO_BITE.NAME"
 msgid "Gnit Stung"
@@ -34867,7 +36037,7 @@ msgstr "補水：魷魚墨汁"
 
 #. STRINGS.CREATURES.MODIFIERS.HADINK.TOOLTIP
 msgctxt "STRINGS.CREATURES.MODIFIERS.HADINK.TOOLTIP"
-msgid "This critter recently drank <style=\"KKeyword\">Squid Ink</style>from a <style=\"KKeyword\">Critter Fountain</style>\n\nIt doesn't mind overcrowding quite as much right now"
+msgid "This critter recently drank <style=\"KKeyword\">Squid Ink</style> from a <style=\"KKeyword\">Critter Fountain</style>\n\nIt doesn't mind overcrowding quite as much right now"
 msgstr "這隻小動物最近從<style=\"KKeyword\">小動物飲水機</style>喝了<style=\"KKeyword\">魷魚墨汁</style>。\n\n目前對過度擁擠的忍受度提高了。"
 
 #. STRINGS.CREATURES.MODIFIERS.HADMILK.NAME
@@ -35222,7 +36392,7 @@ msgstr "剛剛吃過"
 
 #. STRINGS.CREATURES.MODIFIERS.SQUIDWELLFED.TOOLTIP
 msgctxt "STRINGS.CREATURES.MODIFIERS.SQUIDWELLFED.TOOLTIP"
-msgid "This critter's recent meal is boosting their  <style=\"KKeyword\">Ink</style>  production"
+msgid "This critter's recent meal is boosting their <style=\"KKeyword\">Ink</style> production"
 msgstr "這隻小動物最近的進食加速了其<style=\"KKeyword\">墨水</style>的生產。"
 
 #. STRINGS.CREATURES.MODIFIERS.SURFACEAIRCONSUMED.NAME
@@ -36447,8 +37617,8 @@ msgstr "一種水泉，會定期噴出從周遭環境抽取的高壓<link=\"ELEM
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.SMALLREEFGEYSER.LIQUID_CONSUMPTION
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.SMALLREEFGEYSER.LIQUID_CONSUMPTION"
-msgid "Draining {ElementTypes}: {FlowRate}"
-msgstr "排出{ElementTypes}：{FlowRate}"
+msgid "Consuming {ElementTypes}: {FlowRate}"
+msgstr "消耗{ElementTypes}：{FlowRate}"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.SMALLREEFGEYSER.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.SMALLREEFGEYSER.NAME"
@@ -36467,8 +37637,8 @@ msgstr "<link=\"GEYSERGENERICSTEAM\">低溫蒸氣噴口</link>"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.UNDERWATERVENT.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.UNDERWATERVENT.DESC"
-msgid "A subaquatic fissure that allows high-pressure <link=\"METHANE\">Natural Gas</link> to escape from the planet's crust."
-msgstr "一道水下裂縫，高壓的<link=\"METHANE\">天然氣</link>正從地殼中逸出。"
+msgid "A subaquatic fissure that allows high-pressure <link=\"METHANE\">Natural Gas</link> to escape from the planet's crust.\n\nBlockages caused by built-up <link=\"SULFUR\">Sulfur</link> can be removed using a <link=\"UNDERWATERVENTDRILL\">Marine Drill</link>."
+msgstr "一道水下裂縫，能讓高壓的<link=\"METHANE\">天然氣</link>從地殼中逸出。\n\n因<link=\"SULFUR\">硫</link>堆積而造成的阻塞，可以使用<link=\"UNDERWATERVENTDRILL\">海洋鑽機</link>來清除"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.UNDERWATERVENT.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.UNDERWATERVENT.NAME"
@@ -36813,7 +37983,7 @@ msgstr "<link=\"LIGHTBUG\">發光蟲寶寶</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.DESC"
 msgid "Shine Bugs emit a soft <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
-msgstr "發光蟲散發柔和的<link=\"LIGHT\">光</link>，希望藉此吸引更多同伴作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">敲蛋機</link> 上敲開後收穫。"
+msgstr "發光蟲散發柔和的<link=\"LIGHT\">光</link>，希望藉此吸引更多同伴作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link> 上敲開後收穫。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.EGG_NAME"
@@ -36838,7 +38008,7 @@ msgstr "<link=\"LIGHTBUGBLACK\">深淵發光蟲寶寶</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLACK.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLACK.DESC"
 msgid "This Shine Bug emits no <link=\"LIGHT\">Light</link>, but it makes up for it by having an excellent personality.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
-msgstr "這種發光蟲不會發出<link=\"LIGHT\">光</link>，但牠以優秀的個性來彌補這項不足。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">敲蛋機</link>上敲開後收穫。"
+msgstr "這種發光蟲不會發出<link=\"LIGHT\">光</link>，但牠以優秀的個性來彌補這項不足。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link>上敲開後收穫。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLACK.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLACK.EGG_NAME"
@@ -36863,7 +38033,7 @@ msgstr "<link=\"LIGHTBUGBLUE\">溫和發光蟲寶寶</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLUE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLUE.DESC"
 msgid "Azure Bugs emit a soft blue <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
-msgstr "溫和發光蟲會發出柔和的藍色<link=\"LIGHT\">光線</link>，藉此吸引更多同伴作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">敲蛋機</link>上敲開後收穫。"
+msgstr "溫和發光蟲會發出柔和的藍色<link=\"LIGHT\">光線</link>，藉此吸引更多同伴作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link>上敲開後收穫。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLUE.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLUE.EGG_NAME"
@@ -36888,7 +38058,7 @@ msgstr "<link=\"LIGHTBUGCRYSTAL\">水晶發光蟲寶寶</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_CRYSTAL.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_CRYSTAL.DESC"
 msgid "Radiant Bugs emit an extra-bright <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
-msgstr "水晶發光蟲會發出額外明亮的<link=\"LIGHT\">光線</link>，藉此吸引更多同伴作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">敲蛋機</link>上敲開後收穫。"
+msgstr "水晶發光蟲會發出額外明亮的<link=\"LIGHT\">光線</link>，藉此吸引更多同伴作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link>上敲開後收穫。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_CRYSTAL.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_CRYSTAL.EGG_NAME"
@@ -36913,7 +38083,7 @@ msgstr "<link=\"LIGHTBUGORANGE\">陽光發光蟲寶寶</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_ORANGE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_ORANGE.DESC"
 msgid "Sun Bugs emit a soft orange <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
-msgstr "陽光發光蟲會發出柔和的橘色<link=\"LIGHT\">光線</link>，藉此吸引更多同伴作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">敲蛋機</link>上敲開後收穫。"
+msgstr "陽光發光蟲會發出柔和的橘色<link=\"LIGHT\">光線</link>，藉此吸引更多同伴作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link>上敲開後收穫。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_ORANGE.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_ORANGE.EGG_NAME"
@@ -36938,7 +38108,7 @@ msgstr "<link=\"LIGHTBUGPINK\">活力發光蟲寶寶</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PINK.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PINK.DESC"
 msgid "Coral Bugs emit a soft pink <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
-msgstr "活力發光蟲會發出柔和的粉色<link=\"LIGHT\">光線</link>，藉此吸引更多同伴作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">敲蛋機</link>上敲開後收穫。"
+msgstr "活力發光蟲會發出柔和的粉色<link=\"LIGHT\">光線</link>，藉此吸引更多同伴作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link>上敲開後收穫。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PINK.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PINK.EGG_NAME"
@@ -36963,7 +38133,7 @@ msgstr "<link=\"LIGHTBUGPURPLE\">王室發光蟲寶寶</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PURPLE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PURPLE.DESC"
 msgid "Royal Bugs emit a soft purple <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
-msgstr "皇室發光蟲會發出柔和的紫色<link=\"LIGHT\">光線</link>，藉此吸引更多同伴作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">敲蛋機</link>上敲開後收穫。"
+msgstr "皇室發光蟲會發出柔和的紫色<link=\"LIGHT\">光線</link>，藉此吸引更多同伴作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link>上敲開後收穫。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PURPLE.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PURPLE.EGG_NAME"
@@ -37352,8 +38522,8 @@ msgstr "<link=\"PARROTFISH\">燈喙魚苗</link>"
 
 #. STRINGS.CREATURES.SPECIES.PARROTFISH.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.PARROTFISH.DESC"
-msgid "Beakons are attractive aquatic critters who live in warm liquid pools.\n\nThese bioluminescent fish feast on <link=\"PLANKTONCORAL\">Starnacle</link> and excrete <link=\"LIME\">Lime</link>."
-msgstr "燈喙魚是棲息於溫暖液體池中的迷人水生生物。\n\n這些發光魚類以<link=\"PLANKTONCORAL\">藤壺星</link>為食，並會排出<link=\"LIME\">石灰</link>。"
+msgid "Beakons are attractive aquatic critters who enjoy consuming <link=\"OXYGEN\">Oxygen</link>.\n\nThese bioluminescent fish feast on <link=\"PHOSPHORITE\">Phosphorite</link> and <link=\"PLANKTONCORAL\">Starnacle</link>, and excrete <link=\"LIME\">Lime</link>."
+msgstr "燈喙魚是迷人的水生小動物，喜歡吸取<link=\"OXYGEN\">氧</link>。\n\n這些發光魚類以<link=\"PHOSPHORITE\">磷礦</link>與<link=\"PLANKTONCORAL\">藤壺星</link>為食，並會排出<link=\"LIME\">石灰</link>。"
 
 #. STRINGS.CREATURES.SPECIES.PARROTFISH.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.PARROTFISH.EGG_NAME"
@@ -37987,8 +39157,8 @@ msgstr "<link=\"DEWPALM\">黏膠棕櫚</link>的<link=\"PLANTS\">種子</link>�
 
 #. STRINGS.CREATURES.SPECIES.SEEDS.DEWPALM.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.DEWPALM.NAME"
-msgid "<link=\"DEWPALMSEED\">Palm Seed</link>"
-msgstr "<link=\"DEWPALMSEED\">棕櫚種子</link>"
+msgid "<link=\"DEWPALMSEED\">Gum Palm Seed</link>"
+msgstr "<link=\"DEWPALMSEED\">黏膠棕櫚種子</link>"
 
 #. STRINGS.CREATURES.SPECIES.SEEDS.DINOFERN.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEEDS.DINOFERN.DESC"
@@ -38362,8 +39532,8 @@ msgstr "<link=\"SHOCKWORM\">電飛蟲</link>"
 
 #. STRINGS.CREATURES.SPECIES.SNAIL.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SNAIL.BABY.DESC"
-msgid "A very small and fragile Slogo Baby. It's body is still light enough where it does not need to produce Mucus for locomotion.\n\nEventually, it will mature into an adult <link=\"SNAIL\">Slogo</link>."
-msgstr "一隻極為嬌小脆弱的緩螺幼體。由於體重尚輕，它還不需要透過分泌黏液來輔助移動。\n\n隨著時間推移，牠將成長為<link=\"SNAIL\">緩螺</link>成體。"
+msgid "A tiny little Slogo Baby.\n\nEventually, it will mature into an adult <link=\"SNAIL\">Slogo</link>."
+msgstr "一隻小巧玲瓏的緩螺寶寶。\n\n隨著時間經過，牠會成長為一隻成年<link=\"SNAIL\">緩螺</link>。"
 
 #. STRINGS.CREATURES.SPECIES.SNAIL.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SNAIL.BABY.NAME"
@@ -38707,8 +39877,8 @@ msgstr "枯萎懲罰"
 
 #. STRINGS.CREATURES.SPECIES.TUBEWORM.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.TUBEWORM.DESC"
-msgid "Tublias are aquatic organisms that sprout in <link=\"TEMPERATURE\">Hot</link> liquid environments.\n\nThey can be harvested for <link=\"POLYPROPYLENE\">Plastic</link>."
-msgstr "暖管蟲是生長於<link=\"TEMPERATURE\">高溫</link>液體環境中的水生生物。\n\n採收後可獲得<link=\"POLYPROPYLENE\">塑膠</link>。"
+msgid "Tublias are aquatic organisms that sprout in <link=\"HEAT\">Hot</link> liquid environments.\n\nThey can be harvested for <link=\"POLYPROPYLENE\">Plastic</link>."
+msgstr "暖管蟲是生長於<link=\"HEAT\">高溫</link>液體環境中的水生生物。\n\n採收後可獲得<link=\"POLYPROPYLENE\">塑膠</link>。"
 
 #. STRINGS.CREATURES.SPECIES.TUBEWORM.DOMESTICATEDDESC
 msgctxt "STRINGS.CREATURES.SPECIES.TUBEWORM.DOMESTICATEDDESC"
@@ -38722,12 +39892,12 @@ msgstr "<link=\"TUBEWORM\">暖管蟲</link>"
 
 #. STRINGS.CREATURES.SPECIES.URCHINPLANT.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.URCHINPLANT.DESC"
-msgid "Pinpokets produce <link=\"SEAURCHIN\">Pinpoki</link>, which can be processed into <link=\"URCHINMEAT\">Uni</link> or <link=\"DIAMOND\">Diamond</link>."
+msgid "Pinpokets produce <link=\"URCHIN\">Pinpoki</link>, which can be processed into <link=\"URCHINMEAT\">Uni</link> or <link=\"DIAMOND\">Diamond</link>."
 msgstr "針膽團可產生<link=\"SEAURCHIN\">針膽</link>，後者可加工成<link=\"URCHINMEAT\">針膽黃</link>或<link=\"DIAMOND\">鑽石</link>。"
 
 #. STRINGS.CREATURES.SPECIES.URCHINPLANT.DOMESTICATEDDESC
 msgctxt "STRINGS.CREATURES.SPECIES.URCHINPLANT.DOMESTICATEDDESC"
-msgid "This organism produces edible <link=\"SEAURCHIN\">Pinpoki</link>."
+msgid "This organism produces edible <link=\"URCHIN\">Pinpoki</link>."
 msgstr "這種生物可產出可食用的<link=\"SEAURCHIN\">針膽</link>。"
 
 #. STRINGS.CREATURES.SPECIES.URCHINPLANT.NAME
@@ -39089,6 +40259,11 @@ msgstr "羽毛生長"
 msgctxt "STRINGS.CREATURES.STATS.SCALEGROWTH.FUR"
 msgid "Fur Growth"
 msgstr "皮毛生長"
+
+#. STRINGS.CREATURES.STATS.SCALEGROWTH.IRON
+msgctxt "STRINGS.CREATURES.STATS.SCALEGROWTH.IRON"
+msgid "Scale Growth"
+msgstr "鱗片生長"
 
 #. STRINGS.CREATURES.STATS.SCALEGROWTH.NAME
 msgctxt "STRINGS.CREATURES.STATS.SCALEGROWTH.NAME"
@@ -39517,13 +40692,13 @@ msgstr "所有的服從訓練都得到了回報"
 
 #. STRINGS.CREATURES.STATUSITEMS.DESICCATION.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.DESICCATION.NAME"
-msgid "Desiccating"
-msgstr "乾涸"
+msgid "Shriveling Up"
+msgstr "逐漸乾癟"
 
 #. STRINGS.CREATURES.STATUSITEMS.DESICCATION.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.DESICCATION.TOOLTIP"
-msgid "This critter is unable to moisturize itself and is drying up.\nSubmerge in any liquid to rejuvenate.\n\nDeath in {0}s"
-msgstr "該生物無法維持濕度，正在逐漸乾涸。\n浸沒於任何液體中即可恢復生機。\n\n將於 {0} 秒後死亡。"
+msgid "This critter is unable to maintain adequate <style=\"KKeyword\">Moisture</style>\n\nIt will die in {0} unless it is submerged in <style=\"KKeyword\">Liquid</style>"
+msgstr "這隻小動物無法維持充足的<style=\"KKeyword\">水分</style>\n\n除非將其浸沒在<style=\"KKeyword\">液體</style>中，否則將在 {0}後死亡"
 
 #. STRINGS.CREATURES.STATUSITEMS.DIGESTING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.DIGESTING.NAME"
@@ -40757,8 +41932,8 @@ msgstr "享受空氣"
 
 #. STRINGS.CREATURES.STATUSITEMS.SURFACE_AIR_CONSUMER_CONSUMING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.SURFACE_AIR_CONSUMER_CONSUMING.TOOLTIP"
-msgid "This critter is consuming <style=\"KKeyword\">Oxygen</style> at the surface of this pool"
-msgstr "這隻小動物正在水面消耗<style=\"KKeyword\">氧氣</style>"
+msgid "This critter is consuming <style=\"KKeyword\">Oxygen</style> at the surface of this pool\n\nWhat a delight"
+msgstr "這隻小動物正在水面吸取<style=\"KKeyword\">氧</style>\n\n真是享受"
 
 #. STRINGS.CREATURES.STATUSITEMS.SURFACE_AIR_CONSUMER_MOVING.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.SURFACE_AIR_CONSUMER_MOVING.NAME"
@@ -40767,8 +41942,8 @@ msgstr "游至水面"
 
 #. STRINGS.CREATURES.STATUSITEMS.SURFACE_AIR_CONSUMER_MOVING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.SURFACE_AIR_CONSUMER_MOVING.TOOLTIP"
-msgid "This critter is swimming toward the surface to find <style=\"KKeyword\">Oxygen</style>"
-msgstr "這隻小動物正遊向水面尋找<style=\"KKeyword\">氧氣</style>"
+msgid "This critter is swimming toward the surface to consume <style=\"KKeyword\">Oxygen</style> as a little treat"
+msgstr "這隻小動物正游向水面吸點<style=\"KKeyword\">氧</style>犒賞自己"
 
 #. STRINGS.CREATURES.STATUSITEMS.TEMPERATURE_COLD_DEADLY.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.TEMPERATURE_COLD_DEADLY.NAME"
@@ -49452,8 +50627,8 @@ msgstr "使複製人在液體環境中的移動更為熟練。"
 
 #. STRINGS.DUPLICANTS.ROLES.EXPERT_SWIMMER.NAME
 msgctxt "STRINGS.DUPLICANTS.ROLES.EXPERT_SWIMMER.NAME"
-msgid "<link=\"EXPERTSWIMMER\">Divemaster</link>"
-msgstr "<link=\"EXPERTSWIMMER\">潛水大師</link>"
+msgid "<link=\"SWIMMING2\">Divemaster</link>"
+msgstr "<link=\"SWIMMING2\">潛水大師</link>"
 
 #. STRINGS.DUPLICANTS.ROLES.FARMER.DESCRIPTION
 msgctxt "STRINGS.DUPLICANTS.ROLES.FARMER.DESCRIPTION"
@@ -49847,8 +51022,8 @@ msgstr "使複製人能夠安全地在液體環境中移動。"
 
 #. STRINGS.DUPLICANTS.ROLES.SWIMMER.NAME
 msgctxt "STRINGS.DUPLICANTS.ROLES.SWIMMER.NAME"
-msgid "<link=\"SWIMMER\">Basic Swimming</link>"
-msgstr "<link=\"SWIMMER\">基礎游泳</link>"
+msgid "<link=\"SWIMMING\">Basic Swimming</link>"
+msgstr "<link=\"SWIMMING\">基礎游泳</link>"
 
 #. STRINGS.DUPLICANTS.ROLES.USELESSSKILL.DESCRIPTION
 msgctxt "STRINGS.DUPLICANTS.ROLES.USELESSSKILL.DESCRIPTION"
@@ -53927,8 +55102,8 @@ msgstr "使複製人能夠安全地在液體環境中移動。"
 
 #. STRINGS.DUPLICANTS.TRAITS.GRANTSKILL_SWIMMING.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.GRANTSKILL_SWIMMING.NAME"
-msgid "Skilled: <link=\"SWIMMER\">Basic Swimming</link>"
-msgstr "掌握技能：<link=\"SWIMMER\">基礎游泳</link>"
+msgid "Skilled: <link=\"SWIMMING\">Basic Swimming</link>"
+msgstr "掌握技能：<link=\"SWIMMING\">基礎游泳</link>"
 
 #. STRINGS.DUPLICANTS.TRAITS.GRANTSKILL_SWIMMING.SHORT_DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.GRANTSKILL_SWIMMING.SHORT_DESC"
@@ -53947,8 +55122,8 @@ msgstr "使複製人在液體環境中的移動更為熟練。"
 
 #. STRINGS.DUPLICANTS.TRAITS.GRANTSKILL_SWIMMING2.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.GRANTSKILL_SWIMMING2.NAME"
-msgid "Skilled: <link=\"EXPERTSWIMMER\">Divemaster</link>"
-msgstr "掌握技能：<link=\"EXPERTSWIMMER\">潛水大師</link>"
+msgid "Skilled: <link=\"SWIMMING2\">Divemaster</link>"
+msgstr "掌握技能：<link=\"SWIMMING2\">潛水大師</link>"
 
 #. STRINGS.DUPLICANTS.TRAITS.GRANTSKILL_SWIMMING2.SHORT_DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.GRANTSKILL_SWIMMING2.SHORT_DESC"
@@ -55437,8 +56612,8 @@ msgstr "凝凍墨汁是一種凍結成<link=\"ELEMENTSSOLID\">固態</link>的<l
 
 #. STRINGS.ELEMENTS.FROZENINK.NAME
 msgctxt "STRINGS.ELEMENTS.FROZENINK.NAME"
-msgid "<link=\"FROZENINK\">Frozen Ink</link>"
-msgstr "<link=\"FROZENINK\">凝凍墨汁</link>"
+msgid "<link=\"FROZENINK\">Frozen Squid Ink</link>"
+msgstr "<link=\"FROZENINK\">凝凍魷魚墨汁</link>"
 
 #. STRINGS.ELEMENTS.FROZENPHYTOOIL.DESC
 msgctxt "STRINGS.ELEMENTS.FROZENPHYTOOIL.DESC"
@@ -55657,8 +56832,8 @@ msgstr "<link=\"IGNEOUSROCK\">火成岩</link>"
 
 #. STRINGS.ELEMENTS.INK.DESC
 msgctxt "STRINGS.ELEMENTS.INK.DESC"
-msgid "Squid Ink is a heavily pigmented organic <link=\"ELEMENTSLIQUID\">Liquid</link> composed of mucin, melanin, and <link=\"REFINEDCARBON\">Refined Carbon</link>.\n\nIt possesses useful <link=\"RADIATION\">Radiation</link> absorption properties."
-msgstr "魷魚墨汁是一種富含色素的有機<link=\"ELEMENTSLIQUID\">液體</link>，由粘蛋白、黑色素與<link=\"REFINEDCARBON\">精煉碳</link>組成。\n\n它具有極佳的<link=\"RADIATION\">輻射</link>吸收特性。"
+msgid "Squid Ink is a heavily pigmented organic <link=\"ELEMENTSLIQUID\">Liquid</link> composed of <link=\"MUCUS\">Mucin</link>, melanin, and <link=\"REFINEDCARBON\">Refined Carbon</link>.\n\nIt possesses useful <link=\"RADIATION\">Radiation</link> absorption properties."
+msgstr "魷魚墨汁是一種富含色素的有機<link=\"ELEMENTSLIQUID\">液體</link>，由<link=\"MUCUS\">黏蛋白</link>、黑色素與<link=\"REFINEDCARBON\">精製炭</link>組成。\n\n它具有實用的<link=\"RADIATION\">輻射</link>吸收特性。"
 
 #. STRINGS.ELEMENTS.INK.NAME
 msgctxt "STRINGS.ELEMENTS.INK.NAME"
@@ -56087,7 +57262,7 @@ msgstr "<link=\"MOLTENGOLD\">金</link>"
 
 #. STRINGS.ELEMENTS.MOLTENIRIDIUM.DESC
 msgctxt "STRINGS.ELEMENTS.MOLTENIRIDIUM.DESC"
-msgid "(Ir) Molten Iridium is a highly conductive <link=\"METAL\">Metal</link> heated to a <link=\"ELEMENTSLIQUID\">Liquid</link>  state."
+msgid "(Ir) Molten Iridium is a highly conductive <link=\"METAL\">Metal</link> heated to a <link=\"ELEMENTSLIQUID\">Liquid</link> state."
 msgstr "(Ir) 熔融銥是一種高導電性的<link=\"METAL\">金屬</link>，被加熱至<link=\"ELEMENTSLIQUID\">液體</link>狀態。"
 
 #. STRINGS.ELEMENTS.MOLTENIRIDIUM.NAME
@@ -56207,8 +57382,8 @@ msgstr "<link=\"MOLTENURANIUM\">鈾</link>"
 
 #. STRINGS.ELEMENTS.MOLTENZINC.DESC
 msgctxt "STRINGS.ELEMENTS.MOLTENZINC.DESC"
-msgid "Molten Zinc is <link=\"ZINC\">Zinc</link> heated into  <link=\"ELEMENTSLIQUID\">Liquid</link> state."
-msgstr "熔融鋅是一種被加熱成<link=\"ELEMENTSLIQUID\">液態</link>的<link=\"ZINC\">鋅</link>。"
+msgid "Molten Zinc is <link=\"ZINC\">Zinc</link> heated into <link=\"ELEMENTSLIQUID\">Liquid</link> state."
+msgstr "熔融鋅是一種被加熱成<link=\"ELEMENTSLIQUID\">液體</link>狀態的<link=\"ZINC\">鋅</link>。"
 
 #. STRINGS.ELEMENTS.MOLTENZINC.NAME
 msgctxt "STRINGS.ELEMENTS.MOLTENZINC.NAME"
@@ -56217,8 +57392,8 @@ msgstr "<link=\"MOLTENZINC\">鋅</link>"
 
 #. STRINGS.ELEMENTS.MUCUS.DESC
 msgctxt "STRINGS.ELEMENTS.MUCUS.DESC"
-msgid "Mucin is a highly viscous <link=\"ELEMENTSLIQUID\">Liquid</link> gel primarily composed of natural enzymes and polysaccharides.\n\nIt's quite slippery."
-msgstr "黏蛋白是一種高黏度的<link=\"ELEMENTSLIQUID\">液體</link>凝膠，主要由天然酶與多糖組成。\n\n具有極佳的潤滑性。"
+msgid "Mucin is an extremely viscous <link=\"ELEMENTSLIQUID\">Liquid</link> gel composed of natural enzymes and polysaccharides.\n\nIts unusually thick consistency can result in formations atypical of most liquids."
+msgstr "黏蛋白是一種高黏度的<link=\"ELEMENTSLIQUID\">液體</link>凝膠，主要由天然酶與多醣組成。\n\n其異常濃稠的稠度，可能會導致形成不同於大多數液體的型態"
 
 #. STRINGS.ELEMENTS.MUCUS.NAME
 msgctxt "STRINGS.ELEMENTS.MUCUS.NAME"
@@ -64387,8 +65562,8 @@ msgstr "一種由<link=\"CRAFTINGTABLE\">工藝台</link>製作，具備彈性�
 
 #. STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.PLASTIC_GASKET.NAME
 msgctxt "STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.PLASTIC_GASKET.NAME"
-msgid "<link=\"BUILDINGGASKET\">Plastic Gasket</link>"
-msgstr "<link=\"BUILDINGGASKET\">塑膠密封墊</link>"
+msgid "<link=\"PLASTICGASKET\">Plastic Gasket</link>"
+msgstr "<link=\"PLASTICGASKET\">塑膠密封墊</link>"
 
 #. STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.POWER_STATION_TOOLS.DESC
 msgctxt "STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.POWER_STATION_TOOLS.DESC"
@@ -64457,8 +65632,8 @@ msgstr "一種由<link=\"CRAFTINGTABLE\">工藝台</link>製作，具備彈性�
 
 #. STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.RUBBER_GASKET.NAME
 msgctxt "STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.RUBBER_GASKET.NAME"
-msgid "<link=\"BUILDINGGASKET\">Rubber Gasket</link>"
-msgstr "<link=\"BUILDINGGASKET\">橡膠密封墊</link>"
+msgid "<link=\"RUBBERGASKET\">Rubber Gasket</link>"
+msgstr "<link=\"RUBBERGASKET\">橡膠密封墊</link>"
 
 #. STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.SNAIL_IRON_SHELL.DESC
 msgctxt "STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.SNAIL_IRON_SHELL.DESC"
@@ -67077,13 +68252,13 @@ msgstr "此間歇泉被堆積的<style=\"KKeyword\">硫</style>所阻塞。\n\n�
 
 #. STRINGS.MISC.STATUSITEMS.UNDERWATERVENTBUILDUPPROGRESS.NAME
 msgctxt "STRINGS.MISC.STATUSITEMS.UNDERWATERVENTBUILDUPPROGRESS.NAME"
-msgid "Debris build-up: {PERCENTAGE}"
-msgstr "雜質堆積：{PERCENTAGE}"
+msgid "Sulfur build-up: {PERCENTAGE}"
+msgstr "硫堆積：{PERCENTAGE}"
 
 #. STRINGS.MISC.STATUSITEMS.UNDERWATERVENTBUILDUPPROGRESS.TOOLTIP
 msgctxt "STRINGS.MISC.STATUSITEMS.UNDERWATERVENTBUILDUPPROGRESS.TOOLTIP"
-msgid "This geyser will become blocked when debris build-up reaches 100%\n\nIt can be unblocked by building a <style=\"KKeyword\">Marine Drill</style> on top of the vent"
-msgstr "當雜質堆積達到 100% 時，此間歇泉將會阻塞。\n\n可在噴孔上方建造<style=\"KKeyword\">海洋鑽機</style>以進行疏通。"
+msgid "This geyser will become blocked when <style=\"KKeyword\">Sulfur</style> build-up reaches 100%\n\nIt can be unblocked by building a <style=\"KKeyword\">Marine Drill</style> on top of the vent"
+msgstr "當<style=\"KKeyword\">硫</style>堆積達到 100% 時，此間歇泉將會阻塞\n\n可在噴孔上方建造<style=\"KKeyword\">海洋鑽機</style>以進行疏通"
 
 #. STRINGS.MISC.STATUSITEMS.UNDERWATERVENTEMITING.NAME
 msgctxt "STRINGS.MISC.STATUSITEMS.UNDERWATERVENTEMITING.NAME"
@@ -70023,7 +71198,7 @@ msgstr "「老闆」"
 #. STRINGS.NAMEGEN.DUPLICANT.SUFFIX.FEMALE.THE_DUDETTE
 msgctxt "STRINGS.NAMEGEN.DUPLICANT.SUFFIX.FEMALE.THE_DUDETTE"
 msgid "\"The Dudette\""
-msgstr "\"The Dudette\""
+msgstr "「窈窕佳人」"
 
 #. STRINGS.NAMEGEN.DUPLICANT.SUFFIX.MALE.THE_COMPANY_MAN
 msgctxt "STRINGS.NAMEGEN.DUPLICANT.SUFFIX.MALE.THE_COMPANY_MAN"
@@ -70033,7 +71208,7 @@ msgstr "「公司人」"
 #. STRINGS.NAMEGEN.DUPLICANT.SUFFIX.MALE.THE_DUDE
 msgctxt "STRINGS.NAMEGEN.DUPLICANT.SUFFIX.MALE.THE_DUDE"
 msgid "\"The Dude\""
-msgstr "\"The Dude\""
+msgstr "「花花公子」"
 
 #. STRINGS.NAMEGEN.DUPLICANT.SUFFIX.NB.ESQ
 msgctxt "STRINGS.NAMEGEN.DUPLICANT.SUFFIX.NB.ESQ"
@@ -73160,6 +74335,21 @@ msgctxt "STRINGS.ROOMS.CRITERIA.IS_BACKWALLED.NAME"
 msgid "Has backwall tiles"
 msgstr "存在背牆磚"
 
+#. STRINGS.ROOMS.CRITERIA.KITCHENREFRIGERATOR.CONFLICT_DESCRIPTION
+msgctxt "STRINGS.ROOMS.CRITERIA.KITCHENREFRIGERATOR.CONFLICT_DESCRIPTION"
+msgid "<link=\"KITCHENREFRIGERATOR\">Refrigerator</link>"
+msgstr "<link=\"KITCHENREFRIGERATOR\">冰箱</link>"
+
+#. STRINGS.ROOMS.CRITERIA.KITCHENREFRIGERATOR.DESCRIPTION
+msgctxt "STRINGS.ROOMS.CRITERIA.KITCHENREFRIGERATOR.DESCRIPTION"
+msgid "Requires a single Refrigerator or Mini Fridge"
+msgstr "需要一台冰箱或小型冰箱"
+
+#. STRINGS.ROOMS.CRITERIA.KITCHENREFRIGERATOR.NAME
+msgctxt "STRINGS.ROOMS.CRITERIA.KITCHENREFRIGERATOR.NAME"
+msgid "<link=\"KITCHENREFRIGERATOR\">Refrigerator</link>"
+msgstr "<link=\"KITCHENREFRIGERATOR\">冰箱</link>"
+
 #. STRINGS.ROOMS.CRITERIA.LIGHTDUTYGENERATORTYPE.CONFLICT_DESCRIPTION
 msgctxt "STRINGS.ROOMS.CRITERIA.LIGHTDUTYGENERATORTYPE.CONFLICT_DESCRIPTION"
 msgid "<link=\"REQUIREMENTCLASSGENERATORTYPE\">Basic generator</link>"
@@ -73490,21 +74680,6 @@ msgctxt "STRINGS.ROOMS.CRITERIA.RECBUILDING.NAME"
 msgid "<link=\"REQUIREMENTCLASSRECBUILDING\">Recreational building</link>"
 msgstr "<link=\"REQUIREMENTCLASSRECBUILDING\">娛樂建築</link>"
 
-#. STRINGS.ROOMS.CRITERIA.REFRIGERATOR.CONFLICT_DESCRIPTION
-msgctxt "STRINGS.ROOMS.CRITERIA.REFRIGERATOR.CONFLICT_DESCRIPTION"
-msgid "<link=\"REFRIGERATOR\">Refrigerator</link>"
-msgstr "<link=\"REFRIGERATOR\">冰箱</link>"
-
-#. STRINGS.ROOMS.CRITERIA.REFRIGERATOR.DESCRIPTION
-msgctxt "STRINGS.ROOMS.CRITERIA.REFRIGERATOR.DESCRIPTION"
-msgid "Requires a single Refrigerator"
-msgstr "需要一個冰箱"
-
-#. STRINGS.ROOMS.CRITERIA.REFRIGERATOR.NAME
-msgctxt "STRINGS.ROOMS.CRITERIA.REFRIGERATOR.NAME"
-msgid "<link=\"REFRIGERATOR\">Refrigerator</link>"
-msgstr "<link=\"REFRIGERATOR\">冰箱</link>"
-
 #. STRINGS.ROOMS.CRITERIA.RESEARCH_STATION.CONFLICT_DESCRIPTION
 msgctxt "STRINGS.ROOMS.CRITERIA.RESEARCH_STATION.CONFLICT_DESCRIPTION"
 msgid "<link=\"REQUIREMENTCLASSRESEARCHSTATION\">Research station</link>"
@@ -73580,20 +74755,20 @@ msgctxt "STRINGS.ROOMS.CRITERIA.SPICESTATION.NAME"
 msgid "<link=\"SPICEGRINDER\">Spice Grinder</link>"
 msgstr "<link=\"SPICEGRINDER\">香料研磨器</link>"
 
-#. STRINGS.ROOMS.CRITERIA.SUBMERSIBLE.CONFLICT_DESCRIPTION
-msgctxt "STRINGS.ROOMS.CRITERIA.SUBMERSIBLE.CONFLICT_DESCRIPTION"
-msgid "<link=\"REQUIREMENTCLASSSUBMERSIBLE\">Submersible</link>"
-msgstr "<link=\"REQUIREMENTCLASSSUBMERSIBLE\">可潛水建築</link>"
+#. STRINGS.ROOMS.CRITERIA.SUBMERGIBLE.CONFLICT_DESCRIPTION
+msgctxt "STRINGS.ROOMS.CRITERIA.SUBMERGIBLE.CONFLICT_DESCRIPTION"
+msgid "<link=\"REQUIREMENTCLASSSUBMERGIBLE\">Submergible</link>"
+msgstr "<link=\"REQUIREMENTCLASSSUBMERGIBLE\">可潛水</link>"
 
-#. STRINGS.ROOMS.CRITERIA.SUBMERSIBLE.DESCRIPTION
-msgctxt "STRINGS.ROOMS.CRITERIA.SUBMERSIBLE.DESCRIPTION"
+#. STRINGS.ROOMS.CRITERIA.SUBMERGIBLE.DESCRIPTION
+msgctxt "STRINGS.ROOMS.CRITERIA.SUBMERGIBLE.DESCRIPTION"
 msgid "Can operate while submerged in liquid"
-msgstr "浸沒在液體中時也可操作"
+msgstr "淹沒於液體中時仍可運作"
 
-#. STRINGS.ROOMS.CRITERIA.SUBMERSIBLE.NAME
-msgctxt "STRINGS.ROOMS.CRITERIA.SUBMERSIBLE.NAME"
-msgid "<link=\"REQUIREMENTCLASSSUBMERSIBLE\">Submersible</link>"
-msgstr "<link=\"REQUIREMENTCLASSSUBMERSIBLE\">可潛水建築</link>"
+#. STRINGS.ROOMS.CRITERIA.SUBMERGIBLE.NAME
+msgctxt "STRINGS.ROOMS.CRITERIA.SUBMERGIBLE.NAME"
+msgid "<link=\"REQUIREMENTCLASSSUBMERGIBLE\">Submergible</link>"
+msgstr "<link=\"REQUIREMENTCLASSSUBMERGIBLE\">可潛水</link>"
 
 #. STRINGS.ROOMS.CRITERIA.TOILETTYPE.CONFLICT_DESCRIPTION
 msgctxt "STRINGS.ROOMS.CRITERIA.TOILETTYPE.CONFLICT_DESCRIPTION"
@@ -74527,8 +75702,8 @@ msgstr "深淵生態"
 
 #. STRINGS.SUBWORLDS.ABYSS.UTILITY
 msgctxt "STRINGS.SUBWORLDS.ABYSS.UTILITY"
-msgid "<link=\"UNDERWATERVENT\">Thermal Gas Fissures</link> provide a steady source of <link=\"METHANE\">Natural Gas</link>. <link=\"GALENA\">Galena</link> can be processed into <link=\"LEAD\">Lead</link> and <link=\"SULFUR\">Sulfur</link>, each contributing to the <link=\"POWER\">Power</link> systems that will fuel my colony's expansion.\n\nRich deposits of <link=\"DIAMOND\">Diamond</link> supply the crucial component required for the <link=\"NOSECONEHARVEST\">Drillcone</link> my colony uses in space mining. Aquatic organisms called <link=\"URCHINPLANT\">Pinpoket</link> can also be processed into diamond.\n\nNative <link=\"TUBEWORM\">Tublia</link> plants can be harvested for <link=\"PLASTIC\">Plastic</link>. The latter is useful for crafting the <link=\"BUILDINGGASKET\">Gaskets</link> that enable the construction of <link=\"REEFGENERATOR\">Tidal Turbines</link> and <link=\"UNDERWATERVENTDRILL\">Marine Drills</link>."
-msgstr "<link=\"UNDERWATERVENT\">熱氣裂縫</link>可提供穩定的<link=\"METHANE\">天然氣</link>來源。<link=\"GALENA\">方鉛礦</link>可加工為<link=\"LEAD\">鉛</link>與<link=\"SULFUR\">硫</link>，二者均能支援<link=\"POWER\">電力</link>系統，為殖民地的擴張提供能源。\n\n豐富的<link=\"DIAMOND\">鑽石</link>礦藏提供了<link=\"NOSECONEHARVEST\">鑽頭前錐</link>所需的關鍵組件，此乃殖民地太空採礦之必備。此外，名為<link=\"URCHINPLANT\">針膽</link>的水生生物亦可加工為鑽石。\n\n原生<link=\"TUBEWORM\">管蟲</link>植株可採收獲得<link=\"PLASTIC\">塑膠</link>。後者可用於製作<link=\"BUILDINGGASKET\">密封墊</link>，進而構建<link=\"REEFGENERATOR\">潮汐渦輪機</link>與<link=\"UNDERWATERVENTDRILL\">海洋鑽機</link>。"
+msgid "<link=\"UNDERWATERVENT\">Thermal Gas Fissures</link> provide a steady source of <link=\"METHANE\">Natural Gas</link>. <link=\"GALENA\">Galena</link> can be processed into <link=\"LEAD\">Lead</link> and <link=\"SULFUR\">Sulfur</link>, each contributing to the <link=\"POWER\">Power</link> systems that will fuel my colony's expansion.\n\nRich deposits of <link=\"DIAMOND\">Diamond</link> supply the crucial component required for the <link=\"NOSECONEHARVEST\">Drillcone</link> my colony uses in space mining. Aquatic organisms called <link=\"URCHIN\">Pinpoki</link> can also be processed into diamond.\n\nNative <link=\"TUBEWORM\">Tublia</link> plants can be harvested for <link=\"PLASTIC\">Plastic</link>. The latter is useful for crafting the <link=\"BUILDINGGASKET\">Gaskets</link> that enable the construction of <link=\"REEFGENERATOR\">Tidal Turbines</link> and <link=\"UNDERWATERVENTDRILL\">Marine Drills</link>."
+msgstr "<link=\"UNDERWATERVENT\">熱氣裂縫</link>提供穩定的<link=\"METHANE\">天然氣</link>來源。<link=\"GALENA\">方鉛礦</link>可加工成<link=\"LEAD\">鉛</link>與<link=\"SULFUR\">硫</link>，兩者都能支援<link=\"POWER\">電力</link>系統，為我的殖民地擴張提供能源。\n\n豐富的<link=\"DIAMOND\">鑽石</link>礦藏提供了<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>所需的關鍵組件，這是我的殖民地在太空採礦中所使用的。名為<link=\"URCHIN\">針膽</link>的水生生物也可以被加工成鑽石。\n\n原生<link=\"TUBEWORM\">暖管蟲</link>植物可以採收獲得<link=\"PLASTIC\">塑膠</link>。後者可用於製作<link=\"BUILDINGGASKET\">密封墊</link>，以建造<link=\"REEFGENERATOR\">潮汐渦輪機</link>與<link=\"UNDERWATERVENTDRILL\">海洋鑽機</link>。"
 
 #. STRINGS.SUBWORLDS.AQUATIC.DESC
 msgctxt "STRINGS.SUBWORLDS.AQUATIC.DESC"
@@ -77457,8 +78632,8 @@ msgstr "系統"
 
 #. STRINGS.UI.CODEX.GEYSERS.DESC
 msgctxt "STRINGS.UI.CODEX.GEYSERS.DESC"
-msgid "Geysers and Fumaroles emit elements at variable intervals. They provide a sustainable source of material, albeit in typically low volumes.\n\nThe variable factors of a geyser are:\n\n    • Emission element \n    • Emission temperature \n    • Emission mass \n    • Cycle length \n    • Dormancy duration \n    • Disease emitted"
-msgstr "間歇泉和噴氣孔以不規律的間隔噴發元素。它們是少量且可持續的物質來源。\n\n間歇泉的可變因素是：\n\n    • 排放元素 \n    • 排放溫度 \n    • 排放質量 \n    • 周期長度 \n    • 休眠持續時間 \n    • 排放疾病"
+msgid "Geysers and Fumaroles emit elements at variable intervals. They provide a sustainable source of material or kinetic energy, albeit typically in low volumes.\n\nThe variable factors of a geyser are:\n\n    • Emission element \n    • Emission temperature \n    • Emission mass \n    • Cycle length \n    • Dormancy duration \n    • Disease emitted"
+msgstr "間歇泉和噴氣孔以不同的時間間隔噴發元素。它們提供了可持續的物質或動能來源，儘管通常產量較低。\n\n間歇泉的可變因素為：\n\n    • 噴發元素 \n    • 噴發溫度 \n    • 噴發質量 \n    • 週期長度 \n    • 休眠持續時間 \n    • 噴發疾病"
 
 #. STRINGS.UI.CODEX.MANAGEMENT_BUTTON
 msgctxt "STRINGS.UI.CODEX.MANAGEMENT_BUTTON"
@@ -80152,8 +81327,8 @@ msgstr "更新說明"
 
 #. STRINGS.UI.DEVELOPMENTBUILDS.DLC_BETA.BODY
 msgctxt "STRINGS.UI.DEVELOPMENTBUILDS.DLC_BETA.BODY"
-msgid "You're about to opt in to the beta for <b>The Bionic Booster Pack</b> DLC.\nThis free beta is a work in progress, and will be discontinued before the paid DLC is released. \n\nAre you sure you want to opt in?"
-msgstr "您即將加入公開測試版的<b>《仿生加速包》</b> DLC.\n此免費測試版正在進行中，將在付費 DLC 發布之前停止。\n\n您確定要選擇加入嗎？"
+msgid "You're about to opt in to the beta for <b>The Aquatic Planet Pack</b> DLC.\nThis free beta is a work in progress, and will be discontinued before the paid DLC is released. \n\nAre you sure you want to opt in?"
+msgstr "您即將加入公開測試版的<b>《水生行星包》</b> DLC.\n此免費測試版正在進行中，將在付費 DLC 發布之前停止。\n\n您確定要選擇加入嗎？"
 
 #. STRINGS.UI.DEVELOPMENTBUILDS.DLC_BETA.CONTINUEBUTTON
 msgctxt "STRINGS.UI.DEVELOPMENTBUILDS.DLC_BETA.CONTINUEBUTTON"
@@ -84942,8 +86117,8 @@ msgstr "{0}：{1}"
 
 #. STRINGS.UI.GAMEOBJECTEFFECTS.IDEAL_PRESSURE
 msgctxt "STRINGS.UI.GAMEOBJECTEFFECTS.IDEAL_PRESSURE"
-msgid "<link=\"ATMOSPHERE\">Air</link> Pressure: {0}"
-msgstr "<link=\"ATMOSPHERE\">空氣</link> 壓力：{0}"
+msgid "Air Pressure: {0}"
+msgstr "空氣壓力：{0}"
 
 #. STRINGS.UI.GAMEOBJECTEFFECTS.IDEAL_TEMPERATURE
 msgctxt "STRINGS.UI.GAMEOBJECTEFFECTS.IDEAL_TEMPERATURE"
@@ -85002,8 +86177,8 @@ msgstr "或"
 
 #. STRINGS.UI.GAMEOBJECTEFFECTS.REQUIRES_ATMOSPHERE
 msgctxt "STRINGS.UI.GAMEOBJECTEFFECTS.REQUIRES_ATMOSPHERE"
-msgid "<link=\"ATMOSPHERE\">Atmosphere</link>: {0}"
-msgstr "<link=\"ATMOSPHERE\">大氣層</link>：{0}"
+msgid "Atmosphere: {0}"
+msgstr "大氣層：{0}"
 
 #. STRINGS.UI.GAMEOBJECTEFFECTS.REQUIRES_DARKNESS
 msgctxt "STRINGS.UI.GAMEOBJECTEFFECTS.REQUIRES_DARKNESS"
@@ -85027,8 +86202,8 @@ msgstr "授粉"
 
 #. STRINGS.UI.GAMEOBJECTEFFECTS.REQUIRES_PRESSURE
 msgctxt "STRINGS.UI.GAMEOBJECTEFFECTS.REQUIRES_PRESSURE"
-msgid "<link=\"ATMOSPHERE\">Air</link> Pressure: {0} minimum"
-msgstr "<link=\"ATMOSPHERE\">空氣</link> 壓力：{0} 最低"
+msgid "Air Pressure: {0} minimum"
+msgstr "空氣壓力：{0} 最低"
 
 #. STRINGS.UI.GAMEOBJECTEFFECTS.REQUIRES_RADIATION
 msgctxt "STRINGS.UI.GAMEOBJECTEFFECTS.REQUIRES_RADIATION"
@@ -91275,6 +92450,11 @@ msgctxt "STRINGS.UI.ROLES_SCREEN.PERKS.CAN_ELECTRIC_GRILL.DESCRIPTION"
 msgid "<link=\"COOKINGSTATION\">Electric Grill</link> Usage"
 msgstr "使用<link=\"COOKINGSTATION\">電烤爐</link>"
 
+#. STRINGS.UI.ROLES_SCREEN.PERKS.CAN_FARM_CLAMS.DESCRIPTION
+msgctxt "STRINGS.UI.ROLES_SCREEN.PERKS.CAN_FARM_CLAMS.DESCRIPTION"
+msgid "<link=\"CLAM\">Clampum</link> farming"
+msgstr "<link=\"CLAM\">巨鉗貝</link>養殖"
+
 #. STRINGS.UI.ROLES_SCREEN.PERKS.CAN_FARM_STATION.DESCRIPTION
 msgctxt "STRINGS.UI.ROLES_SCREEN.PERKS.CAN_FARM_STATION.DESCRIPTION"
 msgid "Can craft <style=\"KKeyword\">Micronutrient Fertilizer</style> at the <link=\"FARMSTATION\">Farm Station</link>"
@@ -91417,8 +92597,8 @@ msgstr "免疫<b>{0}</b>"
 
 #. STRINGS.UI.ROLES_SCREEN.PERKS.IMPROVED_LIQUID_TEMPERATURE_TOLERANCE.DESCRIPTION
 msgctxt "STRINGS.UI.ROLES_SCREEN.PERKS.IMPROVED_LIQUID_TEMPERATURE_TOLERANCE.DESCRIPTION"
-msgid "Increased resistance to  <style=\"KKeyword\">Chilly Surroundings</style> when in liquid"
-msgstr "提高在液體中對<style=\"KKeyword\">嚴寒環境</style>的抗性"
+msgid "Increased resistance to <style=\"KKeyword\">Chilly Surroundings</style> when in liquid"
+msgstr "提高在液體中對<style=\"KKeyword\">周圍環境太冷</style>的抗性"
 
 #. STRINGS.UI.ROLES_SCREEN.PERKS.INCREASE_SWIMMER_ATHLETICS_IN_LIQUID.DESCRIPTION
 msgctxt "STRINGS.UI.ROLES_SCREEN.PERKS.INCREASE_SWIMMER_ATHLETICS_IN_LIQUID.DESCRIPTION"
@@ -91449,6 +92629,11 @@ msgstr "使用<link=\"NUCLEARRESEARCHCENTER\">材料研究終端機</link>"
 msgctxt "STRINGS.UI.ROLES_SCREEN.PERKS.ORBITAL_RESEARCH.DESCRIPTION"
 msgid "<link=\"DLC1COSMICRESEARCHCENTER\">Virtual Planetarium</link> Usage"
 msgstr "使用<link=\"DLC1COSMICRESEARCHCENTER\">虛擬天文館</link>"
+
+#. STRINGS.UI.ROLES_SCREEN.PERKS.REDUCE_SALTWATER_SWIMMER_EYE_IRRITATION.DESCRIPTION
+msgctxt "STRINGS.UI.ROLES_SCREEN.PERKS.REDUCE_SALTWATER_SWIMMER_EYE_IRRITATION.DESCRIPTION"
+msgid "Increased resistance to <style=\"KKeyword\">Eye Irritation</style> caused by <style=\"KKeyword\">Salt Water</style>"
+msgstr "提高對<style=\"KKeyword\">鹽水</style>所引起的<style=\"KKeyword\">眼睛刺激</style>的抗性"
 
 #. STRINGS.UI.ROLES_SCREEN.PERKS.REDUCED_GUNK_PRODUCTION.DESCRIPTION
 msgctxt "STRINGS.UI.ROLES_SCREEN.PERKS.REDUCED_GUNK_PRODUCTION.DESCRIPTION"
@@ -93737,8 +94922,8 @@ msgstr "一片可收集的行星殘骸，含有<link=\"ZINCORE\">鋅礦</link>�
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICMIXINGFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICMIXINGFIELD.NAME"
-msgid "Aquatic Field"
-msgstr "水生礦帶"
+msgid "Zinc Ore Field"
+msgstr "鋅礦礦帶"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICOREFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICOREFIELD.DESC"
@@ -93747,8 +94932,8 @@ msgstr "一片可收集的行星殘骸，含有<link=\"ZINCORE\">鋅礦</link>�
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICOREFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICOREFIELD.NAME"
-msgid "Aquatic Field"
-msgstr "水生礦帶"
+msgid "Zinc Ore Field"
+msgstr "鋅礦礦帶"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.FORESTYOREFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.FORESTYOREFIELD.DESC"
@@ -95112,7 +96297,7 @@ msgstr "<style=\"KKeyword\">自動飛行員</style>有<style=\"KKeyword\">電力
 
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.ROBOT_PILOT_POWER_SOUCRE.TOOLTIP.WARNING
 msgctxt "STRINGS.UI.STARMAP.LAUNCHCHECKLIST.ROBOT_PILOT_POWER_SOUCRE.TOOLTIP.WARNING"
-msgid "<style=\"KKeyword\">Robo-Pilot</style> has insufficient  <style=\"KKeyword\">Power</style> for a round-trip to its destination"
+msgid "<style=\"KKeyword\">Robo-Pilot</style> has insufficient <style=\"KKeyword\">Power</style> for a round-trip to its destination"
 msgstr "<style=\"KKeyword\">自動飛行員</style>往返於目的地之間所需的<style=\"KKeyword\">電力</style>不足"
 
 #. STRINGS.UI.STARMAP.LAUNCHCHECKLIST.SUFFICIENT_OXIDIZER.STATUS.FAILURE

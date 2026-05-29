@@ -45,6 +45,7 @@
     <string name="toolbar_simplified_text">簡中</string>
     <string name="toolbar_old_translated">舊譯</string>
     <string name="toolbar_old_template">舊原</string>
+    <string name="toolbar_draft">草稿</string>
 
     <!-- Empty States -->
     <string name="empty_list_title">一切就緒！</string>

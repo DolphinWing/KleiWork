@@ -45,6 +45,7 @@
     <string name="toolbar_simplified_text">CHS</string>
     <string name="toolbar_old_translated">CHT</string>
     <string name="toolbar_old_template">OLD EN</string>
+    <string name="toolbar_draft">Draft</string>
 
     <!-- Empty States -->
     <string name="empty_list_title">All caught up!</string>
