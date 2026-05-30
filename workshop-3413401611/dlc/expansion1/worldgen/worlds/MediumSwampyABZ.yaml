@@ -57,7 +57,7 @@ fixedTraits:
 seasons:
 #  - ClassicStyleWarpMeteorShowers
   - MiniBadlandsMeteorShowers # Snow and Ice
-  - MediumSwampyMeteorShowers # unused
+#  - MediumSwampyMeteorShowers # unused
 
 startSubworldName: expansion1::subworlds/absolutezero/SwampWarpStartABZ
 startingBaseTemplate: expansion1::bases/warpworldSwampBase

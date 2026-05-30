@@ -36,6 +36,7 @@ namespace Voidria
             frosty = dlcMixing.Contains(DlcManager.DLC2_ID);
             bionic = dlcMixing.Contains(DlcManager.DLC3_ID);
             history = dlcMixing.Contains(DlcManager.DLC4_ID);
+            var aquatic = dlcMixing.Contains(DlcManager.DLC5_ID);
             //PUtil.LogDebug("DLC mixing: " + spaced + ", " + frosty + ", " + bionic);
 
             var stories = CustomGameSettings.Instance.GetCurrentStories();
@@ -130,6 +131,14 @@ namespace Voidria
                                     rule.names.Add("dlc4::critters/pp_jawbo_pool");
                                 rule.names.Add("dlc4::critters/pp_rhex_dartle");
                                 rule.names.Add("dlc4::critters/pp_mos_lure");
+                            }
+                            if (aquatic)
+                            {
+                                PUtil.LogDebug("... add aquatic critters");
+                                rule.names.Add("dlc5::critters/ap_clam_blow");
+                                rule.names.Add("dlc5::critters/ap_orehull_kelp");
+                                rule.names.Add("dlc5::critters/ap_palm_slogo");
+                                rule.names.Add("dlc5::critters/ap_squid_bulb");
                             }
                         }
                         else if (rule.ruleId?.StartsWith("tg_Critter_Meat") == true)

@@ -14,22 +14,33 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!--<Reference Include="0Harmony" HintPath="..\OniManagedLibs\0Harmony.dll" Private="True" />-->
-    <Reference Include="Assembly-CSharp" HintPath="..\OniManagedLibs\Assembly-CSharp.dll" Private="False" />
-    <Reference Include="Assembly-CSharp-firstpass" HintPath="..\OniManagedLibs\Assembly-CSharp-firstpass.dll" Private="False" />
-    <Reference Include="Newtonsoft.Json" HintPath="..\OniManagedLibs\Newtonsoft.Json.dll" Private="True" />
-    <Reference Include="UnityEngine" HintPath="..\OniManagedLibs\UnityEngine.dll" Private="False" />
-    <Reference Include="UnityEngine.CoreModule" HintPath="..\OniManagedLibs\UnityEngine.CoreModule.dll" Private="False" />
-    <Reference Include="UnityEngine.UI" HintPath="..\OniManagedLibs\UnityEngine.UI.dll" Private="False" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="PLib" Version="4.22.0" />
-    <PackageReference Include="ILRepack.Lib.MSBuild.Task" Version="2.0.44.2">
+    <PackageReference Include="PLib" Version="4.24.0" />
+    <PackageReference Include="ILRepack.Lib.MSBuild.Task" Version="2.0.45">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
 	<PackageReference Include="Lib.Harmony" Version="2.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\OniManagedLibs\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\OniManagedLibs\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\OniManagedLibs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\OniManagedLibs\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\OniManagedLibs\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\OniManagedLibs\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

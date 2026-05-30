@@ -27,7 +27,8 @@ namespace Heliconia
             var dlcMixing = CustomGameSettings.Instance.GetCurrentDlcMixingIds();
             var frosty = dlcMixing.Contains(DlcManager.DLC2_ID);
             var history = dlcMixing.Contains(DlcManager.DLC4_ID);
-            PUtil.LogDebug("DLC mixing: 2=" + frosty + ", 4=" + history);
+            var aquatic = dlcMixing.Contains(DlcManager.DLC5_ID);
+            PUtil.LogDebug($"DLC mixing: fpp={frosty}, ppp={history}, app={aquatic}");
 
             var options = HeliconiaOptions.GetInstance();
             PUtil.LogDebug("Heliconia Shelter=" + options.Shelter + ", Critter=" + options.Critter);
@@ -87,6 +88,14 @@ namespace Heliconia
                                 rule.names.Add("dlc4::critters/pp_mos_lure");
                                 rule.names.Add("dlc4::critters/pp_fly_lumb_ovagro");
                                 PUtil.LogDebug("... add history caves");
+                            }
+                            if (aquatic)
+                            {
+                                rule.names.Add("dlc5::critters/ap_clam_blow");
+                                rule.names.Add("dlc5::critters/ap_orehull_kelp");
+                                rule.names.Add("dlc5::critters/ap_palm_slogo");
+                                rule.names.Add("dlc5::critters/ap_squid_bulb");
+                                PUtil.LogDebug("... add aquatic caves");
                             }
                         }
                     }

@@ -17,7 +17,7 @@ fixedTraits:
 seasons:
 #  - ClassicStyleStartMeteorShowers
   - MiniBadlandsMeteorShowers # Snow and Ice
-  - VanillaSandstoneFrozenMeteorShowers # unused
+#  - VanillaSandstoneFrozenMeteorShowers # unused
 
 startSubworldName: subworlds/sandstone/SandstoneStartCold
 startingBaseTemplate: bases/sandstoneBase
