@@ -1018,7 +1018,7 @@ msgstr "覺得渾身帶刺、心情暴躁嗎？來這好好放鬆一下吧。"
 #. STRINGS.BLUEPRINTS.PERMIT_BEACH_CHAIR_POKESHELL.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BEACH_CHAIR_POKESHELL.NAME"
 msgid "<link=\"BEACHCHAIR\">Pokeshell Beach Chair</link>"
-msgstr "<link=\"BEACHCHAIR\">戳殼蟹海灘躺椅</link>"
+msgstr "<link=\"BEACHCHAIR\">拋殼蟹海灘躺椅</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_BED_COTTAGE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_COTTAGE.DESC"
@@ -1968,7 +1968,7 @@ msgstr "經過幾個世紀被大自然改造之後還能用，真是個奇蹟。
 #. STRINGS.BLUEPRINTS.PERMIT_HQBASE_DINO.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_DINO.NAME"
 msgid "<link=\"HEADQUARTERS\">Forgotten Printing Pod</link>"
-msgstr "<link=\"HEADQUARTERS\">遺忘列印元</link>"
+msgstr "<link=\"HEADQUARTERS\">被遺忘的列印元</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.DESC"
@@ -3378,7 +3378,7 @@ msgstr "即使運作了一千個週期，摸起來依舊冰涼。"
 #. STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_ICE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_ICE.NAME"
 msgid "<link=\"EXOBASEHEADQUARTERS\">Frosty Mini-Pod</link>"
-msgstr "<link=\"EXOBASEHEADQUARTERS\">冰霜小型列印元</link>"
+msgstr "<link=\"EXOBASEHEADQUARTERS\">寒霜小型列印元</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_NEUTRONIUM.DESC"
@@ -27363,7 +27363,7 @@ msgstr "哈烯奇牛"
 #. STRINGS.CODEX.DINOFERN.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.DINOFERN.BODY.CONTAINER1"
 msgid "<i>Megafrondia Byronalis</i>, commonly known as \"Megafrond,\" is a gigantic plant that dwarfs its surroundings.\n\nIts size is not the only daunting factor in its cultivation: the Megafrond's gigantism is possible thanks to its singular adaptation to cold temperatures and a caustic gas environment that few other living things (including farmers) enjoy.\n\nThese challenges are considered a fair price for bragging rights and a useful grain harvest."
-msgstr "<i>拜倫利斯巨型葉狀體</i>，俗稱「巨蕨」，是一種使周圍環境相形見絀的巨型植物。\n\n其栽培的困難之處不僅在於體型：巨蕨的巨型化得益於其對低溫和腐蝕性氣體環境的獨特適應，這兩種環境是鮮少其他生物（包括農民）所能忍受的。\n\n這些挑戰被認為是值得付出的代價，既能獲得炫耀的資本，也能帶來有用的穀物收成。"
+msgstr "<i>拜倫利斯巨型葉狀體 (Megafrondia Byronalis)</i>，俗稱「巨蕨」，是一種使周圍環境相形見絀的巨型植物。\n\n其栽培的困難之處不僅在於體型：巨蕨的巨型化得益於其對低溫和腐蝕性氣體環境的獨特適應，這兩種環境是鮮少其他生物（包括農民）所能忍受的。\n\n這些挑戰被認為是值得付出的代價，既能獲得炫耀的資本，也能帶來有用的穀物收成。"
 
 #. STRINGS.CODEX.DINOFERN.SUBTITLE
 msgctxt "STRINGS.CODEX.DINOFERN.SUBTITLE"
@@ -28398,7 +28398,7 @@ msgstr "仙水掌"
 #. STRINGS.CODEX.ICEBELLY.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.ICEBELLY.BODY.CONTAINER1"
 msgid "The Bammoth is one of the oldest species on record, with ancient skeletal remains dating back approximately 10,000 years.\n\nThis placid herbivore is known for its unique body language: an angry young Bammoth expresses displeasure by flopping down dramatically in front of its opponent, while older creatures with limited mobility will sit facing away from the source of their annoyance.\n\nLicking the ground in front of a caregiver can be a sign of either deep affection or mineral deficiency."
-msgstr "猛瑪絨兔是有紀錄以來最古老的物種，其古老的遺骸可追溯到大約10,000年前。\n\n這種平靜的食草動物因其獨特的肢體語言而出名：一隻憤怒的青年猛瑪絨兔會透過在對手面前戲劇性地摔倒表達不滿，而行動不便的年長猛瑪絨兔會背對著引起它煩惱的來源坐著。\n\n在看護者面前舔舐地面可能是其深厚感情的表現，也可能是缺乏礦物質的表現。"
+msgstr "猛瑪絨兔是有紀錄以來最古老的物種，其古老的遺骸可追溯到大約 10,000 年前。\n\n這種平靜的食草動物因其獨特的肢體語言而出名：一隻憤怒的青年猛瑪絨兔會透過在對手面前戲劇性地摔倒表達不滿，而行動不便的年長猛瑪絨兔會背對著引起它煩惱的來源坐著。\n\n在看護者面前舔舐地面可能是其深厚感情的表現，也可能是缺乏礦物質的表現。"
 
 #. STRINGS.CODEX.ICEBELLY.SPECIES_SUBTITLE
 msgctxt "STRINGS.CODEX.ICEBELLY.SPECIES_SUBTITLE"
@@ -28578,7 +28578,7 @@ msgstr "生態旅遊"
 #. STRINGS.CODEX.INVESTIGATIONS.DLC2_EXPELLED.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC2_EXPELLED.BODY.CONTAINER1"
 msgid "Dear Dr. Moreson,\n\nI regret to inform you that your son, Calvin, is to be expelled from Brighthall Science Academy effective immediately.\n\nDuring his brief tenure here, Calvin has proven himself a gifted young man, capable of excelling in all subjects.\n\nUnfortunately, Calvin chooses to apply his intellect to activities of an inflammatory nature.\n\nHis latest breach of conduct involved instigating a vitriolic verbal assault against an esteemed guest speaker from Global Energy Inc. during this morning's Sponsor Celebration assembly. Following this, he orchestrated a school-wide walkout.\n\nWhile we sympathize with the personal challenges that Calvin may face as a refugee scholar from a GEI-occupied nation, the Academy can no longer tolerate these disruptions to our educational environment.\n\nYours,"
-msgstr "親愛的 Moreson 博士，\n\n我很遺憾地通知您，您的兒子 Calvin 即刻起被明堂科學學院開除。\n\nCalvin 在此短暫的學期中，證明了自己是一個具有天賦的年輕人，在所有科目上都表現出色。\n\n但很不幸，Calvin 選擇將其智力應用於具有煽動性的活動上。\n\n他最近的違規行為包括，在今天上午的贊助商慶祝大會上，對來自全球能源公司（GEI）受人尊敬的演講嘉賓進行尖酸刻薄的言語攻擊。隨後，他又策劃了一場全校性的罷課。\n\n我們知道，Calvin 來自被 GEI 佔據的國家，是一位難民學者，需要面臨自身帶來的許多挑戰，雖然我們對此十分同情，但學院不能再忍受這些對我們教學環境的破壞了。\n\n謹上，"
+msgstr "親愛的 Moreson 博士，\n\n我很遺憾地通知您，您的兒子 Calvin 即刻起被明堂科學學院開除。\n\nCalvin 在此短暫的學期中，證明了自己是一個具有天賦的年輕人，在所有科目上都表現出色。\n\n但很不幸，Calvin 選擇將其智力應用於具有煽動性的活動上。\n\n他最近的違規行為包括，在今天上午的贊助商慶祝大會上，對來自全球能源公司（Global Energy Inc., GEI）受人尊敬的演講嘉賓進行尖酸刻薄的言語攻擊。隨後，他又策劃了一場全校性的罷課。\n\n我們知道，Calvin 來自被 GEI 佔據的國家，是一位難民學者，需要面臨自身帶來的許多挑戰，雖然我們對此十分同情，但學院不能再忍受這些對我們教學環境的破壞了。\n\n謹上，"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC2_EXPELLED.BODY.LETTERHEADER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC2_EXPELLED.BODY.LETTERHEADER1"
@@ -28873,7 +28873,7 @@ msgstr "<b>前言</b>"
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_FOREWORD.BODY.CONTAINER3
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_FOREWORD.BODY.CONTAINER3"
 msgid "\"Our advancements as a species do not occur in a vacuum. Our success is built on the efforts of those who came before us. Their explorations, ideas, hopes, and breakthroughs illuminate ours, and give us a reason to keep pushing forward. Science is our vehicle, but people—friends, strangers, and rivals alike—are our purpose.\"\n\nThat's the short version of the monologue that Dr. Austin Higby delivered at least once a week.\n\nDr. Higby was a staunch advocate of collaboration. His research took astrobiology into exciting new territory, a feat he attributed to the contributions of co-authors and sources from every branch of science. He also had a deep appreciation for the arts. Many of his colleagues attended their first theater production at his invitation, myself included.\n\nDuring one of his rotations at the Gravitas Facility, I asked him how he found time for it all. He laughed. \"It finds <i>me!</i>\"\n\nThree months later, he and the crew of the Starsweep II vanished while on a now-infamous mission for the Clear Skies Coalition. No trace of their spacecraft has ever been found.\n\nThen these writings were discovered among Dr. Higby's personal files. Dozens upon dozens of poems and essays so profound that they make the reader feel transported to another place and time...one that feels at once familiar and completely alien.\n\n<i>Swept Into the Stars</i> is a labour of love by countless friends, colleagues, students, and fans who worked tirelessly to organize and edit Dr. Higby's words.\n\nWith permission from the Higby family, this edition also includes the farewell speech he had penned for the retirement announcement he never had a chance to make.\n\nHigby would be equal parts proud and embarrassed.\n\nI miss you, my friend. I hope we meet again someday, so you can tell me what wonders found you out there at the edges of the universe.\n\nThis one's for you. For all of us.\n\nAlways,\n<indent=10%>Emily G.</indent>\n\n<i>One hundred percent of the proceeds from Dr. Austin Higby's estate, including the sale of this book, will be donated to the Higby Memorial Scholarship fund for students who wish to pursue combined studies in science and the arts.</i>"
-msgstr "「人類文明的進步從不是孤島。我們站在前人的肩頭，他們的探索、思想、希冀與突破照亮我們的道路，賦予我們前進的勇氣。科學是我們的載具，而人才是目的——無論是摯友、陌客還是對手。」\n\n這段獨白，是 Austin Higby 博士每週至少要說一次的濃縮版。\n\nHigby 博士是合作研究的堅定倡導者。他的研究將天體生物學帶入了令人興奮的新領域，這一成就他歸功於來自各科學分支的共同作者和資料來源的貢獻。他對藝術亦懷有深切熱忱，許多同事，包括我自己，都是應他邀請才首次觀看戲劇演出。\n\n在引力科技中心輪值期間，我曾問他是如何兼顧這一切的。他大笑：「是它找到了<i>我</i>！」\n\n三個月後，他與「星逐二號」的機組人員在一次現已惡名昭彰的「晴空聯盟」任務中失蹤。至今他們的太空船仍舊杳無蹤跡。\n\n後來，人們從 Austin Higby 博士的私人檔案中發現了這些文字。數十篇詩歌與散文，深邃得讓讀者恍若置身某個…既熟悉又完全陌生的時空。\n\n<b>《星辰之途》</b>凝結了無數友人、同事、學生與書迷的心血，他們孜孜不倦地整理編纂Higby 留下的文字。\n\n經 Higby 家族授權，本版特別收錄他生前為未及發表的退休演說所撰告的告別演講。\n\nHigby 想必會同時感到驕傲和尷尬。\n\n老友，我懷念你。願某日重逢時，再聽你講述在宇宙邊緣，有什麼奇蹟找到了你。\n\n這本書是獻給你的。獻給我們所有人。\n\n永遠愛你的，\n<indent=10%>Emily G.</indent>\n\n<i>Austin Higby 博士遺產（含本書版稅）將全額捐贈予「希格比紀念獎學金」，資助科學與藝術跨學科研究的學子。</i>"
+msgstr "「人類文明的進步從不是孤島。我們站在前人的肩頭，他們的探索、思想、希冀與突破照亮我們的道路，賦予我們前進的勇氣。科學是我們的載具，而人才是目的——無論是摯友、陌客還是對手。」\n\n這段獨白，是 Austin Higby 博士每週至少要說一次的濃縮版。\n\nHigby 博士是合作研究的堅定倡導者。他的研究將天體生物學帶入了令人興奮的新領域，這一成就他歸功於來自各科學分支的共同作者和資料來源的貢獻。他對藝術亦懷有深切熱忱，許多同事，包括我自己，都是應他邀請才首次觀看戲劇演出。\n\n在引力科技中心輪值期間，我曾問他是如何兼顧這一切的。他大笑：「是它找到了<i>我</i>！」\n\n三個月後，他與「星逐二號」的機組人員在一次現已惡名昭彰的「晴空聯盟」任務中失蹤。至今他們的太空船仍舊杳無蹤跡。\n\n後來，人們從 Austin Higby 博士的私人檔案中發現了這些文字。數十篇詩歌與散文，深邃得讓讀者恍若置身某個…既熟悉又完全陌生的時空。\n\n<b>《星辰之途》</b>凝結了無數友人、同事、學生與書迷的心血，他們孜孜不倦地整理編纂 Higby 留下的文字。\n\n經 Higby 家族授權，本版特別收錄他生前為未及發表的退休演說所撰告的告別演講。\n\nHigby 想必會同時感到驕傲和尷尬。\n\n老友，我懷念你。願某日重逢時，再聽你講述在宇宙邊緣，有什麼奇蹟找到了你。\n\n這本書是獻給你的。獻給我們所有人。\n\n永遠愛你的，\n<indent=10%>Emily G.</indent>\n\n<i>Austin Higby 博士遺產（含本書版稅）將全額捐贈予「希格比紀念獎學金」，資助科學與藝術跨學科研究的學子。</i>"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC4_FOREWORD.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC4_FOREWORD.SUBTITLE"
@@ -29018,7 +29018,7 @@ msgstr "冰箱便條"
 #. STRINGS.CODEX.INVESTIGATIONS.DLC5_HOAX.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_HOAX.BODY.CONTAINER1"
 msgid "Acclaimed alumnae of Elion University of Science and Technology are speaking out against academic malfeasance in the world of theoretical physics.\n\nJackie Stern and Olivia Broussard, co-valedictorians of last year's graduating class, recently revealed that one of the articles they co-authored under Dr. Emil Schleichen's supervision was, in fact, a demonstrative scholarly hoax. The two women are accusing Dr. Schleichen of building his career on ideas plagiarized from his PhD students.\n\n\"Professors like him claim to be passionate about innovation,\" Stern declared, in a recording sent to more than a dozen scientific media outlets. \"Yet they make it impossible for others to establish their own reputations and access funding for the research projects that could hold the answer to humanity's survival.\"\n\nStern and Broussard also denounced the lack of critical lens applied to papers attached to such notable names as Dr. Schleichen's. \"We intentionally featured several debunked scientific theories, none of which the editors questioned,\" says Broussard.\n\nEditors of <i>The Journal of Theoretical Physics</i> did not respond to our requests for comment.\n\nDr. Schleichen has also declined to be interviewed, though the Dean of EUST published a formal statement indicating that Dr. Schleichen is currently on paid leave while the administration investigates the matter.\n\nEUST also indicated that Stern and Broussard may face repercussions for publicly undermining the university's reputation."
-msgstr "埃利昂科技大學的知名女校友正起而反對理論物理學界的學術不端行為。\n\nJackie Stern 與 Olivia Broussard 作為去年畢業班的並列畢業生代表，近日披露她們在 Emil Schleichen 博士指導下合著的一篇論文，實際上是一場示範性的學術騙局。這兩位女性指控 Schleichen 博士的學術生涯完全是建立在剽竊其博士生創意的基礎上。\n\n「像他這樣的教授嘴上說著熱衷於創新，」 Stern 在一段傳送給十餘家科學媒體的錄音中表示。「卻讓其他人無法建立自己的學術聲譽，也無法為那些可能關係到人類存續的研究專案爭取資助。」\n\nStern 與 Olivia Broussard 同樣譴責了對掛名如 Schleichen 博士這種知名學者名下的論文缺乏批判性審視的現狀。「我們刻意在論文中安插了多項早已被證偽的科學理論，編輯們對此卻無一提出質疑，」 Broussard 表示。\n\n<i>《理論物理學期刊》</i> 的編輯未回應置評請求。\n\nSchleichen 博士同樣拒絕了採訪，不過 EUST 的院長發表了一份正式聲明，指出 Schleichen 博士目前正處於帶薪休假狀態，校方行政部門正在對此事進行調查。\n\nEUST 亦表示，Stern 與 Broussard 或因公開損害大學聲譽而面臨後續處分。"
+msgstr "伊萊恩科技大學的知名女校友正起而反對理論物理學界的學術不端行為。\n\nJackie Stern 與 Olivia Broussard 作為去年畢業班的並列畢業生代表，近日披露她們在 Emil Schleichen 博士指導下合著的一篇論文，實際上是一場示範性的學術騙局。這兩位女性指控 Schleichen 博士的學術生涯完全是建立在剽竊其博士生創意的基礎上。\n\n「像他這樣的教授嘴上說著熱衷於創新，」 Stern 在一段傳送給十餘家科學媒體的錄音中表示。「卻讓其他人無法建立自己的學術聲譽，也無法為那些可能關係到人類存續的研究專案爭取資助。」\n\nStern 與 Olivia Broussard 同樣譴責了對掛名如 Schleichen 博士這種知名學者名下的論文缺乏批判性審視的現狀。「我們刻意在論文中安插了多項早已被證偽的科學理論，編輯們對此卻無一提出質疑，」 Broussard 表示。\n\n<i>《理論物理學期刊》</i> 的編輯未回應置評請求。\n\nSchleichen 博士同樣拒絕了採訪，不過 EUST 的院長發表了一份正式聲明，指出 Schleichen 博士目前正處於帶薪休假狀態，校方行政部門正在對此事進行調查。\n\nEUST 亦表示，Stern 與 Broussard 或因公開損害大學聲譽而面臨後續處分。"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC5_HOAX.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_HOAX.SUBTITLE"
@@ -29253,7 +29253,7 @@ msgstr "木材"
 #. STRINGS.CODEX.MEALWOOD.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.MEALWOOD.BODY.CONTAINER1"
 msgid "Mealwood is an bramble-like plant that has a parasitic symbiotic relationship with the nutrient-rich Meal Lice that inhabit it.\n\nMealwood experience a rapid growth rate in its first stages, but once the Meal Lice become active they consume all the new fruiting spurs on the plant before they can fully mature.\n\nTheoretically the flowers of this plant are a beautiful color of fuchsia, however no Mealwood has ever reached the point of flowering without being overrun by the parasitic Meal Lice."
-msgstr "米虱木是一種類似荊棘的植物，與其寄生在樹上營養豐富的食用米虱形成共生關係。\n\n米虱木在第一階段會經歷快速生長，不過一旦食用米虱變得活躍，它們會在完全成熟前吃掉樹上所有的果實。\n\n理論上來說，此種植物的花朵是美麗的紫紅色，然後沒有米虱木曾在沒有食用米虱寄生的情況下達到開花的程度。"
+msgstr "米虱木是一種類似荊棘的植物，與其寄生在樹上營養豐富的米虱形成共生關係。\n\n米虱木在第一階段會經歷快速生長，不過一旦米虱變得活躍，它們會在完全成熟前吃掉樹上所有的果實。\n\n理論上來說，此種植物的花朵是美麗的紫紅色，然後沒有米虱木曾在沒有米虱寄生的情況下達到開花的程度。"
 
 #. STRINGS.CODEX.MEALWOOD.SUBTITLE
 msgctxt "STRINGS.CODEX.MEALWOOD.SUBTITLE"
@@ -29853,7 +29853,7 @@ msgstr "<b>神祕項目獲得奈米技術獎</b>"
 #. STRINGS.CODEX.MYSTERYAWARD.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.MYSTERYAWARD.BODY.CONTAINER2"
 msgid "Last night's Worldwide Nanotech Awards has sparked controversy in the scientific community after it was announced that the top prize had been awarded to a project whose details could not be publicly disclosed.\n\nThe highly classified paper was presented to the jury in a closed session by lead researcher Dr. Liling Pei, recipient of the inaugural Gravitas Accelerator Scholarship at the Elion University of Science and Technology.\n\nHead judge Dr. Elias Balko acknowledges that it was unorthodox, but defends the decision. \"We're scientists - it's our job to push boundaries.\"\n\nPei was awarded the coveted Halas Medal, the top prize for innovation in the field.\n\n\"I wish I could tell you more,\" says Pei. \"I'm SO grateful to the WNA for this great honor, and to Dr. Stern for the funding that made it all possible. This is going to change everything about...well, everything.\"\n\nThis is the second time that Pei has made headlines. Last year, the striking young nanoscientist won the Miss Planetary Belle pageant's talent show with a live demonstration of nanorobots weaving a ballgown out of fibers harvested from common houseplants.\n\nPei joins the team at the Gravitas Facility early next month."
-msgstr "昨晚的全球奈米科技獎頒獎典禮引發了科學界的爭議，因為最高獎項被授予了一個細節無法公開披露的項目。\n\n這篇高度機密的論文由首席研究員 Liling Pei 博士在閉門會議上提交給評審會，她是 Elion 科技大學首屆引力科技加速器獎學金的獲得者。\n\n首席評審委員 Elias Balko 博士承認這是打破常規的，但為這一決定辯護。「我們是科學家——突破界限是我們的職責。」\n\nPei 獲得了令人夢寐以求的 Halas 獎章，這是該領域創新的最高獎項。\n\n「我希望我能告訴你更多」， Pei 說。「我非常感謝 WNA 授予的這一榮譽，並感謝 Stern 博士提供的資助，使這一切成為可能。這將改變一切…嗯，一切。」\n\n這是 Pei 第二次登上頭條。去年，這位引人注目的年輕奈米科學家贏得了行星美女小姐選美大賽的才藝表演。現場展示了奈米機器人用從普通室內植物中採集的纖維編織出一件長袍。\n\nPei 將於下月初加入引力科技中心的團隊。"
+msgstr "昨晚的全球奈米科技獎頒獎典禮引發了科學界的爭議，因為最高獎項被授予了一個細節無法公開披露的項目。\n\n這篇高度機密的論文由首席研究員 Liling Pei 博士在閉門會議上提交給評審會，她是伊萊恩科技大學首屆引力科技加速器獎學金的獲得者。\n\n首席評審委員 Elias Balko 博士承認這是打破常規的，但為這一決定辯護。「我們是科學家——突破界限是我們的職責。」\n\nPei 獲得了令人夢寐以求的 Halas 獎章，這是該領域創新的最高獎項。\n\n「我希望我能告訴你更多」， Pei 說。「我非常感謝 WNA 授予的這一榮譽，並感謝 Stern 博士提供的資助，使這一切成為可能。這將改變一切…嗯，一切。」\n\n這是 Pei 第二次登上頭條。去年，這位引人注目的年輕奈米科學家贏得了行星美女小姐選美大賽的才藝表演。現場展示了奈米機器人用從普通室內植物中採集的纖維編織出一件長袍。\n\nPei 將於下月初加入引力科技中心的團隊。"
 
 #. STRINGS.CODEX.MYSTERYAWARD.SUBTITLE
 msgctxt "STRINGS.CODEX.MYSTERYAWARD.SUBTITLE"
@@ -29998,7 +29998,7 @@ msgstr "小動物物種"
 #. STRINGS.CODEX.PARROTFISH.SPECIES_TITLE
 msgctxt "STRINGS.CODEX.PARROTFISH.SPECIES_TITLE"
 msgid "Beakon"
-msgstr "燈喙魚"
+msgstr "燈喙魚類"
 
 #. STRINGS.CODEX.PARROTFISH.SUBTITLE
 msgctxt "STRINGS.CODEX.PARROTFISH.SUBTITLE"
@@ -30363,7 +30363,7 @@ msgstr "小動物物種"
 #. STRINGS.CODEX.PUFFERFISH.SPECIES_TITLE
 msgctxt "STRINGS.CODEX.PUFFERFISH.SPECIES_TITLE"
 msgid "Blowter"
-msgstr "鼓氣魚"
+msgstr "鼓氣魚類"
 
 #. STRINGS.CODEX.PUFFERFISH.SUBTITLE
 msgctxt "STRINGS.CODEX.PUFFERFISH.SUBTITLE"
@@ -31258,7 +31258,7 @@ msgstr "水生生物"
 #. STRINGS.CODEX.SEAFAIRY.SPECIES_TITLE
 msgctxt "STRINGS.CODEX.SEAFAIRY.SPECIES_TITLE"
 msgid "Kelpole"
-msgstr "藻蝌蚪"
+msgstr "藻蝌蚪類"
 
 #. STRINGS.CODEX.SEAFAIRY.SUBTITLE
 msgctxt "STRINGS.CODEX.SEAFAIRY.SUBTITLE"
@@ -31283,7 +31283,7 @@ msgstr "小動物物種"
 #. STRINGS.CODEX.SEAHORSE.SPECIES_TITLE
 msgctxt "STRINGS.CODEX.SEAHORSE.SPECIES_TITLE"
 msgid "Seaquine"
-msgstr "海馬"
+msgstr "海馬類"
 
 #. STRINGS.CODEX.SEAHORSE.SUBTITLE
 msgctxt "STRINGS.CODEX.SEAHORSE.SUBTITLE"
@@ -31348,7 +31348,7 @@ msgstr "小動物物種"
 #. STRINGS.CODEX.SEATURTLE.SPECIES_TITLE
 msgctxt "STRINGS.CODEX.SEATURTLE.SPECIES_TITLE"
 msgid "Orehull"
-msgstr "礦甲龜"
+msgstr "礦甲龜類"
 
 #. STRINGS.CODEX.SEATURTLE.SUBTITLE
 msgctxt "STRINGS.CODEX.SEATURTLE.SUBTITLE"
@@ -31658,7 +31658,7 @@ msgstr "小動物物種"
 #. STRINGS.CODEX.SQUID.SPECIES_TITLE
 msgctxt "STRINGS.CODEX.SQUID.SPECIES_TITLE"
 msgid "Glo Squid"
-msgstr "彩斑魷"
+msgstr "彩斑魷類"
 
 #. STRINGS.CODEX.SQUID.SUBTITLE
 msgctxt "STRINGS.CODEX.SQUID.SUBTITLE"
@@ -33398,7 +33398,7 @@ msgstr "辛香田鼠"
 #. STRINGS.CODEX.VARIANT_FRESH_WATER.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.VARIANT_FRESH_WATER.BODY.CONTAINER1"
 msgid "<smallcaps>Pictured: \"Sanishell\" variant</smallcaps>"
-msgstr "<smallcaps>圖為：「水生蟹」變種</smallcaps>"
+msgstr "<smallcaps>圖為：「淨水蟹」變種</smallcaps>"
 
 #. STRINGS.CODEX.VARIANT_FRESH_WATER.SUBTITLE
 msgctxt "STRINGS.CODEX.VARIANT_FRESH_WATER.SUBTITLE"
@@ -33408,7 +33408,7 @@ msgstr "小動物變種"
 #. STRINGS.CODEX.VARIANT_FRESH_WATER.TITLE
 msgctxt "STRINGS.CODEX.VARIANT_FRESH_WATER.TITLE"
 msgid "Sanishell"
-msgstr "水生蟹"
+msgstr "淨水蟹"
 
 #. STRINGS.CODEX.VARIANT_GAS.SUBTITLE
 msgctxt "STRINGS.CODEX.VARIANT_GAS.SUBTITLE"
@@ -35633,7 +35633,7 @@ msgstr "<link=\"PACUSPECIES\">帕庫類</link>"
 #. STRINGS.CREATURES.FAMILY_PLURAL.PARROTFISHSPECIES
 msgctxt "STRINGS.CREATURES.FAMILY_PLURAL.PARROTFISHSPECIES"
 msgid "<link=\"PARROTFISHSPECIES\">Beakons</link>"
-msgstr "<link=\"PARROTFISHSPECIES\">燈喙魚</link>"
+msgstr "<link=\"PARROTFISHSPECIES\">燈喙魚類</link>"
 
 #. STRINGS.CREATURES.FAMILY_PLURAL.PREHISTORICPACUSPECIES
 msgctxt "STRINGS.CREATURES.FAMILY_PLURAL.PREHISTORICPACUSPECIES"
@@ -35643,7 +35643,7 @@ msgstr "<link=\"PREHISTORICPACUSPECIES\">顎魚類</link>"
 #. STRINGS.CREATURES.FAMILY_PLURAL.PUFFERFISHSPECIES
 msgctxt "STRINGS.CREATURES.FAMILY_PLURAL.PUFFERFISHSPECIES"
 msgid "<link=\"PUFFERFISHSPECIES\">Blowters</link>"
-msgstr "<link=\"PUFFERFISHSPECIES\">鼓氣魚</link>"
+msgstr "<link=\"PUFFERFISHSPECIES\">鼓氣魚類</link>"
 
 #. STRINGS.CREATURES.FAMILY_PLURAL.PUFTSPECIES
 msgctxt "STRINGS.CREATURES.FAMILY_PLURAL.PUFTSPECIES"
@@ -35663,12 +35663,12 @@ msgstr "<link=\"SCOUTROVER\">漫遊者</link>"
 #. STRINGS.CREATURES.FAMILY_PLURAL.SEAFAIRYSPECIES
 msgctxt "STRINGS.CREATURES.FAMILY_PLURAL.SEAFAIRYSPECIES"
 msgid "<link=\"SEAFAIRYSPECIES\">Kelpoles</link>"
-msgstr "<link=\"SEAFAIRYSPECIES\">藻蝌蚪</link>"
+msgstr "<link=\"SEAFAIRYSPECIES\">藻蝌蚪類</link>"
 
 #. STRINGS.CREATURES.FAMILY_PLURAL.SEAHORSESPECIES
 msgctxt "STRINGS.CREATURES.FAMILY_PLURAL.SEAHORSESPECIES"
 msgid "<link=\"SEAHORSESPECIES\">Seaquines</link>"
-msgstr "<link=\"SEAHORSESPECIES\">海馬</link>"
+msgstr "<link=\"SEAHORSESPECIES\">海馬類</link>"
 
 #. STRINGS.CREATURES.FAMILY_PLURAL.SEALSPECIES
 msgctxt "STRINGS.CREATURES.FAMILY_PLURAL.SEALSPECIES"
@@ -35678,17 +35678,17 @@ msgstr "<link=\"SEALSPECIES\">角海豹類</link>"
 #. STRINGS.CREATURES.FAMILY_PLURAL.SEATURTLESPECIES
 msgctxt "STRINGS.CREATURES.FAMILY_PLURAL.SEATURTLESPECIES"
 msgid "<link=\"SEATURTLESPECIES\">Orehulls</link>"
-msgstr "<link=\"SEATURTLESPECIES\">礦甲龜</link>"
+msgstr "<link=\"SEATURTLESPECIES\">礦甲龜類</link>"
 
 #. STRINGS.CREATURES.FAMILY_PLURAL.SNAILSPECIES
 msgctxt "STRINGS.CREATURES.FAMILY_PLURAL.SNAILSPECIES"
 msgid "<link=\"SNAILSPECIES\">Slogos</link>"
-msgstr "<link=\"SNAILSPECIES\">緩螺</link>"
+msgstr "<link=\"SNAILSPECIES\">緩螺類</link>"
 
 #. STRINGS.CREATURES.FAMILY_PLURAL.SQUIDSPECIES
 msgctxt "STRINGS.CREATURES.FAMILY_PLURAL.SQUIDSPECIES"
 msgid "<link=\"SQUIDSPECIES\">Glo Squids</link>"
-msgstr "<link=\"SQUIDSPECIES\">彩斑魷</link>"
+msgstr "<link=\"SQUIDSPECIES\">彩斑魷類</link>"
 
 #. STRINGS.CREATURES.FAMILY_PLURAL.SQUIRRELSPECIES
 msgctxt "STRINGS.CREATURES.FAMILY_PLURAL.SQUIRRELSPECIES"
@@ -36458,7 +36458,7 @@ msgstr "加成產量：+{Amount} {Crop}"
 #. STRINGS.CREATURES.PLANT_MUTATIONS.BONUSLICE.DESCRIPTION
 msgctxt "STRINGS.CREATURES.PLANT_MUTATIONS.BONUSLICE.DESCRIPTION"
 msgid "Something about this mutation causes Meal Lice to pupate on this plant."
-msgstr "這種突變的某種特性，會導致可食用米虱在這株植物上化蛹。"
+msgstr "這種突變的某種特性，會導致米虱在這株植物上化蛹。"
 
 #. STRINGS.CREATURES.PLANT_MUTATIONS.BONUSLICE.NAME
 msgctxt "STRINGS.CREATURES.PLANT_MUTATIONS.BONUSLICE.NAME"
@@ -36923,27 +36923,27 @@ msgstr "<link=\"CRAB\">拋殼蟹</link>"
 #. STRINGS.CREATURES.SPECIES.CRAB.VARIANT_FRESH_WATER.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.CRAB.VARIANT_FRESH_WATER.BABY.DESC"
 msgid "A picky little Sanishell Spawn.\n\nIn time it will mature into a fully grown <link=\"CRABFRESHWATER\">Sanishell</link>."
-msgstr "一隻挑剔的小水生蟹寶寶。\n\n隨著時間，牠會長大成為一隻成年的<link=\"CRAB\">水生蟹</link>。"
+msgstr "一隻挑剔的小淨水蟹寶寶。\n\n隨著時間，牠會長大成為一隻成年的<link=\"CRAB\">淨水蟹</link>。"
 
 #. STRINGS.CREATURES.SPECIES.CRAB.VARIANT_FRESH_WATER.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.CRAB.VARIANT_FRESH_WATER.BABY.NAME"
 msgid "<link=\"CRABFRESHWATER\">Sanishell Spawn</link>"
-msgstr "<link=\"CRABFRESHWATER\">水生蟹寶寶</link>"
+msgstr "<link=\"CRABFRESHWATER\">淨水蟹寶寶</link>"
 
 #. STRINGS.CREATURES.SPECIES.CRAB.VARIANT_FRESH_WATER.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.CRAB.VARIANT_FRESH_WATER.DESC"
 msgid "Sanishells are nonhostile critters unless their eggs are nearby.\n\nThey thrive in <link=\"WATER\">Water</link> and eliminate <link=\"DISEASE\">Germs</link> from any liquid they inhabit.\n\nThey eat <link=\"TOXICSAND\">Polluted Dirt</link>, <link=\"SLIMEMOLD\">Slime</link> and <link=\"COMPOST\">Rot Piles</link>."
-msgstr "水生蟹是一種溫和的小動物，除非牠們的蛋在附近。\n\n牠們在<link=\"WATER\">水</link>中茁壯成長，並能清除所處液體中的<link=\"DISEASE\">病菌</link>。\n\n牠們以<link=\"TOXICSAND\">汙土</link>、<link=\"SLIMEMOLD\">軟泥</link>和<link=\"COMPOST\">腐壞物</link>為食。"
+msgstr "淨水蟹是一種溫和的小動物，除非牠們的蛋在附近。\n\n牠們在<link=\"WATER\">水</link>中茁壯成長，並能清除所處液體中的<link=\"DISEASE\">病菌</link>。\n\n牠們以<link=\"TOXICSAND\">汙土</link>、<link=\"SLIMEMOLD\">軟泥</link>和<link=\"COMPOST\">腐壞物</link>為食。"
 
 #. STRINGS.CREATURES.SPECIES.CRAB.VARIANT_FRESH_WATER.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.CRAB.VARIANT_FRESH_WATER.EGG_NAME"
 msgid "<link=\"CRABFRESHWATER\">Sanishell Roe</link>"
-msgstr "<link=\"CRABFRESHWATER\">水生蟹蛋</link>"
+msgstr "<link=\"CRABFRESHWATER\">淨水蟹蛋</link>"
 
 #. STRINGS.CREATURES.SPECIES.CRAB.VARIANT_FRESH_WATER.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.CRAB.VARIANT_FRESH_WATER.NAME"
 msgid "<link=\"CRABFRESHWATER\">Sanishell</link>"
-msgstr "<link=\"CRABFRESHWATER\">水生蟹</link>"
+msgstr "<link=\"CRABFRESHWATER\">淨水蟹</link>"
 
 #. STRINGS.CREATURES.SPECIES.CRAB.VARIANT_WOOD.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.CRAB.VARIANT_WOOD.BABY.DESC"
@@ -64348,12 +64348,12 @@ msgstr "一份酥脆的油炸小動物爪。"
 #. STRINGS.ITEMS.FOOD.DEEPFRIEDSHELLFISH.NAME
 msgctxt "STRINGS.ITEMS.FOOD.DEEPFRIEDSHELLFISH.NAME"
 msgid "<link=\"DEEPFRIEDSHELLFISH\">Shellfish Tempura</link>"
-msgstr "<link=\"DEEPFRIEDSHELLFISH\">蟹肉天婦羅</link>"
+msgstr "<link=\"DEEPFRIEDSHELLFISH\">貝肉天婦羅</link>"
 
 #. STRINGS.ITEMS.FOOD.DEEPFRIEDSHELLFISH.RECIPEDESC
 msgctxt "STRINGS.ITEMS.FOOD.DEEPFRIEDSHELLFISH.RECIPEDESC"
 msgid "A tender chunk of battered <link=\"SHELLFISHMEAT\">Raw Shellfish</link> deep-fried in <link=\"TALLOW\">Tallow</link>."
-msgstr "一塊嫩嫩的<link=\"SHELLFISHMEAT\">生蟹肉</link>在<link=\"TALLOW\">動物油脂</link>中油炸。"
+msgstr "一塊嫩嫩的<link=\"SHELLFISHMEAT\">生貝肉</link>在<link=\"TALLOW\">動物油脂</link>中油炸。"
 
 #. STRINGS.ITEMS.FOOD.DINOSAURMEAT.DESC
 msgctxt "STRINGS.ITEMS.FOOD.DINOSAURMEAT.DESC"
@@ -64988,12 +64988,12 @@ msgstr "<link=\"SALTYSTICKSFOOD\">鹽棒</link>"
 #. STRINGS.ITEMS.FOOD.SHELLFISHMEAT.DESC
 msgctxt "STRINGS.ITEMS.FOOD.SHELLFISHMEAT.DESC"
 msgid "An uncooked chunk of very dead <link=\"CRABFRESHWATER\">Sanishell</link>. Yum!"
-msgstr "一塊未煮熟的<link=\"CRABFRESHWATER\">水生蟹</link>肉。好吃！"
+msgstr "一塊未煮熟的<link=\"CRABFRESHWATER\">淨水蟹</link>或其他甲殼類動物肉。好吃！"
 
 #. STRINGS.ITEMS.FOOD.SHELLFISHMEAT.NAME
 msgctxt "STRINGS.ITEMS.FOOD.SHELLFISHMEAT.NAME"
 msgid "<link=\"SHELLFISHMEAT\">Raw Shellfish</link>"
-msgstr "<link=\"SHELLFISHMEAT\">水生蟹肉</link>"
+msgstr "<link=\"SHELLFISHMEAT\">生貝肉</link>"
 
 #. STRINGS.ITEMS.FOOD.SMOKEDDINOSAURMEAT.DESC
 msgctxt "STRINGS.ITEMS.FOOD.SMOKEDDINOSAURMEAT.DESC"
