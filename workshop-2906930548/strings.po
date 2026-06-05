@@ -5758,7 +5758,7 @@ msgstr "需要{Skills}技能才能操作\n\n開啟<b>技能面板</b> {Hotkey/Ma
 #. STRINGS.BUILDING.STATUSITEMS.CLUSTERCOLONYLACKSREQUIREDSKILLPERK.TOOLTIP_DLC3
 msgctxt "STRINGS.BUILDING.STATUSITEMS.CLUSTERCOLONYLACKSREQUIREDSKILLPERK.TOOLTIP_DLC3"
 msgid "{Skills} Skill or {Boosters} required to operate\n\nOpen the <b>Skills Panel</b> {Hotkey/ManageSkills} to teach {Skills} to a Duplicant, or bring a Duplicant with this skill or booster from another Planetoid"
-msgstr "需要{Skills}技能或{Boosters}才能操作 \n\n打開<b>技能面板</b> {Hotkey/ManageSkills} 讓一名複製人學會{Skills}，或從另一個小行星帶來具有這項技能或加速器的複製人"
+msgstr "需要{Skills}技能或{Boosters}才能操作 \n\n打開<b>技能面板</b> {Hotkey/ManageSkills} 讓一名複製人學會{Skills}，或從另一個小行星帶來具有這項技能或增效卡匣的複製人"
 
 #. STRINGS.BUILDING.STATUSITEMS.CLUSTERTELESCOPEALLWORKCOMPLETE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.CLUSTERTELESCOPEALLWORKCOMPLETE.NAME"
@@ -5798,12 +5798,12 @@ msgstr "需要至少一名具有以下技能的複製人：{Skills}"
 #. STRINGS.BUILDING.STATUSITEMS.COLONYLACKSDUPEWITHMULTISKILLPERK.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.COLONYLACKSDUPEWITHMULTISKILLPERK.TOOLTIP"
 msgid "Colony lacks a Duplicant with all of the following skills:\n {Skills}\n\nOpen the <b>Skills Panel</b> {Hotkey/ManageSkills} to teach skills or assign boosters to a Duplicant"
-msgstr "殖民地缺少具備以下所有技能的複製人：\n{Skills}\n\n開啟<b>技能面板</b> {Hotkey/ManageSkills} 為複製人指派技能或分配加速器"
+msgstr "殖民地缺少具備以下所有技能的複製人：\n{Skills}\n\n開啟<b>技能面板</b> {Hotkey/ManageSkills} 為複製人指派技能或分配增效卡匣"
 
 #. STRINGS.BUILDING.STATUSITEMS.COLONYLACKSDUPEWITHMULTISKILLPERK.TOOLTIP_DLC3
 msgctxt "STRINGS.BUILDING.STATUSITEMS.COLONYLACKSDUPEWITHMULTISKILLPERK.TOOLTIP_DLC3"
 msgid "Colony lacks a Duplicant with all of the following skills:\n {Skills} \nor {Boosters}\n\nOpen the <b>Skills Panel</b> {Hotkey/ManageSkills} to teach skills or assign boosters to a Duplicant"
-msgstr "殖民地缺少同時具備以下所有條件的複製人：\n{Skills} \n或 {Boosters}\n\n開啟<b>技能面板</b> {Hotkey/ManageSkills} 為複製人指派技能或分配加速器"
+msgstr "殖民地缺少同時具備以下所有條件的複製人：\n{Skills} \n或 {Boosters}\n\n開啟<b>技能面板</b> {Hotkey/ManageSkills} 為複製人指派技能或分配增效卡匣"
 
 #. STRINGS.BUILDING.STATUSITEMS.COLONYLACKSREQUIREDSKILLPERK.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.COLONYLACKSREQUIREDSKILLPERK.NAME"
@@ -9998,12 +9998,12 @@ msgstr "將{0}轉換為{1}\n\n!! <b>警告：系統損壞風險 !!</b>"
 #. STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.COLONY_HAS_BOOSTER_ASSIGNED_COUNT
 msgctxt "STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.COLONY_HAS_BOOSTER_ASSIGNED_COUNT"
 msgid "My colony has {0} Bionic Duplicant(s) with this booster assigned"
-msgstr "我的殖民地已經有 {0} 個仿生複製人被分配到這種加速器"
+msgstr "我的殖民地已經有 {0} 個仿生複製人被分配到這種增效卡匣"
 
 #. STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.COLONY_HAS_BOOSTER_ASSIGNED_NONE
 msgctxt "STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.COLONY_HAS_BOOSTER_ASSIGNED_NONE"
 msgid "My colony has no Bionic Duplicants with this booster assigned"
-msgstr "我的殖民地沒有仿生複製人被分配到這種加速器"
+msgstr "我的殖民地沒有仿生複製人被分配到這種增效卡匣"
 
 #. STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.DESC"
@@ -10013,7 +10013,7 @@ msgstr "焊接台允許複製人製作有幫助的飛尋機回收機器人。"
 #. STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.EFFECT"
 msgid "Produces advanced electronics and bionic <link=\"BIONICUPGRADE\">Boosters</link>.\n\nDuplicants will not fabricate items unless recipes are queued."
-msgstr "生產高階電子產品和仿生<link=\"BOOSTER\">加速器</link>。\n\n佇列中沒有訂單，複製人將不會製作。"
+msgstr "生產高階電子產品和仿生<link=\"BOOSTER\">增效卡匣</link>。\n\n佇列中沒有訂單，複製人將不會製作。"
 
 #. STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.GENERIC_RECIPE_DESCRIPTION
 msgctxt "STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.GENERIC_RECIPE_DESCRIPTION"
@@ -26428,7 +26428,7 @@ msgstr "<link=\"POWER\">電源</link>：仿生複製人使用攜帶式<link=\"EL
 #. STRINGS.CODEX.BIONIC.PARAGRAPH_2
 msgctxt "STRINGS.CODEX.BIONIC.PARAGRAPH_2"
 msgid "<link=\"BOOSTER\">Boosters</link>: Bionic Duplicants gain specialized building usage and increase attributes by installing boosters. These can be added or removed at any time to customize a Bionic Duplicant's career path or mitigate the consequences of bionic bugs.\n\n<link=\"ROLES\">Skills</link>: Performing colony duties helps Bionic Duplicants earn skill points that can be exchanged for skills that may increase attributes and expand their capacity to install <link=\"BOOSTER\">Boosters</link> and <link=\"ELECTROBANK\">Power Banks</link>.\n\n<link=\"MORALE\">Morale</link>: Morale in excess of a Duplicant's expectations will trigger Overjoyed responses that positively affect a variety of colony functions. <link=\"REQUIREMENTCLASSRECBUILDING\">Recreational</link> building usage, <link=\"REQUIREMENTCLASSDECORATION\">attractive buildings </link> that increase <link=\"DECOR\">Decor</link>, and improved <link=\"FOOD\">Foods</link> contribute to higher morale.\n\n<link=\"STRESS\">Stress</link>: When Stress levels reach 100%, Bionic Duplicants will exhibit negative Stress responses that can disrupt work and damage buildings.\n\n<link=\"TECH\">Research</link>: Using <link=\"REQUIREMENTCLASSSCIENCEBUILDING\">science buildings</link> unlocks advanced technologies that increase work efficiency and improve the colony's standard of living.\n\n<i>More information about sustaining Bionic Duplicants' well-being is covered in <link=\"MISCELLANEOUSTIPS\">Tips</link> and <link=\"LESSONS\">Tutorials</link>.</i>\n\n"
-msgstr "<link=\"BOOSTER\">加速器</link>：仿生複製人透過安裝加速器獲得專門的建築使用權並增加屬性。可以隨時添加或刪除這些內容，以客製化仿生複製人的職涯道路或減輕仿生錯誤造成的後果。\n\n<link=\"ROLES\">技能</link>：執行殖民地職責可幫助仿生複製人獲得技能點，這些技能點可兌換為可增加屬性並擴展其安裝<link=\"BOOSTER\">加速器</link>和<link=\"ELECTROBANK\">行動電源</link>的能力。\n\n<link=\"MORALE\">士氣</link>：超過複製人期望的士氣會觸發樂歪反應，從而對各種殖民地功能產生正面影響。使用<link=\"REQUIREMENTCLASSRECBUILDING\">娛樂</link>建築、增加<link=\"DECOR\">裝飾</link>的<link=\"REQUIREMENTCLASSDECORATION\">美觀建築</link>，以及改良的<link=\"FOOD\">食物</link>都有助於提高士氣。\n\n<link=\"STRESS\">壓力</link>：當壓力達到 100% 時，仿生複製人將表現出負面的壓力反應，可能會擾亂工作並損壞建築物。\n\n<link=\"TECH\">研究</link>：使用<link=\"REQUIREMENTCLASSSCIENCEBUILDING\">科學建築</link>可以解鎖先進技術，從而提高工作效率並改善殖民地的生活水準。\n\n<i>有關如何維持仿生複製人福祉的更多資訊，請參閱<link=\"MISCELLANEOUSTIPS\">提示</link>和<link=\"LESSONS\">教學課程</link>。</i>\n\n"
+msgstr "<link=\"BOOSTER\">增效卡匣</link>：仿生複製人透過安裝增效卡匣獲得專門的建築使用權並增加屬性。可以隨時添加或刪除這些內容，以客製化仿生複製人的職涯道路或減輕仿生錯誤造成的後果。\n\n<link=\"ROLES\">技能</link>：執行殖民地職責可幫助仿生複製人獲得技能點，這些技能點可兌換為可增加屬性並擴展其安裝<link=\"BOOSTER\">增效卡匣</link>和<link=\"ELECTROBANK\">行動電源</link>的能力。\n\n<link=\"MORALE\">士氣</link>：超過複製人期望的士氣會觸發樂歪反應，從而對各種殖民地功能產生正面影響。使用<link=\"REQUIREMENTCLASSRECBUILDING\">娛樂</link>建築、增加<link=\"DECOR\">裝飾</link>的<link=\"REQUIREMENTCLASSDECORATION\">美觀建築</link>，以及改良的<link=\"FOOD\">食物</link>都有助於提高士氣。\n\n<link=\"STRESS\">壓力</link>：當壓力達到 100% 時，仿生複製人將表現出負面的壓力反應，可能會擾亂工作並損壞建築物。\n\n<link=\"TECH\">研究</link>：使用<link=\"REQUIREMENTCLASSSCIENCEBUILDING\">科學建築</link>可以解鎖先進技術，從而提高工作效率並改善殖民地的生活水準。\n\n<i>有關如何維持仿生複製人福祉的更多資訊，請參閱<link=\"MISCELLANEOUSTIPS\">提示</link>和<link=\"LESSONS\">教學課程</link>。</i>\n\n"
 
 #. STRINGS.CODEX.BIONIC.SUBTITLE
 msgctxt "STRINGS.CODEX.BIONIC.SUBTITLE"
@@ -26443,7 +26443,7 @@ msgstr "仿生複製人"
 #. STRINGS.CODEX.BIONICBOOSTER.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.BIONICBOOSTER.BODY.CONTAINER1"
 msgid "Boosters are programming modules designed to improve and expand Bionic Duplicants' abilities.\n\nBoosters consume a significant amount of processing power during access and implementation. Bionic Duplicants can expand their capacity for booster installation by accumulating skill points.\n\nBoosters can be combined to grant a broader range of skills, as well as to counteract bionic bugs that may exist in their original programming."
-msgstr "加速器是設計用於提高和擴展仿生複製人能力的程式模組。\n\n加速器在存取和實施過程中消耗大量的處理能力。仿生複製人可以透過累積技能點來擴充其安裝加速器的能力。\n\n加速器可以透過組合來提供更廣泛的技能，並抵消原始程式中可能存在的仿生錯誤。"
+msgstr "增效卡匣是設計用於提高和擴展仿生複製人能力的程式模組。\n\n增效卡匣在存取和實施過程中消耗大量的處理能力。仿生複製人可以透過累積技能點來擴充其安裝增效卡匣的能力。\n\n增效卡匣可以透過組合來提供更廣泛的技能，並抵消原始程式中可能存在的仿生錯誤。"
 
 #. STRINGS.CODEX.BIONICBOOSTER.SUBTITLE
 msgctxt "STRINGS.CODEX.BIONICBOOSTER.SUBTITLE"
@@ -26453,7 +26453,7 @@ msgstr "仿生系統"
 #. STRINGS.CODEX.BIONICBOOSTER.TITLE
 msgctxt "STRINGS.CODEX.BIONICBOOSTER.TITLE"
 msgid "Boosters"
-msgstr "加速器"
+msgstr "增效卡匣"
 
 #. STRINGS.CODEX.BLISSBURST.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.BLISSBURST.BODY.CONTAINER1"
@@ -28283,12 +28283,12 @@ msgstr "職業培訓"
 #. STRINGS.CODEX.HEADERS.ROLE_PERKS_BIONIC
 msgctxt "STRINGS.CODEX.HEADERS.ROLE_PERKS_BIONIC"
 msgid "Booster Installation"
-msgstr "加速器安裝"
+msgstr "增效卡匣安裝"
 
 #. STRINGS.CODEX.HEADERS.ROLE_PERKS_BIONIC_DESC
 msgctxt "STRINGS.CODEX.HEADERS.ROLE_PERKS_BIONIC_DESC"
 msgid "Installing boosters instantly grants bionic Duplicants stat and skill upgrades."
-msgstr "安裝加速器會立即授予仿生複製人屬性和技能升級。"
+msgstr "安裝增效卡匣會立即授予仿生複製人屬性和技能升級。"
 
 #. STRINGS.CODEX.HEADERS.ROLE_PERKS_DESC
 msgctxt "STRINGS.CODEX.HEADERS.ROLE_PERKS_DESC"
@@ -28328,7 +28328,7 @@ msgstr "系統最佳化"
 #. STRINGS.CODEX.HEADERS.UNLOCK_ROLES_BIONIC_DESC
 msgctxt "STRINGS.CODEX.HEADERS.UNLOCK_ROLES_BIONIC_DESC"
 msgid "Optimizations result from strategically combining and stacking installed bionic boosters."
-msgstr "最佳化是透過策略性地組合和堆疊安裝的仿生加速器來實現的。"
+msgstr "最佳化是透過策略性地組合和堆疊安裝的仿生增效卡匣來實現的。"
 
 #. STRINGS.CODEX.HEADERS.UNLOCK_ROLES_DESC
 msgctxt "STRINGS.CODEX.HEADERS.UNLOCK_ROLES_DESC"
@@ -34633,7 +34633,7 @@ msgstr "最佳仿生人"
 #. STRINGS.COLONY_ACHIEVEMENTS.MISC_REQUIREMENTS.MVB_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.MISC_REQUIREMENTS.MVB_DESCRIPTION"
 msgid "Install {0} boosters in a single Bionic Duplicant."
-msgstr "在同一名仿生複製人上安裝 {0} 個加速器。"
+msgstr "在同一名仿生複製人上安裝 {0} 個增效卡匣。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.MISC_REQUIREMENTS.NO_PLANTERBOX
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.MISC_REQUIREMENTS.NO_PLANTERBOX"
@@ -42333,12 +42333,12 @@ msgstr "行動電源"
 #. STRINGS.DUPLICANTS.ATTRIBUTES.BIONICBOOSTERSLOTS.DESC
 msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.BIONICBOOSTERSLOTS.DESC"
 msgid "The number of boosters this Bionic Duplicant can install at once"
-msgstr "這名仿生複製人可以一次安裝的加速器數量。"
+msgstr "這名仿生複製人可以一次安裝的增效卡匣數量。"
 
 #. STRINGS.DUPLICANTS.ATTRIBUTES.BIONICBOOSTERSLOTS.NAME
 msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.BIONICBOOSTERSLOTS.NAME"
 msgid "Booster Slots"
-msgstr "加速器插槽"
+msgstr "增效卡匣插槽"
 
 #. STRINGS.DUPLICANTS.ATTRIBUTES.BIONICOILDELTA.DESC
 msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.BIONICOILDELTA.DESC"
@@ -45548,17 +45548,17 @@ msgstr "礦物材料可以被清洗，以去除表面上存在的<style=\"KKeywo
 #. STRINGS.DUPLICANTS.CHORES.SEEKANDINSTALLUPGRADE.NAME
 msgctxt "STRINGS.DUPLICANTS.CHORES.SEEKANDINSTALLUPGRADE.NAME"
 msgid "Retrieve Booster"
-msgstr "取用加速器"
+msgstr "取用增效卡匣"
 
 #. STRINGS.DUPLICANTS.CHORES.SEEKANDINSTALLUPGRADE.STATUS
 msgctxt "STRINGS.DUPLICANTS.CHORES.SEEKANDINSTALLUPGRADE.STATUS"
 msgid "Retrieving booster"
-msgstr "正在取用加速器"
+msgstr "正在取用增效卡匣"
 
 #. STRINGS.DUPLICANTS.CHORES.SEEKANDINSTALLUPGRADE.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.CHORES.SEEKANDINSTALLUPGRADE.TOOLTIP"
 msgid "This Duplicant is on its way to retrieve a booster that was assigned to them"
-msgstr "這名複製人正在前去取用被分配到的加速器"
+msgstr "這名複製人正在前去取用被分配到的增效卡匣"
 
 #. STRINGS.DUPLICANTS.CHORES.SHOWER.NAME
 msgctxt "STRINGS.DUPLICANTS.CHORES.SHOWER.NAME"
@@ -50633,27 +50633,27 @@ msgstr "<link=\"ASTRONAUTING1\">火箭駕駛</link>"
 #. STRINGS.DUPLICANTS.ROLES.BIONICS_A1.DESCRIPTION
 msgctxt "STRINGS.DUPLICANTS.ROLES.BIONICS_A1.DESCRIPTION"
 msgid "Allows Bionic Duplicants to install an additional booster."
-msgstr "允許仿生複製人安裝額外的加速器。"
+msgstr "允許仿生複製人安裝額外的增效卡匣。"
 
 #. STRINGS.DUPLICANTS.ROLES.BIONICS_A1.NAME
 msgctxt "STRINGS.DUPLICANTS.ROLES.BIONICS_A1.NAME"
 msgid "<link=\"BIONICSA1\">Booster Processing I</link>"
-msgstr "<link=\"BIONICSA1\">加速器處理 I</link>"
+msgstr "<link=\"BIONICSA1\">增效卡匣處理 I</link>"
 
 #. STRINGS.DUPLICANTS.ROLES.BIONICS_A2.DESCRIPTION
 msgctxt "STRINGS.DUPLICANTS.ROLES.BIONICS_A2.DESCRIPTION"
 msgid "Allows Bionic Duplicants to install an additional booster, and increases runspeed."
-msgstr "允許仿生複製人安裝額外的加速器，並提高移動速度。"
+msgstr "允許仿生複製人安裝額外的增效卡匣，並提高移動速度。"
 
 #. STRINGS.DUPLICANTS.ROLES.BIONICS_A2.NAME
 msgctxt "STRINGS.DUPLICANTS.ROLES.BIONICS_A2.NAME"
 msgid "<link=\"BIONICSA2\">Booster Processing II</link>"
-msgstr "<link=\"BIONICSA2\">加速器處理 II</link>"
+msgstr "<link=\"BIONICSA2\">增效卡匣處理 II</link>"
 
 #. STRINGS.DUPLICANTS.ROLES.BIONICS_A3.DESCRIPTION
 msgctxt "STRINGS.DUPLICANTS.ROLES.BIONICS_A3.DESCRIPTION"
 msgid "Allows Bionic Duplicants to install an additional booster, and reduces the runspeed loss experienced while wearing exosuits."
-msgstr "允許仿生複製人安裝額外的加速器，並減少穿著太空衣時的移動速度損失。"
+msgstr "允許仿生複製人安裝額外的增效卡匣，並減少穿著太空衣時的移動速度損失。"
 
 #. STRINGS.DUPLICANTS.ROLES.BIONICS_A3.NAME
 msgctxt "STRINGS.DUPLICANTS.ROLES.BIONICS_A3.NAME"
@@ -50673,7 +50673,7 @@ msgstr "<link=\"BIONICSB1\">改良齒輪 I</link>"
 #. STRINGS.DUPLICANTS.ROLES.BIONICS_B2.DESCRIPTION
 msgctxt "STRINGS.DUPLICANTS.ROLES.BIONICS_B2.DESCRIPTION"
 msgid "Allows Bionic Duplicants to install an additional booster."
-msgstr "允許仿生複製人安裝額外的加速器。"
+msgstr "允許仿生複製人安裝額外的增效卡匣。"
 
 #. STRINGS.DUPLICANTS.ROLES.BIONICS_B2.NAME
 msgctxt "STRINGS.DUPLICANTS.ROLES.BIONICS_B2.NAME"
@@ -50683,7 +50683,7 @@ msgstr "<link=\"BIONICSB2\">改良齒輪 II</link>"
 #. STRINGS.DUPLICANTS.ROLES.BIONICS_B3.DESCRIPTION
 msgctxt "STRINGS.DUPLICANTS.ROLES.BIONICS_B3.DESCRIPTION"
 msgid "Allows Bionic Duplicants to install an additional booster, and eliminates the runspeed loss experienced while wearing exosuits."
-msgstr "允許仿生複製人安裝額外的加速器，並消除穿著太空衣時的移動速度損失。"
+msgstr "允許仿生複製人安裝額外的增效卡匣，並消除穿著太空衣時的移動速度損失。"
 
 #. STRINGS.DUPLICANTS.ROLES.BIONICS_B3.NAME
 msgctxt "STRINGS.DUPLICANTS.ROLES.BIONICS_B3.NAME"
@@ -50703,7 +50703,7 @@ msgstr "<link=\"BIONICSC1\">原理示意</link>"
 #. STRINGS.DUPLICANTS.ROLES.BIONICS_C2.DESCRIPTION
 msgctxt "STRINGS.DUPLICANTS.ROLES.BIONICS_C2.DESCRIPTION"
 msgid "Allows Bionic Duplicants to install an additional booster and increase their runspeed."
-msgstr "允許仿生複製人能安裝額外的加速器，藉此提升移動速度。"
+msgstr "允許仿生複製人能安裝額外的增效卡匣，藉此提升移動速度。"
 
 #. STRINGS.DUPLICANTS.ROLES.BIONICS_C2.NAME
 msgctxt "STRINGS.DUPLICANTS.ROLES.BIONICS_C2.NAME"
@@ -51668,7 +51668,7 @@ msgstr "程式化微晶片： {0}"
 #. STRINGS.DUPLICANTS.STATUSITEMS.BIONICMICROCHIPGENERATION.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.BIONICMICROCHIPGENERATION.TOOLTIP"
 msgid "This Duplicant is programming a microchip for use in <style=\"KKeyword\">Booster</style> production\n\nBionic Duplicants will program microchips while defragmenting\n\nThey will produce 1 microchip every {0}"
-msgstr "這名複製人正在對微晶片進行程式化，使其用於<style=\"KKeyword\">加速器</style>生產\n\n仿生複製人將在重組期間程式化微晶片\n\n他們將會每隔 {0}生產 1 個微晶片"
+msgstr "這名複製人正在對微晶片進行程式化，使其用於<style=\"KKeyword\">增效卡匣</style>生產\n\n仿生複製人將在重組期間程式化微晶片\n\n他們將會每隔 {0}生產 1 個微晶片"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.BIONICOFFLINEINCAPACITATED.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.BIONICOFFLINEINCAPACITATED.NAME"
@@ -54153,7 +54153,7 @@ msgstr "沒有被動屬性升級"
 #. STRINGS.DUPLICANTS.TRAITS.BIONICBUG1.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.BIONICBUG1.SHORT_DESC_TOOLTIP"
 msgid "Does not level up attributes while performing errands\n\nRequires boosters to improve skills"
-msgstr "執行任務時不會升級屬性\n\n需要加速器才能改善技能"
+msgstr "執行任務時不會升級屬性\n\n需要增效卡匣才能改善技能"
 
 #. STRINGS.DUPLICANTS.TRAITS.BIONICBUG2.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.BIONICBUG2.DESC"
@@ -54173,7 +54173,7 @@ msgstr "沒有被動屬性升級"
 #. STRINGS.DUPLICANTS.TRAITS.BIONICBUG2.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.BIONICBUG2.SHORT_DESC_TOOLTIP"
 msgid "Does not level up attributes while performing errands\n\nRequires boosters to improve skills"
-msgstr "執行任務時不會升級屬性\n\n需要加速器才能改善技能"
+msgstr "執行任務時不會升級屬性\n\n需要增效卡匣才能改善技能"
 
 #. STRINGS.DUPLICANTS.TRAITS.BIONICBUG3.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.BIONICBUG3.DESC"
@@ -54193,7 +54193,7 @@ msgstr "沒有被動屬性升級"
 #. STRINGS.DUPLICANTS.TRAITS.BIONICBUG3.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.BIONICBUG3.SHORT_DESC_TOOLTIP"
 msgid "Does not level up attributes while performing errands\n\nRequires boosters to improve skills"
-msgstr "執行任務時不會升級屬性\n\n需要加速器才能改善技能"
+msgstr "執行任務時不會升級屬性\n\n需要增效卡匣才能改善技能"
 
 #. STRINGS.DUPLICANTS.TRAITS.BIONICBUG4.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.BIONICBUG4.DESC"
@@ -54213,7 +54213,7 @@ msgstr "沒有被動屬性升級"
 #. STRINGS.DUPLICANTS.TRAITS.BIONICBUG4.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.BIONICBUG4.SHORT_DESC_TOOLTIP"
 msgid "Does not level up attributes while performing errands\n\nRequires boosters to improve skills"
-msgstr "執行任務時不會升級屬性\n\n需要加速器才能改善技能"
+msgstr "執行任務時不會升級屬性\n\n需要增效卡匣才能改善技能"
 
 #. STRINGS.DUPLICANTS.TRAITS.BIONICBUG5.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.BIONICBUG5.DESC"
@@ -54233,7 +54233,7 @@ msgstr "沒有被動屬性升級"
 #. STRINGS.DUPLICANTS.TRAITS.BIONICBUG5.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.BIONICBUG5.SHORT_DESC_TOOLTIP"
 msgid "Does not level up attributes while performing errands\n\nRequires boosters to improve skills"
-msgstr "執行任務時不會升級屬性\n\n需要加速器才能改善技能"
+msgstr "執行任務時不會升級屬性\n\n需要增效卡匣才能改善技能"
 
 #. STRINGS.DUPLICANTS.TRAITS.BIONICBUG6.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.BIONICBUG6.DESC"
@@ -54253,7 +54253,7 @@ msgstr "沒有被動屬性升級"
 #. STRINGS.DUPLICANTS.TRAITS.BIONICBUG6.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.BIONICBUG6.SHORT_DESC_TOOLTIP"
 msgid "Does not level up attributes while performing errands\n\nRequires boosters to improve skills"
-msgstr "執行任務時不會升級屬性\n\n需要加速器才能改善技能"
+msgstr "執行任務時不會升級屬性\n\n需要增效卡匣才能改善技能"
 
 #. STRINGS.DUPLICANTS.TRAITS.BIONICBUG7.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.BIONICBUG7.DESC"
@@ -54273,7 +54273,7 @@ msgstr "沒有被動屬性升級"
 #. STRINGS.DUPLICANTS.TRAITS.BIONICBUG7.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.BIONICBUG7.SHORT_DESC_TOOLTIP"
 msgid "Does not level up attributes while performing errands\n\nRequires boosters to improve skills"
-msgstr "執行任務時不會升級屬性\n\n需要加速器才能改善技能"
+msgstr "執行任務時不會升級屬性\n\n需要增效卡匣才能改善技能"
 
 #. STRINGS.DUPLICANTS.TRAITS.BOTANISTDOWN.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.BOTANISTDOWN.DESC"
@@ -55803,7 +55803,7 @@ msgstr "在外太空：<b>+10</b> <style=\"KKeyword\">士氣</style>"
 #. STRINGS.DUPLICANTS.TRAITS.STARTING_BIONIC_BOOSTER_SHARED_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTING_BIONIC_BOOSTER_SHARED_DESC_TOOLTIP"
 msgid "Bionic Duplicants use boosters to increase their skills and attributes\n\nBoosters can be crafted at the <link=\"CRAFTINGTABLE\">Crafting Station</link> and <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>\n\nPreinstalled booster effects:"
-msgstr "仿生複製人使用加速器來提高他們的技能和屬性\n\n加速器可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的加速器效果："
+msgstr "仿生複製人使用增效卡匣來提高他們的技能和屬性\n\n增效卡匣可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的增效卡匣效果："
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_ART1.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_ART1.DESC"
@@ -55813,17 +55813,17 @@ msgstr "賦予仿生複製人完美的裝飾技能。"
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_ART1.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_ART1.NAME"
 msgid "<link=\"BOOSTERART1\">Masterworks Art Booster</link>"
-msgstr "<link=\"BOOSTERART1\">大師藝術加速器</link>"
+msgstr "<link=\"BOOSTERART1\">大師藝術增效卡匣</link>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_ART1.SHORT_DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_ART1.SHORT_DESC"
 msgid "Starts with a preinstalled <b><link=\"BOOSTERART1\">Masterworks Art Booster</link></b>"
-msgstr "預先安裝了<b><link=\"BOOSTERART1\">大師藝術加速器</link></b>"
+msgstr "預先安裝了<b><link=\"BOOSTERART1\">大師藝術增效卡匣</link></b>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_ART1.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_ART1.SHORT_DESC_TOOLTIP"
 msgid "Bionic Duplicants use boosters to increase their skills and attributes\n\nBoosters can be crafted at the <link=\"CRAFTINGTABLE\">Crafting Station</link> and <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>\n\nPreinstalled booster effects:"
-msgstr "仿生複製人使用加速器來提高他們的技能和屬性\n\n加速器可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的加速器效果："
+msgstr "仿生複製人使用增效卡匣來提高他們的技能和屬性\n\n增效卡匣可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的增效卡匣效果："
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_CARRY1.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_CARRY1.DESC"
@@ -55833,17 +55833,17 @@ msgstr "賦予仿生複製人更高的承載力和行動能力。"
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_CARRY1.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_CARRY1.NAME"
 msgid "<link=\"BOOSTERCARRY1\">Strength Booster</link>"
-msgstr "<link=\"BOOSTERCARRY1\">力量加速器</link>"
+msgstr "<link=\"BOOSTERCARRY1\">力量增效卡匣</link>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_CARRY1.SHORT_DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_CARRY1.SHORT_DESC"
 msgid "Starts with a preinstalled <b><link=\"BOOSTERCARRY1\">Strength Booster</link></b>"
-msgstr "預先安裝了<b><link=\"BOOSTERCARRY1\">力量加速器</link></b>"
+msgstr "預先安裝了<b><link=\"BOOSTERCARRY1\">力量增效卡匣</link></b>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_CARRY1.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_CARRY1.SHORT_DESC_TOOLTIP"
 msgid "Bionic Duplicants use boosters to increase their skills and attributes\n\nBoosters can be crafted at the <link=\"CRAFTINGTABLE\">Crafting Station</link> and <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>\n\nPreinstalled booster effects:"
-msgstr "仿生複製人使用加速器來提高他們的技能和屬性\n\n加速器可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的加速器效果："
+msgstr "仿生複製人使用增效卡匣來提高他們的技能和屬性\n\n增效卡匣可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的增效卡匣效果："
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_CONSTRUCT1.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_CONSTRUCT1.DESC"
@@ -55853,17 +55853,17 @@ msgstr "賦予仿生複製人快速建造和拆毀其他人無法拆除的建築
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_CONSTRUCT1.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_CONSTRUCT1.NAME"
 msgid "<link=\"BOOSTERCONSTRUCT1\">Construction Booster</link>"
-msgstr "<link=\"BOOSTERCONSTRUCT1\">建築加速器</link>"
+msgstr "<link=\"BOOSTERCONSTRUCT1\">建築增效卡匣</link>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_CONSTRUCT1.SHORT_DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_CONSTRUCT1.SHORT_DESC"
 msgid "Starts with a preinstalled <b><link=\"BOOSTERCONSTRUCT1\">Construction Booster</link></b>"
-msgstr "預先安裝了<b><link=\"BOOSTERCONSTRUCT1\">建築加速器</link></b>"
+msgstr "預先安裝了<b><link=\"BOOSTERCONSTRUCT1\">建築增效卡匣</link></b>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_CONSTRUCT1.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_CONSTRUCT1.SHORT_DESC_TOOLTIP"
 msgid "Bionic Duplicants use boosters to increase their skills and attributes\n\nBoosters can be crafted at the <link=\"CRAFTINGTABLE\">Crafting Station</link> and <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>\n\nPreinstalled booster effects:"
-msgstr "仿生複製人使用加速器來提高他們的技能和屬性\n\n加速器可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的加速器效果："
+msgstr "仿生複製人使用增效卡匣來提高他們的技能和屬性\n\n增效卡匣可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的增效卡匣效果："
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_COOK1.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_COOK1.DESC"
@@ -55873,17 +55873,17 @@ msgstr "賦予仿生複製人美味的專業烹飪技能。"
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_COOK1.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_COOK1.NAME"
 msgid "<link=\"BOOSTERCOOK1\">Grilling Booster</link>"
-msgstr "<link=\"BOOSTERCOOK1\">燒烤加速器</link>"
+msgstr "<link=\"BOOSTERCOOK1\">燒烤增效卡匣</link>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_COOK1.SHORT_DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_COOK1.SHORT_DESC"
 msgid "Starts with a preinstalled <b><link=\"BOOSTERCOOK1\">Grilling Booster</link></b>"
-msgstr "預先安裝了<b><link=\"BOOSTERCOOK1\">燒烤加速器</link></b>"
+msgstr "預先安裝了<b><link=\"BOOSTERCOOK1\">燒烤增效卡匣</link></b>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_COOK1.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_COOK1.SHORT_DESC_TOOLTIP"
 msgid "Bionic Duplicants use boosters to increase their skills and attributes\n\nBoosters can be crafted at the <link=\"CRAFTINGTABLE\">Crafting Station</link> and <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>\n\nPreinstalled booster effects:"
-msgstr "仿生複製人使用加速器來提高他們的技能和屬性\n\n加速器可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的加速器效果："
+msgstr "仿生複製人使用增效卡匣來提高他們的技能和屬性\n\n增效卡匣可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的增效卡匣效果："
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_DIG1.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_DIG1.DESC"
@@ -55893,17 +55893,17 @@ msgstr "賦予仿生複製人挖掘堅硬物體所需的技能。"
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_DIG1.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_DIG1.NAME"
 msgid "<link=\"BOOSTERDIG1\">Digging Booster</link>"
-msgstr "<link=\"BOOSTERDIG1\">挖掘加速器</link>"
+msgstr "<link=\"BOOSTERDIG1\">挖掘增效卡匣</link>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_DIG1.SHORT_DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_DIG1.SHORT_DESC"
 msgid "Starts with a preinstalled <b><link=\"BOOSTERDIG1\">Digging Booster</link></b>"
-msgstr "預先安裝了<b><link=\"BOOSTERDIG1\">挖掘加速器</link></b>"
+msgstr "預先安裝了<b><link=\"BOOSTERDIG1\">挖掘增效卡匣</link></b>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_DIG1.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_DIG1.SHORT_DESC_TOOLTIP"
 msgid "Bionic Duplicants use boosters to increase their skills and attributes\n\nBoosters can be crafted at the <link=\"CRAFTINGTABLE\">Crafting Station</link> and <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>\n\nPreinstalled booster effects:"
-msgstr "仿生複製人使用加速器來提高他們的技能和屬性\n\n加速器可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的加速器效果："
+msgstr "仿生複製人使用增效卡匣來提高他們的技能和屬性\n\n增效卡匣可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的增效卡匣效果："
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_DIG2.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_DIG2.DESC"
@@ -55913,17 +55913,17 @@ msgstr "賦予仿生複製人穿過任何東西所需的挖掘技能。"
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_DIG2.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_DIG2.NAME"
 msgid "<link=\"BOOSTERDIG2\">Extreme Digging Booster</link>"
-msgstr "<link=\"BOOSTERDIG2\">極限挖掘加速器</link>"
+msgstr "<link=\"BOOSTERDIG2\">極限挖掘增效卡匣</link>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_DIG2.SHORT_DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_DIG2.SHORT_DESC"
 msgid "Starts with a preinstalled <b><link=\"BOOSTERDIG2\">Extreme Digging Booster</link></b>"
-msgstr "預先安裝了<b><link=\"BOOSTERDIG2\">極限挖掘加速器</link></b>"
+msgstr "預先安裝了<b><link=\"BOOSTERDIG2\">極限挖掘增效卡匣</link></b>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_DIG2.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_DIG2.SHORT_DESC_TOOLTIP"
 msgid "Bionic Duplicants use boosters to increase their skills and attributes\n\nBoosters can be crafted at the <link=\"CRAFTINGTABLE\">Crafting Station</link> and <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>\n\nPreinstalled booster effects:"
-msgstr "仿生複製人使用加速器來提高他們的技能和屬性\n\n加速器可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的加速器效果："
+msgstr "仿生複製人使用增效卡匣來提高他們的技能和屬性\n\n增效卡匣可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的增效卡匣效果："
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_FARM1.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_FARM1.DESC"
@@ -55933,17 +55933,17 @@ msgstr "賦予仿生複製人無與倫比的耕種和植物分析技能。"
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_FARM1.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_FARM1.NAME"
 msgid "<link=\"BOOSTERFARM1\">Crop Tending Booster</link>"
-msgstr "<link=\"BOOSTERFARM1\">作物照料加速器</link>"
+msgstr "<link=\"BOOSTERFARM1\">作物照料增效卡匣</link>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_FARM1.SHORT_DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_FARM1.SHORT_DESC"
 msgid "Starts with a preinstalled <b><link=\"BOOSTERFARM1\">Crop Tending Booster</link></b>"
-msgstr "預先安裝了<b><link=\"BOOSTERFARM1\">作物照料加速器</link></b>"
+msgstr "預先安裝了<b><link=\"BOOSTERFARM1\">作物照料增效卡匣</link></b>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_FARM1.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_FARM1.SHORT_DESC_TOOLTIP"
 msgid "Bionic Duplicants use boosters to increase their skills and attributes\n\nBoosters can be crafted at the <link=\"CRAFTINGTABLE\">Crafting Station</link> and <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>\n\nPreinstalled booster effects:"
-msgstr "仿生複製人使用加速器來提高他們的技能和屬性\n\n加速器可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的加速器效果："
+msgstr "仿生複製人使用增效卡匣來提高他們的技能和屬性\n\n增效卡匣可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的增效卡匣效果："
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_MEDICINE1.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_MEDICINE1.DESC"
@@ -55953,17 +55953,17 @@ msgstr "賦予仿生複製人執行所有醫治任務的能力。"
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_MEDICINE1.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_MEDICINE1.NAME"
 msgid "<link=\"BOOSTERMEDICINE1\">Advanced Medical Booster</link>"
-msgstr "<link=\"BOOSTERMEDICINE1\">進階醫療加速器</link>"
+msgstr "<link=\"BOOSTERMEDICINE1\">進階醫療增效卡匣</link>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_MEDICINE1.SHORT_DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_MEDICINE1.SHORT_DESC"
 msgid "Starts with a preinstalled <b><link=\"BOOSTERMEDICINE1\">Advanced Medical Booster</link></b>"
-msgstr "預先安裝了<b><link=\"BOOSTERMEDICINE1\">進階醫療加速器</link></b>"
+msgstr "預先安裝了<b><link=\"BOOSTERMEDICINE1\">進階醫療增效卡匣</link></b>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_MEDICINE1.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_MEDICINE1.SHORT_DESC_TOOLTIP"
 msgid "Bionic Duplicants use boosters to increase their skills and attributes\n\nBoosters can be crafted at the <link=\"CRAFTINGTABLE\">Crafting Station</link> and <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>\n\nPreinstalled booster effects:"
-msgstr "仿生複製人使用加速器來提高他們的技能和屬性\n\n加速器可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的加速器效果："
+msgstr "仿生複製人使用增效卡匣來提高他們的技能和屬性\n\n增效卡匣可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的增效卡匣效果："
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_OP1.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_OP1.DESC"
@@ -55973,17 +55973,17 @@ msgstr "賦予仿生複製人隨心所欲調整和焊接所需的技能。"
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_OP1.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_OP1.NAME"
 msgid "<link=\"BOOSTEROP1\">Electrical Engineering Booster</link>"
-msgstr "<link=\"BOOSTEROP1\">電氣工程加速器</link>"
+msgstr "<link=\"BOOSTEROP1\">電氣工程增效卡匣</link>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_OP1.SHORT_DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_OP1.SHORT_DESC"
 msgid "Starts with a preinstalled <b><link=\"BOOSTEROP1\">Electrical Engineering Booster</link></b>"
-msgstr "預先安裝了<b><link=\"BOOSTEROP1\">電氣工程加速器</link></b>"
+msgstr "預先安裝了<b><link=\"BOOSTEROP1\">電氣工程增效卡匣</link></b>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_OP1.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_OP1.SHORT_DESC_TOOLTIP"
 msgid "Bionic Duplicants use boosters to increase their skills and attributes\n\nBoosters can be crafted at the <link=\"CRAFTINGTABLE\">Crafting Station</link> and <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>\n\nPreinstalled booster effects:"
-msgstr "仿生複製人使用加速器來提高他們的技能和屬性\n\n加速器可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的加速器效果："
+msgstr "仿生複製人使用增效卡匣來提高他們的技能和屬性\n\n增效卡匣可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的增效卡匣效果："
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_RANCH1.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_RANCH1.DESC"
@@ -55993,17 +55993,17 @@ msgstr "賦予仿生複製人以各種方式照顧<link=\"CREATURES\">小動物<
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_RANCH1.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_RANCH1.NAME"
 msgid "<link=\"BOOSTERRANCH1\">Ranching Booster</link>"
-msgstr "<link=\"BOOSTERRANCH1\">畜牧加速器</link>"
+msgstr "<link=\"BOOSTERRANCH1\">畜牧增效卡匣</link>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_RANCH1.SHORT_DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_RANCH1.SHORT_DESC"
 msgid "Starts with a preinstalled <b><link=\"BOOSTERRANCH1\">Ranching Booster</link></b>"
-msgstr "預先安裝了<b><link=\"BOOSTERRANCH1\">畜牧加速器</link></b>"
+msgstr "預先安裝了<b><link=\"BOOSTERRANCH1\">畜牧增效卡匣</link></b>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_RANCH1.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_RANCH1.SHORT_DESC_TOOLTIP"
 msgid "Bionic Duplicants use boosters to increase their skills and attributes\n\nBoosters can be crafted at the <link=\"CRAFTINGTABLE\">Crafting Station</link> and <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>\n\nPreinstalled booster effects:"
-msgstr "仿生複製人使用加速器來提高他們的技能和屬性\n\n加速器可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的加速器效果："
+msgstr "仿生複製人使用增效卡匣來提高他們的技能和屬性\n\n增效卡匣可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的增效卡匣效果："
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_SUITS1.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_SUITS1.DESC"
@@ -56013,17 +56013,17 @@ msgstr "使仿生複製人能夠最大限度地提高所裝備的<link=\"EQUIPME
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_SUITS1.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_SUITS1.NAME"
 msgid "<link=\"BOOSTERSUITS1\">Suit Training Booster</link>"
-msgstr "<link=\"BOOSTERSUITS1\">服裝訓練加速器</link>"
+msgstr "<link=\"BOOSTERSUITS1\">服裝訓練增效卡匣</link>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_SUITS1.SHORT_DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_SUITS1.SHORT_DESC"
 msgid "Starts with a preinstalled <b><link=\"BOOSTERSUITS1\">Suit Training Booster</link></b>"
-msgstr "預先安裝了<b><link=\"BOOSTERSUITS1\">服裝訓練加速器</link></b>"
+msgstr "預先安裝了<b><link=\"BOOSTERSUITS1\">服裝訓練增效卡匣</link></b>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_SUITS1.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_SUITS1.SHORT_DESC_TOOLTIP"
 msgid "Bionic Duplicants use boosters to increase their skills and attributes\n\nBoosters can be crafted at the <link=\"CRAFTINGTABLE\">Crafting Station</link> and <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>\n\nPreinstalled booster effects:"
-msgstr "仿生複製人使用加速器來提高他們的技能和屬性\n\n加速器可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的加速器效果："
+msgstr "仿生複製人使用增效卡匣來提高他們的技能和屬性\n\n增效卡匣可以在<link=\"CRAFTINGTABLE\">工藝台</link>和<link=\"ADVANCEDCRAFTINGTABLE\">焊接站</link>製作\n\n預先安裝的增效卡匣效果："
 
 #. STRINGS.DUPLICANTS.TRAITS.STICKERBOMBER.DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STICKERBOMBER.DESC"
@@ -63928,7 +63928,7 @@ msgstr "賦予仿生複製人完美的裝飾技能。"
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_ART1.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_ART1.NAME"
 msgid "<link=\"BOOSTERART1\">Masterworks Art Booster</link>"
-msgstr "<link=\"BOOSTERART1\">大師藝術加速器</link>"
+msgstr "<link=\"BOOSTERART1\">大師藝術增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_CARRY1.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_CARRY1.DESC"
@@ -63938,7 +63938,7 @@ msgstr "賦予仿生複製人更高的承載力和行動能力。"
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_CARRY1.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_CARRY1.NAME"
 msgid "<link=\"BOOSTERCARRY1\">Strength Booster</link>"
-msgstr "<link=\"BOOSTERCARRY1\">力量加速器</link>"
+msgstr "<link=\"BOOSTERCARRY1\">力量增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_CONSTRUCT1.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_CONSTRUCT1.DESC"
@@ -63948,7 +63948,7 @@ msgstr "賦予仿生複製人快速建造和拆毀其他人無法拆除的建築
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_CONSTRUCT1.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_CONSTRUCT1.NAME"
 msgid "<link=\"BOOSTERCONSTRUCT1\">Construction Booster</link>"
-msgstr "<link=\"BOOSTERCONSTRUCT1\">建築加速器</link>"
+msgstr "<link=\"BOOSTERCONSTRUCT1\">建築增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_COOK1.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_COOK1.DESC"
@@ -63958,7 +63958,7 @@ msgstr "賦予仿生複製人美味的專業烹飪技能。"
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_COOK1.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_COOK1.NAME"
 msgid "<link=\"BOOSTERCOOK1\">Grilling Booster</link>"
-msgstr "<link=\"BOOSTERCOOK1\">燒烤加速器</link>"
+msgstr "<link=\"BOOSTERCOOK1\">燒烤增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_DIG1.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_DIG1.DESC"
@@ -63968,7 +63968,7 @@ msgstr "賦予仿生複製人挖掘堅硬物體所需的技能。"
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_DIG1.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_DIG1.NAME"
 msgid "<link=\"BOOSTERDIG1\">Digging Booster</link>"
-msgstr "<link=\"BOOSTERDIG1\">挖掘加速器</link>"
+msgstr "<link=\"BOOSTERDIG1\">挖掘增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_DIG2.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_DIG2.DESC"
@@ -63978,7 +63978,7 @@ msgstr "賦予仿生複製人穿過任何東西所需的挖掘技能。"
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_DIG2.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_DIG2.NAME"
 msgid "<link=\"BOOSTERDIG2\">Extreme Digging Booster</link>"
-msgstr "<link=\"BOOSTERDIG2\">極限挖掘加速器</link>"
+msgstr "<link=\"BOOSTERDIG2\">極限挖掘增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_FARM1.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_FARM1.DESC"
@@ -63988,7 +63988,7 @@ msgstr "賦予仿生複製人無與倫比的耕種和植物分析技能。"
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_FARM1.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_FARM1.NAME"
 msgid "<link=\"BOOSTERFARM1\">Crop Tending Booster</link>"
-msgstr "<link=\"BOOSTERFARM1\">作物照料加速器</link>"
+msgstr "<link=\"BOOSTERFARM1\">作物照料增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_MEDICINE1.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_MEDICINE1.DESC"
@@ -63998,7 +63998,7 @@ msgstr "賦予仿生複製人執行所有醫治任務的能力。"
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_MEDICINE1.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_MEDICINE1.NAME"
 msgid "<link=\"BOOSTERMEDICINE1\">Advanced Medical Booster</link>"
-msgstr "<link=\"BOOSTERMEDICINE1\">進階醫療加速器</link>"
+msgstr "<link=\"BOOSTERMEDICINE1\">進階醫療增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_MOD_SWIM.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_MOD_SWIM.DESC"
@@ -64008,7 +64008,7 @@ msgstr "覆寫仿生複製人的安全協定以啟用游泳能力。\n\n<b>警�
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_MOD_SWIM.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_MOD_SWIM.NAME"
 msgid "<link=\"BOOSTERMODSWIM\">Swim Hack Booster</link>"
-msgstr "<link=\"BOOSTERMODSWIM\">游泳破保加速器</link>"
+msgstr "<link=\"BOOSTERMODSWIM\">游泳破解增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP1.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP1.DESC"
@@ -64018,7 +64018,7 @@ msgstr "賦予仿生複製人隨心所欲調整和焊接所需的技能。"
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP1.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP1.NAME"
 msgid "<link=\"BOOSTEROP1\">Electrical Engineering Booster</link>"
-msgstr "<link=\"BOOSTEROP1\">電氣工程加速器</link>"
+msgstr "<link=\"BOOSTEROP1\">電氣工程增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP2.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP2.DESC"
@@ -64028,7 +64028,7 @@ msgstr "使仿生複製人完全掌握工程技能。"
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP2.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP2.NAME"
 msgid "<link=\"BOOSTEROP2\">Mechatronics Engineering Booster</link>"
-msgstr "<link=\"BOOSTEROP2\">機電工程加速器</link>"
+msgstr "<link=\"BOOSTEROP2\">機電工程增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_PILOT1.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_PILOT1.DESC"
@@ -64038,7 +64038,7 @@ msgstr "賦予仿生複製人親自探索天空所需的專業知識。"
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_PILOT1.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_PILOT1.NAME"
 msgid "<link=\"BOOSTERPILOT1\">Piloting Booster</link>"
-msgstr "<link=\"BOOSTERPILOT1\">駕駛加速器</link>"
+msgstr "<link=\"BOOSTERPILOT1\">駕駛增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_PILOTVANILLA1.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_PILOTVANILLA1.DESC"
@@ -64048,7 +64048,7 @@ msgstr "賦予仿生複製人指揮火箭所需的專業知識。"
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_PILOTVANILLA1.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_PILOTVANILLA1.NAME"
 msgid "<link=\"BOOSTERPILOTVANILLA1\">Rocketry Booster</link>"
-msgstr "<link=\"BOOSTERPILOTVANILLA1\">火箭學加速器</link>"
+msgstr "<link=\"BOOSTERPILOTVANILLA1\">火箭學增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_RANCH1.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_RANCH1.DESC"
@@ -64058,7 +64058,7 @@ msgstr "賦予仿生複製人以各種方式照顧<link=\"CREATURES\">小動物<
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_RANCH1.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_RANCH1.NAME"
 msgid "<link=\"BOOSTERRANCH1\">Ranching Booster</link>"
-msgstr "<link=\"BOOSTERRANCH1\">畜牧加速器</link>"
+msgstr "<link=\"BOOSTERRANCH1\">畜牧增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_RESEARCH1.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_RESEARCH1.DESC"
@@ -64068,7 +64068,7 @@ msgstr "授予仿生複製人研究<link=\"GEYSERS\">間歇泉</link>和其他�
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_RESEARCH1.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_RESEARCH1.NAME"
 msgid "<link=\"BOOSTERRESEARCH1\">Researching Booster</link>"
-msgstr "<link=\"BOOSTERRESEARCH1\">研究加速器</link>"
+msgstr "<link=\"BOOSTERRESEARCH1\">研究增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_RESEARCH2.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_RESEARCH2.DESC"
@@ -64078,7 +64078,7 @@ msgstr "使仿生複製人能夠敏銳地掌握科學和空間研究建築的使
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_RESEARCH2.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_RESEARCH2.NAME"
 msgid "<link=\"BOOSTERRESEARCH2\">Astronomy Booster</link>"
-msgstr "<link=\"BOOSTERRESEARCH2\">天文學加速器</link>"
+msgstr "<link=\"BOOSTERRESEARCH2\">天文學增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_RESEARCH3.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_RESEARCH3.DESC"
@@ -64088,7 +64088,7 @@ msgstr "賦予仿生複製人一種非常務實的科學研究方法。"
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_RESEARCH3.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_RESEARCH3.NAME"
 msgid "<link=\"BOOSTERRESEARCH3\">Applied Sciences Booster</link>"
-msgstr "<link=\"BOOSTERRESEARCH3\">應用科學加速器</link>"
+msgstr "<link=\"BOOSTERRESEARCH3\">應用科學增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_SUITS1.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_SUITS1.DESC"
@@ -64098,7 +64098,7 @@ msgstr "使仿生複製人能夠最大限度地提高所裝備的<link=\"EQUIPME
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_SUITS1.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_SUITS1.NAME"
 msgid "<link=\"BOOSTERSUITS1\">Suit Training Booster</link>"
-msgstr "<link=\"BOOSTERSUITS1\">服裝訓練加速器</link>"
+msgstr "<link=\"BOOSTERSUITS1\">服裝訓練增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_TIDY1.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_TIDY1.DESC"
@@ -64108,12 +64108,12 @@ msgstr "賦予仿生複製人全方位的整理技能，包括從天空中炸掉
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_TIDY1.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_TIDY1.NAME"
 msgid "<link=\"BOOSTERTIDY1\">Tidying Booster</link>"
-msgstr "<link=\"BOOSTERTIDY1\">整理加速器</link>"
+msgstr "<link=\"BOOSTERTIDY1\">整理增效卡匣</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.FABRICATION_SOURCE
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.FABRICATION_SOURCE"
 msgid "This booster can be manufactured at the {0}."
-msgstr "這個加速器可以在{0}製作。"
+msgstr "這個增效卡匣可以在{0}製作。"
 
 #. STRINGS.ITEMS.CARGO_CAPSULE.DESC
 msgctxt "STRINGS.ITEMS.CARGO_CAPSULE.DESC"
@@ -65718,7 +65718,7 @@ msgstr "<link=\"PLASTICGASKET\">塑膠密封墊</link>"
 #. STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.POWER_STATION_TOOLS.DESC
 msgctxt "STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.POWER_STATION_TOOLS.DESC"
 msgid "A specialized <link=\"POWERSTATIONTOOLS\">Microchip</link> created by a professional engineer.\n\nTunes up <link=\"REQUIREMENTCLASSGENERATORTYPE\">Generators</link> to increase their <link=\"POWER\">Power</link> output.\n\nAlso used in the production of <link=\"BOOSTER\">Boosters</link> for Bionic Duplicants."
-msgstr "由專業工程師製造專用的<link=\"POWERSTATIONTOOLS\">微晶片</link>。\n\n用於檢修保養<link=\"REQUIREMENTCLASSGENERATORTYPE\">發電機</link>以增加它們的<link=\"POWER\">電力</link>輸出。\n\n也用於生產給仿生複製人使用的<link=\"BOOSTER\">加速器</link>。"
+msgstr "由專業工程師製造專用的<link=\"POWERSTATIONTOOLS\">微晶片</link>。\n\n用於檢修保養<link=\"REQUIREMENTCLASSGENERATORTYPE\">發電機</link>以增加它們的<link=\"POWER\">電力</link>輸出。\n\n也用於生產給仿生複製人使用的<link=\"BOOSTER\">增效卡匣</link>。"
 
 #. STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.POWER_STATION_TOOLS.NAME
 msgctxt "STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.POWER_STATION_TOOLS.NAME"
@@ -67713,7 +67713,7 @@ msgstr "儲存的地質資料：{0}"
 #. STRINGS.MISC.STATUSITEMS.BIONICEXPLORERBOOSTER.TOOLTIP
 msgctxt "STRINGS.MISC.STATUSITEMS.BIONICEXPLORERBOOSTER.TOOLTIP"
 msgid "<style=\"KKeyword\">Dowsing Boosters</style> retain geodata gathered by Bionic Duplicants\n\nWhen dowsing is complete and this booster is installed in a Bionic Duplicant, a new geyser will be revealed"
-msgstr "<style=\"KKeyword\">探測加速器</style>會保留由仿生複製人收集的地質資料\n\n當安裝在仿生複製人並且探測完成時，就會揭示一個新的間歇泉"
+msgstr "<style=\"KKeyword\">探測增效卡匣</style>會保留由仿生複製人收集的地質資料\n\n當安裝在仿生複製人並且探測完成時，就會揭示一個新的間歇泉"
 
 #. STRINGS.MISC.STATUSITEMS.BIONICEXPLORERBOOSTERREADY.NAME
 msgctxt "STRINGS.MISC.STATUSITEMS.BIONICEXPLORERBOOSTERREADY.NAME"
@@ -68378,7 +68378,7 @@ msgstr "未指派"
 #. STRINGS.MISC.STATUSITEMS.UNASSIGNEDBIONICBOOSTER.TOOLTIP
 msgctxt "STRINGS.MISC.STATUSITEMS.UNASSIGNEDBIONICBOOSTER.TOOLTIP"
 msgid "This booster has not yet been assigned to a Bionic Duplicant"
-msgstr "這個加速器尚未分配給仿生複製人"
+msgstr "這個增效卡匣尚未分配給仿生複製人"
 
 #. STRINGS.MISC.STATUSITEMS.UNDERWATERVENTBEINGDRILLED.NAME
 msgctxt "STRINGS.MISC.STATUSITEMS.UNDERWATERVENTBEINGDRILLED.NAME"
@@ -68508,7 +68508,7 @@ msgstr "床"
 #. STRINGS.MISC.TAGS.BIONICUPGRADE
 msgctxt "STRINGS.MISC.TAGS.BIONICUPGRADE"
 msgid "Boosters"
-msgstr "加速器"
+msgstr "增效卡匣"
 
 #. STRINGS.MISC.TAGS.BLEACHSTONE
 msgctxt "STRINGS.MISC.TAGS.BLEACHSTONE"
@@ -72168,22 +72168,22 @@ msgstr "需要{0}"
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.AGRICULTUREBOOSTER.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.AGRICULTUREBOOSTER.DESC"
 msgid "Enables fabrication of <style=\"KKeyword\">Farming Boosters</style> for Bionic Duplicants at the <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>"
-msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人制造<style=\"KKeyword\">耕種加速器</style>"
+msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人制造<style=\"KKeyword\">耕種增效卡匣</style>"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.AGRICULTUREBOOSTER.NAME
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.AGRICULTUREBOOSTER.NAME"
 msgid "<style=\"KKeyword\">Farming Booster</style> Pattern"
-msgstr "<style=\"KKeyword\">耕種加速器</style>模板"
+msgstr "<style=\"KKeyword\">耕種增效卡匣</style>模板"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.ATHLETICSBOOSTER.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.ATHLETICSBOOSTER.DESC"
 msgid "Enables fabrication of <style=\"KKeyword\">Athletics Boosters</style> for Bionic Duplicants at the <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>"
-msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人制造<style=\"KKeyword\">體能加速器</style>"
+msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人制造<style=\"KKeyword\">體能增效卡匣</style>"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.ATHLETICSBOOSTER.NAME
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.ATHLETICSBOOSTER.NAME"
 msgid "<style=\"KKeyword\">Athletics Booster</style> Pattern"
-msgstr "<style=\"KKeyword\">體能加速器</style>模板"
+msgstr "<style=\"KKeyword\">體能增效卡匣</style>模板"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.ATMO_SUIT.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.ATMO_SUIT.DESC"
@@ -72218,22 +72218,22 @@ msgstr "<style=\"KKeyword\">進階研究</style>點數"
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.BOOSTER_MOD_SWIM.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.BOOSTER_MOD_SWIM.DESC"
 msgid "Enables fabrication of <style=\"KKeyword\">Swim Hack Booster</style> for Bionic Duplicants at the <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>"
-msgstr "可在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人製造<style=\"KKeyword\">游泳破保加速器</style>"
+msgstr "可在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人製造<style=\"KKeyword\">游泳破解增效卡匣</style>"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.BOOSTER_MOD_SWIM.NAME
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.BOOSTER_MOD_SWIM.NAME"
 msgid "<link=\"BOOSTERMODSWIM\">Swim Hack Booster</link>"
-msgstr "<link=\"BOOSTERMODSWIM\">游泳破保加速器</link>"
+msgstr "<link=\"BOOSTERMODSWIM\">游泳破解增效卡匣</link>"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.CONSTRUCTIONBOOSTER.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.CONSTRUCTIONBOOSTER.DESC"
 msgid "Enables fabrication of <style=\"KKeyword\">Building Boosters</style> for Bionic Duplicants at the <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>"
-msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人製造<style=\"KKeyword\">建造加速器</style>"
+msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人製造<style=\"KKeyword\">建造增效卡匣</style>"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.CONSTRUCTIONBOOSTER.NAME
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.CONSTRUCTIONBOOSTER.NAME"
 msgid "<style=\"KKeyword\">Building Booster</style> Pattern"
-msgstr "<style=\"KKeyword\">建造加速器</style>模板"
+msgstr "<style=\"KKeyword\">建造增效卡匣</style>模板"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.CONVEYOR_OVERLAY.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.CONVEYOR_OVERLAY.DESC"
@@ -72248,22 +72248,22 @@ msgstr "<b>運輸概覽</b>"
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.COOKINGBOOSTER.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.COOKINGBOOSTER.DESC"
 msgid "Enables fabrication of <style=\"KKeyword\">Cooking Boosters</style> for Bionic Duplicants at the <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>"
-msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人製造<style=\"KKeyword\">烹飪加速器</style>"
+msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人製造<style=\"KKeyword\">烹飪增效卡匣</style>"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.COOKINGBOOSTER.NAME
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.COOKINGBOOSTER.NAME"
 msgid "<style=\"KKeyword\">Cooking Booster</style> Pattern"
-msgstr "<style=\"KKeyword\">烹飪加速器</style>模板"
+msgstr "<style=\"KKeyword\">烹飪增效卡匣</style>模板"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.CREATIVITYBOOSTER.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.CREATIVITYBOOSTER.DESC"
 msgid "Enables fabrication of <style=\"KKeyword\">Decorating Boosters</style> for Bionic Duplicants at the <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>"
-msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人製造<style=\"KKeyword\">裝飾加速器</style>"
+msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人製造<style=\"KKeyword\">裝飾增效卡匣</style>"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.CREATIVITYBOOSTER.NAME
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.CREATIVITYBOOSTER.NAME"
 msgid "<style=\"KKeyword\">Decorating Booster</style> Pattern"
-msgstr "<style=\"KKeyword\">裝飾加速器</style>模板"
+msgstr "<style=\"KKeyword\">裝飾增效卡匣</style>模板"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.DELTA_RESEARCH_POINT.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.DELTA_RESEARCH_POINT.DESC"
@@ -72318,22 +72318,22 @@ msgstr "<style=\"KKeyword\">環保行動電源</style>模板"
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.EXCAVATIONBOOSTER.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.EXCAVATIONBOOSTER.DESC"
 msgid "Enables fabrication of <style=\"KKeyword\">Digging Boosters</style> for Bionic Duplicants at the <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>"
-msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人制造<style=\"KKeyword\">挖掘加速器</style>"
+msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人制造<style=\"KKeyword\">挖掘增效卡匣</style>"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.EXCAVATIONBOOSTER.NAME
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.EXCAVATIONBOOSTER.NAME"
 msgid "<style=\"KKeyword\">Digging Booster</style> Pattern"
-msgstr "<style=\"KKeyword\">挖掘加速器</style>模板"
+msgstr "<style=\"KKeyword\">挖掘增效卡匣</style>模板"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.EXPLORERBOOSTER.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.EXPLORERBOOSTER.DESC"
 msgid "Enables fabrication of <style=\"KKeyword\">Dowsing Boosters</style> for Bionic Duplicants at the <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>"
-msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人制造<style=\"KKeyword\">探測加速器</style>"
+msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人制造<style=\"KKeyword\">探測增效卡匣</style>"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.EXPLORERBOOSTER.NAME
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.EXPLORERBOOSTER.NAME"
 msgid "<style=\"KKeyword\">Dowsing Booster</style> Pattern"
-msgstr "<style=\"KKeyword\">探測加速器</style>模板"
+msgstr "<style=\"KKeyword\">探測增效卡匣</style>模板"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.FETCHDRONE.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.FETCHDRONE.DESC"
@@ -72368,12 +72368,12 @@ msgstr "<style=\"KKeyword\">密封圈</style>模板"
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.HUSBANDRYBOOSTER.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.HUSBANDRYBOOSTER.DESC"
 msgid "Enables fabrication of <style=\"KKeyword\">Ranching Boosters</style> for Bionic Duplicants at the <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>"
-msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人製造<style=\"KKeyword\">畜牧加速器</style>"
+msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人製造<style=\"KKeyword\">畜牧增效卡匣</style>"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.HUSBANDRYBOOSTER.NAME
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.HUSBANDRYBOOSTER.NAME"
 msgid "<style=\"KKeyword\">Ranching Booster</style> Pattern"
-msgstr "<style=\"KKeyword\">畜牧加速器</style>模板"
+msgstr "<style=\"KKeyword\">畜牧增效卡匣</style>模板"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.JET_SUIT.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.JET_SUIT.DESC"
@@ -72408,22 +72408,22 @@ msgstr "<style=\"KKeyword\">齒輪膏</style>模板"
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.MACHINERYBOOSTER.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.MACHINERYBOOSTER.DESC"
 msgid "Enables fabrication of <style=\"KKeyword\">Operating Boosters</style> for Bionic Duplicants at the <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>"
-msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人製造<style=\"KKeyword\">操作加速器</style>"
+msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人製造<style=\"KKeyword\">操作增效卡匣</style>"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.MACHINERYBOOSTER.NAME
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.MACHINERYBOOSTER.NAME"
 msgid "<style=\"KKeyword\">Operating Booster</style> Pattern"
-msgstr "<style=\"KKeyword\">操作加速器</style>模板"
+msgstr "<style=\"KKeyword\">操作增效卡匣</style>模板"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.MEDICINEBOOSTER.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.MEDICINEBOOSTER.DESC"
 msgid "Enables fabrication of <style=\"KKeyword\">Doctoring Boosters</style> for Bionic Duplicants at the <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>"
-msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人製造<style=\"KKeyword\">醫療加速器</style>"
+msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人製造<style=\"KKeyword\">醫療增效卡匣</style>"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.MEDICINEBOOSTER.NAME
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.MEDICINEBOOSTER.NAME"
 msgid "<style=\"KKeyword\">Doctoring Booster</style> Pattern"
-msgstr "<style=\"KKeyword\">醫療加速器</style>模板"
+msgstr "<style=\"KKeyword\">醫療增效卡匣</style>模板"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.ORBITAL_RESEARCH_POINT.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.ORBITAL_RESEARCH_POINT.DESC"
@@ -72458,12 +72458,12 @@ msgstr "<style=\"KKeyword\">橡膠靴</style>模板"
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.SCIENCEBOOSTER.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.SCIENCEBOOSTER.DESC"
 msgid "Enables fabrication of <style=\"KKeyword\">Researching Boosters</style> for Bionic Duplicants at the <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>"
-msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人製造<style=\"KKeyword\">研究加速器</style>"
+msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人製造<style=\"KKeyword\">研究增效卡匣</style>"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.SCIENCEBOOSTER.NAME
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.SCIENCEBOOSTER.NAME"
 msgid "<style=\"KKeyword\">Researching Booster</style> Pattern"
-msgstr "<style=\"KKeyword\">研究加速器</style>模板"
+msgstr "<style=\"KKeyword\">研究增效卡匣</style>模板"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.SELFCHARGINGELECTROBANK.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.SELFCHARGINGELECTROBANK.DESC"
@@ -72478,12 +72478,12 @@ msgstr "<style=\"KKeyword\">原子行動電源</style>模板"
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.STRENGTHBOOSTER.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.STRENGTHBOOSTER.DESC"
 msgid "Enables fabrication of <style=\"KKeyword\">Strength Boosters</style> for Bionic Duplicants at the <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</link>"
-msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人製造<style=\"KKeyword\">力量加速器</style>"
+msgstr "允許在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>為仿生複製人製造<style=\"KKeyword\">力量增效卡匣</style>"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.STRENGTHBOOSTER.NAME
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.STRENGTHBOOSTER.NAME"
 msgid "<style=\"KKeyword\">Strength Booster</style> Pattern"
-msgstr "<style=\"KKeyword\">力量加速器</style>模板"
+msgstr "<style=\"KKeyword\">力量增效卡匣</style>模板"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.SUITS_OVERLAY.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.SUITS_OVERLAY.DESC"
@@ -92993,7 +92993,7 @@ msgstr "文物"
 #. STRINGS.UI.SANDBOXTOOLS.FILTERS.ENTITIES.BIONICUPGRADES
 msgctxt "STRINGS.UI.SANDBOXTOOLS.FILTERS.ENTITIES.BIONICUPGRADES"
 msgid "Boosters"
-msgstr "加速器"
+msgstr "增效卡匣"
 
 #. STRINGS.UI.SANDBOXTOOLS.FILTERS.ENTITIES.BOTTLES
 msgctxt "STRINGS.UI.SANDBOXTOOLS.FILTERS.ENTITIES.BOTTLES"
@@ -93718,12 +93718,12 @@ msgstr "技能"
 #. STRINGS.UI.SKILLS_SCREEN.ASSIGNED_BOOSTERS_COUNT_LABEL
 msgctxt "STRINGS.UI.SKILLS_SCREEN.ASSIGNED_BOOSTERS_COUNT_LABEL"
 msgid "{0}/{1} boosters assigned"
-msgstr "已指派 {0} / {1} 加速器"
+msgstr "已指派 {0} / {1} 增效卡匣"
 
 #. STRINGS.UI.SKILLS_SCREEN.ASSIGNED_BOOSTERS_HEADER
 msgctxt "STRINGS.UI.SKILLS_SCREEN.ASSIGNED_BOOSTERS_HEADER"
 msgid "{0}'s Boosters"
-msgstr "{0} 的加速器"
+msgstr "{0} 的增效卡匣"
 
 #. STRINGS.UI.SKILLS_SCREEN.ASSIGNED_BOOSTERS_LABEL
 msgctxt "STRINGS.UI.SKILLS_SCREEN.ASSIGNED_BOOSTERS_LABEL"
@@ -93808,12 +93808,12 @@ msgstr "{0} 可使用"
 #. STRINGS.UI.SKILLS_SCREEN.BIONIC_UPGRADE_SLOT_AVAILABLE
 msgctxt "STRINGS.UI.SKILLS_SCREEN.BIONIC_UPGRADE_SLOT_AVAILABLE"
 msgid "No booster installed\n\nAssign a booster from the menu below or craft new boosters at the <link=\"CRAFTINGTABLE\">Crafting Station</link>"
-msgstr "未安裝加速器\n\n從下方選單指派一個加速器，或在<link=\"CRAFTINGTABLE\">工藝台</link>製作新的加速器。"
+msgstr "未安裝增效卡匣\n\n從下方選單指派一個增效卡匣，或在<link=\"CRAFTINGTABLE\">工藝台</link>製作新的增效卡匣。"
 
 #. STRINGS.UI.SKILLS_SCREEN.BIONIC_UPGRADE_SLOT_LOCKED
 msgctxt "STRINGS.UI.SKILLS_SCREEN.BIONIC_UPGRADE_SLOT_LOCKED"
 msgid "This booster slot is unavailable\n\nBooster slots can be unlocked using <style=\"KKeyword\">Skill Points</style>"
-msgstr "此加速器插槽無法使用\n\n加速器插槽可以使用<style=\"KKeyword\">技能點</style>解鎖。"
+msgstr "此增效卡匣插槽無法使用\n\n增效卡匣插槽可以使用<style=\"KKeyword\">技能點</style>解鎖。"
 
 #. STRINGS.UI.SKILLS_SCREEN.BIONIC_UPGRADE_SLOT_UNASSIGN
 msgctxt "STRINGS.UI.SKILLS_SCREEN.BIONIC_UPGRADE_SLOT_UNASSIGN"
@@ -99053,12 +99053,12 @@ msgstr "顯示物品"
 #. STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.BOOSTER_ASSIGNMENT.ALREADY_ASSIGNED
 msgctxt "STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.BOOSTER_ASSIGNMENT.ALREADY_ASSIGNED"
 msgid "{0} currently has <b>{1} of this type</b> of booster assigned"
-msgstr "{0} 目前被指派<b>{1}類型</b>的加速器"
+msgstr "{0} 目前被指派<b>{1}類型</b>的增效卡匣"
 
 #. STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.BOOSTER_ASSIGNMENT.AVAILABLE_SLOTS
 msgctxt "STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.BOOSTER_ASSIGNMENT.AVAILABLE_SLOTS"
 msgid "{0} has <b>{1}/{2}</b> booster slots assigned"
-msgstr "{0} 有<b>{1} / {2}</b> 的加速器插槽已被使用"
+msgstr "{0} 有<b>{1} / {2}</b> 的增效卡匣插槽已被使用"
 
 #. STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.BOOSTER_ASSIGNMENT.HEADER_ATTRIBUTES
 msgctxt "STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.BOOSTER_ASSIGNMENT.HEADER_ATTRIBUTES"
@@ -99073,12 +99073,12 @@ msgstr "<b>啟用</b>："
 #. STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.BOOSTER_ASSIGNMENT.NO_AVAILABLE_SLOTS
 msgctxt "STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.BOOSTER_ASSIGNMENT.NO_AVAILABLE_SLOTS"
 msgid "<color=#ffff00ff>All of {0}'s booster slots are currently assigned: <b>{1}/{2}</b></color>"
-msgstr "<color=#ffff00ff>所有 {0} 的加速器插槽已經被指派 <b>{1} / {2}</b></color>"
+msgstr "<color=#ffff00ff>所有 {0} 的增效卡匣插槽已經被指派 <b>{1} / {2}</b></color>"
 
 #. STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.BOOSTER_ASSIGNMENT.NOT_ALREADY_ASSIGNED
 msgctxt "STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.BOOSTER_ASSIGNMENT.NOT_ALREADY_ASSIGNED"
 msgid "{0} does not currently have this type of booster assigned"
-msgstr "{0} 目前未被指派這一類型的加速器"
+msgstr "{0} 目前未被指派這一類型的增效卡匣"
 
 #. STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.CURRENT_WATTAGE_LABEL
 msgctxt "STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.CURRENT_WATTAGE_LABEL"
@@ -99098,12 +99098,12 @@ msgstr "當前功率：<color=#GG2222>離線{0}</color>"
 #. STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.TITLE
 msgctxt "STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.TITLE"
 msgid "Boosters"
-msgstr "加速器"
+msgstr "增效卡匣"
 
 #. STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.TOOLTIP.CURRENT_WATTAGE
 msgctxt "STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.TOOLTIP.CURRENT_WATTAGE"
 msgid "Wattage is the amount of energy that this Duplicant's bionic parts consume per second\n\nInstalled boosters consume wattage while active"
-msgstr "功率是這名複製人的仿生部件每秒消耗的能量\n\n安裝的加速器啟用時會提高功率"
+msgstr "功率是這名複製人的仿生部件每秒消耗的能量\n\n安裝的增效卡匣啟用時會提高功率"
 
 #. STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.TOOLTIP.SLOT_ASSIGNED
 msgctxt "STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.TOOLTIP.SLOT_ASSIGNED"
@@ -99113,7 +99113,7 @@ msgstr "這個<style=\"KKeyword\">{0}</style>在這名複製人可及時將會�
 #. STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.TOOLTIP.SLOT_EMPTY
 msgctxt "STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.TOOLTIP.SLOT_EMPTY"
 msgid "No booster installed\n\nClick to view available boosters"
-msgstr "未安裝加速器\n\n點選以檢視可用的加速器"
+msgstr "未安裝增效卡匣\n\n點選以檢視可用的增效卡匣"
 
 #. STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.TOOLTIP.SLOT_INSTALLED
 msgctxt "STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.TOOLTIP.SLOT_INSTALLED"
@@ -99123,7 +99123,7 @@ msgstr "{0}"
 #. STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.TOOLTIP.SLOT_LOCKED
 msgctxt "STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.TOOLTIP.SLOT_LOCKED"
 msgid "This booster slot is unavailable\n\nBooster slots can be unlocked using <style=\"KKeyword\">Skill Points</style>"
-msgstr "這個加速器插槽不可用\n\n加速器插槽必須使用<style=\"KKeyword\">技能點</style>才能解鎖"
+msgstr "這個增效卡匣插槽不可用\n\n增效卡匣插槽必須使用<style=\"KKeyword\">技能點</style>才能解鎖"
 
 #. STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.UPGRADE_SLOT_ASSIGNED
 msgctxt "STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.UPGRADE_SLOT_ASSIGNED"
