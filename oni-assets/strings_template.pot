@@ -4510,7 +4510,7 @@ msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_UNDERWATER_CRITTER_CONDO_AQUATIC.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_UNDERWATER_CRITTER_CONDO_AQUATIC.DESC"
-msgid "Some say the periscope has seen things."
+msgid "Its periscope has seen things that no Duplicant could possibly understand."
 msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_UNDERWATER_CRITTER_CONDO_AQUATIC.NAME
@@ -18673,6 +18673,31 @@ msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.NAME"
 msgid "Unknown Duplicant"
 msgstr ""
 
+#. STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_DISABLE
+msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_DISABLE"
+msgid "Disable Delivery"
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_DISABLE_TOOLTIP
+msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_DISABLE_TOOLTIP"
+msgid "Stop Duplicants from delivering the requested items"
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_ENABLE
+msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_ENABLE"
+msgid "Enable Delivery"
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_ENABLE_TOOLTIP
+msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_ENABLE_TOOLTIP"
+msgid "Allow Duplicants to deliver the requested items"
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_HEADER
+msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_HEADER"
+msgid "Delivery Menu"
+msgstr ""
+
 #. STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_B.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_B.DESC"
 msgid ""
@@ -21986,6 +22011,21 @@ msgstr ""
 #. STRINGS.BUILDINGS.PREFABS.RUBBERMAKER.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.RUBBERMAKER.NAME"
 msgid "<link=\"RUBBERMAKER\">Vulcanizer</link>"
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.RUBBERTILE.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.RUBBERTILE.DESC"
+msgid "Rubber tiles are designed to resist damage from liquid pressure."
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.RUBBERTILE.EFFECT
+msgctxt "STRINGS.BUILDINGS.PREFABS.RUBBERTILE.EFFECT"
+msgid "Used to build the walls and floors of rooms.\n\nProvides an anti-slip work surface and effective <link=\"HEAT\">Insulation</link>."
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.RUBBERTILE.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.RUBBERTILE.NAME"
+msgid "<link=\"RUBBERTILE\">Rubber Tile</link>"
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.RUSTDEOXIDIZER.DESC
@@ -34220,7 +34260,7 @@ msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_A_HIDDEN
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_A_HIDDEN"
-msgid "This requirement will be visible once discovered"
+msgid "More exploration is required\n\nJust keep swimming..."
 msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B
@@ -34230,7 +34270,7 @@ msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B_HIDDEN
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B_HIDDEN"
-msgid "This requirement will be visible once discovered"
+msgid "More exploration is required\n\nJust keep swimming..."
 msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C
@@ -34240,7 +34280,7 @@ msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C_HIDDEN
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C_HIDDEN"
-msgid "This requirement will be visible once discovered"
+msgid "More exploration is required\n\nJust keep swimming..."
 msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_A
@@ -34295,7 +34335,7 @@ msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_DESCRIPTION"
-msgid "Success! My Duplicants harvested [AMOUNT1] pearls to offer to our potential future crewmate.\n\nWe now have [AMOUNT2] new gasket to use as needed."
+msgid "Success! My Duplicants harvested {AMOUNT1} pearls to offer to our potential future crewmate.\n\nWe now have {AMOUNT2} new gasket to use as needed."
 msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_TITLE
@@ -34305,7 +34345,7 @@ msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_DESCRIPTION"
-msgid "Success! We have produced [AMOUNT1] sushi to share with the survivor Duplicant as a gesture of goodwill.\n\nWe now have [AMOUNT2] new gasket to use as needed."
+msgid "Success! We have produced {AMOUNT1} sushi to share with the survivor Duplicant as a gesture of goodwill.\n\nWe now have {AMOUNT2} new gasket to use as needed."
 msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_TITLE
@@ -34315,7 +34355,7 @@ msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_DESCRIPTION"
-msgid "Success! We have procured [AMOUNT1] caviar to offer to our splashy neighbour.\n\nWe now have [AMOUNT2] new gasket to use as needed."
+msgid "Success! We have procured {AMOUNT1} caviar to offer to our splashy neighbour.\n\nWe now have {AMOUNT2} new gasket to use as needed."
 msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_TITLE
@@ -34325,7 +34365,7 @@ msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_A_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_A_DESCRIPTION"
-msgid "My Duplicants found the survivor exploring the Reef biome. She seems fascinated by the Clampum, and offered to trade us [AMOUNT1] gasket for [AMOUNT2] of its pearls.\n\nI must enable delivery to ensure we keep our end of this bargain."
+msgid "My Duplicants found the survivor exploring the Reef biome. She seems fascinated by the Clampum.\n\nShe offered to trade us {AMOUNT1} Gasket and 2 Flue Coral seeds for {AMOUNT2} of its pearls.\n\nI must enable delivery to ensure we keep our end of this bargain."
 msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_A_TITLE
@@ -34335,7 +34375,7 @@ msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_B_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_B_DESCRIPTION"
-msgid "My Duplicants found the survivor exploring the Kelp Forest biome. She appears to be hungry. My Duplicants offered to exchange [AMOUNT1] of sushi for [AMOUNT2] gasket, and she agreed.\n\nI must enable delivery to ensure she receives our package."
+msgid "My Duplicants found the survivor exploring the Kelp Forest biome. She appears to be hungry.\n\nMy Duplicants offered to exchange {AMOUNT1} of sushi for {AMOUNT2} Gasket and 2 Gum Palm seeds, and she agreed.\n\nI must enable delivery to ensure she receives our package."
 msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_B_TITLE
@@ -34345,7 +34385,7 @@ msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_C_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_C_DESCRIPTION"
-msgid "My Duplicants found the survivor exploring the Abyss biome. She has been observing our machinery and seems particularly intrigued by caviar.\n\nWe have agreed to exchange [AMOUNT1] of caviar for [AMOUNT2] gasket.\n\nI must enable delivery to guarantee its fulfilment."
+msgid "My Duplicants found the survivor exploring the Abyss biome. She has been observing our machinery and seems particularly intrigued by caviar.\n\nWe have agreed to exchange {AMOUNT1} of caviar for {AMOUNT2} Gasket.\n\nI must enable delivery to guarantee its fulfilment."
 msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_C_TITLE
@@ -38090,7 +38130,7 @@ msgstr ""
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.DESC"
-msgid "Shine Bugs emit a soft <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
+msgid "Shine Bugs emit a soft <link=\"LIGHT\">Light</link> when <link=\"CREATURES::GUIDE::MOOD\">Happy</link>, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
 msgstr ""
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.EGG_NAME
@@ -38140,7 +38180,7 @@ msgstr ""
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLUE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLUE.DESC"
-msgid "Azure Bugs emit a soft blue <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
+msgid "Azure Bugs emit a soft blue <link=\"LIGHT\">Light</link> when <link=\"CREATURES::GUIDE::MOOD\">Happy</link>, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
 msgstr ""
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLUE.EGG_NAME
@@ -38165,7 +38205,7 @@ msgstr ""
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_CRYSTAL.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_CRYSTAL.DESC"
-msgid "Radiant Bugs emit an extra-bright <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
+msgid "Radiant Bugs emit an extra-bright <link=\"LIGHT\">Light</link> when <link=\"CREATURES::GUIDE::MOOD\">Happy</link>, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
 msgstr ""
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_CRYSTAL.EGG_NAME
@@ -38190,7 +38230,7 @@ msgstr ""
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_ORANGE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_ORANGE.DESC"
-msgid "Sun Bugs emit a soft orange <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
+msgid "Sun Bugs emit a soft orange <link=\"LIGHT\">Light</link> when <link=\"CREATURES::GUIDE::MOOD\">Happy</link>, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
 msgstr ""
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_ORANGE.EGG_NAME
@@ -38215,7 +38255,7 @@ msgstr ""
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PINK.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PINK.DESC"
-msgid "Coral Bugs emit a soft pink <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
+msgid "Coral Bugs emit a soft pink <link=\"LIGHT\">Light</link> when <link=\"CREATURES::GUIDE::MOOD\">Happy</link>, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
 msgstr ""
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PINK.EGG_NAME
@@ -38240,7 +38280,7 @@ msgstr ""
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PURPLE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PURPLE.DESC"
-msgid "Royal Bugs emit a soft purple <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
+msgid "Royal Bugs emit a soft purple <link=\"LIGHT\">Light</link> when <link=\"CREATURES::GUIDE::MOOD\">Happy</link>, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
 msgstr ""
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PURPLE.EGG_NAME
@@ -38630,7 +38670,7 @@ msgstr ""
 
 #. STRINGS.CREATURES.SPECIES.PARROTFISH.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.PARROTFISH.DESC"
-msgid "Beakons are attractive aquatic critters who enjoy consuming <link=\"OXYGEN\">Oxygen</link>.\n\nThese bioluminescent fish feast on <link=\"PHOSPHORITE\">Phosphorite</link> and <link=\"PLANKTONCORAL\">Starnacle</link>, and excrete <link=\"LIME\">Lime</link>."
+msgid "Beakons are aquatic critters who feast on <link=\"PHOSPHORITE\">Phosphorite</link> and <link=\"PLANKTONCORAL\">Starnacle</link>, and excrete <link=\"LIME\">Lime</link>.\n\nThey produce <link=\"LIGHT\">Light</link> when <link=\"CREATURES::GUIDE::MOOD\">Happy</link>, and enjoy consuming <link=\"OXYGEN\">Oxygen</link>."
 msgstr ""
 
 #. STRINGS.CREATURES.SPECIES.PARROTFISH.EGG_NAME
@@ -39080,7 +39120,7 @@ msgstr ""
 
 #. STRINGS.CREATURES.SPECIES.SEATURTLE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEATURTLE.DESC"
-msgid "Orehulls are shy aquatic critters that eat <link=\"SEAFAIRYSPECIES\">Kelpoles</link>.\n\nThey can be sheared for <link=\"IRONORE\">Iron Ore</link>."
+msgid "Orehulls are shy aquatic critters that eat <link=\"SEAFAIRYSPECIES\">Kelpoles</link> and excrete <link=\"TOXICSAND\">Polluted Dirt</link>.\n\nThey can be sheared for <link=\"IRONORE\">Iron Ore</link>."
 msgstr ""
 
 #. STRINGS.CREATURES.SPECIES.SEATURTLE.EGG_NAME
@@ -40236,6 +40276,11 @@ msgstr ""
 #. STRINGS.CREATURES.STATS.HAPPINESS.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATS.HAPPINESS.TOOLTIP"
 msgid "High <style=\"KKeyword\">Happiness</style> increases a critter's productivity and indirectly improves their <style=\"KKeyword\">Egg</style> laying rates\n\nIt also provides the satisfaction in knowing they're living a good little critter life"
+msgstr ""
+
+#. STRINGS.CREATURES.STATS.HAPPINESS.TOOLTIP_LUX
+msgctxt "STRINGS.CREATURES.STATS.HAPPINESS.TOOLTIP_LUX"
+msgid "High <style=\"KKeyword\">Happiness</style> increases a critter's productivity and enables them to produce <style=\"KKeyword\">Light</style>\n\nIt also indirectly improves their <style=\"KKeyword\">Egg</style> laying rates"
 msgstr ""
 
 #. STRINGS.CREATURES.STATS.HEALTH.NAME
@@ -41773,6 +41818,26 @@ msgctxt "STRINGS.CREATURES.STATUSITEMS.PUFFER_VENTING.TOOLTIP"
 msgid "This critter is releasing stored <style=\"KKeyword\">Oxygen</style> into the surrounding environment\n\nWhat a relief"
 msgstr ""
 
+#. STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_APPROACH.NAME
+msgctxt "STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_APPROACH.NAME"
+msgid "Going to Clampum"
+msgstr ""
+
+#. STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_APPROACH.TOOLTIP
+msgctxt "STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_APPROACH.TOOLTIP"
+msgid "This critter is going to investigate a closed <style=\"KKeyword\">Clampum</style>\n\nWhat's that plant hiding?"
+msgstr ""
+
+#. STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_ATTACK.NAME
+msgctxt "STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_ATTACK.NAME"
+msgid "Attacking Clampum"
+msgstr ""
+
+#. STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_ATTACK.TOOLTIP
+msgctxt "STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_ATTACK.TOOLTIP"
+msgid "This critter is attacking a closed <style=\"KKeyword\">Clampum</style>\n\nIt doesn't like things being hidden"
+msgstr ""
+
 #. STRINGS.CREATURES.STATUSITEMS.READYFORHARVEST.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.READYFORHARVEST.NAME"
 msgid "Harvest Ready"
@@ -42160,17 +42225,17 @@ msgstr ""
 
 #. STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.INTERACTING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.INTERACTING.TOOLTIP"
-msgid "This critter is relaxing in a water fort\n\nIt's like a mini vacation!"
+msgid "This critter is relaxing in an aquatic critter condo\n\nIt's like a mini vacation!"
 msgstr ""
 
 #. STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.MOVINGTO.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.MOVINGTO.NAME"
-msgid "Heading for Water Fort"
+msgid "Heading for Aquatic Critter Condo"
 msgstr ""
 
 #. STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.MOVINGTO.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.MOVINGTO.TOOLTIP"
-msgid "This critter is making its way to an unoccupied water fort"
+msgid "This critter is making its way to an unoccupied aquatic critter condo"
 msgstr ""
 
 #. STRINGS.CREATURES.STATUSITEMS.UNKNOWNMUTATION.NAME
@@ -48688,6 +48753,16 @@ msgctxt "STRINGS.DUPLICANTS.MODIFIERS.NARCOLEPTICSLEEP.TOOLTIP"
 msgid "This Duplicant just needs to rest their eyes for a second"
 msgstr ""
 
+#. STRINGS.DUPLICANTS.MODIFIERS.NEARDEATHEXPERIENCE.NAME
+msgctxt "STRINGS.DUPLICANTS.MODIFIERS.NEARDEATHEXPERIENCE.NAME"
+msgid "Near-Death Experience"
+msgstr ""
+
+#. STRINGS.DUPLICANTS.MODIFIERS.NEARDEATHEXPERIENCE.TOOLTIP
+msgctxt "STRINGS.DUPLICANTS.MODIFIERS.NEARDEATHEXPERIENCE.TOOLTIP"
+msgid "This Duplicant recently recovered from being incapacitated\n\nIt was deeply unsettling"
+msgstr ""
+
 #. STRINGS.DUPLICANTS.MODIFIERS.NEWCREWARRIVAL.NAME
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.NEWCREWARRIVAL.NAME"
 msgid "New Friend"
@@ -51310,7 +51385,7 @@ msgstr ""
 
 #. STRINGS.DUPLICANTS.STATS.BREATH.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATS.BREATH.TOOLTIP"
-msgid "A Duplicant with zero remaining <style=\"KKeyword\">Breath</style> will die immediately\n\nDuplicants can increase their <style=\"KKeyword\">Maximum Breath</style> by learning the <style=\"KKeyword\">Basic Swimming</style> skill"
+msgid "A Duplicant with zero remaining <style=\"KKeyword\">Breath</style> will become incapacitated and die unless they are rescued\n\nDuplicants can increase their <style=\"KKeyword\">Maximum Breath</style> by learning the <style=\"KKeyword\">Basic Swimming</style> skill"
 msgstr ""
 
 #. STRINGS.DUPLICANTS.STATS.CALORIES.NAME
@@ -61763,6 +61838,11 @@ msgctxt "STRINGS.EQUIPMENT.PREFABS.DRYSUIT.RECIPE_DESC"
 msgid "Protects the wearer from  <style=\"KKeyword\">Soggy Feet</style> and <style=\"KKeyword\">Sopping Wet</style> effects."
 msgstr ""
 
+#. STRINGS.EQUIPMENT.PREFABS.DRYSUIT.RECIPE_DESC_DLC3
+msgctxt "STRINGS.EQUIPMENT.PREFABS.DRYSUIT.RECIPE_DESC_DLC3"
+msgid "Protects the wearer from  <style=\"KKeyword\">Soggy Feet</style> and <style=\"KKeyword\">Sopping Wet</style> effects.\n\nEnables Bionic Duplicants to cross waist-deep pools without <style=\"KKeyword\">Liquid Exposure</style> damage."
+msgstr ""
+
 #. STRINGS.EQUIPMENT.PREFABS.EQUIPPABLEBALLOON.DESC
 msgctxt "STRINGS.EQUIPMENT.PREFABS.EQUIPPABLEBALLOON.DESC"
 msgid "A floating friend to reassure my Duplicants they are so very, very clever."
@@ -62293,6 +62373,11 @@ msgctxt "STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.EFFECT"
 msgid "Protects the wearer from <style=\"KKeyword\">Soggy Feet</style> and <style=\"KKeyword\">Slippery</style> floors."
 msgstr ""
 
+#. STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.EFFECT_DLC3
+msgctxt "STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.EFFECT_DLC3"
+msgid "Protects the wearer from <style=\"KKeyword\">Soggy Feet</style> and <style=\"KKeyword\">Slippery</style> floors.\n\nEnables Bionic Duplicants to cross small puddles without <style=\"KKeyword\">Liquid Exposure</style> damage."
+msgstr ""
+
 #. STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.GENERICNAME
 msgctxt "STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.GENERICNAME"
 msgid "Boots"
@@ -62306,6 +62391,11 @@ msgstr ""
 #. STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.RECIPE_DESC
 msgctxt "STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.RECIPE_DESC"
 msgid "Protects the wearer from <style=\"KKeyword\">Soggy Feet</style> and <style=\"KKeyword\">Slippery</style> floors."
+msgstr ""
+
+#. STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.RECIPE_DESC_DLC3
+msgctxt "STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.RECIPE_DESC_DLC3"
+msgid "Protects the wearer from <style=\"KKeyword\">Soggy Feet</style> and <style=\"KKeyword\">Slippery</style> floors.\n\nEnables Bionic Duplicants to cross small puddles without <style=\"KKeyword\">Liquid Exposure</style> damage."
 msgstr ""
 
 #. STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.REPAIR_WORN_DESC
@@ -68028,6 +68118,26 @@ msgctxt "STRINGS.MISC.STATUSITEMS.MARKEDFORMOVE.TOOLTIP"
 msgid "Waiting for a Duplicant to move this object"
 msgstr ""
 
+#. STRINGS.MISC.STATUSITEMS.MINNOWPOIDEHYDRATEDSTATUS.NAME
+msgctxt "STRINGS.MISC.STATUSITEMS.MINNOWPOIDEHYDRATEDSTATUS.NAME"
+msgid "Insufficient Liquid"
+msgstr ""
+
+#. STRINGS.MISC.STATUSITEMS.MINNOWPOIDEHYDRATEDSTATUS.TOOLTIP
+msgctxt "STRINGS.MISC.STATUSITEMS.MINNOWPOIDEHYDRATEDSTATUS.TOOLTIP"
+msgid "This area was once a <style=\"KKeyword\">Liquid</style> pool occupied by an unknown survivor Duplicant\n\nIts occupant will return when the area is sufficiently flooded"
+msgstr ""
+
+#. STRINGS.MISC.STATUSITEMS.MINNOWPOIDELIVERYPENDING.NAME
+msgctxt "STRINGS.MISC.STATUSITEMS.MINNOWPOIDELIVERYPENDING.NAME"
+msgid "Awaiting Delivery"
+msgstr ""
+
+#. STRINGS.MISC.STATUSITEMS.MINNOWPOIDELIVERYPENDING.TOOLTIP
+msgctxt "STRINGS.MISC.STATUSITEMS.MINNOWPOIDELIVERYPENDING.TOOLTIP"
+msgid "The occupant of this site is patiently awaiting deliveries"
+msgstr ""
+
 #. STRINGS.MISC.STATUSITEMS.MOVESTORAGEUNREACHABLE.NAME
 msgctxt "STRINGS.MISC.STATUSITEMS.MOVESTORAGEUNREACHABLE.NAME"
 msgid "Unreachable Move"
@@ -72445,7 +72555,7 @@ msgstr ""
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.RUBBER_BOOTS.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.RUBBER_BOOTS.DESC"
-msgid "Enables fabrication of <style=\"KKeyword\">Rubber Boots</style> at the <link=\"CRAFTINGTABLE\">Crafting Station</link>"
+msgid "Enables fabrication of <style=\"KKeyword\">Rubber Boots</style> at the <link=\"CLOTHINGFABRICATOR\">Textile Loom</link>"
 msgstr ""
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.RUBBER_BOOTS.NAME
@@ -75200,7 +75310,7 @@ msgstr ""
 
 #. STRINGS.ROOMS.TYPES.CREATUREPEN.TOOLTIP
 msgctxt "STRINGS.ROOMS.TYPES.CREATUREPEN.TOOLTIP"
-msgid "A stable enables Grooming Station, Critter Condo, Critter Fountain, Shearing Station and Milking Station use"
+msgid "A stable enables both land-based and aquatic Grooming Station, Critter Condo, Critter Fountain, Shearing Station and Milking Station use"
 msgstr ""
 
 #. STRINGS.ROOMS.TYPES.FARM.DESCRIPTION
@@ -77828,6 +77938,11 @@ msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNDERWATER_DRILL_DIAMOND_CONSUMPTIO
 msgid "This building requires <style=\"KKeyword\">Diamond</style> to operate, consuming it at a rate of {Rate} while in use"
 msgstr ""
 
+#. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNDERWATERVENT_SHEARING
+msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNDERWATERVENT_SHEARING"
+msgid "This vent produces {0} which can be harvested using a <link=\"UNDERWATERVENTDRILL\">Marine Drill</link>"
+msgstr ""
+
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNSTABLEENTOMBDEFENSEOFF
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNSTABLEENTOMBDEFENSEOFF"
 msgid "This plant's ability to unentomb itself from <style=\"KKeyword\">Unstable</style> elements is currently disabled"
@@ -77861,6 +77976,11 @@ msgstr ""
 #. STRINGS.UI.BUILDINGEFFECTS.UNDERWATER_DRILL_DIAMOND_CONSUMPTION
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.UNDERWATER_DRILL_DIAMOND_CONSUMPTION"
 msgid "<link=\"DIAMOND\">Diamond</link>: {Rate}"
+msgstr ""
+
+#. STRINGS.UI.BUILDINGEFFECTS.UNDERWATERVENT_SHEARING
+msgctxt "STRINGS.UI.BUILDINGEFFECTS.UNDERWATERVENT_SHEARING"
+msgid "<link=\"SULFUR\">Sulfur</link> Build-up: {0}"
 msgstr ""
 
 #. STRINGS.UI.BUILDINGEFFECTS.UNSTABLEENTOMBDEFENSEOFF
@@ -84533,14 +84653,24 @@ msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_INSTALLED_LABEL"
 msgid "Installed"
 msgstr ""
 
-#. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_LABEL
-msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_LABEL"
+#. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_PURCHASE_LABEL
+msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_PURCHASE_LABEL"
 msgid "Available Now"
 msgstr ""
 
-#. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_TOOLTIP
-msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_TOOLTIP"
-msgid "This DLC is available now!"
+#. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_PURCHASE_TOOLTIP
+msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_PURCHASE_TOOLTIP"
+msgid "<color=#ffff00ff><b>Click to view this DLC in the store</b></color>"
+msgstr ""
+
+#. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_WISHLIST_LABEL
+msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_WISHLIST_LABEL"
+msgid "Wishlist Now"
+msgstr ""
+
+#. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_WISHLIST_TOOLTIP
+msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_WISHLIST_TOOLTIP"
+msgid "<color=#ffff00ff><b>Click to view this DLC in the store</b></color>"
 msgstr ""
 
 #. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_OWNED_NOTINSTALLED_LABEL
@@ -84666,16 +84796,6 @@ msgstr ""
 #. STRINGS.UI.FRONTEND.MAINMENU.TRANSLATIONS
 msgctxt "STRINGS.UI.FRONTEND.MAINMENU.TRANSLATIONS"
 msgid "TRANSLATIONS"
-msgstr ""
-
-#. STRINGS.UI.FRONTEND.MAINMENU.WISHLIST_AD
-msgctxt "STRINGS.UI.FRONTEND.MAINMENU.WISHLIST_AD"
-msgid "Available now"
-msgstr ""
-
-#. STRINGS.UI.FRONTEND.MAINMENU.WISHLIST_AD_TOOLTIP
-msgctxt "STRINGS.UI.FRONTEND.MAINMENU.WISHLIST_AD_TOOLTIP"
-msgid "<color=#ffff00ff><b>Click to view it in the store</b></color>"
 msgstr ""
 
 #. STRINGS.UI.FRONTEND.METRIC_OPTIONS_SCREEN.HEADER_METRICS
@@ -95075,7 +95195,7 @@ msgstr ""
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICMIXINGFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICMIXINGFIELD.DESC"
-msgid "The harvestable remains of a planet containing <link=\"ZINCORE\">Zinc Ore</link>, <link=\"SILTSTONE\">Silt Stone</link>, <link=\"CORALLIUM\">Corallium</link>, and <link=\"BASALT\">Basalt</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
+msgid "The harvestable remains of a planet containing <link=\"ZINCORE\">Zinc Ore</link>, <link=\"SILTSTONE\">Silt Stone</link>, <link=\"COQUINA\">Coquina</link>, <link=\"CORALLIUM\">Corallium</link>, and <link=\"BASALT\">Basalt</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
 msgstr ""
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICMIXINGFIELD.NAME
@@ -95085,7 +95205,7 @@ msgstr ""
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICOREFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICOREFIELD.DESC"
-msgid "The harvestable remains of a planet containing <link=\"ZINCORE\">Zinc Ore</link>, <link=\"SILTSTONE\">Siltstone</link>, <link=\"CORALLIUM\">Corallium</link>, and <link=\"BASALT\">Basalt</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
+msgid "The harvestable remains of a planet containing <link=\"ZINCORE\">Zinc Ore</link>, <link=\"SILTSTONE\">Siltstone</link>, <link=\"COQUINA\">Coquina</link>, <link=\"CORALLIUM\">Corallium</link>, and <link=\"BASALT\">Basalt</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
 msgstr ""
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICOREFIELD.NAME
@@ -95385,12 +95505,12 @@ msgstr ""
 
 #. STRINGS.UI.SPACEDESTINATIONS.PLANETS.DLC5AQUATICSPACEDESCRIPTION.DESCRIPTION
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.PLANETS.DLC5AQUATICSPACEDESCRIPTION.DESCRIPTION"
-msgid "A destination dominated by vast oceans and aquatic life."
+msgid "The remains of an aquatic world primarily composed of harvestable corallium, coquina, and zinc ore."
 msgstr ""
 
 #. STRINGS.UI.SPACEDESTINATIONS.PLANETS.DLC5AQUATICSPACEDESCRIPTION.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.PLANETS.DLC5AQUATICSPACEDESCRIPTION.NAME"
-msgid "Marinea"
+msgid "Extinct Ocean"
 msgstr ""
 
 #. STRINGS.UI.SPACEDESTINATIONS.PLANETS.FORESTPLANET.DESCRIPTION

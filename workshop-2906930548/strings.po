@@ -4512,8 +4512,8 @@ msgstr "鎘背心"
 
 #. STRINGS.BLUEPRINTS.PERMIT_UNDERWATER_CRITTER_CONDO_AQUATIC.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_UNDERWATER_CRITTER_CONDO_AQUATIC.DESC"
-msgid "Some say the periscope has seen things."
-msgstr "有人說，這具潛望鏡看過太多不該看的事物。"
+msgid "Its periscope has seen things that no Duplicant could possibly understand."
+msgstr "這具潛望鏡看過的事，是任何複製人都無法理解的"
 
 #. STRINGS.BLUEPRINTS.PERMIT_UNDERWATER_CRITTER_CONDO_AQUATIC.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_UNDERWATER_CRITTER_CONDO_AQUATIC.NAME"
@@ -18675,6 +18675,31 @@ msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.NAME"
 msgid "Unknown Duplicant"
 msgstr "未知複製人"
 
+#. STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_DISABLE
+msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_DISABLE"
+msgid "Disable Delivery"
+msgstr "停止運送"
+
+#. STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_DISABLE_TOOLTIP
+msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_DISABLE_TOOLTIP"
+msgid "Stop Duplicants from delivering the requested items"
+msgstr "阻止複製人運送要求的物品"
+
+#. STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_ENABLE
+msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_ENABLE"
+msgid "Enable Delivery"
+msgstr "啟用運送"
+
+#. STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_ENABLE_TOOLTIP
+msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_ENABLE_TOOLTIP"
+msgid "Allow Duplicants to deliver the requested items"
+msgstr "允許複製人運送要求的物品"
+
+#. STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_HEADER
+msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_HEADER"
+msgid "Delivery Menu"
+msgstr "運送選單"
+
 #. STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_B.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_B.DESC"
 msgid ""
@@ -21989,6 +22014,21 @@ msgstr "將<link=\"LATEX\">膠乳</link>轉化為<link=\"RUBBER\">橡膠</link>�
 msgctxt "STRINGS.BUILDINGS.PREFABS.RUBBERMAKER.NAME"
 msgid "<link=\"RUBBERMAKER\">Vulcanizer</link>"
 msgstr "<link=\"RUBBERMAKER\">硫化器</link>"
+
+#. STRINGS.BUILDINGS.PREFABS.RUBBERTILE.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.RUBBERTILE.DESC"
+msgid "Rubber tiles are designed to resist damage from liquid pressure."
+msgstr "橡膠磚旨在抵抗液體壓力造成的損害。"
+
+#. STRINGS.BUILDINGS.PREFABS.RUBBERTILE.EFFECT
+msgctxt "STRINGS.BUILDINGS.PREFABS.RUBBERTILE.EFFECT"
+msgid "Used to build the walls and floors of rooms.\n\nProvides an anti-slip work surface and effective <link=\"HEAT\">Insulation</link>."
+msgstr "用於建造房間的牆壁與地板。\n\n提供防滑的工作表面與有效的<link=\"HEAT\">隔熱</link>效果。"
+
+#. STRINGS.BUILDINGS.PREFABS.RUBBERTILE.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.RUBBERTILE.NAME"
+msgid "<link=\"RUBBERTILE\">Rubber Tile</link>"
+msgstr "<link=\"RUBBERTILE\">橡膠磚</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.RUSTDEOXIDIZER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.RUSTDEOXIDIZER.DESC"
@@ -27563,7 +27603,7 @@ msgstr "蛋殼"
 #. STRINGS.CODEX.ELECTROBANK.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.ELECTROBANK.BODY.CONTAINER1"
 msgid "Power Banks are portable <link=\"POWER\">Power</link> storage containers that can be used to supply electricity to mobile entities and isolated areas.\n\nSingle-use power banks are easier to produce, but rechargeable and self-charging models are more efficient in the long run.\n\nCautious handling is required, as liquid exposure (or expiration, for self-charging power banks) can lead to explosions."
-msgstr "行動電源是可攜式的<link=\"POWER\">電力</link>儲存容器，可以為移動實體和隔離區域供電。\n\n一次性電力儲存器較易生產，但可充電和自充電型號從長遠來看效率更高。\n\n操作時須謹慎，因為接觸液體（或自充電電力儲存器的失效）可能導致爆炸。"
+msgstr "行動電源是可攜式的<link=\"POWER\">電力</link>儲存容器，可以為移動實體和隔離區域供電。\n\n一次性電力儲存器較易生產，但可充電和自充電型號從長遠來看效率更高。\n\n操作時須謹慎，因為暴露在液體中（或自充電電力儲存器的失效）可能導致爆炸。"
 
 #. STRINGS.CODEX.ELECTROBANK.SUBTITLE
 msgctxt "STRINGS.CODEX.ELECTROBANK.SUBTITLE"
@@ -34222,8 +34262,8 @@ msgstr "採集並運送珍珠給位於珊瑚生態的生還複製人"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_A_HIDDEN
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_A_HIDDEN"
-msgid "This requirement will be visible once discovered"
-msgstr "探索後將顯示此條件"
+msgid "More exploration is required\n\nJust keep swimming..."
+msgstr "還需要更多探索\n\n只要一直游泳就好了..."
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B"
@@ -34232,8 +34272,8 @@ msgstr "已將壽司運送給生還的複製人"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B_HIDDEN
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B_HIDDEN"
-msgid "This requirement will be visible once discovered"
-msgstr "探索後將顯示此條件"
+msgid "More exploration is required\n\nJust keep swimming..."
+msgstr "還需要更多探索\n\n只要一直游泳就好了..."
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C"
@@ -34242,8 +34282,8 @@ msgstr "採集並運送烏賊墨汁給位於深淵生態的生還複製人"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C_HIDDEN
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C_HIDDEN"
-msgid "This requirement will be visible once discovered"
-msgstr "探索後將顯示此條件"
+msgid "More exploration is required\n\nJust keep swimming..."
+msgstr "還需要更多探索\n\n只要一直游泳就好了..."
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_A
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_A"
@@ -34297,7 +34337,7 @@ msgstr "攜手並進"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_DESCRIPTION"
-msgid "Success! My Duplicants harvested [AMOUNT1] pearls to offer to our potential future crewmate.\n\nWe now have [AMOUNT2] new gasket to use as needed."
+msgid "Success! My Duplicants harvested {AMOUNT1} pearls to offer to our potential future crewmate.\n\nWe now have {AMOUNT2} new gasket to use as needed."
 msgstr "成功了！我的複製人已收穫 [AMOUNT1] 顆珍珠作為貢品，獻給我們未來的潛在夥伴。\n\n我們現在多出了 [AMOUNT2] 份新的密封墊，可按需使用。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_TITLE
@@ -34307,7 +34347,7 @@ msgstr "招募自由潛水員：珍珠已交付"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_DESCRIPTION"
-msgid "Success! We have produced [AMOUNT1] sushi to share with the survivor Duplicant as a gesture of goodwill.\n\nWe now have [AMOUNT2] new gasket to use as needed."
+msgid "Success! We have produced {AMOUNT1} sushi to share with the survivor Duplicant as a gesture of goodwill.\n\nWe now have {AMOUNT2} new gasket to use as needed."
 msgstr "成功了！我們生產了 [AMOUNT1] 份壽司，作為展現善意的禮物與該名倖存複製人分享。\n\n我們現在多出了 [AMOUNT2] 份新的密封墊，可按需使用。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_TITLE
@@ -34317,7 +34357,7 @@ msgstr "招募自由潛水員：壽司已交付"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_DESCRIPTION"
-msgid "Success! We have procured [AMOUNT1] caviar to offer to our splashy neighbour.\n\nWe now have [AMOUNT2] new gasket to use as needed."
+msgid "Success! We have procured {AMOUNT1} caviar to offer to our splashy neighbour.\n\nWe now have {AMOUNT2} new gasket to use as needed."
 msgstr "成功了！我們取得了 [AMOUNT1] 份魚子醬，獻給我們這位愛玩水的鄰居。\n\n我們現在多出了 [AMOUNT2] 份新的密封墊，可按需使用。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_TITLE
@@ -34327,8 +34367,8 @@ msgstr "招募自由潛水員：魷魚墨汁已交付"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_A_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_A_DESCRIPTION"
-msgid "My Duplicants found the survivor exploring the Reef biome. She seems fascinated by the Clampum, and offered to trade us [AMOUNT1] gasket for [AMOUNT2] of its pearls.\n\nI must enable delivery to ensure we keep our end of this bargain."
-msgstr "我的複製人在探索珊瑚礁生態域時發現了這位倖存者。她似乎對巨鉗貝很感興趣，並提出用 [AMOUNT1] 份密封墊與我們交換 [AMOUNT2] 顆牠的珍珠。\n\n我必須啟用遞送功能，以確保我們能履行這筆交易承諾。"
+msgid "My Duplicants found the survivor exploring the Reef biome. She seems fascinated by the Clampum.\n\nShe offered to trade us {AMOUNT1} Gasket and 2 Flue Coral seeds for {AMOUNT2} of its pearls.\n\nI must enable delivery to ensure we keep our end of this bargain."
+msgstr "我的複製人在探索珊瑚生態時發現了倖存者。她似乎對巨鉗貝很感興趣。\n\n她提出用 {AMOUNT1} 個墊圈與 2 顆煙囪珊瑚種子，來交換我們的 {AMOUNT2} 顆巨鉗貝珍珠。\n\n我必須啟用運送，以確保我們能履行這筆交易。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_A_TITLE
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_A_TITLE"
@@ -34337,8 +34377,8 @@ msgstr "招募自由潛水員：{0}/{1}"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_B_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_B_DESCRIPTION"
-msgid "My Duplicants found the survivor exploring the Kelp Forest biome. She appears to be hungry. My Duplicants offered to exchange [AMOUNT1] of sushi for [AMOUNT2] gasket, and she agreed.\n\nI must enable delivery to ensure she receives our package."
-msgstr "我的複製人在探索海帶森林生態域時，發現了該名倖存者。她看起來很餓。我的複製人提議用 [AMOUNT1] 份壽司交換 [AMOUNT2] 個密封墊，她也同意了。\n\n我必須啟用遞送功能，以確保她能收到我們的包裹。"
+msgid "My Duplicants found the survivor exploring the Kelp Forest biome. She appears to be hungry.\n\nMy Duplicants offered to exchange {AMOUNT1} of sushi for {AMOUNT2} Gasket and 2 Gum Palm seeds, and she agreed.\n\nI must enable delivery to ensure she receives our package."
+msgstr "我的複製人在探索藻林生態時發現了倖存者。她看起來很餓。\n\n我的複製人提議用 {AMOUNT1} 份壽司交換 {AMOUNT2} 個墊圈與 2 顆橡膠椰子種子，而她答應了。\n\n我必須啟用運送，以確保她能收到我們的包裹。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_B_TITLE
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_B_TITLE"
@@ -34347,8 +34387,8 @@ msgstr "招募自由潛水員：{0}/{1}"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_C_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_C_DESCRIPTION"
-msgid "My Duplicants found the survivor exploring the Abyss biome. She has been observing our machinery and seems particularly intrigued by caviar.\n\nWe have agreed to exchange [AMOUNT1] of caviar for [AMOUNT2] gasket.\n\nI must enable delivery to guarantee its fulfilment."
-msgstr "我的複製人在探索深淵生態域時發現了這位倖存者。她一直在觀察我們的機械，且對魚子醬特別感興趣。\n\n我們已達成協議，用 [AMOUNT1] 份魚子醬交換 [AMOUNT2] 份密封墊。\n\n我必須啟用遞送功能，以確保完成這筆交易。"
+msgid "My Duplicants found the survivor exploring the Abyss biome. She has been observing our machinery and seems particularly intrigued by caviar.\n\nWe have agreed to exchange {AMOUNT1} of caviar for {AMOUNT2} Gasket.\n\nI must enable delivery to guarantee its fulfilment."
+msgstr "我的複製人在探索深淵生態時發現了倖存者。她一直在觀察我們的機具，似乎對魚子醬特別感興趣。\n\n我們已同意用 {AMOUNT1} 份魚子醬交換 {AMOUNT2} 個墊圈。\n\n我必須啟用運送，以確保這項協議得以履行。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_C_TITLE
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_C_TITLE"
@@ -38092,8 +38132,8 @@ msgstr "<link=\"LIGHTBUG\">發光蟲寶寶</link>"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.DESC"
-msgid "Shine Bugs emit a soft <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
-msgstr "發光蟲散發柔和的<link=\"LIGHT\">光</link>，希望藉此吸引更多同伴作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link> 上敲開後收穫。"
+msgid "Shine Bugs emit a soft <link=\"LIGHT\">Light</link> when <link=\"CREATURES::GUIDE::MOOD\">Happy</link>, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
+msgstr "發光蟲在<link=\"CREATURES::GUIDE::MOOD\">快樂</link>時會散發柔和的<link=\"LIGHT\">光線</link>，希望能吸引更多同伴來作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link>敲開時採集。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.EGG_NAME"
@@ -38108,7 +38148,7 @@ msgstr "<link=\"LIGHTBUG\">發光蟲</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLACK.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLACK.BABY.DESC"
 msgid "A chubby baby <link=\"LIGHTBUGBLACK\">Shine Bug</link>.\n\nThis one is an Abyss morph."
-msgstr "一隻圓滾滾的<link=\"LIGHTBUGBLACK\">深淵發光蟲</link>寶寶。\n\n這是一隻黑色的深淵變種。"
+msgstr "一隻圓滾滾的<link=\"LIGHTBUGBLACK\">發光蟲</link>寶寶。\n\n這是一隻黑色的深淵變種。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLACK.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLACK.BABY.NAME"
@@ -38133,7 +38173,7 @@ msgstr "<link=\"LIGHTBUGBLACK\">深淵發光蟲</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLUE.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLUE.BABY.DESC"
 msgid "A chubby baby <link=\"LIGHTBUGBLUE\">Shine Bug</link>.\n\nThis one is an Azure morph."
-msgstr "一隻圓滾滾的<link=\"LIGHTBUGBLUE\">溫和發光蟲</link>寶寶。\n\n這是一隻藍色的溫和變種。"
+msgstr "一隻圓滾滾的<link=\"LIGHTBUGBLUE\">發光蟲</link>寶寶。\n\n這是一隻藍色的溫和變種。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLUE.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLUE.BABY.NAME"
@@ -38142,8 +38182,8 @@ msgstr "<link=\"LIGHTBUGBLUE\">溫和發光蟲寶寶</link>"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLUE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLUE.DESC"
-msgid "Azure Bugs emit a soft blue <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
-msgstr "溫和發光蟲會發出柔和的藍色<link=\"LIGHT\">光線</link>，藉此吸引更多同伴作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link>上敲開後收穫。"
+msgid "Azure Bugs emit a soft blue <link=\"LIGHT\">Light</link> when <link=\"CREATURES::GUIDE::MOOD\">Happy</link>, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
+msgstr "溫和發光蟲在<link=\"CREATURES::GUIDE::MOOD\">快樂</link>時會散發柔和的藍色<link=\"LIGHT\">光線</link>，希望能吸引更多同伴來作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link>敲開時採集。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLUE.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLUE.EGG_NAME"
@@ -38158,7 +38198,7 @@ msgstr "<link=\"LIGHTBUGBLUE\">溫和發光蟲</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_CRYSTAL.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_CRYSTAL.BABY.DESC"
 msgid "A chubby baby <link=\"LIGHTBUGCRYSTAL\">Shine Bug</link>.\n\nThis one is a Radiant morph."
-msgstr "一隻圓滾滾的<link=\"LIGHTBUGCRYSTAL\">水晶發光蟲</link>寶寶。\n\n這是一隻明亮的水晶變種。"
+msgstr "一隻圓滾滾的<link=\"LIGHTBUGCRYSTAL\">發光蟲</link>寶寶。\n\n這是一隻明亮的水晶變種。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_CRYSTAL.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_CRYSTAL.BABY.NAME"
@@ -38167,8 +38207,8 @@ msgstr "<link=\"LIGHTBUGCRYSTAL\">水晶發光蟲寶寶</link>"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_CRYSTAL.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_CRYSTAL.DESC"
-msgid "Radiant Bugs emit an extra-bright <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
-msgstr "水晶發光蟲會發出額外明亮的<link=\"LIGHT\">光線</link>，藉此吸引更多同伴作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link>上敲開後收穫。"
+msgid "Radiant Bugs emit an extra-bright <link=\"LIGHT\">Light</link> when <link=\"CREATURES::GUIDE::MOOD\">Happy</link>, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
+msgstr "水晶發光蟲在<link=\"CREATURES::GUIDE::MOOD\">快樂</link>時會散發格外明亮的<link=\"LIGHT\">光線</link>，希望能吸引更多同伴來作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link>敲開時採集。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_CRYSTAL.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_CRYSTAL.EGG_NAME"
@@ -38183,7 +38223,7 @@ msgstr "<link=\"LIGHTBUGCRYSTAL\">水晶發光蟲</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_ORANGE.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_ORANGE.BABY.DESC"
 msgid "A chubby baby <link=\"LIGHTBUGORANGE\">Shine Bug</link>.\n\nThis one is a Sun morph."
-msgstr "一隻圓滾滾的<link=\"LIGHTBUGORANGE\">陽光發光蟲</link>寶寶。\n\n這是一隻橘色的陽光變種。"
+msgstr "一隻圓滾滾的<link=\"LIGHTBUGORANGE\">發光蟲</link>寶寶。\n\n這是一隻橘色的陽光變種。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_ORANGE.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_ORANGE.BABY.NAME"
@@ -38192,8 +38232,8 @@ msgstr "<link=\"LIGHTBUGORANGE\">陽光發光蟲寶寶</link>"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_ORANGE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_ORANGE.DESC"
-msgid "Sun Bugs emit a soft orange <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
-msgstr "陽光發光蟲會發出柔和的橘色<link=\"LIGHT\">光線</link>，藉此吸引更多同伴作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link>上敲開後收穫。"
+msgid "Sun Bugs emit a soft orange <link=\"LIGHT\">Light</link> when <link=\"CREATURES::GUIDE::MOOD\">Happy</link>, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
+msgstr "陽光發光蟲在<link=\"CREATURES::GUIDE::MOOD\">快樂</link>時會散發柔和的橘色<link=\"LIGHT\">光線</link>，希望能吸引更多同伴來作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link>敲開時採集。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_ORANGE.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_ORANGE.EGG_NAME"
@@ -38208,7 +38248,7 @@ msgstr "<link=\"LIGHTBUGORANGE\">陽光發光蟲</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PINK.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PINK.BABY.DESC"
 msgid "A chubby baby <link=\"LIGHTBUGPINK\">Shine Bug</link>.\n\nThis one is a Coral morph."
-msgstr "一隻圓滾滾的<link=\"LIGHTBUGPINK\">活力發光蟲</link>寶寶。\n\n這是一隻粉紅色的活力變種。"
+msgstr "一隻圓滾滾的<link=\"LIGHTBUGPINK\">發光蟲</link>寶寶。\n\n這是一隻粉紅色的活力變種。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PINK.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PINK.BABY.NAME"
@@ -38217,8 +38257,8 @@ msgstr "<link=\"LIGHTBUGPINK\">活力發光蟲寶寶</link>"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PINK.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PINK.DESC"
-msgid "Coral Bugs emit a soft pink <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
-msgstr "活力發光蟲會發出柔和的粉色<link=\"LIGHT\">光線</link>，藉此吸引更多同伴作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link>上敲開後收穫。"
+msgid "Coral Bugs emit a soft pink <link=\"LIGHT\">Light</link> when <link=\"CREATURES::GUIDE::MOOD\">Happy</link>, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
+msgstr "活力發光蟲在<link=\"CREATURES::GUIDE::MOOD\">快樂</link>時會散發柔和的粉色<link=\"LIGHT\">光線</link>，希望能吸引更多同伴來作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link>敲開時採集。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PINK.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PINK.EGG_NAME"
@@ -38233,7 +38273,7 @@ msgstr "<link=\"LIGHTBUGPINK\">活力發光蟲</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PURPLE.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PURPLE.BABY.DESC"
 msgid "A chubby baby <link=\"LIGHTBUGPURPLE\">Shine Bug</link>.\n\nThis one is a Royal morph."
-msgstr "一隻圓滾滾的<link=\"LIGHTBUGPURPLE\">王室發光蟲</link>寶寶。\n\n這是一隻紫色的王室變種。"
+msgstr "一隻圓滾滾的<link=\"LIGHTBUGPURPLE\">發光蟲</link>寶寶。\n\n這是一隻紫色的王室變種。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PURPLE.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PURPLE.BABY.NAME"
@@ -38242,8 +38282,8 @@ msgstr "<link=\"LIGHTBUGPURPLE\">王室發光蟲寶寶</link>"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PURPLE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PURPLE.DESC"
-msgid "Royal Bugs emit a soft purple <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
-msgstr "皇室發光蟲會發出柔和的紫色<link=\"LIGHT\">光線</link>，藉此吸引更多同伴作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link>上敲開後收穫。"
+msgid "Royal Bugs emit a soft purple <link=\"LIGHT\">Light</link> when <link=\"CREATURES::GUIDE::MOOD\">Happy</link>, in hopes of attracting more of their kind for company.\n\nTheir eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
+msgstr "王室發光蟲在<link=\"CREATURES::GUIDE::MOOD\">快樂</link>時會散發柔和的紫色<link=\"LIGHT\">光線</link>，希望能吸引更多同伴來作伴。\n\n牠們的卵含有少量的<link=\"NATURALRESIN\">樹脂</link>，可在<link=\"EGGCRACKER\">裂蛋器</link>敲開時採集。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PURPLE.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PURPLE.EGG_NAME"
@@ -38258,17 +38298,17 @@ msgstr "<link=\"LIGHTBUGPURPLE\">王室發光蟲</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_RADIOACTIVE.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_RADIOACTIVE.BABY.DESC"
 msgid "A chubby baby <link=\"LIGHTBUGRADIOACTIVE\">Shine Bug</link>.\n\nThis one is an Ionizing morph."
-msgstr "一隻圓滾滾的<link=\"LIGHTBUGRADIOACTIVE\">電離發光蟲</link>寶寶。\n\n這是一隻電離變種。"
+msgstr "一隻圓滾滾的<link=\"LIGHTBUGRADIOACTIVE\">發光蟲</link>寶寶。\n\n這是一隻電離變種。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_RADIOACTIVE.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_RADIOACTIVE.BABY.NAME"
 msgid "<link=\"LIGHTBUGRADIOACTIVE\">Ionizing Nymph</link>"
-msgstr "<link=\"LIGHTBUGRADIOACTIVE\">電離發光蟲</link>"
+msgstr "<link=\"LIGHTBUGRADIOACTIVE\">電離發光蟲寶寶</link>"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_RADIOACTIVE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_RADIOACTIVE.DESC"
 msgid "Shine Bugs emit a dangerously radioactive <link=\"LIGHT\">Light</link> in hopes of attracting more of their kind for company."
-msgstr "電離發光蟲會釋放危險的輻射<link=\"LIGHT\">光</link>，為了吸引更多的同伴。"
+msgstr "發光蟲會釋放危險的輻射<link=\"LIGHT\">光</link>，為了吸引更多的同伴。"
 
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_RADIOACTIVE.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_RADIOACTIVE.EGG_NAME"
@@ -38632,8 +38672,8 @@ msgstr "<link=\"PARROTFISH\">燈喙魚苗</link>"
 
 #. STRINGS.CREATURES.SPECIES.PARROTFISH.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.PARROTFISH.DESC"
-msgid "Beakons are attractive aquatic critters who enjoy consuming <link=\"OXYGEN\">Oxygen</link>.\n\nThese bioluminescent fish feast on <link=\"PHOSPHORITE\">Phosphorite</link> and <link=\"PLANKTONCORAL\">Starnacle</link>, and excrete <link=\"LIME\">Lime</link>."
-msgstr "燈喙魚是迷人的水生小動物，喜歡吸取<link=\"OXYGEN\">氧</link>。\n\n這些發光魚類以<link=\"PHOSPHORITE\">磷礦</link>與<link=\"PLANKTONCORAL\">藤壺星</link>為食，並會排出<link=\"LIME\">石灰</link>。"
+msgid "Beakons are aquatic critters who feast on <link=\"PHOSPHORITE\">Phosphorite</link> and <link=\"PLANKTONCORAL\">Starnacle</link>, and excrete <link=\"LIME\">Lime</link>.\n\nThey produce <link=\"LIGHT\">Light</link> when <link=\"CREATURES::GUIDE::MOOD\">Happy</link>, and enjoy consuming <link=\"OXYGEN\">Oxygen</link>."
+msgstr "燈喙魚是水生生物，以<link=\"PHOSPHORITE\">磷礦</link>和<link=\"PLANKTONCORAL\">藤壺星</link>為食，並會排出<link=\"LIME\">石灰</link>。\n\n牠們在<link=\"CREATURES::GUIDE::MOOD\">快樂</link>時會產生<link=\"LIGHT\">光線</link>，且喜歡消耗<link=\"OXYGEN\">氧氣</link>。"
 
 #. STRINGS.CREATURES.SPECIES.PARROTFISH.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.PARROTFISH.EGG_NAME"
@@ -39082,8 +39122,8 @@ msgstr "<link=\"SEATURTLE\">礦甲龜寶寶</link>"
 
 #. STRINGS.CREATURES.SPECIES.SEATURTLE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEATURTLE.DESC"
-msgid "Orehulls are shy aquatic critters that eat <link=\"SEAFAIRYSPECIES\">Kelpoles</link>.\n\nThey can be sheared for <link=\"IRONORE\">Iron Ore</link>."
-msgstr "礦甲龜是一種害羞的水生小動物，以<link=\"SEAFAIRYSPECIES\">藻蝌蚪</link>為食。\n\n牠們身上的礦物可透過修剪來獲取<link=\"IRONORE\">鐵礦</link>。"
+msgid "Orehulls are shy aquatic critters that eat <link=\"SEAFAIRYSPECIES\">Kelpoles</link> and excrete <link=\"TOXICSAND\">Polluted Dirt</link>.\n\nThey can be sheared for <link=\"IRONORE\">Iron Ore</link>."
+msgstr "礦甲龜是害羞的水生生物，以<link=\"SEAFAIRYSPECIES\">藻蝌蚪</link>為食並排出<link=\"TOXICSAND\">污染土</link>。\n\n可以修剪牠們以獲得<link=\"IRONORE\">鐵礦</link>。"
 
 #. STRINGS.CREATURES.SPECIES.SEATURTLE.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SEATURTLE.EGG_NAME"
@@ -40239,6 +40279,11 @@ msgstr "幸福度"
 msgctxt "STRINGS.CREATURES.STATS.HAPPINESS.TOOLTIP"
 msgid "High <style=\"KKeyword\">Happiness</style> increases a critter's productivity and indirectly improves their <style=\"KKeyword\">Egg</style> laying rates\n\nIt also provides the satisfaction in knowing they're living a good little critter life"
 msgstr "高<style=\"KKeyword\">幸福度</style>增加一隻動物的生產力並間接的提高<style=\"KKeyword\">產蛋率</style>\n\n也讓人們知道小動物們過著美好的生活"
+
+#. STRINGS.CREATURES.STATS.HAPPINESS.TOOLTIP_LUX
+msgctxt "STRINGS.CREATURES.STATS.HAPPINESS.TOOLTIP_LUX"
+msgid "High <style=\"KKeyword\">Happiness</style> increases a critter's productivity and enables them to produce <style=\"KKeyword\">Light</style>\n\nIt also indirectly improves their <style=\"KKeyword\">Egg</style> laying rates"
+msgstr "高<style=\"KKeyword\">快樂度</style>會提高小動物的產量，並使牠們能產生<style=\"KKeyword\">光線</style>\n\n這也會間接提高牠們的產<style=\"KKeyword\">卵</style>率"
 
 #. STRINGS.CREATURES.STATS.HEALTH.NAME
 msgctxt "STRINGS.CREATURES.STATS.HEALTH.NAME"
@@ -41775,6 +41820,26 @@ msgctxt "STRINGS.CREATURES.STATUSITEMS.PUFFER_VENTING.TOOLTIP"
 msgid "This critter is releasing stored <style=\"KKeyword\">Oxygen</style> into the surrounding environment\n\nWhat a relief"
 msgstr "該生物正在將其儲存的<style=\"KKeyword\">氧氣</style>排放至周圍環境中。\n\n終於舒服多了。"
 
+#. STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_APPROACH.NAME
+msgctxt "STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_APPROACH.NAME"
+msgid "Going to Clampum"
+msgstr "前往巨鉗貝"
+
+#. STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_APPROACH.TOOLTIP
+msgctxt "STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_APPROACH.TOOLTIP"
+msgid "This critter is going to investigate a closed <style=\"KKeyword\">Clampum</style>\n\nWhat's that plant hiding?"
+msgstr "這隻小動物正要去調查一隻閉合的<style=\"KKeyword\">巨鉗貝</style>\n\n那株植物到底藏了什麼？"
+
+#. STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_ATTACK.NAME
+msgctxt "STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_ATTACK.NAME"
+msgid "Attacking Clampum"
+msgstr "正在攻擊巨鉗貝"
+
+#. STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_ATTACK.TOOLTIP
+msgctxt "STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_ATTACK.TOOLTIP"
+msgid "This critter is attacking a closed <style=\"KKeyword\">Clampum</style>\n\nIt doesn't like things being hidden"
+msgstr "這隻小動物正在攻擊一隻閉合的<style=\"KKeyword\">巨鉗貝</style>\n\n牠不喜歡有東西藏起來"
+
 #. STRINGS.CREATURES.STATUSITEMS.READYFORHARVEST.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.READYFORHARVEST.NAME"
 msgid "Harvest Ready"
@@ -42162,18 +42227,18 @@ msgstr "感到舒適"
 
 #. STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.INTERACTING.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.INTERACTING.TOOLTIP"
-msgid "This critter is relaxing in a water fort\n\nIt's like a mini vacation!"
-msgstr "這隻小動物正於水中城堡放鬆\n\n就像小小的假期一樣！"
+msgid "This critter is relaxing in an aquatic critter condo\n\nIt's like a mini vacation!"
+msgstr "這隻小動物正在水下小動物公寓裡放鬆\n\n簡直就像在度假一樣！"
 
 #. STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.MOVINGTO.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.MOVINGTO.NAME"
-msgid "Heading for Water Fort"
-msgstr "前往水中城堡"
+msgid "Heading for Aquatic Critter Condo"
+msgstr "前往水下小動物公寓"
 
 #. STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.MOVINGTO.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.MOVINGTO.TOOLTIP"
-msgid "This critter is making its way to an unoccupied water fort"
-msgstr "這隻小動物正在前往沒有被佔用的水中城堡"
+msgid "This critter is making its way to an unoccupied aquatic critter condo"
+msgstr "這隻小動物正在前往沒有被佔用的水下小動物公寓"
 
 #. STRINGS.CREATURES.STATUSITEMS.UNKNOWNMUTATION.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.UNKNOWNMUTATION.NAME"
@@ -42403,7 +42468,7 @@ msgstr "呼吸"
 #. STRINGS.DUPLICANTS.ATTRIBUTES.BREATHMAX.NAME
 msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.BREATHMAX.NAME"
 msgid "Maximum Breath"
-msgstr "最大呼吸"
+msgstr "最大氣息量"
 
 #. STRINGS.DUPLICANTS.ATTRIBUTES.CALORIESDELTA.DESC
 msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.CALORIESDELTA.DESC"
@@ -48690,6 +48755,16 @@ msgctxt "STRINGS.DUPLICANTS.MODIFIERS.NARCOLEPTICSLEEP.TOOLTIP"
 msgid "This Duplicant just needs to rest their eyes for a second"
 msgstr "這名複製人的眼睛只是需要休息一下"
 
+#. STRINGS.DUPLICANTS.MODIFIERS.NEARDEATHEXPERIENCE.NAME
+msgctxt "STRINGS.DUPLICANTS.MODIFIERS.NEARDEATHEXPERIENCE.NAME"
+msgid "Near-Death Experience"
+msgstr "瀕死經驗"
+
+#. STRINGS.DUPLICANTS.MODIFIERS.NEARDEATHEXPERIENCE.TOOLTIP
+msgctxt "STRINGS.DUPLICANTS.MODIFIERS.NEARDEATHEXPERIENCE.TOOLTIP"
+msgid "This Duplicant recently recovered from being incapacitated\n\nIt was deeply unsettling"
+msgstr "這個複製人最近剛從癱瘓狀態中恢復\n\n這讓人深感不安"
+
 #. STRINGS.DUPLICANTS.MODIFIERS.NEWCREWARRIVAL.NAME
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.NEWCREWARRIVAL.NAME"
 msgid "New Friend"
@@ -51312,8 +51387,8 @@ msgstr "呼吸"
 
 #. STRINGS.DUPLICANTS.STATS.BREATH.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATS.BREATH.TOOLTIP"
-msgid "A Duplicant with zero remaining <style=\"KKeyword\">Breath</style> will die immediately\n\nDuplicants can increase their <style=\"KKeyword\">Maximum Breath</style> by learning the <style=\"KKeyword\">Basic Swimming</style> skill"
-msgstr "複製人的<style=\"KKeyword\">氣息</style>若耗盡，將會立即死亡。\n\n複製人可透過學習<style=\"KKeyword\">基礎游泳</style>技能來增加<style=\"KKeyword\">最大氣息量</style>。"
+msgid "A Duplicant with zero remaining <style=\"KKeyword\">Breath</style> will become incapacitated and die unless they are rescued\n\nDuplicants can increase their <style=\"KKeyword\">Maximum Breath</style> by learning the <style=\"KKeyword\">Basic Swimming</style> skill"
+msgstr "<style=\"KKeyword\">氣息</style>歸零的複製人將會陷入癱瘓，除非獲救，否則將會死亡\n\n複製人可透過學習<style=\"KKeyword\">基礎游泳</style>技能來增加<style=\"KKeyword\">最大氣息量</style>"
 
 #. STRINGS.DUPLICANTS.STATS.CALORIES.NAME
 msgctxt "STRINGS.DUPLICANTS.STATS.CALORIES.NAME"
@@ -61765,6 +61840,11 @@ msgctxt "STRINGS.EQUIPMENT.PREFABS.DRYSUIT.RECIPE_DESC"
 msgid "Protects the wearer from  <style=\"KKeyword\">Soggy Feet</style> and <style=\"KKeyword\">Sopping Wet</style> effects."
 msgstr "使穿戴者免受<style=\"KKeyword\">腳溼了</style>與<style=\"KKeyword\">全身溼透</style>狀態的影響。"
 
+#. STRINGS.EQUIPMENT.PREFABS.DRYSUIT.RECIPE_DESC_DLC3
+msgctxt "STRINGS.EQUIPMENT.PREFABS.DRYSUIT.RECIPE_DESC_DLC3"
+msgid "Protects the wearer from  <style=\"KKeyword\">Soggy Feet</style> and <style=\"KKeyword\">Sopping Wet</style> effects.\n\nEnables Bionic Duplicants to cross waist-deep pools without <style=\"KKeyword\">Liquid Exposure</style> damage."
+msgstr "保護穿戴者免受<style=\"KKeyword\">腳溼了</style>與<style=\"KKeyword\">全身濕透</style>效果影響。\n\n使仿生複製人能穿越深及腰部的液體池，而不會受到<style=\"KKeyword\">暴露在液體中</style>的傷害。"
+
 #. STRINGS.EQUIPMENT.PREFABS.EQUIPPABLEBALLOON.DESC
 msgctxt "STRINGS.EQUIPMENT.PREFABS.EQUIPPABLEBALLOON.DESC"
 msgid "A floating friend to reassure my Duplicants they are so very, very clever."
@@ -62295,6 +62375,11 @@ msgctxt "STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.EFFECT"
 msgid "Protects the wearer from <style=\"KKeyword\">Soggy Feet</style> and <style=\"KKeyword\">Slippery</style> floors."
 msgstr "使穿戴者免受<style=\"KKeyword\">腳溼了</style>與<style=\"KKeyword\">咕溜</style>地面的影響。"
 
+#. STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.EFFECT_DLC3
+msgctxt "STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.EFFECT_DLC3"
+msgid "Protects the wearer from <style=\"KKeyword\">Soggy Feet</style> and <style=\"KKeyword\">Slippery</style> floors.\n\nEnables Bionic Duplicants to cross small puddles without <style=\"KKeyword\">Liquid Exposure</style> damage."
+msgstr "保護穿戴者免受<style=\"KKeyword\">腳溼了</style>與<style=\"KKeyword\">咕溜</style>地板影響。\n\n使仿生複製人能穿越小水灘，而不會受到<style=\"KKeyword\">暴露在液體中</style>的傷害。"
+
 #. STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.GENERICNAME
 msgctxt "STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.GENERICNAME"
 msgid "Boots"
@@ -62309,6 +62394,11 @@ msgstr "<link=\"RUBBERBOOTS\">橡膠靴</link>"
 msgctxt "STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.RECIPE_DESC"
 msgid "Protects the wearer from <style=\"KKeyword\">Soggy Feet</style> and <style=\"KKeyword\">Slippery</style> floors."
 msgstr "使穿戴者免受<style=\"KKeyword\">腳溼了</style>與<style=\"KKeyword\">咕溜</style>地面的影響。"
+
+#. STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.RECIPE_DESC_DLC3
+msgctxt "STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.RECIPE_DESC_DLC3"
+msgid "Protects the wearer from <style=\"KKeyword\">Soggy Feet</style> and <style=\"KKeyword\">Slippery</style> floors.\n\nEnables Bionic Duplicants to cross small puddles without <style=\"KKeyword\">Liquid Exposure</style> damage."
+msgstr "保護穿戴者免受<style=\"KKeyword\">腳溼了</style>與<style=\"KKeyword\">咕溜</style>地板影響。\n\n使仿生複製人能穿越小水灘，而不會受到<style=\"KKeyword\">暴露在液體中</style>的傷害。"
 
 #. STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.REPAIR_WORN_DESC
 msgctxt "STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.REPAIR_WORN_DESC"
@@ -64003,7 +64093,7 @@ msgstr "<link=\"BOOSTERMEDICINE1\">進階醫療增效卡匣</link>"
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_MOD_SWIM.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_MOD_SWIM.DESC"
 msgid "Overrides a Bionic Duplicant's safety protocols to enable swimming.\n\n<b>WARNING:</b>\nUsage stresses bionic systems and does not protect from liquid exposure."
-msgstr "覆寫仿生複製人的安全協定以啟用游泳能力。\n\n<b>警告：</b>\n使用會使仿生系統承受壓力，且無法防止液體接觸造成的影響。"
+msgstr "覆寫仿生複製人的安全協定以啟用游泳能力。\n\n<b>警告：</b>\n使用會使仿生系統承受壓力，且無法防止暴露在液體中造成的影響。"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_MOD_SWIM.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_MOD_SWIM.NAME"
@@ -68029,6 +68119,26 @@ msgstr "等待移動"
 msgctxt "STRINGS.MISC.STATUSITEMS.MARKEDFORMOVE.TOOLTIP"
 msgid "Waiting for a Duplicant to move this object"
 msgstr "等待複製人移動這個物件"
+
+#. STRINGS.MISC.STATUSITEMS.MINNOWPOIDEHYDRATEDSTATUS.NAME
+msgctxt "STRINGS.MISC.STATUSITEMS.MINNOWPOIDEHYDRATEDSTATUS.NAME"
+msgid "Insufficient Liquid"
+msgstr "液體不足"
+
+#. STRINGS.MISC.STATUSITEMS.MINNOWPOIDEHYDRATEDSTATUS.TOOLTIP
+msgctxt "STRINGS.MISC.STATUSITEMS.MINNOWPOIDEHYDRATEDSTATUS.TOOLTIP"
+msgid "This area was once a <style=\"KKeyword\">Liquid</style> pool occupied by an unknown survivor Duplicant\n\nIts occupant will return when the area is sufficiently flooded"
+msgstr "這裡曾經是一處由未知倖存者複製人佔據的<style=\"KKeyword\">液體</style>池\n\n當該區域注滿足夠的液體時，原本的居民就會回來"
+
+#. STRINGS.MISC.STATUSITEMS.MINNOWPOIDELIVERYPENDING.NAME
+msgctxt "STRINGS.MISC.STATUSITEMS.MINNOWPOIDELIVERYPENDING.NAME"
+msgid "Awaiting Delivery"
+msgstr "等待運送"
+
+#. STRINGS.MISC.STATUSITEMS.MINNOWPOIDELIVERYPENDING.TOOLTIP
+msgctxt "STRINGS.MISC.STATUSITEMS.MINNOWPOIDELIVERYPENDING.TOOLTIP"
+msgid "The occupant of this site is patiently awaiting deliveries"
+msgstr "此處的居民正耐心地等待運送"
 
 #. STRINGS.MISC.STATUSITEMS.MOVESTORAGEUNREACHABLE.NAME
 msgctxt "STRINGS.MISC.STATUSITEMS.MOVESTORAGEUNREACHABLE.NAME"
@@ -72447,8 +72557,8 @@ msgstr "<style=\"KKeyword\">氧氣面罩</style>模板"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.RUBBER_BOOTS.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.RUBBER_BOOTS.DESC"
-msgid "Enables fabrication of <style=\"KKeyword\">Rubber Boots</style> at the <link=\"CRAFTINGTABLE\">Crafting Station</link>"
-msgstr "允許在<link=\"CRAFTINGTABLE\">工藝台</link>製造<style=\"KKeyword\">橡膠靴</style>"
+msgid "Enables fabrication of <style=\"KKeyword\">Rubber Boots</style> at the <link=\"CLOTHINGFABRICATOR\">Textile Loom</link>"
+msgstr "允許在<link=\"CLOTHINGFABRICATOR\">紡織機</link>製造<style=\"KKeyword\">橡膠靴</style>"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.RUBBER_BOOTS.NAME
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.RUBBER_BOOTS.NAME"
@@ -75202,8 +75312,8 @@ msgstr "牧場"
 
 #. STRINGS.ROOMS.TYPES.CREATUREPEN.TOOLTIP
 msgctxt "STRINGS.ROOMS.TYPES.CREATUREPEN.TOOLTIP"
-msgid "A stable enables Grooming Station, Critter Condo, Critter Fountain, Shearing Station and Milking Station use"
-msgstr "牧場允許使用梳理站、小動物公寓、小動物飲水機、修剪站與擠奶站"
+msgid "A stable enables both land-based and aquatic Grooming Station, Critter Condo, Critter Fountain, Shearing Station and Milking Station use"
+msgstr "牧場可供陸生與水生梳理站、小動物公寓、小動物飲水機、修剪站及擠奶站使用"
 
 #. STRINGS.ROOMS.TYPES.FARM.DESCRIPTION
 msgctxt "STRINGS.ROOMS.TYPES.FARM.DESCRIPTION"
@@ -77830,6 +77940,11 @@ msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNDERWATER_DRILL_DIAMOND_CONSUMPTIO
 msgid "This building requires <style=\"KKeyword\">Diamond</style> to operate, consuming it at a rate of {Rate} while in use"
 msgstr "此建築需要<style=\"KKeyword\">鑽石</style>才能運作，使用時會以 {Rate}的速率消耗"
 
+#. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNDERWATERVENT_SHEARING
+msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNDERWATERVENT_SHEARING"
+msgid "This vent produces {0} which can be harvested using a <link=\"UNDERWATERVENTDRILL\">Marine Drill</link>"
+msgstr "此噴泉會產生{0}，可使用<link=\"UNDERWATERVENTDRILL\">海洋鑽機</link>進行採集"
+
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNSTABLEENTOMBDEFENSEOFF
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNSTABLEENTOMBDEFENSEOFF"
 msgid "This plant's ability to unentomb itself from <style=\"KKeyword\">Unstable</style> elements is currently disabled"
@@ -77864,6 +77979,11 @@ msgstr "輸出<link=\"POWER\">電線</link>（上限為 {0}）"
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.UNDERWATER_DRILL_DIAMOND_CONSUMPTION"
 msgid "<link=\"DIAMOND\">Diamond</link>: {Rate}"
 msgstr "<link=\"DIAMOND\">鑽石</link>：{Rate}"
+
+#. STRINGS.UI.BUILDINGEFFECTS.UNDERWATERVENT_SHEARING
+msgctxt "STRINGS.UI.BUILDINGEFFECTS.UNDERWATERVENT_SHEARING"
+msgid "<link=\"SULFUR\">Sulfur</link> Build-up: {0}"
+msgstr "<link=\"SULFUR\">硫磺</link>累積量：{0}"
 
 #. STRINGS.UI.BUILDINGEFFECTS.UNSTABLEENTOMBDEFENSEOFF
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.UNSTABLEENTOMBDEFENSEOFF"
@@ -84535,15 +84655,25 @@ msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_INSTALLED_LABEL"
 msgid "Installed"
 msgstr "已安裝"
 
-#. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_LABEL
-msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_LABEL"
+#. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_PURCHASE_LABEL
+msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_PURCHASE_LABEL"
 msgid "Available Now"
 msgstr "現已推出"
 
-#. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_TOOLTIP
-msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_TOOLTIP"
-msgid "This DLC is available now!"
-msgstr "這個 DLC 現已推出！"
+#. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_PURCHASE_TOOLTIP
+msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_PURCHASE_TOOLTIP"
+msgid "<color=#ffff00ff><b>Click to view this DLC in the store</b></color>"
+msgstr "<color=#ffff00ff><b>點擊在商店中查看此 DLC</b></color>"
+
+#. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_WISHLIST_LABEL
+msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_WISHLIST_LABEL"
+msgid "Wishlist Now"
+msgstr "立即加入願望清單"
+
+#. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_WISHLIST_TOOLTIP
+msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_WISHLIST_TOOLTIP"
+msgid "<color=#ffff00ff><b>Click to view this DLC in the store</b></color>"
+msgstr "<color=#ffff00ff><b>點擊在商店中查看此 DLC</b></color>"
 
 #. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_OWNED_NOTINSTALLED_LABEL
 msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_OWNED_NOTINSTALLED_LABEL"
@@ -84669,16 +84799,6 @@ msgstr "開始試玩"
 msgctxt "STRINGS.UI.FRONTEND.MAINMENU.TRANSLATIONS"
 msgid "TRANSLATIONS"
 msgstr "翻譯"
-
-#. STRINGS.UI.FRONTEND.MAINMENU.WISHLIST_AD
-msgctxt "STRINGS.UI.FRONTEND.MAINMENU.WISHLIST_AD"
-msgid "Available now"
-msgstr "現已提供"
-
-#. STRINGS.UI.FRONTEND.MAINMENU.WISHLIST_AD_TOOLTIP
-msgctxt "STRINGS.UI.FRONTEND.MAINMENU.WISHLIST_AD_TOOLTIP"
-msgid "<color=#ffff00ff><b>Click to view it in the store</b></color>"
-msgstr "<color=#ffff00ff><b>點擊進入商店查看</b></color>"
 
 #. STRINGS.UI.FRONTEND.METRIC_OPTIONS_SCREEN.HEADER_METRICS
 msgctxt "STRINGS.UI.FRONTEND.METRIC_OPTIONS_SCREEN.HEADER_METRICS"
@@ -95077,8 +95197,8 @@ msgstr "琥珀礦場"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICMIXINGFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICMIXINGFIELD.DESC"
-msgid "The harvestable remains of a planet containing <link=\"ZINCORE\">Zinc Ore</link>, <link=\"SILTSTONE\">Silt Stone</link>, <link=\"CORALLIUM\">Corallium</link>, and <link=\"BASALT\">Basalt</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片可收集的行星殘骸，含有<link=\"ZINCORE\">鋅礦</link>、<link=\"SILTSTONE\">粉砂岩</link>、<link=\"CORALLIUM\">紅珊瑚</link>和<link=\"BASALT\">玄武岩</link>。\n\n火箭裝有<link=\"NOSECONEHARVEST\">鑽頭前錐</link>才能進行<link=\"EXOBASESDLC1\">太空採礦</link>。"
+msgid "The harvestable remains of a planet containing <link=\"ZINCORE\">Zinc Ore</link>, <link=\"SILTSTONE\">Silt Stone</link>, <link=\"COQUINA\">Coquina</link>, <link=\"CORALLIUM\">Corallium</link>, and <link=\"BASALT\">Basalt</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
+msgstr "一片可開採的行星殘骸，含有<link=\"ZINCORE\">鋅礦</link>、<link=\"SILTSTONE\">粉砂岩</link>、<link=\"COQUINA\">殼灰岩</link>、<link=\"CORALLIUM\">紅珊瑚</link>和<link=\"BASALT\">玄武岩</link>。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICMIXINGFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICMIXINGFIELD.NAME"
@@ -95087,8 +95207,8 @@ msgstr "鋅礦礦帶"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICOREFIELD.DESC
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICOREFIELD.DESC"
-msgid "The harvestable remains of a planet containing <link=\"ZINCORE\">Zinc Ore</link>, <link=\"SILTSTONE\">Siltstone</link>, <link=\"CORALLIUM\">Corallium</link>, and <link=\"BASALT\">Basalt</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
-msgstr "一片可收集的行星殘骸，含有<link=\"ZINCORE\">鋅礦</link>、<link=\"SILTSTONE\">粉砂岩</link>、<link=\"CORALLIUM\">珊瑚質</link>和<link=\"BASALT\">玄武岩</link>。\n\n火箭裝有<link=\"NOSECONEHARVEST\">鑽頭前錐</link>才能進行<link=\"EXOBASESDLC1\">太空採礦</link>。"
+msgid "The harvestable remains of a planet containing <link=\"ZINCORE\">Zinc Ore</link>, <link=\"SILTSTONE\">Siltstone</link>, <link=\"COQUINA\">Coquina</link>, <link=\"CORALLIUM\">Corallium</link>, and <link=\"BASALT\">Basalt</link>.\n\n<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a <link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
+msgstr "一片可收集的行星殘骸，含有<link=\"ZINCORE\">鋅礦</link>、<link=\"SILTSTONE\">粉砂岩</link>、<link=\"COQUINA\">殼灰岩</link>、<link=\"CORALLIUM\">紅珊瑚</link>和<link=\"BASALT\">玄武岩</link>。\n\n<link=\"EXOBASESDLC1\">太空採礦</link>需要一艘配備有<link=\"NOSECONEHARVEST\">鑽頭鼻錐</link>和貨物模組的火箭。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICOREFIELD.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICOREFIELD.NAME"
@@ -95387,13 +95507,13 @@ msgstr "史前礦場"
 
 #. STRINGS.UI.SPACEDESTINATIONS.PLANETS.DLC5AQUATICSPACEDESCRIPTION.DESCRIPTION
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.PLANETS.DLC5AQUATICSPACEDESCRIPTION.DESCRIPTION"
-msgid "A destination dominated by vast oceans and aquatic life."
-msgstr "此目的地遍布廣闊海洋，並棲息著大量水生生物。"
+msgid "The remains of an aquatic world primarily composed of harvestable corallium, coquina, and zinc ore."
+msgstr "一個水生世界的殘骸，主要由可開採的紅珊瑚、殼灰岩和鋅礦組成。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.PLANETS.DLC5AQUATICSPACEDESCRIPTION.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.PLANETS.DLC5AQUATICSPACEDESCRIPTION.NAME"
-msgid "Marinea"
-msgstr "汪洋星"
+msgid "Extinct Ocean"
+msgstr "絕跡汪洋"
 
 #. STRINGS.UI.SPACEDESTINATIONS.PLANETS.FORESTPLANET.DESCRIPTION
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.PLANETS.FORESTPLANET.DESCRIPTION"
