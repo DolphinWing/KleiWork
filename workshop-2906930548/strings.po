@@ -34338,7 +34338,7 @@ msgstr "攜手並進"
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_DESCRIPTION"
 msgid "Success! My Duplicants harvested {AMOUNT1} pearls to offer to our potential future crewmate.\n\nWe now have {AMOUNT2} new gasket to use as needed."
-msgstr "成功了！我的複製人已收穫 [AMOUNT1] 顆珍珠作為貢品，獻給我們未來的潛在夥伴。\n\n我們現在多出了 [AMOUNT2] 份新的密封墊，可按需使用。"
+msgstr "成功了！我的複製人已收穫 {AMOUNT1} 顆珍珠作為貢品，獻給我們未來的潛在夥伴。\n\n我們現在多出了 {AMOUNT2} 份新的密封墊，可按需使用。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_TITLE
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_TITLE"
@@ -34348,7 +34348,7 @@ msgstr "招募自由潛水員：珍珠已交付"
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_DESCRIPTION"
 msgid "Success! We have produced {AMOUNT1} sushi to share with the survivor Duplicant as a gesture of goodwill.\n\nWe now have {AMOUNT2} new gasket to use as needed."
-msgstr "成功了！我們生產了 [AMOUNT1] 份壽司，作為展現善意的禮物與該名倖存複製人分享。\n\n我們現在多出了 [AMOUNT2] 份新的密封墊，可按需使用。"
+msgstr "成功了！我們生產了 {AMOUNT1} 份壽司，作為展現善意的禮物與該名倖存複製人分享。\n\n我們現在多出了 {AMOUNT2} 份新的密封墊，可按需使用。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_TITLE
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_TITLE"
@@ -34358,7 +34358,7 @@ msgstr "招募自由潛水員：壽司已交付"
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_DESCRIPTION"
 msgid "Success! We have procured {AMOUNT1} caviar to offer to our splashy neighbour.\n\nWe now have {AMOUNT2} new gasket to use as needed."
-msgstr "成功了！我們取得了 [AMOUNT1] 份魚子醬，獻給我們這位愛玩水的鄰居。\n\n我們現在多出了 [AMOUNT2] 份新的密封墊，可按需使用。"
+msgstr "成功了！我們取得了 {AMOUNT1} 份魚子醬，獻給我們這位愛玩水的鄰居。\n\n我們現在多出了 {AMOUNT2} 份新的密封墊，可按需使用。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_TITLE
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_TITLE"
