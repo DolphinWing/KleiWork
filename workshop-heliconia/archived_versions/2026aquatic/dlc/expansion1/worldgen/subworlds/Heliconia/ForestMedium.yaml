@@ -1,0 +1,28 @@
+biomeNoise: noise/subworldForest
+temperatureRange: TG_SuperHot
+density:
+  min: 10
+  max: 15
+avoidRadius: 20.0
+minChildCount: 2
+sampleBehaviour: PoissonDisk
+borderOverride: organicCrust
+biomes:
+  - name: biomes/Heliconia/Jungle_Hot
+    weight: 1
+    tags:
+      - Oxyfern
+      - ForestTree     
+      - med_BasicSingleHarvestPlant
+      - forestCluster_BasicSingleHarvestPlantSeed
+      - med_ForestForagePlantPlanted
+      - med_LightBug
+      - LeafyPlant        
+      - LeafyPlantSeed
+      - med_Squirrel
+tags:
+  - IgnoreCaveOverride
+features:
+  - type: features/forest/SmallLake
+  - type: expansion1::features/forest/OxyrockCave
+zoneType: Forest

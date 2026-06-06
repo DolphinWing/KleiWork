@@ -1,0 +1,25 @@
+biomeNoise: expansion1::noise/LayeredNoise
+temperatureRange: TG_SuperHot
+density:
+  min: 40
+  max: 60
+avoidRadius: 25.0
+sampleBehaviour: PoissonDisk
+#borderOverride: coreBorder
+biomes:
+  - name: expansion1::biomes/Heliconia/Core_Radioactive
+    weight: 2
+subworldTemplateRules:
+  - names:
+      - expansion1::poi/radioactive/RadHeart
+    listRule: TrySome
+    someCount: 4
+    priority: 80
+features:
+  - type: expansion1::features/Heliconia/UraniumPocket
+  - type: expansion1::features/Heliconia/RadSludge
+tags:
+  - HeliconiaCore
+  - AtDepths
+  - NoGravitasFeatures
+zoneType: Radioactive

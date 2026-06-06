@@ -1,0 +1,209 @@
+TerrainBiomeLookupTable:
+  add:
+    Core_Cobalt:
+    - content: Katairite
+      bandSize: 0.25
+    - content: Wolframite
+      bandSize: 0.35
+    - content: MoltenCobalt
+      bandSize: 0.25
+    - content: Diamond
+      bandSize: 0.1
+    - content: Steel
+      bandSize: 0.05
+
+    Core_Aluminum:
+    - content: Katairite
+      bandSize: 0.25
+    - content: Diamond
+      bandSize: 0.2
+    - content: MoltenAluminum
+      bandSize: 0.35
+    - content: Obsidian
+      bandSize: 0.1
+    - content: Sand
+      bandSize: 0.05
+
+    Core_Radioactive:
+    - content: Glass
+      bandSize: 0.4
+    - content: Obsidian
+      bandSize: 0.4
+    - content: MoltenUranium
+      bandSize: 0.2
+    - content: Steel
+      bandSize: 0.2
+    - content: ToxicSand
+      bandSize: 0.2
+    - content: Rust
+      bandSize: 0.05
+      overrides:
+        massOverride: 2000
+    - content: Diamond
+      bandSize: 0.05
+    - content: Fallout
+      bandSize: 0.1
+
+    Wasteland_Hot:
+    - content: Obsidian
+      bandSize: 0.1
+    - content: IgneousRock
+      bandSize: 0.2
+    - content: Glass
+      bandSize: 0.1
+    - content: LiquidSulfur
+      bandSize: 0.27
+      overrides:
+        massOverride: 1000
+    - content: MaficRock
+      bandSize: 0.08
+    - content: Cuprite
+      bandSize: 0.12
+    - content: CarbonDioxide
+      bandSize: 0.13
+
+    Wasteland_Snowy:
+    - content: Obsidian
+      bandSize: 0.1
+    - content: IgneousRock
+      bandSize: 0.2
+    - content: Glass
+      bandSize: 0.1
+    - content: LiquidSulfur
+      bandSize: 0.27
+      overrides:
+        massOverride: 1000
+    - content: MaficRock
+      bandSize: 0.08
+    - content: Cuprite
+      bandSize: 0.1
+    - content: Salt
+      bandSize: 0.02
+    - content: CarbonDioxide
+      bandSize: 0.13
+
+    Rust_Ethanol:
+    - content: IronOre
+      bandSize: 0.03
+    - content: MaficRock
+      bandSize: 0.1
+    - content: Rust
+      bandSize: 0.35  
+    - content: Ethanol
+      bandSize: 0.05
+    - content: CarbonDioxide
+      bandSize: 0.75
+      overrides:
+        massMultiplier: 0.5
+
+    Swamp_Basic:
+    - content: SedimentaryRock
+      bandSize: 0.05
+    - content: ToxicSand
+      bandSize: 0.30
+    - content: Dirt
+      bandSize: 0.05
+    - content: Clay
+      bandSize: 0.15
+    - content: Steam
+      bandSize: 0.1
+    - content: ContaminatedOxygen
+      bandSize: 0.7
+
+    Swamp_Water:
+    - content: SedimentaryRock
+      bandSize: 0.05
+    - content: Phosphorite
+      bandSize: 0.05
+      overrides:
+        massOverride: 200
+    - content: ToxicSand
+      bandSize: 0.15
+    - content: Clay
+      bandSize: 0.2
+    - content: ToxicSand
+      bandSize: 0.35
+    - content: Carbon
+      bandSize: 0.05
+    - content: Steam
+      bandSize: 0.6
+    - content: CarbonDioxide
+      bandSize: 0.4
+
+    Radioactive_Basic:
+    - content: EnrichedUranium
+      bandSize: 0.02
+    - content: Glass
+      bandSize: 0.03
+    - content: Dirt
+      bandSize: 0.03
+    - content: Rust
+      bandSize: 0.025
+    - content: EnrichedUranium
+      bandSize: 0.03
+    - content: ToxicSand
+      bandSize: 0.10
+    - content: Glass
+      bandSize: 0.05
+    - content: EnrichedUranium
+      bandSize: 0.10
+    - content: Corium
+      bandSize: 0.03
+    - content: CarbonDioxide
+      bandSize: 0.15
+    - content: Chlorine
+      bandSize: 0.15
+      overrides:
+        massOverride: 2
+    - content: Glass
+      bandSize: 0.1
+    - content: Dirt
+      bandSize: 0.05
+    - content: Rust
+      bandSize: 0.03
+    - content: EnrichedUranium
+      bandSize: 0.03
+    - content: Rust
+      bandSize: 0.03
+    - content: Corium
+      bandSize: 0.02
+    - content: NuclearWaste
+      bandSize: 0.05
+      overrides:
+        massOverride: 1000
+    - content: EnrichedUranium
+      bandSize: 0.01
+
+    Radioactive_Nuclear:
+    - content: EnrichedUranium
+      bandSize: 0.02
+    - content: ToxicSand
+      bandSize: 0.03
+    - content: EnrichedUranium
+      bandSize: 0.03
+    - content: CarbonDioxide
+      bandSize: 0.15
+    - content: Wolframite
+      bandSize: 0.10
+    - content: ToxicSand
+      bandSize: 0.05
+    - content: EnrichedUranium
+      bandSize: 0.10
+    - content: CarbonDioxide
+      bandSize: 0.15
+    - content: Corium
+      bandSize: 0.15
+      overrides:
+        massOverride: 2
+    - content: ToxicSand
+      bandSize: 0.1
+    - content: EnrichedUranium
+      bandSize: 0.03
+    - content: ToxicSand
+      bandSize: 0.05
+    - content: CarbonDioxide
+      bandSize: 0.15
+      overrides:
+        massOverride: 8
+    - content: EnrichedUranium
+      bandSize: 0.04

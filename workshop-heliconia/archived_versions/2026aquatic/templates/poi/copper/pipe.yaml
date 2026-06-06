@@ -1,0 +1,24 @@
+name: HcaCopperPipe
+info:
+  size:
+    X: 6
+    Y: 3
+  area: 18
+cells:
+- element: Copper
+  mass: 2000
+  location_x: -2
+- element: Copper
+  mass: 2000
+  location_x: -1
+- element: Copper
+  mass: 2000
+- element: Copper
+  mass: 2000
+  location_x: 1
+- element: Copper
+  mass: 2000
+  location_x: 2
+- element: Copper
+  mass: 2000
+  location_x: 3

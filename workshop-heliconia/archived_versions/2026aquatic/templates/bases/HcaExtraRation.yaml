@@ -1,0 +1,59 @@
+info:
+  size:
+    X: 4
+    Y: 3
+  min:
+    X: -1
+  area: 6
+cells:
+- element: SandStone
+  mass: 100
+  temperature: 304.730347
+  location_y: 2
+- element: Oxygen
+  mass: 0.502707958
+  temperature: 409.685272
+  location_x: -1
+- element: Oxygen
+  mass: 0.333117545
+  temperature: 413.319794
+- element: Oxygen
+  mass: 0.253267169
+  temperature: 445.361267
+  location_y: 1
+- element: Cuprite
+  mass: 100
+  temperature: 385.660095
+  location_x: 2
+- element: Cuprite
+  mass: 100
+  temperature: 385.660095
+  location_x: 2
+  location_y: 1
+buildings:
+- id: TilePOI
+  location_y: 2
+  element: SandStone
+  temperature: 304.730347
+- id: Refrigerator
+  element: SandStone
+  temperature: 293.264801
+  storage:
+  - id: FieldRation
+    element: Creature
+    units: 50
+    temperature: 295.069458
+    rottable: {}
+- id: POIBunkerExteriorDoor
+  location_x: 2
+  element: Cuprite
+  temperature: 385.660095
+  other_values:
+  - id: sealedDoorDirection
+otherEntities:
+- id: PropLadder
+  location_x: -1
+  element: Polypropylene
+  temperature: 294.250854
+  units: 1
+  type: Other

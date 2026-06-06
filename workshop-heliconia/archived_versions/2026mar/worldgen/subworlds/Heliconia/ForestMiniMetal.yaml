@@ -1,0 +1,31 @@
+biomeNoise: noise/subworldForest
+temperatureRange: Hot
+pdWeight: 0.7
+density:
+  min: 10
+  max: 15
+avoidRadius: 20.0
+doAvoidPoints: false
+dontRelaxChildren: true
+sampleBehaviour: PoissonDisk
+borderOverride: organicCrust
+biomes:
+  - name: biomes/Heliconia/Forest_Metal_Hca
+    weight: 2
+    tags:
+      - Oxyfern
+      - ForestTree     
+      - BasicSingleHarvestPlant
+      - BasicSingleHarvestPlantSeed
+      - ForestForagePlantPlanted
+      - LightBug
+      - LeafyPlant
+      - LeafyPlantSeed
+tags:
+  - StartWorld
+  - IgnoreCaveOverride
+  - NoGlobalFeatureSpawning
+centralFeature:
+features:
+  - type: features/Heliconia/PhosphoriteDeposit
+zoneType: Forest

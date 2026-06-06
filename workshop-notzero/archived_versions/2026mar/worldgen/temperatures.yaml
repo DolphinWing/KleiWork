@@ -1,0 +1,10 @@
+# keys to remove from in-memory structure when this file is loaded
+remove: [] 
+# elements to add from in-memory structure when this file is loaded
+add:
+  AbsoluteZero:
+    min: 5.0
+    max: 15.0
+  SuperCold:
+    min: 15.0
+    max: 100.0

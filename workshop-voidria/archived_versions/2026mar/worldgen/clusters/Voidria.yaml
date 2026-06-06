@@ -1,0 +1,16 @@
+name: Voidria.Voidria.NAME
+description: Voidria.Voidria.DESCRIPTION
+coordinatePrefix: VOA-TG-B
+forbiddenDlcId: EXPANSION1_ID
+
+clusterCategory: Vanilla
+difficulty: 6
+menuOrder: -1
+disableStoryTraits: true
+
+startWorldIndex: 0
+worldPlacements:
+- world: worlds/Voidria
+  allowedRings:
+    min: 0
+    max: 0

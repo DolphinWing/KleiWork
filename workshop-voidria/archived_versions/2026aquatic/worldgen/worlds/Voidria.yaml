@@ -1,0 +1,430 @@
+name: Voidria.Voidria.NAME
+description: Voidria.Voidria.DESCRIPTION
+asteroidIcon: asteroid_voidria_kanim
+disableWorldTraits: true
+
+worldTraitScale: 1 # Adjust with worldSize. Traits are tuned to base game world sizes.
+worldsize:
+  X: 256
+  Y: 384
+layoutMethod: PowerTree # Note: We need to add weights to the items in the layer in order to use this.
+
+defaultsOverrides:
+  startingWorldElements: [] # remove the algae check
+
+# List all the subworld files to load
+subworldFiles:
+  - name: subworlds/Voidria/voa_ForestStart
+  - name: subworlds/Voidria/voa_SpaceWithBg
+  - name: subworlds/forest/Forest
+  - name: subworlds/space/Space
+  - name: subworlds/space/SpaceNoBorder
+
+startSubworldName: subworlds/Voidria/voa_ForestStart
+startingBaseTemplate: bases/voa_forestBase
+
+seasons:
+  - MeteorShowers
+
+# Specify where subworlds can spawn. These rules are processed in order and their effects are cumulative.
+unknownCellsAllowedSubworlds: 
+  - tagcommand: Default
+    command: Replace
+    subworldNames:
+      - subworlds/forest/Forest
+  # Ring 1
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 1
+    maxDistance: 999
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+      - subworlds/Voidria/voa_SpaceWithBg
+  # Core
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 0
+    maxDistance: 0
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+      - subworlds/Voidria/voa_SpaceWithBg
+  # Space
+  - tagcommand: AtTag
+    tag: AtSurface
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+  # Surface
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+      - subworlds/space/SpaceNoBorder
+
+worldTemplateRules:
+  # Curated geysers
+  - names:
+    - geysers/molten_iron
+    listRule: GuaranteeOne
+    times: 1
+    ruleId: tg_geyser_molten_iron
+    allowDuplicates: false
+    priority: 50
+    allowedCellsFilter:
+    - command: Replace
+      tagcommand: DistanceFromTag
+      tag: AtDepths
+      minDistance: 0
+      maxDistance: 0
+  # Oil
+  - names:
+    - poi/oil/small_oilpockets_geyser_a
+    - poi/oil/small_oilpockets_geyser_b
+    - poi/oil/small_oilpockets_geyser_c
+    - poi/oil/small_oilpockets_geyser_d
+    - poi/oil/small_oilpockets_geyser_e
+    - poi/oil/small_oilpockets_geyser_f
+    - poi/oil/small_oilpockets_geyser_g
+    - poi/oil/small_oilpockets_geyser_h
+    listRule: GuaranteeOne
+    times: 1
+    ruleId: tg_oil_pockets
+    allowDuplicates: false # be more flexible due to high temperature borders
+    priority: 100
+    allowedCellsFilter:
+    - command: Replace
+      tagcommand: DistanceFromTag
+      tag: AtDepths
+      minDistance: 0
+      maxDistance: 0
+  # GeneShuffler
+  - names:
+    - poi/frozen/lab_basement
+    - poi/frozen/lab_splitroom
+    - poi/hotmarsh/lab_burrow
+    - poi/hotmarsh/lab_splitroom
+    - poi/jungle/buttongate
+    - poi/jungle/lab_poolbottom
+    - poi/jungle/lab_poolbottom_frozen
+    - poi/poi_dupe_sensor_puzzle
+    - poi/poi_oil_switchdoor
+    listRule: GuaranteeOne
+    priority: 90
+    allowExtremeTemperatureOverlap: true
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 4
+        maxDistance: 5
+      - command: ExceptWith # too close to core
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 6
+  # --- Story Traits ---
+  # CreatureManipulator
+  - names:
+      - storytraits/creature_manipulator
+    listRule: GuaranteeOne
+    ruleId: tg_Story_CreatureManipulator
+    priority: 200
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 3
+        maxDistance: 5
+  # MegaBrainTank
+  - names:
+      - storytraits/mega_brain_tank
+    listRule: GuaranteeOne
+    ruleId: tg_Story_MegaBrainTank
+    priority: 200
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 3
+        maxDistance: 5
+  # LonelyMinion
+  - names:
+      - storytraits/lonelyminion
+    listRule: GuaranteeOne
+    ruleId: tg_Story_LonelyMinion
+    priority: 200
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 4
+        maxDistance: 6
+      - command: ExceptWith # too close to surface
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 2
+      - command: ExceptWith # too close to core
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 3
+
+  # MorbRoverMaker
+  - names:
+      - storytraits/morb_rover_maker
+    listRule: GuaranteeOne
+    ruleId: tg_Story_MorbRoverMaker
+    priority: 400
+    useRelaxedFiltering: true
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 6
+        maxDistance: 99
+      - command: ExceptWith # too close to surface
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 2
+      - command: ExceptWith # too close to core
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 3
+  # MorbRoverMaker: extention 1 fallback
+  - names:
+      - storytraits/morb_rover_maker_ext1
+    listRule: GuaranteeOne
+    ruleId: tg_Story_MorbRoverMaker
+    priority: 180
+    useRelaxedFiltering: true
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 8
+        maxDistance: 99
+      - command: ExceptWith # too close to surface
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 2
+  # MorbRoverMaker: extention 2 fallback
+  - names:
+      - storytraits/morb_rover_maker_ext2
+    listRule: GuaranteeOne
+    ruleId: tg_Story_MorbRoverMaker
+    priority: 180
+    useRelaxedFiltering: true
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 8
+        maxDistance: 99
+      - command: ExceptWith # too close to surface
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 2
+
+  # FossilHunt
+  - names:
+      - storytraits/fossil_hunt_main
+    listRule: GuaranteeOne
+    ruleId: tg_Story_FossilHunt
+    priority: 400
+    useRelaxedFiltering: true
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 0
+        maxDistance: 2
+  # FossilHunt: Frozen biome Fallback
+  - names:
+      - storytraits/fossil_hunt_ice
+    listRule: GuaranteeOne
+    ruleId: tg_Story_FossilHunt
+    priority: 150
+    useRelaxedFiltering: true
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 1
+        maxDistance: 2
+  # FossilHunt: ROCK PIECE Fallback
+  - names:
+      - storytraits/fossil_hunt_rock
+    listRule: GuaranteeOne
+    ruleId: tg_Story_FossilHunt
+    priority: 150
+    useRelaxedFiltering: true
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 1
+        maxDistance: 2
+  # FossilHunt: RESIN PIECE Fallback
+  - names:
+      - storytraits/fossil_hunt_resin
+    listRule: GuaranteeOne
+    ruleId: tg_Story_FossilHunt
+    priority: 150
+    useRelaxedFiltering: true
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 1
+        maxDistance: 2
+
+  # HijackHeadquarters: MAIN
+  - names:
+      - storytraits/hijack_headquarters
+    listRule: GuaranteeOne
+    ruleId: tg_Story_HijackHeadquarters
+    priority: 400
+    useRelaxedFiltering: true
+    allowedCellsFilter:
+      - command: All
+      #- command: ExceptWith
+      #  tagcommand: AtTag
+      #  tag: NoGlobalFeatureSpawning # this also excludes Space
+      - command: ExceptWith  # too close to start
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 0
+        maxDistance: 1
+        ignoreIfMissingTag: true
+      - command: ExceptWith  # too far from start
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 6
+        maxDistance: 99
+        ignoreIfMissingTag: true
+      - command: ExceptWith # too close to surface
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 2
+      - command: ExceptWith
+        temperatureRanges:
+          - VeryHot
+          - ExtremelyHot
+      - command: ExceptWith
+        zoneTypes: [OilField]
+  # HijackHeadquarters: extention: gravitas bathroom with access code near surface
+  - names:
+      - storytraits/hijack_headquarters_bathroom
+    listRule: GuaranteeOne
+    ruleId: tg_Story_HijackHeadquarters
+    priority: 200
+    useRelaxedFiltering: true
+    allowedCellsFilter:
+      - command: All
+      #- command: ExceptWith
+      #  tagcommand: AtTag
+      #  tag: NoGlobalFeatureSpawning # this also excludes Space
+      - command: ExceptWith  # too close to start
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 0
+        maxDistance: 2
+        ignoreIfMissingTag: true
+      - command: ExceptWith
+        temperatureRanges:
+          - ExtremelyHot
+      - command: ExceptWith
+        zoneTypes: [OilField]
+
+  # --- Critter Caves ---
+  # Critter Vanilla
+  - names:
+    - critters/tg_gassy_style
+    listRule: GuaranteeAll
+    ruleId: tg_Critter_Moo
+    priority: 150
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 1
+        maxDistance: 3
+  - names:
+    - critters/tg_hatch_lice
+    - critters/tg_pip_tree
+    listRule: GuaranteeAll
+    ruleId: tg_Critter_Basic
+    priority: 140
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 0
+        maxDistance: 2
+      - command: ExceptWith # too close to surface
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 3
+  - names:
+    - critters/tg_mole_hole
+    listRule: GuaranteeAll
+    ruleId: tg_Critter_Meat
+    priority: 130
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 3
+        maxDistance: 5
+      - command: ExceptWith # too close to surface
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 3
+  - names:
+    - critters/tg_bean_sleat
+    - critters/tg_bug_morb_toilet
+    - critters/tg_ce_lily_cave
+    - critters/tg_pacu_lake
+    - critters/tg_pokeshell_pepper
+    - critters/tg_puft_love
+    - critters/tg_slime_sour
+    - critters/tg_wheat_wort
+    listRule: GuaranteeAll
+    ruleId: tg_Critter_Vanilla
+    priority: 120
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 2
+        maxDistance: 99
+      - command: ExceptWith # too close to surface
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 3
+  # Gifts from devs
+  - names:
+    - bases/tg_gifted_base
+    listRule: GuaranteeAll
+    ruleId: tg_gift_base
+    priority: 450
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 0
+        maxDistance: 1

@@ -1,0 +1,70 @@
+name: small_b
+info:
+  size:
+    X: 6
+    Y: 2
+  area: 12
+cells:
+# Row 0: Base
+- element: Diamond
+  mass: 1650
+  temperature: 2000
+  location_x: -2
+  location_y: 0
+- element: Diamond
+  mass: 2320
+  temperature: 2000
+  location_x: -1
+  location_y: 0
+- element: Diamond
+  mass: 1980
+  temperature: 2000
+  location_x: 0
+  location_y: 0
+- element: Katairite
+  mass: 2150
+  temperature: 2000
+  location_x: 1
+  location_y: 0
+- element: Diamond
+  mass: 1840
+  temperature: 2000
+  location_x: 2
+  location_y: 0
+- element: Diamond
+  mass: 2410
+  temperature: 2000
+  location_x: 3
+  location_y: 0
+
+# Row 1: Walls + Content
+- element: Diamond
+  mass: 2200
+  temperature: 2000
+  location_x: -2
+  location_y: 1
+- element: MoltenGlass
+  mass: 460
+  temperature: 2000
+  location_x: -1
+  location_y: 1
+- element: MoltenGlass
+  mass: 540
+  temperature: 2000
+  location_x: 0
+  location_y: 1
+- element: MoltenGlass
+  mass: 510
+  temperature: 2000
+  location_x: 1
+  location_y: 1
+- element: MoltenGlass
+  mass: 490
+  temperature: 2000
+  location_x: 2
+  location_y: 1
+- element: Diamond
+  mass: 1950
+  temperature: 2000
+  location_x: 3
+  location_y: 1

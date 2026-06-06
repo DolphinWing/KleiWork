@@ -1,0 +1,32 @@
+biomeNoise: noise/HeliconiaFlow
+temperatureRange: TG_ExtremeHot
+#pdWeight: 2
+density:
+  min: 40
+  max: 60
+avoidRadius: 20.0
+sampleBehaviour: PoissonDisk
+borderOverride: wolframiteBorder
+biomes:
+  - name: biomes/Heliconia/Core_Iron
+    weight: 3
+  - name: biomes/Magma/MagmaBedNoUnobtanium
+    weight: 1
+subworldTemplateRules:
+  - names:
+      - poi/iron/small_a
+      - poi/iron/small_b
+    listRule: TrySome
+    someCount: 4
+    priority: 50
+features:
+  - type: features/Heliconia/IronPocket
+tags:
+  - HeliconiaSurface
+  - AtSurface
+  - IgnoreCaveOverride
+# - ErodePointToBorderInv
+# - ErodePointToWorldTop
+  - NoGlobalFeatureSpawning
+  - RemoveWorldBorderOverVacuum
+zoneType: MagmaCore

@@ -1,0 +1,30 @@
+biomeNoise: noise/subworldFrozen
+temperatureRange: TG_SuperHot
+density:
+  min: 10
+  max: 15
+avoidRadius: 20.0
+extraBiomeChildren: 4
+sampleBehaviour: PoissonDisk
+biomes:
+  - name: biomes/Heliconia/Frozen_Wet
+    weight: 1
+    tags:
+      - ColdWheat
+      - ColdWheatSeed
+      - ColdBreather
+tags:
+  - IgnoreCaveOverride
+features:
+  - type: expansion1::features/frozen/SlushPool
+  - type: expansion1::features/frozen/SlushPool
+  - type: expansion1::features/frozen/SaltShelf
+  - type: expansion1::features/frozen/SaltShelf
+  - type: expansion1::features/frozen/RustShelf
+  - type: expansion1::features/frozen/RustShelf
+subworldTemplateRules:
+  - names:
+    - poi/frozen/lab_basement
+    - poi/frozen/lab_splitroom
+    listRule: TryOne
+zoneType: FrozenWastes

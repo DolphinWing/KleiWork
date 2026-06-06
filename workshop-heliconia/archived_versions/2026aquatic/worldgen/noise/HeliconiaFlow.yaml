@@ -1,0 +1,67 @@
+settings:
+  zoom: 1
+  normalise: true
+  lowerBound:
+    X: 2
+    Y: 2
+  upperBound:
+    X: 4
+    Y: 4
+  name: HeliconiaFlow
+links:
+- target:
+    type: Filter
+    name: StartAreaFilter
+  source0:
+    type: Primitive
+    name: DefaultSimplexPerlinPrimative
+- target:
+    type: Terminator
+    name: TERMINATOR
+  source0:
+    type: Transformer
+    name: RotateFlow # Added rotation
+- target:
+    type: Transformer
+    name: RotateFlow
+  source0:
+    type: Modifier
+    name: HorizontalStretch
+- target:
+    type: Modifier
+    name: HorizontalStretch
+  source0:
+    type: Filter
+    name: StartAreaFilter
+primitives:
+  DefaultSimplexPerlinPrimative:
+    primative: SimplexPerlin
+    quality: Best
+    seed: 5
+    offset: 1
+    name: DefaultSimplexPerlinPrimative
+filters:
+  StartAreaFilter:
+    filter: RidgedMultiFractal
+    frequency: 0.15
+    lacunarity: 2
+    octaves: 2
+    gain: 0.5
+    offset: 0
+    exponent: 0.9
+    name: StartAreaFilter
+modifiers:
+  HorizontalStretch:
+    modifyType: Scale2d
+    scale: 1
+    scale2d:
+      X: 2.5
+      Y: 0.4
+    name: HorizontalStretch
+transformers:
+  RotateFlow:
+    transformerType: RotatePoint
+    power: 1
+    vector:
+      Y: 90 # Rotate 90 degrees
+    name: RotateFlow

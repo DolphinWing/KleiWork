@@ -1,0 +1,77 @@
+name: Voidria.Voidria.LAND_NAME
+description: Voidria.Voidria.LAND_DESC
+disableWorldTraits: true
+asteroidIcon: asteroid_unknown_kanim
+nameTables: [ MAGMA, TERRA ]
+
+worldTraitScale: 1 # Adjust with worldSize. Traits are tuned to base game world sizes.
+worldsize:
+  X: 40
+  Y: 40
+layoutMethod: PowerTree
+
+defaultsOverrides:
+  data:
+    OverworldAvoidRadius: 5
+    OverworldSampleBehaviour: PoissonDisk
+    OverworldDensityMin: 10
+    OverworldDensityMax: 10
+    DrawWorldBorder: true
+    DrawWorldBorderForce: false
+    WorldBorderThickness: 1
+    WorldBorderRange: 0
+#    OverworldMinNodes: 1
+  startingWorldElements: [] # remove the algae check
+
+worldTraitRules: [] # Disable world traits
+
+seasons:
+  - GassyMooteorShowers
+
+fixedTraits:
+  - sunlightVeryVeryVeryHigh
+  - cosmicRadiationHigh
+
+# List all the subworld files to load
+subworldFiles:
+  - name: subworlds/space/Space
+  - name: expansion1::subworlds/Voidria/GraphiteCaves
+    minCount: 1
+  - name: expansion1::subworlds/Voidria/NiobiumPatch
+    minCount: 1
+    maxCount: 2
+
+unknownCellsAllowedSubworlds: 
+  - tagcommand: Default
+    command: Replace
+    subworldNames:
+      -  expansion1::subworlds/Voidria/GraphiteCaves
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 0
+    maxDistance: 2
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 0
+    maxDistance: 0
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/Voidria/GraphiteCaves
+      - expansion1::subworlds/Voidria/NiobiumPatch
+
+worldTemplateRules:
+  - names:
+      - expansion1::bases/voa_landing_1
+      - expansion1::bases/voa_landing_2
+    listRule: GuaranteeAll
+    allowExtremeTemperatureOverlap: true
+    priority: 99
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 0

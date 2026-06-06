@@ -1,0 +1,31 @@
+biomeNoise: noise/subworldOcean
+temperatureRange: TG_SuperHot
+density:
+  min: 10
+  max: 15
+avoidRadius: 20.0
+minChildCount: 4
+sampleBehaviour: PoissonDisk
+borderOverride: heliconiaBorder
+biomes:
+  - name: biomes/Heliconia/Ocean_Basic
+    weight: 2
+    tags:
+      - Pacu
+      - Crab
+      - SeaLettuceSeed
+      - SpiceVineSeed
+  - name: biomes/Ocean/Dry
+    weight: 0.2
+    tags:
+      - Pacu
+      - Crab
+      - SeaLettuceSeed
+      - SpiceVineSeed
+features:
+  - type: features/ocean/SaltCave
+  - type: features/ocean/DeepPool
+tags:
+  - IgnoreCaveOverride
+  - River
+zoneType: Ocean

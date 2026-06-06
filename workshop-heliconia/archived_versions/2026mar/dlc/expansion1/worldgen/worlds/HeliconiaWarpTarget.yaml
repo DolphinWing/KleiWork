@@ -1,0 +1,257 @@
+name: Heliconia.Heliconia.WARP_NAME
+description: Heliconia.Heliconia.WARP_DESCRIPTION
+nameTables: [ TERRA, OILY ]
+asteroidIcon: asteroid_swamp_teleport_kanim
+
+worldTraitScale: 0.20 # Adjust with worldSize. Traits are tuned to base game world sizes.
+worldsize:
+  X: 128
+  Y: 153
+layoutMethod: PowerTree
+
+defaultsOverrides:
+  data:
+    DrawWorldBorderForce: false
+    DrawWorldBorder: true
+    WorldBorderThickness: 4
+    WorldBorderRange: 1
+    OverworldDensityMin: 18
+    OverworldDensityMax: 18
+    OverworldAvoidRadius: 5
+    OverworldSampleBehaviour: PoissonDisk
+    POIPadding: 1
+
+worldTraitRules:
+  - min: 1
+    max: 2
+    forbiddenTags:
+      - StartWorldOnly
+      - LargeWorld
+      - Challenge
+      - Surface
+      - GenericGeysers
+
+subworldMixingRules:
+ - name: (Mixing6)
+   minCount: 1
+   maxCount: 2
+
+fixedTraits:
+  - sunlightMedLow
+  - cosmicRadiationLow
+
+seasons:
+  - SpacedOutStyleWarpMeteorShowers
+  - OilRichWarpTargetMeteorShowers # unused
+
+startSubworldName: expansion1::subworlds/Heliconia/SwampWarpStart
+startingBaseTemplate:  expansion1::bases/HeliconiaWarpBase
+startingBasePositionHorizontal:
+  min: 0.4
+  max: 0.6
+startingBasePositionVertical:
+  min: 0.38
+  max: 0.42
+
+# List all the subworld files to load
+subworldFiles:
+  - name: expansion1::subworlds/Heliconia/SwampWarpStart
+  - name: expansion1::subworlds/Heliconia/JungleHot
+  - name: expansion1::subworlds/Heliconia/SwampMedium
+    minCount: 2
+  - name: subworlds/space/Space
+  - name: expansion1::subworlds/Heliconia/SpaceWithSaltyBorder
+  - name: expansion1::subworlds/Heliconia/AluminumCore
+    maxCount: 2
+  #- name: expansion1::subworlds/Heliconia/RadioactiveCore
+  - name: expansion1::subworlds/Heliconia/OilSparse
+  - name: expansion1::subworlds/Heliconia/OilWells
+  - name: expansion1::subworlds/Heliconia/RustMedium
+    maxCount: 2
+  - name: subworlds/Heliconia/Ocean
+    minCount: 4
+
+unknownCellsAllowedSubworlds: 
+  - tagcommand: Default
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/Heliconia/SwampMedium
+      - expansion1::subworlds/Heliconia/RustMedium
+      - (Mixing6)
+  # Ring-1
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/Heliconia/SwampMedium
+      - expansion1::subworlds/Heliconia/JungleHot
+  # Surface
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 2
+    maxDistance: 2
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/Heliconia/RustMedium
+      - subworlds/Heliconia/Ocean
+      - (Mixing6)
+  # Space
+  - tagcommand: AtTag
+    tag: AtSurface
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/Heliconia/SpaceWithSaltyBorder
+  # Above Core
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/Heliconia/OilSparse
+      - expansion1::subworlds/Heliconia/OilWells
+      - expansion1::subworlds/Heliconia/RustMedium
+  # Core
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 0
+    maxDistance: 0
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/Heliconia/OilWells
+      - expansion1::subworlds/Heliconia/AluminumCore
+      #- expansion1::subworlds/Heliconia/RadioactiveCore
+
+worldTemplateRules:
+  # Ocean
+  - names:
+      - poi/poi_ocean_geyser_saltwater
+    listRule: TryOne
+    priority: 100 
+    allowedCellsFilter:
+      - command: Replace
+        zoneTypes: [Ocean]
+  # Oil
+  - names:
+    - poi/oil/small_oilpockets_geyser_a
+    - poi/oil/small_oilpockets_geyser_b
+    - poi/oil/small_oilpockets_geyser_c
+    - poi/oil/small_oilpockets_geyser_d
+    - poi/oil/small_oilpockets_geyser_e
+    - poi/oil/small_oilpockets_geyser_f
+    - poi/oil/small_oilpockets_geyser_g
+    - poi/oil/small_oilpockets_geyser_h
+    listRule: GuaranteeSomeTryMore
+    someCount: 2
+    moreCount: 3
+    priority: 105
+    allowedCellsFilter:
+      - command: Replace
+        zoneTypes: [ OilField, MagmaCore ]
+      - command: IntersectWith
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 2
+  # Gravitas
+  - names:
+    - expansion1::poi/warp/sender
+    - expansion1::poi/warp/receiver
+    listRule: GuaranteeAll
+    priority: 90
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 1
+        maxDistance: 4
+      #- command: IntersectWith
+      #  zoneTypes: [ Sandstone, Ocean, Rust ]
+      - command: ExceptWith
+        tagcommand: AtTag
+        tag: NoGravitasFeatures
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 0
+  # Boons
+  - names:
+    - expansion1::poi/boon/bedroom
+    - expansion1::poi/boon/washroom
+    - expansion1::poi/boon/power
+    - expansion1::poi/boon/kitchen
+    - expansion1::poi/boon/well
+    - expansion1::poi/boon/farm
+    listRule: TrySome
+    someCount: 4
+    priority: 50
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 1
+        maxDistance: 3
+      - command: IntersectWith
+        zoneTypes: [ Swamp, Ocean, Rust ]
+  # Sulfur geyser
+  - names:
+    - expansion1::geysers/liquid_sulfur
+    listRule: TryAll
+    priority: 200
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 2
+        maxDistance: 10
+      - command: ExceptWith
+        zoneTypes: [ Space ] 
+   # Curated Geysers
+  - names:
+    - geysers/chlorine_gas
+    - geysers/methane
+    - geysers/hot_co2
+    - geysers/small_volcano
+    - geysers/liquid_co2
+    - expansion1::geysers/liquid_sulfur
+    listRule: TryOne
+    times: 2
+    allowDuplicates: true
+    priority: 10
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 2
+        maxDistance: 10
+      - command: ExceptWith
+        zoneTypes: [ Space ] 
+  # Critter Spaced Out!
+  - names:
+    - expansion1::critters/tg_beeta_hive
+    - expansion1::critters/tg_divertgent
+    - expansion1::critters/tg_plug_slug
+    listRule: TryAll
+    ruleId: hca_critters_spacedout
+    priority: 120
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 1
+        maxDistance: 99
+      - command: ExceptWith # too close to surface
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 1

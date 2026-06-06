@@ -1,0 +1,14 @@
+name: NotZeroK.WorldConstants.CLUSTER_NAME
+description: NotZeroK.WorldConstants.CLUSTER_DESCRIPTION
+coordinatePrefix: ABZ-TG
+
+clusterCategory: Vanilla
+difficulty: 6
+menuOrder: -1
+
+startWorldIndex: 0
+worldPlacements:
+- world: worlds/AbsoluteZero
+  allowedRings:
+    min: 0
+    max: 0

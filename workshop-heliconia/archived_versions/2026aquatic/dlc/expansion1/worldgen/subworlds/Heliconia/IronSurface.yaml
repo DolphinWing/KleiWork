@@ -1,0 +1,31 @@
+biomeNoise: expansion1::noise/HospitableSurface
+temperatureRange: TG_ExtremeHot
+density:
+  min: 20
+  max: 40
+avoidRadius: 12.0
+sampleBehaviour: PoissonDisk
+borderOverride: wolframiteBorder
+biomes:
+  - name: biomes/Heliconia/Core_Iron
+    weight: 1
+subworldTemplateRules:
+  - names:
+      - poi/iron/small_a
+      - poi/iron/small_b
+    listRule: TrySome
+    someCount: 4
+    priority: 50
+features:
+  - type: features/Heliconia/IronPocket
+  - type: features/Heliconia/MetalVein
+  - type: expansion1::features/Heliconia/RadSludge
+tags:
+  - HeliconiaSurface
+  - AtSurface
+  - IgnoreCaveOverride
+# - ErodePointToBorderInv
+# - ErodePointToWorldTop
+  - NoGlobalFeatureSpawning
+  - RemoveWorldBorderOverVacuum
+zoneType: MagmaCore

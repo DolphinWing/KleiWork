@@ -1,0 +1,169 @@
+#. NotZeroK.WorldConstants.MOD_NAME
+msgctxt "NotZeroK.WorldConstants.MOD_NAME"
+msgid "Not 0k, But Pretty Cool Place"
+msgstr "Not 0k, But Pretty Cool Place"
+
+#. NotZeroK.WorldConstants.MOD_DESC
+msgctxt "NotZeroK.WorldConstants.MOD_DESC"
+msgid "Pretty Cool. But 0K Not Included"
+msgstr "Pretty Cool. But 0K Not Included"
+
+#. NotZeroK.WorldConstants.MAP_MODE
+msgctxt "NotZeroK.WorldConstants.MAP_MODE"
+msgid "Mode"
+msgstr "Mode"
+
+#. NotZeroK.WorldConstants.MAP_MODE_DESC
+msgctxt "NotZeroK.WorldConstants.MAP_MODE_DESC"
+msgid "The worldgen temperature around the Printing Pod."
+msgstr "The worldgen temperature around the Printing Pod."
+
+#. NotZeroK.WorldConstants.MAP_MODE_BALANCED
+msgctxt "NotZeroK.WorldConstants.MAP_MODE_BALANCED"
+msgid "Frigid Challenge"
+msgstr "Frigid Challenge"
+
+#. NotZeroK.WorldConstants.MAP_MODE_BALANCED_DESC
+msgctxt "NotZeroK.WorldConstants.MAP_MODE_BALANCED_DESC"
+msgid "Snow-covered, this is the Duplicants' proving ground."
+msgstr "Snow-covered, this is the Duplicants' proving ground."
+
+#. NotZeroK.WorldConstants.MAP_MODE_EASY
+msgctxt "NotZeroK.WorldConstants.MAP_MODE_EASY"
+msgid "Comfort Zone"
+msgstr "Comfort Zone"
+
+#. NotZeroK.WorldConstants.MAP_MODE_EASY_DESC
+msgctxt "NotZeroK.WorldConstants.MAP_MODE_EASY_DESC"
+msgid "Just like Rime, this is the Duplicants' haven."
+msgstr "Just like Rime, this is the Duplicants' haven."
+
+#. NotZeroK.WorldConstants.MAP_MODE_CRAZY
+msgctxt "NotZeroK.WorldConstants.MAP_MODE_CRAZY"
+msgid "Freezing Limit"
+msgstr "Freezing Limit"
+
+#. NotZeroK.WorldConstants.MAP_MODE_CRAZY_DESC
+msgctxt "NotZeroK.WorldConstants.MAP_MODE_CRAZY_DESC"
+msgid "Everything frozen, this is the Duplicants' ultimate test."
+msgstr "Everything frozen, this is the Duplicants' ultimate test."
+
+#. NotZeroK.WorldConstants.SHELTER
+msgctxt "NotZeroK.WorldConstants.SHELTER"
+msgid "Shelter Cave"
+msgstr "Shelter Cave"
+
+#. NotZeroK.WorldConstants.SHELTER_DESC
+msgctxt "NotZeroK.WorldConstants.SHELTER_DESC"
+msgid "A small refuge space to avoid freezing to death."
+msgstr "A small refuge space to avoid freezing to death."
+
+#. NotZeroK.WorldConstants.CRITTER
+msgctxt "NotZeroK.WorldConstants.CRITTER"
+msgid "Critter Cave"
+msgstr "Critter Cave"
+
+#. NotZeroK.WorldConstants.CRITTER_DESC
+msgctxt "NotZeroK.WorldConstants.CRITTER_DESC"
+msgid "A small refuge space for critters and plants."
+msgstr "A small refuge space for critters and plants."
+
+#. NotZeroK.WorldConstants.CRITTER_SAVE
+msgctxt "NotZeroK.WorldConstants.CRITTER_SAVE"
+msgid "Critter Save"
+msgstr "Critter Save"
+
+#. NotZeroK.WorldConstants.CRITTER_SAVE_DESC
+msgctxt "NotZeroK.WorldConstants.CRITTER_SAVE_DESC"
+msgid "Spawn everything to save critters and plants."
+msgstr "Spawn everything to save critters and plants."
+
+#. NotZeroK.WorldConstants.CLUSTER_NAME
+msgctxt "NotZeroK.WorldConstants.CLUSTER_NAME"
+msgid "Not 0K Classic"
+msgstr "Not 0K Classic"
+
+#. NotZeroK.WorldConstants.CLUSTER_DESCRIPTION
+msgctxt "NotZeroK.WorldConstants.CLUSTER_DESCRIPTION"
+msgid "0K challenge"
+msgstr "0K challenge"
+
+#. NotZeroK.WorldConstants.WORLD_NAME
+msgctxt "NotZeroK.WorldConstants.WORLD_NAME"
+msgid "Not 0K planet"
+msgstr "Not 0K planet"
+
+#. NotZeroK.WorldConstants.WORLD_DESCRIPTION
+msgctxt "NotZeroK.WorldConstants.WORLD_DESCRIPTION"
+msgid "Not 0K, But Pretty Cool Place.\n\n<smallcaps>A little cozy place to start your 0K challenge.</smallcaps>"
+msgstr "Not 0K, But Pretty Cool Place.\n\n<smallcaps>A little cozy place to start your 0K challenge.</smallcaps>"
+
+#. NotZeroK.WorldConstants.CLUSTER_SO_NAME
+msgctxt "NotZeroK.WorldConstants.CLUSTER_SO_NAME"
+msgid "Not 0K Cluster"
+msgstr "Not 0K Cluster"
+
+#. NotZeroK.WorldConstants.CLUSTER_SO_DESCRIPTION
+msgctxt "NotZeroK.WorldConstants.CLUSTER_SO_DESCRIPTION"
+msgid "0K challenge in Spaced Out!"
+msgstr "0K challenge in Spaced Out!"
+
+#. NotZeroK.WorldConstants.WORLD_SO_NAME
+msgctxt "NotZeroK.WorldConstants.WORLD_SO_NAME"
+msgid "Not 0K asteroid"
+msgstr "Not 0K asteroid"
+
+#. NotZeroK.WorldConstants.WORLD_SO_DESCRIPTION
+msgctxt "NotZeroK.WorldConstants.WORLD_SO_DESCRIPTION"
+msgid "Not 0K, But Pretty Cool Place.\n\n<smallcaps>A little cozy place to start your 0K challenge.</smallcaps>"
+msgstr "Not 0K, But Pretty Cool Place.\n\n<smallcaps>A little cozy place to start your 0K challenge.</smallcaps>"
+
+#. NotZeroK.WorldConstants.WORLD_SO_WARP_NAME
+msgctxt "NotZeroK.WorldConstants.WORLD_SO_WARP_NAME"
+msgid "Iced Swamp Asteroid"
+msgstr "Iced Swamp Asteroid"
+
+#. NotZeroK.WorldConstants.WORLD_SO_WARP_DESCRIPTION
+msgctxt "NotZeroK.WorldConstants.WORLD_SO_WARP_DESCRIPTION"
+msgid "A large-ish, polluted swamp world.\n\n<smallcaps>Iced Swamp Asteroids are full of swampy and marshy areas, but also contain a variety of other biomes diverse enough to keep a determined colony supplied with essentials. Probably.</smallcaps>"
+msgstr "A large-ish, polluted swamp world.\n\n<smallcaps>Iced Swamp Asteroids are full of swampy and marshy areas, but also contain a variety of other biomes diverse enough to keep a determined colony supplied with essentials. Probably.</smallcaps>"
+
+#. NotZeroK.WorldConstants.CLUSTER_SO_MINI_NAME
+msgctxt "NotZeroK.WorldConstants.CLUSTER_SO_MINI_NAME"
+msgid "Not 0K Mini Cluster"
+msgstr "Not 0K Mini Cluster"
+
+#. NotZeroK.WorldConstants.CLUSTER_SO_MINI_DESCRIPTION
+msgctxt "NotZeroK.WorldConstants.CLUSTER_SO_MINI_DESCRIPTION"
+msgid "0K challenge in Spaced Out!"
+msgstr "0K challenge in Spaced Out!"
+
+#. NotZeroK.WorldConstants.WORLD_SO_MINI_NAME
+msgctxt "NotZeroK.WorldConstants.WORLD_SO_MINI_NAME"
+msgid "Not 0K Mini planet"
+msgstr "Not 0K Mini planet"
+
+#. NotZeroK.WorldConstants.WORLD_SO_MINI_DESCRIPTION
+msgctxt "NotZeroK.WorldConstants.WORLD_SO_MINI_DESCRIPTION"
+msgid "Not 0K, But Pretty Cool Place.\n\n<smallcaps>A little cozy place to start your 0K challenge.</smallcaps>"
+msgstr "Not 0K, But Pretty Cool Place.\n\n<smallcaps>A little cozy place to start your 0K challenge.</smallcaps>"
+
+#. NotZeroK.WorldConstants.CLUSTER_SO_MOONLET_NAME
+msgctxt "NotZeroK.WorldConstants.CLUSTER_SO_MOONLET_NAME"
+msgid "Not 0K Moonlet Cluster"
+msgstr "Not 0K Moonlet Cluster"
+
+#. NotZeroK.WorldConstants.CLUSTER_SO_MOONLET_DESCRIPTION
+msgctxt "NotZeroK.WorldConstants.CLUSTER_SO_MOONLET_DESCRIPTION"
+msgid "0K challenge in Spaced Out!"
+msgstr "0K challenge in Spaced Out!"
+
+#. NotZeroK.WorldConstants.WORLD_SO_MOONLET_NAME
+msgctxt "NotZeroK.WorldConstants.WORLD_SO_MOONLET_NAME"
+msgid "Not 0K Moonlet"
+msgstr "Not 0K Moonlet"
+
+#. NotZeroK.WorldConstants.WORLD_SO_MOONLET_DESCRIPTION
+msgctxt "NotZeroK.WorldConstants.WORLD_SO_MOONLET_DESCRIPTION"
+msgid "Not 0K, But Pretty Cool Place.\n\n<smallcaps>A little cozy place to start your 0K challenge.</smallcaps>"
+msgstr "Not 0K, But Pretty Cool Place.\n\n<smallcaps>A little cozy place to start your 0K challenge.</smallcaps>"

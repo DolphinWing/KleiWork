@@ -1,0 +1,114 @@
+#. Heliconia.Heliconia.NAME
+msgctxt "Heliconia.Heliconia.NAME"
+msgid "Heliconia"
+msgstr "Heliconia"
+
+#. Heliconia.Heliconia.MOD_DESC
+msgctxt "Heliconia.Heliconia.MOD_DESC"
+msgid "Heliconia mod"
+msgstr "Hell as hot as possible"
+
+#. Heliconia.Heliconia.DESCRIPTION
+msgctxt "Heliconia.Heliconia.DESCRIPTION"
+msgid "Heliconia desc"
+msgstr "Hell as hot as possible.\n\n<smallcaps>Duplicants MUST work to DEATH to make the colony thrive again.</smallcaps>"
+
+#. Heliconia.Heliconia.BIOME_DESC
+msgctxt "Heliconia.Heliconia.BIOME_DESC"
+msgid "Heliconia biome"
+msgstr "Hell as hot as possible."
+
+#. Heliconia.Heliconia.UTILITY_DESC
+msgctxt "Heliconia.Heliconia.UTILITY_DESC"
+msgid "Heliconia biome desc"
+msgstr "Hell as hot as possible."
+
+#. Heliconia.Heliconia.WARP_NAME
+msgctxt "Heliconia.Heliconia.WARP_NAME"
+msgid "Phlegethon"
+msgstr "Phlegethon"
+
+#. Heliconia.Heliconia.WARP_DESCRIPTION
+msgctxt "Heliconia.Heliconia.WARP_DESCRIPTION"
+msgid "The River of Eternal Scorch."
+msgstr "The River of Eternal Scorch.\n\n<smallcaps>A satellite born from the overflow of Hell. Its gravity bleeds thermal energy, ensuring the fire never ends.</smallcaps>"
+
+#. Heliconia.HeliconiaOptions.GiftedAreaTitle
+msgctxt "Heliconia.HeliconiaOptions.GiftedAreaTitle"
+msgid "Shelter Cave"
+msgstr "Shelter Cave"
+
+#. Heliconia.HeliconiaOptions.GiftedAreaTooltip
+msgctxt "Heliconia.HeliconiaOptions.GiftedAreaTooltip"
+msgid "A small refuge space to avoid hot to death."
+msgstr "A small refuge space to avoid hot to death."
+
+#. Heliconia.HeliconiaOptions.CrittersCaveTitle
+msgctxt "Heliconia.HeliconiaOptions.CrittersCaveTitle"
+msgid "Critter Cave"
+msgstr "Critter Cave"
+
+#. Heliconia.HeliconiaOptions.CrittersCaveTooltip
+msgctxt "Heliconia.HeliconiaOptions.CrittersCaveTooltip"
+msgid "A small refuge space for critters and plants."
+msgstr "A small refuge space for critters and plants."
+
+#. Heliconia.HeliconiaOptions.CrittersSaveTitle
+msgctxt "Heliconia.HeliconiaOptions.CrittersSaveTitle"
+msgid "Critter Save"
+msgstr "Critter Save"
+
+#. Heliconia.HeliconiaOptions.CrittersSaveTooltip
+msgctxt "Heliconia.HeliconiaOptions.CrittersSaveTooltip"
+msgid "Spawn everything to save critters and plants."
+msgstr "Spawn everything to save critters and plants."
+
+#. Heliconia.HeliconiaOptions.InstantModeTitle
+msgctxt "Heliconia.HeliconiaOptions.InstantModeTitle"
+msgid "Instant temperature balanced"
+msgstr "Instant Temp Balancing"
+
+#. Heliconia.HeliconiaOptions.InstantModeTooltip
+msgctxt "Heliconia.HeliconiaOptions.InstantModeTooltip"
+msgid "Instant temperature balanced right after worldgen."
+msgstr "Instantly balances temperature right after world generation."
+
+#. Heliconia.HeliconiaOptions.MAP_MODE
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE"
+msgid "Temperature Mode"
+msgstr "Temperature Mode"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_DESC
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_DESC"
+msgid "Select starting biome temperature"
+msgstr "Select starting biome temperature"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_BALANCED
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_BALANCED"
+msgid "Balanced"
+msgstr "Balanced"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_BALANCED_DESC
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_BALANCED_DESC"
+msgid "balanced but still quite a chanllege."
+msgstr "Balanced, but still quite a challenge."
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_EASY
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_EASY"
+msgid "Easy"
+msgstr "Easy"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_EASY_DESC
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_EASY_DESC"
+msgid "a bit taste of Heliconia"
+msgstr "A little taste of Heliconia."
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_CRAZY
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_CRAZY"
+msgid "Crazy"
+msgstr "Crazy"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_CRAZY_DESC
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_CRAZY_DESC"
+msgid "I bet you are crazy about this game."
+msgstr "I bet you are crazy about this game."

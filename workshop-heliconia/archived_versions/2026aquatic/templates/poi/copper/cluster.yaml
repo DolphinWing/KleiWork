@@ -1,0 +1,33 @@
+name: HcaCopperCluster
+info:
+  size:
+    X: 5
+    Y: 5
+  area: 25
+cells:
+- element: Katairite
+  mass: 2000
+  location_x: -1
+  location_y: -1
+- element: Copper
+  mass: 1500
+  location_y: -1
+- element: Copper
+  mass: 1500
+  location_x: 1
+  location_y: -1
+- element: Copper
+  mass: 1500
+  location_x: -1
+- element: Katairite
+  mass: 2000
+- element: Copper
+  mass: 1500
+  location_x: 1
+- element: Copper
+  mass: 1500
+  location_y: 1
+- element: Copper
+  mass: 1500
+  location_x: 1
+  location_y: 1

@@ -1,0 +1,64 @@
+biomeNoise: noise/subworldForest
+temperatureRange: Mild
+pdWeight: 1
+density:
+  min: 10
+  max: 20
+avoidRadius: 15.0
+#extraBiomeChildren: 4
+minChildCount: 4
+doAvoidPoints: false
+dontRelaxChildren: true
+sampleBehaviour: PoissonDisk
+borderOverride: organicCrust
+biomes:
+  - name: biomes/Heliconia/Start
+    weight: 1
+    tags:
+      - StartWorld
+      - EvilFlower
+      - EvilFlowerSeed
+      - BasicSingleHarvestPlantSeed
+      - BasicSingleHarvestPlant
+      - Hatch
+  - name: biomes/Heliconia/Forest_BasicOxy_Hca
+    weight: 2
+    tags:
+      - Oxyfern
+      - ForestTree     
+      - BasicSingleHarvestPlant
+      - BasicSingleHarvestPlantSeed
+      - ForestForagePlantPlanted
+      - LightBug
+      - LeafyPlant
+      - LeafyPlantSeed
+  - name: biomes/Heliconia/Forest_Basic_Hca
+    weight: 2
+    tags:
+      - Oxyfern
+      - ForestTree     
+      - BasicSingleHarvestPlant
+      - BasicSingleHarvestPlantSeed
+      - ForestForagePlantPlanted
+      - LightBug
+      - EvilFlower
+      - EvilFlowerSeed
+      - ForestForagePlant
+  - name: biomes/Heliconia/Forest_Metal_Start
+    weight: 2
+    tags:
+      - Oxyfern
+      - EvilFlower
+      - EvilFlowerSeed
+      - BasicSingleHarvestPlantSeed
+      - ForestForagePlantPlanted
+tags:
+  - StartWorld
+  - IgnoreCaveOverride
+  - NoGlobalFeatureSpawning
+centralFeature:
+  type: features/generic/StartLocation
+features:
+#  - type: features/forest/SmallLake
+  - type: features/forest/OxyfernCave
+zoneType: Forest

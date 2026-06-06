@@ -1,0 +1,328 @@
+name: Heliconia.Heliconia.NAME
+description: Heliconia.Heliconia.DESCRIPTION
+nameTables: [ MAGMA ]
+asteroidIcon: asteroid_heliconia_kanim
+
+worldTraitScale: 0.44
+worldsize:
+  X: 160
+  Y: 274
+layoutMethod: PowerTree
+
+defaultsOverrides:
+  data:
+    OverworldDensityMin: 18
+    OverworldDensityMax: 18
+    OverworldSampleBehaviour: PoissonDisk
+  startingWorldElements: []
+
+startSubworldName: expansion1::subworlds/Heliconia/med_ForestStart
+startingBaseTemplate: bases/HcaForestBase
+startingBasePositionHorizontal:
+  min: 0.5
+  max: 0.5
+startingBasePositionVertical:
+  min: 0.40
+  max: 0.45
+
+worldTraitRules:
+  - min: 0
+    max: 3
+    forbiddenTags:
+      - Oil
+      - NonStartWorld
+      - largeImpactorFragmentsAllowed
+    forbiddenTraits:
+      - traits/MisalignedStart
+      - traits/DeepOil
+      - traits/IrregularOil
+      - traits/MagmaVents
+      - traits/SubsurfaceOcean
+      - traits/GeoDormant
+      - traits/FrozenCore
+      - traits/GlaciersLarge
+      - expansion1::traits/IrregularOil
+      - expansion1::traits/LushCore
+      - expansion1::traits/SubsurfaceOcean
+
+# List all the subworld files to load
+subworldFiles:
+  - name: subworlds/Heliconia/Sandstone
+  - name: expansion1::subworlds/Heliconia/med_ForestStart
+  - name: subworlds/Heliconia/Marsh
+  - name: subworlds/Heliconia/Jungle
+  - name: expansion1::subworlds/Heliconia/ShelterZone
+    minCount: 1
+    maxCount: 1
+  - name: subworlds/Heliconia/Ocean
+    #minCount: 1
+  - name: subworlds/Heliconia/Rust
+    #minCount: 1
+  - name: subworlds/Heliconia/ForestMiniMetal
+    #minCount: 1
+  - name: subworlds/Heliconia/ForestMiniWater
+    #minCount: 1
+  - name: subworlds/Heliconia/ForestMiniOxy
+    #minCount: 1
+  - name: subworlds/space/Space
+  - name: subworlds/space/SpaceNoBorder
+  - name: expansion1::subworlds/Heliconia/Rust
+  - name: expansion1::subworlds/Heliconia/JungleHot
+  - name: expansion1::subworlds/Heliconia/Swamp
+  - name: expansion1::subworlds/Heliconia/Wasteland
+  - name: subworlds/Heliconia/IronSurface
+  - name: subworlds/Heliconia/MoltenGlassCore
+  - name: expansion1::subworlds/Heliconia/CobaltCore
+  - name: expansion1::subworlds/Heliconia/AluminumCore
+  - name: expansion1::subworlds/Heliconia/IronSurface
+
+fixedTraits:
+  - sunlightVeryVeryLow
+  - cosmicRadiationVeryLow
+
+seasons:
+  - ClassicStyleStartMeteorShowers
+
+# Specify where subworlds can spawn. These rules are processed in order and their effects are cumulative.
+unknownCellsAllowedSubworlds: 
+  - tagcommand: Default
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/Heliconia/med_ForestStart
+
+  # Ring-1
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - subworlds/Heliconia/ForestMiniMetal
+      - subworlds/Heliconia/ForestMiniWater
+      - subworlds/Heliconia/ForestMiniOxy
+      - expansion1::subworlds/Heliconia/ShelterZone
+
+  # Ring-2
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 2
+    maxDistance: 2
+    command: Replace
+    subworldNames:
+      - subworlds/Heliconia/Jungle
+      - subworlds/Heliconia/Rust
+      - expansion1::subworlds/Heliconia/JungleHot
+
+  # Ring-3
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 3
+    maxDistance: 3
+    command: Replace
+    subworldNames:
+      - subworlds/Heliconia/Ocean
+      - subworlds/Heliconia/Marsh
+      - subworlds/Heliconia/Jungle
+      - expansion1::subworlds/Heliconia/JungleHot
+      - expansion1::subworlds/Heliconia/Swamp
+      - expansion1::subworlds/Heliconia/Wasteland
+
+  # Ring-4
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 4
+    maxDistance: 999
+    command: Replace
+    subworldNames:
+      - subworlds/Heliconia/Ocean
+      - subworlds/Heliconia/Marsh
+      - subworlds/Heliconia/Jungle
+      - subworlds/Heliconia/Sandstone
+      - subworlds/Heliconia/Rust
+      - expansion1::subworlds/Heliconia/JungleHot
+      - expansion1::subworlds/Heliconia/Rust
+      - expansion1::subworlds/Heliconia/Swamp
+      - expansion1::subworlds/Heliconia/Wasteland
+
+  # Core
+  - tagcommand: AtTag
+    tag: AtDepths
+    command: Replace
+    subworldNames:
+      - subworlds/Heliconia/MoltenGlassCore
+      - expansion1::subworlds/Heliconia/CobaltCore
+      - expansion1::subworlds/Heliconia/AluminumCore
+
+  # Space
+  - tagcommand: AtTag
+    tag: AtSurface
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - subworlds/space/SpaceNoBorder
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 2
+    maxDistance: 2
+    command: Replace
+    subworldNames:
+      - subworlds/Heliconia/IronSurface
+      - expansion1::subworlds/Heliconia/IronSurface
+
+worldTemplateRules:
+  # Marsh
+  - names:
+      - poi/hotmarsh/geyser_steam
+    listRule: TryOne
+    priority: 100
+    allowedCellsFilter:
+      - command: Replace
+        zoneTypes: [ BoggyMarsh, Rust ]
+
+  # Gravitas
+  - names:
+    - expansion1::poi/warp/sender
+    - expansion1::poi/warp/receiver
+    - expansion1::poi/warp/teleporter
+    listRule: GuaranteeAll
+    priority: 90
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 2
+        maxDistance: 5
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 2
+      - command: ExceptWith
+        zoneTypes: [ Space, MagmaCore ]
+      - command: ExceptWith
+        tagcommand: AtTag
+        tag: NoGravitasFeatures
+  - names:
+      - expansion1::poi/genericGravitas/poi_office
+    listRule: TryOne
+    priority: 100
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 2
+        maxDistance: 99
+      - command: ExceptWith
+        tagcommand: AtTag
+        tag: NoGravitasFeatures
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 1
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 1
+
+  # Curated Geysers
+  - names:
+    #- geysers/hot_steam
+    - geysers/hot_co2
+    - geysers/hot_hydrogen
+    - geysers/hot_po2
+    - geysers/big_volcano
+    - geysers/small_volcano
+    listRule: TryOne
+    times: 2
+    priority: 10
+    ruleId: GenericGeysers
+    allowDuplicates: true
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 3
+        maxDistance: 10
+      - command: ExceptWith
+        zoneTypes: [ Space ]
+      - command: ExceptWith
+        tagcommand: AtTag
+        tag: NoGlobalFeatureSpawning
+
+  # Shelter
+  - names:
+      - expansion1::bases/HcaShelterSoR20
+      - expansion1::bases/HcaShelterSoL20
+      - expansion1::bases/HcaShelterSoR80
+      - expansion1::bases/HcaShelterSoL80
+    listRule: GuaranteeOne
+    ruleId: hca_shelter_so
+    priority: 500
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: AtTag
+        tag: HCA_Shelter
+
+  # Critter Caves
+  - names:
+    - critters/tg_bean_sleat
+    - critters/tg_bug_morb_toilet
+    - critters/tg_ce_lily_cave
+    - critters/tg_hatch_lice
+    - critters/tg_pacu_lake
+    - critters/tg_pip_tree
+    - critters/tg_pokeshell_pepper
+    - critters/tg_puft_love
+    - critters/tg_slime_sour
+    - critters/tg_mole_hole
+    - critters/tg_wheat_wort
+    listRule: TryAll
+    ruleId: hca_critters_base
+    priority: 80
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 3
+        maxDistance: 99
+      - command: ExceptWith
+        tagcommand: AtTag
+        tag: NoGravitasFeatures
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 0
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 1
+  - names:
+      - poi/frozen/heatsink_a
+      - poi/frozen/heatsink_b
+      - poi/frozen/heatsink_c
+      - poi/frozen/heatsink_d
+    listRule: TryOne
+    times: 2
+    ruleId: hca_gift_anti_entropy
+    priority: 50
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 2
+        maxDistance: 99
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 1

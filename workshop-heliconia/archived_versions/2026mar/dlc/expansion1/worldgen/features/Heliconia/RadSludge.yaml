@@ -1,0 +1,20 @@
+tags:
+  - AllowExceedNodeBorders
+shape: Blob
+borders:
+blobSize:
+  min: 0.8 # 極小，幾乎只有一兩格
+  max: 1.2
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: NuclearWaste
+        weight: 1
+        overrides:
+          massOverride: 200
+          temperatureOverride: 2000 # 確保它是汽化狀態的驚喜
+      - element: Corium
+        weight: 1
+        overrides:
+          massOverride: 200

@@ -1,0 +1,169 @@
+#. NotZeroK.WorldConstants.MOD_NAME
+msgctxt "NotZeroK.WorldConstants.MOD_NAME"
+msgid "Not 0k, But Pretty Cool Place"
+msgstr "不 0K，但冷酷地"
+
+#. NotZeroK.WorldConstants.MOD_DESC
+msgctxt "NotZeroK.WorldConstants.MOD_DESC"
+msgid "Pretty Cool. But 0K Not Included"
+msgstr "相當酷，但不是 0K"
+
+#. NotZeroK.WorldConstants.MAP_MODE
+msgctxt "NotZeroK.WorldConstants.MAP_MODE"
+msgid "Mode"
+msgstr "模式"
+
+#. NotZeroK.WorldConstants.MAP_MODE_DESC
+msgctxt "NotZeroK.WorldConstants.MAP_MODE_DESC"
+msgid "The worldgen temperature around the Printing Pod."
+msgstr "世界成形時，列印設備周圍的溫度。"
+
+#. NotZeroK.WorldConstants.MAP_MODE_BALANCED
+msgctxt "NotZeroK.WorldConstants.MAP_MODE_BALANCED"
+msgid "Frigid Challenge"
+msgstr "極地挑戰"
+
+#. NotZeroK.WorldConstants.MAP_MODE_BALANCED_DESC
+msgctxt "NotZeroK.WorldConstants.MAP_MODE_BALANCED_DESC"
+msgid "Snow-covered, this is the Duplicants' proving ground."
+msgstr "冰雪覆蓋，這裡是複製人的試煉之地。"
+
+#. NotZeroK.WorldConstants.MAP_MODE_EASY
+msgctxt "NotZeroK.WorldConstants.MAP_MODE_EASY"
+msgid "Comfort Zone"
+msgstr "舒適圈"
+
+#. NotZeroK.WorldConstants.MAP_MODE_EASY_DESC
+msgctxt "NotZeroK.WorldConstants.MAP_MODE_EASY_DESC"
+msgid "Just like Rime. This is the Duplicants' haven."
+msgstr "就像在低溫砂岩一般，這裡是複製人的溫暖港灣。"
+
+#. NotZeroK.WorldConstants.MAP_MODE_CRAZY
+msgctxt "NotZeroK.WorldConstants.MAP_MODE_CRAZY"
+msgid "Freezing Limit"
+msgstr "冰點極限"
+
+#. NotZeroK.WorldConstants.MAP_MODE_CRAZY_DESC
+msgctxt "NotZeroK.WorldConstants.MAP_MODE_CRAZY_DESC"
+msgid "Everything frozen, this is the Duplicants' ultimate test."
+msgstr "萬物凍結，這裡是複製人的終極考驗。"
+
+#. NotZeroK.WorldConstants.SHELTER
+msgctxt "NotZeroK.WorldConstants.SHELTER"
+msgid "Shelter Cave"
+msgstr "避難洞穴"
+
+#. NotZeroK.WorldConstants.SHELTER_DESC
+msgctxt "NotZeroK.WorldConstants.SHELTER_DESC"
+msgid "A small refuge space to avoid freezing to death."
+msgstr "一個避免被凍死的小小避難空間。"
+
+#. NotZeroK.WorldConstants.CRITTER
+msgctxt "NotZeroK.WorldConstants.CRITTER"
+msgid "Critter Cave"
+msgstr "小動物洞穴"
+
+#. NotZeroK.WorldConstants.CRITTER_DESC
+msgctxt "NotZeroK.WorldConstants.CRITTER_DESC"
+msgid "A small refuge space for critters and plants."
+msgstr "一個給小動物和植物的小避難空間。"
+
+#. NotZeroK.WorldConstants.CRITTER_SAVE
+msgctxt "NotZeroK.WorldConstants.CRITTER_SAVE"
+msgid "Critter Save"
+msgstr "拯救萬物"
+
+#. NotZeroK.WorldConstants.CRITTER_SAVE_DESC
+msgctxt "NotZeroK.WorldConstants.CRITTER_SAVE_DESC"
+msgid "Spawn everything to save critters and plants."
+msgstr "世界生成時拯救一切。"
+
+#. NotZeroK.WorldConstants.CLUSTER_NAME
+msgctxt "NotZeroK.WorldConstants.CLUSTER_NAME"
+msgid "Not 0K Classic"
+msgstr "經典不 0K 星"
+
+#. NotZeroK.WorldConstants.CLUSTER_DESCRIPTION
+msgctxt "NotZeroK.WorldConstants.CLUSTER_DESCRIPTION"
+msgid "0K challenge"
+msgstr "0K 大挑戰"
+
+#. NotZeroK.WorldConstants.WORLD_NAME
+msgctxt "NotZeroK.WorldConstants.WORLD_NAME"
+msgid "Not 0K planet"
+msgstr "不 0K 星"
+
+#. NotZeroK.WorldConstants.WORLD_DESCRIPTION
+msgctxt "NotZeroK.WorldConstants.WORLD_DESCRIPTION"
+msgid "Not 0K, But Pretty Cool Place.\n\n<smallcaps></smallcaps>"
+msgstr "不 0K，但冷酷地。\n\n<smallcaps></smallcaps>"
+
+#. NotZeroK.WorldConstants.CLUSTER_SO_NAME
+msgctxt "NotZeroK.WorldConstants.CLUSTER_SO_NAME"
+msgid "Not 0K Cluster"
+msgstr "不 0K 星星團"
+
+#. NotZeroK.WorldConstants.CLUSTER_SO_DESCRIPTION
+msgctxt "NotZeroK.WorldConstants.CLUSTER_SO_DESCRIPTION"
+msgid "0K challenge in Spaced Out!"
+msgstr "眼冒金星 0K 大挑戰!"
+
+#. NotZeroK.WorldConstants.WORLD_SO_NAME
+msgctxt "NotZeroK.WorldConstants.WORLD_SO_NAME"
+msgid "Not 0K asteroid"
+msgstr "不 0K 小行星"
+
+#. NotZeroK.WorldConstants.WORLD_SO_DESCRIPTION
+msgctxt "NotZeroK.WorldConstants.WORLD_SO_DESCRIPTION"
+msgid "Not 0K, But Pretty Cool Place.\n\n<smallcaps></smallcaps>"
+msgstr "不 0K，但冷酷地。\n\n<smallcaps></smallcaps>"
+
+#. NotZeroK.WorldConstants.WORLD_SO_WARP_NAME
+msgctxt "NotZeroK.WorldConstants.WORLD_SO_WARP_NAME"
+msgid "Iced Swamp Asteroid"
+msgstr "冰凍沼澤小行星"
+
+#. NotZeroK.WorldConstants.WORLD_SO_WARP_DESCRIPTION
+msgctxt "NotZeroK.WorldConstants.WORLD_SO_WARP_DESCRIPTION"
+msgid "A large-ish, polluted swamp world.\n\n<smallcaps>Iced Swamp Asteroids are full of swampy and marshy areas, but also contain a variety of other biomes diverse enough to keep a determined colony supplied with essentials. Probably.</smallcaps>"
+msgstr "一個受汙染的較大沼澤世界。\n\n<smallcaps>冰凍沼澤小行星是一個滿是沼澤和草澤的地方，但也有各種生態系可以確保殖民地的補給。大概。</smallcaps>"
+
+#. NotZeroK.WorldConstants.CLUSTER_SO_MINI_NAME
+msgctxt "NotZeroK.WorldConstants.CLUSTER_SO_MINI_NAME"
+msgid "Not 0K Mini Cluster"
+msgstr "不 0K 星迷你星團"
+
+#. NotZeroK.WorldConstants.CLUSTER_SO_MINI_DESCRIPTION
+msgctxt "NotZeroK.WorldConstants.CLUSTER_SO_MINI_DESCRIPTION"
+msgid "0K challenge in Spaced Out!"
+msgstr "眼冒金星 0K 大挑戰!"
+
+#. NotZeroK.WorldConstants.WORLD_SO_MINI_NAME
+msgctxt "NotZeroK.WorldConstants.WORLD_SO_MINI_NAME"
+msgid "Not 0K Mini planet"
+msgstr "迷你不 0K 星"
+
+#. NotZeroK.WorldConstants.WORLD_SO_MINI_DESCRIPTION
+msgctxt "NotZeroK.WorldConstants.WORLD_SO_MINI_DESCRIPTION"
+msgid "Not 0K, But Pretty Cool Place.\n\n<smallcaps></smallcaps>"
+msgstr "不 0K，但冷酷地。\n\n<smallcaps></smallcaps>"
+
+#. NotZeroK.WorldConstants.CLUSTER_SO_MOONLET_NAME
+msgctxt "NotZeroK.WorldConstants.CLUSTER_SO_MOONLET_NAME"
+msgid "Not 0K Moonlet Cluster"
+msgstr "不 0K 星衛星星團"
+
+#. NotZeroK.WorldConstants.CLUSTER_SO_MOONLET_DESCRIPTION
+msgctxt "NotZeroK.WorldConstants.CLUSTER_SO_MOONLET_DESCRIPTION"
+msgid "0K challenge in Spaced Out!"
+msgstr "眼冒金星 0K 大挑戰!"
+
+#. NotZeroK.WorldConstants.WORLD_SO_MOONLET_NAME
+msgctxt "NotZeroK.WorldConstants.WORLD_SO_MOONLET_NAME"
+msgid "Not 0K Moonlet"
+msgstr "不 0K 衛星"
+
+#. NotZeroK.WorldConstants.WORLD_SO_MOONLET_DESCRIPTION
+msgctxt "NotZeroK.WorldConstants.WORLD_SO_MOONLET_DESCRIPTION"
+msgid "Not 0K, But Pretty Cool Place.\n\n<smallcaps></smallcaps>"
+msgstr "不 0K，但冷酷地。\n\n<smallcaps></smallcaps>"

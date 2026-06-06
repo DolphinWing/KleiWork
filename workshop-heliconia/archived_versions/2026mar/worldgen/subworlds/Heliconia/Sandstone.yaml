@@ -1,0 +1,37 @@
+biomeNoise: noise/Sandstone
+temperatureRange: TG_SuperHot
+density:
+  min: 10
+  max: 20
+avoidRadius: 20.0
+doAvoidPoints: false
+dontRelaxChildren: true
+sampleBehaviour: PoissonDisk
+borderOverride: heliconiaBorder
+biomes:
+  - name: biomes/Heliconia/Sedimentary_Basic
+    weight: 4
+    tags:
+      - PrickleFlowerSeed
+      - PrickleGrassSeed
+      - HatchBuried  
+      - BasicSingleHarvestPlantSeed
+      - BasicForagePlant
+  - name: biomes/Heliconia/Sedimentary_Metal_CO2
+    weight: 2
+    tags:   
+      - HatchBuried
+      - BasicForagePlantPlanted
+  - name: biomes/Heliconia/Sedimentary_Basic_CO2
+    weight: 1
+    tags:
+      - HatchBuried
+      - BasicForagePlantPlanted
+features:
+  - type: features/sedimentary/SmallLake
+  - type: features/sedimentary/MetalVacuumBlob
+  - type: features/sedimentary/FlatLake
+  - type: features/sedimentary/MediumLake  
+tags:
+  - IgnoreCaveOverride
+zoneType: Sandstone

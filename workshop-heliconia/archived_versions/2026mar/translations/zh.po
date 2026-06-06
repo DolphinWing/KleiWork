@@ -1,0 +1,114 @@
+#. Heliconia.Heliconia.NAME
+msgctxt "Heliconia.Heliconia.NAME"
+msgid "Heliconia"
+msgstr "赫礫焦娜"
+
+#. Heliconia.Heliconia.MOD_DESC
+msgctxt "Heliconia.Heliconia.MOD_DESC"
+msgid "Heliconia mod"
+msgstr "極致高溫的煉獄"
+
+#. Heliconia.Heliconia.DESCRIPTION
+msgctxt "Heliconia.Heliconia.DESCRIPTION"
+msgid "Heliconia desc"
+msgstr "極致高溫的煉獄。\n\n<smallcaps>複製人必須工作到死，才能讓殖民地再次繁榮。</smallcaps>"
+
+#. Heliconia.Heliconia.BIOME_DESC
+msgctxt "Heliconia.Heliconia.BIOME_DESC"
+msgid "Heliconia biome"
+msgstr "極致高溫的煉獄"
+
+#. Heliconia.Heliconia.UTILITY_DESC
+msgctxt "Heliconia.Heliconia.UTILITY_DESC"
+msgid "Heliconia biome desc"
+msgstr "極致高溫的煉獄"
+
+#. Heliconia.Heliconia.WARP_NAME
+msgctxt "Heliconia.Heliconia.WARP_NAME"
+msgid "Phlegethon"
+msgstr "費雷格索"
+
+#. Heliconia.Heliconia.WARP_DESCRIPTION
+msgctxt "Heliconia.Heliconia.WARP_DESCRIPTION"
+msgid "The River of Eternal Scorch."
+msgstr "永恆焦灼之河。\n\n<smallcaps>從地獄溢流而出的衛星。其重力不斷榨取著熱能，確保這場烈焰永無止盡。</smallcaps>"
+
+#. Heliconia.HeliconiaOptions.GiftedAreaTitle
+msgctxt "Heliconia.HeliconiaOptions.GiftedAreaTitle"
+msgid "Shelter Cave"
+msgstr "避難洞穴"
+
+#. Heliconia.HeliconiaOptions.GiftedAreaTooltip
+msgctxt "Heliconia.HeliconiaOptions.GiftedAreaTooltip"
+msgid "A small refuge space to avoid hot to death."
+msgstr "一個避免被燙死的小小避難空間。"
+
+#. Heliconia.HeliconiaOptions.CrittersCaveTitle
+msgctxt "Heliconia.HeliconiaOptions.CrittersCaveTitle"
+msgid "Critter Cave"
+msgstr "小動物洞穴"
+
+#. Heliconia.HeliconiaOptions.CrittersCaveTooltip
+msgctxt "Heliconia.HeliconiaOptions.CrittersCaveTooltip"
+msgid "A small refuge space for critters and plants."
+msgstr "一個給小動物和植物的小避難空間。"
+
+#. Heliconia.HeliconiaOptions.CrittersSaveTitle
+msgctxt "Heliconia.HeliconiaOptions.CrittersSaveTitle"
+msgid "Critter Save"
+msgstr "拯救萬物"
+
+#. Heliconia.HeliconiaOptions.CrittersSaveTooltip
+msgctxt "Heliconia.HeliconiaOptions.CrittersSaveTooltip"
+msgid "Spawn everything to save critters and plants."
+msgstr "世界生成時拯救一切。"
+
+#. Heliconia.HeliconiaOptions.InstantModeTitle
+msgctxt "Heliconia.HeliconiaOptions.InstantModeTitle"
+msgid "Instant temperature balanced"
+msgstr "立即平衡溫度"
+
+#. Heliconia.HeliconiaOptions.InstantModeTooltip
+msgctxt "Heliconia.HeliconiaOptions.InstantModeTooltip"
+msgid "Instant temperature balanced right after worldgen."
+msgstr "世界生成後立即平衡溫度。"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE"
+msgid "Temperature Mode"
+msgstr "溫度模式"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_DESC
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_DESC"
+msgid "Select starting biome temperature"
+msgstr "選擇初始生態系溫度"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_BALANCED
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_BALANCED"
+msgid "Balanced"
+msgstr "平衡"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_BALANCED_DESC
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_BALANCED_DESC"
+msgid "balanced but still quite a chanllege."
+msgstr "雖平衡但仍具挑戰性。"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_EASY
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_EASY"
+msgid "Easy"
+msgstr "簡單"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_EASY_DESC
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_EASY_DESC"
+msgid "a bit taste of Heliconia"
+msgstr "稍微體驗 Heliconia 的滋味"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_CRAZY
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_CRAZY"
+msgid "Crazy"
+msgstr "瘋狂"
+
+#. Heliconia.HeliconiaOptions.MAP_MODE_CRAZY_DESC
+msgctxt "Heliconia.HeliconiaOptions.MAP_MODE_CRAZY_DESC"
+msgid "I bet you are crazy about this game."
+msgstr "我打賭你對這遊戲著了迷。"

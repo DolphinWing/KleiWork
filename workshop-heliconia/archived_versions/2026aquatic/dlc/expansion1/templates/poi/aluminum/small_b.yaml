@@ -1,0 +1,70 @@
+name: small_b
+info:
+  size:
+    X: 6
+    Y: 2
+  area: 12
+cells:
+# Row 0: Base
+- element: Obsidian
+  mass: 1720
+  temperature: 2000
+  location_x: -2
+  location_y: 0
+- element: Obsidian
+  mass: 2380
+  temperature: 2000
+  location_x: -1
+  location_y: 0
+- element: Obsidian
+  mass: 1950
+  temperature: 2000
+  location_x: 0
+  location_y: 0
+- element: Katairite
+  mass: 2220
+  temperature: 2000
+  location_x: 1
+  location_y: 0
+- element: Obsidian
+  mass: 1810
+  temperature: 2000
+  location_x: 2
+  location_y: 0
+- element: Obsidian
+  mass: 2460
+  temperature: 2000
+  location_x: 3
+  location_y: 0
+
+# Row 1: Walls + Content
+- element: Obsidian
+  mass: 2270
+  temperature: 2000
+  location_x: -2
+  location_y: 1
+- element: MoltenAluminum
+  mass: 990
+  temperature: 2000
+  location_x: -1
+  location_y: 1
+- element: MoltenAluminum
+  mass: 1110
+  temperature: 2000
+  location_x: 0
+  location_y: 1
+- element: MoltenAluminum
+  mass: 870
+  temperature: 2000
+  location_x: 1
+  location_y: 1
+- element: MoltenAluminum
+  mass: 1040
+  temperature: 2000
+  location_x: 2
+  location_y: 1
+- element: Obsidian
+  mass: 1940
+  temperature: 2000
+  location_x: 3
+  location_y: 1

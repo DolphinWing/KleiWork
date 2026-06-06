@@ -12,8 +12,8 @@ This is a personal project that includes my mod work for the games by Klei Enter
     *   Source: [oni-mods/FontLoader](oni-mods/FontLoader)
 
 *   **[Not 0K, But Pretty Cool Place](https://steamcommunity.com/sharedfiles/filedetails/?id=3413401611)** (不 0K，但冷酷地) is a map mod for 0K challenge, featured with [TorchGod](https://github.com/TorchGod531).
-    *   ![GitHub package.json version](https://img.shields.io/github/package-json/v/DolphinWing/KleiWork?filename=workshop-3413401611%2Fpackage.json&logo=github) ![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3413401611?logo=steam) ![Steam Favorites](https://img.shields.io/steam/favorites/3413401611?logo=steam)
-    *   Mod: [workshop-3413401611](workshop-3413401611)
+    *   ![GitHub package.json version](https://img.shields.io/github/package-json/v/DolphinWing/KleiWork?filename=workshop-notzero%2Fpackage.json&logo=github) ![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3413401611?logo=steam) ![Steam Favorites](https://img.shields.io/steam/favorites/3413401611?logo=steam)
+    *   Mod: [workshop-notzero](workshop-notzero)
     *   Source: [oni-mods/Rime_Extreme_2](oni-mods/Rime_Extreme_2)
 
 *   **[Moonlet Cluster - Superconductive](https://steamcommunity.com/sharedfiles/filedetails/?id=3418019940)** (衛星星團－超導星) is a map mod for Superconductive starting world.
@@ -22,8 +22,8 @@ This is a personal project that includes my mod work for the games by Klei Enter
     *   Source: [oni-mods/Niobium_Start](oni-mods/Niobium_Start)
 
 *   **[Voidria](https://steamcommunity.com/sharedfiles/filedetails/?id=3430682737)** (無多利亞) is a map mod for Voidria clusters, featured with [TorchGod](https://github.com/TorchGod531).
-    *   ![GitHub package.json version](https://img.shields.io/github/package-json/v/DolphinWing/KleiWork?filename=workshop-3430682737%2Fpackage.json&logo=github) ![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3430682737?logo=steam) ![Steam Favorites](https://img.shields.io/steam/favorites/3430682737?logo=steam)
-    *   Mod: [workshop-3430682737](workshop-3430682737)
+    *   ![GitHub package.json version](https://img.shields.io/github/package-json/v/DolphinWing/KleiWork?filename=workshop-voidria%2Fpackage.json&logo=github) ![Steam Subscriptions](https://img.shields.io/steam/subscriptions/3430682737?logo=steam) ![Steam Favorites](https://img.shields.io/steam/favorites/3430682737?logo=steam)
+    *   Mod: [workshop-voidria](workshop-voidria)
     *   Source: [oni-mods/TorchGod_Voidria](oni-mods/TorchGod_Voidria)
 
 *   **[Heliconia](https://steamcommunity.com/sharedfiles/filedetails/?id=3663491695)** (赫礫焦娜) is a map mod for Heliconia clusters, featured with [TorchGod](https://github.com/TorchGod531).

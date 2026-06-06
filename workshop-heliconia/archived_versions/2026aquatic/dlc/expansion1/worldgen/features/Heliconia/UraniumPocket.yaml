@@ -1,0 +1,21 @@
+tags:
+  - AllowExceedNodeBorders
+shape: Blob
+borders:
+blobSize:
+  min: 1.0
+  max: 2.5
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: UraniumOre
+        weight: 4
+        overrides:
+          massOverride: 1200
+      - element: BleachStone
+        weight: 1
+        overrides:
+          massOverride: 400
+      - element: ChlorineGas
+        weight: 1

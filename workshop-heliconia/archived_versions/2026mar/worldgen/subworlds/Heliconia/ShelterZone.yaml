@@ -1,0 +1,24 @@
+biomeNoise: noise/subworldForest
+temperatureRange: Hot
+pdWeight: 1.5
+density:
+  min: 10
+  max: 25
+avoidRadius: 24.0
+doAvoidPoints: false
+dontRelaxChildren: true
+sampleBehaviour: PoissonDisk
+biomes:
+  - name: biomes/Heliconia/Start
+    weight: 1
+    tags:
+      - Oxyfern
+      - EvilFlower
+      - EvilFlowerSeed
+      - ForestForagePlantPlanted
+tags:
+  - StartWorld
+  - IgnoreCaveOverride
+  - NoGlobalFeatureSpawning
+  - HCA_Shelter
+zoneType: Forest

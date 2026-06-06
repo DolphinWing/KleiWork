@@ -1,0 +1,19 @@
+biomeNoise: noise/subworldRust
+temperatureRange: TG_SuperHot
+density:
+  min: 10
+  max: 15
+avoidRadius: 20.0
+minChildCount: 4
+sampleBehaviour: PoissonDisk
+borderOverride: heliconiaBorder
+biomes:
+  - name: biomes/Heliconia/Rust_Ethanol
+    weight: 2
+    tags:
+      - BeanPlantSeed
+      - ColdBreatherSparse
+      - EvilFlower
+tags:
+  - IgnoreCaveOverride
+zoneType: Rust

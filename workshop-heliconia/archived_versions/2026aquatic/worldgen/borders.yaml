@@ -1,0 +1,21 @@
+add:
+  heliconiaBorder:
+    - element: Obsidian
+      weight: 1
+  diamondBorder:
+    - element: Obsidian
+      weight: 2
+    - element: Diamond
+      weight: 2
+  wolframiteBorder:
+    - element: Obsidian
+      weight: 2
+    - element: Wolframite
+      weight: 2
+  coreBorder:
+    - element: Diamond
+      weight: 1
+    - element: RefinedCarbon
+      weight: 3
+    - element: Salt
+      weight: 2

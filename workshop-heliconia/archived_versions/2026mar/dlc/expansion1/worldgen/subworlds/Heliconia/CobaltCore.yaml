@@ -1,0 +1,29 @@
+biomeNoise: expansion1::noise/LayeredNoise
+temperatureRange: TG_ExtremeHot
+density:
+  min: 40
+  max: 60
+avoidRadius: 12.0
+sampleBehaviour: PoissonDisk
+borderOverride: coreBorder
+biomes:
+  - name: expansion1::biomes/Heliconia/Core_Cobalt
+    weight: 2
+subworldTemplateRules:
+  - names:
+      - expansion1::poi/cobalt/furnace
+      - expansion1::poi/cobalt/small_a
+      - expansion1::poi/cobalt/small_b
+    listRule: TrySome
+    someCount: 6
+    priority: 50
+features:
+  - type: expansion1::features/Heliconia/CobaltPocket
+  - type: features/Heliconia/MetalVein
+  - type: expansion1::features/Heliconia/RadSludge
+tags:
+  - HeliconiaCore
+  - AtDepths
+  - IgnoreCaveOverride
+  - NoGlobalFeatureSpawning
+zoneType: MagmaCore

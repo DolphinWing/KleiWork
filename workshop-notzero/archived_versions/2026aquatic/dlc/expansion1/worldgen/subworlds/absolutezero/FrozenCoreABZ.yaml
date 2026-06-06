@@ -1,0 +1,15 @@
+biomeNoise: noise/subworldFrozen
+temperatureRange: AbsoluteZero
+minChildCount: 4
+density:
+  min: 10
+  max: 20
+avoidRadius: 20.0
+sampleBehaviour: PoissonDisk
+borderOverride: ice
+biomes:
+  - name: biomes/AbsoluteZero/Core
+    weight: 1
+tags:
+  - IgnoreCaveOverride
+zoneType: FrozenWastes

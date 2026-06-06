@@ -1,0 +1,114 @@
+#. Voidria.Voidria.NAME
+msgctxt "Voidria.Voidria.NAME"
+msgid "Voidria"
+msgstr "Voidria"
+
+#. Voidria.Voidria.MOD_DESC
+msgctxt "Voidria.Voidria.MOD_DESC"
+msgid "Hopeless void. Resources scarced and limited. GEYSERS NOT INCLUDED."
+msgstr "Hopeless void. Resources scarced and limited. GEYSERS NOT INCLUDED."
+
+#. Voidria.Voidria.DESCRIPTION
+msgctxt "Voidria.Voidria.DESCRIPTION"
+msgid "Hopeless void. Resources scarced and limited. GEYSERS NOT INCLUDED.\n\n<smallcaps>Duplicants MUST work to DEATH to make the colony thrive again.</smallcaps>"
+msgstr "Hopeless void. Resources scarced and limited. GEYSERS NOT INCLUDED.\n\n<smallcaps>Duplicants MUST work to DEATH to make the colony thrive again.</smallcaps>"
+
+#. Voidria.Voidria.BIOME_DESC
+msgctxt "Voidria.Voidria.BIOME_DESC"
+msgid "Seriously, I feel like in space."
+msgstr "Seriously, it feel like in space."
+
+#. Voidria.Voidria.UTILITY_DESC
+msgctxt "Voidria.Voidria.UTILITY_DESC"
+msgid "Much much care must be taken to ensure <link=\"ELEMENTSLIQUID\">Liquids</link> or <link=\"ELEMENTSGAS\">Gases</link> are not sucked out into the <link=\"VACUUM\">Vacuum</link> of space."
+msgstr "Much much care must be taken to ensure <link=\"ELEMENTSLIQUID\">Liquids</link> or <link=\"ELEMENTSGAS\">Gases</link> are not sucked out into the <link=\"VACUUM\">Vacuum</link> of space."
+
+#. Voidria.Voidria.WARP_NAME
+msgctxt "Voidria.Voidria.WARP_NAME"
+msgid "Rocker"
+msgstr "Rocker"
+
+#. Voidria.Voidria.WARP_DESC
+msgctxt "Voidria.Voidria.WARP_DESC"
+msgid "A tiny rock needs one small step."
+msgstr "A tiny rock needs one small step."
+
+#. Voidria.Voidria.LAND_NAME
+msgctxt "Voidria.Voidria.LAND_NAME"
+msgid "Landing Zone"
+msgstr "Landing Zone"
+
+#. Voidria.Voidria.LAND_DESC
+msgctxt "Voidria.Voidria.LAND_DESC"
+msgid "A tiny rock to land your little rocket."
+msgstr "A tiny rock to land your little rocket."
+
+#. Voidria.VoidriaOptions.GiftedAreaTitle
+msgctxt "Voidria.VoidriaOptions.GiftedAreaTitle"
+msgid "Treasure Room"
+msgstr "Treasure Room"
+
+#. Voidria.VoidriaOptions.GiftedAreaTooltip
+msgctxt "Voidria.VoidriaOptions.GiftedAreaTooltip"
+msgid "Discover gifts from the developer"
+msgstr "Discover gifts from the developer"
+
+#. Voidria.VoidriaOptions.TearOpenerTitle
+msgctxt "Voidria.VoidriaOptions.TearOpenerTitle"
+msgid "Temporal Tear Opener"
+msgstr "Temporal Tear Opener"
+
+#. Voidria.VoidriaOptions.TearOpenerTooltip
+msgctxt "Voidria.VoidriaOptions.TearOpenerTooltip"
+msgid "I will decide when to open Temporal Tear"
+msgstr "I will decide when to open Temporal Tear"
+
+#. Voidria.VoidriaOptions.BackgroundTitle
+msgctxt "Voidria.VoidriaOptions.BackgroundTitle"
+msgid "Voidria's Back"
+msgstr "Voidria's Back"
+
+#. Voidria.VoidriaOptions.BackgroundTooltip
+msgctxt "Voidria.VoidriaOptions.BackgroundTooltip"
+msgid "Choose between space exposure or happy background"
+msgstr "Choose between space exposure or happy background"
+
+#. Voidria.VoidriaOptions.IronVolcanoTitle
+msgctxt "Voidria.VoidriaOptions.IronVolcanoTitle"
+msgid "Iron Volcano"
+msgstr "Iron Volcano"
+
+#. Voidria.VoidriaOptions.IronVolcanoTooltip
+msgctxt "Voidria.VoidriaOptions.IronVolcanoTooltip"
+msgid "With so much iron makes life easier"
+msgstr "With so much iron makes life easier"
+
+#. Voidria.VoidriaOptions.OilReservoirTitle
+msgctxt "Voidria.VoidriaOptions.OilReservoirTitle"
+msgid "Oil Reservoir"
+msgstr "Oil Reservoir"
+
+#. Voidria.VoidriaOptions.OilReservoirTooltip
+msgctxt "Voidria.VoidriaOptions.OilReservoirTooltip"
+msgid "Water In, Crude Oil Out. Easy Livin'"
+msgstr "Water In, Crude Oil Out. Easy Livin'"
+
+#. Voidria.VoidriaOptions.CrittersCaveTitle
+msgctxt "Voidria.VoidriaOptions.CrittersCaveTitle"
+msgid "Critter Shalter"
+msgstr "Critter Shalter"
+
+#. Voidria.VoidriaOptions.CrittersCaveTooltip
+msgctxt "Voidria.VoidriaOptions.CrittersCaveTooltip"
+msgid "Let critters have their own pleasure"
+msgstr "Let critters have their own pleasure"
+
+#. Voidria.VoidriaOptions.SaveCrittersTitle
+msgctxt "Voidria.VoidriaOptions.SaveCrittersTitle"
+msgid "Save Critters"
+msgstr "Save Critters"
+
+#. Voidria.VoidriaOptions.SaveCrittersTooltip
+msgctxt "Voidria.VoidriaOptions.SaveCrittersTooltip"
+msgid "Let critters live like they should be"
+msgstr "Let critters live like they should be"

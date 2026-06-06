@@ -1,0 +1,15 @@
+tags:
+  - AllowExceedNodeBorders
+shape: Blob
+blobSize:
+  min: 1.0
+  max: 2.5
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: MoltenAluminum
+        weight: 1
+        overrides:
+          massOverride: 1000
+          temperatureOverride: 2000

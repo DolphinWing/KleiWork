@@ -1,0 +1,114 @@
+#. Voidria.Voidria.NAME
+msgctxt "Voidria.Voidria.NAME"
+msgid "Voidria"
+msgstr "無多利亞"
+
+#. Voidria.Voidria.MOD_DESC
+msgctxt "Voidria.Voidria.MOD_DESC"
+msgid "Hopeless void. Resources scarced and limited. GEYSERS NOT INCLUDED."
+msgstr "無望的虛空。資源極度匱乏且有限。沒有間歇泉。"
+
+#. Voidria.Voidria.DESCRIPTION
+msgctxt "Voidria.Voidria.DESCRIPTION"
+msgid "Hopeless void. Resources scarced and limited. GEYSERS NOT INCLUDED.\n\n<smallcaps>Duplicants MUST work to DEATH to make the colony thrive again.</smallcaps>"
+msgstr "無望的虛空。資源極度匱乏且有限。沒有間歇泉。\n\n<smallcaps>複製人唯有至死方休才能讓殖民地重現生機。</smallcaps>"
+
+#. Voidria.Voidria.BIOME_DESC
+msgctxt "Voidria.Voidria.BIOME_DESC"
+msgid "Seriously, I feel like in space."
+msgstr "認真說，總覺得跟太空沒什麼不同。"
+
+#. Voidria.Voidria.UTILITY_DESC
+msgctxt "Voidria.Voidria.UTILITY_DESC"
+msgid "Much much care must be taken to ensure <link=\"ELEMENTSLIQUID\">Liquids</link> or <link=\"ELEMENTSGAS\">Gases</link> are not sucked out into the <link=\"VACUUM\">Vacuum</link> of space."
+msgstr "需要更多額外關注以確保<link=\"ELEMENTSLIQUID\">液體</link>或<link=\"ELEMENTSGAS\">氣體</link>不會被吸進太空的<link=\"VACUUM\">真空</link>環境中。"
+
+#. Voidria.Voidria.WARP_NAME
+msgctxt "Voidria.Voidria.WARP_NAME"
+msgid "Rocker"
+msgstr "小石頭"
+
+#. Voidria.Voidria.WARP_DESC
+msgctxt "Voidria.Voidria.WARP_DESC"
+msgid "A tiny rock needs one small step."
+msgstr "這是必要的一小步。"
+
+#. Voidria.Voidria.LAND_NAME
+msgctxt "Voidria.Voidria.LAND_NAME"
+msgid "Landing Zone"
+msgstr "降落區"
+
+#. Voidria.Voidria.LAND_DESC
+msgctxt "Voidria.Voidria.LAND_DESC"
+msgid "A tiny rock to land your little rocket."
+msgstr "可以降落你的小火箭。"
+
+#. Voidria.VoidriaOptions.GiftedAreaTitle
+msgctxt "Voidria.VoidriaOptions.GiftedAreaTitle"
+msgid "Treasure Room"
+msgstr "祕寶區"
+
+#. Voidria.VoidriaOptions.GiftedAreaTooltip
+msgctxt "Voidria.VoidriaOptions.GiftedAreaTooltip"
+msgid "Discover gifts from the developer"
+msgstr "接受開發者的禮物"
+
+#. Voidria.VoidriaOptions.TearOpenerTitle
+msgctxt "Voidria.VoidriaOptions.TearOpenerTitle"
+msgid "Temporal Tear Opener"
+msgstr "時空裂縫開啟器"
+
+#. Voidria.VoidriaOptions.TearOpenerTooltip
+msgctxt "Voidria.VoidriaOptions.TearOpenerTooltip"
+msgid "I will decide when to open Temporal Tear"
+msgstr "我自己決定何時打開時空裂縫"
+
+#. Voidria.VoidriaOptions.BackgroundTitle
+msgctxt "Voidria.VoidriaOptions.BackgroundTitle"
+msgid "Voidria's Back"
+msgstr "無多利亞靠背"
+
+#. Voidria.VoidriaOptions.BackgroundTooltip
+msgctxt "Voidria.VoidriaOptions.BackgroundTooltip"
+msgid "Choose between space exposure or happy background"
+msgstr "選擇太空暴露或啟用快樂背景"
+
+#. Voidria.VoidriaOptions.IronVolcanoTitle
+msgctxt "Voidria.VoidriaOptions.IronVolcanoTitle"
+msgid "Iron Volcano"
+msgstr "鐵火山"
+
+#. Voidria.VoidriaOptions.IronVolcanoTooltip
+msgctxt "Voidria.VoidriaOptions.IronVolcanoTooltip"
+msgid "With so much iron makes life easier"
+msgstr "有這麼多鐵會讓生活變得容易"
+
+#. Voidria.VoidriaOptions.OilReservoirTitle
+msgctxt "Voidria.VoidriaOptions.OilReservoirTitle"
+msgid "Oil Reservoir"
+msgstr "油田"
+
+#. Voidria.VoidriaOptions.OilReservoirTooltip
+msgctxt "Voidria.VoidriaOptions.OilReservoirTooltip"
+msgid "Water In, Crude Oil Out. Easy Livin'"
+msgstr "水進去，原油出來。大家發大財"
+
+#. Voidria.VoidriaOptions.CrittersCaveTitle
+msgctxt "Voidria.VoidriaOptions.CrittersCaveTitle"
+msgid "Critter Shalter"
+msgstr "小動物避難所"
+
+#. Voidria.VoidriaOptions.CrittersCaveTooltip
+msgctxt "Voidria.VoidriaOptions.CrittersCaveTooltip"
+msgid "Let critters have their own pleasure"
+msgstr "讓小動物享受牠們的生活"
+
+#. Voidria.VoidriaOptions.SaveCrittersTitle
+msgctxt "Voidria.VoidriaOptions.SaveCrittersTitle"
+msgid "Save Critters"
+msgstr "拯救小動物"
+
+#. Voidria.VoidriaOptions.SaveCrittersTooltip
+msgctxt "Voidria.VoidriaOptions.SaveCrittersTooltip"
+msgid "Let critters live like they should be"
+msgstr "讓小動物的環境符合牠們所需"

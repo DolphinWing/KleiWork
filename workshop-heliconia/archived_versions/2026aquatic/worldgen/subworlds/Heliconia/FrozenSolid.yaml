@@ -1,0 +1,18 @@
+biomeNoise: noise/subworldFrozen
+temperatureRange: TG_SuperHot
+minChildCount: 1
+density:
+  min: 10
+  max: 20
+avoidRadius: 20.0
+sampleBehaviour: PoissonDisk
+borderOverride: heliconiaBorder
+biomes:
+  - name: biomes/Heliconia/Frozen_Solid
+    weight: 1
+    tags:
+      - ColdBreather
+      - ColdBreatherSeed
+tags:
+  - IgnoreCaveOverride
+zoneType: FrozenWastes

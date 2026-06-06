@@ -1,0 +1,413 @@
+name: NotZeroK.WorldConstants.WORLD_SO_NAME
+description: NotZeroK.WorldConstants.WORLD_SO_DESCRIPTION
+nameTables: [ TUNDRA ]
+asteroidIcon: asteroid_rime_extreme_kanim
+
+worldTraitScale: 0.9 # Adjust with worldSize. Traits are tuned to base game world sizes.
+worldsize:
+  X: 240
+  Y: 380
+layoutMethod: PowerTree # Note: We need to add weights to the items in the layer
+#                                in order to use this.
+
+fixedTraits:
+  - sunlightVeryVeryLow
+  - cosmicRadiationVeryLow
+
+seasons:
+#  - ClassicStyleStartMeteorShowers
+  - MiniBadlandsMeteorShowers # Snow and Ice
+#  - VanillaSandstoneFrozenMeteorShowers # unused
+
+startSubworldName: subworlds/sandstone/SandstoneStartCold
+startingBaseTemplate: bases/sandstoneBase
+startingBasePositionHorizontal:
+  min: 0.4
+  max: 0.5
+startingBasePositionVertical:
+  min: 0.45
+  max: 0.55
+
+worldTraitRules:
+  - min: 0
+    max: 3
+    forbiddenTags:
+      - Surface # due to classic worlds having a different surface location
+      - NonStartWorld
+    forbiddenTraits:
+      - traits/DeepOil
+      - traits/IrregularOil
+      - traits/MagmaVents
+      - traits/SubsurfaceOcean
+      - traits/Volcanoes
+      - expansion1::traits/IrregularOil
+      - expansion1::traits/LushCore
+      - expansion1::traits/SubsurfaceOcean
+      - expansion1::traits/Volcanoes
+
+subworldMixingRules:
+ - name: (Mixing1)
+   minCount: 2
+   maxCount: 4
+ - name: (Mixing2)
+   minCount: 2
+   maxCount: 4
+ - name: (Mixing3)
+   minCount: 2
+   maxCount: 4
+ - name: (Mixing4)
+   minCount: 2
+   maxCount: 4
+ - name: (Mixing5)
+   minCount: 2
+   maxCount: 4
+ - name: (Mixing6)
+   minCount: 2
+   maxCount: 4
+
+# List all the subworld files to load
+subworldFiles:
+  - name: subworlds/sandstone/SandstoneStartCold
+  - name: subworlds/sandstone/SandstoneFrozen
+  - name: subworlds/absolutezero/ABZMarshSlush
+  - name: subworlds/absolutezero/BarrenGraniteABZ
+  - name: subworlds/absolutezero/CO2LakesABZ
+  - name: subworlds/absolutezero/DesertABZ
+  - name: subworlds/absolutezero/ForestABZ
+  - name: subworlds/absolutezero/FrozenABZ
+  - name: subworlds/absolutezero/FrozenSolidABZ
+  - name: subworlds/absolutezero/JungleABZ
+  - name: subworlds/absolutezero/OceanABZ
+  - name: subworlds/absolutezero/OceanSlushABZ
+    minCount: 2
+  - name: subworlds/absolutezero/OilPocketsABZ
+  - name: subworlds/absolutezero/RustABZ
+    minCount: 1
+  - name: subworlds/absolutezero/SandstoneABZ
+  - name: subworlds/absolutezero/SandstoneMiniAlgaeABZ
+    minCount: 1
+  - name: subworlds/absolutezero/SandstoneMiniMetalABZ
+    minCount: 1
+  - name: subworlds/absolutezero/SandstoneMiniWaterABZ
+    minCount: 1
+#  - name: subworlds/absolutezero/SandstoneStartABZ
+  - name: subworlds/absolutezero/SpaceABZ
+  - name: subworlds/absolutezero/SurfaceABZ
+  - name: expansion1::subworlds/absolutezero/FrozenCoreABZ
+  - name: expansion1::subworlds/absolutezero/FrozenMediumABZ
+  - name: expansion1::subworlds/absolutezero/JungleFrozenABZ
+  - name: expansion1::subworlds/absolutezero/med_RustFrozenABZ
+    minCount: 1
+  - name: expansion1::subworlds/absolutezero/RadioactiveABZ
+    minCount: 3
+    weight: 0.5
+  - name: expansion1::subworlds/absolutezero/SwampABZ
+  - name: expansion1::subworlds/absolutezero/WastelandBeetleCoolABZ
+
+# Specify where subworlds can spawn. These rules are processed in order and their effects are cumulative.
+unknownCellsAllowedSubworlds: 
+  - tagcommand: Default
+    command: Replace
+    subworldNames:
+      - subworlds/sandstone/SandstoneFrozen
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - subworlds/absolutezero/SandstoneMiniMetalABZ
+      - subworlds/absolutezero/SandstoneMiniWaterABZ
+      - subworlds/absolutezero/SandstoneMiniAlgaeABZ
+  # Ring-1
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 2
+    maxDistance: 2
+    command: Replace
+    subworldNames:
+      - subworlds/absolutezero/ForestABZ
+      - subworlds/absolutezero/ABZMarshSlush
+      - subworlds/absolutezero/JungleABZ
+      - subworlds/absolutezero/FrozenABZ
+      - subworlds/absolutezero/RustABZ
+      - expansion1::subworlds/absolutezero/JungleFrozenABZ
+  # Ring-2
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 3
+    maxDistance: 3
+    command: Replace
+    subworldNames:
+      - subworlds/absolutezero/ForestABZ
+      - subworlds/absolutezero/ABZMarshSlush
+      - subworlds/absolutezero/JungleABZ
+      - subworlds/absolutezero/OceanSlushABZ
+      - subworlds/absolutezero/SandstoneABZ
+      - expansion1::subworlds/absolutezero/JungleFrozenABZ
+      - expansion1::subworlds/absolutezero/SwampABZ
+      - expansion1::subworlds/absolutezero/WastelandBeetleCoolABZ
+  # Ring-3
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 4
+    maxDistance: 4
+    command: Replace
+    subworldNames:
+      - subworlds/absolutezero/DesertABZ
+      - subworlds/absolutezero/BarrenGraniteABZ
+      - subworlds/absolutezero/OceanABZ
+      - subworlds/absolutezero/FrozenABZ
+      - subworlds/absolutezero/RustABZ
+      - expansion1::subworlds/absolutezero/FrozenMediumABZ
+      - expansion1::subworlds/absolutezero/med_RustFrozenABZ
+      - expansion1::subworlds/absolutezero/RadioactiveABZ
+      - expansion1::subworlds/absolutezero/SwampABZ
+      - expansion1::subworlds/absolutezero/WastelandBeetleCoolABZ
+      - (Mixing1)
+      - (Mixing2)
+      - (Mixing3)
+      - (Mixing4)
+      - (Mixing5)
+      - (Mixing6)
+  # Ring-4
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 5
+    maxDistance: 999
+    command: Replace
+    subworldNames:
+      - subworlds/absolutezero/ForestABZ
+      - subworlds/absolutezero/ABZMarshSlush
+      - subworlds/absolutezero/DesertABZ
+      - subworlds/absolutezero/OceanABZ
+      - subworlds/absolutezero/BarrenGraniteABZ
+      - subworlds/absolutezero/CO2LakesABZ
+      - subworlds/absolutezero/JungleABZ
+      - subworlds/absolutezero/OceanSlushABZ
+      - subworlds/absolutezero/SandstoneABZ
+      - subworlds/absolutezero/FrozenABZ
+      - subworlds/absolutezero/FrozenSolidABZ
+      - subworlds/absolutezero/RustABZ
+      - expansion1::subworlds/absolutezero/JungleFrozenABZ
+      - expansion1::subworlds/absolutezero/med_RustFrozenABZ
+      - expansion1::subworlds/absolutezero/RadioactiveABZ
+      - expansion1::subworlds/absolutezero/SwampABZ
+      - expansion1::subworlds/absolutezero/WastelandBeetleCoolABZ
+      - (Mixing1)
+      - (Mixing2)
+      - (Mixing3)
+      - (Mixing4)
+      - (Mixing5)
+      - (Mixing6)
+  # Core
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 0
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - subworlds/absolutezero/FrozenSolidABZ
+      - expansion1::subworlds/absolutezero/FrozenCoreABZ
+  - tagcommand: AtTag # Mixing Core
+    tag: AtDepths
+    command: UnionWith
+    sortOrder: 100 # order after core world traits
+    subworldNames:
+      - (Mixing1)
+  # Above Core
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - subworlds/absolutezero/OilPocketsABZ
+  # Space
+  - tagcommand: AtTag
+    tag: AtSurface
+    command: Replace
+    subworldNames:
+      - subworlds/absolutezero/SpaceABZ
+  # Surface
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - subworlds/absolutezero/SurfaceABZ
+
+worldTemplateRules:
+    # Jungle
+  - names:
+#      - poi/jungle/geyser_methane
+      - poi/jungle/geyser_chlorine
+    listRule: TryOne
+    priority: 50
+    allowedCellsFilter:
+      - command: Replace
+        zoneTypes: [ToxicJungle]
+  # Marsh
+  - names:
+      - poi/hotmarsh/geyser_methane
+    listRule: TryOne
+    priority: 50
+    allowedCellsFilter:
+      - command: Replace
+        zoneTypes: [BoggyMarsh]
+  # Frozen CO2Lakes
+  - names:
+      - poi/frozen/heatsink_a
+      - poi/frozen/heatsink_b
+      - poi/frozen/heatsink_c
+      - poi/frozen/heatsink_d
+    listRule: TryOne
+    priority: 100 
+    allowedCellsFilter:
+      - command: Replace
+        zoneTypes: [FrozenWastes]
+  # Ocean
+  - names:
+      - abz_ocean_geyser_saltwater
+    listRule: TryOne
+    priority: 50 
+    allowedCellsFilter:
+      - command: Replace
+        zoneTypes: [Ocean]
+  # Oil
+  - names:
+    - poi/oil/small_oilpockets_geyser_a
+    - poi/oil/small_oilpockets_geyser_b
+    - poi/oil/small_oilpockets_geyser_c
+    - poi/oil/small_oilpockets_geyser_d
+    - poi/oil/small_oilpockets_geyser_e
+    - poi/oil/small_oilpockets_geyser_f
+    - poi/oil/small_oilpockets_geyser_g
+    - poi/oil/small_oilpockets_geyser_h
+    listRule: TryOne
+    times: 3
+    allowDuplicates: true # be more flexible due to high temperature borders
+    priority: 100
+    allowedCellsFilter:
+      - command: Replace
+        zoneTypes: [OilField, FrozenWastes]
+  # Gravitas
+  - names:
+    - expansion1::poi/warp/sender
+    - expansion1::poi/warp/receiver
+    - expansion1::poi/warp/teleporter_no_oil
+    listRule: GuaranteeAll
+    priority: 90
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 3
+        maxDistance: 4
+      - command: IntersectWith
+        zoneTypes: [ Forest, Rust, Ocean, BoggyMarsh, ToxicJungle ]
+      - command: ExceptWith
+        tagcommand: AtTag
+        tag: NoGravitasFeatures
+  - names:
+      - expansion1::poi/genericGravitas/poi_office
+    listRule: GuaranteeAll
+    priority: 90
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 2
+        maxDistance: 99
+      - command: ExceptWith
+        tagcommand: AtTag
+        tag: NoGravitasFeatures
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 2
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 2
+  # Generic Geysers
+  - names:
+    - geysers/filthy_water
+    - geysers/liquid_co2
+    - geysers/slush_water
+    - geysers/chlorine_gas
+    - geysers/chlorine_gas_cool
+    - geysers/methane
+    - expansion1::geysers/dirty_slush
+    - expansion1::geysers/slush_salt_water
+    listRule: TryOne
+    times: 9
+    ruleId: GenericGeysers
+    allowDuplicates: true
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: NotAtTag
+        tag: NoGlobalFeatureSpawning
+  # Uranium Geode
+  - names:
+    - expansion1::poi/radioactive/uranium_geode1
+    listRule: GuaranteeOne
+    useRelaxedFiltering: true
+    allowExtremeTemperatureOverlap: true # has Abyssalite border
+    priority: 200
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 2
+        maxDistance: 3
+  # Critter Caves
+  - names:
+    - critters/tg_bean_sleat
+    - critters/tg_bug_morb_toilet
+    - critters/tg_ce_lily_cave
+    - critters/tg_hatch_lice
+    - critters/tg_pacu_lake
+    - critters/tg_pip_tree
+    - critters/tg_pokeshell_pepper
+    - critters/tg_puft_love
+    - critters/tg_slime_sour
+    - critters/tg_mole_hole
+    - expansion1::critters/tg_beeta_hive
+    listRule: GuaranteeAll
+    ruleId: abz_critters
+    priority: 120
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 3
+        maxDistance: 99
+      - command: ExceptWith
+        tagcommand: AtTag
+        tag: NoGravitasFeatures
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 3
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 3
+  # Survival Zones
+  - names:
+    - expansion1::bases/ABZShelterSO
+    listRule: GuaranteeOne
+    ruleId: abz_shelter
+    priority: 450
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 0
+        maxDistance: 1

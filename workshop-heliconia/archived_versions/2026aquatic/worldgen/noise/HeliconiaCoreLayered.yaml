@@ -1,0 +1,67 @@
+settings:
+  zoom: 1
+  normalise: true
+  lowerBound:
+    X: 2
+    Y: 2
+  upperBound:
+    X: 4
+    Y: 4
+  name: HeliconiaCoreLayered
+links:
+- target:
+    type: Filter
+    name: LayerFilter
+  source0:
+    type: Primitive
+    name: CoreDensityPrimitive
+- target:
+    type: Terminator
+    name: TERMINATOR
+  source0:
+    type: Transformer
+    name: RotateHorizontal
+- target:
+    type: Transformer
+    name: RotateHorizontal
+  source0:
+    type: Modifier
+    name: LayerStretch
+- target:
+    type: Modifier
+    name: LayerStretch
+  source0:
+    type: Filter
+    name: LayerFilter
+primitives:
+  CoreDensityPrimitive:
+    primative: SimplexPerlin
+    quality: Best
+    seed: 123
+    offset: 1
+    name: CoreDensityPrimitive
+filters:
+  LayerFilter:
+    filter: RidgedMultiFractal
+    frequency: 0.8
+    lacunarity: 2
+    octaves: 4
+    gain: 0.5
+    offset: 0
+    exponent: 0.9
+    name: LayerFilter
+modifiers:
+  LayerStretch:
+    modifyType: Scale2d
+    scale: 1
+    scale2d:
+      X: 10.0
+      Y: 0.2
+    name: LayerStretch
+transformers:
+  RotateHorizontal:
+    transformerType: RotatePoint
+    power: 1
+    vector:
+      Y: 90
+    name: RotateHorizontal
