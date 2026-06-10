@@ -9992,7 +9992,7 @@ msgstr "將{0}轉化為{1}"
 
 #. STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.BIONIC_OVERCLOCK_RECIPE_DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.BIONIC_OVERCLOCK_RECIPE_DESC"
-msgid "Converts {0} to {1}\n\n!! <b>WARNING: SYSTEM DAMAGE RISK !!</b>"
+msgid "Converts {0} to {1}\n\n<b>!! WARNING: SYSTEM DAMAGE RISK !!</b>"
 msgstr "將{0}轉換為{1}\n\n!! <b>警告：系統損壞風險 !!</b>"
 
 #. STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.COLONY_HAS_BOOSTER_ASSIGNED_COUNT
@@ -11757,8 +11757,8 @@ msgstr "<link=\"CREATUREDELIVERYPOINT\">動物放置點</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.CREATUREFEEDER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.CREATUREFEEDER.DESC"
-msgid "Critters tend to stay close to their food source and wander less when given a feeder."
-msgstr "提供餵食器，動物會靠近牠們的食物來源並減少到處漫遊。"
+msgid "Wild critters who use feeders get accustomed to the cushiness of domesticated life."
+msgstr "使用動物餵食器的野生小動物，會逐漸習慣馴服生活的舒適感。"
 
 #. STRINGS.BUILDINGS.PREFABS.CREATUREFEEDER.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.CREATUREFEEDER.EFFECT"
@@ -13642,8 +13642,8 @@ msgstr "<link=\"FISHDELIVERYPOINT\">魚類放置點</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.FISHFEEDER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.FISHFEEDER.DESC"
-msgid "Build this feeder above a body of water to feed the fish within."
-msgstr "在水面上建造餵食器，飼養魚類。"
+msgid "Build this feeder above a body of water to feed and tame the fish within."
+msgstr "在水體上方建造此魚類餵食器，以餵食並馴服其中的魚類。"
 
 #. STRINGS.BUILDINGS.PREFABS.FISHFEEDER.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.FISHFEEDER.EFFECT"
@@ -20422,8 +20422,8 @@ msgstr "<link=\"PRESSURESWITCHLIQUID\">液壓開關</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.PROPBEACHCHAIR.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.PROPBEACHCHAIR.DESC"
-msgid "This Beach Chair has been worn down by many cycles of use and relentless exposure to the elements. Still comfortable, even if it creaks and moans with even the slightest movement."
-msgstr "這把沙灘椅歷經多次週期的使用，加上長期暴露於各種惡劣環境下已顯得磨損。儘管稍有動靜就會吱吱作響、發出呻吟，但坐起來依然舒適。"
+msgid "Worn down by countless cycles of use and exposure to the elements."
+msgstr "因無數個週期的使用與暴露在風雨中而顯得磨損。"
 
 #. STRINGS.BUILDINGS.PREFABS.PROPBEACHCHAIR.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.PROPBEACHCHAIR.EFFECT"
@@ -20517,7 +20517,7 @@ msgstr "維護推車"
 
 #. STRINGS.BUILDINGS.PREFABS.PROPDRYSUITHANGER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.PROPDRYSUITHANGER.DESC"
-msgid "Holds one <link=\"DRYSUIT\">Swimwear</link>.\n\nEnsures swimming comfort for one lucky Duplicant."
+msgid "Holds one piece of <link=\"DRYSUIT\">Swimwear</link>.\n\nEnsures swimming comfort for one lucky Duplicant."
 msgstr "可收納一件<link=\"DRYSUIT\">泳裝</link>。\n\n確保一名幸運的複製人能舒適地游泳。"
 
 #. STRINGS.BUILDINGS.PREFABS.PROPDRYSUITHANGER.NAME
@@ -21287,8 +21287,8 @@ msgstr "美容過的小動物是快樂、健康、多產的小動物。"
 
 #. STRINGS.BUILDINGS.PREFABS.RANCHSTATION.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.RANCHSTATION.EFFECT"
-msgid "Allows the assigned <link=\"RANCHER\">Rancher</link> to care for <link=\"CREATURES\">Critters</link>.\n\nAssigned Duplicants must possess the <link=\"RANCHING1\">Critter Ranching</link> skill."
-msgstr "可以分配<link=\"RANCHER\">畜牧員</link>照顧<link=\"CRITTERS\">小動物</link>。\n\n分配的複製人必須備<link=\"RANCHING1\">畜牧 I</link> 技能。"
+msgid "Allows the assigned <link=\"RANCHER\">Rancher</link> to care for and gradually tame <link=\"CREATURES\">Critters</link>.\n\nAssigned Duplicants must possess the <link=\"RANCHING1\">Critter Ranching</link> skill."
+msgstr "允許指定的<link=\"RANCHER\">畜牧員</link>照顧並逐漸馴服<link=\"CREATURES\">小動物</link>。\n\n指定的複製人必須具備<link=\"RANCHING1\">畜牧 I</link>技能。"
 
 #. STRINGS.BUILDINGS.PREFABS.RANCHSTATION.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.RANCHSTATION.NAME"
@@ -23692,13 +23692,13 @@ msgstr "火箭模組空位"
 
 #. STRINGS.BUILDINGS.PREFABS.UNDERWATERBREATHINGSTATION.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.UNDERWATERBREATHINGSTATION.DESC"
-msgid "Duplicants catch their breath faster by using a breathing station than by trying to resurface for air."
-msgstr "與其辛苦浮出水面換氣，不如使用呼吸站，讓複製人能更迅速地補充氧氣。"
+msgid "Duplicants catch their breath faster by using a breathing station than by surfacing for air."
+msgstr "複製人使用呼吸站換氣，比浮出水面呼吸還要更快。"
 
 #. STRINGS.BUILDINGS.PREFABS.UNDERWATERBREATHINGSTATION.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.UNDERWATERBREATHINGSTATION.EFFECT"
-msgid "Provides breathable <link=\"OXYGEN\">Oxygen</link> to submerged Duplicants via a connected <link=\"GASPIPING\">Gas Pipe</link> input.\n\nRequires <link=\"POWER\">Power</link>."
-msgstr "透過連接的<link=\"GASPIPING\">氣體管道</link>為水下複製人提供可呼吸的<link=\"OXYGEN\">氧氣</link>。\n\n需要<link=\"POWER\">電力</link>。"
+msgid "Provides breathable <link=\"OXYGEN\">Oxygen</link> to submerged Duplicants via a connected <link=\"GASPIPING\">Gas Pipe</link> input."
+msgstr "透過連接的<link=\"GASPIPING\">氣體管道</link>輸入，為水下的複製人提供可呼吸的<link=\"OXYGEN\">氧氣</link>。"
 
 #. STRINGS.BUILDINGS.PREFABS.UNDERWATERBREATHINGSTATION.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.UNDERWATERBREATHINGSTATION.NAME"
@@ -23757,8 +23757,8 @@ msgstr "經過梳理的小動物，就是快樂、健康又多產的小動物。
 
 #. STRINGS.BUILDINGS.PREFABS.UNDERWATERRANCHSTATION.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.UNDERWATERRANCHSTATION.EFFECT"
-msgid "Allows the assigned <link=\"RANCHER\">Rancher</link> to care for <link=\"CREATURES\">Critters</link>.\n\nAssigned Duplicants must possess both the <link=\"RANCHING1\">Critter Ranching</link> and <link=\"SWIMMING\">Basic Swimming</link> skills."
-msgstr "允許分配的<link=\"RANCHER\">畜牧員</link>在此照料<link=\"CREATURES\">小動物</link>。\n\n負責的複製人必須具備<link=\"RANCHING1\">畜牧業</link>與<link=\"SWIMMING\">基本游泳</link>技能。"
+msgid "Allows the assigned <link=\"RANCHER\">Rancher</link> to care for and gradually tame <link=\"CREATURES\">Critters</link>.\n\nAssigned Duplicants must possess both the <link=\"RANCHING1\">Critter Ranching</link> and <link=\"SWIMMING\">Basic Swimming</link> skills."
+msgstr "允許指定的<link=\"RANCHER\">畜牧員</link>照顧並逐漸馴服<link=\"CREATURES\">小動物</link>。\n\n指定的複製人必須同時具備<link=\"RANCHING1\">畜牧 I</link>與<link=\"SWIMMING\">基礎游泳</link>技能。"
 
 #. STRINGS.BUILDINGS.PREFABS.UNDERWATERRANCHSTATION.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.UNDERWATERRANCHSTATION.NAME"
@@ -26962,8 +26962,8 @@ msgstr "所有小動物在第一次遇到時都是野生的，但從馴化的成
 
 #. STRINGS.CODEX.CRITTERSTATUS.DOMESTICATION.TAME.CONTAINER1
 msgctxt "STRINGS.CODEX.CRITTERSTATUS.DOMESTICATION.TAME.CONTAINER1"
-msgid "Domesticated critters produce far more resources and lay eggs at a higher frequency than wild ones. They require additional care in order to maintain the levels of happiness that maximize their utility in the colony. (Happy critters are also generally more pleasant to be around.)\n\nOnce tame, critters can access the Critter Feeder, which is unavailable to wild critters."
-msgstr "馴化的小動物能產生更多的資源，同時產蛋頻率更高。牠們需要額外的關照才能維持幸福度，在殖民地中發揮最大作用。（快樂的小動物才更願意留在殖民地。）\n\n一旦馴化，小動物就能在小動物餵食器處進食，而野生小動物則不能。"
+msgid "Domesticated critters produce far more resources and lay eggs at a higher frequency than wild ones. They require additional care in order to maintain the levels of happiness that maximize their utility in the colony. (Happy critters are also generally more pleasant to be around.)\n\nGrooming and feeding stations enable Duplicants to domesticate critters."
+msgstr "馴化的小動物能比野生小動物產生更多資源，且產蛋頻率更高。牠們需要額外的照料才能維持幸福度，進而在殖民地中發揮最大效益。（快樂的小動物通常也更討人喜歡。）\n\n小動物梳理台與餵食站能讓複製人馴化小動物。"
 
 #. STRINGS.CODEX.CRITTERSTATUS.DOMESTICATION.TAME.SUBTITLE
 msgctxt "STRINGS.CODEX.CRITTERSTATUS.DOMESTICATION.TAME.SUBTITLE"
@@ -29149,6 +29149,31 @@ msgstr "加密級別：三"
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_CEASEDESIST.TITLE"
 msgid "Legal Letter"
 msgstr "法律信函"
+
+#. STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.BODY.CONTAINER1
+msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.BODY.CONTAINER1"
+msgid "<indent=5%>Updated guidelines for employees sheltering in place are attached. See highlights below:\n\n<indent=5%>    •  Emergency cots are not designed to be stacked.\n    •  Coffee ration cards are non-transferable and cannot be sold.\n    •  Please review the personal hygiene handout.\n\n</indent>Employees with functioning equipment should continue as normal while flood restoration efforts continue.\n\nThank you for your patience.\n\n<indent=10%><alpha=#AA>[MISSING ATTACHMENT]</color></indent>"
+msgstr "<indent=5%>就地避險員工的最新指引詳見附件。重點摘要如下：\n\n<indent=5%>    •  應急床並非設計用於堆疊。\n    •  咖啡配給卡不得轉讓且無法販售。\n    •  請閱讀個人衛生須知手冊。\n\n</indent>設備功能正常的員工，在洪水復原工作進行期間請照常工作。\n\n感謝您的耐心配合。\n\n<indent=10%><alpha=#AA>[附件遺失]</color></indent>"
+
+#. STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.BODY.EMAILHEADER1
+msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.BODY.EMAILHEADER1"
+msgid "<smallcaps>To: <b>ALL</b><alpha=#AA><size=12></size></color>\nFrom: <b>ADMIN</b><alpha=#AA><size=12> <admin@gravitas.nova></size></color></smallcaps>\n------------------\n"
+msgstr "<smallcaps>收件人：<b>全體</b><alpha=#AA><size=12></size></color>\n寄件人：<b>管理員</b><alpha=#AA><size=12> <admin@gravitas.nova></size></color></smallcaps>\n------------------\n"
+
+#. STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.BODY.SIGNATURE1
+msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.BODY.SIGNATURE1"
+msgid "\nThank-you,\n-Admin\n<size=11>The Gravitas Facility</size>\n------------------\n"
+msgstr "\n謝謝您，\n- 管理員\n<size=11>引力科技設施</size>\n------------------\n"
+
+#. STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.SUBTITLE
+msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.SUBTITLE"
+msgid "ENCRYPTION LEVEL: NONE"
+msgstr "加密級別：無"
+
+#. STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.TITLE
+msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.TITLE"
+msgid "Day Three"
+msgstr "第三天"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC5_FRIDGENOTE.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FRIDGENOTE.BODY.CONTAINER1"
@@ -34262,8 +34287,8 @@ msgstr "採集並運送珍珠給位於珊瑚生態的生還複製人"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_A_HIDDEN
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_A_HIDDEN"
-msgid "More exploration is required\n\nJust keep swimming..."
-msgstr "還需要更多探索\n\n只要一直游泳就好了..."
+msgid "More exploration is required"
+msgstr "還需要更多探索"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B"
@@ -34272,18 +34297,18 @@ msgstr "已將壽司運送給生還的複製人"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B_HIDDEN
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B_HIDDEN"
-msgid "More exploration is required\n\nJust keep swimming..."
-msgstr "還需要更多探索\n\n只要一直游泳就好了..."
+msgid "More exploration is required"
+msgstr "還需要更多探索"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C"
-msgid "Harvest and deliver Squid Ink to the survivor Duplicant in the Abyss biome"
-msgstr "採集並運送烏賊墨汁給位於深淵生態的生還複製人"
+msgid "Produce and deliver Caviar to the survivor Duplicant in the Abyss biome"
+msgstr "生產魚子醬並運送給深淵生態中的倖存者複製人"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C_HIDDEN
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C_HIDDEN"
-msgid "More exploration is required\n\nJust keep swimming..."
-msgstr "還需要更多探索\n\n只要一直游泳就好了..."
+msgid "More exploration is required"
+msgstr "還需要更多探索"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_A
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_A"
@@ -34307,8 +34332,8 @@ msgstr "未探索的條件"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_C
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_C"
-msgid "Deliver {AMOUNT} Squid Ink"
-msgstr "運送 {AMOUNT} 份魷魚墨汁"
+msgid "Deliver {AMOUNT} Caviar"
+msgstr "運送 {AMOUNT} 份魚子醬"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_C_HIDDEN
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_C_HIDDEN"
@@ -34337,8 +34362,8 @@ msgstr "攜手並進"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_DESCRIPTION"
-msgid "Success! My Duplicants harvested {AMOUNT1} pearls to offer to our potential future crewmate.\n\nWe now have {AMOUNT2} new gasket to use as needed."
-msgstr "成功了！我的複製人已收穫 {AMOUNT1} 顆珍珠作為貢品，獻給我們未來的潛在夥伴。\n\n我們現在多出了 {AMOUNT2} 份新的密封墊，可按需使用。"
+msgid "Success! My Duplicants harvested {AMOUNT1} pearls to offer to our potential future crewmate.\n\nWe now have {AMOUNT2} new gasket and 2 Flue Coral seeds to use as needed."
+msgstr "成功了！我的複製人收穫了 {AMOUNT1} 顆珍珠，準備獻給我們未來潛在的隊友。\n\n我們現在有 {AMOUNT2} 個新的密封墊和 2 個煙囪珊瑚種子，可根據需要使用。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_TITLE
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_TITLE"
@@ -34347,8 +34372,8 @@ msgstr "招募自由潛水員：珍珠已交付"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_DESCRIPTION"
-msgid "Success! We have produced {AMOUNT1} sushi to share with the survivor Duplicant as a gesture of goodwill.\n\nWe now have {AMOUNT2} new gasket to use as needed."
-msgstr "成功了！我們生產了 {AMOUNT1} 份壽司，作為展現善意的禮物與該名倖存複製人分享。\n\n我們現在多出了 {AMOUNT2} 份新的密封墊，可按需使用。"
+msgid "Success! We have produced {AMOUNT1} sushi to share with the survivor Duplicant as a gesture of goodwill.\n\nWe now have {AMOUNT2} new gasket and 2 Gum Palm seeds to use as needed."
+msgstr "成功了！我們生產了 {AMOUNT1} 份壽司與倖存的複製人分享，以表達我們的善意。\n\n我們現在有了 {AMOUNT2} 個新的密封墊和 2 個黏膠棕櫚種子，可根據需要使用。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_TITLE
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_TITLE"
@@ -34362,8 +34387,8 @@ msgstr "成功了！我們取得了 {AMOUNT1} 份魚子醬，獻給我們這位�
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_TITLE
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_TITLE"
-msgid "RECRUIT SURVIVOR: Squid Ink Delivered"
-msgstr "招募自由潛水員：魷魚墨汁已交付"
+msgid "RECRUIT SURVIVOR: Caviar Delivered"
+msgstr "招募自由潛水員：魚子醬已交付"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_A_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_A_DESCRIPTION"
@@ -64412,8 +64437,8 @@ msgstr "<link=\"CARROT\">羽葉南瓜</link>"
 
 #. STRINGS.ITEMS.FOOD.CAVIAR.DESC
 msgctxt "STRINGS.ITEMS.FOOD.CAVIAR.DESC"
-msgid "Unfertilized eggs from an aquatic critter.\n\nIt can be added to <link=\"FOOD\">Food</link> at a <link=\"DININGTABLE\">Mess Table</link> to boost <link=\"MORALE\">Morale</link>.\n\nDuplicants will automatically use Caviar while sitting at a <link=\"DININGTABLE\">Mess Table</link> during mealtime."
-msgstr "來自水生動物的未受精卵。\n\n可在<link=\"DININGTABLE\">餐桌</link>用餐時將其加入<link=\"FOOD\">食物</link>以提升<link=\"MORALE\">士氣</link>。\n\n複製人在<link=\"DININGTABLE\">單人餐桌</link>進餐時，會自動食用魚子醬。"
+msgid "Shelf-stable eggs from an aquatic critter.\n\nIt can be added to <link=\"FOOD\">Food</link> at a <link=\"DININGTABLE\">Mess Table</link> to boost <link=\"MORALE\">Morale</link>.\n\nDuplicants will automatically use Caviar while sitting at a <link=\"DININGTABLE\">Mess Table</link> during mealtime."
+msgstr "來自水生動物、耐儲存的卵。\n\n可在<link=\"DININGTABLE\">單人餐桌</link>將其加入<link=\"FOOD\">食物</link>中以提升<link=\"MORALE\">士氣</link>。\n\n複製人在用餐時間坐在<link=\"DININGTABLE\">單人餐桌</link>旁時，會自動使用魚子醬。"
 
 #. STRINGS.ITEMS.FOOD.CAVIAR.NAME
 msgctxt "STRINGS.ITEMS.FOOD.CAVIAR.NAME"
@@ -91435,6 +91460,26 @@ msgctxt "STRINGS.UI.OVERLAYS.ROOMS.NOROOM.TOO_BIG"
 msgid "<color=#F44A47FF>    • Size: {0} Tiles\n    • Maximum room size: {1} Tiles</color>"
 msgstr "<color=#F44A47FF>    • 大小：{0} 格\n    • 最大房間大小：{1} 格</color>"
 
+#. STRINGS.UI.OVERLAYS.ROOMS.POND.CRITTER_COUNT
+msgctxt "STRINGS.UI.OVERLAYS.ROOMS.POND.CRITTER_COUNT"
+msgid "    • Aquatic Critters: {0}"
+msgstr "    • 水生小動物：{0}"
+
+#. STRINGS.UI.OVERLAYS.ROOMS.POND.HEADER
+msgctxt "STRINGS.UI.OVERLAYS.ROOMS.POND.HEADER"
+msgid "<b>Pool Size</b>"
+msgstr "<b>水池尺寸</b>"
+
+#. STRINGS.UI.OVERLAYS.ROOMS.POND.NOFISH
+msgctxt "STRINGS.UI.OVERLAYS.ROOMS.POND.NOFISH"
+msgid "    • No aquatic critters found"
+msgstr "    • 未發現水生小動物"
+
+#. STRINGS.UI.OVERLAYS.ROOMS.POND.SIZE
+msgctxt "STRINGS.UI.OVERLAYS.ROOMS.POND.SIZE"
+msgid "    • Pool Size: {0} Tiles"
+msgstr "    • 水池尺寸：{0}格"
+
 #. STRINGS.UI.OVERLAYS.ROOMS.ROOM
 msgctxt "STRINGS.UI.OVERLAYS.ROOMS.ROOM"
 msgid "Room {0}"
@@ -91754,6 +91799,11 @@ msgstr "繼續"
 msgctxt "STRINGS.UI.PRODUCTINFO_APPLICABLERESOURCES"
 msgid "Required resources:"
 msgstr "所需資源："
+
+#. STRINGS.UI.PRODUCTINFO_INSUFFICIENTRESOURCES_TITLE
+msgctxt "STRINGS.UI.PRODUCTINFO_INSUFFICIENTRESOURCES_TITLE"
+msgid "Insufficient {0} available"
+msgstr "{0} 不足"
 
 #. STRINGS.UI.PRODUCTINFO_MISSINGRESOURCES_DESC
 msgctxt "STRINGS.UI.PRODUCTINFO_MISSINGRESOURCES_DESC"

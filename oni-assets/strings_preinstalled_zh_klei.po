@@ -82,6 +82,11 @@ msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMO_SUIT_80S.NAME"
 msgid "Radical Atmo Outfit"
 msgstr "非凡气压服套装"
 
+#. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_ANTIQUE.NAME
+msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_ANTIQUE.NAME"
+msgid "Antique Atmo Outfit"
+msgstr "古董气压服套装"
+
 #. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_BIONIC.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_BIONIC.NAME"
 msgid "Bionic Atmo Outfit"
@@ -92,10 +97,25 @@ msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_CHAMELEO.NAME"
 msgid "Dartle Atmo Outfit"
 msgstr "逸蜥气压服套装"
 
+#. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_DUCKY.NAME
+msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_DUCKY.NAME"
+msgid "Ducky Atmo Outfit"
+msgstr "橡皮鸭气压服套装"
+
+#. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_FLOATIE.NAME
+msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_FLOATIE.NAME"
+msgid "Floatie Atmo Outfit"
+msgstr "泳圈气压服套装"
+
 #. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_GAUDY.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_GAUDY.NAME"
 msgid "Gaudy Atmo Outfit"
 msgstr "宴会气压服套装"
+
+#. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_OREHULL.NAME
+msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_OREHULL.NAME"
+msgid "Orehull Atmo Outfit"
+msgstr "矿甲龟气压服套装"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_PACULACANTH.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_ATMOSUIT_PACULACANTH.NAME"
@@ -222,6 +242,16 @@ msgctxt "STRINGS.BLUEPRINTS.OUTFIT_JETSUIT_008.NAME"
 msgid "Ultra Jet Outfit"
 msgstr "究极喷气服套装"
 
+#. STRINGS.BLUEPRINTS.OUTFIT_NAUTICAL_DRESS.NAME
+msgctxt "STRINGS.BLUEPRINTS.OUTFIT_NAUTICAL_DRESS.NAME"
+msgid "Nautical Dress Outfit"
+msgstr "航海正装套装"
+
+#. STRINGS.BLUEPRINTS.OUTFIT_NAUTICAL_SUIT.NAME
+msgctxt "STRINGS.BLUEPRINTS.OUTFIT_NAUTICAL_SUIT.NAME"
+msgid "Nautical Outfit"
+msgstr "航海套装"
+
 #. STRINGS.BLUEPRINTS.OUTFIT_PJ_DINO.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_PJ_DINO.NAME"
 msgid "Jurassic Jammies Outfit"
@@ -266,6 +296,16 @@ msgstr "上浆西装套装"
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_SUSPENDERS.NAME"
 msgid "Arbor Hugger Outfit"
 msgstr "乔木拥抱者套装"
+
+#. STRINGS.BLUEPRINTS.OUTFIT_SWIMSUIT_MERM.NAME
+msgctxt "STRINGS.BLUEPRINTS.OUTFIT_SWIMSUIT_MERM.NAME"
+msgid "Merfolk Aquasuit Outfit"
+msgstr "人鱼潜水服套装"
+
+#. STRINGS.BLUEPRINTS.OUTFIT_SWIMSUIT_WAVECRESTS.NAME
+msgctxt "STRINGS.BLUEPRINTS.OUTFIT_SWIMSUIT_WAVECRESTS.NAME"
+msgid "Breaker Aquasuit Outfit"
+msgstr "破浪潜水服套装"
 
 #. STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_BLACK.NAME
 msgctxt "STRINGS.BLUEPRINTS.OUTFIT_TOP_FLANNEL_BLACK.NAME"
@@ -442,7 +482,7 @@ msgstr "一个高科技的游泳圈，实际上对浮力没有任何影响。"
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_FLOATIE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_FLOATIE.NAME"
 msgid "Floatie Atmo Belt"
-msgstr "游泳圈气压服腰带"
+msgstr "泳圈气压服腰带"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_NEUTRONIUM.DESC"
@@ -2001,8 +2041,8 @@ msgstr "浓盐水手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_GOLD.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_GOLD.DESC"
-msgid "It's all in the wrist!"
-msgstr "全靠手腕！"
+msgid "Standard uniform gloves for natural swimmers. It's all in the wrist!"
+msgstr "自然游泳者的标准手套。全靠手腕功夫！"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_GOLD.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_GOLD.NAME"
@@ -2011,8 +2051,10 @@ msgstr "金色鳍状手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WHEEZY.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WHEEZY.DESC"
-msgid "A finny pair of Wheezewort-blue gloves for swimming with the fishes."
-msgstr "一双冰息萝卜蓝色手套，用于与鱼一起游泳。"
+msgid ""
+"Standard uniform gloves for freedivers who spend all their spare time "
+"swimming with the fishes."
+msgstr "为所有空闲时间都与鱼共游的自由潜水员准备的标准手套。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WHEEZY.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WHEEZY.NAME"
@@ -2895,6 +2937,11 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_NEUTRONIUM.NAME"
 msgid "<link=\"MINERALDEOXIDIZER\">Regal Neutronium Oxygen Diffuser</link>"
 msgstr "<link=\"MINERALDEOXIDIZER\">尊贵中子氧气扩散器</link>"
 
+#. STRINGS.BLUEPRINTS.PERMIT_MINNOW_SWIM_OUTFIT.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_MINNOW_SWIM_OUTFIT.NAME"
+msgid "Freediver Uniform Outfit"
+msgstr "自由潜水员制服套装"
+
 #. STRINGS.BLUEPRINTS.PERMIT_MITTENS_KNIT_BLACK_SMOG.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MITTENS_KNIT_BLACK_SMOG.DESC"
 msgid "Keeps fingers snuggled up next to each other, as nature intended."
@@ -3241,14 +3288,13 @@ msgstr "利亚姆头像"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PAINTING_ART_AQUATIC.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PAINTING_ART_AQUATIC.DESC"
-msgid ""
-"In another life, a cherubic Blowter is motivated by more than Waterweed."
-msgstr "在另一个生命里，有一只天使般的鼓气鱼，它的动力可不止是水草。"
+msgid "A peaceful meditation on the nature of life, love, and the universe."
+msgstr "这是一场关于生命、爱与宇宙本质的宁静冥想。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PAINTING_ART_AQUATIC.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PAINTING_ART_AQUATIC.NAME"
-msgid "Neverbloat"
-msgstr "《永不臃肿》"
+msgid "Serenity Swim"
+msgstr "《悠然游泳》"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PAINTING_ART_CERES_A.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PAINTING_ART_CERES_A.DESC"
@@ -4127,10 +4173,25 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_STANDARD_REGAL_NEUTRONIUM_OUTFIT.NAME"
 msgid "Regal Neutronium Uniform"
 msgstr "尊贵中子制服"
 
-#. STRINGS.BLUEPRINTS.PERMIT_STANDARD_SWIM_OUTFIT.NAME
-msgctxt "STRINGS.BLUEPRINTS.PERMIT_STANDARD_SWIM_OUTFIT.NAME"
-msgid "PERMIT_STANDARD_SWIM_OUTFIT"
-msgstr "PERMIT_STANDARD_SWIM_OUTFIT"
+#. STRINGS.BLUEPRINTS.PERMIT_STANDARD_SWIM_OUTFIT_BLUE.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_STANDARD_SWIM_OUTFIT_BLUE.NAME"
+msgid "Blue Swim Uniform"
+msgstr "蓝色游泳制服"
+
+#. STRINGS.BLUEPRINTS.PERMIT_STANDARD_SWIM_OUTFIT_GREEN.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_STANDARD_SWIM_OUTFIT_GREEN.NAME"
+msgid "Green Swim Uniform"
+msgstr "绿色游泳制服"
+
+#. STRINGS.BLUEPRINTS.PERMIT_STANDARD_SWIM_OUTFIT_RED.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_STANDARD_SWIM_OUTFIT_RED.NAME"
+msgid "Red Swim Uniform"
+msgstr "红色游泳制服"
+
+#. STRINGS.BLUEPRINTS.PERMIT_STANDARD_SWIM_OUTFIT_YELLOW.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_STANDARD_SWIM_OUTFIT_YELLOW.NAME"
+msgid "Yellow Swim Uniform"
+msgstr "黄色游泳制服"
 
 #. STRINGS.BLUEPRINTS.PERMIT_STEAMTURBINE2_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_STEAMTURBINE2_NEUTRONIUM.DESC"
@@ -4187,9 +4248,9 @@ msgstr "人鱼潜水服"
 #. STRINGS.BLUEPRINTS.PERMIT_SWIMSUIT_WAVECRESTS.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SWIMSUIT_WAVECRESTS.DESC"
 msgid ""
-"One cannot control the waves, but one can learn to dress as though one knows "
+"One cannot control the waves, but one can dress as though one has learned "
 "how to swim."
-msgstr "人无法驾驭海浪，但可以学会穿得像自己真会游泳一样。"
+msgstr "人无法控制海浪，但可以穿得像自己已经学会了游泳一样。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_SWIMSUIT_WAVECRESTS.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SWIMSUIT_WAVECRESTS.NAME"
@@ -4618,43 +4679,54 @@ msgstr "羊毛捕鱼毛衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_AXON.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_AXON.DESC"
-msgid "A thick axon-blue swimming top that zips all the way up to the chin."
-msgstr "一件厚实的轴突蓝色游泳上衣，拉链可以一路拉到下巴。"
+msgid ""
+"An axon-blue neoprene swimming top that zips all the way up to the chin."
+msgstr "一件轴突蓝色氯丁橡胶游泳上衣，拉链可以一路拉到下巴。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_AXON.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_AXON.NAME"
-msgid "Axon Neoprene Zip-up"
-msgstr "轴突拉链衣"
+msgid "Axon Swim Shirt"
+msgstr "突触游泳衬衫"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_BLUE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_BLUE.DESC"
-msgid "A thick blue swimming top that zips all the way up to the chin."
-msgstr "一件厚实的蓝色游泳上衣，拉链可以一路拉到下巴。"
+msgid "A blue neoprene swimming top that zips all the way up to the chin."
+msgstr "一件蓝色氯丁橡胶游泳上衣，拉链可以一路拉到下巴。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_BLUE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_BLUE.NAME"
-msgid "Blue Neoprene Zip-up"
-msgstr "蓝色拉链衣"
+msgid "Blue Swim Shirt"
+msgstr "蓝色游泳衬衫"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_GREEN.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_GREEN.DESC"
-msgid "A thick green swimming top that zips all the way up to the chin."
-msgstr "一件厚实的绿色游泳上衣，拉链可以一路拉到下巴。"
+msgid "A green neoprene swimming top that zips all the way up to the chin."
+msgstr "一件绿色氯丁橡胶游泳上衣，拉链可以一路拉到下巴。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_GREEN.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_GREEN.NAME"
-msgid "Green Neoprene Zip-up"
-msgstr "绿色拉链衣"
+msgid "Green Swim Shirt"
+msgstr "绿色游泳衬衫"
+
+#. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_RED.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_RED.DESC"
+msgid "A red neoprene swimming top that zips all the way up to the chin."
+msgstr "一件红色氯丁橡胶游泳上衣，拉链可以一路拉到下巴。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_RED.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_RED.NAME"
+msgid "Red Swim Shirt"
+msgstr "红色游泳衬衫"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_YELLOW.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_YELLOW.DESC"
-msgid "A thick yellow swimming top that zips all the way up to the chin."
-msgstr "一件厚实的黄色游泳上衣，拉链可以一路拉到下巴。"
+msgid "A yellow neoprene swimming top that zips all the way up to the chin."
+msgstr "一件黄色氯丁橡胶游泳上衣，拉链可以一路拉到下巴。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_YELLOW.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_YELLOW.NAME"
-msgid "Yellow Neoprene Zip-up"
-msgstr "黄色拉链衣"
+msgid "Yellow Swim Shirt"
+msgstr "黄色游泳衬衫"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_VEST_PUFFER_ORANGE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_VEST_PUFFER_ORANGE.DESC"
@@ -4668,14 +4740,14 @@ msgstr "镉背心"
 
 #. STRINGS.BLUEPRINTS.PERMIT_UNDERWATER_CRITTER_CONDO_AQUATIC.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_UNDERWATER_CRITTER_CONDO_AQUATIC.DESC"
-msgid "PLACEHOLDER"
-msgstr "[占位]"
+msgid ""
+"Its periscope has seen things that no Duplicant could possibly understand."
+msgstr "潜望镜看到了复制人无法理解的东西。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_UNDERWATER_CRITTER_CONDO_AQUATIC.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_UNDERWATER_CRITTER_CONDO_AQUATIC.NAME"
-msgid ""
-"<link=\"UNDERWATERCRITTERCONDO\">PLACEHOLDER Aquatic Critter Condo</link>"
-msgstr "<link=\"UNDERWATERCRITTERCONDO\">[占位]水生小动物公寓</link>"
+msgid "<link=\"UNDERWATERCRITTERCONDO\">Nosedive Aquatic Critter Condo</link>"
+msgstr "<link=\"UNDERWATERCRITTERCONDO\">下潜水生小动物公寓</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_UTILITIES_ELECTRIC_CONDUCT_DIAMOND_ORCHID.DESC
 msgctxt ""
@@ -6155,13 +6227,15 @@ msgctxt ""
 "STRINGS.BUILDING.STATUSITEMS.COLONYLACKSDUPEWITHMULTISKILLPERK.TOOLTIP_DLC3"
 msgid ""
 "Colony lacks a Duplicant with all of the following skills:\n"
-" {Skills} or {Boosters}\n"
+" {Skills} \n"
+"or {Boosters}\n"
 "\n"
 "Open the <b>Skills Panel</b> {Hotkey/ManageSkills} to teach skills or assign "
 "boosters to a Duplicant"
 msgstr ""
 "殖民地缺少具有以下技能的复制人：\n"
-"{Skills}或{Boosters}\n"
+"{Skills}\n"
+"或{Boosters}\n"
 "\n"
 "打开<b>技能面板</b> {Hotkey/ManageSkills} 教复制人技能或分配增幅块"
 
@@ -11253,7 +11327,7 @@ msgstr "失去殖民地"
 #. STRINGS.BUILDING.STATUSITEMS.WATTSONGAMEOVER.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.WATTSONGAMEOVER.TOOLTIP"
 msgid "All Duplicants are dead or incapacitated"
-msgstr "所有复制人都已死亡或丧失行动能力了"
+msgstr "所有复制人都已死亡或失去行动能力了"
 
 #. STRINGS.BUILDING.STATUSITEMS.WELL_OVERPRESSURE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.WELL_OVERPRESSURE.NAME"
@@ -11557,6 +11631,18 @@ msgctxt ""
 "STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.BIONIC_COMPONENT_RECIPE_DESC"
 msgid "Converts {0} to {1}"
 msgstr "将{0}转化为{1}"
+
+#. STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.BIONIC_OVERCLOCK_RECIPE_DESC
+msgctxt ""
+"STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.BIONIC_OVERCLOCK_RECIPE_DESC"
+msgid ""
+"Converts {0} to {1}\n"
+"\n"
+"!! <b>WARNING: SYSTEM DAMAGE RISK !!</b>"
+msgstr ""
+"将{0}转化为{1}\n"
+"\n"
+"！！<b>警告：系统损伤风险！！</b>"
 
 #. STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.COLONY_HAS_BOOSTER_ASSIGNED_COUNT
 msgctxt ""
@@ -16205,6 +16291,23 @@ msgstr ""
 "将捕捉的水生小动物放回到世界中。\n"
 "\n"
 "可重复使用。"
+
+#. STRINGS.BUILDINGS.PREFABS.FISHDELIVERYPOINT.LOGIC_INPUT.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.FISHDELIVERYPOINT.LOGIC_INPUT.DESC"
+msgid "Enable/Disable"
+msgstr "启用/禁用"
+
+#. STRINGS.BUILDINGS.PREFABS.FISHDELIVERYPOINT.LOGIC_INPUT.LOGIC_PORT_ACTIVE
+msgctxt ""
+"STRINGS.BUILDINGS.PREFABS.FISHDELIVERYPOINT.LOGIC_INPUT.LOGIC_PORT_ACTIVE"
+msgid "<b><style=\"logic_on\">Green Signal</style></b>: Enable fish release"
+msgstr "<b><style=\"logic_on\">绿色信号</style></b>：启用鱼类释放"
+
+#. STRINGS.BUILDINGS.PREFABS.FISHDELIVERYPOINT.LOGIC_INPUT.LOGIC_PORT_INACTIVE
+msgctxt ""
+"STRINGS.BUILDINGS.PREFABS.FISHDELIVERYPOINT.LOGIC_INPUT.LOGIC_PORT_INACTIVE"
+msgid "<b><style=\"logic_off\">Red Signal</style></b>: Disable fish release"
+msgstr "<b><style=\"logic_off\">红色信号</style></b>：禁用鱼类释放"
 
 #. STRINGS.BUILDINGS.PREFABS.FISHDELIVERYPOINT.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.FISHDELIVERYPOINT.NAME"
@@ -22695,7 +22798,7 @@ msgid ""
 msgstr ""
 "加速<link=\"HEALTH\">生命值</link>恢复并治疗身体上的伤口。\n"
 "\n"
-"使丧失行动能力的复制人苏醒。"
+"使失去行动能力的复制人苏醒。"
 
 #. STRINGS.BUILDINGS.PREFABS.MEDICALCOT.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.MEDICALCOT.NAME"
@@ -23277,6 +23380,33 @@ msgstr ""
 msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.NAME"
 msgid "Unknown Duplicant"
 msgstr "未知复制人"
+
+#. STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_DISABLE
+msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_DISABLE"
+msgid "Disable Delivery"
+msgstr "禁用搬运"
+
+#. STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_DISABLE_TOOLTIP
+msgctxt ""
+"STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_DISABLE_TOOLTIP"
+msgid "Stop Duplicants from delivering the requested items"
+msgstr "阻止复制人运送所需物品"
+
+#. STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_ENABLE
+msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_ENABLE"
+msgid "Enable Delivery"
+msgstr "启用运送"
+
+#. STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_ENABLE_TOOLTIP
+msgctxt ""
+"STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_BUTTON_ENABLE_TOOLTIP"
+msgid "Allow Duplicants to deliver the requested items"
+msgstr "允许复制人运送所需物品"
+
+#. STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_HEADER
+msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_A.UI_HEADER"
+msgid "Delivery Menu"
+msgstr "运送菜单"
 
 #. STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_B.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.MINNOW_IMPERATIVE_POI_B.DESC"
@@ -27773,6 +27903,28 @@ msgstr ""
 msgctxt "STRINGS.BUILDINGS.PREFABS.RUBBERMAKER.NAME"
 msgid "<link=\"RUBBERMAKER\">Vulcanizer</link>"
 msgstr "<link=\"RUBBERMAKER\">硫化器</link>"
+
+#. STRINGS.BUILDINGS.PREFABS.RUBBERTILE.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.RUBBERTILE.DESC"
+msgid "Rubber tiles are designed to resist damage from liquid pressure."
+msgstr "橡胶砖设计用于抵抗液体压力的损伤。"
+
+#. STRINGS.BUILDINGS.PREFABS.RUBBERTILE.EFFECT
+msgctxt "STRINGS.BUILDINGS.PREFABS.RUBBERTILE.EFFECT"
+msgid ""
+"Used to build the walls and floors of rooms.\n"
+"\n"
+"Provides an anti-slip work surface and effective <link=\"HEAT\">Insulation</"
+"link>."
+msgstr ""
+"用来建造房间的墙体和地面。\n"
+"\n"
+"提供防滑的工作地面并有效<link=\"HEAT\">隔热</link>。"
+
+#. STRINGS.BUILDINGS.PREFABS.RUBBERTILE.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.RUBBERTILE.NAME"
+msgid "<link=\"RUBBERTILE\">Rubber Tile</link>"
+msgstr "<link=\"RUBBERTILE\">橡胶砖</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.RUSTDEOXIDIZER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.RUSTDEOXIDIZER.DESC"
@@ -39249,6 +39401,30 @@ msgctxt "STRINGS.CODEX.FILAMENTPLANT.TITLE"
 msgid "Petta Pouf"
 msgstr "蓬茸柳"
 
+#. STRINGS.CODEX.FISHFOOD.BODY.CONTAINER1
+msgctxt "STRINGS.CODEX.FISHFOOD.BODY.CONTAINER1"
+msgid "<smallcaps>Pictured: Pacu Treat</smallcaps>"
+msgstr "<smallcaps>图片：帕库鱼食</smallcaps>"
+
+#. STRINGS.CODEX.FISHFOOD.BODY.CONTAINER2
+msgctxt "STRINGS.CODEX.FISHFOOD.BODY.CONTAINER2"
+msgid ""
+"A gourmet loaf of ground seeds and <link=\"WATER\">Water</link>, formulated "
+"to delight <link=\"PACU\">Pacus</link>."
+msgstr ""
+"一种精心准备的磨碎种子与<link=\"WATER\">水</link>的混合物，专为取悦<link="
+"\"PACU\">帕库鱼</link>。"
+
+#. STRINGS.CODEX.FISHFOOD.SUBTITLE
+msgctxt "STRINGS.CODEX.FISHFOOD.SUBTITLE"
+msgid "Fish Food"
+msgstr "鱼食"
+
+#. STRINGS.CODEX.FISHFOOD.TITLE
+msgctxt "STRINGS.CODEX.FISHFOOD.TITLE"
+msgid "Pacu Treat"
+msgstr "帕库鱼食"
+
 #. STRINGS.CODEX.FLYTRAPPLANT.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.FLYTRAPPLANT.BODY.CONTAINER1"
 msgid ""
@@ -40035,7 +40211,7 @@ msgstr "生命值"
 #. STRINGS.CODEX.HEALTH.HEADER_2
 msgctxt "STRINGS.CODEX.HEALTH.HEADER_2"
 msgid "Incapacitation and Death"
-msgstr "丧失行动能力和死亡"
+msgstr "失去行动能力和死亡"
 
 #. STRINGS.CODEX.HEALTH.HEADER_3
 msgctxt "STRINGS.CODEX.HEALTH.HEADER_3"
@@ -40063,7 +40239,7 @@ msgid ""
 msgstr ""
 "复制人会在一些罕见情况下受伤，比如极端<link=\"HEAT\">高温</link>或有敌意的"
 "<link=\"CREATURES\">小动物</link>。受伤的复制人的运动能力会大幅下降，过于严重"
-"时甚至会有丧失行动能力的危险。\n"
+"时甚至会有失去行动能力的危险。\n"
 "\n"
 
 #. STRINGS.CODEX.HEALTH.PARAGRAPH_2
@@ -40080,7 +40256,7 @@ msgid ""
 "link> than physical damage.\n"
 "\n"
 msgstr ""
-"丧失行动能力的复制人不能移动或执行任务，他们必须在生命值降为零之前由其他复制"
+"失去行动能力的复制人不能移动或执行任务，他们必须在生命值降为零之前由其他复制"
 "人营救。如果复制人的生命值达到零，他们就会死去。\n"
 "\n"
 "生命值可以随着时间慢慢恢复，在<link=\"MEDICALCOT\">分诊床</link>上休养可以恢"
@@ -43151,6 +43327,72 @@ msgstr "加密级别：三"
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_CEASEDESIST.TITLE"
 msgid "Legal Letter"
 msgstr "法律信函"
+
+#. STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.BODY.CONTAINER1
+msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.BODY.CONTAINER1"
+msgid ""
+"<indent=5%>Updated guidelines for employees sheltering in place are "
+"attached. See highlights below:\n"
+"\n"
+"<indent=5%>    •  Emergency cots are not designed to be stacked.\n"
+"    •  Coffee ration cards are non-transferable and cannot be sold.\n"
+"    •  Please review the personal hygiene handout.\n"
+"\n"
+"</indent>Employees with functioning equipment should continue as normal "
+"while flood restoration efforts continue.\n"
+"\n"
+"Thank you for your patience.\n"
+"\n"
+"<indent=10%><alpha=#AA>[MISSING ATTACHMENT]</color></indent>"
+msgstr ""
+"<indent=5%>就地避险员工的最新指引详见附件。要点如下：\n"
+"\n"
+"<indent=5%>    •  应急床不可叠放。\n"
+"    •  咖啡配给卡不可转让，不可出售。\n"
+"    •  请参阅个人卫生须知单。\n"
+"\n"
+"</indent>设备运转正常的员工，请在洪水修复进展期间照常工作。\n"
+"\n"
+"感谢各位的耐心配合。\n"
+"\n"
+"<indent=10%><alpha=#AA>[附件丢失]</color></indent>"
+
+#. STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.BODY.EMAILHEADER1
+msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.BODY.EMAILHEADER1"
+msgid ""
+"<smallcaps>To: <b>ALL</b><alpha=#AA><size=12></size></color>\n"
+"From: <b>ADMIN</b><alpha=#AA><size=12> <admin@gravitas.nova></size></color></"
+"smallcaps>\n"
+"------------------\n"
+msgstr ""
+"<smallcaps>收件人：<b>全体</b><alpha=#AA><size=12></size></color>\n"
+"发件人：<b>管理员</b><alpha=#AA><size=12> <admin@gravitas.nova></size></"
+"color></smallcaps>\n"
+"------------------\n"
+
+#. STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.BODY.SIGNATURE1
+msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.BODY.SIGNATURE1"
+msgid ""
+"\n"
+"Thank-you,\n"
+"-Admin\n"
+"<size=11>The Gravitas Facility</size>\n"
+"------------------\n"
+msgstr ""
+"\n"
+"谢谢！\n"
+"- 管理员\n"
+"<size=11>庄严科技</size>\n"
+
+#. STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.SUBTITLE
+msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.SUBTITLE"
+msgid "ENCRYPTION LEVEL: NONE"
+msgstr "加密级别：无"
+
+#. STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.TITLE
+msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.TITLE"
+msgid "Day Three"
+msgstr "第三天"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC5_FRIDGENOTE.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FRIDGENOTE.BODY.CONTAINER1"
@@ -53336,43 +53578,62 @@ msgstr "当前殖民地无法完成这项目标"
 msgctxt ""
 "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS."
 "REQUIREMENT_DESCRIPTION_A"
-msgid "Delivered pearls to the survivor Duplicant"
-msgstr "将珍珠运送到幸存者复制人"
+msgid "Harvest and deliver Pearls to the survivor Duplicant in the Reef biome"
+msgstr "收获并将珍珠运送到珊瑚生态中的幸存者复制人"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_A_HIDDEN
 msgctxt ""
 "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS."
 "REQUIREMENT_DESCRIPTION_A_HIDDEN"
-msgid "Requirement will become visible once discovered"
-msgstr "需求在发现后可见"
+msgid ""
+"More exploration is required\n"
+"\n"
+"Just keep swimming..."
+msgstr ""
+"需要更多的探索\n"
+"\n"
+"继续游吧……"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B
 msgctxt ""
 "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS."
 "REQUIREMENT_DESCRIPTION_B"
-msgid "Delivered sushi to the survivor Duplicant"
-msgstr "将寿司运送到幸存者复制人"
+msgid ""
+"Craft and deliver Sushi to the survivor Duplicant in the Kelp Forest biome"
+msgstr "制作并将寿司运送到藻林生态中的幸存者复制人"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B_HIDDEN
 msgctxt ""
 "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS."
 "REQUIREMENT_DESCRIPTION_B_HIDDEN"
-msgid "Requirement will become visible once discovered"
-msgstr "需求在发现后可见"
+msgid ""
+"More exploration is required\n"
+"\n"
+"Just keep swimming..."
+msgstr ""
+"需要更多的探索\n"
+"\n"
+"继续游吧……"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C
 msgctxt ""
 "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS."
 "REQUIREMENT_DESCRIPTION_C"
-msgid "Delivered squid ink to the survivor Duplicant"
-msgstr "将鱿鱼墨汁运送到幸存者复制人"
+msgid "Produce and deliver Caviar to the survivor Duplicant in the Abyss biome"
+msgstr "收获并将鱼子酱运送到深渊生态中的幸存者复制人"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C_HIDDEN
 msgctxt ""
 "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS."
 "REQUIREMENT_DESCRIPTION_C_HIDDEN"
-msgid "Requirement will become visible once discovered"
-msgstr "需求在发现后可见"
+msgid ""
+"More exploration is required\n"
+"\n"
+"Just keep swimming..."
+msgstr ""
+"需要更多的探索\n"
+"\n"
+"继续游吧……"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_A
 msgctxt ""
@@ -53384,34 +53645,34 @@ msgstr "运送{AMOUNT}珍珠"
 msgctxt ""
 "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS."
 "REQUIREMENT_NAME_A_HIDDEN"
-msgid "Unknown Requirement"
-msgstr "未知需求"
+msgid "Undiscovered Requirement"
+msgstr "尚未发现的需求"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_B
 msgctxt ""
 "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_B"
-msgid "Deliver {AMOUNT} Sushi Rolls"
-msgstr "运送{AMOUNT}寿司卷"
+msgid "Deliver {AMOUNT} Sushi"
+msgstr "运送{AMOUNT}寿司"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_B_HIDDEN
 msgctxt ""
 "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS."
 "REQUIREMENT_NAME_B_HIDDEN"
-msgid "Unknown Requirement"
-msgstr "未知需求"
+msgid "Undiscovered Requirement"
+msgstr "尚未发现的需求"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_C
 msgctxt ""
 "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_C"
-msgid "Deliver {AMOUNT} Squid Ink"
-msgstr "运送{AMOUNT}鱿鱼墨汁"
+msgid "Deliver {AMOUNT} Caviar"
+msgstr "运送{AMOUNT}鱼子酱"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_C_HIDDEN
 msgctxt ""
 "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS."
 "REQUIREMENT_NAME_C_HIDDEN"
-msgid "Unknown Requirement"
-msgstr "未知需求"
+msgid "Undiscovered Requirement"
+msgstr "尚未发现的需求"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.DESCRIPTION"
@@ -53439,22 +53700,22 @@ msgstr "好伙伴"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.NAME
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.NAME"
-msgid "Finding Minnow"
-msgstr "寻找只鲤"
+msgid "Better Together"
+msgstr "同心协力"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_DESCRIPTION
 msgctxt ""
 "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS."
 "POPUP_COMPLETE_POI_A_DESCRIPTION"
 msgid ""
-"Success! My Duplicants harvested [AMOUNT1] pearls to offer to our potential "
+"Success! My Duplicants harvested {AMOUNT1} pearls to offer to our potential "
 "future crewmate.\n"
 "\n"
-"We now have [AMOUNT2] new gasket to use as needed."
+"We now have {AMOUNT2} new gasket to use as needed."
 msgstr ""
-"成功了！我的复制人收获了[AMOUNT1]珍珠，送给了我们未来的潜在成员。\n"
+"成功了！我的复制人收获了{AMOUNT1}珍珠，送给了我们未来的潜在成员。\n"
 "\n"
-"我们现在有[AMOUNT2]份新密封圈可按需使用。"
+"我们现在有{AMOUNT2}份新密封圈可按需使用。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_TITLE
 msgctxt ""
@@ -53467,14 +53728,14 @@ msgctxt ""
 "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS."
 "POPUP_COMPLETE_POI_B_DESCRIPTION"
 msgid ""
-"Success! We have produced [AMOUNT1] sushi to share with the survivor "
+"Success! We have produced {AMOUNT1} sushi to share with the survivor "
 "Duplicant as a gesture of goodwill.\n"
 "\n"
-"We now have [AMOUNT2] new gasket to use as needed."
+"We now have {AMOUNT2} new gasket to use as needed."
 msgstr ""
-"成功了！我们生产了[AMOUNT1]寿司作为善意的表示与幸存者复制人分享。\n"
+"成功了！我们生产了{AMOUNT1}寿司作为善意的表示与幸存者复制人分享。\n"
 "\n"
-"我们现在有[AMOUNT2]份新密封圈可按需使用。"
+"我们现在有{AMOUNT2}份新密封圈可按需使用。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_TITLE
 msgctxt ""
@@ -53487,14 +53748,14 @@ msgctxt ""
 "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS."
 "POPUP_COMPLETE_POI_C_DESCRIPTION"
 msgid ""
-"Success! We have procured [AMOUNT1] caviar to offer to our splashy "
+"Success! We have procured {AMOUNT1} caviar to offer to our splashy "
 "neighbour.\n"
 "\n"
-"We now have [AMOUNT2] new gasket to use as needed."
+"We now have {AMOUNT2} new gasket to use as needed."
 msgstr ""
-"成功了！我们生产了[AMOUNT1]鱼子酱送给了我们引人注目的邻居。\n"
+"成功了！我们生产了{AMOUNT1}鱼子酱送给了我们引人注目的邻居。\n"
 "\n"
-"我们现在有[AMOUNT2]份新密封圈可按需使用。"
+"我们现在有{AMOUNT2}份新密封圈可按需使用。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_TITLE
 msgctxt ""
@@ -53508,13 +53769,16 @@ msgctxt ""
 "POPUP_START_POI_A_DESCRIPTION"
 msgid ""
 "My Duplicants found the survivor exploring the Reef biome. She seems "
-"fascinated by the Clampum, and offered to trade us [AMOUNT1] gasket for "
-"[AMOUNT2] of its pearls.\n"
+"fascinated by the Clampum.\n"
+"\n"
+"She offered to trade us {AMOUNT1} Gasket and 2 Flue Coral seeds for "
+"{AMOUNT2} of its pearls.\n"
 "\n"
 "I must enable delivery to ensure we keep our end of this bargain."
 msgstr ""
-"我的复制人在探索珊瑚生态时发现了幸存者。她似乎对巨钳蚌很感兴趣，提出用"
-"[AMOUNT1]份密封圈跟我们交易[AMOUNT2]珍珠。\n"
+"我的复制人在探索珊瑚生态时发现了幸存者。她似乎对巨钳蚌很感兴趣。\n"
+"\n"
+"她提出用{AMOUNT1}份密封圈和2颗烟囱珊瑚种子跟我们交易{AMOUNT2}巨钳蚌的珍珠。\n"
 "\n"
 "我必须确保送达，以履行我们的交易承诺。"
 
@@ -53530,13 +53794,17 @@ msgctxt ""
 "POPUP_START_POI_B_DESCRIPTION"
 msgid ""
 "My Duplicants found the survivor exploring the Kelp Forest biome. She "
-"appears to be hungry. My Duplicants offered to exchange [AMOUNT1] sushi "
-"rolls for [AMOUNT2] gasket, and she agreed.\n"
+"appears to be hungry.\n"
+"\n"
+"My Duplicants offered to exchange {AMOUNT1} of sushi for {AMOUNT2} Gasket "
+"and 2 Gum Palm seeds, and she agreed.\n"
 "\n"
 "I must enable delivery to ensure she receives our package."
 msgstr ""
-"我的复制人在探索藻林生态时发现了幸存者。她看起来有点饿了。我的复制人提出用"
-"[AMOUNT1]寿司换取[AMOUNT2]份密封圈，她同意了。\n"
+"我的复制人在探索藻林生态时发现了幸存者。她看起来有点饿了。\n"
+"\n"
+"我的复制人提出用{AMOUNT1}寿司换取{AMOUNT2}份密封圈和2颗粘胶棕榈种子，她同意"
+"了。\n"
 "\n"
 "我必须确保送达，以确保她能收到我们的包裹。"
 
@@ -53554,13 +53822,14 @@ msgid ""
 "My Duplicants found the survivor exploring the Abyss biome. She has been "
 "observing our machinery and seems particularly intrigued by caviar.\n"
 "\n"
-"We have agreed to exchange [AMOUNT1] of caviar for [AMOUNT2] gasket.\n"
+"We have agreed to exchange {AMOUNT1} of caviar for {AMOUNT2} Gasket.\n"
 "\n"
 "I must enable delivery to guarantee its fulfilment."
 msgstr ""
 "我的复制人在探索深渊生态时发现了幸存者。她一直在观察我们的机械，并请求我的复"
-"制人帮她准备鱼子酱。我们同意用我的复制人提出用[AMOUNT1]鱼子酱换取[AMOUNT2]份"
-"密封圈。\n"
+"制人帮她准备鱼子酱。\n"
+"\n"
+"我们同意用我的复制人提出用{AMOUNT1}鱼子酱换取{AMOUNT2}份密封圈。\n"
 "\n"
 "我必须确保送达，以确保满足要求。"
 
@@ -54450,8 +54719,8 @@ msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.MISC_REQUIREMENTS.WINCONDITION_AQUATIC
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.MISC_REQUIREMENTS.WINCONDITION_AQUATIC"
-msgid "Finding Minnow"
-msgstr "寻找只鲤"
+msgid "Better Together"
+msgstr "同心协力"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.MISC_REQUIREMENTS.WINCONDITION_AQUATIC_DESCRIPTION
 msgctxt ""
@@ -56753,10 +57022,15 @@ msgstr "<link=\"GEYSERGENERICCHLORINEGAS\">氯气间歇泉</link>"
 msgctxt "STRINGS.CREATURES.SPECIES.CLAM.DESC"
 msgid ""
 "Clampums are aquatic bivalves that transform <link=\"SAND\">Sand</link> into "
-"<link=\"PEARL\">Pearl</link>."
+"<link=\"PEARL\">Pearl</link>.\n"
+"\n"
+"Due to their size, they can only be planted in a <link=\"WIDEFARMTILE\">Wide "
+"Hydroponic Farm</link>."
 msgstr ""
 "巨钳蚌是一种水生双壳贝类，能将<link=\"SAND\">沙子</link>转化为<link=\"PEARL"
-"\">珍珠</link>。"
+"\">珍珠</link>。\n"
+"\n"
+"由于体积较大，只能种在<link=\"WIDEFARMTILE\">宽液培砖</link>中。"
 
 #. STRINGS.CREATURES.SPECIES.CLAM.DOMESTICATEDDESC
 msgctxt "STRINGS.CREATURES.SPECIES.CLAM.DOMESTICATEDDESC"
@@ -57057,10 +57331,15 @@ msgctxt "STRINGS.CREATURES.SPECIES.DEWPALM.DESC"
 msgid ""
 "Gum Palms can be harvested for <link=\"PALMWOOD\">Gum Wood</link>, which can "
 "be processed into <link=\"LATEX\">Latex</link> at the <link=\"MILKPRESS"
-"\">Plant Pulverizer</link>."
+"\">Plant Pulverizer</link>.\n"
+"\n"
+"Due to their size, they can only be planted in a <link=\"WIDEFARMTILE\">Wide "
+"Hydroponic Farm</link>."
 msgstr ""
 "粘胶棕榈能收获出<link=\"PALMWOOD\">粘胶木材</link>，可在<link=\"MILKPRESS\">"
-"植物粉碎机</link>加工成<link=\"LATEX\">胶乳</link>。"
+"植物粉碎机</link>加工成<link=\"LATEX\">胶乳</link>。\n"
+"\n"
+"由于体积较大，只能种在<link=\"WIDEFARMTILE\">宽液培砖</link>中。"
 
 #. STRINGS.CREATURES.SPECIES.DEWPALM.DOMESTICATEDDESC
 msgctxt "STRINGS.CREATURES.SPECIES.DEWPALM.DOMESTICATEDDESC"
@@ -58341,13 +58620,15 @@ msgstr "<link=\"LIGHTBUG\">发光虫幼虫</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.DESC"
 msgid ""
-"Shine Bugs emit a soft <link=\"LIGHT\">Light</link> in hopes of attracting "
-"more of their kind for company.\n"
+"Shine Bugs emit a soft <link=\"LIGHT\">Light</link> when <link=\"CREATURES::"
+"GUIDE::MOOD\">Happy</link>, in hopes of attracting more of their kind for "
+"company.\n"
 "\n"
 "Their eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that "
 "can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
 msgstr ""
-"发光虫会发出柔和的<link=\"LIGHT\">光</link>，以吸引更多同类聚集。\n"
+"发光虫<link=\"CREATURES::GUIDE::MOOD\">快乐</link>时会发出柔和的<link=\"LIGHT"
+"\">光</link>，以吸引更多同类聚集。\n"
 "\n"
 "发光虫的蛋含有少量<link=\"NATURALRESIN\">树脂</link>，可以在<link="
 "\"EGGCRACKER\">敲蛋桌</link>打裂获得。"
@@ -58421,13 +58702,15 @@ msgstr "<link=\"LIGHTBUGBLUE\">天蓝虫幼虫</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLUE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_BLUE.DESC"
 msgid ""
-"Azure Bugs emit a soft blue <link=\"LIGHT\">Light</link> in hopes of "
-"attracting more of their kind for company.\n"
+"Azure Bugs emit a soft blue <link=\"LIGHT\">Light</link> when <link="
+"\"CREATURES::GUIDE::MOOD\">Happy</link>, in hopes of attracting more of "
+"their kind for company.\n"
 "\n"
 "Their eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that "
 "can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
 msgstr ""
-"天蓝虫会发出柔和的蓝<link=\"LIGHT\">光</link>，以吸引更多同类聚集。\n"
+"天蓝虫<link=\"CREATURES::GUIDE::MOOD\">快乐</link>时会发出柔和的蓝<link="
+"\"LIGHT\">光</link>，以吸引更多同类聚集。\n"
 "\n"
 "发光虫的蛋含有少量<link=\"NATURALRESIN\">树脂</link>，可以在<link="
 "\"EGGCRACKER\">敲蛋桌</link>打裂获得。"
@@ -58461,13 +58744,15 @@ msgstr "<link=\"LIGHTBUGCRYSTAL\">光耀虫幼虫</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_CRYSTAL.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_CRYSTAL.DESC"
 msgid ""
-"Radiant Bugs emit an extra-bright <link=\"LIGHT\">Light</link> in hopes of "
-"attracting more of their kind for company.\n"
+"Radiant Bugs emit an extra-bright <link=\"LIGHT\">Light</link> when <link="
+"\"CREATURES::GUIDE::MOOD\">Happy</link>, in hopes of attracting more of "
+"their kind for company.\n"
 "\n"
 "Their eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that "
 "can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
 msgstr ""
-"光耀虫会发出极亮的<link=\"LIGHT\">光</link>，以吸引更多同类聚集。\n"
+"光耀虫<link=\"CREATURES::GUIDE::MOOD\">快乐</link>时会发出极亮的<link=\"LIGHT"
+"\">光</link>，以吸引更多同类聚集。\n"
 "\n"
 "发光虫的蛋含有少量<link=\"NATURALRESIN\">树脂</link>，可以在<link="
 "\"EGGCRACKER\">敲蛋桌</link>打裂获得。"
@@ -58501,13 +58786,15 @@ msgstr "<link=\"LIGHTBUGORANGE\">阳光虫幼虫</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_ORANGE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_ORANGE.DESC"
 msgid ""
-"Sun Bugs emit a soft orange <link=\"LIGHT\">Light</link> in hopes of "
-"attracting more of their kind for company.\n"
+"Sun Bugs emit a soft orange <link=\"LIGHT\">Light</link> when <link="
+"\"CREATURES::GUIDE::MOOD\">Happy</link>, in hopes of attracting more of "
+"their kind for company.\n"
 "\n"
 "Their eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that "
 "can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
 msgstr ""
-"阳光虫会发出柔和的橙<link=\"LIGHT\">光</link>，以吸引更多同类聚集。\n"
+"阳光虫<link=\"CREATURES::GUIDE::MOOD\">快乐</link>时会发出柔和的橙<link="
+"\"LIGHT\">光</link>，以吸引更多同类聚集。\n"
 "\n"
 "发光虫的蛋含有少量<link=\"NATURALRESIN\">树脂</link>，可以在<link="
 "\"EGGCRACKER\">敲蛋桌</link>打裂获得。"
@@ -58541,13 +58828,15 @@ msgstr "<link=\"LIGHTBUGPINK\">珊瑚虫幼虫</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PINK.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PINK.DESC"
 msgid ""
-"Coral Bugs emit a soft pink <link=\"LIGHT\">Light</link> in hopes of "
-"attracting more of their kind for company.\n"
+"Coral Bugs emit a soft pink <link=\"LIGHT\">Light</link> when <link="
+"\"CREATURES::GUIDE::MOOD\">Happy</link>, in hopes of attracting more of "
+"their kind for company.\n"
 "\n"
 "Their eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that "
 "can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
 msgstr ""
-"珊瑚虫会发出柔和的粉<link=\"LIGHT\">光</link>，以吸引更多同类聚集。\n"
+"珊瑚虫<link=\"CREATURES::GUIDE::MOOD\">快乐</link>时会发出柔和的粉<link="
+"\"LIGHT\">光</link>，以吸引更多同类聚集。\n"
 "\n"
 "发光虫的蛋含有少量<link=\"NATURALRESIN\">树脂</link>，可以在<link="
 "\"EGGCRACKER\">敲蛋桌</link>打裂获得。"
@@ -58581,13 +58870,15 @@ msgstr "<link=\"LIGHTBUGPURPLE\">皇家虫幼虫</link>"
 #. STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PURPLE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.LIGHTBUG.VARIANT_PURPLE.DESC"
 msgid ""
-"Royal Bugs emit a soft purple <link=\"LIGHT\">Light</link> in hopes of "
-"attracting more of their kind for company.\n"
+"Royal Bugs emit a soft purple <link=\"LIGHT\">Light</link> when <link="
+"\"CREATURES::GUIDE::MOOD\">Happy</link>, in hopes of attracting more of "
+"their kind for company.\n"
 "\n"
 "Their eggs contain small amounts of <link=\"NATURALRESIN\">Resin</link> that "
 "can be harvested when cracked at the <link=\"EGGCRACKER\">Egg Cracker</link>."
 msgstr ""
-"皇家虫会发出柔和的紫<link=\"LIGHT\">光</link>，以吸引更多同类聚集。\n"
+"皇家虫<link=\"CREATURES::GUIDE::MOOD\">快乐</link>时会发出柔和的紫<link="
+"\"LIGHT\">光</link>，以吸引更多同类聚集。\n"
 "\n"
 "发光虫的蛋含有少量<link=\"NATURALRESIN\">树脂</link>，可以在<link="
 "\"EGGCRACKER\">敲蛋桌</link>打裂获得。"
@@ -58978,10 +59269,13 @@ msgid ""
 "Flue Corals are aquatic organisms that use <link=\"LIGHT\">Light</link> to "
 "produce <link=\"OXYGEN\">Oxygen</link>.\n"
 "\n"
+"Due to their size, they can only be planted in a <link=\"WIDEFARMTILE\">Wide "
+"Hydroponic Farm</link>."
 msgstr ""
 "烟囱珊瑚是一种使用<link=\"LIGHT\">光</link>产生<link=\"OXYGEN\">氧气</link>的"
 "水生生物。\n"
 "\n"
+"由于体积较大，只能种在<link=\"WIDEFARMTILE\">宽液培砖</link>中。"
 
 #. STRINGS.CREATURES.SPECIES.OXYCORAL.DOMESTICATEDDESC
 msgctxt "STRINGS.CREATURES.SPECIES.OXYCORAL.DOMESTICATEDDESC"
@@ -59168,17 +59462,18 @@ msgstr "<link=\"PARROTFISH\">灯喙鱼苗</link>"
 #. STRINGS.CREATURES.SPECIES.PARROTFISH.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.PARROTFISH.DESC"
 msgid ""
-"Beakons are attractive aquatic critters who enjoy consuming <link=\"OXYGEN"
-"\">Oxygen</link>.\n"
+"Beakons are aquatic critters who feast on <link=\"PHOSPHORITE\">Phosphorite</"
+"link> and <link=\"PLANKTONCORAL\">Starnacle</link>, and excrete <link=\"LIME"
+"\">Lime</link>.\n"
 "\n"
-"These bioluminescent fish feast on <link=\"PHOSPHORITE\">Phosphorite</link> "
-"and <link=\"PLANKTONCORAL\">Starnacle</link>, and excrete <link=\"LIME"
-"\">Lime</link>."
+"They produce <link=\"LIGHT\">Light</link> when <link=\"CREATURES::GUIDE::MOOD"
+"\">Happy</link>, and enjoy consuming <link=\"OXYGEN\">Oxygen</link>."
 msgstr ""
-"灯喙鱼是一种迷人的水生小动物，喜欢消耗<link=\"OXYGEN\">氧气</link>。\n"
+"灯喙鱼是一种水生小动物，以<link=\"PHOSPHORITE\">磷矿</link>和<link="
+"\"PLANKTONCORAL\">藤壶星</link>为食，并排出<link=\"LIME\">石灰</link>。\n"
 "\n"
-"这些发光鱼以<link=\"PHOSPHORITE\">磷矿</link>和<link=\"PLANKTONCORAL\">藤壶星"
-"</link>为食，并排出<link=\"LIME\">石灰</link>。"
+"它们<link=\"CREATURES::GUIDE::MOOD\">快乐</link>时可产生<link=\"LIGHT\">光</"
+"link>，并且喜欢消耗<link=\"OXYGEN\">氧气</link>。"
 
 #. STRINGS.CREATURES.SPECIES.PARROTFISH.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.PARROTFISH.EGG_NAME"
@@ -59820,12 +60115,12 @@ msgstr "<link=\"SEATURTLE\">矿甲龟幼体</link>"
 msgctxt "STRINGS.CREATURES.SPECIES.SEATURTLE.DESC"
 msgid ""
 "Orehulls are shy aquatic critters that eat <link=\"SEAFAIRYSPECIES"
-"\">Kelpoles</link>.\n"
+"\">Kelpoles</link> and excrete <link=\"TOXICSAND\">Polluted Dirt</link>.\n"
 "\n"
 "They can be sheared for <link=\"IRONORE\">Iron Ore</link>."
 msgstr ""
-"矿甲龟是一种害羞的水生小动物，以<link=\"SEAFAIRYSPECIES\">藻蝌蚪</link>为"
-"食。\n"
+"矿甲龟是一种害羞的水生小动物，以<link=\"SEAFAIRYSPECIES\">藻蝌蚪</link>为食并"
+"排出<link=\"TOXICSAND\">污染土</link>。\n"
 "\n"
 "它们可以修剪出<link=\"IRONORE\">铁矿</link>。"
 
@@ -60855,13 +61150,17 @@ msgstr "<link=\"SQUID\">彩斑鱿幼体</link>"
 #. STRINGS.CREATURES.SPECIES.SQUID.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SQUID.DESC"
 msgid ""
-"Glo Squids are carnivorous aquatic critters that eat <link=\"TUBEWORM"
-"\">Tublia</link> and excrete <link=\"KATAIRITE\">Abyssalite</link> .\n"
+"Glo Squids are nonhostile critters unless their eggs are nearby.\n"
+"\n"
+"They eat <link=\"TUBEWORM\">Tublia</link> and excrete <link=\"KATAIRITE"
+"\">Abyssalite</link> .\n"
 "\n"
 "They can be milked for <link=\"INK\">Squid Ink</link>."
 msgstr ""
-"彩斑鱿是一种食肉水生小动物，会吃<link=\"TUBEWORM\">管虫</link>并排出<link="
-"\"KATAIRITE\">深渊晶石</link>。\n"
+"彩斑鱿是一种无敌意的小动物，除非附近有它们的卵。\n"
+"\n"
+"它们吃<link=\"TUBEWORM\">管虫</link>并排出<link=\"KATAIRITE\">深渊晶石</"
+"link>。\n"
 "\n"
 "它们可以挤出<link=\"INK\">鱿鱼墨汁</link>。"
 
@@ -60872,8 +61171,8 @@ msgstr "<link=\"SQUID\">彩斑鱿卵</link>"
 
 #. STRINGS.CREATURES.SPECIES.SQUID.INK_PUNCH
 msgctxt "STRINGS.CREATURES.SPECIES.SQUID.INK_PUNCH"
-msgid "Ink Punch"
-msgstr "墨汁拳击"
+msgid "Ink Shot"
+msgstr "墨汁弹"
 
 #. STRINGS.CREATURES.SPECIES.SQUID.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SQUID.NAME"
@@ -61618,6 +61917,20 @@ msgstr ""
 "\n"
 "当知道自己正过着一种美好的生活时，小动物也会感到满足"
 
+#. STRINGS.CREATURES.STATS.HAPPINESS.TOOLTIP_LUX
+msgctxt "STRINGS.CREATURES.STATS.HAPPINESS.TOOLTIP_LUX"
+msgid ""
+"High <style=\"KKeyword\">Happiness</style> increases a critter's "
+"productivity and enables them to produce <style=\"KKeyword\">Light</style>\n"
+"\n"
+"It also indirectly improves their <style=\"KKeyword\">Egg</style> laying "
+"rates"
+msgstr ""
+"高<style=\"KKeyword\">幸福度</style>能提高小动物的繁殖速率，并能够让它们"
+"<style=\"KKeyword\">发光</style>\n"
+"\n"
+"这也能间接地提高产<style=\"KKeyword\">蛋</style>速率"
+
 #. STRINGS.CREATURES.STATS.HEALTH.NAME
 msgctxt "STRINGS.CREATURES.STATS.HEALTH.NAME"
 msgid "Health"
@@ -61780,8 +62093,8 @@ msgstr "皮毛生长"
 
 #. STRINGS.CREATURES.STATS.SCALEGROWTH.IRON
 msgctxt "STRINGS.CREATURES.STATS.SCALEGROWTH.IRON"
-msgid "Scale Growth"
-msgstr "鳞片生长"
+msgid "Ore Growth"
+msgstr "矿石生长"
 
 #. STRINGS.CREATURES.STATS.SCALEGROWTH.NAME
 msgctxt "STRINGS.CREATURES.STATS.SCALEGROWTH.NAME"
@@ -62010,8 +62323,8 @@ msgstr "这只小动物即将窒息"
 
 #. STRINGS.CREATURES.STATUSITEMS.BUBBLEGASPRODUCTION.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.BUBBLEGASPRODUCTION.NAME"
-msgid "    • Producing {ELEMENT} at {RATE}"
-msgstr "    • 以{RATE}的速率产生{ELEMENT}"
+msgid "Producing {ELEMENT} at {RATE}"
+msgstr "以{RATE}的速率产生{ELEMENT}"
 
 #. STRINGS.CREATURES.STATUSITEMS.BUBBLEGASPRODUCTION.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.BUBBLEGASPRODUCTION.TOOLTIP"
@@ -63055,6 +63368,18 @@ msgctxt "STRINGS.CREATURES.STATUSITEMS.INHALING.TOOLTIP"
 msgid "This critter is taking a deep breath"
 msgstr "这只小动物正在深呼吸"
 
+#. STRINGS.CREATURES.STATUSITEMS.INKFULL.NAME
+msgctxt "STRINGS.CREATURES.STATUSITEMS.INKFULL.NAME"
+msgid "Milking Ready"
+msgstr "挤奶就绪"
+
+#. STRINGS.CREATURES.STATUSITEMS.INKFULL.TOOLTIP
+msgctxt "STRINGS.CREATURES.STATUSITEMS.INKFULL.TOOLTIP"
+msgid ""
+"This critter is full of <style=\"KKeyword\">Squid Ink</style> and ready to "
+"be milked"
+msgstr "这只小动物充满了<style=\"KKeyword\">鱿鱼墨汁</style>，准备好挤奶了"
+
 #. STRINGS.CREATURES.STATUSITEMS.LAYINGANEGG.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.LAYINGANEGG.NAME"
 msgid "Laying egg"
@@ -63474,6 +63799,39 @@ msgstr ""
 "\n"
 "真是松了口气"
 
+#. STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_APPROACH.NAME
+msgctxt "STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_APPROACH.NAME"
+msgid "Going to Clampum"
+msgstr "前往巨钳蚌"
+
+#. STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_APPROACH.TOOLTIP
+msgctxt "STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_APPROACH.TOOLTIP"
+msgid ""
+"This critter is going to investigate a closed <style=\"KKeyword\">Clampum</"
+"style>\n"
+"\n"
+"What's that plant hiding?"
+msgstr ""
+"这只小动物正在前去调查封闭的<style=\"KKeyword\">巨钳蚌</style>\n"
+"\n"
+"那里面藏着什么？"
+
+#. STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_ATTACK.NAME
+msgctxt "STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_ATTACK.NAME"
+msgid "Attacking Clampum"
+msgstr "攻击巨钳蚌"
+
+#. STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_ATTACK.TOOLTIP
+msgctxt "STRINGS.CREATURES.STATUSITEMS.PUNCH_CLAM_ATTACK.TOOLTIP"
+msgid ""
+"This critter is attacking a closed <style=\"KKeyword\">Clampum</style>\n"
+"\n"
+"It doesn't like things being hidden"
+msgstr ""
+"这只小动物正在攻击封闭的<style=\"KKeyword\">巨钳蚌</style>\n"
+"\n"
+"它不喜欢东西被藏起来"
+
 #. STRINGS.CREATURES.STATUSITEMS.READYFORHARVEST.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.READYFORHARVEST.NAME"
 msgid "Harvest Ready"
@@ -63685,6 +64043,27 @@ msgid ""
 "This <style=\"KKeyword\">Food</style> has putrefied and should not be "
 "consumed"
 msgstr "这个<style=\"KKeyword\">食物</style>已经腐烂，不能吃了"
+
+#. STRINGS.CREATURES.STATUSITEMS.SPORTHUNT.POPFX
+msgctxt "STRINGS.CREATURES.STATUSITEMS.SPORTHUNT.POPFX"
+msgid "Overcrowded Cull"
+msgstr "过度拥挤扑杀"
+
+#. STRINGS.CREATURES.STATUSITEMS.SPORTHUNT_ACTIVE.NAME
+msgctxt "STRINGS.CREATURES.STATUSITEMS.SPORTHUNT_ACTIVE.NAME"
+msgid "Overcrowded: Culling"
+msgstr "过度拥挤：扑杀"
+
+#. STRINGS.CREATURES.STATUSITEMS.SPORTHUNT_ACTIVE.TOOLTIP
+msgctxt "STRINGS.CREATURES.STATUSITEMS.SPORTHUNT_ACTIVE.TOOLTIP"
+msgid ""
+"This critter is reducing the number of critters occupying in its area\n"
+"\n"
+"It will only cull critters of other species"
+msgstr ""
+"这只小动物正在减少所在区域内的小动物数量\n"
+"\n"
+"它只会扑杀其他种类的小动物"
 
 #. STRINGS.CREATURES.STATUSITEMS.STALE.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.STALE.NAME"
@@ -64014,23 +64393,23 @@ msgstr "感到舒适"
 msgctxt ""
 "STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.INTERACTING.TOOLTIP"
 msgid ""
-"This critter is relaxing in a water fort\n"
+"This critter is relaxing in an aquatic critter condo\n"
 "\n"
 "It's like a mini vacation!"
 msgstr ""
-"这只小动物正于水中城堡放松\n"
+"这只小动物正于水生小动物公寓放松\n"
 "\n"
 "就像小小的假期一样！"
 
 #. STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.MOVINGTO.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.MOVINGTO.NAME"
-msgid "Heading for Water Fort"
-msgstr "前往水中城堡"
+msgid "Heading for Aquatic Critter Condo"
+msgstr "前往水生小动物公寓"
 
 #. STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.MOVINGTO.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.MOVINGTO.TOOLTIP"
-msgid "This critter is making its way to an unoccupied water fort"
-msgstr "这只小动物正在前往没有占用的水中城堡"
+msgid "This critter is making its way to an unoccupied aquatic critter condo"
+msgstr "这只小动物正在前往没有占用的水生小动物公寓"
 
 #. STRINGS.CREATURES.STATUSITEMS.UNKNOWNMUTATION.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.UNKNOWNMUTATION.NAME"
@@ -65672,7 +66051,7 @@ msgstr "这名复制人正在发出震耳欲聋的尖叫以缓解<style=\"KKeywo
 #. STRINGS.DUPLICANTS.CHORES.BEINCAPACITATED.NAME
 msgctxt "STRINGS.DUPLICANTS.CHORES.BEINCAPACITATED.NAME"
 msgid "Incapacitated"
-msgstr "丧失行动能力"
+msgstr "失去行动能力"
 
 #. STRINGS.DUPLICANTS.CHORES.BEINCAPACITATED.STATUS
 msgctxt "STRINGS.DUPLICANTS.CHORES.BEINCAPACITATED.STATUS"
@@ -67645,7 +68024,7 @@ msgstr "正在营救同伴"
 msgctxt "STRINGS.DUPLICANTS.CHORES.RESCUEINCAPACITATED.TOOLTIP"
 msgid ""
 "This Duplicant is rescuing another Duplicant that has been incapacitated"
-msgstr "这名复制人正在营救另一名丧失行动能力的复制人"
+msgstr "这名复制人正在营救另一名失去行动能力的复制人"
 
 #. STRINGS.DUPLICANTS.CHORES.RESEARCH.NAME
 msgctxt "STRINGS.DUPLICANTS.CHORES.RESEARCH.NAME"
@@ -68307,7 +68686,7 @@ msgstr "臭气熏天"
 #. STRINGS.DUPLICANTS.DEATHS.COMBAT.DESCRIPTION
 msgctxt "STRINGS.DUPLICANTS.DEATHS.COMBAT.DESCRIPTION"
 msgid "{Target} succumbed to their wounds after being incapacitated."
-msgstr "{Target}在丧失行动能力后死于创伤。"
+msgstr "{Target}在失去行动能力后死于创伤。"
 
 #. STRINGS.DUPLICANTS.DEATHS.COMBAT.NAME
 msgctxt "STRINGS.DUPLICANTS.DEATHS.COMBAT.NAME"
@@ -69822,7 +70201,7 @@ msgctxt "STRINGS.DUPLICANTS.MODIFIERS.BIONICRADIATIONEXPOSUREDEADLY.TOOLTIP"
 msgid ""
 "Extreme <style=\"KKeyword\">Radiation</style> exposure has incapacitated "
 "this Duplicant"
-msgstr "极端<style=\"KKeyword\">辐射</style>暴露使这名复制人丧失行动能力"
+msgstr "极端<style=\"KKeyword\">辐射</style>暴露使这名复制人失去行动能力"
 
 #. STRINGS.DUPLICANTS.MODIFIERS.BIONICRADIATIONEXPOSUREEXTREME.NAME
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.BIONICRADIATIONEXPOSUREEXTREME.NAME"
@@ -71539,6 +71918,22 @@ msgctxt "STRINGS.DUPLICANTS.MODIFIERS.NARCOLEPTICSLEEP.TOOLTIP"
 msgid "This Duplicant just needs to rest their eyes for a second"
 msgstr "这名复制人只需要休息眼睛一秒钟就好"
 
+#. STRINGS.DUPLICANTS.MODIFIERS.NEARDEATHEXPERIENCE.NAME
+msgctxt "STRINGS.DUPLICANTS.MODIFIERS.NEARDEATHEXPERIENCE.NAME"
+msgid "Near-Death Experience"
+msgstr "濒死体验"
+
+#. STRINGS.DUPLICANTS.MODIFIERS.NEARDEATHEXPERIENCE.TOOLTIP
+msgctxt "STRINGS.DUPLICANTS.MODIFIERS.NEARDEATHEXPERIENCE.TOOLTIP"
+msgid ""
+"This Duplicant recently recovered from being incapacitated\n"
+"\n"
+"It was deeply unsettling"
+msgstr ""
+"这名复制人最近刚从失去行动能力状态中恢复过来\n"
+"\n"
+"这太令人不安了"
+
 #. STRINGS.DUPLICANTS.MODIFIERS.NEWCREWARRIVAL.NAME
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.NEWCREWARRIVAL.NAME"
 msgid "New Friend"
@@ -71773,7 +72168,7 @@ msgctxt "STRINGS.DUPLICANTS.MODIFIERS.RADIATIONEXPOSUREDEADLY.TOOLTIP"
 msgid ""
 "Extreme <style=\"KKeyword\">Radiation</style> exposure has incapacitated "
 "this Duplicant"
-msgstr "极端<style=\"KKeyword\">辐射</style>暴露使这名复制人丧失行动能力"
+msgstr "极端<style=\"KKeyword\">辐射</style>暴露使这名复制人失去行动能力"
 
 #. STRINGS.DUPLICANTS.MODIFIERS.RADIATIONEXPOSUREEXTREME.NAME
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.RADIATIONEXPOSUREEXTREME.NAME"
@@ -74686,13 +75081,14 @@ msgstr "呼吸"
 #. STRINGS.DUPLICANTS.STATS.BREATH.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATS.BREATH.TOOLTIP"
 msgid ""
-"A Duplicant with zero remaining <style=\"KKeyword\">Breath</style> will die "
-"immediately\n"
+"A Duplicant with zero remaining <style=\"KKeyword\">Breath</style> will "
+"become incapacitated and die unless they are rescued\n"
 "\n"
 "Duplicants can increase their <style=\"KKeyword\">Maximum Breath</style> by "
 "learning the <style=\"KKeyword\">Basic Swimming</style> skill"
 msgstr ""
-"复制人<style=\"KKeyword\">呼吸</style>值为零时会立即死亡\n"
+"复制人<style=\"KKeyword\">呼吸</style>值为零时会失去行动能力，若不营救则会死"
+"亡\n"
 "\n"
 "复制人可以通过学习<style=\"KKeyword\">基础游泳</style>技能提高<style="
 "\"KKeyword\">最大呼吸</style>"
@@ -74785,7 +75181,7 @@ msgid ""
 "When critters reach zero <style=\"KKeyword\">Health</style>, they will die "
 "immediately"
 msgstr ""
-"复制人<style=\"KKeyword\">生命值</style>为零时会丧失行动能力，需要援救\n"
+"复制人<style=\"KKeyword\">生命值</style>为零时会失去行动能力，需要援救\n"
 "\n"
 "小动物<style=\"KKeyword\">生命值</style>为零时会立即死亡"
 
@@ -75147,13 +75543,13 @@ msgstr ""
 #. STRINGS.DUPLICANTS.STATUSITEMS.BIONICOFFLINEINCAPACITATED.NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.BIONICOFFLINEINCAPACITATED.NAME"
 msgid "Incapacitated: Powerless"
-msgstr "丧失行动能力：电力不足"
+msgstr "失去行动能力：电力不足"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.BIONICOFFLINEINCAPACITATED.NOTIFICATION_NAME
 msgctxt ""
 "STRINGS.DUPLICANTS.STATUSITEMS.BIONICOFFLINEINCAPACITATED.NOTIFICATION_NAME"
 msgid "Bionic Duplicant Incapacitated"
-msgstr "仿生复制人丧失行动能力"
+msgstr "仿生复制人失去行动能力"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.BIONICOFFLINEINCAPACITATED.NOTIFICATION_TOOLTIP
 msgctxt ""
@@ -76183,13 +76579,13 @@ msgid ""
 "Incapacitated: {CauseOfIncapacitation}\n"
 "Time until death: {TimeUntilDeath}\n"
 msgstr ""
-"丧失行动能力：{CauseOfIncapacitation}\n"
+"失去行动能力：{CauseOfIncapacitation}\n"
 "距死亡还剩：{TimeUntilDeath}\n"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.INCAPACITATED.NOTIFICATION_NAME
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.INCAPACITATED.NOTIFICATION_NAME"
 msgid "Incapacitated"
-msgstr "丧失行动能力"
+msgstr "失去行动能力"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.INCAPACITATED.NOTIFICATION_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.STATUSITEMS.INCAPACITATED.NOTIFICATION_TOOLTIP"
@@ -77731,7 +78127,7 @@ msgid ""
 "Incapacitated: Suffocated\n"
 "Time until death: {TimeUntilDeath}\n"
 msgstr ""
-"丧失行动能力：窒息\n"
+"失去行动能力：窒息\n"
 "距死亡还剩：{TimeUntilDeath}\n"
 
 #. STRINGS.DUPLICANTS.STATUSITEMS.SUFFOCATINGINCAPACITATED.NOTIFICATION_NAME
@@ -88110,6 +88506,20 @@ msgstr ""
 "保护穿戴者免受<style=\"KKeyword\">双脚湿透</style>和<style=\"KKeyword\">浑身"
 "湿透</style>效果。"
 
+#. STRINGS.EQUIPMENT.PREFABS.DRYSUIT.RECIPE_DESC_DLC3
+msgctxt "STRINGS.EQUIPMENT.PREFABS.DRYSUIT.RECIPE_DESC_DLC3"
+msgid ""
+"Protects the wearer from  <style=\"KKeyword\">Soggy Feet</style> and <style="
+"\"KKeyword\">Sopping Wet</style> effects.\n"
+"\n"
+"Enables Bionic Duplicants to cross waist-deep pools without <style=\"KKeyword"
+"\">Liquid Exposure</style> damage."
+msgstr ""
+"保护穿戴者免受<style=\"KKeyword\">双脚湿透</style>和<style=\"KKeyword\">浑身"
+"湿透</style>效果。\n"
+"\n"
+"允许复制人穿过腰深水坑而不受<style=\"KKeyword\">渗水</style>损伤。"
+
 #. STRINGS.EQUIPMENT.PREFABS.EQUIPPABLEBALLOON.DESC
 msgctxt "STRINGS.EQUIPMENT.PREFABS.EQUIPPABLEBALLOON.DESC"
 msgid ""
@@ -88821,6 +89231,20 @@ msgstr ""
 "保护穿戴者免受<style=\"KKeyword\">双脚湿透</style>和<style=\"KKeyword\">溜滑"
 "</style>地面影响。"
 
+#. STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.EFFECT_DLC3
+msgctxt "STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.EFFECT_DLC3"
+msgid ""
+"Protects the wearer from <style=\"KKeyword\">Soggy Feet</style> and <style="
+"\"KKeyword\">Slippery</style> floors.\n"
+"\n"
+"Enables Bionic Duplicants to cross small puddles without <style=\"KKeyword"
+"\">Liquid Exposure</style> damage."
+msgstr ""
+"保护穿戴者免受<style=\"KKeyword\">双脚湿透</style>和<style=\"KKeyword\">溜滑"
+"</style>地面影响。\n"
+"\n"
+"允许复制人穿过小水坑而不受<style=\"KKeyword\">渗水</style>损伤。"
+
 #. STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.GENERICNAME
 msgctxt "STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.GENERICNAME"
 msgid "Boots"
@@ -88839,6 +89263,20 @@ msgid ""
 msgstr ""
 "保护穿戴者免受<style=\"KKeyword\">双脚湿透</style>和<style=\"KKeyword\">溜滑"
 "</style>地面影响。"
+
+#. STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.RECIPE_DESC_DLC3
+msgctxt "STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.RECIPE_DESC_DLC3"
+msgid ""
+"Protects the wearer from <style=\"KKeyword\">Soggy Feet</style> and <style="
+"\"KKeyword\">Slippery</style> floors.\n"
+"\n"
+"Enables Bionic Duplicants to cross small puddles without <style=\"KKeyword"
+"\">Liquid Exposure</style> damage."
+msgstr ""
+"保护穿戴者免受<style=\"KKeyword\">双脚湿透</style>和<style=\"KKeyword\">溜滑"
+"</style>地面影响。\n"
+"\n"
+"允许复制人穿过小水坑而不受<style=\"KKeyword\">渗水</style>损伤。"
 
 #. STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.REPAIR_WORN_DESC
 msgctxt "STRINGS.EQUIPMENT.PREFABS.RUBBERBOOTS.REPAIR_WORN_DESC"
@@ -90854,6 +91292,24 @@ msgstr "赋予仿生复制人执行所有医疗任务的能力。"
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_MEDICINE1.NAME"
 msgid "<link=\"BOOSTERMEDICINE1\">Advanced Medical Booster</link>"
 msgstr "<link=\"BOOSTERMEDICINE1\">高级医疗增幅块</link>"
+
+#. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_MOD_SWIM.DESC
+msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_MOD_SWIM.DESC"
+msgid ""
+"Overrides a Bionic Duplicant's safety protocols to enable swimming.\n"
+"\n"
+"<b>WARNING:</b>\n"
+"Usage stresses bionic systems and does not protect from liquid exposure."
+msgstr ""
+"覆盖仿生复制人的安全协议，使其能够游泳。\n"
+"\n"
+"<b>警告：</b>\n"
+"使用过程中会对仿生系统造成压力，且无法防止液体接触。"
+
+#. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_MOD_SWIM.NAME
+msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_MOD_SWIM.NAME"
+msgid "<link=\"BOOSTERMODSWIM\">Swim Hack Booster</link>"
+msgstr "<link=\"BOOSTERMODSWIM\">游泳破解增幅块</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP1.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP1.DESC"
@@ -94591,7 +95047,7 @@ msgstr "失去殖民地"
 #. STRINGS.MISC.NOTIFICATIONS.COLONYLOST.TOOLTIP
 msgctxt "STRINGS.MISC.NOTIFICATIONS.COLONYLOST.TOOLTIP"
 msgid "All Duplicants are dead or incapacitated"
-msgstr "所有复制人都已死亡或丧失行动能力了"
+msgstr "所有复制人都已死亡或失去行动能力了"
 
 #. STRINGS.MISC.NOTIFICATIONS.DEATH_CRUSHED.NAME
 msgctxt "STRINGS.MISC.NOTIFICATIONS.DEATH_CRUSHED.NAME"
@@ -96836,6 +97292,33 @@ msgstr "等待移动"
 msgctxt "STRINGS.MISC.STATUSITEMS.MARKEDFORMOVE.TOOLTIP"
 msgid "Waiting for a Duplicant to move this object"
 msgstr "等待复制人移动这个物体"
+
+#. STRINGS.MISC.STATUSITEMS.MINNOWPOIDEHYDRATEDSTATUS.NAME
+msgctxt "STRINGS.MISC.STATUSITEMS.MINNOWPOIDEHYDRATEDSTATUS.NAME"
+msgid "Insufficient Liquid"
+msgstr "液体不足"
+
+#. STRINGS.MISC.STATUSITEMS.MINNOWPOIDEHYDRATEDSTATUS.TOOLTIP
+msgctxt "STRINGS.MISC.STATUSITEMS.MINNOWPOIDEHYDRATEDSTATUS.TOOLTIP"
+msgid ""
+"This area was once a <style=\"KKeyword\">Liquid</style> pool occupied by an "
+"unknown survivor Duplicant\n"
+"\n"
+"Its occupant will return when the area is sufficiently flooded"
+msgstr ""
+"这片区域之前曾是被未知幸存者复制人居住的<style=\"KKeyword\">液体</style>池\n"
+"\n"
+"当区域淹没充足时，居住者会回来"
+
+#. STRINGS.MISC.STATUSITEMS.MINNOWPOIDELIVERYPENDING.NAME
+msgctxt "STRINGS.MISC.STATUSITEMS.MINNOWPOIDELIVERYPENDING.NAME"
+msgid "Awaiting Delivery"
+msgstr "等待运送"
+
+#. STRINGS.MISC.STATUSITEMS.MINNOWPOIDELIVERYPENDING.TOOLTIP
+msgctxt "STRINGS.MISC.STATUSITEMS.MINNOWPOIDELIVERYPENDING.TOOLTIP"
+msgid "The occupant of this site is patiently awaiting deliveries"
+msgstr "这个地点的居住者正耐心等待运送"
 
 #. STRINGS.MISC.STATUSITEMS.MOVESTORAGEUNREACHABLE.NAME
 msgctxt "STRINGS.MISC.STATUSITEMS.MOVESTORAGEUNREACHABLE.NAME"
@@ -101956,6 +102439,21 @@ msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.BETA_RESEARCH_POINT.NAME"
 msgid "<style=\"KKeyword\">Advanced Research</style> Capability"
 msgstr "<style=\"KKeyword\">高级研究</style>能力"
 
+#. STRINGS.RESEARCH.OTHER_TECH_ITEMS.BOOSTER_MOD_SWIM.DESC
+msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.BOOSTER_MOD_SWIM.DESC"
+msgid ""
+"Enables fabrication of <style=\"KKeyword\">Swim Hack Booster</style> for "
+"Bionic Duplicants at the <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</"
+"link>"
+msgstr ""
+"允许在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>为仿生复制人制造<style="
+"\"KKeyword\">游泳破解增幅块</style>"
+
+#. STRINGS.RESEARCH.OTHER_TECH_ITEMS.BOOSTER_MOD_SWIM.NAME
+msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.BOOSTER_MOD_SWIM.NAME"
+msgid "<link=\"BOOSTERMODSWIM\">Swim Hack Booster</link>"
+msgstr "<link=\"BOOSTERMODSWIM\">游泳破解增幅块</link>"
+
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.CONSTRUCTIONBOOSTER.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.CONSTRUCTIONBOOSTER.DESC"
 msgid ""
@@ -102268,29 +102766,14 @@ msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.OXYGEN_MASK.NAME"
 msgid "<style=\"KKeyword\">Oxygen Mask</style> Pattern"
 msgstr "<style=\"KKeyword\">氧气面罩</style>模型"
 
-#. STRINGS.RESEARCH.OTHER_TECH_ITEMS.PILOTINGBOOSTER.DESC
-msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.PILOTINGBOOSTER.DESC"
-msgid ""
-"Enables fabrication of <style=\"KKeyword\">Rocketry Boosters</style> for "
-"Bionic Duplicants at the <link=\"ADVANCEDCRAFTINGTABLE\">Soldering Station</"
-"link>"
-msgstr ""
-"允许在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>为仿生复制人制造<style="
-"\"KKeyword\">火箭增幅块</style>"
-
-#. STRINGS.RESEARCH.OTHER_TECH_ITEMS.PILOTINGBOOSTER.NAME
-msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.PILOTINGBOOSTER.NAME"
-msgid "<style=\"KKeyword\">Rocketry Booster</style> Pattern"
-msgstr "<style=\"KKeyword\">火箭增幅块</style>模型"
-
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.RUBBER_BOOTS.DESC
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.RUBBER_BOOTS.DESC"
 msgid ""
 "Enables fabrication of <style=\"KKeyword\">Rubber Boots</style> at the <link="
-"\"CRAFTINGTABLE\">Crafting Station</link>"
+"\"CLOTHINGFABRICATOR\">Textile Loom</link>"
 msgstr ""
-"允许在<link=\"CRAFTINGTABLE\">工作台</link>制造<style=\"KKeyword\">橡胶靴</"
-"style>"
+"允许在<link=\"CLOTHINGFABRICATOR\">纺织机</link>制造<style=\"KKeyword\">橡胶"
+"靴</style>"
 
 #. STRINGS.RESEARCH.OTHER_TECH_ITEMS.RUBBER_BOOTS.NAME
 msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.RUBBER_BOOTS.NAME"
@@ -105344,9 +105827,10 @@ msgstr "畜舍"
 #. STRINGS.ROOMS.TYPES.CREATUREPEN.TOOLTIP
 msgctxt "STRINGS.ROOMS.TYPES.CREATUREPEN.TOOLTIP"
 msgid ""
-"A stable enables Grooming Station, Critter Condo, Critter Fountain, Shearing "
-"Station and Milking Station use"
-msgstr "畜舍能启用梳理站、小动物公寓、小动物直饮器、修剪站和挤奶站的使用"
+"A stable enables both land-based and aquatic Grooming Station, Critter "
+"Condo, Critter Fountain, Shearing Station and Milking Station use"
+msgstr ""
+"畜舍能启用陆生和水生梳理站、小动物公寓、小动物直饮器、修剪站和挤奶站的使用"
 
 #. STRINGS.ROOMS.TYPES.FARM.DESCRIPTION
 msgctxt "STRINGS.ROOMS.TYPES.FARM.DESCRIPTION"
@@ -109488,6 +109972,13 @@ msgstr ""
 "这个建筑需要<style=\"KKeyword\">钻石</style>才能运作，使用时以{Rate}的速率将"
 "其消耗"
 
+#. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNDERWATERVENT_SHEARING
+msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNDERWATERVENT_SHEARING"
+msgid ""
+"This vent produces {0} which can be harvested using a <link="
+"\"UNDERWATERVENTDRILL\">Marine Drill</link>"
+msgstr "这个喷孔产出的{0}可用<link=\"UNDERWATERVENTDRILL\">海洋钻机</link>收获"
+
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNSTABLEENTOMBDEFENSEOFF
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.UNSTABLEENTOMBDEFENSEOFF"
 msgid ""
@@ -109534,6 +110025,11 @@ msgstr "输出<link=\"WIRE\">电线</link>（限制为{0}）"
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.UNDERWATER_DRILL_DIAMOND_CONSUMPTION"
 msgid "<link=\"DIAMOND\">Diamond</link>: {Rate}"
 msgstr "<link=\"DIAMOND\">钻石</link>：{Rate}"
+
+#. STRINGS.UI.BUILDINGEFFECTS.UNDERWATERVENT_SHEARING
+msgctxt "STRINGS.UI.BUILDINGEFFECTS.UNDERWATERVENT_SHEARING"
+msgid "<link=\"SULFUR\">Sulfur</link> Build-up: {0}"
+msgstr "<link=\"SULFUR\">硫</link>堆积：{0}"
 
 #. STRINGS.UI.BUILDINGEFFECTS.UNSTABLEENTOMBDEFENSEOFF
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.UNSTABLEENTOMBDEFENSEOFF"
@@ -110869,7 +111365,7 @@ msgid ""
 "    • One or more Duplicants are incapacitated and in desperate need of "
 "<link=\"ELECTROBANK\">Power Banks</link>"
 msgstr ""
-"    • 至少有一名复制人丧失行动能力，急需<link=\"ELECTROBANK\">移动电源</link>"
+"    • 至少有一名复制人失去行动能力，急需<link=\"ELECTROBANK\">移动电源</link>"
 
 #. STRINGS.UI.COLONY_DIAGNOSTICS.BIONICBATTERYDIAGNOSTIC.TOOLTIP_NAME
 msgctxt "STRINGS.UI.COLONY_DIAGNOSTICS.BIONICBATTERYDIAGNOSTIC.TOOLTIP_NAME"
@@ -111674,7 +112170,7 @@ msgstr "失去殖民地"
 #. STRINGS.UI.COLONYLOSTSCREEN.COLONYLOSTDESCRIPTION
 msgctxt "STRINGS.UI.COLONYLOSTSCREEN.COLONYLOSTDESCRIPTION"
 msgid "All Duplicants are dead or incapacitated."
-msgstr "所有复制人都已死亡或丧失行动能力了。"
+msgstr "所有复制人都已死亡或失去行动能力了。"
 
 #. STRINGS.UI.COLONYLOSTSCREEN.DISMISSBUTTON
 msgctxt "STRINGS.UI.COLONYLOSTSCREEN.DISMISSBUTTON"
@@ -117709,15 +118205,25 @@ msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_INSTALLED_LABEL"
 msgid "Installed"
 msgstr "已安装"
 
-#. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_LABEL
-msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_LABEL"
+#. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_PURCHASE_LABEL
+msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_PURCHASE_LABEL"
 msgid "Available Now"
 msgstr "现已发布"
 
-#. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_TOOLTIP
-msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_TOOLTIP"
-msgid "This DLC is available now!"
-msgstr "这个DLC现已发布！"
+#. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_PURCHASE_TOOLTIP
+msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_PURCHASE_TOOLTIP"
+msgid "<color=#ffff00ff><b>Click to view this DLC in the store</b></color>"
+msgstr "<color=#ffff00ff><b>点击以在商店中查看此DLC</b></color>"
+
+#. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_WISHLIST_LABEL
+msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_WISHLIST_LABEL"
+msgid "Wishlist Now"
+msgstr "加入愿望单"
+
+#. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_WISHLIST_TOOLTIP
+msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_WISHLIST_TOOLTIP"
+msgid "<color=#ffff00ff><b>Click to view this DLC in the store</b></color>"
+msgstr "<color=#ffff00ff><b>点击以在商店中查看此DLC</b></color>"
 
 #. STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_OWNED_NOTINSTALLED_LABEL
 msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_OWNED_NOTINSTALLED_LABEL"
@@ -117864,16 +118370,6 @@ msgstr "开始测试版"
 msgctxt "STRINGS.UI.FRONTEND.MAINMENU.TRANSLATIONS"
 msgid "TRANSLATIONS"
 msgstr "翻译"
-
-#. STRINGS.UI.FRONTEND.MAINMENU.WISHLIST_AD
-msgctxt "STRINGS.UI.FRONTEND.MAINMENU.WISHLIST_AD"
-msgid "Available now"
-msgstr "现已发布"
-
-#. STRINGS.UI.FRONTEND.MAINMENU.WISHLIST_AD_TOOLTIP
-msgctxt "STRINGS.UI.FRONTEND.MAINMENU.WISHLIST_AD_TOOLTIP"
-msgid "<color=#ffff00ff><b>Click to view it in the store</b></color>"
-msgstr "<color=#ffff00ff><b>点击以在商店中查看</b></color>"
 
 #. STRINGS.UI.FRONTEND.METRIC_OPTIONS_SCREEN.HEADER_METRICS
 msgctxt "STRINGS.UI.FRONTEND.METRIC_OPTIONS_SCREEN.HEADER_METRICS"
@@ -125642,6 +126138,26 @@ msgstr ""
 "<color=#F44A47FF>    • 尺寸：{0}格\n"
 "    • 最大房间尺寸：{1}格</color>"
 
+#. STRINGS.UI.OVERLAYS.ROOMS.POND.CRITTER_COUNT
+msgctxt "STRINGS.UI.OVERLAYS.ROOMS.POND.CRITTER_COUNT"
+msgid "    • Aquatic Critters: {0}"
+msgstr "    • 水生小动物：{0}"
+
+#. STRINGS.UI.OVERLAYS.ROOMS.POND.HEADER
+msgctxt "STRINGS.UI.OVERLAYS.ROOMS.POND.HEADER"
+msgid "<b>Pool Size</b>"
+msgstr "<b>水池尺寸</b>"
+
+#. STRINGS.UI.OVERLAYS.ROOMS.POND.NOFISH
+msgctxt "STRINGS.UI.OVERLAYS.ROOMS.POND.NOFISH"
+msgid "    • No aquatic critters found"
+msgstr "    • 未发现水生小动物"
+
+#. STRINGS.UI.OVERLAYS.ROOMS.POND.SIZE
+msgctxt "STRINGS.UI.OVERLAYS.ROOMS.POND.SIZE"
+msgid "    • Pool Size: {0} Tiles"
+msgstr "    • 水池尺寸：{0}格"
+
 #. STRINGS.UI.OVERLAYS.ROOMS.ROOM
 msgctxt "STRINGS.UI.OVERLAYS.ROOMS.ROOM"
 msgid "Room {0}"
@@ -130376,15 +130892,16 @@ msgctxt ""
 "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICMIXINGFIELD.DESC"
 msgid ""
 "The harvestable remains of a planet containing <link=\"ZINCORE\">Zinc Ore</"
-"link>, <link=\"SILTSTONE\">Silt Stone</link>, <link=\"CORALLIUM\">Corallium</"
-"link>, and <link=\"BASALT\">Basalt</link>.\n"
+"link>, <link=\"SILTSTONE\">Silt Stone</link>, <link=\"COQUINA\">Coquina</"
+"link>, <link=\"CORALLIUM\">Corallium</link>, and <link=\"BASALT\">Basalt</"
+"link>.\n"
 "\n"
 "<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a "
 "<link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
 msgstr ""
 "一片可收集的行星残骸，含有<link=\"ZINCORE\">锌矿</link>、<link=\"SILTSTONE\">"
-"粉砂岩</link>、<link=\"CORALLIUM\">珊瑚质</link>和<link=\"BASALT\">玄武岩</"
-"link>。\n"
+"粉砂岩</link>、<link=\"COQUINA\">壳灰岩</link>、<link=\"CORALLIUM\">珊瑚质</"
+"link>和<link=\"BASALT\">玄武岩</link>。\n"
 "\n"
 "火箭装有<link=\"NOSECONEHARVEST\">钻头前锥</link>才能进行<link="
 "\"EXOBASESDLC1\">太空采矿</link>。"
@@ -130399,15 +130916,16 @@ msgstr "锌矿带"
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.HARVESTABLE_POI.DLC5AQUATICOREFIELD.DESC"
 msgid ""
 "The harvestable remains of a planet containing <link=\"ZINCORE\">Zinc Ore</"
-"link>, <link=\"SILTSTONE\">Siltstone</link>, <link=\"CORALLIUM\">Corallium</"
-"link>, and <link=\"BASALT\">Basalt</link>.\n"
+"link>, <link=\"SILTSTONE\">Siltstone</link>, <link=\"COQUINA\">Coquina</"
+"link>, <link=\"CORALLIUM\">Corallium</link>, and <link=\"BASALT\">Basalt</"
+"link>.\n"
 "\n"
 "<link=\"EXOBASESDLC1\">Space mining</link> requires a rocket equipped with a "
 "<link=\"NOSECONEHARVEST\">Drillcone</link> and a cargo module."
 msgstr ""
 "一片可收集的行星残骸，含有<link=\"ZINCORE\">锌矿</link>、<link=\"SILTSTONE\">"
-"粉砂岩</link>、<link=\"CORALLIUM\">珊瑚质</link>和<link=\"BASALT\">玄武岩</"
-"link>。\n"
+"粉砂岩</link>、<link=\"COQUINA\">壳灰岩</link>、<link=\"CORALLIUM\">珊瑚质</"
+"link>和<link=\"BASALT\">玄武岩</link>。\n"
 "\n"
 "火箭装有<link=\"NOSECONEHARVEST\">钻头前锥</link>才能进行<link="
 "\"EXOBASESDLC1\">太空采矿</link>。"
@@ -130970,13 +131488,15 @@ msgstr "史前矿带"
 #. STRINGS.UI.SPACEDESTINATIONS.PLANETS.DLC5AQUATICSPACEDESCRIPTION.DESCRIPTION
 msgctxt ""
 "STRINGS.UI.SPACEDESTINATIONS.PLANETS.DLC5AQUATICSPACEDESCRIPTION.DESCRIPTION"
-msgid "A destination dominated by vast oceans and aquatic life."
-msgstr "一个由广阔海洋和水生生物主导的目的地。"
+msgid ""
+"The remains of an aquatic world primarily composed of harvestable corallium, "
+"coquina, and zinc ore."
+msgstr "一颗主要由可收获的珊瑚质、壳灰岩和锌矿组成的水生星球的残骸。"
 
 #. STRINGS.UI.SPACEDESTINATIONS.PLANETS.DLC5AQUATICSPACEDESCRIPTION.NAME
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.PLANETS.DLC5AQUATICSPACEDESCRIPTION.NAME"
-msgid "Marinea"
-msgstr "汪洋星"
+msgid "Extinct Ocean"
+msgstr "灭绝海洋"
 
 #. STRINGS.UI.SPACEDESTINATIONS.PLANETS.FORESTPLANET.DESCRIPTION
 msgctxt "STRINGS.UI.SPACEDESTINATIONS.PLANETS.FORESTPLANET.DESCRIPTION"
@@ -135231,8 +135751,8 @@ msgstr "{0}有<b>{1}/{2}</b>个增幅块槽位已分配"
 msgctxt ""
 "STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.BOOSTER_ASSIGNMENT."
 "HEADER_ATTRIBUTES"
-msgid "<b>Boosts:</b>"
-msgstr "<b>增幅：</b>"
+msgid "<b>Modifiers:</b>"
+msgstr "<b>修正：</b>"
 
 #. STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.BOOSTER_ASSIGNMENT.HEADER_PERKS
 msgctxt ""
@@ -142315,14 +142835,15 @@ msgid ""
 "This asteroid has suffered extensive flooding. My scans show traces of a "
 "previous party of explorers, but... only one remains.\n"
 "\n"
-"It's imperative that I recruit the survivor to my colony. Their adaptations "
-"may well be the key to plumbing the depths of this waterlogged world."
+"It's imperative that I find and recruit the survivor to my colony. Their "
+"adaptations may well be the key to plumbing the depths of this waterlogged "
+"world."
 msgstr ""
 "这颗小行星曾遭受过大规模的洪水侵袭。我的扫描表明这里有之前探险队的痕迹，但……"
 "只剩一个人了。\n"
 "\n"
-"将这名幸存者招募到我的殖民地是我的使命。其适应性可能是深入这个水漫星球深处的"
-"关键。"
+"将这名幸存者找到并招募到我的殖民地是我的使命。其适应性可能是深入这个水漫星球"
+"深处的关键。"
 
 #. STRINGS.UI.WELCOMEMESSAGEBODY_KF23
 msgctxt "STRINGS.UI.WELCOMEMESSAGEBODY_KF23"
@@ -144675,6 +145196,193 @@ msgstr ""
 msgctxt "STRINGS.WORLDS.WATERMOONLET.NAME"
 msgid "Water Asteroid"
 msgstr "水域小行星"
+
+#~ msgctxt ""
+#~ "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_C"
+#~ msgid "Deliver {AMOUNT} Squid Ink"
+#~ msgstr "运送{AMOUNT}鱿鱼墨汁"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_UNDERWATER_CRITTER_CONDO_AQUATIC.DESC"
+#~ msgid "Some say the periscope has seen things."
+#~ msgstr "有人说潜望镜有过异象。"
+
+#~ msgctxt ""
+#~ "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS."
+#~ "REQUIREMENT_DESCRIPTION_A_HIDDEN"
+#~ msgid "This requirement will be visible once discovered"
+#~ msgstr "这项需求在发现后可见"
+
+#~ msgctxt ""
+#~ "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS."
+#~ "REQUIREMENT_DESCRIPTION_B_HIDDEN"
+#~ msgid "This requirement will be visible once discovered"
+#~ msgstr "这项需求在发现后可见"
+
+#~ msgctxt ""
+#~ "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS."
+#~ "REQUIREMENT_DESCRIPTION_C_HIDDEN"
+#~ msgid "This requirement will be visible once discovered"
+#~ msgstr "这项需求在发现后可见"
+
+#~ msgctxt "STRINGS.CREATURES.SPECIES.PARROTFISH.DESC"
+#~ msgid ""
+#~ "Beakons are attractive aquatic critters who enjoy consuming <link=\"OXYGEN"
+#~ "\">Oxygen</link>.\n"
+#~ "\n"
+#~ "These bioluminescent fish feast on <link=\"PHOSPHORITE\">Phosphorite</"
+#~ "link> and <link=\"PLANKTONCORAL\">Starnacle</link>, and excrete <link="
+#~ "\"LIME\">Lime</link>."
+#~ msgstr ""
+#~ "灯喙鱼是一种迷人的水生小动物，喜欢消耗<link=\"OXYGEN\">氧气</link>。\n"
+#~ "\n"
+#~ "这些发光鱼以<link=\"PHOSPHORITE\">磷矿</link>和<link=\"PLANKTONCORAL\">藤"
+#~ "壶星</link>为食，并排出<link=\"LIME\">石灰</link>。"
+
+#~ msgctxt ""
+#~ "STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.INTERACTING.TOOLTIP"
+#~ msgid ""
+#~ "This critter is relaxing in a water fort\n"
+#~ "\n"
+#~ "It's like a mini vacation!"
+#~ msgstr ""
+#~ "这只小动物正于水中城堡放松\n"
+#~ "\n"
+#~ "就像小小的假期一样！"
+
+#~ msgctxt "STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.MOVINGTO.NAME"
+#~ msgid "Heading for Water Fort"
+#~ msgstr "前往水中城堡"
+
+#~ msgctxt ""
+#~ "STRINGS.CREATURES.STATUSITEMS.UNDERWATERCRITTERCONDO.MOVINGTO.TOOLTIP"
+#~ msgid "This critter is making its way to an unoccupied water fort"
+#~ msgstr "这只小动物正在前往没有占用的水中城堡"
+
+#~ msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.RUBBER_BOOTS.DESC"
+#~ msgid ""
+#~ "Enables fabrication of <style=\"KKeyword\">Rubber Boots</style> at the "
+#~ "<link=\"CRAFTINGTABLE\">Crafting Station</link>"
+#~ msgstr ""
+#~ "允许在<link=\"CRAFTINGTABLE\">工作台</link>制造<style=\"KKeyword\">橡胶靴"
+#~ "</style>"
+
+#~ msgctxt "STRINGS.UI.FRONTEND.MAINMENU.DLC.CONTENT_NOTOWNED_TOOLTIP"
+#~ msgid "This DLC is available now!"
+#~ msgstr "这个DLC现已发布！"
+
+#~ msgctxt "STRINGS.UI.FRONTEND.MAINMENU.WISHLIST_AD"
+#~ msgid "Available now"
+#~ msgstr "现已发布"
+
+#~ msgctxt ""
+#~ "STRINGS.UI.SPACEDESTINATIONS.PLANETS.DLC5AQUATICSPACEDESCRIPTION."
+#~ "DESCRIPTION"
+#~ msgid "A destination dominated by vast oceans and aquatic life."
+#~ msgstr "一个由广阔海洋和水生生物主导的目的地。"
+
+#~ msgctxt ""
+#~ "STRINGS.UI.SPACEDESTINATIONS.PLANETS.DLC5AQUATICSPACEDESCRIPTION.NAME"
+#~ msgid "Marinea"
+#~ msgstr "汪洋星"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_GOLD.DESC"
+#~ msgid "It's all in the wrist!"
+#~ msgstr "全靠手腕！"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WHEEZY.DESC"
+#~ msgid "A finny pair of Wheezewort-blue gloves for swimming with the fishes."
+#~ msgstr "一双冰息萝卜蓝色手套，用于与鱼一起游泳。"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_PAINTING_ART_AQUATIC.DESC"
+#~ msgid ""
+#~ "In another life, a cherubic Blowter is motivated by more than Waterweed."
+#~ msgstr "在另一个生命里，有一只天使般的鼓气鱼，它的动力可不止是水草。"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_PAINTING_ART_AQUATIC.NAME"
+#~ msgid "Neverbloat"
+#~ msgstr "《永不臃肿》"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_STANDARD_SWIM_OUTFIT.NAME"
+#~ msgid "PERMIT_STANDARD_SWIM_OUTFIT"
+#~ msgstr "PERMIT_STANDARD_SWIM_OUTFIT"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_AXON.NAME"
+#~ msgid "Axon Neoprene Zip-up"
+#~ msgstr "轴突拉链衣"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_BLUE.NAME"
+#~ msgid "Blue Neoprene Zip-up"
+#~ msgstr "蓝色拉链衣"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_GREEN.NAME"
+#~ msgid "Green Neoprene Zip-up"
+#~ msgstr "绿色拉链衣"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_YELLOW.NAME"
+#~ msgid "Yellow Neoprene Zip-up"
+#~ msgstr "黄色拉链衣"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_UNDERWATER_CRITTER_CONDO_AQUATIC.DESC"
+#~ msgid "PLACEHOLDER"
+#~ msgstr "[占位]"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_UNDERWATER_CRITTER_CONDO_AQUATIC.NAME"
+#~ msgid ""
+#~ "<link=\"UNDERWATERCRITTERCONDO\">PLACEHOLDER Aquatic Critter Condo</link>"
+#~ msgstr "<link=\"UNDERWATERCRITTERCONDO\">[占位]水生小动物公寓</link>"
+
+#~ msgctxt ""
+#~ "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS."
+#~ "REQUIREMENT_NAME_A_HIDDEN"
+#~ msgid "Unknown Requirement"
+#~ msgstr "未知需求"
+
+#~ msgctxt ""
+#~ "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS."
+#~ "REQUIREMENT_NAME_B_HIDDEN"
+#~ msgid "Unknown Requirement"
+#~ msgstr "未知需求"
+
+#~ msgctxt ""
+#~ "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS."
+#~ "REQUIREMENT_NAME_C_HIDDEN"
+#~ msgid "Unknown Requirement"
+#~ msgstr "未知需求"
+
+#~ msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.NAME"
+#~ msgid "Finding Minnow"
+#~ msgstr "寻找只鲤"
+
+#~ msgctxt "STRINGS.COLONY_ACHIEVEMENTS.MISC_REQUIREMENTS.WINCONDITION_AQUATIC"
+#~ msgid "Finding Minnow"
+#~ msgstr "寻找只鲤"
+
+#~ msgctxt "STRINGS.CREATURES.SPECIES.SQUID.INK_PUNCH"
+#~ msgid "Ink Punch"
+#~ msgstr "墨汁拳击"
+
+#~ msgctxt "STRINGS.CREATURES.STATS.SCALEGROWTH.IRON"
+#~ msgid "Scale Growth"
+#~ msgstr "鳞片生长"
+
+#~ msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.PILOTINGBOOSTER.DESC"
+#~ msgid ""
+#~ "Enables fabrication of <style=\"KKeyword\">Rocketry Boosters</style> for "
+#~ "Bionic Duplicants at the <link=\"ADVANCEDCRAFTINGTABLE\">Soldering "
+#~ "Station</link>"
+#~ msgstr ""
+#~ "允许在<link=\"ADVANCEDCRAFTINGTABLE\">焊接台</link>为仿生复制人制造<style="
+#~ "\"KKeyword\">火箭增幅块</style>"
+
+#~ msgctxt "STRINGS.RESEARCH.OTHER_TECH_ITEMS.PILOTINGBOOSTER.NAME"
+#~ msgid "<style=\"KKeyword\">Rocketry Booster</style> Pattern"
+#~ msgstr "<style=\"KKeyword\">火箭增幅块</style>模型"
+
+#~ msgctxt ""
+#~ "STRINGS.UI.UISIDESCREENS.BIONIC_SIDE_SCREEN.BOOSTER_ASSIGNMENT."
+#~ "HEADER_ATTRIBUTES"
+#~ msgid "<b>Boosts:</b>"
+#~ msgstr "<b>增幅：</b>"
 
 #, fuzzy
 #~| msgctxt "STRINGS.BUILDINGS.PREFABS.BEACHCHAIR.NAME"

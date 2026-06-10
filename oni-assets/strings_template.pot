@@ -9990,7 +9990,7 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.BIONIC_OVERCLOCK_RECIPE_DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.BIONIC_OVERCLOCK_RECIPE_DESC"
-msgid "Converts {0} to {1}\n\n!! <b>WARNING: SYSTEM DAMAGE RISK !!</b>"
+msgid "Converts {0} to {1}\n\n<b>!! WARNING: SYSTEM DAMAGE RISK !!</b>"
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.ADVANCEDCRAFTINGTABLE.COLONY_HAS_BOOSTER_ASSIGNED_COUNT
@@ -11755,7 +11755,7 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.CREATUREFEEDER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.CREATUREFEEDER.DESC"
-msgid "Critters tend to stay close to their food source and wander less when given a feeder."
+msgid "Wild critters who use feeders get accustomed to the cushiness of domesticated life."
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.CREATUREFEEDER.EFFECT
@@ -13640,7 +13640,7 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.FISHFEEDER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.FISHFEEDER.DESC"
-msgid "Build this feeder above a body of water to feed the fish within."
+msgid "Build this feeder above a body of water to feed and tame the fish within."
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.FISHFEEDER.EFFECT
@@ -20420,7 +20420,7 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.PROPBEACHCHAIR.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.PROPBEACHCHAIR.DESC"
-msgid "This Beach Chair has been worn down by many cycles of use and relentless exposure to the elements. Still comfortable, even if it creaks and moans with even the slightest movement."
+msgid "Worn down by countless cycles of use and exposure to the elements."
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.PROPBEACHCHAIR.EFFECT
@@ -20515,7 +20515,7 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.PROPDRYSUITHANGER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.PROPDRYSUITHANGER.DESC"
-msgid "Holds one <link=\"DRYSUIT\">Swimwear</link>.\n\nEnsures swimming comfort for one lucky Duplicant."
+msgid "Holds one piece of <link=\"DRYSUIT\">Swimwear</link>.\n\nEnsures swimming comfort for one lucky Duplicant."
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.PROPDRYSUITHANGER.NAME
@@ -21285,7 +21285,7 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.RANCHSTATION.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.RANCHSTATION.EFFECT"
-msgid "Allows the assigned <link=\"RANCHER\">Rancher</link> to care for <link=\"CREATURES\">Critters</link>.\n\nAssigned Duplicants must possess the <link=\"RANCHING1\">Critter Ranching</link> skill."
+msgid "Allows the assigned <link=\"RANCHER\">Rancher</link> to care for and gradually tame <link=\"CREATURES\">Critters</link>.\n\nAssigned Duplicants must possess the <link=\"RANCHING1\">Critter Ranching</link> skill."
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.RANCHSTATION.NAME
@@ -23690,12 +23690,12 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.UNDERWATERBREATHINGSTATION.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.UNDERWATERBREATHINGSTATION.DESC"
-msgid "Duplicants catch their breath faster by using a breathing station than by trying to resurface for air."
+msgid "Duplicants catch their breath faster by using a breathing station than by surfacing for air."
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.UNDERWATERBREATHINGSTATION.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.UNDERWATERBREATHINGSTATION.EFFECT"
-msgid "Provides breathable <link=\"OXYGEN\">Oxygen</link> to submerged Duplicants via a connected <link=\"GASPIPING\">Gas Pipe</link> input.\n\nRequires <link=\"POWER\">Power</link>."
+msgid "Provides breathable <link=\"OXYGEN\">Oxygen</link> to submerged Duplicants via a connected <link=\"GASPIPING\">Gas Pipe</link> input."
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.UNDERWATERBREATHINGSTATION.NAME
@@ -23755,7 +23755,7 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.UNDERWATERRANCHSTATION.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.UNDERWATERRANCHSTATION.EFFECT"
-msgid "Allows the assigned <link=\"RANCHER\">Rancher</link> to care for <link=\"CREATURES\">Critters</link>.\n\nAssigned Duplicants must possess both the <link=\"RANCHING1\">Critter Ranching</link> and <link=\"SWIMMING\">Basic Swimming</link> skills."
+msgid "Allows the assigned <link=\"RANCHER\">Rancher</link> to care for and gradually tame <link=\"CREATURES\">Critters</link>.\n\nAssigned Duplicants must possess both the <link=\"RANCHING1\">Critter Ranching</link> and <link=\"SWIMMING\">Basic Swimming</link> skills."
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.UNDERWATERRANCHSTATION.NAME
@@ -26960,7 +26960,7 @@ msgstr ""
 
 #. STRINGS.CODEX.CRITTERSTATUS.DOMESTICATION.TAME.CONTAINER1
 msgctxt "STRINGS.CODEX.CRITTERSTATUS.DOMESTICATION.TAME.CONTAINER1"
-msgid "Domesticated critters produce far more resources and lay eggs at a higher frequency than wild ones. They require additional care in order to maintain the levels of happiness that maximize their utility in the colony. (Happy critters are also generally more pleasant to be around.)\n\nOnce tame, critters can access the Critter Feeder, which is unavailable to wild critters."
+msgid "Domesticated critters produce far more resources and lay eggs at a higher frequency than wild ones. They require additional care in order to maintain the levels of happiness that maximize their utility in the colony. (Happy critters are also generally more pleasant to be around.)\n\nGrooming and feeding stations enable Duplicants to domesticate critters."
 msgstr ""
 
 #. STRINGS.CODEX.CRITTERSTATUS.DOMESTICATION.TAME.SUBTITLE
@@ -29146,6 +29146,31 @@ msgstr ""
 #. STRINGS.CODEX.INVESTIGATIONS.DLC5_CEASEDESIST.TITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_CEASEDESIST.TITLE"
 msgid "Legal Letter"
+msgstr ""
+
+#. STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.BODY.CONTAINER1
+msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.BODY.CONTAINER1"
+msgid "<indent=5%>Updated guidelines for employees sheltering in place are attached. See highlights below:\n\n<indent=5%>    •  Emergency cots are not designed to be stacked.\n    •  Coffee ration cards are non-transferable and cannot be sold.\n    •  Please review the personal hygiene handout.\n\n</indent>Employees with functioning equipment should continue as normal while flood restoration efforts continue.\n\nThank you for your patience.\n\n<indent=10%><alpha=#AA>[MISSING ATTACHMENT]</color></indent>"
+msgstr ""
+
+#. STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.BODY.EMAILHEADER1
+msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.BODY.EMAILHEADER1"
+msgid "<smallcaps>To: <b>ALL</b><alpha=#AA><size=12></size></color>\nFrom: <b>ADMIN</b><alpha=#AA><size=12> <admin@gravitas.nova></size></color></smallcaps>\n------------------\n"
+msgstr ""
+
+#. STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.BODY.SIGNATURE1
+msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.BODY.SIGNATURE1"
+msgid "\nThank-you,\n-Admin\n<size=11>The Gravitas Facility</size>\n------------------\n"
+msgstr ""
+
+#. STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.SUBTITLE
+msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.SUBTITLE"
+msgid "ENCRYPTION LEVEL: NONE"
+msgstr ""
+
+#. STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.TITLE
+msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FLOOD.TITLE"
+msgid "Day Three"
 msgstr ""
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC5_FRIDGENOTE.BODY.CONTAINER1
@@ -34260,7 +34285,7 @@ msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_A_HIDDEN
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_A_HIDDEN"
-msgid "More exploration is required\n\nJust keep swimming..."
+msgid "More exploration is required"
 msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B
@@ -34270,17 +34295,17 @@ msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B_HIDDEN
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_B_HIDDEN"
-msgid "More exploration is required\n\nJust keep swimming..."
+msgid "More exploration is required"
 msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C"
-msgid "Harvest and deliver Squid Ink to the survivor Duplicant in the Abyss biome"
+msgid "Produce and deliver Caviar to the survivor Duplicant in the Abyss biome"
 msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C_HIDDEN
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_DESCRIPTION_C_HIDDEN"
-msgid "More exploration is required\n\nJust keep swimming..."
+msgid "More exploration is required"
 msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_A
@@ -34305,7 +34330,7 @@ msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_C
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_C"
-msgid "Deliver {AMOUNT} Squid Ink"
+msgid "Deliver {AMOUNT} Caviar"
 msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_C_HIDDEN
@@ -34335,7 +34360,7 @@ msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_DESCRIPTION"
-msgid "Success! My Duplicants harvested {AMOUNT1} pearls to offer to our potential future crewmate.\n\nWe now have {AMOUNT2} new gasket to use as needed."
+msgid "Success! My Duplicants harvested {AMOUNT1} pearls to offer to our potential future crewmate.\n\nWe now have {AMOUNT2} new gasket and 2 Flue Coral seeds to use as needed."
 msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_TITLE
@@ -34345,7 +34370,7 @@ msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_DESCRIPTION"
-msgid "Success! We have produced {AMOUNT1} sushi to share with the survivor Duplicant as a gesture of goodwill.\n\nWe now have {AMOUNT2} new gasket to use as needed."
+msgid "Success! We have produced {AMOUNT1} sushi to share with the survivor Duplicant as a gesture of goodwill.\n\nWe now have {AMOUNT2} new gasket and 2 Gum Palm seeds to use as needed."
 msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_TITLE
@@ -34360,7 +34385,7 @@ msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_TITLE
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_TITLE"
-msgid "RECRUIT SURVIVOR: Squid Ink Delivered"
+msgid "RECRUIT SURVIVOR: Caviar Delivered"
 msgstr ""
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_A_DESCRIPTION
@@ -64410,7 +64435,7 @@ msgstr ""
 
 #. STRINGS.ITEMS.FOOD.CAVIAR.DESC
 msgctxt "STRINGS.ITEMS.FOOD.CAVIAR.DESC"
-msgid "Unfertilized eggs from an aquatic critter.\n\nIt can be added to <link=\"FOOD\">Food</link> at a <link=\"DININGTABLE\">Mess Table</link> to boost <link=\"MORALE\">Morale</link>.\n\nDuplicants will automatically use Caviar while sitting at a <link=\"DININGTABLE\">Mess Table</link> during mealtime."
+msgid "Shelf-stable eggs from an aquatic critter.\n\nIt can be added to <link=\"FOOD\">Food</link> at a <link=\"DININGTABLE\">Mess Table</link> to boost <link=\"MORALE\">Morale</link>.\n\nDuplicants will automatically use Caviar while sitting at a <link=\"DININGTABLE\">Mess Table</link> during mealtime."
 msgstr ""
 
 #. STRINGS.ITEMS.FOOD.CAVIAR.NAME
@@ -91433,6 +91458,26 @@ msgctxt "STRINGS.UI.OVERLAYS.ROOMS.NOROOM.TOO_BIG"
 msgid "<color=#F44A47FF>    • Size: {0} Tiles\n    • Maximum room size: {1} Tiles</color>"
 msgstr ""
 
+#. STRINGS.UI.OVERLAYS.ROOMS.POND.CRITTER_COUNT
+msgctxt "STRINGS.UI.OVERLAYS.ROOMS.POND.CRITTER_COUNT"
+msgid "    • Aquatic Critters: {0}"
+msgstr ""
+
+#. STRINGS.UI.OVERLAYS.ROOMS.POND.HEADER
+msgctxt "STRINGS.UI.OVERLAYS.ROOMS.POND.HEADER"
+msgid "<b>Pool Size</b>"
+msgstr ""
+
+#. STRINGS.UI.OVERLAYS.ROOMS.POND.NOFISH
+msgctxt "STRINGS.UI.OVERLAYS.ROOMS.POND.NOFISH"
+msgid "    • No aquatic critters found"
+msgstr ""
+
+#. STRINGS.UI.OVERLAYS.ROOMS.POND.SIZE
+msgctxt "STRINGS.UI.OVERLAYS.ROOMS.POND.SIZE"
+msgid "    • Pool Size: {0} Tiles"
+msgstr ""
+
 #. STRINGS.UI.OVERLAYS.ROOMS.ROOM
 msgctxt "STRINGS.UI.OVERLAYS.ROOMS.ROOM"
 msgid "Room {0}"
@@ -91751,6 +91796,11 @@ msgstr ""
 #. STRINGS.UI.PRODUCTINFO_APPLICABLERESOURCES
 msgctxt "STRINGS.UI.PRODUCTINFO_APPLICABLERESOURCES"
 msgid "Required resources:"
+msgstr ""
+
+#. STRINGS.UI.PRODUCTINFO_INSUFFICIENTRESOURCES_TITLE
+msgctxt "STRINGS.UI.PRODUCTINFO_INSUFFICIENTRESOURCES_TITLE"
+msgid "Insufficient {0} available"
 msgstr ""
 
 #. STRINGS.UI.PRODUCTINFO_MISSINGRESOURCES_DESC
