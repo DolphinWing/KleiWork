@@ -1948,6 +1948,26 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_GOLD.NAME"
 msgid "Gold Fin Gloves"
 msgstr ""
 
+#. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_MERM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_MERM.DESC"
+msgid "Webbed fingers and flared wrist \"gills\" make these the gloves of choice for thalassophiles."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_MERM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_MERM.NAME"
+msgid "Merfolk Gloves"
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WAVECRESTS.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WAVECRESTS.DESC"
+msgid "They add a little extra swoop to the wearer's swimming stroke."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WAVECRESTS.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WAVECRESTS.NAME"
+msgid "Wave Crest Gloves"
+msgstr ""
+
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WHEEZY.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WHEEZY.DESC"
 msgid "Standard uniform gloves for freedivers who spend all their spare time swimming with the fishes."
@@ -3733,6 +3753,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_GREEN.NAME"
 msgid "Green Neoprene Boots"
 msgstr ""
 
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_MERM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_MERM.DESC"
+msgid "Sustainable boots made from processed fish skin, dried seaweed, and lots of scrapbook glue."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_MERM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_MERM.NAME"
+msgid "Merfolk Boots"
+msgstr ""
+
 #. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_RED.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_RED.DESC"
 msgid "A pair of thick red boots that slosh with every step."
@@ -3741,6 +3771,16 @@ msgstr ""
 #. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_RED.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_RED.NAME"
 msgid "Red Neoprene Boots"
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_WAVECRESTS.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_WAVECRESTS.DESC"
+msgid "Makes every step feel like riding a big wave."
+msgstr ""
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_WAVECRESTS.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_WAVECRESTS.NAME"
+msgid "Breaker Boots"
 msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_WHEEZY.DESC
@@ -13690,7 +13730,7 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.FISHTRAP.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.FISHTRAP.EFFECT"
-msgid "Attracts and traps swimming <link=\"PACU\">Pacu</link>.\n\nSingle use."
+msgid "Attracts and traps aquatic <link=\"CREATURES\">Critters</link>.\n\nSingle use."
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.FISHTRAP.NAME
@@ -24135,7 +24175,7 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.WATERTRAP.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.WATERTRAP.EFFECT"
-msgid "Attracts and traps swimming <link=\"PACU\">Pacu</link>.\n\nOnly Duplicants with the <link=\"RANCHING1\">Critter Ranching I</link> skill can arm this trap. It's reusable!"
+msgid "Attracts and traps aquatic <link=\"CREATURES\">Critters</link>.\n\nOnly Duplicants with the <link=\"RANCHING1\">Critter Ranching I</link> skill can arm this trap. It's reusable!"
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.WATERTRAP.NAME
@@ -64685,7 +64725,7 @@ msgstr ""
 
 #. STRINGS.ITEMS.FOOD.FISHFOOD.NAME
 msgctxt "STRINGS.ITEMS.FOOD.FISHFOOD.NAME"
-msgid "<link=\"FISHFOOD\">Pacu Treat</link>"
+msgid "<link=\"PACUSPECIES\">Pacu Treat</link>"
 msgstr ""
 
 #. STRINGS.ITEMS.FOOD.FISHFOOD.RECIPEDESC

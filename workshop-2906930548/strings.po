@@ -1950,6 +1950,26 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_GOLD.NAME"
 msgid "Gold Fin Gloves"
 msgstr "黃金鰭型手套"
 
+#. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_MERM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_MERM.DESC"
+msgid "Webbed fingers and flared wrist \"gills\" make these the gloves of choice for thalassophiles."
+msgstr "蹼狀手指與手腕上擴張的「鰓」，讓這雙手套成為海洋愛好者的首選。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_MERM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_MERM.NAME"
+msgid "Merfolk Gloves"
+msgstr "人魚手套"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WAVECRESTS.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WAVECRESTS.DESC"
+msgid "They add a little extra swoop to the wearer's swimming stroke."
+msgstr "能為穿戴者的划水動作增添一點額外的破浪感。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WAVECRESTS.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WAVECRESTS.NAME"
+msgid "Wave Crest Gloves"
+msgstr "浪花手套"
+
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WHEEZY.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SWIM_WHEEZY.DESC"
 msgid "Standard uniform gloves for freedivers who spend all their spare time swimming with the fishes."
@@ -3735,6 +3755,16 @@ msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_GREEN.NAME"
 msgid "Green Neoprene Boots"
 msgstr "綠色潛水料靴子"
 
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_MERM.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_MERM.DESC"
+msgid "Sustainable boots made from processed fish skin, dried seaweed, and lots of scrapbook glue."
+msgstr "以加工魚皮、乾燥海藻和大量剪貼簿膠水製成的環保靴子。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_MERM.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_MERM.NAME"
+msgid "Merfolk Boots"
+msgstr "人魚靴"
+
 #. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_RED.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_RED.DESC"
 msgid "A pair of thick red boots that slosh with every step."
@@ -3744,6 +3774,16 @@ msgstr "一雙厚實的紅色靴子，每走一步都會發出踩水的啪嗒聲
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_RED.NAME"
 msgid "Red Neoprene Boots"
 msgstr "紅色潛水料靴子"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_WAVECRESTS.DESC
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_WAVECRESTS.DESC"
+msgid "Makes every step feel like riding a big wave."
+msgstr "讓每一步都像在乘風破浪。"
+
+#. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_WAVECRESTS.NAME
+msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_WAVECRESTS.NAME"
+msgid "Breaker Boots"
+msgstr "碎浪靴"
 
 #. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_WHEEZY.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_WHEEZY.DESC"
@@ -13692,8 +13732,8 @@ msgstr "被捉住的魚會自動裝袋等待運輸。"
 
 #. STRINGS.BUILDINGS.PREFABS.FISHTRAP.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.FISHTRAP.EFFECT"
-msgid "Attracts and traps swimming <link=\"PACU\">Pacu</link>.\n\nSingle use."
-msgstr "吸引和捕捉游動的<link=\"PACU\">帕庫</link>。\n\n單次使用。"
+msgid "Attracts and traps aquatic <link=\"CREATURES\">Critters</link>.\n\nSingle use."
+msgstr "吸引和捕捉游動的<link=\"CREATURES\">帕庫</link>。\n\n單次使用。"
 
 #. STRINGS.BUILDINGS.PREFABS.FISHTRAP.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.FISHTRAP.NAME"
@@ -24137,8 +24177,8 @@ msgstr "自動打包捕獲的魚類，以便運輸。"
 
 #. STRINGS.BUILDINGS.PREFABS.WATERTRAP.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.WATERTRAP.EFFECT"
-msgid "Attracts and traps swimming <link=\"PACU\">Pacu</link>.\n\nOnly Duplicants with the <link=\"RANCHING1\">Critter Ranching I</link> skill can arm this trap. It's reusable!"
-msgstr "吸引並捕捉游泳的<link=\"PACU\">帕庫</link>。\n\n只有具有<link=\"RANCHING1\">畜牧 I</link> 技能的複製人才能佈置陷阱。可重複使用！"
+msgid "Attracts and traps aquatic <link=\"CREATURES\">Critters</link>.\n\nOnly Duplicants with the <link=\"RANCHING1\">Critter Ranching I</link> skill can arm this trap. It's reusable!"
+msgstr "吸引並捕捉游泳的<link=\"CREATURES\">帕庫</link>。\n\n只有具有<link=\"RANCHING1\">畜牧 I</link> 技能的複製人才能佈置陷阱。可重複使用！"
 
 #. STRINGS.BUILDINGS.PREFABS.WATERTRAP.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.WATERTRAP.NAME"
@@ -64687,8 +64727,8 @@ msgstr "由種子粉與<link=\"WATER\">水</link>混合而成的「精緻」飼�
 
 #. STRINGS.ITEMS.FOOD.FISHFOOD.NAME
 msgctxt "STRINGS.ITEMS.FOOD.FISHFOOD.NAME"
-msgid "<link=\"FISHFOOD\">Pacu Treat</link>"
-msgstr "<link=\"FISHFOOD\">帕庫魚食</link>"
+msgid "<link=\"PACUSPECIES\">Pacu Treat</link>"
+msgstr "<link=\"PACUSPECIES\">帕庫魚食</link>"
 
 #. STRINGS.ITEMS.FOOD.FISHFOOD.RECIPEDESC
 msgctxt "STRINGS.ITEMS.FOOD.FISHFOOD.RECIPEDESC"
@@ -87648,12 +87688,12 @@ msgstr "精美太空手套"
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.ATMOSUIT_HELMETS_BASIC
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.ATMOSUIT_HELMETS_BASIC"
 msgid "Atmo Helmets"
-msgstr "太空盔"
+msgstr "太空頭盔"
 
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.ATMOSUIT_HELMETS_FANCY
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.ATMOSUIT_HELMETS_FANCY"
 msgid "Fancy Atmo Helmets"
-msgstr "精美太空盔"
+msgstr "精美太空頭盔"
 
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.ATMOSUIT_SHOES_BASIC
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.ATMOSUIT_SHOES_BASIC"
