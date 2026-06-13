@@ -54698,6 +54698,11 @@ msgctxt "STRINGS.DUPLICANTS.TRAITS.GLOWSTICK.SHORT_DESC_TOOLTIP"
 msgid "Emits low amounts of rads and light"
 msgstr ""
 
+#. STRINGS.DUPLICANTS.TRAITS.GRANTED_SKILL_NO_MORALE_COST
+msgctxt "STRINGS.DUPLICANTS.TRAITS.GRANTED_SKILL_NO_MORALE_COST"
+msgid "This Duplicant begins with a pre-learned <style=\"KKeyword\">Skill</style>, but does not have increased <style=\"KKeyword\">Morale Requirements</style>."
+msgstr ""
+
 #. STRINGS.DUPLICANTS.TRAITS.GRANTED_SKILL_SHARED_DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.GRANTED_SKILL_SHARED_DESC"
 msgid "This Duplicant begins with a pre-learned <style=\"KKeyword\">Skill</style>, but does not have increased <style=\"KKeyword\">Morale Requirements</style>.\n\n{0}\n{1}"
