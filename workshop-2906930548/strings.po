@@ -31738,7 +31738,7 @@ msgstr "小動物副產品"
 #. STRINGS.CODEX.SNAIL_IRON_SHELL.TITLE
 msgctxt "STRINGS.CODEX.SNAIL_IRON_SHELL.TITLE"
 msgid "Ferrgo Molt"
-msgstr "鍍金螺殼"
+msgstr "金曜螺殼"
 
 #. STRINGS.CODEX.SNAIL_SHELL.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.SNAIL_SHELL.BODY.CONTAINER1"
@@ -31758,7 +31758,7 @@ msgstr "緩螺殼"
 #. STRINGS.CODEX.SNAILIRON.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.SNAILIRON.BODY.CONTAINER1"
 msgid "<smallcaps>Pictured: \"Gildgo\" variant</smallcaps>"
-msgstr "<smallcaps>圖片：「鍍金螺」變種</smallcaps>"
+msgstr "<smallcaps>圖片：「金曜螺」變種</smallcaps>"
 
 #. STRINGS.CODEX.SNAILIRON.SUBTITLE
 msgctxt "STRINGS.CODEX.SNAILIRON.SUBTITLE"
@@ -31768,7 +31768,7 @@ msgstr "小動物變種"
 #. STRINGS.CODEX.SNAILIRON.TITLE
 msgctxt "STRINGS.CODEX.SNAILIRON.TITLE"
 msgid "Gildgo"
-msgstr "鐵螺"
+msgstr "金曜螺"
 
 #. STRINGS.CODEX.SO_LAUNCH_TRAILER.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.SO_LAUNCH_TRAILER.BODY.CONTAINER1"
@@ -39773,27 +39773,27 @@ msgstr "<link=\"SNAIL\">緩螺</link>"
 #. STRINGS.CREATURES.SPECIES.SNAIL.VARIANT_IRON.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SNAIL.VARIANT_IRON.BABY.DESC"
 msgid "A tiny little Gildgo Baby.\n\nIn time it will mature into a fully grown <link=\"SNAILIRON\">Gildgo</link>."
-msgstr "一隻小小的鍍鐵螺寶寶。\n\n隨著時間經過，牠會成長為一隻成年的<link=\"SNAILIRON\">鍍鐵螺</link>。"
+msgstr "一隻小小的金曜螺寶寶。\n\n隨著時間經過，牠會成長為一隻成年的<link=\"SNAILIRON\">金曜螺</link>。"
 
 #. STRINGS.CREATURES.SPECIES.SNAIL.VARIANT_IRON.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SNAIL.VARIANT_IRON.BABY.NAME"
 msgid "<link=\"SNAILIRON\">Gildgo Baby</link>"
-msgstr "<link=\"SNAILIRON\">鐵螺寶寶</link>"
+msgstr "<link=\"SNAILIRON\">金曜螺寶寶</link>"
 
 #. STRINGS.CREATURES.SPECIES.SNAIL.VARIANT_IRON.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SNAIL.VARIANT_IRON.DESC"
 msgid "Gildgos are nonhostile critters that consume <link=\"SULFUR\">Sulfur</link> and excrete <link=\"OBSIDIAN\">Obsidian</link>.\n\nThe shells they leave behind after molting can be crushed into <link=\"GOLDAMALGAM\">Gold Amalgam</link>.\n\nThey also leave large amounts of <link=\"MUCUS\">Mucin</link> in their wake."
-msgstr "鍍鐵螺是一種無攻擊性的小動物，以<link=\"SULFUR\">硫</link>為食並排出<link=\"OBSIDIAN\">黑曜石</link>。\n\n牠們蛻殼後留下的殼可以粉碎成<link=\"GOLDAMALGAM\">金汞齊</link>。\n\n牠們爬行經過的地方會留下大量的<link=\"MUCUS\">粘蛋白</link>。"
+msgstr "金曜螺是一種無攻擊性的小動物，以<link=\"SULFUR\">硫</link>為食並排出<link=\"OBSIDIAN\">黑曜石</link>。\n\n牠們蛻殼後留下的殼可以粉碎成<link=\"GOLDAMALGAM\">金汞齊</link>。\n\n牠們爬行經過的地方會留下大量的<link=\"MUCUS\">黏蛋白</link>。"
 
 #. STRINGS.CREATURES.SPECIES.SNAIL.VARIANT_IRON.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SNAIL.VARIANT_IRON.EGG_NAME"
 msgid "<link=\"SNAILIRON\">Gildgo Egg</link>"
-msgstr "<link=\"SNAILIRON\">鐵螺蛋</link>"
+msgstr "<link=\"SNAILIRON\">金曜螺蛋</link>"
 
 #. STRINGS.CREATURES.SPECIES.SNAIL.VARIANT_IRON.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SNAIL.VARIANT_IRON.NAME"
 msgid "<link=\"SNAILIRON\">Gildgo</link>"
-msgstr "<link=\"SNAILIRON\">鐵螺</link>"
+msgstr "<link=\"SNAILIRON\">金曜螺</link>"
 
 #. STRINGS.CREATURES.SPECIES.SPACETREE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SPACETREE.DESC"
@@ -65953,7 +65953,7 @@ msgstr "可經由粉碎加工生產<link=\"GOLDAMALGAM\">金汞齊</link>。"
 #. STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.SNAIL_IRON_SHELL.NAME
 msgctxt "STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.SNAIL_IRON_SHELL.NAME"
 msgid "<link=\"SNAILIRONSHELL\">Gildgo Molt</link>"
-msgstr "<link=\"SNAILIRONSHELL\">鍍金螺殼</link>"
+msgstr "<link=\"SNAILIRONSHELL\">金曜螺殼</link>"
 
 #. STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.SNAIL_SHELL.DESC
 msgctxt "STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.SNAIL_SHELL.DESC"
