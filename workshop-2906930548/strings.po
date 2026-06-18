@@ -15567,8 +15567,8 @@ msgstr "水耕磚塊可自動灌溉，減少了複製人的工作量。"
 
 #. STRINGS.BUILDINGS.PREFABS.HYDROPONICFARM.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.HYDROPONICFARM.EFFECT"
-msgid "Grows one <link=\"PLANTS\">Plant</link> from a <link=\"PLANTS\">Seed</link>.\n\nCan be used as floor tile and rotated before construction.\n\nMust be irrigated through <link=\"LIQUIDPIPING\">Liquid Piping</link>."
-msgstr "播下<link=\"PLANTS\">種子</link>成長為<link=\"PLANTS\">植物</link>。\n\n可以當作地磚，建造前可旋轉。\n\n必須透過<link=\"LIQUIDPIPING\">液體管</link>灌溉。"
+msgid "Grows one <link=\"PLANTS\">Plant</link> from a <link=\"PLANTS\">Seed</link>.\n\nCan be used as floor tile and rotated before construction.\n\nSome plants must be irrigated through <link=\"LIQUIDPIPING\">Liquid Piping</link>."
+msgstr "利用<link=\"PLANTS\">種子</link>種植一株<link=\"PLANTS\">植物</link>。\n\n可作為地板磚使用，建造前可旋轉。\n\n某些植物必須透過<link=\"LIQUIDPIPING\">液體管道</link>進行灌溉。"
 
 #. STRINGS.BUILDINGS.PREFABS.HYDROPONICFARM.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.HYDROPONICFARM.NAME"
@@ -23732,13 +23732,13 @@ msgstr "火箭模組空位"
 
 #. STRINGS.BUILDINGS.PREFABS.UNDERWATERBREATHINGSTATION.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.UNDERWATERBREATHINGSTATION.DESC"
-msgid "Duplicants catch their breath faster by using a breathing station than by surfacing for air."
-msgstr "複製人使用呼吸站換氣，比浮出水面呼吸還要更快。"
+msgid "Submerged Duplicants recover their breath faster by using a breathing station than by surfacing for air."
+msgstr "潛水中的複製人使用呼吸站回復呼吸，比浮出水面換氣還要快。"
 
 #. STRINGS.BUILDINGS.PREFABS.UNDERWATERBREATHINGSTATION.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.UNDERWATERBREATHINGSTATION.EFFECT"
-msgid "Provides breathable <link=\"OXYGEN\">Oxygen</link> to submerged Duplicants via a connected <link=\"GASPIPING\">Gas Pipe</link> input."
-msgstr "透過連接的<link=\"GASPIPING\">氣體管道</link>輸入，為水下的複製人提供可呼吸的<link=\"OXYGEN\">氧氣</link>。"
+msgid "Provides breathable <link=\"OXYGEN\">Oxygen</link> to Duplicants in suffocating environments via a connected <link=\"GASPIPING\">Gas Pipe</link> input."
+msgstr "透過連接的<link=\"GASPIPING\">氣體管</link>輸入，在窒息環境中為複製人提供可呼吸的<link=\"OXYGEN\">氧氣</link>。"
 
 #. STRINGS.BUILDINGS.PREFABS.UNDERWATERBREATHINGSTATION.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.UNDERWATERBREATHINGSTATION.NAME"
@@ -24192,8 +24192,8 @@ msgstr "同樣能讓複製人提升超大型植物的生長速度。"
 
 #. STRINGS.BUILDINGS.PREFABS.WIDEFARMTILE.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.WIDEFARMTILE.EFFECT"
-msgid "Grows one extra-large <link=\"PLANTS\">Plant</link> from a <link=\"PLANTS\">Seed</link>.\n\nCan be used as floor tile.\n\nMust be irrigated through <link=\"LIQUIDPIPING\">Liquid Piping</link>"
-msgstr "可使用<link=\"PLANTS\">種子</link>種植一株超大型<link=\"PLANTS\">植物</link>。\n\n可用作地磚。\n\n必須透過<link=\"LIQUIDPIPING\">液體管道</link>進行灌溉。"
+msgid "Grows one extra-large <link=\"PLANTS\">Plant</link> from a <link=\"PLANTS\">Seed</link>.\n\nCan be used as floor tile.\n\nSome plants must be irrigated through <link=\"LIQUIDPIPING\">Liquid Piping</link>."
+msgstr "利用<link=\"PLANTS\">種子</link>種植一株超大型<link=\"PLANTS\">植物</link>。\n\n可作為地板磚使用。\n\n某些植物必須透過<link=\"LIQUIDPIPING\">液體管道</link>進行灌溉"
 
 #. STRINGS.BUILDINGS.PREFABS.WIDEFARMTILE.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.WIDEFARMTILE.NAME"
@@ -26950,6 +26950,11 @@ msgctxt "STRINGS.CODEX.CREATURE_DESCRIPTORS.CONFINED"
 msgid "<link=\"CREATURES::GUIDE::MOOD\">Confined</link> when a room is smaller than <b>{0} cells</b>."
 msgstr "當房間小於<b> {0} 格</b>時就會感覺<link=\"CREATURES::GUIDE::MOOD\">狹窄</link>。"
 
+#. STRINGS.CODEX.CREATURE_DESCRIPTORS.CONFINED_AQUATIC
+msgctxt "STRINGS.CODEX.CREATURE_DESCRIPTORS.CONFINED_AQUATIC"
+msgid "<link=\"CREATURES::GUIDE::MOOD\">Confined</link> when a pool is smaller than <b>{0} cells</b>."
+msgstr "當水池小於 <b>{0} 格</b>時會進入<link=\"CREATURES::GUIDE::MOOD\">狹窄</link>狀態。"
+
 #. STRINGS.CODEX.CREATURE_DESCRIPTORS.MAXAGE
 msgctxt "STRINGS.CODEX.CREATURE_DESCRIPTORS.MAXAGE"
 msgid "This critter's typical <link=\"CREATURES::GUIDE::FERTILITY\">Life Span</link> is <b>{0} cycles</b>."
@@ -26964,6 +26969,11 @@ msgstr "存活範圍：<b>{0}</b> 至 <b>{1}</b>"
 msgctxt "STRINGS.CODEX.CREATURE_DESCRIPTORS.OVERCROWDING"
 msgid "<link=\"CREATURES::GUIDE::MOOD\">Crowded</link> when a room has less than <b>{0} cells</b> of space for each critter."
 msgstr "當房間空間對每隻小動物平均少於<b> {0} 格</b>時就會感覺<link=\"CREATURES::GUIDE::MOOD\">擁擠</link>。"
+
+#. STRINGS.CODEX.CREATURE_DESCRIPTORS.OVERCROWDING_AQUATIC
+msgctxt "STRINGS.CODEX.CREATURE_DESCRIPTORS.OVERCROWDING_AQUATIC"
+msgid "<link=\"CREATURES::GUIDE::MOOD\">Crowded</link> when a pool has less than <b>{0} cells</b> of space for each critter."
+msgstr "當水池中每隻小動物的空間少於 <b>{0} 格</b>時會進入<link=\"CREATURES::GUIDE::MOOD\">擁擠</link>狀態。"
 
 #. STRINGS.CODEX.CREATURE_DESCRIPTORS.TEMPERATURE.COMFORT_RANGE
 msgctxt "STRINGS.CODEX.CREATURE_DESCRIPTORS.TEMPERATURE.COMFORT_RANGE"
@@ -27182,8 +27192,8 @@ msgstr "    • 幸福度"
 
 #. STRINGS.CODEX.CRITTERSTATUS.MOOD.CONFINED.CONTAINER1
 msgctxt "STRINGS.CODEX.CRITTERSTATUS.MOOD.CONFINED.CONTAINER1"
-msgid "Each species has its own space requirements. Critters who find themselves in a room that they consider too small will feel confined. They will feel the same way if they become stuck in a door or tile. Critters will not reproduce while they are in this state.\n\nShove Voles are the exception to this rule: their tunneling instincts make them quite comfortable in snug spaces, and they never feel confined."
-msgstr "每個物種都有其自己的空間需求。覺得自己待在過小房間中的小動物會感覺受到限制，卡在門或磚裡也是如此。在這種狀態下小動物不會繁殖。\n\n鑽地田鼠是例外：牠們挖掘本能使其在狹窄的空間裡感到非常舒適，，且不會感覺受到限制。"
+msgid "Each species has its own space requirements. Critters who find themselves in a room or pool that they consider too small will feel confined. They will feel the same way if they become stuck in a door or tile. Critters will not reproduce while they are in this state.\n\nShove Voles are the exception to this rule: their tunneling instincts make them quite comfortable in snug spaces, and they never feel confined."
+msgstr "每個物種都有其自己的空間需求。如果小動物發現自己身處在太小的房間或水池中，就會感覺到狹窄。若牠們卡在門或方塊磚中，也會有相同的感受。小動物在這種狀態下將無法繁殖。\n\n鑽地田鼠是這個規則的例外：牠們的挖掘本能讓牠們在狹窄空間中相當怡然自得，且永遠不會感覺到狹窄。"
 
 #. STRINGS.CODEX.CRITTERSTATUS.MOOD.CONFINED.SUBTITLE
 msgctxt "STRINGS.CODEX.CRITTERSTATUS.MOOD.CONFINED.SUBTITLE"
@@ -27287,8 +27297,8 @@ msgstr "滿足"
 
 #. STRINGS.CODEX.CRITTERSTATUS.MOOD.OVERCROWDED.CONTAINER1
 msgctxt "STRINGS.CODEX.CRITTERSTATUS.MOOD.OVERCROWDED.CONTAINER1"
-msgid "This occurs when a critter is in a room that's appropriately sized for its needs but feels that there are too many other critters sharing the same space. Because each species has its own space requirements, this state can vary among occupants of the same room.\n\nThis emotional state intensifies in response to the number of excess critters: adding new critters to an already crowded room will undermine a critter's happiness even further."
-msgstr "當小動物待在一個適合其需求的房間裡，但覺得有太多其他小動物共享同一個空間時，就會發生這種情況。由於每個物種都有其自己的空間需求，因此這個狀態在同一房間的小動物身上可能會有所不同。\n\n這種情緒狀態會隨著生物數量過多而加劇：在已經擁擠的房間再新增一隻新的小動物會進一步削弱小動物的幸福度。"
+msgid "This occurs when a critter is in a room or pool that's appropriately sized for its needs but feels that there are too many other critters sharing the same space. Because each species has its own space requirements, this state can vary among occupants of the same room.\n\nThis emotional state intensifies in response to the number of excess critters: adding new critters to an already crowded room will undermine a critter's happiness even further."
+msgstr "當小動物身處的房間或水池大小符合其需求，但覺得有太多其他小動物共享同一個空間時，就會進入這種狀態。由於每個物種都有各自的空間需求，因此同一間房內不同個體的感受可能會有所不同。\n\n這種情緒狀態會隨著過剩的小動物數量而加劇：在已經擁擠的房間中加入更多小動物，會進一步降低牠們的快樂度。"
 
 #. STRINGS.CODEX.CRITTERSTATUS.MOOD.OVERCROWDED.OVERCROWDED_HAPPY1
 msgctxt "STRINGS.CODEX.CRITTERSTATUS.MOOD.OVERCROWDED.OVERCROWDED_HAPPY1"
@@ -27842,8 +27852,8 @@ msgstr "<smallcaps>圖：帕庫魚食</smallcaps>"
 
 #. STRINGS.CODEX.FISHFOOD.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.FISHFOOD.BODY.CONTAINER2"
-msgid "A gourmet loaf of ground seeds and <link=\"WATER\">Water</link>, formulated to delight <link=\"PACU\">Pacus</link>."
-msgstr "由磨碎的種子與<link=\"WATER\">水</link>調配而成的精製飼料塊，旨在滿足<link=\"PACU\">帕庫</link>的味蕾。"
+msgid "A gourmet loaf of ground seeds and <link=\"WATER\">Water</link>, formulated to delight <link=\"PACUSPECIES\">Pacus</link>."
+msgstr "由磨碎的種子與<link=\"WATER\">水</link>製成的精緻飼料塊，旨在滿足<link=\"PACUSPECIES\">帕庫</link>的口腹之慾。"
 
 #. STRINGS.CODEX.FISHFOOD.SUBTITLE
 msgctxt "STRINGS.CODEX.FISHFOOD.SUBTITLE"
@@ -29247,8 +29257,8 @@ msgstr "學術騙局"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC5_PRINTANOMALY.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_PRINTANOMALY.BODY.CONTAINER1"
-msgid "<smallcaps>[Log Fragmentation Detected]\n[Voice Recognition Unavailable]</smallcaps>\n\n[LOG BEGINS]\n\nA216: Commencing exploratory reprint of donor number 890, \"Anemone,\" adult female,  103 centimeters, 30 kilgrams.\n\nTech: Copy that.\n\n(sound of a machine powering up)\n\nA216: Printing subject in three... two...\n\n(sound of a machine whining to a halt)\n\nA216: Ugh, can you <i>please</i> clean out the secondary tank? There are still traces from yesterday's reprint.\n\nTech: Sorry, Doctor. I thought I got it all.\n\n(sound of a machine powering up)\n\n(sound of electricity crackling)\n\nA216: Printing subject in three... two... one... Stand back, please.\n\nTech: Reprint complete. Subject number is 2988, \"Anemone-93.\" Adult female, 103 centimeters, 30 kilgrams. Subject is conscious and appears fully formed. No observable physical abnormalities noted. A216: Initiate vitals scan.\n\nTech: Scan complete. Pupil size, skin temperature, limb formation and distribution are all typical, except... huh. The respiration rate... it's... there doesn't really seem to be one.\n\nA216: I swear, this equipment gets less and less reliable by the day. Recalibrate the printing pod and run it again.\n\nTech: But that will take the rest of the night, Doctor.\n\nA216: The sooner you start, the sooner it will be done. Bring me the updated results when they're ready.\n\n[LOG ENDS]\n\n----------------------\n\n[LOG BEGINS]\n\nTech: Doctor Surahashi? Oh! I'm sorry to interrupt, Doctor Broussard.\n\nOlivia: It's quite all right. I invited myself when I saw last night's anomaly on my feed. \n\nA216: It may be nothing, again. We've had a few inconsistencies since the earthquakes started.\n\nTech: Um... actually...\n\nA216: Well?\n\nTech: I... well, look.\n\nOlivia: My god. It's true.\n\nA216: Hmm. Flood the tank.\n\nTech: Yes, Doctor.\n\nOlivia: What? No! She'll drown!\n\nA216: With all due respect, Dr. Broussard, further testing is crucial. This isn't just another vestigial ear. If this anomaly can be confirmed and replicated-Olivia: -We've just given humanity a whole new category of possible colony sites. I am aware.\n\nA216: Correct. For what it's worth, I am reasonably confident that Anemone-93's oxygen consumption is so low as to make fatality extremely unlikely. But I understand if you would prefer to step out of the room for a moment.\n\nOlivia: No, I-I'll stay.\n\nTech: Tank filling in three...two...\n\n(sound of rushing water)\n\nTech: Tank maximum volume has been reached.\n\nA216: Subject appears unaffected by the change in environment.\n\nOlivia: Incredible.\n\nA216: Indeed.\n\nA216: Maintain liquid levels and monitor subject's response. I want to know exactly how long vitals remain steady.\n\nTech: Yes, Doctor.\n\n[LOG ENDS]\n\n"
-msgstr "<smallcaps>[偵測到日誌片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[錄音開始]\n\nA216：開始對提供體編號 890 進行探索性重印，物件「Anemone」，成年雌性，103 公分，30 公斤。\n\n技術員：收到。\n\n（機器啟動聲）\n\nA216：準備列印目標……三……二……\n\n（機器哀鳴著停機的聲音）\n\nA216：唉，你<i>能不能</i>把二號槽清理乾淨？昨天重印的殘留物還在裡面。\n\n技術員：抱歉，醫師。我以為我清乾淨了。\n\n（機器啟動聲）\n\n（電流噼啪聲）\n\nA216：準備列印目標……三……二……一……請退後。\n\n技術員：重印完成。物件編號 2988，「Anemone-93」。成年雌性，103 公分，30 公斤。物件有意識，體態外觀完整。未觀察到明顯生理異常。\n\nA216：啟動生命體徵掃描。\n\n技術員：掃描完畢。瞳孔尺寸、皮膚溫度、肢體結構及分佈均屬正常，除了……呃。呼吸頻率……那個……似乎根本沒有呼吸。\n\nA216：我發誓，這設備真是一天不如一天。重新校準列印艙，再跑一次。\n\n技術員：但那要花掉整整一晚，醫師。\n\nA216：你越早開始就越早結束。結果更新後拿給我。\n\n[錄音結束]\n\n----------------------\n\n[錄音開始]\n\n技術員：Surahashi 醫師？噢！抱歉打擾了，Broussard 博士。\n\nOlivia：沒關係。我在推送裡看到昨晚的異常資料，自己不請自來的。\n\nA216：可能又是虛驚一場。地震開始以後我們這兒出過幾次不一致的情況了。\n\n技術員：呃……其實……\n\nA216：怎麼？\n\n技術員：我……嗯，您看。\n\nOlivia：天哪。是真的。\n\nA216：嗯。把槽裡注滿水。\n\n技術員：是，醫師。\n\nOlivia：什麼？不行！她會淹死的！\n\nA216：恕我直言，Broussard 博士，進一步測試至關重要。這次可不是又一個殘留耳廓那麼簡單。如果這個異常現象能被確認並復現——\n\nOlivia：——我們剛剛為人類開闢了全新類別的可能殖民地選址。我知道。\n\nA216：正是。不過值得一提的是，我有相當把握認為 Anemone-93 的耗氧量極低，致死可能性微乎其微。但如果您想暫時離開房間，我可以理解。\n\nOlivia：不，我——我留下。\n\n技術員：準備開始注水……三……二……\n\n（水流奔湧聲）\n\n技術員：水槽已達最大容量。\n\nA216：物件似乎未因環境改變而受到影響。\n\nOlivia：不可思議。\n\nA216：確實。\n\nA216：維持當前液位，持續監測物件反應。我需要確切知道生命體徵能保持穩定多久。\n\n技術員：是，醫師。\n\n[錄音結束]"
+msgid "<smallcaps>[Log Fragmentation Detected]\n[Voice Recognition Unavailable]</smallcaps>\n\n[LOG BEGINS]\n\nA216: Commencing exploratory reprint of donor number 890, \"Anemone,\" adult female,  103 centimeters, 30 kilgrams.\n\nTech: Copy that.\n\n(sound of a machine powering up)\n\nA216: Printing subject in three... two...\n\n(sound of a machine whining to a halt)\n\nA216: Ugh, can you <i>please</i> clean out the secondary tank? There are still traces from yesterday's reprint.\n\nTech: Sorry, Doctor. I thought I got it all.\n\n(sound of a machine powering up)\n\n(sound of electricity crackling)\n\nA216: Printing subject in three... two... one... Stand back, please.\n\nTech: Reprint complete. Subject number is 2988, \"Anemone-93.\" Adult female, 103 centimeters, 30 kilograms. Subject is conscious and appears fully formed. No observable physical abnormalities noted.\n\nA216: Initiate vitals scan.\n\nTech: Scan complete. Pupil size, skin temperature, limb formation and distribution are all typical, except... huh. The respiration rate... it's... there doesn't really seem to be one.\n\nA216: I swear, this equipment gets less and less reliable by the day. Recalibrate the printing pod and run it again.\n\nTech: But that will take the rest of the night, Doctor.\n\nA216: The sooner you start, the sooner it will be done. Bring me the updated results when they're ready.\n\n[LOG ENDS]\n\n----------------------\n\n[LOG BEGINS]\n\nTech: Doctor Saruhashi? Oh! I'm sorry to interrupt, Doctor Broussard.\n\nOlivia: It's quite all right. I invited myself when I saw last night's anomaly on my feed. \n\nA216: It may be nothing, again. We've had a few inconsistencies since the earthquakes started.\n\nTech: Um... actually...\n\nA216: Well?\n\nTech: I... well, look.\n\nOlivia: My god. It's true.\n\nA216: Hmm. Flood the tank.\n\nTech: Yes, Doctor.\n\nOlivia: What? No! She'll drown!\n\nA216: With all due respect, Dr. Broussard, further testing is crucial. This isn't just another vestigial ear. If this anomaly can be confirmed and replicated-Olivia: -We've just given humanity a whole new category of possible colony sites. I am aware.\n\nA216: Correct. For what it's worth, I am reasonably confident that Anemone-93's oxygen consumption is so low as to make fatality extremely unlikely. But I understand if you would prefer to step out of the room for a moment.\n\nOlivia: No, I-I'll stay.\n\nTech: Tank filling in three...two...\n\n(sound of rushing water)\n\nTech: Tank maximum volume has been reached.\n\nA216: Subject appears unaffected by the change in environment.\n\nOlivia: Incredible.\n\nA216: Indeed.\n\nA216: Maintain liquid levels and monitor subject's response. I want to know exactly how long vitals remain steady.\n\nTech: Yes, Doctor.\n\n[LOG ENDS]\n\n"
+msgstr "<smallcaps>[偵測到日誌片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[錄音開始]\n\nA216：開始對捐贈者編號 890 進行探索性重印，受試者「Anemone」，成年雌性，103 公分，30 公斤。\n\n技術員：收到。\n\n（機器啟動聲）\n\nA216：準備列印受試者……三……二……\n\n（機器哀鳴著停機的聲音）\n\nA216：唉，你<i>能不能</i>把二號槽清理乾淨？昨天重印的殘留物還在裡面。\n\n技術員：抱歉，醫師。我以為我清乾淨了。\n\n（機器啟動聲）\n\n（電流劈啪聲）\n\nA216：準備列印受試者……三……二……一……請退後。\n\n技術員：重印完成。物件編號 2988，「Anemone-93」。成年雌性，103 公分，30 公斤。受試者有意識，體態外觀完整。未觀察到明顯生理異常。\n\nA216：啟動生命體徵掃描。\n\n技術員：掃描完畢。瞳孔尺寸、皮膚溫度、肢體結構及分佈均屬正常，除了……呃。呼吸頻率……那個……似乎根本沒有呼吸。\n\nA216：我發誓，這設備真是一天不如一天。重新校準列印艙，再跑一次。\n\n技術員：但那要花掉整整一晚，醫師。\n\nA216：你越早開始就越早結束。結果更新後拿給我。\n\n[錄音結束]\n\n----------------------\n\n[錄音開始]\n\n技術員：Saruhashi 醫師？噢！抱歉打擾了，Broussard 博士。\n\nOlivia：沒關係。我在系統通知裡看到昨晚的異常資料，自己不請自來的。\n\nA216：可能又是虛驚一場。地震開始以後我們這兒出過幾次不一致的情況了。\n\n技術員：呃……其實……\n\nA216：怎麼？\n\n技術員：我……嗯，您看。\n\nOlivia：天哪。是真的。\n\nA216：嗯。把槽裡注滿水。\n\n技術員：是，醫師。\n\nOlivia：什麼？不行！她會淹死的！\n\nA216：恕我直言，Broussard 博士，進一步測試至關重要。這次可不是又一個退化耳那麼簡單。如果這個異常現象能被確認並復現——\n\nOlivia：——我們剛剛為人類開闢了全新類別的可能殖民地選址。我知道。\n\nA216：正是。不過值得一提的是，我有相當把握認為 Anemone-93 的耗氧量極低，致死可能性微乎其微。但如果您想暫時離開房間，我可以理解。\n\nOlivia：不，我——我留下。\n\n技術員：準備開始注水……三……二……\n\n（水流奔湧聲）\n\n技術員：水槽已達最大容量。\n\nA216：受試者似乎未因環境改變而受到影響。\n\nOlivia：不可思議。\n\nA216：確實。\n\nA216：維持當前液位，持續監測受試者反應。我需要確切知道生命體徵能保持穩定多久。\n\n技術員：是，醫師。\n\n[錄音結束]"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC5_PRINTANOMALY.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_PRINTANOMALY.SUBTITLE"
@@ -30164,6 +30174,11 @@ msgstr "氧氣蕨"
 msgctxt "STRINGS.CODEX.PACU.BODY.CONTAINER1"
 msgid "The Pacu fish is often interpreted as possessing a vacant stare due to its large and unblinking eyes, yet they are remarkably bright and friendly creatures."
 msgstr "由於大大的眼睛，帕庫魚常被認為是目光空洞的，但牠們是非常明亮和友善的動物。"
+
+#. STRINGS.CODEX.PACU.BODY.CONTAINER2
+msgctxt "STRINGS.CODEX.PACU.BODY.CONTAINER2"
+msgid "Feeding a Pacu its favorite <link=\"PACUTREAT\">Pacu Treat</link> helps tame it and keep it content."
+msgstr "餵食帕庫牠最喜歡的<link=\"PACUTREAT\">帕庫點心</link>有助於馴化牠，並讓牠保持滿足。"
 
 #. STRINGS.CODEX.PACU.SPECIES_SUBTITLE
 msgctxt "STRINGS.CODEX.PACU.SPECIES_SUBTITLE"
@@ -31737,7 +31752,7 @@ msgstr "小動物副產品"
 
 #. STRINGS.CODEX.SNAIL_IRON_SHELL.TITLE
 msgctxt "STRINGS.CODEX.SNAIL_IRON_SHELL.TITLE"
-msgid "Ferrgo Molt"
+msgid "Gildgo Molt"
 msgstr "金曜螺殼"
 
 #. STRINGS.CODEX.SNAIL_SHELL.BODY.CONTAINER1
@@ -32050,6 +32065,11 @@ msgctxt "STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.SPECIES_ENTRIES.BELLY"
 msgid "Specimen produced substantial stool sample. Review data for more information."
 msgstr "該樣本產生了大量的糞便。查閱資料以獲取更多資訊。"
 
+#. STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.SPECIES_ENTRIES.BUTTERFLY
+msgctxt "STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.SPECIES_ENTRIES.BUTTERFLY"
+msgid "This critter tucked its wings tightly around itself during scanning. Review data for more information."
+msgstr "這隻小動物在掃描過程中將翅膀緊緊收攏在身上。查閱資料以獲取更多資訊。"
+
 #. STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.SPECIES_ENTRIES.CHAMELEON
 msgctxt "STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.SPECIES_ENTRIES.CHAMELEON"
 msgid "Scanning interrupted due to instrument displacement caused by specimen's lingual grasp.\n\nReview data for more information."
@@ -32204,6 +32224,11 @@ msgstr "這個物種可能沒有完整的知覺，但有很強的集體意識。
 msgctxt "STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.SPECIES_ENTRIES_EXPANDED.BELLY"
 msgid "Specimen produced substantial stool sample directly onto scanner bed.\n\nRemarkably, its white coat remained pristine. Analysis of coat fibers revealed that each follicle is sealed with polytetrafluoroethylene, providing strong stain resistance."
 msgstr "該樣本直接在掃描床上產生了大量的糞便。\n\n值得注意的是，牠的白色皮毛仍然一塵不染。皮毛纖維分析顯示，每個毛囊都使用聚四氟乙烯密封，提供了強大的抗汙能力。"
+
+#. STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.SPECIES_ENTRIES_EXPANDED.BUTTERFLY
+msgctxt "STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.SPECIES_ENTRIES_EXPANDED.BUTTERFLY"
+msgid "This critter tucked its wings tightly around itself during scanning, and used its antennae to roll its body around the chamber.\n\nIt seems that these sensory organs possess more musculature than those of similar species, despite their unassuming appearance. Of particular note: the critter's refusal to engage in this behavior outside of this contained environment."
+msgstr "這隻小動物在掃描過程中將翅膀緊緊收攏在身上，並利用觸角讓身體在艙室內滾動。\n\n儘管這些感覺器官的外觀不起眼，但牠們似乎比類似物種擁有更多的肌肉組織。特別值得注意的是：這隻小動物在這種受控環境之外，拒絕做出這種行為。"
 
 #. STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.SPECIES_ENTRIES_EXPANDED.CHAMELEON
 msgctxt "STRINGS.CODEX.STORY_TRAITS.CRITTER_MANIPULATOR.SPECIES_ENTRIES_EXPANDED.CHAMELEON"
@@ -36375,6 +36400,16 @@ msgctxt "STRINGS.CREATURES.MODIFIERS.INITIALLYPOLLINATED.TOOLTIP"
 msgid "This plant was initially pollinated"
 msgstr "這株植物首次被授粉。"
 
+#. STRINGS.CREATURES.MODIFIERS.JAWBOFOOD.NAME
+msgctxt "STRINGS.CREATURES.MODIFIERS.JAWBOFOOD.NAME"
+msgid "Ate Cooked Seafood"
+msgstr "吃了熟海鮮"
+
+#. STRINGS.CREATURES.MODIFIERS.JAWBOFOOD.TOOLTIP
+msgctxt "STRINGS.CREATURES.MODIFIERS.JAWBOFOOD.TOOLTIP"
+msgid "This critter recently ate <style=\"KKeyword\">Cooked Seafood</style>\n\nNom nom nom!"
+msgstr "這隻小動物最近吃了<style=\"KKeyword\">熟海鮮</style>\n\n嚼嚼嚼！"
+
 #. STRINGS.CREATURES.MODIFIERS.MISERABLE.NAME
 msgctxt "STRINGS.CREATURES.MODIFIERS.MISERABLE.NAME"
 msgid "Mood: Miserable"
@@ -39187,8 +39222,8 @@ msgstr "<link=\"SEATURTLE\">礦甲龜寶寶</link>"
 
 #. STRINGS.CREATURES.SPECIES.SEATURTLE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SEATURTLE.DESC"
-msgid "Orehulls are shy aquatic critters that eat <link=\"SEAFAIRYSPECIES\">Kelpoles</link> and excrete <link=\"TOXICSAND\">Polluted Dirt</link>.\n\nThey can be sheared for <link=\"IRONORE\">Iron Ore</link>."
-msgstr "礦甲龜是害羞的水生生物，以<link=\"SEAFAIRYSPECIES\">藻蝌蚪</link>為食並排出<link=\"TOXICSAND\">污染土</link>。\n\n可以修剪牠們以獲得<link=\"IRONORE\">鐵礦</link>。"
+msgid "Orehulls are shy aquatic critters that eat <link=\"SEAFAIRYSPECIES\">Kelpoles</link> and excrete <link=\"TOXICMUD\">Polluted Mud</link>.\n\nThey can be sheared for <link=\"IRONORE\">Iron Ore</link>."
+msgstr "礦甲龜是害羞的水生小動物，以<link=\"SEAFAIRYSPECIES\">藻蝌蚪</link>為食並排出<link=\"TOXICMUD\">汙泥漿</link>。\n\n修剪牠們的外殼可以獲得<link=\"IRONORE\">鐵礦</link>。"
 
 #. STRINGS.CREATURES.SPECIES.SEATURTLE.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SEATURTLE.EGG_NAME"
@@ -40454,6 +40489,16 @@ msgstr "溼度"
 msgctxt "STRINGS.CREATURES.STATS.MOISTURE.TOOLTIP"
 msgid "At 0% <style=\"KKeyword\">Moisture</style>, this critter will die\n\nMoisture can be restored by submerging the critter in <style=\"KKeyword\">Liquid</style>"
 msgstr "<style=\"KKeyword\">濕度</style>降至 0% 時，該生物將會死亡。\n\n將生物浸沒於<style=\"KKeyword\">液體</style>中可恢復濕度。"
+
+#. STRINGS.CREATURES.STATS.PHOTOSYNTHESIS.NAME
+msgctxt "STRINGS.CREATURES.STATS.PHOTOSYNTHESIS.NAME"
+msgid "Light\n    • Minimum: {LUX}"
+msgstr "光照\n    • 最低：{LUX}"
+
+#. STRINGS.CREATURES.STATS.PHOTOSYNTHESIS.TOOLTIP
+msgctxt "STRINGS.CREATURES.STATS.PHOTOSYNTHESIS.TOOLTIP"
+msgid "This plant requires at least {LUX} of <style=\"KKeyword\">Light</style> to produce <style=\"KKeyword\">Oxygen</style>"
+msgstr "此植物需要至少 {LUX} 的<style=\"KKeyword\">光照</style>才能產生<style=\"KKeyword\">氧氣</style>"
 
 #. STRINGS.CREATURES.STATS.ROT.NAME
 msgctxt "STRINGS.CREATURES.STATS.ROT.NAME"
@@ -64727,13 +64772,13 @@ msgstr "<link=\"FIELDRATION\">營養口糧</link>"
 
 #. STRINGS.ITEMS.FOOD.FISHFOOD.DESC
 msgctxt "STRINGS.ITEMS.FOOD.FISHFOOD.DESC"
-msgid "A gourmet loaf of ground seeds and <link=\"WATER\">Water</link>, formulated to delight <link=\"PACU\">Pacus</link>."
-msgstr "由種子粉與<link=\"WATER\">水</link>混合而成的「精緻」飼料，專為討好<link=\"PACU\">帕庫</link>而調配。"
+msgid "A gourmet loaf of ground seeds and <link=\"WATER\">Water</link>, formulated to delight <link=\"PACUSPECIES\">Pacus</link>."
+msgstr "由種子粉與<link=\"WATER\">水</link>混合而成的「精緻」飼料，專為討好<link=\"PACUSPECIES\">帕庫</link>而調配。"
 
 #. STRINGS.ITEMS.FOOD.FISHFOOD.NAME
 msgctxt "STRINGS.ITEMS.FOOD.FISHFOOD.NAME"
-msgid "<link=\"PACUSPECIES\">Pacu Treat</link>"
-msgstr "<link=\"PACUSPECIES\">帕庫魚食</link>"
+msgid "<link=\"PACUTREAT\">Pacu Treat</link>"
+msgstr "<link=\"PACUTREAT\">帕庫魚食</link>"
 
 #. STRINGS.ITEMS.FOOD.FISHFOOD.RECIPEDESC
 msgctxt "STRINGS.ITEMS.FOOD.FISHFOOD.RECIPEDESC"
