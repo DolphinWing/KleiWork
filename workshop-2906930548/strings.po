@@ -29228,7 +29228,7 @@ msgstr "第三天"
 #. STRINGS.CODEX.INVESTIGATIONS.DLC5_FRIDGENOTE.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FRIDGENOTE.BODY.CONTAINER1"
 msgid "pls stop stealing my Jell-O cups. I brought one for each day we're down here and there's only two of us aboard so it's not like I don't notice - thx\n\np.s. the blue ones aren't even Jell-O"
-msgstr "別再偷我的果凍杯了，拜託。我為這趟下潛的每一天都帶了一個，船上就我們兩個人，我又不是不會發現——謝啦。\n\附註：藍色的那個根本不是果凍。"
+msgstr "別再偷我的果凍杯了，拜託。我為這趟下潛的每一天都帶了一個，船上就我們兩個人，我又不是不會發現——謝啦。\n\n附註：藍色的那個根本不是果凍。"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC5_FRIDGENOTE.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_FRIDGENOTE.SUBTITLE"
@@ -31313,7 +31313,7 @@ msgstr ""
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUBMERGIBLE.TITLE
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUBMERGIBLE.TITLE"
 msgid "<link=\"REQUIREMENTCLASSSUBMERGIBLE\">Submergible</link>"
-msgstr "<link=\"REQUIREMENTCLASSSUBMERGIBLE\">可潛水</link>"
+msgstr "<link=\"REQUIREMENTCLASSSUBMERGIBLE\">可淹沒</link>"
 
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.TOILETTYPE.DESCRIPTION
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.TOILETTYPE.DESCRIPTION"
@@ -34468,7 +34468,7 @@ msgstr "招募自由潛水員：{0}/{1}"
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_B_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_B_DESCRIPTION"
 msgid "My Duplicants found the survivor exploring the Kelp Forest biome. She appears to be hungry.\n\nMy Duplicants offered to exchange {AMOUNT1} of sushi for {AMOUNT2} Gasket and 2 Gum Palm seeds, and she agreed.\n\nI must enable delivery to ensure she receives our package."
-msgstr "我的複製人在探索藻林生態時發現了倖存者。她看起來很餓。\n\n我的複製人提議用 {AMOUNT1} 份壽司交換 {AMOUNT2} 個墊圈與 2 顆橡膠椰子種子，而她答應了。\n\n我必須啟用運送，以確保她能收到我們的包裹。"
+msgstr "我的複製人在探索藻林生態時發現了倖存者。她看起來很餓。\n\n我的複製人提議用 {AMOUNT1} 份壽司交換 {AMOUNT2} 個墊圈與 2 顆黏膠棕櫚種子，而她答應了。\n\n我必須啟用運送，以確保她能收到我們的包裹。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_B_TITLE
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_B_TITLE"
@@ -37593,17 +37593,17 @@ msgstr "<link=\"GASGRASS\">瓦斯草</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.BIG_VOLCANO.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.BIG_VOLCANO.DESC"
 msgid "A massive volcano that periodically erupts with molten <link=\"MAGMA\">Magma</link>."
-msgstr "定期噴發熔融<link=\"STEAM\">岩漿</link>的巨大火山。"
+msgstr "一座巨大火山，會定期噴發出熔融的<link=\"STEAM\">岩漿</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.BIG_VOLCANO.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.BIG_VOLCANO.NAME"
 msgid "<link=\"GEYSERGENERICBIGVOLCANO\">Volcano</link>"
-msgstr "<link=\"GEYSERGENERICBIGVOLCANO\">火山口</link>"
+msgstr "<link=\"GEYSERGENERICBIGVOLCANO\">大火山口</link>"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.CHLORINE_GAS.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.CHLORINE_GAS.DESC"
 msgid "A highly pressurized vent that periodically erupts with warm <link=\"CHLORINEGAS\">Chlorine Gas</link>."
-msgstr "定期噴發溫暖<link=\"CHLORINEGAS\">氯氣</link>的高壓噴口。"
+msgstr "一個噴口，處於高度加壓狀態且會定期噴發出溫暖的<link=\"CHLORINEGAS\">氯氣</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.CHLORINE_GAS.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.CHLORINE_GAS.NAME"
@@ -37613,7 +37613,7 @@ msgstr "<link=\"GEYSERGENERICCHLORINEGAS\">氯氣噴口</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.CHLORINE_GAS_COOL.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.CHLORINE_GAS_COOL.DESC"
 msgid "A highly pressurized vent that periodically erupts with cool <link=\"CHLORINEGAS\">Chlorine Gas</link>."
-msgstr "定期噴發低溫<link=\"CHLORINEGAS\">氯氣</link>的高壓噴口。"
+msgstr "一個噴口，處於高度加壓狀態且會定期噴發出低溫的<link=\"CHLORINEGAS\">氯氣</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.CHLORINE_GAS_COOL.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.CHLORINE_GAS_COOL.NAME"
@@ -37623,12 +37623,12 @@ msgstr "<link=\"GEYSERGENERICCHLORINEGASCOOL\">低溫氯氣噴口</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.DESC"
 msgid "A highly pressurized geyser that periodically erupts, spraying <link=\"STEAM\">Steam</link> and boiling hot <link=\"WATER\">Water</link>."
-msgstr "定期噴發<link=\"STEAM\">蒸氣</link>與非常熱的<link=\"WATER\">水</link>的高壓間歇泉。"
+msgstr "一個間歇泉，處於高度加壓狀態且會定期噴發，噴灑出<link=\"STEAM\">蒸氣</link>與滾燙的<link=\"WATER\">水</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.FILTHY_WATER.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.FILTHY_WATER.DESC"
 msgid "A highly pressurized vent that periodically erupts with boiling <link=\"DIRTYWATER\">Polluted Water</link>."
-msgstr "一個高壓排氣口，會週期性地噴發沸騰的<link=\"DIRTYWATER\">汙水</link>。"
+msgstr "一個噴口，處於高度加壓狀態且會定期噴發出<link=\"DIRTYWATER\">汙水</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.FILTHY_WATER.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.FILTHY_WATER.NAME"
@@ -37638,7 +37638,7 @@ msgstr "<link=\"GEYSERGENERICFILTHYWATER\">汙水噴口</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.HOT_CO2.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.HOT_CO2.DESC"
 msgid "A highly pressurized vent that periodically erupts with hot <link=\"CARBONDIOXIDE\">Carbon Dioxide</link>."
-msgstr "定期噴發高溫氣態的<link=\"CARBONDIOXIDE\">二氧化碳</link>高壓噴口。"
+msgstr "一個間歇泉，處於高度加壓狀態且會定期噴發出高溫的<link=\"CARBONDIOXIDE\">二氧化碳</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.HOT_CO2.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.HOT_CO2.NAME"
@@ -37648,7 +37648,7 @@ msgstr "<link=\"GEYSERGENERICHOTCO2\">二氧化碳噴口</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.HOT_HYDROGEN.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.HOT_HYDROGEN.DESC"
 msgid "A highly pressurized vent that periodically erupts with hot gaseous <link=\"HYDROGEN\">Hydrogen</link>."
-msgstr "定期噴發<link=\"HYDROGEN\">氫氣</link>的高壓噴口。"
+msgstr "一個噴口，處於高度加壓狀態且會定期噴發出高溫的<link=\"HYDROGEN\">氫</link>氣。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.HOT_HYDROGEN.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.HOT_HYDROGEN.NAME"
@@ -37658,7 +37658,7 @@ msgstr "<link=\"GEYSERGENERICHOTHYDROGEN\">氫氣噴口</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.HOT_PO2.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.HOT_PO2.DESC"
 msgid "A highly pressurized vent that periodically erupts with hot <link=\"CONTAMINATEDOXYGEN\">Polluted Oxygen</link>."
-msgstr "定期噴發<link=\"CONTAMINATEDOXYGEN\">汙氧</link>的高壓噴口。"
+msgstr "一個噴口，處於高度加壓狀態且會定期噴發出高溫的<link=\"CONTAMINATEDOXYGEN\">汙氧</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.HOT_PO2.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.HOT_PO2.NAME"
@@ -37668,7 +37668,7 @@ msgstr "<link=\"GEYSERGENERICHOTPO2\">高溫汙氧噴口</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.HOT_STEAM.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.HOT_STEAM.DESC"
 msgid "A highly pressurized vent that periodically erupts with scalding <link=\"STEAM\">Steam</link>."
-msgstr "定期噴發高溫<link=\"STEAM\">蒸氣</link>的高壓噴口。"
+msgstr "一個噴口，處於高度加壓狀態且會定期噴發出滾燙的<link=\"STEAM\">蒸氣</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.HOT_STEAM.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.HOT_STEAM.NAME"
@@ -37678,7 +37678,7 @@ msgstr "<link=\"GEYSERGENERICHOTSTEAM\">蒸氣噴口</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.HOT_WATER.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.HOT_WATER.DESC"
 msgid "A highly pressurized geyser that periodically erupts with hot <link=\"WATER\">Water</link>."
-msgstr "定期噴發熱<link=\"WATER\">水</link>的高壓間歇泉。"
+msgstr "一個噴泉，處於高度加壓狀態且會定期噴發出熱<link=\"WATER\">水</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.HOT_WATER.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.HOT_WATER.NAME"
@@ -37688,7 +37688,7 @@ msgstr "<link=\"GEYSERGENERICHOTWATER\">溫泉</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.LIQUID_CO2.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.LIQUID_CO2.DESC"
 msgid "A highly pressurized geyser that periodically erupts with boiling <link=\"LIQUIDCARBONDIOXIDE\">Liquid Carbon Dioxide</link>."
-msgstr "定期噴發低溫液態<link=\"LIQUIDCARBONDIOXIDE\">二氧化碳</link>的高壓間歇泉。"
+msgstr "一個噴泉，處於高度加壓狀態且會定期噴發出沸騰的<link=\"LIQUIDCARBONDIOXIDE\">二氧化碳</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.LIQUID_CO2.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.LIQUID_CO2.NAME"
@@ -37698,7 +37698,7 @@ msgstr "<link=\"GEYSERGENERICLIQUIDCO2\">二氧化碳噴泉</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.LIQUID_SULFUR.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.LIQUID_SULFUR.DESC"
 msgid "A highly pressurized geyser that periodically erupts with boiling <link=\"LIQUIDSULFUR\">Liquid Sulfur</link>."
-msgstr "定期噴發熱<link=\"LIQUIDSULFUR\">硫</link>的高壓間歇泉。"
+msgstr "一個噴泉，處於高度加壓狀態且會定期噴發出滾燙的<link=\"LIQUIDSULFUR\">液態硫</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.LIQUID_SULFUR.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.LIQUID_SULFUR.NAME"
@@ -37708,7 +37708,7 @@ msgstr "<link=\"GEYSERGENERICLIQUIDSULFUR\">液態硫噴泉</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.METHANE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.METHANE.DESC"
 msgid "A highly pressurized geyser that periodically erupts with hot <link=\"METHANE\">Natural Gas</link>."
-msgstr "定期噴發高溫<link=\"METHANE\">天然氣</link>的高壓間歇泉。"
+msgstr "一個噴泉，處於高度加壓狀態且會定期噴發出高溫的<link=\"METHANE\">天然氣</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.METHANE.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.METHANE.NAME"
@@ -37718,7 +37718,7 @@ msgstr "<link=\"GEYSERGENERICMETHANE\">天然氣噴泉</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_ALUMINUM.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_ALUMINUM.DESC"
 msgid "A large volcano that periodically erupts with <link=\"MOLTENALUMINUM\">Molten Aluminum</link>."
-msgstr "定期噴發熔融<link=\"MOLTENALUMINUM\">鋁</link>的大火山。"
+msgstr "一座大火山，會定期噴發出<link=\"MOLTENALUMINUM\">熔融鋁</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_ALUMINUM.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_ALUMINUM.NAME"
@@ -37728,7 +37728,7 @@ msgstr "<link=\"GEYSERGENERICMOLTENALUMINUM\">鋁火山</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_COBALT.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_COBALT.DESC"
 msgid "A large volcano that periodically erupts with <link=\"MOLTENCOBALT\">Molten Cobalt</link>."
-msgstr "定期噴發熔融<link=\"MOLTENCOBALT\">鈷</link>的大火山。"
+msgstr "一座大火山，會定期噴發出<link=\"MOLTENCOBALT\">熔融鈷</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_COBALT.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_COBALT.NAME"
@@ -37738,7 +37738,7 @@ msgstr "<link=\"GEYSERGENERICMOLTENCOBALT\">鈷火山</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_COPPER.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_COPPER.DESC"
 msgid "A large volcano that periodically erupts with <link=\"MOLTENCOPPER\">Molten Copper</link>."
-msgstr "定期噴發熔融<link=\"MOLTENCOPPER\">銅</link>的大火山。"
+msgstr "一座大火山，會定期噴發出<link=\"MOLTENCOPPER\">熔融銅</link>。\""
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_COPPER.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_COPPER.NAME"
@@ -37748,7 +37748,7 @@ msgstr "<link=\"GEYSERGENERICMOLTENCOPPER\">銅火山</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_GOLD.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_GOLD.DESC"
 msgid "A large volcano that periodically erupts with <link=\"MOLTENGOLD\">Molten Gold</link>."
-msgstr "定期噴發熔融<link=\"MOLTENGOLD\">金</link>的大火山。"
+msgstr "一座大火山，會定期噴發出<link=\"MOLTENGOLD\">熔融金</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_GOLD.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_GOLD.NAME"
@@ -37758,7 +37758,7 @@ msgstr "<link=\"GEYSERGENERICMOLTENGOLD\">金火山</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_IRON.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_IRON.DESC"
 msgid "A large volcano that periodically erupts with <link=\"MOLTENIRON\">Molten Iron</link>."
-msgstr "定期噴發熔融<link=\"MOLTENIRON\">鐵</link>的大火山。"
+msgstr "一座大火山，會定期噴發出<link=\"MOLTENIRON\">熔融鐵</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_IRON.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_IRON.NAME"
@@ -37768,7 +37768,7 @@ msgstr "<link=\"GEYSERGENERICMOLTENIRON\">鐵火山</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_NIOBIUM.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_NIOBIUM.DESC"
 msgid "A large volcano that periodically erupts with <link=\"NIOBIUM\">Niobium</link>."
-msgstr "定期噴發熔融<link=\"NIOBIUM\">鈮</link>的大火山。"
+msgstr "一座大火山，會定期噴發出<link=\"NIOBIUM\">鈮</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_NIOBIUM.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_NIOBIUM.NAME"
@@ -37778,7 +37778,7 @@ msgstr "<link=\"GEYSERGENERICMOLTENNIOBIUM\">鈮火山</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_TUNGSTEN.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_TUNGSTEN.DESC"
 msgid "A large volcano that periodically erupts with <link=\"MOLTENTUNGSTEN\">Molten Tungsten</link>."
-msgstr "定期噴發熔融<link=\"MOLTENTUNGSTEN\">鎢</link>的大火山。"
+msgstr "一座大火山，會定期噴發出<link=\"MOLTENTUNGSTEN\">熔融鎢</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_TUNGSTEN.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.MOLTEN_TUNGSTEN.NAME"
@@ -37788,12 +37788,12 @@ msgstr "<link=\"GEYSERGENERICMOLTENTUNGSTEN\">鎢火山</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.MURKY_BRINE.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.MURKY_BRINE.DESC"
 msgid "A highly pressurized vent that periodically erupts with boiling <link=\"MURKYBRINE\">Polluted Brine</link>."
-msgstr "一處高壓噴孔，定期噴出沸騰的<link=\"MURKYBRINE\">汙染濃鹽水</link>。"
+msgstr "一個噴口，處於高度加壓狀態且會定期噴發出滾燙的<link=\"MURKYBRINE\">汙染濃鹽水</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.MURKY_BRINE.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.MURKY_BRINE.NAME"
 msgid "<link=\"GEYSERGENERICMURKYBRINE\">Polluted Brine Vent</link>"
-msgstr "<link=\"GEYSERGENERICMURKYBRINE\">汙染濃鹽水噴泉</link>"
+msgstr "<link=\"GEYSERGENERICMURKYBRINE\">汙染濃鹽水噴口</link>"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.NAME"
@@ -37803,7 +37803,7 @@ msgstr "<link=\"GEYSER\">蒸氣噴泉</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.OIL_DRIP.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.OIL_DRIP.DESC"
 msgid "A fissure that periodically erupts with boiling <link=\"CRUDEOIL\">Crude Oil</link>."
-msgstr "小行星中的裂隙隨著沸騰而週期性地噴發<link=\"CRUDEOIL\">原油</link>。"
+msgstr "一處裂隙，會定期噴發出滾燙的<link=\"CRUDEOIL\">原油</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.OIL_DRIP.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.OIL_DRIP.NAME"
@@ -37813,7 +37813,7 @@ msgstr "<link=\"GEYSERGENERICOILDRIP\">原油裂縫</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.SALT_WATER.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.SALT_WATER.DESC"
 msgid "A highly pressurized geyser that periodically erupts with <link=\"SALTWATER\">Salt Water</link>."
-msgstr "定期噴發<link=\"SALTWATER\">鹽水</link>的高壓間歇泉。"
+msgstr "一個噴泉，處於高度加壓狀態且會定期噴發出<link=\"SALTWATER\">鹽水</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.SALT_WATER.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.SALT_WATER.NAME"
@@ -37823,7 +37823,7 @@ msgstr "<link=\"GEYSERGENERICSALTWATER\">鹽水噴泉</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.SLIMY_PO2.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.SLIMY_PO2.DESC"
 msgid "A highly pressurized vent that periodically erupts with warm <link=\"CONTAMINATEDOXYGEN\">Polluted Oxygen</link>."
-msgstr "定期噴發溫暖的<link=\"CONTAMINATEDOXYGEN\">汙氧</link>的高壓噴口。"
+msgstr "一個噴口，處於高度加壓狀態且會定期噴發出溫暖的<link=\"CONTAMINATEDOXYGEN\">汙氧</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.SLIMY_PO2.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.SLIMY_PO2.NAME"
@@ -37833,7 +37833,7 @@ msgstr "<link=\"GEYSERGENERICSLIMYPO2\">帶菌汙氧噴口</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.SLUSH_SALT_WATER.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.SLUSH_SALT_WATER.DESC"
 msgid "A highly pressurized geyser that periodically erupts with freezing <link=\"BRINE\">Brine</link>."
-msgstr "定期噴發低溫<link=\"BRINE\">濃鹽水</link>的高壓間歇泉。"
+msgstr "一個噴泉，處於高度加壓狀態且會定期噴發出極冰的<link=\"BRINE\">濃鹽水</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.SLUSH_SALT_WATER.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.SLUSH_SALT_WATER.NAME"
@@ -37843,7 +37843,7 @@ msgstr "<link=\"GEYSERGENERICSLUSHSALTWATER\">低溫鹽水噴泉</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.SLUSH_WATER.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.SLUSH_WATER.DESC"
 msgid "A highly pressurized geyser that periodically erupts with freezing <link=\"DIRTYWATER\">Polluted Water</link>."
-msgstr "定期噴發低溫<link=\"DIRTYWATER\">汙水</link>的高壓間歇泉。"
+msgstr "一個噴泉，處於高度加壓狀態且會定期噴發出極冰的<link=\"DIRTYWATER\">汙水</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.SLUSH_WATER.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.SLUSH_WATER.NAME"
@@ -37853,7 +37853,7 @@ msgstr "<link=\"GEYSERGENERICSLUSHWATER\">低溫汙水噴泉</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.SMALL_VOLCANO.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.SMALL_VOLCANO.DESC"
 msgid "A miniature volcano that periodically erupts with molten <link=\"MAGMA\">Magma</link>."
-msgstr "定期噴發熔融<link=\"MAGMA\">岩漿</link>的微型火山。"
+msgstr "一座微型火山，會定期噴發出熔融的<link=\"MAGMA\">岩漿</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.SMALL_VOLCANO.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.SMALL_VOLCANO.NAME"
@@ -37863,7 +37863,7 @@ msgstr "<link=\"GEYSERGENERICSMALLVOLCANO\">小火山口</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.SMALLREEFGEYSER.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.SMALLREEFGEYSER.DESC"
 msgid "An aquatic spring that periodically spouts highly pressurized <link=\"ELEMENTSLIQUID\">Liquid</link> drawn from its environment."
-msgstr "一種水泉，會定期噴出從周遭環境抽取的高壓<link=\"ELEMENTSLIQUID\">液體</link>。"
+msgstr "一種水生噴泉，會定期噴出從其周遭環境抽取的高度加壓<link=\"ELEMENTSLIQUID\">液體</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.SMALLREEFGEYSER.LIQUID_CONSUMPTION
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.SMALLREEFGEYSER.LIQUID_CONSUMPTION"
@@ -37878,7 +37878,7 @@ msgstr "<link=\"SMALLREEFGEYSER\">潮汐泉</link>"
 #. STRINGS.CREATURES.SPECIES.GEYSER.STEAM.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.STEAM.DESC"
 msgid "A highly pressurized vent that periodically erupts with <link=\"STEAM\">Steam</link>."
-msgstr "定期噴發<link=\"STEAM\">蒸氣</link>的高壓噴口。"
+msgstr "一個噴口，處於高度加壓狀態且會定期噴發出<link=\"STEAM\">蒸氣</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GEYSER.STEAM.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GEYSER.STEAM.NAME"
@@ -64653,12 +64653,12 @@ msgstr "可口的<link=\"BEANPLANTSEED\">小吃豆</link>與<link=\"GINGERCONFIG
 #. STRINGS.ITEMS.FOOD.DEEPFRIEDFISH.DESC
 msgctxt "STRINGS.ITEMS.FOOD.DEEPFRIEDFISH.DESC"
 msgid "Deep-fried fish cradled in a crunchy fin."
-msgstr "油炸的魚肉，包裹在酥脆的魚翅中。"
+msgstr "油炸魚肉依偎在酥脆的魚鰭之中。"
 
 #. STRINGS.ITEMS.FOOD.DEEPFRIEDFISH.NAME
 msgctxt "STRINGS.ITEMS.FOOD.DEEPFRIEDFISH.NAME"
 msgid "<link=\"DEEPFRIEDFISH\">Fish Taco</link>"
-msgstr "<link=\"DEEPFRIEDFISH\">魚塔可</link>"
+msgstr "<link=\"DEEPFRIEDFISH\">魚肉塔可</link>"
 
 #. STRINGS.ITEMS.FOOD.DEEPFRIEDFISH.RECIPEDESC
 msgctxt "STRINGS.ITEMS.FOOD.DEEPFRIEDFISH.RECIPEDESC"
@@ -64698,7 +64698,7 @@ msgstr "一疊鬆脆的<link=\"BEANPLANTSEED\">小吃豆</link>，已在<link=\"
 #. STRINGS.ITEMS.FOOD.DEEPFRIEDSHELLFISH.DESC
 msgctxt "STRINGS.ITEMS.FOOD.DEEPFRIEDSHELLFISH.DESC"
 msgid "A crispy deep-fried critter claw."
-msgstr "一份酥脆的油炸小動物爪。"
+msgstr "一份酥脆的油炸貝肉。"
 
 #. STRINGS.ITEMS.FOOD.DEEPFRIEDSHELLFISH.NAME
 msgctxt "STRINGS.ITEMS.FOOD.DEEPFRIEDSHELLFISH.NAME"
@@ -75133,7 +75133,7 @@ msgstr "<link=\"SPICEGRINDER\">香料研磨器</link>"
 #. STRINGS.ROOMS.CRITERIA.SUBMERGIBLE.CONFLICT_DESCRIPTION
 msgctxt "STRINGS.ROOMS.CRITERIA.SUBMERGIBLE.CONFLICT_DESCRIPTION"
 msgid "<link=\"REQUIREMENTCLASSSUBMERGIBLE\">Submergible</link>"
-msgstr "<link=\"REQUIREMENTCLASSSUBMERGIBLE\">可潛水</link>"
+msgstr "<link=\"REQUIREMENTCLASSSUBMERGIBLE\">可淹沒</link>"
 
 #. STRINGS.ROOMS.CRITERIA.SUBMERGIBLE.DESCRIPTION
 msgctxt "STRINGS.ROOMS.CRITERIA.SUBMERGIBLE.DESCRIPTION"
@@ -75143,7 +75143,7 @@ msgstr "淹沒於液體中時仍可運作"
 #. STRINGS.ROOMS.CRITERIA.SUBMERGIBLE.NAME
 msgctxt "STRINGS.ROOMS.CRITERIA.SUBMERGIBLE.NAME"
 msgid "<link=\"REQUIREMENTCLASSSUBMERGIBLE\">Submergible</link>"
-msgstr "<link=\"REQUIREMENTCLASSSUBMERGIBLE\">可潛水</link>"
+msgstr "<link=\"REQUIREMENTCLASSSUBMERGIBLE\">可淹沒</link>"
 
 #. STRINGS.ROOMS.CRITERIA.TOILETTYPE.CONFLICT_DESCRIPTION
 msgctxt "STRINGS.ROOMS.CRITERIA.TOILETTYPE.CONFLICT_DESCRIPTION"
@@ -77803,7 +77803,7 @@ msgstr "提升複製人的移動速度"
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.MUCUS_SECRETION
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.MUCUS_SECRETION"
 msgid "This critter secretes <style=\"KKeyword\">{Item}</style> at a rate of <style=\"produced\">{Rate}</style>"
-msgstr "此小動物將以 <style=\"produced\">{Rate}</style>的速率分泌 <style=\"KKeyword\">{Item}</style>"
+msgstr "此小動物將以 <style=\"produced\">{Rate}</style>的速率分泌<style=\"KKeyword\">{Item}</style>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.NOISE_POLLUTION_DECREASE
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.NOISE_POLLUTION_DECREASE"
