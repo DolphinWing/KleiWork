@@ -5,6 +5,7 @@
 * 2024/11/25 針對 2024 十一月的生活質量更新的 Unity 調整，升級到 .Net Framework 4.8
 * 2025/05/26 針對 2025 推出的史前行星包部分缺少的文字做更新。更新[粉圓體](https://github.com/justfont/open-huninn-font/releases/tag/v2.1) v2.1 (2024/09/19)
 * 2026/03/21 針對 2026 三月推出的 Unity 6/.netstandard 2.1 升級。
+* 2026/07/04 感謝 @yishan1331 幫忙修復因為新的 unity 6 版本的字型資源有誤造成 macOS 上的崩潰
 
 此為古靈精怪的 [字型模組](https://steamcommunity.com/sharedfiles/filedetails/?id=2119648603) 改良版，本包的原始碼請參考 [GitHub](https://github.com/DolphinWing/KleiWork/tree/master/workshop-3046440992)
 
