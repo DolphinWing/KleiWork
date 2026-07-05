@@ -34378,7 +34378,7 @@ msgstr "還需要更多探索"
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_A
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_A"
 msgid "Deliver {AMOUNT} Pearls"
-msgstr "運送 {AMOUNT} 顆珍珠"
+msgstr "運送 {AMOUNT}珍珠"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_A_HIDDEN
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.ACHIEVEMENTS.REQUIREMENT_NAME_A_HIDDEN"
@@ -34428,7 +34428,7 @@ msgstr "攜手並進"
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_DESCRIPTION"
 msgid "Success! My Duplicants harvested {AMOUNT1} pearls to offer to our potential future crewmate.\n\nWe now have {AMOUNT2} new gasket and 2 Flue Coral seeds to use as needed."
-msgstr "成功了！我的複製人收穫了 {AMOUNT1} 顆珍珠，準備獻給我們未來潛在的隊友。\n\n我們現在有 {AMOUNT2} 個新的密封墊和 2 個煙囪珊瑚種子，可根據需要使用。"
+msgstr "成功了！我的複製人收穫了 {AMOUNT1}珍珠，準備獻給我們未來潛在的隊友。\n\n我們現在有 {AMOUNT2} 個新的密封墊和 2 個煙囪珊瑚種子，可根據需要使用。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_TITLE
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_TITLE"
@@ -34438,7 +34438,7 @@ msgstr "招募自由潛水員：珍珠已交付"
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_DESCRIPTION"
 msgid "Success! We have produced {AMOUNT1} sushi to share with the survivor Duplicant as a gesture of goodwill.\n\nWe now have {AMOUNT2} new gasket and 2 Gum Palm seeds to use as needed."
-msgstr "成功了！我們生產了 {AMOUNT1} 份壽司與倖存的複製人分享，以表達我們的善意。\n\n我們現在有了 {AMOUNT2} 個新的密封墊和 2 個黏膠棕櫚種子，可根據需要使用。"
+msgstr "成功了！我們生產了 {AMOUNT1}壽司與倖存的複製人分享，以表達我們的善意。\n\n我們現在有了 {AMOUNT2} 個新的密封墊和 2 個黏膠棕櫚種子，可根據需要使用。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_TITLE
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_B_TITLE"
@@ -34448,7 +34448,7 @@ msgstr "招募自由潛水員：壽司已交付"
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_DESCRIPTION"
 msgid "Success! We have procured {AMOUNT1} caviar to offer to our splashy neighbour.\n\nWe now have {AMOUNT2} new gasket to use as needed."
-msgstr "成功了！我們取得了 {AMOUNT1} 份魚子醬，獻給我們這位愛玩水的鄰居。\n\n我們現在多出了 {AMOUNT2} 份新的密封墊，可按需使用。"
+msgstr "成功了！我們取得了 {AMOUNT1}魚子醬，獻給我們這位愛玩水的鄰居。\n\n我們現在多出了 {AMOUNT2} 份新的密封墊，可按需使用。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_TITLE
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_C_TITLE"
@@ -34458,7 +34458,7 @@ msgstr "招募自由潛水員：魚子醬已交付"
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_A_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_A_DESCRIPTION"
 msgid "My Duplicants found the survivor exploring the Reef biome. She seems fascinated by the Clampum.\n\nShe offered to trade us {AMOUNT1} Gasket and 2 Flue Coral seeds for {AMOUNT2} of its pearls.\n\nI must enable delivery to ensure we keep our end of this bargain."
-msgstr "我的複製人在探索珊瑚生態時發現了倖存者。她似乎對巨鉗貝很感興趣。\n\n她提出用 {AMOUNT1} 個墊圈與 2 顆煙囪珊瑚種子，來交換我們的 {AMOUNT2} 顆巨鉗貝珍珠。\n\n我必須啟用運送，以確保我們能履行這筆交易。"
+msgstr "我的複製人在探索珊瑚生態時發現了倖存者。她似乎對巨鉗貝很感興趣。\n\n她提出用 {AMOUNT1} 個墊圈與 2 顆煙囪珊瑚種子，來交換我們的 {AMOUNT2}巨鉗貝珍珠。\n\n我必須啟用運送，以確保我們能履行這筆交易。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_A_TITLE
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_A_TITLE"
@@ -34468,7 +34468,7 @@ msgstr "招募自由潛水員：{0}/{1}"
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_B_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_B_DESCRIPTION"
 msgid "My Duplicants found the survivor exploring the Kelp Forest biome. She appears to be hungry.\n\nMy Duplicants offered to exchange {AMOUNT1} of sushi for {AMOUNT2} Gasket and 2 Gum Palm seeds, and she agreed.\n\nI must enable delivery to ensure she receives our package."
-msgstr "我的複製人在探索藻林生態時發現了倖存者。她看起來很餓。\n\n我的複製人提議用 {AMOUNT1} 份壽司交換 {AMOUNT2} 個墊圈與 2 顆黏膠棕櫚種子，而她答應了。\n\n我必須啟用運送，以確保她能收到我們的包裹。"
+msgstr "我的複製人在探索藻林生態時發現了倖存者。她看起來很餓。\n\n我的複製人提議用 {AMOUNT1}壽司交換 {AMOUNT2} 個墊圈與 2 顆黏膠棕櫚種子，而她答應了。\n\n我必須啟用運送，以確保她能收到我們的包裹。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_B_TITLE
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_B_TITLE"
@@ -34478,7 +34478,7 @@ msgstr "招募自由潛水員：{0}/{1}"
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_C_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_C_DESCRIPTION"
 msgid "My Duplicants found the survivor exploring the Abyss biome. She has been observing our machinery and seems particularly intrigued by caviar.\n\nWe have agreed to exchange {AMOUNT1} of caviar for {AMOUNT2} Gasket.\n\nI must enable delivery to guarantee its fulfilment."
-msgstr "我的複製人在探索深淵生態時發現了倖存者。她一直在觀察我們的機具，似乎對魚子醬特別感興趣。\n\n我們已同意用 {AMOUNT1} 份魚子醬交換 {AMOUNT2} 個墊圈。\n\n我必須啟用運送，以確保這項協議得以履行。"
+msgstr "我的複製人在探索深淵生態時發現了倖存者。她一直在觀察我們的機具，似乎對魚子醬特別感興趣。\n\n我們已同意用 {AMOUNT1}魚子醬交換 {AMOUNT2} 個墊圈。\n\n我必須啟用運送，以確保這項協議得以履行。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_C_TITLE
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_START_POI_C_TITLE"
