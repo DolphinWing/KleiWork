@@ -15413,7 +15413,7 @@ msgstr "輻射粒子是進行材料科學研究的必要條件。"
 #. STRINGS.BUILDINGS.PREFABS.HIGHENERGYPARTICLESPAWNER.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.HIGHENERGYPARTICLESPAWNER.EFFECT"
 msgid "Attracts nearby <link=\"RADIATION\">Radiation</link> to generate Radbolts.\n\nEmits generated Radbolts in the direction of your choosing when the set Radbolt threshold is reached.\n\nRadbolts collected will gradually decay while this building is disabled."
-msgstr "吸引附近的<link=\"RADIATION\">輻射</link>，以產生輻射子。\n\n當達到設定的輻射粒子臨界值時，會朝選定的方向發射生成的輻射粒子。\n\n當此建築物停用時，收集到的輻射粒子將會逐漸衰減。"
+msgstr "吸引附近的<link=\"RADIATION\">輻射</link>，以產生輻射粒子。\n\n當達到設定的輻射粒子臨界值時，會朝選定的方向發射生成的輻射粒子。\n\n當此建築物停用時，收集到的輻射粒子將會逐漸衰減。"
 
 #. STRINGS.BUILDINGS.PREFABS.HIGHENERGYPARTICLESPAWNER.LOGIC_PORT
 msgctxt "STRINGS.BUILDINGS.PREFABS.HIGHENERGYPARTICLESPAWNER.LOGIC_PORT"
