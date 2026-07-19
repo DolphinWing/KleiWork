@@ -26208,27 +26208,27 @@ msgstr "請求植入資料庫"
 #. STRINGS.CODEX.B6_AICONTROL.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.B6_AICONTROL.BODY.CONTAINER2"
 msgid "<indent=5%>Director,\n\nEngineering has requested the brainmaps of all blueprint subjects for the development of a podlinked software and I am reluctant to oblige.\n\nI believe they are seeking a way to exert temporary control over implanted subjects, and I fear this avenue of research may be ethically unsound.</indent>"
-msgstr "<indent=5%>\n總監，\n\n工程部要求將所有藍圖受測者的腦圖，用於開發此設備的連接軟體，但是我不願意。\n\n我相信他們正在尋找一種方式，用於暫時控製被植入的受測者，我擔心這種研究是不道德的。\n</indent>"
+msgstr "<indent=5%>總監，\n\n工程部要求提供所有藍圖受測者的腦圖，以開發與此載體相連的軟體，但我對此要求感到遲疑。\n\n我相信他們試圖尋找某種方式，對植入受測者進行暫時性的控制，我擔憂此研究方向有違倫理。</indent>"
 
 #. STRINGS.CODEX.B6_AICONTROL.BODY.CONTAINER3
 msgctxt "STRINGS.CODEX.B6_AICONTROL.BODY.CONTAINER3"
 msgid "<indent=5%>Doctor,\n\nI understand your concerns, but engineering's newest project was conceived under my supervision.\n\nPlease give them any materials they require to move forward with their research.</indent>"
-msgstr "<indent=5%>\n博士，\n\n我了解你的疑慮，但工程師的最新計劃是在我的監督下構思的。\n\n請提供給他們進行研究所需的任何材料。</indent>"
+msgstr "<indent=5%>博士，\n\n我明白你的疑慮，但工程部那項最新的專案是在我的監督下構思的。\n\n請務必提供他們進行研究所需的一切材料。</indent>"
 
 #. STRINGS.CODEX.B6_AICONTROL.BODY.CONTAINER4
 msgctxt "STRINGS.CODEX.B6_AICONTROL.BODY.CONTAINER4"
 msgid "<indent=5%>You can't be serious, Jacquelyn?</indent>"
-msgstr "<indent=5%>你不能太嚴肅，Jacquelyn？</indent>"
+msgstr "<indent=5%>Jacquelyn，你不是認真的吧？</indent>"
 
 #. STRINGS.CODEX.B6_AICONTROL.BODY.CONTAINER5
 msgctxt "STRINGS.CODEX.B6_AICONTROL.BODY.CONTAINER5"
 msgid "<indent=5%>You signed off on cranial chip implantation. Why would this be where you draw the line?\n\nIt would be an invaluable safety measure and protect your printing subjects.</indent>"
-msgstr "<indent=5%>你簽署了腦晶片植入。為何如此，你的底線在那？\n\n它是非常保貴的安全措施，用來保護你列印的實驗體。</indent>"
+msgstr "<indent=5%>你簽署了腦晶片植入。為何偏偏在這件事上劃下界線？\n\n這將是一項極具價值的安全措施，能保護你的複製人。</indent>"
 
 #. STRINGS.CODEX.B6_AICONTROL.BODY.CONTAINER6
 msgctxt "STRINGS.CODEX.B6_AICONTROL.BODY.CONTAINER6"
 msgid "<indent=5%>It just gives me a bad feeling.\n\nI can't stop you if you insist on going forward with this, but I'd ask that you remove me from the project.</indent>"
-msgstr "<indent=5%>我有一種不好的感覺。\n\n如果你執意要做，我無法阻止你，但我要求你將我從計劃踢除。</indent>"
+msgstr "<indent=5%>這總給我一種不安的感覺。\n\n如果你執意要推進此計畫，我也無法阻止，但我要求將我撤出該專案。</indent>"
 
 #. STRINGS.CODEX.B6_AICONTROL.BODY.EMAILHEADER1
 msgctxt "STRINGS.CODEX.B6_AICONTROL.BODY.EMAILHEADER1"
