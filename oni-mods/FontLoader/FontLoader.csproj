@@ -11,8 +11,8 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     
     <AssemblyTitle>FontLoader</AssemblyTitle>
-    <Version>2.2.0</Version>
-    <FileVersion>2026.321.0</FileVersion>
+    <Version>2.3.0</Version>
+    <FileVersion>2026.721.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
