@@ -6,11 +6,12 @@
 * 2025/05/26 針對 2025 推出的史前行星包部分缺少的文字做更新。更新[粉圓體](https://github.com/justfont/open-huninn-font/releases/tag/v2.1) v2.1 (2024/09/19)
 * 2026/03/21 針對 2026 三月推出的 Unity 6/.netstandard 2.1 升級。
 * 2026/07/04 感謝 @yishan1331 幫忙修復因為新的 unity 6 版本的字型資源有誤造成 macOS 上的崩潰
+* 2026/07/21 針對 Linux 系統修正 unity 6 的字型素材。(在 Ubuntu 24.04 上測試)
 
 此為古靈精怪的 [字型模組](https://steamcommunity.com/sharedfiles/filedetails/?id=2119648603) 改良版，本包的原始碼請參考 [GitHub](https://github.com/DolphinWing/KleiWork/tree/master/workshop-3046440992)
 
 #### 手動更換字型檔的步驟
-- 安裝 Unity 6.0 和 TextMesh Pro，並匯出字型素材。
+- 安裝 Unity 6.0 (6000.0.70f1)和 TextMesh Pro，並匯出字型素材。
   - 參考 qbane 寫的 [README](https://github.com/qbane/ONI-Mods)。
 - 將字型素材放到 Steam 模組的資料夾。(以 Windows 系統為例：我的文件/Klei/OxygenNotIncluded/mods/Steam/3046440992。)
   - Windows 的放到 Assets/win 資料夾內。
