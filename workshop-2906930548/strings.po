@@ -46187,8 +46187,8 @@ msgstr "病菌恐慌"
 
 #. STRINGS.DUPLICANTS.CONGENITALTRAITS.MINNOW.DESC
 msgctxt "STRINGS.DUPLICANTS.CONGENITALTRAITS.MINNOW.DESC"
-msgid "This Duplicant is practically amphibious"
-msgstr "這名複製人幾乎可以兩棲"
+msgid "This Duplicant is practically amphibious\n\n• +4 to all attributes when swimming"
+msgstr "這名複製人簡直和兩棲動物沒兩樣\n\n• 游泳時所有屬性 +4"
 
 #. STRINGS.DUPLICANTS.CONGENITALTRAITS.MINNOW.NAME
 msgctxt "STRINGS.DUPLICANTS.CONGENITALTRAITS.MINNOW.NAME"
@@ -64782,8 +64782,8 @@ msgstr "<link=\"PACUTREAT\">帕庫魚食</link>"
 
 #. STRINGS.ITEMS.FOOD.FISHFOOD.RECIPEDESC
 msgctxt "STRINGS.ITEMS.FOOD.FISHFOOD.RECIPEDESC"
-msgid "A gourmet loaf of ground seeds, specially formulated for Pacus."
-msgstr "由種子粉壓製而成的「精緻」飼料塊，專為帕庫調配。"
+msgid "A gourmet loaf of ground seeds, specially formulated for <link=\"PACUSPECIES\">Pacus</link>."
+msgstr "由種子粉壓製而成的「精緻」飼料塊，專為<link=\"PACUSPECIES\">帕庫</link>調配。"
 
 #. STRINGS.ITEMS.FOOD.FISHMEAT.DESC
 msgctxt "STRINGS.ITEMS.FOOD.FISHMEAT.DESC"
@@ -65892,8 +65892,8 @@ msgstr "資料磁片的原始資料源自於探索，可以是複製人探索新
 
 #. STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.PLANKTON_CORAL_PRODUCT.DESC
 msgctxt "STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.PLANKTON_CORAL_PRODUCT.DESC"
-msgid "A chunk of hardened mineral.\n\nIt can be eaten by <link=\"PARROTFISHSPECIES\">Beakons</link>."
-msgstr "一塊硬化的礦物質。\n\n可作為<link=\"PARROTFISHSPECIES\">燈喙魚</link>的食物。"
+msgid "A chunk of hardened mineral.\n\nIt can be eaten by <link=\"PARROTFISHSPECIES\">Beakons</link>, or processed into various useful items."
+msgstr "一塊硬化的礦物質。\n\n可作為<link=\"PARROTFISHSPECIES\">燈喙魚</link>的食物，或加工成各種有用的物品。"
 
 #. STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.PLANKTON_CORAL_PRODUCT.NAME
 msgctxt "STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.PLANKTON_CORAL_PRODUCT.NAME"
