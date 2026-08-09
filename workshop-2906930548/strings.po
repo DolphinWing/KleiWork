@@ -18533,7 +18533,7 @@ msgstr "<link=\"MICROBEMUSHER\">食物壓製器</link>"
 #. STRINGS.BUILDINGS.PREFABS.MICROBEMUSHER.FACADES.GREEN_MUSH.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.MICROBEMUSHER.FACADES.GREEN_MUSH.DESC"
 msgid "Edible colloids for dinner <i>again</i>?"
-msgstr "晚餐<b>又</b>吃可食用膠體？"
+msgstr "晚餐<i>又</i>吃可食用膠體？"
 
 #. STRINGS.BUILDINGS.PREFABS.MICROBEMUSHER.FACADES.GREEN_MUSH.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.MICROBEMUSHER.FACADES.GREEN_MUSH.NAME"
@@ -18583,7 +18583,7 @@ msgstr "複製人可以抹上一層鹹乳蠟，以提高他們在運載管道中
 #. STRINGS.BUILDINGS.PREFABS.MILKFATSEPARATOR.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.MILKFATSEPARATOR.EFFECT"
 msgid "Refines <link=\"MILK\">Brackene</link> into <link=\"BRINE\">Brine</link> and <link=\"MILKFAT\">Brackwax</link>, and <link=\"FISHMILK\">Ovolene</link> into <link=\"CAVIAR\">Caviar</link> and <link=\"MUCUS\">Mucin</link>."
-msgstr "將<link=\"MILK\">鹹乳</link>精煉為<link=\"BRINE\">濃鹽水</link>和<link=\"MILKFAT\">鹹乳蠟</link>，並將<link=\"FISHMILK\">卵脂</link>精煉為<link=\"CAVIAR\">魚子醬</link>和<link=\"MUCUS\">黏蛋白</link>。"
+msgstr "將<link=\"MILK\">鹹乳</link>精煉為<link=\"BRINE\">濃鹽水</link>和<link=\"MILKFAT\">鹹乳蠟</link>，並將<link=\"FISHMILK\">卵漿</link>精煉為<link=\"CAVIAR\">魚子醬</link>和<link=\"MUCUS\">黏蛋白</link>。"
 
 #. STRINGS.BUILDINGS.PREFABS.MILKFATSEPARATOR.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.MILKFATSEPARATOR.NAME"
@@ -37558,7 +37558,7 @@ msgstr "津甜玉米稈可產出<link=\"GARDENFOODPLANT\">津甜玉米</link>，
 #. STRINGS.CREATURES.SPECIES.GARDENFOODPLANT.DOMESTICATEDDESC
 msgctxt "STRINGS.CREATURES.SPECIES.GARDENFOODPLANT.DOMESTICATEDDESC"
 msgid "This plant produces edible <link=\"GARDENFOODPLANTFOOD\">Sweatcorn</link>s."
-msgstr "這種植物可產出可食用的<link=\"GARDENFOODPLANT\">津甜玉米</link>。"
+msgstr "這株植物可產出可食用的<link=\"GARDENFOODPLANT\">津甜玉米</link>。"
 
 #. STRINGS.CREATURES.SPECIES.GARDENFOODPLANT.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.GARDENFOODPLANT.NAME"
@@ -38828,7 +38828,7 @@ msgstr "藤壺星是一種以<link=\"COQUINA\">殼灰岩</link>為食的水生�
 #. STRINGS.CREATURES.SPECIES.PLANKTONCORAL.DOMESTICATEDDESC
 msgctxt "STRINGS.CREATURES.SPECIES.PLANKTONCORAL.DOMESTICATEDDESC"
 msgid "This coral produces <link=\"PHOSPHORITE\">Phosphorite</link>."
-msgstr "這種珊瑚可產出<link=\"PHOSPHORITE\">磷礦</link>。"
+msgstr "這株珊瑚可產出<link=\"PHOSPHORITE\">磷礦</link>。"
 
 #. STRINGS.CREATURES.SPECIES.PLANKTONCORAL.LIQUID_CONSUMPTION
 msgctxt "STRINGS.CREATURES.SPECIES.PLANKTONCORAL.LIQUID_CONSUMPTION"
@@ -48028,7 +48028,7 @@ msgstr "這名複製人最近喝了<style=\"KKeyword\">鹹乳</style>。這幫�
 #. STRINGS.DUPLICANTS.MODIFIERS.EATINGCALORIES.NAME
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.EATINGCALORIES.NAME"
 msgid "Eating"
-msgstr "食用"
+msgstr "正在吃"
 
 #. STRINGS.DUPLICANTS.MODIFIERS.EDIBLE0.NAME
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.EDIBLE0.NAME"
@@ -64973,7 +64973,7 @@ msgstr "<link=\"LETTUCE\">生菜</link>"
 #. STRINGS.ITEMS.FOOD.LETTUCE.RECIPEDESC
 msgctxt "STRINGS.ITEMS.FOOD.LETTUCE.RECIPEDESC"
 msgid "Edible roughage from a <link=\"SEALETTUCE\">Waterweed</link>."
-msgstr "來自<link=\"SEALETTUCE\">水草</link>可食用的部分。"
+msgstr "來自<link=\"SEALETTUCE\">水草</link>的可食用部分。"
 
 #. STRINGS.ITEMS.FOOD.LIGHTBUGEGG.DESC
 msgctxt "STRINGS.ITEMS.FOOD.LIGHTBUGEGG.DESC"
