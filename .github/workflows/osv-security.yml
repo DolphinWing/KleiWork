@@ -11,22 +11,21 @@ on:
       - 'tools/desktop-app/gradle/**'
       - 'tools/desktop-app/build.gradle.kts'
       - 'tools/desktop-app/settings.gradle.kts'
-      - 'tools/desktop-app/app/build.gradle.kts'
       - 'tools/desktop-app/gradle.properties'
 
 jobs:
   osv-scan:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: tools/desktop-app
     permissions:
       security-events: write
       contents: read
 
     steps:
     - uses: actions/checkout@v6
-
-    - name: Get short SHA
-      id: short_sha
-      run: echo "sha_short=$(git rev-parse --short=6 HEAD)" >> $GITHUB_OUTPUT
 
     - name: Set up JDK 17
       uses: actions/setup-java@v5
@@ -67,9 +66,10 @@ jobs:
         ./osv-scanner --lockfile=gradle.lockfile \
           --format=sarif \
           --output-file=results.sarif
+        ls -lh results.sarif
 
     - name: Upload SARIF to GitHub Security Tab
-      if: always()
+      if: always() && hashFiles('tools/desktop-app/results.sarif') != ''
       uses: github/codeql-action/upload-sarif@v4
       with:
-        sarif_file: results.sarif
+        sarif_file: tools/desktop-app/results.sarif
