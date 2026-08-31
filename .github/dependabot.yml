@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: "gradle"
+    directory: "/tools/desktop-app/"
+    schedule:
+      interval: "weekly"
+      day: "friday"
+      time: "00:00"
+      timezone: "Asia/Taipei"
+    commit-message:
+      prefix: "build(deps)"
+    open-pull-requests-limit: 3
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
