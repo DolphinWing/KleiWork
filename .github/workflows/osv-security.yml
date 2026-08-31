@@ -1,0 +1,75 @@
+name: OSV Security Audit
+
+on:
+  schedule:
+    # Every Friday at 04:00 CST/TST (Thursday 20:00 UTC)
+    - cron: '0 20 * * 4'
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'tools/desktop-app/gradle/**'
+      - 'tools/desktop-app/build.gradle.kts'
+      - 'tools/desktop-app/settings.gradle.kts'
+      - 'tools/desktop-app/app/build.gradle.kts'
+      - 'tools/desktop-app/gradle.properties'
+
+jobs:
+  osv-scan:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      contents: read
+
+    steps:
+    - uses: actions/checkout@v6
+
+    - name: Get short SHA
+      id: short_sha
+      run: echo "sha_short=$(git rev-parse --short=6 HEAD)" >> $GITHUB_OUTPUT
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v5
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v5
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+
+    - name: Generate Dependency Locks (Release Runtime Only)
+      run: |
+        cat > /tmp/deps-lock.init.gradle << 'EOF'
+        allprojects {
+          dependencyLocking {
+            lockAllConfigurations()
+          }
+        }
+        EOF
+        ./gradlew :dependencies --configuration runtimeClasspath --write-locks --no-daemon \
+          --init-script /tmp/deps-lock.init.gradle
+
+    - name: Debug - List generated lockfiles
+      if: always()
+      run: find . -name "*.lockfile" -o -name "gradle.lockfile" 2>/dev/null || echo "No lockfiles found"
+
+    - name: Install and Run OSV-Scanner CLI
+      id: osv_scan
+      continue-on-error: true
+      run: |
+        curl -sSfL \
+          https://github.com/google/osv-scanner/releases/latest/download/osv-scanner_linux_amd64 \
+          -o osv-scanner
+        chmod +x osv-scanner
+        ./osv-scanner --lockfile=gradle.lockfile \
+          --format=sarif \
+          --output-file=results.sarif
+
+    - name: Upload SARIF to GitHub Security Tab
+      if: always()
+      uses: github/codeql-action/upload-sarif@v4
+      with:
+        sarif_file: results.sarif

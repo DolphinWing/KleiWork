@@ -20,6 +20,7 @@ workshop-*/config.json
 # desktop-app tmp files
 tools/desktop-app/dst_cht.po*
 tools/desktop-app/configs.ini
+tools/desktop-app/*gradle.lockfile
 
 # os temp files
 Thumbs.*
