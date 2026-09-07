@@ -9,20 +9,20 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.ArrowBackIosNew
-import androidx.compose.material.icons.rounded.Close
-import androidx.compose.material.icons.rounded.DarkMode
-import androidx.compose.material.icons.rounded.DeleteForever
-import androidx.compose.material.icons.rounded.Drafts
-import androidx.compose.material.icons.rounded.ImportExport
-import androidx.compose.material.icons.rounded.LightMode
-import androidx.compose.material.icons.rounded.MoreVert
-import androidx.compose.material.icons.rounded.Refresh
-import androidx.compose.material.icons.rounded.Report
-import androidx.compose.material.icons.rounded.Save
-import androidx.compose.material.icons.rounded.Search
-import androidx.compose.material.icons.rounded.Settings
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_arrow_back_ios_new
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_close
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_dark_mode
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_delete_forever
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_drafts
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_import_export
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_light_mode
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_more_vert
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_refresh
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_report
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_save
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_search
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_settings
+import org.jetbrains.compose.resources.painterResource
 import androidx.compose.material3.DockedSearchBar
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
@@ -100,7 +100,7 @@ fun OniTranslatorTopBar(
                 ),
                 actions = {
                     TooltipIconButton(
-                        icon = Icons.Rounded.Search,
+                        painter = painterResource(Res.drawable.ic_search),
                         tooltip = stringResource(Res.string.button_search)
                     ) {
                         onEvent(AppEvent.Search.ActiveChange(true))
@@ -108,7 +108,7 @@ fun OniTranslatorTopBar(
 
                     val isDark = state.uiState.darkTheme ?: isSystemInDarkTheme()
                     TooltipIconButton(
-                        icon = if (isDark) Icons.Rounded.LightMode else Icons.Rounded.DarkMode,
+                        painter = painterResource(if (isDark) Res.drawable.ic_light_mode else Res.drawable.ic_dark_mode),
                         tooltip = stringResource(Res.string.tooltip_theme_toggle)
                     ) {
                         onEvent(AppEvent.Ui.ChangeTheme(!isDark))
@@ -130,7 +130,7 @@ private fun MoreActionsMenu(state: AppState, onEvent: (AppEvent) -> Unit) {
     Box {
         IconButton(onClick = { menuExpanded = true }) {
             Icon(
-                Icons.Rounded.MoreVert,
+                painterResource(Res.drawable.ic_more_vert),
                 contentDescription = stringResource(Res.string.content_description_more_actions)
             )
         }
@@ -144,7 +144,7 @@ private fun MoreActionsMenu(state: AppState, onEvent: (AppEvent) -> Unit) {
                     onEvent(AppEvent.File.Save(false)) // false for regular save
                     menuExpanded = false
                 },
-                leadingIcon = { Icon(Icons.Rounded.Save, contentDescription = null) }
+                leadingIcon = { Icon(painterResource(Res.drawable.ic_save), contentDescription = null) }
             )
             DropdownMenuItem(
                 text = { Text(stringResource(Res.string.menu_draft)) },
@@ -152,7 +152,7 @@ private fun MoreActionsMenu(state: AppState, onEvent: (AppEvent) -> Unit) {
                     onEvent(AppEvent.File.SaveDraft)
                     menuExpanded = false
                 },
-                leadingIcon = { Icon(Icons.Rounded.Drafts, contentDescription = null) }
+                leadingIcon = { Icon(painterResource(Res.drawable.ic_drafts), contentDescription = null) }
             )
             DropdownMenuItem(
                 text = { Text(stringResource(Res.string.menu_delete_draft)) },
@@ -163,7 +163,7 @@ private fun MoreActionsMenu(state: AppState, onEvent: (AppEvent) -> Unit) {
                 enabled = state.hasDraft,
                 leadingIcon = {
                     Icon(
-                        Icons.Rounded.DeleteForever,
+                        painterResource(Res.drawable.ic_delete_forever),
                         contentDescription = null,
                         // tint = MaterialTheme.colorScheme.error
                     )
@@ -175,7 +175,7 @@ private fun MoreActionsMenu(state: AppState, onEvent: (AppEvent) -> Unit) {
                     onEvent(AppEvent.File.RefreshSource)
                     menuExpanded = false
                 },
-                leadingIcon = { Icon(Icons.Rounded.Refresh, contentDescription = null) }
+                leadingIcon = { Icon(painterResource(Res.drawable.ic_refresh), contentDescription = null) }
             )
             DropdownMenuItem(
                 text = { Text(stringResource(Res.string.menu_export_glossary)) },
@@ -183,7 +183,7 @@ private fun MoreActionsMenu(state: AppState, onEvent: (AppEvent) -> Unit) {
                     onEvent(AppEvent.File.ExportGlossary)
                     menuExpanded = false
                 },
-                leadingIcon = { Icon(Icons.Rounded.ImportExport, contentDescription = null) }
+                leadingIcon = { Icon(painterResource(Res.drawable.ic_import_export), contentDescription = null) }
             )
             DropdownMenuItem(
                 text = { Text(stringResource(Res.string.menu_show_logs)) },
@@ -191,7 +191,7 @@ private fun MoreActionsMenu(state: AppState, onEvent: (AppEvent) -> Unit) {
                     onEvent(AppEvent.Ui.ShowLogWindow)
                     menuExpanded = false
                 },
-                leadingIcon = { Icon(Icons.Rounded.Report, contentDescription = null) }
+                leadingIcon = { Icon(painterResource(Res.drawable.ic_report), contentDescription = null) }
             )
             DropdownMenuItem(
                 text = { Text(stringResource(Res.string.menu_settings)) },
@@ -199,7 +199,7 @@ private fun MoreActionsMenu(state: AppState, onEvent: (AppEvent) -> Unit) {
                     onEvent(AppEvent.Ui.ShowConfig)
                     menuExpanded = false
                 },
-                leadingIcon = { Icon(Icons.Rounded.Settings, contentDescription = null) }
+                leadingIcon = { Icon(painterResource(Res.drawable.ic_settings), contentDescription = null) }
             )
         }
     }
@@ -240,7 +240,7 @@ private fun SearchTopBar(
                         leadingIcon = {
                             IconButton(onClick = { onActiveChange(false) }) {
                                 Icon(
-                                    Icons.Rounded.ArrowBackIosNew,
+                                    painterResource(Res.drawable.ic_arrow_back_ios_new),
                                     contentDescription = stringResource(Res.string.content_description_back)
                                 )
                             }
@@ -252,7 +252,7 @@ private fun SearchTopBar(
                                     onSearchTextChange("")
                                 }) {
                                     Icon(
-                                        Icons.Rounded.Close,
+                                        painterResource(Res.drawable.ic_close),
                                         contentDescription = stringResource(Res.string.content_description_clear)
                                     )
                                 }

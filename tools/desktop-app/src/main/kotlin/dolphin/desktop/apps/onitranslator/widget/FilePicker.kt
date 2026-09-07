@@ -2,10 +2,13 @@ package dolphin.desktop.apps.onitranslator.widget
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.FolderOpen
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.content_description_open_file_chooser
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_folder_open
+import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -73,7 +76,10 @@ fun FilePicker(
                         }
                     }
                 }) {
-                    Icon(Icons.Rounded.FolderOpen, contentDescription = "Open File Chooser")
+                    Icon(
+                        painter = painterResource(Res.drawable.ic_folder_open),
+                        contentDescription = stringResource(Res.string.content_description_open_file_chooser),
+                    )
                 }
             }
         )

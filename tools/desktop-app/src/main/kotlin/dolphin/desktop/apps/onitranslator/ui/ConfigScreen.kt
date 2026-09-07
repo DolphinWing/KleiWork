@@ -9,8 +9,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Done
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -30,6 +28,8 @@ import androidx.compose.ui.unit.dp
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.button_apply
 import dolphin.desktop.apps.onitranslator.generated.resources.button_cancel
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_done
+import org.jetbrains.compose.resources.painterResource
 import dolphin.desktop.apps.onitranslator.generated.resources.draft_path
 import dolphin.desktop.apps.onitranslator.generated.resources.github_root
 import dolphin.desktop.apps.onitranslator.generated.resources.glossary_dir
@@ -213,7 +213,7 @@ fun ConfigScreen(
                 onClick = { onApply(configs) },
                 enabled = !isStringMapError
             ) {
-                Icon(Icons.Rounded.Done, contentDescription = null)
+                Icon(painterResource(Res.drawable.ic_done), contentDescription = null)
                 Spacer(Modifier.width(4.dp))
                 Text(stringResource(Res.string.button_apply))
             }

@@ -2,7 +2,7 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import java.text.SimpleDateFormat
 import java.util.Date
 
-val releaseAppVersion: String by project
+val releaseAppVersion: String = providers.gradleProperty("releaseAppVersion").get()
 val releaseAppRevision = SimpleDateFormat("yy.M.d").format(Date()) ?: "0"
 
 plugins {
@@ -12,7 +12,7 @@ plugins {
     alias(libs.plugins.versions.plugin)
 }
 
-val projectGroup: String by project
+val projectGroup: String = providers.gradleProperty("projectGroup").get()
 group = projectGroup
 version = releaseAppVersion
 
@@ -26,7 +26,6 @@ dependencies {
     implementation(compose.desktop.currentOs)
     // implementation(compose.material)
     implementation(compose.material3)
-    implementation(compose.materialIconsExtended)
     implementation(compose.preview)
     implementation(compose.uiTooling)
     implementation(compose.components.resources)

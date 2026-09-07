@@ -1,4 +1,4 @@
-@file:OptIn(ExperimentalMaterial3Api::class)
+@file:OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class)
 
 package dolphin.desktop.apps.onitranslator.ui
 
@@ -17,14 +17,13 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.AutoAwesome
-import androidx.compose.material.icons.rounded.ContentCopy
-import androidx.compose.material.icons.rounded.ContentPaste
-import androidx.compose.material.icons.rounded.Link
-import androidx.compose.material.icons.rounded.SettingsBackupRestore
-import androidx.compose.material.icons.rounded.Visibility
-import androidx.compose.material.icons.rounded.VisibilityOff
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_auto_awesome
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_content_copy
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_content_paste
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_link
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_settings_backup_restore
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_visibility
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_visibility_off
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -49,6 +48,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.Clipboard
 import androidx.compose.ui.platform.LocalClipboard
@@ -273,7 +273,7 @@ private fun EditorActionRow(
 
         if (editedText.shouldPeek(diagnostic)) {
             TooltipIconButton(
-                icon = if (isPeeking) Icons.Rounded.VisibilityOff else Icons.Rounded.Visibility,
+                painter = painterResource(if (isPeeking) Res.drawable.ic_visibility_off else Res.drawable.ic_visibility),
                 tooltip = if (isPeeking) stringResource(Res.string.tooltip_peek_close) else stringResource(Res.string.tooltip_peek_open),
                 position = TooltipAnchorPosition.Above,
                 onClick = { onPeekingChange(!isPeeking) }
@@ -281,7 +281,7 @@ private fun EditorActionRow(
         }
 
         TooltipIconButton(
-            icon = Icons.Rounded.AutoAwesome,
+            painter = painterResource(Res.drawable.ic_auto_awesome),
             tooltip = stringResource(Res.string.tooltip_smart_paste),
             position = TooltipAnchorPosition.Above,
             onClick = {
@@ -301,7 +301,7 @@ private fun EditorActionRow(
 
         if (backupText != null) {
             TooltipIconButton(
-                icon = Icons.Rounded.SettingsBackupRestore,
+                painter = painterResource(Res.drawable.ic_settings_backup_restore),
                 tooltip = stringResource(Res.string.tooltip_undo_paste),
                 position = TooltipAnchorPosition.Above,
                 onClick = {
@@ -426,14 +426,14 @@ private fun ReferenceView(
             onCopyToClipboard?.let { listener ->
                 if (links.count() > 0) {
                     TooltipIconButton(
-                        icon = Icons.Rounded.Link,
+                        painter = painterResource(Res.drawable.ic_link),
                         tooltip = stringResource(Res.string.tooltip_show_link),
                     ) {
                         linkSelector = !linkSelector
                     }
                 }
                 TooltipIconButton(
-                    icon = Icons.Rounded.ContentCopy,
+                    painter = painterResource(Res.drawable.ic_content_copy),
                     tooltip = stringResource(Res.string.tooltip_copy_this_text),
                 ) {
                     listener.invoke("")
@@ -441,7 +441,7 @@ private fun ReferenceView(
             }
             onReplace?.let { listener ->
                 TooltipIconButton(
-                    icon = Icons.Rounded.ContentPaste,
+                    painter = painterResource(Res.drawable.ic_content_paste),
                     tooltip = stringResource(Res.string.tooltip_use_this_text),
                     onClick = listener,
                 )
@@ -560,7 +560,7 @@ private fun LinkSelectorContent(links: Sequence<MatchResult>, onSelected: (Strin
                     Text(link)
                 }
                 IconButton(onClick = { onSelected("<link=\\\"${link}\\\"></link>") }) {
-                    Icon(Icons.Rounded.Link, contentDescription = null)
+                    Icon(painterResource(Res.drawable.ic_link), contentDescription = null)
                 }
             }
         }

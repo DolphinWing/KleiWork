@@ -22,11 +22,11 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.AssignmentTurnedIn
-import androidx.compose.material.icons.rounded.Refresh
-import androidx.compose.material.icons.rounded.Search
-import androidx.compose.material.icons.rounded.SensorWindow
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_assignment_turned_in
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_refresh
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_search
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_sensor_window
+import org.jetbrains.compose.resources.painterResource
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -104,7 +104,7 @@ fun EntryBrowser(
                     verticalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
                     Icon(
-                        Icons.Rounded.AssignmentTurnedIn,
+                        painterResource(Res.drawable.ic_assignment_turned_in),
                         contentDescription = null,
                         modifier = Modifier.width(64.dp).height(64.dp),
                         tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.3f)
@@ -127,7 +127,7 @@ fun EntryBrowser(
                             onClick = { onEvent(AppEvent.File.RefreshSource) },
                             contentPadding = PaddingValues(horizontal = 24.dp, vertical = 12.dp)
                         ) {
-                            Icon(Icons.Rounded.Refresh, contentDescription = null)
+                            Icon(painterResource(Res.drawable.ic_refresh), contentDescription = null)
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(stringResource(Res.string.button_refresh))
                         }
@@ -136,7 +136,7 @@ fun EntryBrowser(
                             onClick = { onEvent(AppEvent.Search.ActiveChange(true)) },
                             contentPadding = PaddingValues(horizontal = 24.dp, vertical = 12.dp)
                         ) {
-                            Icon(Icons.Rounded.Search, contentDescription = null)
+                            Icon(painterResource(Res.drawable.ic_search), contentDescription = null)
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(stringResource(Res.string.button_search))
                         }
@@ -244,7 +244,7 @@ private fun EntryItemView(
                     if (diag.hasIssue) {
                         val tint = if (diag.hasMismatch) OniColor.Warning else OniColor.Highlight
                         Icon(
-                            Icons.Rounded.SensorWindow,
+                            painterResource(Res.drawable.ic_sensor_window),
                             contentDescription = stringResource(Res.string.content_description_tag_sensor_warning),
                             tint = tint,
                             modifier = Modifier.padding(horizontal = 4.dp).width(14.dp).height(14.dp)

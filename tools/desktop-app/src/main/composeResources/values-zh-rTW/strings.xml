@@ -89,4 +89,5 @@
     <string name="content_description_back">返回</string>
     <string name="content_description_clear">清除</string>
     <string name="content_description_more_actions">更多選項</string>
+    <string name="content_description_open_file_chooser">開啟檔案選擇器</string>
 </resources>

@@ -23,8 +23,8 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Close
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_close
+import org.jetbrains.compose.resources.painterResource
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -352,7 +352,7 @@ fun NisbetPeekDrawer(
                     )
                     IconButton(onClick = onDismiss, modifier = Modifier.size(24.dp)) {
                         Icon(
-                            Icons.Rounded.Close,
+                            painterResource(Res.drawable.ic_close),
                             contentDescription = stringResource(Res.string.button_close),
                             tint = MaterialTheme.colorScheme.onSurfaceVariant
                         )
