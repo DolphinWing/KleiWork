@@ -55,7 +55,7 @@ Thanks those developers who have done brilliant work on these mods
 
 ### Internal work
 
-DstTranslator is a tool to convert translation document. For internal use only. I also use the tool to study Compose UI.
+OniTranslator is a tool to convert translation document. For internal use only. I also use the tool to study Compose UI.
 * [desktop-app](tools/desktop-app) runs on Linux and Windows [![Desktop CI](https://github.com/DolphinWing/KleiWork/actions/workflows/desktop.yml/badge.svg)](https://github.com/DolphinWing/KleiWork/actions/workflows/desktop.yml)
 * [android-app](tools/android-app) runs on Android and is deprecated.
 

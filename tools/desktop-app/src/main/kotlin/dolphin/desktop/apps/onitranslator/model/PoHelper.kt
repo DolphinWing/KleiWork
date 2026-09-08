@@ -175,7 +175,7 @@ class PoHelper(
         // Apply custom refinery rules
         newStr = textRefinery.refactor(newStr)
         if (shouldRefineQuotes) {
-            newStr = textRefinery?.refineQuotes(newStr) ?: newStr
+            newStr = textRefinery.refineQuotes(newStr)
         }
 
         return PoEntry(

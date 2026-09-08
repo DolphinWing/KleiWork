@@ -8523,7 +8523,7 @@ msgstr "未展示物品"
 #. STRINGS.BUILDING.STATUSITEMS.PEDESTALNOITEMDISPLAYED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.PEDESTALNOITEMDISPLAYED.TOOLTIP"
 msgid "This building must display an object in order to be counted as a <style=\"KKeyword\">Decor building</style> for a room"
-msgstr "此建築物必須展示一個物品，才能被計為房間的 <style=\"KKeyword\">裝飾建築</style>"
+msgstr "此建築物必須展示一個物品，才能被計為房間的<style=\"KKeyword\">裝飾建築</style>"
 
 #. STRINGS.BUILDING.STATUSITEMS.PENDINGDECONSTRUCTION.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.PENDINGDECONSTRUCTION.NAME"
@@ -8778,7 +8778,7 @@ msgstr "儲存：{Stored}"
 #. STRINGS.BUILDING.STATUSITEMS.RATIONBOXCONTENTS.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.RATIONBOXCONTENTS.TOOLTIP"
 msgid "This box contains <b>{Stored}</b> of <style=\"KKeyword\">Food</style>"
-msgstr "這個箱內有 <b>{Stored}</b> 的 <style=\"KKeyword\">食物</style>"
+msgstr "這個箱內有 <b>{Stored}</b> 的<style=\"KKeyword\">食物</style>"
 
 #. STRINGS.BUILDING.STATUSITEMS.REACTORMELTDOWN.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.REACTORMELTDOWN.NAME"
@@ -15708,7 +15708,7 @@ msgstr "一扇移動緩慢的門，關閉時表現最佳。"
 #. STRINGS.BUILDINGS.PREFABS.INSULATEDDOOR.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.INSULATEDDOOR.EFFECT"
 msgid "Significantly reduces <link=\"HEAT\">Temperature</link> exchange between climate-controlled rooms."
-msgstr "顯著減少溫控房間之間的 <link=\"HEAT\">溫度</link> 交換。"
+msgstr "顯著減少溫控房間之間的<link=\"HEAT\">溫度</link>交換。"
 
 #. STRINGS.BUILDINGS.PREFABS.INSULATEDDOOR.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.INSULATEDDOOR.NAME"
@@ -24343,7 +24343,7 @@ msgstr "通風的木門結合了風格與功能。"
 #. STRINGS.BUILDINGS.PREFABS.WOODENDOOR.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.WOODENDOOR.EFFECT"
 msgid "Encloses areas without blocking <link=\"ELEMENTSLIQUID\">Liquid</link> or <link=\"ELEMENTSGAS\">Gas</link> flow.\n\nWild <link=\"CREATURES\">Critters</link> cannot pass through doors."
-msgstr "圍合區域，但不會阻礙<link=\"ELEMENTSLIQUID\">液體</link>或<link=\"ELEMENTSGAS\">氣體</link> 的流動。\n\n野外的<link=\"CREATURES\">小動物</link>無法穿過門。"
+msgstr "圍合區域，但不會阻礙<link=\"ELEMENTSLIQUID\">液體</link>或<link=\"ELEMENTSGAS\">氣體</link>的流動。\n\n野外的<link=\"CREATURES\">小動物</link>無法穿過門。"
 
 #. STRINGS.BUILDINGS.PREFABS.WOODENDOOR.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.WOODENDOOR.NAME"
@@ -24353,7 +24353,7 @@ msgstr "<link=\"WOODENDOOR\">柳條門</link>"
 #. STRINGS.BUILDINGS.PREFABS.WOODGASGENERATOR.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.WOODGASGENERATOR.DESC"
 msgid "Wood burners are small and easy to maintain, but produce a fair amount of heat."
-msgstr "木材發電機是小型與容易維持的，但會產生大量的熱。"
+msgstr "木材發電機是小型且容易維持的，但會產生大量的熱。"
 
 #. STRINGS.BUILDINGS.PREFABS.WOODGASGENERATOR.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.WOODGASGENERATOR.EFFECT"
@@ -27423,7 +27423,7 @@ msgstr "低裝飾會增加複製人的<link=\"STRESS\">壓力</link>。值得慶
 #. STRINGS.CODEX.DECORSYSTEM.PARAGRAPH_2
 msgctxt "STRINGS.CODEX.DECORSYSTEM.PARAGRAPH_2"
 msgid "Many things have an effect on the Decor value of a tile. A building's effect is expressed as a strength value and a radius. Often that effect is positive, but many buildings also lower the decor value of an area too. <link=\"PLANTS\">Plants</link>, <link=\"CREATURES\">Critters</link>, and <link=\"BUILDCATEGORYFURNITURE\">Furniture</link> often increase decor while industrial buildings, debris, and rot often decrease it. Duplicants experience the combined decor of all objects affecting a tile.\n\nThe <link=\"PRICKLEGRASS\">Bluff Briar</link> has a decor value of 25 and a radius of 4 tiles. \nThe <link=\"MICROBEMUSHER\">Microbe Musher</link> has a decor value of -15 and a radius of 3 tiles. \nThe result of placing a <link=\"MICROBEMUSHER\">Microbe Musher</link> next to a <link=\"PRICKLEGRASS\">Bluff Briar</link> would be a combined decor value of 10.\n\n"
-msgstr "許多事物都會對格子的裝飾值產生影響。建築物的影響以強度值和範圍來表示。通常這個影響是正向的，但許多建築也會降低該區域的裝飾值。<link=\"PLANTS\">植物</link>、<link=\"CREATURES\">動物</link>與<link=\"BUILDCATEGORYFURNITURE\">家具</link>通常會增加裝飾，而工業建築、掉落物與腐壞物通常會減少裝飾。複製人的感受是格子內所有物件效果的總和。\n\n<link=\"PRICKLEGRASS\">魅惑棘</link>的裝飾值 25，影響範圍 4 格。\n<link=\"MICROBEMUSHER\">食物壓製器</link> 的裝飾值 -15，影響範圍 3 格。\n如果<link=\"MICROBEMUSHER\">食物壓製器</link>旁，擺放著<link=\"PRICKLEGRASS\">魅惑棘</link>，那麼最後的裝飾值總和為 10 的裝飾值。\n\n"
+msgstr "許多事物都會對格子的裝飾值產生影響。建築物的影響以強度值和範圍來表示。通常這個影響是正向的，但許多建築也會降低該區域的裝飾值。<link=\"PLANTS\">植物</link>、<link=\"CREATURES\">動物</link>與<link=\"BUILDCATEGORYFURNITURE\">家具</link>通常會增加裝飾，而工業建築、掉落物與腐壞物通常會減少裝飾。複製人的感受是格子內所有物件效果的總和。\n\n<link=\"PRICKLEGRASS\">魅惑棘</link>的裝飾值 25，影響範圍 4 格。\n<link=\"MICROBEMUSHER\">食物壓製器</link>的裝飾值 -15，影響範圍 3 格。\n如果<link=\"MICROBEMUSHER\">食物壓製器</link>旁，擺放著<link=\"PRICKLEGRASS\">魅惑棘</link>，那麼最後的裝飾值總和為 10 的裝飾值。\n\n"
 
 #. STRINGS.CODEX.DECORSYSTEM.PARAGRAPH_3
 msgctxt "STRINGS.CODEX.DECORSYSTEM.PARAGRAPH_3"
@@ -29243,7 +29243,7 @@ msgstr "冰箱便條"
 #. STRINGS.CODEX.INVESTIGATIONS.DLC5_HOAX.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_HOAX.BODY.CONTAINER1"
 msgid "Acclaimed alumnae of Elion University of Science and Technology are speaking out against academic malfeasance in the world of theoretical physics.\n\nJackie Stern and Olivia Broussard, co-valedictorians of last year's graduating class, recently revealed that one of the articles they co-authored under Dr. Emil Schleichen's supervision was, in fact, a demonstrative scholarly hoax. The two women are accusing Dr. Schleichen of building his career on ideas plagiarized from his PhD students.\n\n\"Professors like him claim to be passionate about innovation,\" Stern declared, in a recording sent to more than a dozen scientific media outlets. \"Yet they make it impossible for others to establish their own reputations and access funding for the research projects that could hold the answer to humanity's survival.\"\n\nStern and Broussard also denounced the lack of critical lens applied to papers attached to such notable names as Dr. Schleichen's. \"We intentionally featured several debunked scientific theories, none of which the editors questioned,\" says Broussard.\n\nEditors of <i>The Journal of Theoretical Physics</i> did not respond to our requests for comment.\n\nDr. Schleichen has also declined to be interviewed, though the Dean of EUST published a formal statement indicating that Dr. Schleichen is currently on paid leave while the administration investigates the matter.\n\nEUST also indicated that Stern and Broussard may face repercussions for publicly undermining the university's reputation."
-msgstr "伊萊恩科技大學（Elion University of Science and Technology, EUST）的知名女校友正起而反對理論物理學界的學術不端行為。\n\nJackie Stern 與 Olivia Broussard 作為去年畢業班的並列畢業生代表，近日披露她們在 Emil Schleichen 博士指導下合著的一篇論文，實際上是一場示範性的學術騙局。這兩位女性指控 Schleichen 博士的學術生涯完全是建立在剽竊其博士生創意的基礎上。\n\n「像他這樣的教授嘴上說著熱衷於創新，」 Stern 在一段傳送給十餘家科學媒體的錄音中表示，「卻讓其他人無法建立自己的學術聲譽，也無法為那些可能關係到人類存續的研究專案爭取資助。」\n\nStern 與 Broussard 同樣譴責了對掛名如 Schleichen 博士這種知名學者名下的論文缺乏批判性審視的現狀。「我們刻意在論文中安插了多項早已被證偽的科學理論，編輯們對此卻無一提出質疑，」 Broussard 表示。\n\n<i>《理論物理學期刊》</i> 的編輯未回應置評請求。\n\nSchleichen 博士同樣拒絕了採訪，不過 EUST 的院長發表了一份正式聲明，指出 Schleichen 博士目前正處於帶薪休假狀態，校方行政部門正在對此事進行調查。\n\nEUST 亦表示，Stern 與 Broussard 或因公開損害大學聲譽而面臨後續處分。"
+msgstr "伊萊恩科技大學（Elion University of Science and Technology, EUST）的知名女校友正起而反對理論物理學界的學術不端行為。\n\nJackie Stern 與 Olivia Broussard 作為去年畢業班的並列畢業生代表，近日披露她們在 Emil Schleichen 博士指導下合著的一篇論文，實際上是一場示範性的學術騙局。這兩位女性指控 Schleichen 博士的學術生涯完全是建立在剽竊其博士生創意的基礎上。\n\n「像他這樣的教授嘴上說著熱衷於創新，」 Stern 在一段傳送給十餘家科學媒體的錄音中表示，「卻讓其他人無法建立自己的學術聲譽，也無法為那些可能關係到人類存續的研究專案爭取資助。」\n\nStern 與 Broussard 同樣譴責了對掛名如 Schleichen 博士這種知名學者名下的論文缺乏批判性審視的現狀。「我們刻意在論文中安插了多項早已被證偽的科學理論，編輯們對此卻無一提出質疑，」 Broussard 表示。\n\n<i>《理論物理學期刊》</i>的編輯未回應置評請求。\n\nSchleichen 博士同樣拒絕了採訪，不過 EUST 的院長發表了一份正式聲明，指出 Schleichen 博士目前正處於帶薪休假狀態，校方行政部門正在對此事進行調查。\n\nEUST 亦表示，Stern 與 Broussard 或因公開損害大學聲譽而面臨後續處分。"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC5_HOAX.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC5_HOAX.SUBTITLE"
@@ -30453,7 +30453,7 @@ msgstr "在基地中，有許多的建築都需要使用電力才能運作。不
 #. STRINGS.CODEX.POWER.PARAGRAPH_2
 msgctxt "STRINGS.CODEX.POWER.PARAGRAPH_2"
 msgid "Several buildings can generate power. Duplicants can run on the <link=\"MANUALGENERATOR\">Manual Generator</link> to generate clean power. Once generated, power can be consumed by buildings or stored in a <link=\"BATTERY\">Battery</link> to prevent waste. Any generated power that is not consumed or stored will be wasted. Batteries and Generators tend to produce a significant amount of <link=\"HEAT\">Heat</link> while active.\n\nPower can also be stored in portable <link=\"ELECTROBANK\">Power Banks</link>.\n\n"
-msgstr "一些建築可以產生電力。複製人可以在<link=\"MANUALGENERATOR\">人力發電機</link>上跑步產生乾淨的電力。產生的電力可以提供給建築消耗或儲存在<link=\"BATTERY\">電池</link>中避免浪費。任何沒有消耗或儲存的電力都會被浪費掉。電池和發電機在啟動時都會產生一定<link=\"HEAT\">熱量</link>。\n\n電力也能被儲存在可攜帶的 <link=\"ELECTROBANK\">行動電源</link>中。\n\n"
+msgstr "一些建築可以產生電力。複製人可以在<link=\"MANUALGENERATOR\">人力發電機</link>上跑步產生乾淨的電力。產生的電力可以提供給建築消耗或儲存在<link=\"BATTERY\">電池</link>中避免浪費。任何沒有消耗或儲存的電力都會被浪費掉。電池和發電機在啟動時都會產生一定<link=\"HEAT\">熱量</link>。\n\n電力也能被儲存在可攜帶的<link=\"ELECTROBANK\">行動電源</link>中。\n\n"
 
 #. STRINGS.CODEX.POWER.PARAGRAPH_3
 msgctxt "STRINGS.CODEX.POWER.PARAGRAPH_3"
@@ -40823,7 +40823,7 @@ msgstr "引誘"
 #. STRINGS.CREATURES.STATUSITEMS.CONSIDERINGLURE.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.CONSIDERINGLURE.TOOLTIP"
 msgid "This critter is tempted to bite a nearby <style=\"KKeyword\">Lure</style>"
-msgstr "這隻小動物試圖咬住附近的 <style=\"KKeyword\">誘餌</style>"
+msgstr "這隻小動物試圖咬住附近的<style=\"KKeyword\">誘餌</style>"
 
 #. STRINGS.CREATURES.STATUSITEMS.CONTAMINATEDATMOSPHERE.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.CONTAMINATEDATMOSPHERE.NAME"
@@ -56663,7 +56663,7 @@ msgstr "<link=\"COPPER\">銅</link>"
 #. STRINGS.ELEMENTS.COPPERGAS.DESC
 msgctxt "STRINGS.ELEMENTS.COPPERGAS.DESC"
 msgid "(Cu) Copper Gas is a conductive <link=\"METAL\">Metal</link> heated into a <link=\"ELEMENTSGAS\">Gas</link> state."
-msgstr "(Cu) 銅是一種導電的 <link=\"METAL\">金屬</link>被加熱到<link=\"ELEMENTSGAS\">氣體</link>狀態。"
+msgstr "(Cu) 銅是一種導電的<link=\"METAL\">金屬</link>被加熱到<link=\"ELEMENTSGAS\">氣體</link>狀態。"
 
 #. STRINGS.ELEMENTS.COPPERGAS.NAME
 msgctxt "STRINGS.ELEMENTS.COPPERGAS.NAME"
@@ -57443,7 +57443,7 @@ msgstr "這種材料建造而成的建築物，將會繼承所列出的屬性"
 #. STRINGS.ELEMENTS.MATERIAL_MODIFIERS.TOOLTIP.EXCELLENT_RADIATION_SHIELD
 msgctxt "STRINGS.ELEMENTS.MATERIAL_MODIFIERS.TOOLTIP.EXCELLENT_RADIATION_SHIELD"
 msgid "<style=\"KKeyword\">Excellent Radiation Shield</style> radiation has a hard time passing through materials with a high <style=\"KKeyword\">Radiation Absorption Factor</style> value. \n\nRadiation Absorption Factor: {1}"
-msgstr "<style=\"KKeyword\">出色的輻射護盾</style>輻射難以通過具有高<style=\"KKeyword\">輻射吸收係數</style> 的材質。\n\n輻射吸收係數：{1}"
+msgstr "<style=\"KKeyword\">出色的輻射護盾</style>輻射難以通過具有高<style=\"KKeyword\">輻射吸收係數</style>的材質。\n\n輻射吸收係數：{1}"
 
 #. STRINGS.ELEMENTS.MATERIAL_MODIFIERS.TOOLTIP.HIGH_SPECIFIC_HEAT_CAPACITY
 msgctxt "STRINGS.ELEMENTS.MATERIAL_MODIFIERS.TOOLTIP.HIGH_SPECIFIC_HEAT_CAPACITY"
@@ -101378,7 +101378,7 @@ msgstr "反應質量目標"
 #. STRINGS.UI.UISIDESCREENS.NUCLEAR_REACTOR_SIDE_SCREEN.TOOLTIP
 msgctxt "STRINGS.UI.UISIDESCREENS.NUCLEAR_REACTOR_SIDE_SCREEN.TOOLTIP"
 msgid "Duplicants will attempt to keep the reactor supplied with <style=\"KKeyword\">{0}{1}</style> of <style=\"KKeyword\">{2}</style>"
-msgstr "複製人會試著維持反應爐供應 <style=\"KKeyword\">{0}{1}</style> 的 <style=\"KKeyword\">{2}</style>"
+msgstr "複製人會試著維持反應爐供應 <style=\"KKeyword\">{0}{1}</style> 的<style=\"KKeyword\">{2}</style>"
 
 #. STRINGS.UI.UISIDESCREENS.OIL_WELL_CAP_SIDE_SCREEN.TITLE
 msgctxt "STRINGS.UI.UISIDESCREENS.OIL_WELL_CAP_SIDE_SCREEN.TITLE"
