@@ -3,9 +3,8 @@ updates:
   - package-ecosystem: "gradle"
     directory: "/tools/desktop-app/"
     schedule:
-      interval: "weekly"
-      day: "friday"
-      time: "00:00"
+      interval: "monthly"
+      time: "05:35"
       timezone: "Asia/Taipei"
     commit-message:
       prefix: "build(deps)"
