@@ -293,7 +293,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
 
     private suspend fun refreshDataSource() = withContext(Dispatchers.IO) {
         val filtered = helper?.buildChangeList()?.mapNotNull { requestEditorData(it) } ?: emptyList()
-        val list = filtered.map { it.target.changed }
+        val list = filtered.filter { it.target.changed > 0 }.map { it.target.key }
         val hasDraft = helper?.hasDraft() ?: false
         _state.update {
             it.copy(

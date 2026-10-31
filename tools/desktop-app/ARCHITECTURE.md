@@ -76,6 +76,7 @@
     *   `configs`: 設定檔資料。
     *   `logs`: 歷史日誌 (`List<LogEntry>`)。
     *   `filteredList`: 當前顯示的編輯列表 (`EditorData`)。
+    *   `changedList`: 本次工作階段 (Session) 實際修改過的 Key 清單 (`List<String>`)。
     *   `hasDraft`: 目前硬碟上是否存在實體草稿檔。
     *   `uiState`: 包含下方的 UI 狀態。
 *   **`UiState`**: 純 UI 相關的短暫狀態。
@@ -124,10 +125,12 @@
 
 1.  **待辦模式 (Default / Diff Mode)**
     *   **觸發時機**：搜尋模式未啟用時。
+    *   **頂端狀態欄 (Toolbar Status)**：顯示「全部: %1$d, 已變更: %2$d」，分別對應待辦項目總數 (`filteredList.size`) 與本次工作階段實際已翻譯項目數 (`changedList.size`)。
     *   **視覺標記**：
         *   `MODIFIED`: 內容與正式檔 `PoSave` 不同時顯示。
         *   `NEW`: 範本中新增的 Key。
         *   `Draft Chip`: 下方顯示草稿檔中的原始內容，供比對。
+        *   **卡片修改狀態**：由各項目實體之 `target.changed > 0` 獨立驅動卡片高亮邊框，解耦平行陣列索引依賴。
 
 2.  **全覽模式 (Search / Library Mode)**
     *   **觸發時機**：啟用搜尋模式 (`isActive = true`)。
@@ -162,6 +165,10 @@
 *   **行為安全優化**：
     *   「刪除草稿」僅移除硬碟實體檔案，**保留記憶體中的編輯進度**，避免做白工。
     *   選單按鈕會根據硬碟上是否存在草稿檔自動切換 `Enabled` 狀態。
+*   **Companion Sidecar 跨階段進度還原**：
+    *   **伴隨檔案**：草稿儲存時，同步在暫存目錄寫入 `strings.po.keys`（Line-delimited Plain Text，記錄已被使用者編輯過之 Key 清單）。
+    *   **無縫還原**：跨天重新啟動載入草稿時，由伴隨檔讀取 Key 清單並重設 `entry.changed > 0`，精確還原「已變更」統計與卡片高亮狀態。
+    *   **原子化清理**：當儲存正式檔或點選刪除草稿時，伴隨檔與草稿 PO 一併清除，徹底杜絕髒狀態殘留。
 
 ### 4.8. 品質保證 (Testing)
 

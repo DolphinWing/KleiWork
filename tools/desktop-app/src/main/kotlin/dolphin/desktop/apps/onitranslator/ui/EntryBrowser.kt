@@ -155,7 +155,7 @@ fun EntryBrowser(
                 itemsIndexed(list) { index, entry ->
                     val isSearchMode = state.uiState.searchState.isActive
                     val originalIndex = if (isSearchMode) -1 else index
-                    val changedValue = if (isSearchMode) 0L else state.changedList.getOrNull(index) ?: 0L
+                    val changedValue = if (isSearchMode) 0L else entry.target.changed
                     val selected = state.uiState.editorData == entry
                     EntryItemView(
                         data = entry,

@@ -11,8 +11,8 @@ data class AppState(
     val configs: Configs = Configs(),
     // The current list of editor entries being displayed (after filtering/searching)
     val filteredList: List<EditorData> = emptyList(),
-    // IDs of entries that have been modified but not yet committed to file
-    val changedList: List<Long> = emptyList(),
+    // Keys of entries that have been modified in this session
+    val changedList: List<String> = emptyList(),
     val logs: List<LogEntry> = emptyList(),
     val appVersion: String = "0.0.0",
     val hasDraft: Boolean = false,

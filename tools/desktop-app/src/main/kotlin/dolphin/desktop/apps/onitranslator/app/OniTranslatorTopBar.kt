@@ -91,7 +91,7 @@ fun OniTranslatorTopBar(
             )
         } else {
             val filteredList = state.filteredList
-            val changedList = state.filteredList
+            val changedList = state.changedList
 
             TopAppBar(
                 title = { Text(stringResource(Res.string.toolbar_status, filteredList.size, changedList.size)) },

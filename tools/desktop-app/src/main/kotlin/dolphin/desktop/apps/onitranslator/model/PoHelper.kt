@@ -114,6 +114,11 @@ class PoHelper(
         log("Building word list (Template: ${templateMap.size}, Existing: ${translatedEntries.size})...")
         entryList.clear()
 
+        val draftKeys = loadDraftKeys()
+        if (draftKeys.isNotEmpty()) {
+            log("Restoring ${draftKeys.size} modified draft keys.")
+        }
+
         // Check for removed keys (present in strings.po but not in template)
         translatedEntries.keys.forEach { key ->
             if (!templateMap.containsKey(key)) {
@@ -124,6 +129,9 @@ class PoHelper(
         // Process ALL entries from the template to maintain a 1:1 mapping
         templateMap.values.forEach { templateEntry ->
             val newEntry = buildPoEntry(templateEntry)
+            if (templateEntry.key in draftKeys) {
+                newEntry.changed = 1L
+            }
             entryList.add(newEntry)
         }
         log("Final word list size: ${entryList.size}")
@@ -329,13 +337,27 @@ class PoHelper(
             val cost = System.currentTimeMillis() - start
             log("Wrote to ${output.absolutePath} in $cost ms. Result: $result")
 
-            // If we are saving to the real location (not cache), delete the draft file
+            // If we are saving to the real location (not cache), delete the draft file and companion keys
             val cachedFile = getCachedFile()
-            if (result && output.absolutePath != cachedFile.absolutePath && cachedFile.exists()) {
-                if (cachedFile.delete()) {
-                    log("Deleted draft file: ${cachedFile.absolutePath}")
+            val cachedKeysFile = getCachedKeysFile()
+            if (result) {
+                if (output.absolutePath == cachedFile.absolutePath) {
+                    saveDraftKeys()
                 } else {
-                    log("Failed to delete draft file: ${cachedFile.absolutePath}", LogType.Warning)
+                    if (cachedFile.exists()) {
+                        if (cachedFile.delete()) {
+                            log("Deleted draft file: ${cachedFile.absolutePath}")
+                        } else {
+                            log("Failed to delete draft file: ${cachedFile.absolutePath}", LogType.Warning)
+                        }
+                    }
+                    if (cachedKeysFile.exists()) {
+                        if (cachedKeysFile.delete()) {
+                            log("Deleted draft keys file: ${cachedKeysFile.absolutePath}")
+                        } else {
+                            log("Failed to delete draft keys file: ${cachedKeysFile.absolutePath}", LogType.Warning)
+                        }
+                    }
                 }
             }
 
@@ -381,6 +403,40 @@ class PoHelper(
     }
 
     private fun getCachedFile(): File = File(System.getProperty("java.io.tmpdir"), ONI_PO)
+
+    private fun getCachedKeysFile(): File = File(System.getProperty("java.io.tmpdir"), "$ONI_PO.keys")
+
+    private fun saveDraftKeys() {
+        val keysFile = getCachedKeysFile()
+        val modifiedKeys = entryList.filter { it.changed > 0 }.map { it.key }
+        try {
+            if (modifiedKeys.isNotEmpty()) {
+                keysFile.writeText(modifiedKeys.joinToString("\n"), StandardCharsets.UTF_8)
+                log("Saved ${modifiedKeys.size} draft keys to ${keysFile.absolutePath}")
+            } else if (keysFile.exists()) {
+                keysFile.delete()
+            }
+        } catch (e: Exception) {
+            log("Failed to save draft keys: ${e.message}", LogType.Warning)
+        }
+    }
+
+    private fun loadDraftKeys(): Set<String> {
+        val draftFile = getCachedFile()
+        val keysFile = getCachedKeysFile()
+        if (!draftFile.exists()) {
+            if (keysFile.exists()) keysFile.delete()
+            return emptySet()
+        }
+        return if (keysFile.exists()) {
+            try {
+                keysFile.readLines(StandardCharsets.UTF_8).filter { it.isNotBlank() }.toSet()
+            } catch (e: Exception) {
+                log("Failed to load draft keys: ${e.message}", LogType.Warning)
+                emptySet()
+            }
+        } else emptySet()
+    }
 
     /**
      * Exports a terminology glossary to a TSV file.
@@ -450,7 +506,11 @@ class PoHelper(
      */
     suspend fun clearDrafts(): Boolean = withContext(Dispatchers.IO) {
         val cachedFile = getCachedFile()
+        val cachedKeysFile = getCachedKeysFile()
         draftEntries.clear()
+        if (cachedKeysFile.exists()) {
+            cachedKeysFile.delete()
+        }
         if (cachedFile.exists()) {
             val deleted = cachedFile.delete()
             if (deleted) {
