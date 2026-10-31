@@ -1,8 +1,8 @@
 [versions]
-kotlin = "2.4.20"
-compose = "1.12.1"
+kotlin = "2.4.21"
+compose = "1.12.2"
 opencc4j = "1.14.0"
-versionsPlugin = "0.64.0"
+versionsPlugin = "0.66.0"
 
 [libraries]
 opencc4j = { group = "com.github.houbb", name = "opencc4j", version.ref = "opencc4j" }
