@@ -9,6 +9,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
+import dolphin.desktop.apps.onitranslator.app.AppEvent
 import dolphin.desktop.apps.onitranslator.app.OniTranslatorApp
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.app_name
@@ -47,9 +48,13 @@ fun main(args: Array<String>) = application {
     Window(
         visible = windowState.size.width.value > 0 && windowState.size.height.value > 0,
         onCloseRequest = {
-            coroutineScope.launch {
-                viewModel.rememberLastWindowState(windowState)
-                exitApplication()
+            if (appState.changedList.isNotEmpty()) {
+                viewModel.onEvent(AppEvent.Ui.ShowExitConfirmDialog)
+            } else {
+                coroutineScope.launch {
+                    viewModel.rememberLastWindowState(windowState)
+                    exitApplication()
+                }
             }
         },
         state = windowState,
@@ -59,7 +64,16 @@ fun main(args: Array<String>) = application {
         OniTranslatorApp(
             state = appState,
             onEvent = viewModel::onEvent,
-            onEditorConvert = { viewModel.onConvert(it) }
+            onEditorConvert = { viewModel.onConvert(it) },
+            onExitApplication = { saveDraftFirst ->
+                coroutineScope.launch {
+                    if (saveDraftFirst) {
+                        viewModel.saveDraftSync()
+                    }
+                    viewModel.rememberLastWindowState(windowState)
+                    exitApplication()
+                }
+            }
         )
     }
 

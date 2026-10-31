@@ -20,6 +20,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -55,6 +56,10 @@ import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.button_apply
 import dolphin.desktop.apps.onitranslator.generated.resources.button_cancel
 import dolphin.desktop.apps.onitranslator.generated.resources.debug_save_dialog_title
+import dolphin.desktop.apps.onitranslator.generated.resources.exit_confirm_discard
+import dolphin.desktop.apps.onitranslator.generated.resources.exit_confirm_message
+import dolphin.desktop.apps.onitranslator.generated.resources.exit_confirm_save_draft
+import dolphin.desktop.apps.onitranslator.generated.resources.exit_confirm_title
 import dolphin.desktop.apps.onitranslator.generated.resources.jump_dialog_error
 import dolphin.desktop.apps.onitranslator.generated.resources.jump_dialog_range
 import dolphin.desktop.apps.onitranslator.generated.resources.jump_dialog_title
@@ -76,6 +81,7 @@ fun OniTranslatorApp(
     state: AppState,
     onEvent: (AppEvent) -> Unit,
     onEditorConvert: (String) -> String = { it },
+    onExitApplication: (saveDraftFirst: Boolean) -> Unit = {},
 ) {
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
     val isDark = state.uiState.darkTheme ?: isSystemInDarkTheme()
@@ -138,6 +144,7 @@ fun OniTranslatorApp(
             M3DialogHost(
                 state = state,
                 onEvent = onEvent,
+                onExitApplication = onExitApplication,
                 onJumpToIndex = { targetIndex ->
                     val list = if (state.uiState.searchState.isActive) {
                         state.uiState.searchState.results
@@ -173,9 +180,24 @@ fun OniTranslatorApp(
 private fun M3DialogHost(
     state: AppState,
     onEvent: (AppEvent) -> Unit,
+    onExitApplication: (saveDraftFirst: Boolean) -> Unit = {},
     onJumpToIndex: (Int) -> Unit = {},
 ) {
     when (val dialogState = state.uiState.dialogState) {
+        is OniDialogState.ExitConfirmDialog ->
+            ExitConfirmDialog(
+                changedCount = dialogState.changedCount,
+                onDismissRequest = { onEvent(AppEvent.Ui.DismissDialog) },
+                onSaveDraftAndExit = {
+                    onEvent(AppEvent.Ui.DismissDialog)
+                    onExitApplication(true)
+                },
+                onDiscardAndExit = {
+                    onEvent(AppEvent.Ui.DismissDialog)
+                    onExitApplication(false)
+                }
+            )
+
         is OniDialogState.JumpDialog ->
             JumpToItemDialog(
                 totalCount = dialogState.totalCount,
@@ -215,6 +237,46 @@ private fun M3DialogHost(
         else -> { /* null */
         }
     }
+}
+
+@Composable
+private fun ExitConfirmDialog(
+    changedCount: Int,
+    onDismissRequest: () -> Unit,
+    onSaveDraftAndExit: () -> Unit,
+    onDiscardAndExit: () -> Unit,
+) {
+    AlertDialog(
+        onDismissRequest = onDismissRequest,
+        title = { Text(stringResource(Res.string.exit_confirm_title)) },
+        text = {
+            Text(
+                stringResource(Res.string.exit_confirm_message, changedCount),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        },
+        confirmButton = {
+            Button(onClick = onSaveDraftAndExit) {
+                Text(stringResource(Res.string.exit_confirm_save_draft))
+            }
+        },
+        dismissButton = {
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                TextButton(onClick = onDismissRequest) {
+                    Text(stringResource(Res.string.button_cancel))
+                }
+                TextButton(
+                    onClick = onDiscardAndExit,
+                    colors = ButtonDefaults.textButtonColors(
+                        contentColor = MaterialTheme.colorScheme.error
+                    )
+                ) {
+                    Text(stringResource(Res.string.exit_confirm_discard))
+                }
+            }
+        }
+    )
 }
 
 @Composable

@@ -20,6 +20,10 @@
     <string name="jump_dialog_title">Jump to item</string>
     <string name="jump_dialog_range">Enter index (1 - %1$d):</string>
     <string name="jump_dialog_error">Please enter a number between 1 and %1$d</string>
+    <string name="exit_confirm_title">Unsaved Changes</string>
+    <string name="exit_confirm_message">You have %1$d modified items in this session.\nHow would you like to proceed?</string>
+    <string name="exit_confirm_save_draft">Save Draft &amp; Exit</string>
+    <string name="exit_confirm_discard">Discard &amp; Exit</string>
     <string name="quick_setup">Quick Setup</string>
     <string name="manual_setup">Manual Setup</string>
 

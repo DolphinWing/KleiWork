@@ -53,5 +53,6 @@ sealed interface OniDialogState {
     data class ConfigDialog(val configs: Configs) : OniDialogState
     data class LogWindow(val logs: List<LogEntry>) : OniDialogState
     data class JumpDialog(val totalCount: Int) : OniDialogState
+    data class ExitConfirmDialog(val changedCount: Int) : OniDialogState
 }
 

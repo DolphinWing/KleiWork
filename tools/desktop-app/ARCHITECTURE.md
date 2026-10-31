@@ -84,7 +84,7 @@
     *   `processStatus`: 即時狀態訊息（如：儲存中...）。
     *   `searchState`: 搜尋關鍵字、結果與是否啟用搜尋模式。
     *   `editorData`: 右側編輯器當前選中的資料。
-    *   `dialogState`: 控制對話框 (Config, Save Confirm, Log Window, Jump Dialog) 的顯示。
+    *   `dialogState`: 控制對話框 (Config, Save Confirm, Log Window, Jump Dialog, Exit Confirm Dialog) 的顯示。
 
 ### 4.2. 翻譯與檔案處理 (`PoHelper`)
 
@@ -173,6 +173,9 @@
     *   **伴隨檔案**：草稿儲存時，同步在暫存目錄寫入 `strings.po.keys`（Line-delimited Plain Text，記錄已被使用者編輯過之 Key 清單）。
     *   **無縫還原**：跨天重新啟動載入草稿時，由伴隨檔讀取 Key 清單並重設 `entry.changed > 0`，精確還原「已變更」統計與卡片高亮狀態。
     *   **原子化清理**：當儲存正式檔或點選刪除草稿時，伴隨檔與草稿 PO 一併清除，徹底杜絕髒狀態殘留。
+*   **關閉應用程式安全防護 (Close Confirmation)**：
+    *   **無髒資料直接關閉**：若 `changedList.isEmpty()`，點擊關閉視窗按鈕 (X) 立即秒關，零摩擦。
+    *   **三態確認對話框**：若存在未儲存之異動 (`changedList.isNotEmpty()`)，攔截關閉事件並跳出確認對話框，提供「儲存草稿並結束」、「捨棄變更並結束」與「取消」，保障使用者對於進度落地或放棄修改之完整掌控權。
 
 ### 4.8. 品質保證 (Testing)
 

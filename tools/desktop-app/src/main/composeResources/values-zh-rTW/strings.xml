@@ -20,6 +20,10 @@
     <string name="jump_dialog_title">前往項目</string>
     <string name="jump_dialog_range">請輸入編號 (1 ~ %1$d):</string>
     <string name="jump_dialog_error">請輸入介於 1 到 %1$d 的數字</string>
+    <string name="exit_confirm_title">尚未儲存的變更</string>
+    <string name="exit_confirm_message">本次工作階段有 %1$d 個項目已修改尚未儲存。\n你要如何處理這些變更？</string>
+    <string name="exit_confirm_save_draft">儲存草稿並結束</string>
+    <string name="exit_confirm_discard">捨棄變更並結束</string>
     <string name="quick_setup">快速設定</string>
     <string name="manual_setup">手動設定</string>
 

@@ -139,6 +139,13 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                 }
             }
 
+            is AppEvent.Ui.ShowExitConfirmDialog -> {
+                val count = state.value.changedList.size
+                if (count > 0) {
+                    updateUiState { it.copy(dialogState = OniDialogState.ExitConfirmDialog(changedCount = count)) }
+                }
+            }
+
             is AppEvent.Ui.DismissDialog -> updateUiState { it.copy(dialogState = null) }
             is AppEvent.Ui.UpdateState -> updateUiState { event.uiState }
             is AppEvent.Ui.CopyToClipboard -> copyToClipboard(event.text)
@@ -190,10 +197,19 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         val (path, cost) = save(useCache)
         if (cost > 0) {
             SnackbarManager.showMessage(Res.string.toast_write_success, path, cost)
+            if (!useCache) {
+                // Formal save committed all changes to strings.po: reset in-memory changed flags
+                helper?.allEntries()?.forEach { it.changed = 0L }
+            }
             refreshDataSource()
         } else {
             SnackbarManager.showMessage(Res.string.toast_write_failed)
         }
+    }
+
+    suspend fun saveDraftSync(): Boolean {
+        val (_, cost) = save(cacheIt = true)
+        return cost > 0
     }
 
     private fun loadEditorData(entry: PoEntry?) {

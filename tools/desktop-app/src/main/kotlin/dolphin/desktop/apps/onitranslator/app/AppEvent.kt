@@ -81,6 +81,7 @@ sealed interface AppEvent {
         object ShowDebugSaveDialog : Ui
         object ShowLogWindow : Ui
         object ShowJumpDialog : Ui
+        object ShowExitConfirmDialog : Ui
         object DismissDialog : Ui
         data class ChangeTheme(val dark: Boolean) : Ui
     }
