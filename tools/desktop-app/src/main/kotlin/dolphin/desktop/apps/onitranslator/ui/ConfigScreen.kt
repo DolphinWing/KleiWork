@@ -1,6 +1,5 @@
 package dolphin.desktop.apps.onitranslator.ui
 
-import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -24,15 +23,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.button_apply
 import dolphin.desktop.apps.onitranslator.generated.resources.button_cancel
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_done
-import org.jetbrains.compose.resources.painterResource
 import dolphin.desktop.apps.onitranslator.generated.resources.draft_path
 import dolphin.desktop.apps.onitranslator.generated.resources.github_root
 import dolphin.desktop.apps.onitranslator.generated.resources.glossary_dir
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_done
 import dolphin.desktop.apps.onitranslator.generated.resources.label_auto_save
 import dolphin.desktop.apps.onitranslator.generated.resources.label_auto_save_interval
 import dolphin.desktop.apps.onitranslator.generated.resources.manual_setup
@@ -44,6 +43,7 @@ import dolphin.desktop.apps.onitranslator.model.Configs
 import dolphin.desktop.apps.onitranslator.model.PoHelper
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.FilePicker
+import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import java.io.File
 import javax.swing.JFileChooser

@@ -1,6 +1,5 @@
 package dolphin.desktop.apps.onitranslator.app
 
-import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -9,20 +8,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_arrow_back_ios_new
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_close
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_dark_mode
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_delete_forever
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_drafts
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_import_export
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_light_mode
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_more_vert
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_refresh
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_report
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_save
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_search
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_settings
-import org.jetbrains.compose.resources.painterResource
 import androidx.compose.material3.DockedSearchBar
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
@@ -48,6 +33,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.button_refresh
@@ -55,25 +41,35 @@ import dolphin.desktop.apps.onitranslator.generated.resources.button_search
 import dolphin.desktop.apps.onitranslator.generated.resources.content_description_back
 import dolphin.desktop.apps.onitranslator.generated.resources.content_description_clear
 import dolphin.desktop.apps.onitranslator.generated.resources.content_description_more_actions
-import dolphin.desktop.apps.onitranslator.generated.resources.menu_draft
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_arrow_back_ios_new
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_close
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_dark_mode
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_delete_forever
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_drafts
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_import_export
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_light_mode
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_more_vert
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_refresh
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_report
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_save
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_search
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_settings
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_delete_draft
-import dolphin.desktop.apps.onitranslator.generated.resources.menu_jump_to_index
+import dolphin.desktop.apps.onitranslator.generated.resources.menu_draft
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_export_glossary
+import dolphin.desktop.apps.onitranslator.generated.resources.menu_jump_to_index
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_save_file
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_settings
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_show_logs
 import dolphin.desktop.apps.onitranslator.generated.resources.placeholder_search
+import dolphin.desktop.apps.onitranslator.generated.resources.tag_sensor_label
 import dolphin.desktop.apps.onitranslator.generated.resources.toolbar_status
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_theme_toggle
-import dolphin.desktop.apps.onitranslator.generated.resources.label_translated_text
-import dolphin.desktop.apps.onitranslator.generated.resources.tag_sensor_label
-import dolphin.desktop.apps.onitranslator.generated.resources.toolbar_old_translated
-import dolphin.desktop.apps.onitranslator.generated.resources.toolbar_simplified_text
-import dolphin.desktop.apps.onitranslator.generated.resources.toolbar_template_text
 import dolphin.desktop.apps.onitranslator.model.AppState
 import dolphin.desktop.apps.onitranslator.model.SearchType
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.TooltipIconButton
+import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -83,7 +79,7 @@ fun OniTranslatorTopBar(
     onEvent: (AppEvent) -> Unit,
     scrollBehavior: TopAppBarScrollBehavior? = null,
 ) {
-    Column {
+    Column(modifier = Modifier.fillMaxWidth()) {
         if (state.uiState.searchState.isActive) {
             SearchTopBar(
                 searchText = state.uiState.searchState.text,
@@ -323,7 +319,7 @@ private fun OniTranslatorTopBarPreview() {
         arrayOf(false, true).forEach { dark ->
             OniTranslatorTheme(darkTheme = dark) {
                 Surface {
-                    Column {
+                    Column(modifier = Modifier.fillMaxWidth()) {
                         OniTranslatorTopBar(
                             state = appState,
                             onEvent = {},

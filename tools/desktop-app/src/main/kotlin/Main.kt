@@ -6,6 +6,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.unit.isSpecified
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
@@ -15,6 +16,7 @@ import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.app_name
 import dolphin.desktop.apps.onitranslator.generated.resources.nisbet_ponder
 import dolphin.desktop.apps.onitranslator.model.OniTranslatorViewModel
+import dolphin.desktop.apps.onitranslator.model.WindowConfig
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
@@ -41,7 +43,7 @@ fun main(args: Array<String>) = application {
     }
     val appState by viewModel.state.collectAsState()
     val windowState = rememberWindowState(
-        size = appState.uiState.windowSize,
+        size = if (appState.uiState.windowSize.isSpecified) appState.uiState.windowSize else WindowConfig().toDpSize(),
         position = appState.uiState.windowPosition
     )
 
@@ -80,6 +82,8 @@ fun main(args: Array<String>) = application {
     // Observe window state changes from ViewModel and apply to actual windowState
     LaunchedEffect(appState.uiState.windowPosition, appState.uiState.windowSize) {
         windowState.position = appState.uiState.windowPosition
-        windowState.size = appState.uiState.windowSize
+        if (appState.uiState.windowSize.isSpecified) {
+            windowState.size = appState.uiState.windowSize
+        }
     }
 }

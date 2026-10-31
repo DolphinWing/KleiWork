@@ -3,7 +3,6 @@ package dolphin.desktop.apps.onitranslator.app
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandVertically
 import androidx.compose.animation.shrinkVertically
-import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
@@ -49,6 +48,7 @@ import androidx.compose.ui.input.key.type
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
@@ -67,10 +67,10 @@ import dolphin.desktop.apps.onitranslator.model.AppState
 import dolphin.desktop.apps.onitranslator.model.LogEntry
 import dolphin.desktop.apps.onitranslator.model.LogType
 import dolphin.desktop.apps.onitranslator.model.OniDialogState
-import dolphin.desktop.apps.onitranslator.ui.ConfigDialogContent
-import dolphin.desktop.apps.onitranslator.ui.EntryEditor
-import dolphin.desktop.apps.onitranslator.ui.EntryBrowser
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
+import dolphin.desktop.apps.onitranslator.ui.ConfigDialogContent
+import dolphin.desktop.apps.onitranslator.ui.EntryBrowser
+import dolphin.desktop.apps.onitranslator.ui.EntryEditor
 import dolphin.desktop.apps.onitranslator.widget.OniSnackbarHost
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.stringResource

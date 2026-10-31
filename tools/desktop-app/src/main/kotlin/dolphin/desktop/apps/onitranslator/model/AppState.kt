@@ -31,7 +31,7 @@ data class UiState(
     // Determines which overlay or dialog is currently active
     val dialogState: OniDialogState? = null,
     val windowPosition: WindowPosition = WindowPosition.PlatformDefault,
-    val windowSize: DpSize = DpSize.Unspecified,
+    val windowSize: DpSize = WindowConfig().toDpSize(),
     val darkTheme: Boolean? = null,
 )
 

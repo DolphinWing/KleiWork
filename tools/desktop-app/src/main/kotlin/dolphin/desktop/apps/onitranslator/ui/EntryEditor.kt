@@ -2,7 +2,6 @@
 
 package dolphin.desktop.apps.onitranslator.ui
 
-import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -17,13 +16,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_auto_awesome
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_content_copy
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_content_paste
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_link
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_settings_backup_restore
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_visibility
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_visibility_off
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -53,12 +45,20 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.Clipboard
 import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import dolphin.desktop.apps.onitranslator.app.AppEvent
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.button_apply
 import dolphin.desktop.apps.onitranslator.generated.resources.button_cancel
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_auto_awesome
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_content_copy
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_content_paste
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_link
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_settings_backup_restore
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_visibility
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_visibility_off
 import dolphin.desktop.apps.onitranslator.generated.resources.label_translated_text
 import dolphin.desktop.apps.onitranslator.generated.resources.nisbet_ponder
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_this_text

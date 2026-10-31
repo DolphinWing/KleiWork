@@ -5,7 +5,6 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
-import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -23,10 +22,8 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_close
-import org.jetbrains.compose.resources.painterResource
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -42,6 +39,7 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.BaselineShift
 import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dolphin.desktop.apps.onitranslator.generated.resources.NisbetAnticipate
@@ -51,6 +49,7 @@ import dolphin.desktop.apps.onitranslator.generated.resources.NisbetThinking
 import dolphin.desktop.apps.onitranslator.generated.resources.NisbetWhistle
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.button_close
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_close
 import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_1
 import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_2
 import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_3
@@ -263,7 +262,20 @@ fun String.peek(): AnnotatedString {
                         }
                     }
 
-                    if (token.name in listOf("b", "i", "link", "sub", "sup", "style", "color", "alpha", "size", "smallcaps", "indent")) {
+                    if (token.name in listOf(
+                            "b",
+                            "i",
+                            "link",
+                            "sub",
+                            "sup",
+                            "style",
+                            "color",
+                            "alpha",
+                            "size",
+                            "smallcaps",
+                            "indent"
+                        )
+                    ) {
                         tagStack.add(token.name)
                         pushStyle(style)
                     } else {
@@ -454,8 +466,8 @@ fun DiagnosticReport(diagnostic: TagDiagnostic) {
                 Text(
                     stringResource(Res.string.tag_sensor_mismatch, tag, diff.first, diff.second),
                     style = MaterialTheme.typography.bodyMedium,
-                    color = if (diff.first == diff.second) MaterialTheme.colorScheme.onSurface 
-                            else OniColor.Warning
+                    color = if (diff.first == diff.second) MaterialTheme.colorScheme.onSurface
+                    else OniColor.Warning
                 )
             }
 

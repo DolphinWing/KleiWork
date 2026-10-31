@@ -3,7 +3,6 @@ package dolphin.desktop.apps.onitranslator.ui
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.snap
 import androidx.compose.animation.core.tween
-import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.VerticalScrollbar
 import androidx.compose.foundation.background
@@ -16,7 +15,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.rememberScrollbarAdapter
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -25,11 +23,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_assignment_turned_in
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_refresh
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_search
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_sensor_window
-import org.jetbrains.compose.resources.painterResource
+import androidx.compose.foundation.rememberScrollbarAdapter
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -53,6 +47,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dolphin.desktop.apps.onitranslator.app.AppEvent
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
@@ -61,6 +56,10 @@ import dolphin.desktop.apps.onitranslator.generated.resources.button_search
 import dolphin.desktop.apps.onitranslator.generated.resources.content_description_tag_sensor_warning
 import dolphin.desktop.apps.onitranslator.generated.resources.empty_list_message
 import dolphin.desktop.apps.onitranslator.generated.resources.empty_list_title
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_assignment_turned_in
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_refresh
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_search
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_sensor_window
 import dolphin.desktop.apps.onitranslator.generated.resources.label_modified
 import dolphin.desktop.apps.onitranslator.generated.resources.label_new
 import dolphin.desktop.apps.onitranslator.model.AppState
@@ -69,6 +68,7 @@ import dolphin.desktop.apps.onitranslator.model.EntryTagType
 import dolphin.desktop.apps.onitranslator.model.PoEntry
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.EntryTagChip
+import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import kotlin.math.max
 
