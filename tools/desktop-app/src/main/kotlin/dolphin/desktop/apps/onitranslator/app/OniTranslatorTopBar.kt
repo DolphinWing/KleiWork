@@ -57,6 +57,7 @@ import dolphin.desktop.apps.onitranslator.generated.resources.content_descriptio
 import dolphin.desktop.apps.onitranslator.generated.resources.content_description_more_actions
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_draft
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_delete_draft
+import dolphin.desktop.apps.onitranslator.generated.resources.menu_jump_to_index
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_export_glossary
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_save_file
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_settings
@@ -176,6 +177,14 @@ private fun MoreActionsMenu(state: AppState, onEvent: (AppEvent) -> Unit) {
                     menuExpanded = false
                 },
                 leadingIcon = { Icon(painterResource(Res.drawable.ic_refresh), contentDescription = null) }
+            )
+            DropdownMenuItem(
+                text = { Text(stringResource(Res.string.menu_jump_to_index)) },
+                onClick = {
+                    onEvent(AppEvent.Ui.ShowJumpDialog)
+                    menuExpanded = false
+                },
+                leadingIcon = { Icon(painterResource(Res.drawable.ic_search), contentDescription = null) }
             )
             DropdownMenuItem(
                 text = { Text(stringResource(Res.string.menu_export_glossary)) },

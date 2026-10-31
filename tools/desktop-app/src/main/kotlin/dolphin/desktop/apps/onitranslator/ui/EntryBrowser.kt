@@ -5,6 +5,7 @@ import androidx.compose.animation.core.snap
 import androidx.compose.animation.core.tween
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.VerticalScrollbar
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -13,7 +14,9 @@ import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.rememberScrollbarAdapter
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -144,28 +147,34 @@ fun EntryBrowser(
                 }
             }
         } else {
-            // Show actual list
-            LazyColumn(
-                modifier = Modifier.fillMaxSize()
-                    .drawOrganicScrollbar(listState, MaterialTheme.colorScheme.primary),
-                contentPadding = PaddingValues(8.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-                state = listState
-            ) {
-                itemsIndexed(list) { index, entry ->
-                    val isSearchMode = state.uiState.searchState.isActive
-                    val originalIndex = if (isSearchMode) -1 else index
-                    val changedValue = if (isSearchMode) 0L else entry.target.changed
-                    val selected = state.uiState.editorData == entry
-                    EntryItemView(
-                        data = entry,
-                        onItemClick = { onEvent(AppEvent.Editor.Select(it)) },
-                        index = originalIndex, // Pass original index or -1 if not available
-                        changed = changedValue,
-                        selected = selected,
-                        isSearchMode = isSearchMode,
-                    )
+            // Show actual list with draggable desktop scrollbar
+            Box(modifier = Modifier.fillMaxSize()) {
+                LazyColumn(
+                    modifier = Modifier.fillMaxSize(),
+                    contentPadding = PaddingValues(start = 8.dp, top = 8.dp, end = 16.dp, bottom = 8.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                    state = listState
+                ) {
+                    itemsIndexed(list) { index, entry ->
+                        val isSearchMode = state.uiState.searchState.isActive
+                        val originalIndex = if (isSearchMode) -1 else index
+                        val changedValue = if (isSearchMode) 0L else entry.target.changed
+                        val selected = state.uiState.editorData == entry
+                        EntryItemView(
+                            data = entry,
+                            onItemClick = { onEvent(AppEvent.Editor.Select(it)) },
+                            index = originalIndex, // Pass original index or -1 if not available
+                            changed = changedValue,
+                            selected = selected,
+                            isSearchMode = isSearchMode,
+                        )
+                    }
                 }
+
+                VerticalScrollbar(
+                    adapter = rememberScrollbarAdapter(scrollState = listState),
+                    modifier = Modifier.align(Alignment.CenterEnd).fillMaxHeight()
+                )
             }
         }
     }

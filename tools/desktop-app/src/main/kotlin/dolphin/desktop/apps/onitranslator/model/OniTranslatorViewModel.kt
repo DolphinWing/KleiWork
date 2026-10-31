@@ -128,6 +128,17 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
             is AppEvent.Ui.ShowLogWindow ->
                 updateUiState { it.copy(dialogState = OniDialogState.LogWindow(logs = state.value.logs)) }
 
+            is AppEvent.Ui.ShowJumpDialog -> {
+                val count = if (state.value.uiState.searchState.isActive) {
+                    state.value.uiState.searchState.results.size
+                } else {
+                    state.value.filteredList.size
+                }
+                if (count > 0) {
+                    updateUiState { it.copy(dialogState = OniDialogState.JumpDialog(totalCount = count)) }
+                }
+            }
+
             is AppEvent.Ui.DismissDialog -> updateUiState { it.copy(dialogState = null) }
             is AppEvent.Ui.UpdateState -> updateUiState { event.uiState }
             is AppEvent.Ui.CopyToClipboard -> copyToClipboard(event.text)

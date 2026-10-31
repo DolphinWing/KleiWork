@@ -13,9 +13,13 @@
     <string name="menu_save_file">儲存檔案</string>
     <string name="menu_draft">儲存草稿</string>
     <string name="menu_delete_draft">刪除草稿</string>
+    <string name="menu_jump_to_index">前往項目…</string>
     <string name="menu_export_glossary">匯出詞彙表</string>
     <string name="menu_show_logs">查看日誌</string>
     <string name="menu_settings">設定</string>
+    <string name="jump_dialog_title">前往項目</string>
+    <string name="jump_dialog_range">請輸入編號 (1 ~ %1$d):</string>
+    <string name="jump_dialog_error">請輸入介於 1 到 %1$d 的數字</string>
     <string name="quick_setup">快速設定</string>
     <string name="manual_setup">手動設定</string>
 

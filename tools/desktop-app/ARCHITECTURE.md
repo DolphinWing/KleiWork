@@ -84,7 +84,7 @@
     *   `processStatus`: 即時狀態訊息（如：儲存中...）。
     *   `searchState`: 搜尋關鍵字、結果與是否啟用搜尋模式。
     *   `editorData`: 右側編輯器當前選中的資料。
-    *   `dialogState`: 控制對話框 (Config, Save Confirm) 的顯示。
+    *   `dialogState`: 控制對話框 (Config, Save Confirm, Log Window, Jump Dialog) 的顯示。
 
 ### 4.2. 翻譯與檔案處理 (`PoHelper`)
 
@@ -155,6 +155,10 @@
 *   **NisbetPeek 預覽系統**：
     *   模擬遊戲內渲染效果（顏色、連結、插值）。
     *   內建 `Tag Sensor` 診斷，即時提示標籤不對稱或語法錯誤。
+
+*   **列表導航與桌面捲軸**：
+    *   **原生拖曳捲軸**：採用 Compose Desktop 原生 `VerticalScrollbar` + `rememberScrollbarAdapter`，支援滑鼠拖曳 Thumb 快速滑動與軌道分頁點擊。
+    *   **精確跳轉 (Jump to Item)**：右上角選單提供「前往項目…」，輸入 1-based 編號即可觸發平滑捲動直達目標，並自動載入右側編輯器。
 
 ### 4.7. 草稿與進度管理 (Draft Management)
 

@@ -16,12 +16,15 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
@@ -30,16 +33,31 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.key.Key
+import androidx.compose.ui.input.key.KeyEventType
+import androidx.compose.ui.input.key.key
+import androidx.compose.ui.input.key.onPreviewKeyEvent
+import androidx.compose.ui.input.key.type
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.button_apply
+import dolphin.desktop.apps.onitranslator.generated.resources.button_cancel
 import dolphin.desktop.apps.onitranslator.generated.resources.debug_save_dialog_title
+import dolphin.desktop.apps.onitranslator.generated.resources.jump_dialog_error
+import dolphin.desktop.apps.onitranslator.generated.resources.jump_dialog_range
+import dolphin.desktop.apps.onitranslator.generated.resources.jump_dialog_title
 import dolphin.desktop.apps.onitranslator.model.AppState
 import dolphin.desktop.apps.onitranslator.model.LogEntry
 import dolphin.desktop.apps.onitranslator.model.LogType
@@ -49,6 +67,7 @@ import dolphin.desktop.apps.onitranslator.ui.EntryEditor
 import dolphin.desktop.apps.onitranslator.ui.EntryBrowser
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.OniSnackbarHost
+import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.stringResource
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -60,6 +79,8 @@ fun OniTranslatorApp(
 ) {
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
     val isDark = state.uiState.darkTheme ?: isSystemInDarkTheme()
+    val listState = rememberLazyListState()
+    val coroutineScope = rememberCoroutineScope()
 
     OniTranslatorTheme(darkTheme = isDark) {
         val snackbarHostState = remember { SnackbarHostState() }
@@ -98,6 +119,7 @@ fun OniTranslatorApp(
                             state = state,
                             onEvent = onEvent,
                             modifier = Modifier.weight(0.4f),
+                            listState = listState,
                         )
                         VerticalDivider(
                             modifier = Modifier.fillMaxHeight().width(1.dp),
@@ -113,7 +135,25 @@ fun OniTranslatorApp(
                 }
             }
 
-            M3DialogHost(state, onEvent = onEvent)
+            M3DialogHost(
+                state = state,
+                onEvent = onEvent,
+                onJumpToIndex = { targetIndex ->
+                    val list = if (state.uiState.searchState.isActive) {
+                        state.uiState.searchState.results
+                    } else {
+                        state.filteredList
+                    }
+                    val zeroBased = targetIndex - 1
+                    if (zeroBased in list.indices) {
+                        coroutineScope.launch {
+                            listState.animateScrollToItem(zeroBased)
+                        }
+                        onEvent(AppEvent.Editor.Select(list[zeroBased].target))
+                    }
+                    onEvent(AppEvent.Ui.DismissDialog)
+                }
+            )
 
             if (state.uiState.isLoading && !state.uiState.searchState.isActive) { // Don't show loading overlay when search is active
                 Box(
@@ -130,8 +170,19 @@ fun OniTranslatorApp(
 }
 
 @Composable
-private fun M3DialogHost(state: AppState, onEvent: (AppEvent) -> Unit) {
+private fun M3DialogHost(
+    state: AppState,
+    onEvent: (AppEvent) -> Unit,
+    onJumpToIndex: (Int) -> Unit = {},
+) {
     when (val dialogState = state.uiState.dialogState) {
+        is OniDialogState.JumpDialog ->
+            JumpToItemDialog(
+                totalCount = dialogState.totalCount,
+                onDismissRequest = { onEvent(AppEvent.Ui.DismissDialog) },
+                onConfirm = onJumpToIndex,
+            )
+
         is OniDialogState.DebugSaveDialog ->
             M3DebugSaveDialog(
                 onDismissRequest = { onEvent(AppEvent.Ui.DismissDialog) },
@@ -164,6 +215,71 @@ private fun M3DialogHost(state: AppState, onEvent: (AppEvent) -> Unit) {
         else -> { /* null */
         }
     }
+}
+
+@Composable
+private fun JumpToItemDialog(
+    totalCount: Int,
+    onDismissRequest: () -> Unit,
+    onConfirm: (Int) -> Unit,
+) {
+    var text by remember { mutableStateOf("") }
+    var isError by remember { mutableStateOf(false) }
+
+    fun submit() {
+        val num = text.trim().toIntOrNull()
+        if (num != null && num in 1..totalCount) {
+            onConfirm(num)
+        } else {
+            isError = true
+        }
+    }
+
+    AlertDialog(
+        onDismissRequest = onDismissRequest,
+        title = { Text(stringResource(Res.string.jump_dialog_title)) },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text(
+                    text = stringResource(Res.string.jump_dialog_range, totalCount),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                OutlinedTextField(
+                    value = text,
+                    onValueChange = { input ->
+                        if (input.all { it.isDigit() }) {
+                            text = input
+                            isError = false
+                        }
+                    },
+                    modifier = Modifier.fillMaxWidth().onPreviewKeyEvent {
+                        if (it.key == Key.Enter && it.type == KeyEventType.KeyUp) {
+                            submit()
+                            true
+                        } else false
+                    },
+                    singleLine = true,
+                    isError = isError,
+                    supportingText = if (isError) {
+                        { Text(stringResource(Res.string.jump_dialog_error, totalCount)) }
+                    } else null,
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                    placeholder = { Text("1 ~ $totalCount") },
+                )
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = { submit() }) {
+                Text(stringResource(Res.string.button_apply))
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismissRequest) {
+                Text(stringResource(Res.string.button_cancel))
+            }
+        }
+    )
 }
 
 @Composable
