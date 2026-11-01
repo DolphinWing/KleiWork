@@ -4,6 +4,7 @@ import dolphin.desktop.apps.onitranslator.model.Configs
 import dolphin.desktop.apps.onitranslator.model.SearchType
 import dolphin.desktop.apps.onitranslator.model.UiState
 import dolphin.desktop.apps.onitranslator.model.PoEntry
+import dolphin.desktop.apps.onitranslator.model.GlossaryConflict
 
 /**
  * Represents all possible user interactions and system events that can trigger state changes
@@ -84,5 +85,14 @@ sealed interface AppEvent {
         object ShowExitConfirmDialog : Ui
         object DismissDialog : Ui
         data class ChangeTheme(val dark: Boolean) : Ui
+    }
+
+    /**
+     * Terminology consistency and glossary actions.
+     */
+    sealed interface Glossary : AppEvent {
+        data class ApplyCanonical(val entry: PoEntry, val conflict: GlossaryConflict) : Glossary
+        data class AcceptNewTerm(val entryKey: String) : Glossary
+        data class ResetToCanonical(val entryKey: String) : Glossary
     }
 }

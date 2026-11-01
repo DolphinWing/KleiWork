@@ -136,6 +136,7 @@ fun OniTranslatorApp(
                             modifier = Modifier.weight(0.6f),
                             onEvent = onEvent,
                             onConvert = onEditorConvert,
+                            terms = state.glossaryTerms,
                         )
                     }
                 }

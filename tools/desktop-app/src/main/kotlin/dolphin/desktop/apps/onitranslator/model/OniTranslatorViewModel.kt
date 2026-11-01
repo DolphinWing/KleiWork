@@ -7,6 +7,7 @@ import androidx.compose.ui.window.WindowState
 import dolphin.desktop.apps.onitranslator.app.AppEvent
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.toast_draft_cleared
+import dolphin.desktop.apps.onitranslator.generated.resources.toast_glossary_copied
 import dolphin.desktop.apps.onitranslator.generated.resources.toast_write_failed
 import dolphin.desktop.apps.onitranslator.generated.resources.toast_write_success
 import kotlinx.coroutines.CoroutineScope
@@ -99,6 +100,30 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                 is AppEvent.Editor.Select -> loadEditorData(event.entry)
                 is AppEvent.Editor.Save -> edit(event.entry.key, event.newText)
                 is AppEvent.Editor.SmartCopyError -> SnackbarManager.showMessage(event.message)
+
+                // Glossary
+                is AppEvent.Glossary.ApplyCanonical -> {
+                    val chs = helper?.chsEntry(event.entry.key)?.msgStr()
+                    val oldText = event.entry.msgStr()
+                    val newText = GlossarySensor.applyCanonical(oldText, event.conflict, chs)
+                    if (newText != oldText) {
+                        edit(event.entry.key, newText)
+                    } else {
+                        // Fallback: unable to safely auto-replace; copy canonical term to clipboard and notify
+                        copyToSystemClipboard(event.conflict.canonicalTranslation)
+                        SnackbarManager.showMessage(Res.string.toast_glossary_copied, event.conflict.canonicalTranslation)
+                    }
+                }
+                is AppEvent.Glossary.AcceptNewTerm -> {
+                    helper?.acceptTerm(event.entryKey)
+                    refreshDataSource()
+                    scheduleAutoSave()
+                }
+                is AppEvent.Glossary.ResetToCanonical -> {
+                    helper?.resetTerm(event.entryKey)
+                    refreshDataSource()
+                    scheduleAutoSave()
+                }
 
                 // UI & System
                 is AppEvent.Ui -> onUiEvent(event)
@@ -292,6 +317,8 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     private suspend fun translate() = withContext(Dispatchers.IO) {
         updateStatus("Translating...")
         helper?.runTranslationProcess()
+        val terms = helper?.glossaryBank?.terms ?: emptyList()
+        _state.update { it.copy(glossaryTerms = terms) }
         refreshDataSource()
         val results = helper?.allEntries()?.mapNotNull { entry -> requestEditorData(entry) } ?: emptyList()
         updateUiState { it.copy(searchState = it.searchState.copy(results = results)) }
@@ -322,13 +349,21 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         val filtered = helper?.buildChangeList()?.mapNotNull { requestEditorData(it) } ?: emptyList()
         val list = filtered.filter { it.target.changed > 0 }.map { it.target.key }
         val hasDraft = helper?.hasDraft() ?: false
+        val currentKey = state.value.uiState.editorData?.target?.key
+        val refreshedEditorData = currentKey?.let { key ->
+            helper?.allEntries()?.find { it.key == key }?.let { requestEditorData(it) }
+        }
         _state.update {
             it.copy(
                 filteredList = filtered,
                 changedList = list,
                 hasDraft = hasDraft,
-                uiState = it.uiState.copy(editorData = null)
+                uiState = it.uiState.copy(editorData = refreshedEditorData)
             )
+        }
+        if (state.value.uiState.searchState.isActive) {
+            val sState = state.value.uiState.searchState
+            search(sState.text, sState.type)
         }
     }
 
@@ -355,6 +390,8 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                     }
                     SearchType.Text -> item.msgStr().normalizeForSearch().contains(normalizedQuery, ignoreCase = true)
                     SearchType.Diagnostic -> item.diagnostic?.hasIssue == true
+                    SearchType.Glossary -> item.glossaryDiag?.hasConflict == true &&
+                            (text.isBlank() || item.msgId().contains(text, ignoreCase = true) || item.msgStr().contains(text, ignoreCase = true))
                 }
             }?.mapNotNull { entry -> requestEditorData(entry) } ?: emptyList()
             updateUiState { it.copy(searchState = it.searchState.copy(results = searchResult)) }

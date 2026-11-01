@@ -20,6 +20,7 @@ data class PoEntry(
     val msgidChanged: Boolean = false,
     var changed: Long = 0L,
     var diagnostic: TagDiagnostic? = null,
+    var glossaryDiag: GlossaryDiagnostic? = null,
 ) {
     companion object {
         /**
@@ -65,6 +66,7 @@ data class PoEntry(
         result = 31 * result + newly.hashCode()
         result = 31 * result + msgidChanged.hashCode()
         result = 31 * result + (diagnostic?.hashCode() ?: 0)
+        result = 31 * result + (glossaryDiag?.hashCode() ?: 0)
         return result
     }
 
@@ -73,7 +75,8 @@ data class PoEntry(
         if (other !is PoEntry) return false
         return (other.key == this.key && other.id == this.id && other.str == this.str &&
                 other.newly == this.newly && other.msgidChanged == this.msgidChanged &&
-                other.diagnostic == this.diagnostic)
+                other.diagnostic == this.diagnostic &&
+                other.glossaryDiag == this.glossaryDiag)
     }
 
     /**

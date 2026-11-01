@@ -14,6 +14,7 @@
 - **安全暫存**：支援閒置自動存檔與手動草稿管理，並具備版本衝突視覺提示。
 - **差異比對**：能識別原廠檔案的變更 (msgid change)，確保翻譯能追蹤英文原文的更新。
 - **Tag Sensor (標籤感測器)**：自動對比原文與譯文的標籤數量，確保 `link`, `style`, `color` 等關鍵標籤對稱。
+- **Glossary Sensor (詞彙感測器)**：具備標籤優先與貪婪長詞比對演算法，檢驗 AI 譯文與既有專有名詞的一致性，支援「一鍵套用規範詞」與「認可新詞（審閱保留）」雙態決策閉環。
 - **強韌解析**：採用狀態機 (State-machine) 解析器，支援 PO 檔案 Header 處理與不規則空行。
 
 ---
@@ -189,6 +190,29 @@
 * **標籤安全防護 (Token-free 狀態機)**：為避免毀壞 `<link=\"...\">` 等標籤內的屬性引號，內部採用了極輕量的括號狀態機（`inTag` 開關）。當指針處於 `<` 與 `>` 區間時，自動忽略任何引號計算與替換。同時此設計完全獨立於 `OniToken` 之外，避免了重組時字面 `\\n` 被誤還原成實際換行的副作用。
 * **限定套用範圍 (Git Diff & 歷史保護)**：為保護歷史特意留存的引號並避免產生大量 Git Diff，自動引號精煉**僅限於新項目**（即 Newly 新增項目、MsgidChanged 英文變更項目、與 Fallback 遞補項目）。當載入已翻譯的歷史項目時，系統會維持其原貌。此外，當使用者點選「套用簡中參考」手動轉換時，亦會套用此精煉機制。
 
+### 4.10. 詞彙一致性感測與管理 (Terminology Consistency & Glossary Sensor)
+
+為了防止 AI 輔助翻譯時發生譯名漂移或未遵循專案既有術語，系統整合了高精度的詞彙感測引擎：
+* **知識庫雙向閉環 (Glossary Reuse)**：
+    * 啟動時優先載入 `glossary.tsv`（由工具自身匯出，可在外部 Excel/VS Code 編輯維護）。
+    * **實體白名單過濾 (Entity Whitelist)**：匯出與提取時限定收錄真實遊戲實體名詞（如 `BUILDINGS.PREFABS`, `ELEMENTS`, `CREATURES.SPECIES`, `ITEMS`, `EQUIPMENT.PREFABS`, `DUPLICANTS.DISEASES`, `DUPLICANTS.TRAITS`, `RESEARCH.TECHS`, `ROOMS.TYPES`, `WORLD_TRAITS`, `WORLDS`, `SUBWORLDS`, `ROBOTS.MODELS`），徹底杜絕 UI 圖層、工作動詞（如 `All`, `Building`, `None`）等非名詞雜質。
+    * 若 `glossary.tsv` 不存在，自動由 PO 條目中提取符合白名單之 `.NAME` 作為記憶體內 fallback 基準線。
+* **精準無衝突偵測 (Zero-Clash Detection)**：
+    * **Tag 優先**：解析 `<link="KEY">` 標籤，直接鎖定遊戲專有名詞。
+    * **雙詞複合門檻 (Multi-word Compound Rule)**：無 `<link>` 標籤之純文字僅比對 $\ge 2$ 個英文單字之複合名詞（如 `Cool Steam Vent`, `Natural Gas`）；單一英文單字（如 `Water`, `Steam`）因歧義度高，限定只在標籤存在時比對，徹底排除敘述文法句中的假警報。
+    * **貪婪長詞優先 (Longest-Match-First)**：依英文長度降序排列，透過非重疊字元跨度 (Non-overlapping Span Tracking) 與 Regex 單字邊界比對，徹底消除「Cool Steam Vent」與「Steam」的子字串誤判。
+* **防禦性決策閉環 (Review & Keep)**：
+    * 捨棄高風險的全域批次強制取代，採用條目級審核。
+    * **一鍵套用規範詞 (Safe Apply)**：五層替換階梯（Tag 內置換 $\rightarrow$ 英文置換 $\rightarrow$ 簡中對照 $\rightarrow$ 異體字轉換 $\rightarrow$ $\ge 50\%$ 重疊度模糊邊界擴展）。若無法安全定位，絕不盲目覆蓋破壞原文，改走系統剪貼簿複製與通知提醒。
+    * **認可新詞（審閱保留）**：保留當前譯文不更動，條目被標記為已認可，隨時可復原。
+* **伴隨檔跨階段持久化 (Companion Sidecar)**：
+    * 伴隨草稿在 `%TEMP%\strings.po.terms` 記錄已認可新詞之 Key 清單。
+    * 跨天重啟時無縫還原決策狀態；正式存檔或清除草稿時一併同步清理。
+* **三層視覺防禦與過濾**：
+    * **編輯器**：即時動態提示橫幅（⚠️ 未審閱衝突 vs ℹ️ 已認可新詞）與一鍵處置按鈕。
+    * **卡片清單**：右上角 Chip 標示 `⚠️ 術語衝突` 或 `ℹ️ 採用新詞`。
+    * **全域檢索**：`SearchType.Glossary` 一鍵篩選所有術語差異項目，供日後覆核調閱。
+
 ---
 
 ## 5. 目錄結構 (Directory Structure)
@@ -196,7 +220,7 @@
 ```text
 src/main/kotlin/dolphin/desktop/apps/onitranslator/
 ├── app/          # 應用程式入口與全域 UI (Main, App, TopBar, BottomBar)
-├── model/        # 核心邏輯與資料模型 (ViewModel, PoHelper, PoEntry)
+├── model/        # 核心邏輯與資料模型 (ViewModel, PoHelper, PoEntry, GlossaryBank, GlossarySensor)
 ├── ui/           # 主要 UI 畫面 (EntryBrowser, EntryEditor, ConfigScreen)
 ├── theme/        # Material 3 主題設定
 ├── widget/       # 共用 UI 元件

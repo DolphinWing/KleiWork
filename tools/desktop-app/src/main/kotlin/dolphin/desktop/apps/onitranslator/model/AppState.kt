@@ -16,6 +16,7 @@ data class AppState(
     val logs: List<LogEntry> = emptyList(),
     val appVersion: String = "0.0.0",
     val hasDraft: Boolean = false,
+    val glossaryTerms: List<GlossaryTerm> = emptyList(),
     val uiState: UiState = UiState(),
 )
 

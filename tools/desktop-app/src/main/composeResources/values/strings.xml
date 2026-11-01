@@ -93,6 +93,20 @@
     <string name="label_new">NEW</string>
     <string name="label_modified">MODIFIED</string>
 
+    <!-- Glossary Sensor -->
+    <string name="tag_glossary_label">Glossary</string>
+    <string name="glossary_badge_conflict">⚠️ Term</string>
+    <string name="glossary_badge_accepted">ℹ️ New Term</string>
+    <string name="glossary_conflict_alert">Terminology Conflict: Source has \"%1$s\", standard is \"%2$s\"</string>
+    <string name="glossary_apply_canonical">Apply \"%1$s\"</string>
+    <string name="glossary_applied_success">Applied \"%1$s\"</string>
+    <string name="glossary_undo_apply">Undo</string>
+    <string name="tooltip_copy_canonical">Copy \"%1$s\" to clipboard</string>
+    <string name="glossary_accept_term">Keep New Term</string>
+    <string name="glossary_accepted_info">Using New Term (Canonical: \"%1$s\")</string>
+    <string name="glossary_reset_canonical">Reset to Standard</string>
+    <string name="toast_glossary_copied">Copied \"%1$s\" to clipboard for manual paste</string>
+
     <!-- Content Descriptions -->
     <string name="content_description_back">Back</string>
     <string name="content_description_clear">Clear</string>

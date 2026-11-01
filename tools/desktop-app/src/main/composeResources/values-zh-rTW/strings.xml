@@ -93,6 +93,20 @@
     <string name="label_new">新項目</string>
     <string name="label_modified">已變更</string>
 
+    <!-- Glossary Sensor -->
+    <string name="tag_glossary_label">詞彙衝突</string>
+    <string name="glossary_badge_conflict">⚠️ 術語衝突</string>
+    <string name="glossary_badge_accepted">ℹ️ 採用新詞</string>
+    <string name="glossary_conflict_alert">詞彙衝突：原文包含「%1$s」，規範譯名為「%2$s」</string>
+    <string name="glossary_apply_canonical">套用「%1$s」</string>
+    <string name="glossary_applied_success">已套用規範詞「%1$s」</string>
+    <string name="glossary_undo_apply">復原 (Undo)</string>
+    <string name="tooltip_copy_canonical">複製「%1$s」至剪貼簿</string>
+    <string name="glossary_accept_term">認可新詞 (審閱保留)</string>
+    <string name="glossary_accepted_info">已採用新譯名（歷史規範：「%1$s」）</string>
+    <string name="glossary_reset_canonical">還原為規範詞</string>
+    <string name="toast_glossary_copied">已複製標準譯名「%1$s」至剪貼簿供手動貼上</string>
+
     <!-- Content Descriptions -->
     <string name="content_description_back">返回</string>
     <string name="content_description_clear">清除</string>

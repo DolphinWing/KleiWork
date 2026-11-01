@@ -2,11 +2,13 @@
 
 package dolphin.desktop.apps.onitranslator.ui
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -16,10 +18,14 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
@@ -52,15 +58,27 @@ import dolphin.desktop.apps.onitranslator.app.AppEvent
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.button_apply
 import dolphin.desktop.apps.onitranslator.generated.resources.button_cancel
+import dolphin.desktop.apps.onitranslator.generated.resources.content_description_clear
+import dolphin.desktop.apps.onitranslator.generated.resources.glossary_accepted_info
+import dolphin.desktop.apps.onitranslator.generated.resources.glossary_accept_term
+import dolphin.desktop.apps.onitranslator.generated.resources.glossary_applied_success
+import dolphin.desktop.apps.onitranslator.generated.resources.glossary_apply_canonical
+import dolphin.desktop.apps.onitranslator.generated.resources.glossary_conflict_alert
+import dolphin.desktop.apps.onitranslator.generated.resources.glossary_reset_canonical
+import dolphin.desktop.apps.onitranslator.generated.resources.glossary_undo_apply
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_auto_awesome
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_close
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_content_copy
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_content_paste
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_done
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_link
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_report
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_settings_backup_restore
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_visibility
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_visibility_off
 import dolphin.desktop.apps.onitranslator.generated.resources.label_translated_text
 import dolphin.desktop.apps.onitranslator.generated.resources.nisbet_ponder
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_canonical
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_this_text
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_peek_close
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_peek_open
@@ -72,6 +90,10 @@ import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_undo_paste
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_use_this_text
 import dolphin.desktop.apps.onitranslator.model.EditorData
 import dolphin.desktop.apps.onitranslator.model.EntryTagType
+import dolphin.desktop.apps.onitranslator.model.GlossaryConflict
+import dolphin.desktop.apps.onitranslator.model.GlossaryDiagnostic
+import dolphin.desktop.apps.onitranslator.model.GlossarySensor
+import dolphin.desktop.apps.onitranslator.model.GlossaryTerm
 import dolphin.desktop.apps.onitranslator.model.PoEntry
 import dolphin.desktop.apps.onitranslator.model.TagDiagnostic
 import dolphin.desktop.apps.onitranslator.model.TagSensor
@@ -90,6 +112,7 @@ fun EntryEditor(
     onEvent: (AppEvent) -> Unit,
     modifier: Modifier = Modifier,
     onConvert: (String) -> String = { it },
+    terms: List<GlossaryTerm> = emptyList(),
 ) {
     if (entry == null) {
         Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -102,7 +125,7 @@ fun EntryEditor(
         }
     } else {
         key(entry) { // reset all states
-            EntryEditorSection(entry, onEvent, onConvert, modifier)
+            EntryEditorSection(entry, onEvent, onConvert, modifier, terms)
         }
     }
 }
@@ -150,9 +173,11 @@ private fun EntryEditorSection(
     onEvent: (AppEvent) -> Unit,
     onConvert: (String) -> String,
     modifier: Modifier = Modifier,
+    terms: List<GlossaryTerm> = emptyList(),
 ) {
     var editedText by remember { mutableStateOf(entry.target.msgStr()) }
     var backupText by remember { mutableStateOf<String?>(null) }
+    var undoCanonicalState by remember { mutableStateOf<Pair<String, String>?>(null) }
     var showRefs by remember { mutableStateOf(false) }
     var showPoSave by remember { mutableStateOf(false) }
     var isPeeking by remember { mutableStateOf(false) }
@@ -170,9 +195,24 @@ private fun EntryEditorSection(
         TagSensor.diagnose(entry.sourceText, editedText)
     }
 
+    // Live glossary sensor diagnostic
+    val liveGlossaryDiag = remember(editedText, entry.sourceText, terms, entry.target.glossaryDiag?.isAccepted) {
+        if (terms.isNotEmpty()) {
+            GlossarySensor.diagnose(
+                sourceText = entry.sourceText,
+                targetText = editedText,
+                terms = terms,
+                isAccepted = entry.target.glossaryDiag?.isAccepted == true
+            )
+        } else {
+            entry.target.glossaryDiag
+        }
+    }
+
     LaunchedEffect(entry.target.key) {
         editedText = entry.target.msgStr()
         backupText = null
+        undoCanonicalState = null
         isPeeking = false
     }
 
@@ -198,7 +238,10 @@ private fun EntryEditorSection(
 
             OutlinedTextField(
                 value = editedText,
-                onValueChange = { editedText = it },
+                onValueChange = {
+                    editedText = it
+                    undoCanonicalState = null
+                },
                 label = { Text(stringResource(Res.string.label_translated_text)) },
                 modifier = Modifier.fillMaxWidth().weight(1f),
                 minLines = 5,
@@ -208,6 +251,42 @@ private fun EntryEditorSection(
                     focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
                     unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
                 )
+            )
+
+            GlossarySensorBanner(
+                diagnostic = liveGlossaryDiag,
+                undoState = undoCanonicalState,
+                onApplyCanonical = { conflict ->
+                    val applied = GlossarySensor.applyCanonical(editedText, conflict, entry.chsReference)
+                    if (applied != editedText) {
+                        backupText = editedText
+                        undoCanonicalState = Pair(editedText, conflict.canonicalTranslation)
+                        editedText = applied
+                        onEvent(AppEvent.Editor.Save(entry.target, applied))
+                    } else {
+                        onEvent(AppEvent.Ui.CopyToClipboard(conflict.canonicalTranslation))
+                    }
+                },
+                onUndoCanonical = {
+                    undoCanonicalState?.let { (prevText, _) ->
+                        editedText = prevText
+                        onEvent(AppEvent.Editor.Save(entry.target, prevText))
+                        undoCanonicalState = null
+                        backupText = null
+                    }
+                },
+                onDismissUndo = {
+                    undoCanonicalState = null
+                },
+                onCopyToClipboard = { text ->
+                    onEvent(AppEvent.Ui.CopyToClipboard(text))
+                },
+                onAcceptNewTerm = {
+                    onEvent(AppEvent.Glossary.AcceptNewTerm(entry.target.key))
+                },
+                onResetToCanonical = {
+                    onEvent(AppEvent.Glossary.ResetToCanonical(entry.target.key))
+                }
             )
 
             EditorActionRow(
@@ -583,6 +662,179 @@ private fun LinkSelectorPreview() {
         OniTranslatorTheme(darkTheme = true) {
             Surface {
                 LinkSelectorContent(links = links, onSelected = {})
+            }
+        }
+    }
+}
+
+@Composable
+private fun GlossarySensorBanner(
+    diagnostic: GlossaryDiagnostic?,
+    undoState: Pair<String, String>?,
+    onApplyCanonical: (GlossaryConflict) -> Unit,
+    onUndoCanonical: () -> Unit,
+    onDismissUndo: () -> Unit,
+    onCopyToClipboard: (String) -> Unit,
+    onAcceptNewTerm: () -> Unit,
+    onResetToCanonical: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    // In-place Undo Banner: shown immediately after auto-applying a canonical term
+    if (undoState != null) {
+        Surface(
+            modifier = modifier.fillMaxWidth(),
+            shape = MaterialTheme.shapes.small,
+            color = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.35f),
+            border = BorderStroke(1.dp, MaterialTheme.colorScheme.secondary.copy(alpha = 0.4f))
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 8.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                Icon(
+                    painterResource(Res.drawable.ic_done),
+                    contentDescription = null,
+                    tint = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.size(18.dp)
+                )
+                Text(
+                    text = stringResource(Res.string.glossary_applied_success, undoState.second),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    modifier = Modifier.weight(1f)
+                )
+                OutlinedButton(
+                    onClick = onUndoCanonical,
+                    contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
+                    shape = MaterialTheme.shapes.small,
+                ) {
+                    Text(
+                        text = stringResource(Res.string.glossary_undo_apply),
+                        style = MaterialTheme.typography.labelSmall
+                    )
+                }
+                TooltipIconButton(
+                    painter = painterResource(Res.drawable.ic_close),
+                    tooltip = stringResource(Res.string.content_description_clear),
+                    position = TooltipAnchorPosition.Above,
+                    onClick = onDismissUndo
+                )
+            }
+        }
+        return
+    }
+
+    if (diagnostic == null || !diagnostic.hasConflict) return
+
+    if (diagnostic.isUnreviewed) {
+        Surface(
+            modifier = modifier.fillMaxWidth(),
+            shape = MaterialTheme.shapes.small,
+            color = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.25f),
+            border = BorderStroke(1.dp, MaterialTheme.colorScheme.error.copy(alpha = 0.4f))
+        ) {
+            Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                diagnostic.conflicts.forEach { conflict ->
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        Icon(
+                            painterResource(Res.drawable.ic_report),
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.error,
+                            modifier = Modifier.size(18.dp)
+                        )
+                        Text(
+                            text = stringResource(
+                                Res.string.glossary_conflict_alert,
+                                conflict.matchedSourceText,
+                                conflict.canonicalTranslation
+                            ),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurface,
+                            modifier = Modifier.weight(1f)
+                        )
+                        // Always-visible copy canonical to clipboard button
+                        TooltipIconButton(
+                            painter = painterResource(Res.drawable.ic_content_copy),
+                            tooltip = stringResource(Res.string.tooltip_copy_canonical, conflict.canonicalTranslation),
+                            position = TooltipAnchorPosition.Above,
+                            onClick = { onCopyToClipboard(conflict.canonicalTranslation) }
+                        )
+                        Button(
+                            onClick = { onApplyCanonical(conflict) },
+                            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 6.dp),
+                            shape = MaterialTheme.shapes.small,
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = MaterialTheme.colorScheme.error,
+                                contentColor = MaterialTheme.colorScheme.onError
+                            )
+                        ) {
+                            Text(
+                                text = stringResource(Res.string.glossary_apply_canonical, conflict.canonicalTranslation),
+                                style = MaterialTheme.typography.labelSmall
+                            )
+                        }
+                    }
+                }
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.End
+                ) {
+                    OutlinedButton(
+                        onClick = onAcceptNewTerm,
+                        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
+                        shape = MaterialTheme.shapes.small,
+                        colors = ButtonDefaults.outlinedButtonColors(
+                            contentColor = MaterialTheme.colorScheme.error
+                        ),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.error.copy(alpha = 0.5f))
+                    ) {
+                        Text(
+                            text = stringResource(Res.string.glossary_accept_term),
+                            style = MaterialTheme.typography.labelSmall
+                        )
+                    }
+                }
+            }
+        }
+    } else if (diagnostic.isAccepted) {
+        Surface(
+            modifier = modifier.fillMaxWidth(),
+            shape = MaterialTheme.shapes.small,
+            color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.25f),
+            border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.4f))
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 8.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                Icon(
+                    painterResource(Res.drawable.ic_done),
+                    contentDescription = null,
+                    tint = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.size(18.dp)
+                )
+                val canonicals = diagnostic.conflicts.joinToString(", ") { it.canonicalTranslation }
+                Text(
+                    text = stringResource(Res.string.glossary_accepted_info, canonicals),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onPrimaryContainer,
+                    modifier = Modifier.weight(1f)
+                )
+                TextButton(
+                    onClick = onResetToCanonical,
+                    contentPadding = PaddingValues(horizontal = 8.dp, vertical = 4.dp)
+                ) {
+                    Text(
+                        text = stringResource(Res.string.glossary_reset_canonical),
+                        style = MaterialTheme.typography.labelSmall
+                    )
+                }
             }
         }
     }

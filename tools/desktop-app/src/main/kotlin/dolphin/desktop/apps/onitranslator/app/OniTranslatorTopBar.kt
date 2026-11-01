@@ -63,6 +63,7 @@ import dolphin.desktop.apps.onitranslator.generated.resources.menu_settings
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_show_logs
 import dolphin.desktop.apps.onitranslator.generated.resources.placeholder_search
 import dolphin.desktop.apps.onitranslator.generated.resources.tag_sensor_label
+import dolphin.desktop.apps.onitranslator.generated.resources.tag_glossary_label
 import dolphin.desktop.apps.onitranslator.generated.resources.toolbar_status
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_theme_toggle
 import dolphin.desktop.apps.onitranslator.model.AppState
@@ -283,6 +284,7 @@ fun SearchTypeRow(selected: SearchType, modifier: Modifier = Modifier, onClick: 
         SearchType.entries.forEach { type ->
             val label = when (type) {
                 SearchType.Diagnostic -> stringResource(Res.string.tag_sensor_label)
+                SearchType.Glossary -> stringResource(Res.string.tag_glossary_label)
                 else -> type.name
             }
             FilterChip(

@@ -57,11 +57,15 @@ import dolphin.desktop.apps.onitranslator.generated.resources.content_descriptio
 import dolphin.desktop.apps.onitranslator.generated.resources.empty_list_message
 import dolphin.desktop.apps.onitranslator.generated.resources.empty_list_title
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_assignment_turned_in
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_done
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_refresh
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_report
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_search
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_sensor_window
 import dolphin.desktop.apps.onitranslator.generated.resources.label_modified
 import dolphin.desktop.apps.onitranslator.generated.resources.label_new
+import dolphin.desktop.apps.onitranslator.generated.resources.glossary_badge_conflict
+import dolphin.desktop.apps.onitranslator.generated.resources.glossary_badge_accepted
 import dolphin.desktop.apps.onitranslator.model.AppState
 import dolphin.desktop.apps.onitranslator.model.EditorData
 import dolphin.desktop.apps.onitranslator.model.EntryTagType
@@ -256,6 +260,25 @@ private fun EntryItemView(
                             painterResource(Res.drawable.ic_sensor_window),
                             contentDescription = stringResource(Res.string.content_description_tag_sensor_warning),
                             tint = tint,
+                            modifier = Modifier.padding(horizontal = 4.dp).width(14.dp).height(14.dp)
+                        )
+                    }
+                }
+
+                // Glossary Sensor Indicator (Icon only to prevent overcrowding the header row)
+                data.target.glossaryDiag?.let { gDiag ->
+                    if (gDiag.isUnreviewed) {
+                        Icon(
+                            painterResource(Res.drawable.ic_report),
+                            contentDescription = stringResource(Res.string.glossary_badge_conflict),
+                            tint = MaterialTheme.colorScheme.error,
+                            modifier = Modifier.padding(horizontal = 4.dp).width(14.dp).height(14.dp)
+                        )
+                    } else if (gDiag.isAccepted) {
+                        Icon(
+                            painterResource(Res.drawable.ic_done),
+                            contentDescription = stringResource(Res.string.glossary_badge_accepted),
+                            tint = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.padding(horizontal = 4.dp).width(14.dp).height(14.dp)
                         )
                     }

@@ -46,6 +46,8 @@ class PoHelper(
     private val translatedEntries = HashMap<String, PoEntry>()
     private val draftEntries = HashMap<String, PoEntry>()
     private val entryList: MutableList<PoEntry> = mutableListOf()
+    val glossaryBank = GlossaryBank()
+    val acceptedTerms = mutableSetOf<String>()
 
     fun sourceEntry(key: String): PoEntry? = templateMap[key]
     fun chsEntry(key: String): PoEntry? = simplifiedMap[key]
@@ -108,11 +110,29 @@ class PoHelper(
             draftEntries.putAll(loadFile(draftFile).associateBy { it.key })
             log("Draft entries size: ${draftEntries.size}")
         }
+
+        val glossaryDir = configs.glossaryDir.ifBlank { configs.oniAssetsDir }
+        val glossaryFile = File(glossaryDir, "glossary.tsv")
+        if (glossaryBank.loadFromTsv(glossaryFile)) {
+            log("Loaded ${glossaryBank.terms.size} terms from ${glossaryFile.name}")
+        }
     }
 
     private suspend fun buildPoList() {
         log("Building word list (Template: ${templateMap.size}, Existing: ${translatedEntries.size})...")
         entryList.clear()
+
+        if (glossaryBank.terms.isEmpty()) {
+            glossaryBank.fallbackFromPoEntries(translatedEntries.values.toList())
+            log("Built fallback glossary with ${glossaryBank.terms.size} terms.")
+        }
+
+        val draftTerms = loadDraftTerms()
+        acceptedTerms.clear()
+        acceptedTerms.addAll(draftTerms)
+        if (draftTerms.isNotEmpty()) {
+            log("Restoring ${draftTerms.size} accepted glossary terms.")
+        }
 
         val draftKeys = loadDraftKeys()
         if (draftKeys.isNotEmpty()) {
@@ -195,6 +215,7 @@ class PoHelper(
             msgidChanged = isMsgidChanged
         ).apply {
             diagnostic = TagSensor.diagnose(msgId(), msgStr())
+            glossaryDiag = GlossarySensor.diagnose(msgId(), msgStr(), glossaryBank.terms, isAccepted = key in acceptedTerms)
         }
     }
 
@@ -308,8 +329,25 @@ class PoHelper(
             str = value
             changed = System.currentTimeMillis()
             diagnostic = TagSensor.diagnose(msgId(), msgStr())
+            glossaryDiag = GlossarySensor.diagnose(msgId(), msgStr(), glossaryBank.terms, isAccepted = key in acceptedTerms)
             log("Updated '$key'.")
         }
+    }
+
+    fun acceptTerm(key: String) {
+        acceptedTerms.add(key)
+        entryList.find { it.key == key }?.apply {
+            glossaryDiag = GlossarySensor.diagnose(msgId(), msgStr(), glossaryBank.terms, isAccepted = true)
+        }
+        saveDraftTerms()
+    }
+
+    fun resetTerm(key: String) {
+        acceptedTerms.remove(key)
+        entryList.find { it.key == key }?.apply {
+            glossaryDiag = GlossarySensor.diagnose(msgId(), msgStr(), glossaryBank.terms, isAccepted = false)
+        }
+        saveDraftTerms()
     }
 
     /**
@@ -340,6 +378,7 @@ class PoHelper(
             // If we are saving to the real location (not cache), delete the draft file and companion keys
             val cachedFile = getCachedFile()
             val cachedKeysFile = getCachedKeysFile()
+            val cachedTermsFile = getCachedTermsFile()
             if (result) {
                 if (output.absolutePath == cachedFile.absolutePath) {
                     saveDraftKeys()
@@ -356,6 +395,13 @@ class PoHelper(
                             log("Deleted draft keys file: ${cachedKeysFile.absolutePath}")
                         } else {
                             log("Failed to delete draft keys file: ${cachedKeysFile.absolutePath}", LogType.Warning)
+                        }
+                    }
+                    if (cachedTermsFile.exists()) {
+                        if (cachedTermsFile.delete()) {
+                            log("Deleted draft terms file: ${cachedTermsFile.absolutePath}")
+                        } else {
+                            log("Failed to delete draft terms file: ${cachedTermsFile.absolutePath}", LogType.Warning)
                         }
                     }
                 }
@@ -406,6 +452,8 @@ class PoHelper(
 
     private fun getCachedKeysFile(): File = File(System.getProperty("java.io.tmpdir"), "$ONI_PO.keys")
 
+    private fun getCachedTermsFile(): File = File(System.getProperty("java.io.tmpdir"), "$ONI_PO.terms")
+
     private fun saveDraftKeys() {
         val keysFile = getCachedKeysFile()
         val modifiedKeys = entryList.filter { it.changed > 0 }.map { it.key }
@@ -419,6 +467,38 @@ class PoHelper(
         } catch (e: Exception) {
             log("Failed to save draft keys: ${e.message}", LogType.Warning)
         }
+        saveDraftTerms()
+    }
+
+    private fun saveDraftTerms() {
+        val termsFile = getCachedTermsFile()
+        try {
+            if (acceptedTerms.isNotEmpty()) {
+                termsFile.writeText(acceptedTerms.joinToString("\n"), StandardCharsets.UTF_8)
+                log("Saved ${acceptedTerms.size} accepted terms to ${termsFile.absolutePath}")
+            } else if (termsFile.exists()) {
+                termsFile.delete()
+            }
+        } catch (e: Exception) {
+            log("Failed to save draft terms: ${e.message}", LogType.Warning)
+        }
+    }
+
+    private fun loadDraftTerms(): Set<String> {
+        val draftFile = getCachedFile()
+        val termsFile = getCachedTermsFile()
+        if (!draftFile.exists()) {
+            if (termsFile.exists()) termsFile.delete()
+            return emptySet()
+        }
+        return if (termsFile.exists()) {
+            try {
+                termsFile.readLines(StandardCharsets.UTF_8).filter { it.isNotBlank() }.toSet()
+            } catch (e: Exception) {
+                log("Failed to load draft terms: ${e.message}", LogType.Warning)
+                emptySet()
+            }
+        } else emptySet()
     }
 
     private fun loadDraftKeys(): Set<String> {
@@ -451,19 +531,13 @@ class PoHelper(
         results.add("Category\tEnglish\tChinese\tPath")
 
         val singleLevelExceptions = listOf("BLUEPRINTS", "ELEMENTS", "WORLD_TRAITS", "WORLDS")
-        val blacklist = listOf(
-            "MISC.", "GAMEPLAY_EVENTS.", "BLUEPRINTS", "ROOMS.DETAILS", "INPUT_BINDINGS.",
-            "UI.SPACEARTIFACTS", "UI.KEEPSAKES", "UI.OUTFITS", "UI.SANDBOXTOOLS",
-            ".STATUSITEMS", "ROOMS.CRITERIA",
-            "UI.FRONTEND", "UI.TOOLTIPS", ".FACADES", ".FACADE"
-        )
         val tagRegex = Regex("<[^>]+>")
 
         entryList.forEach { entry ->
             val key = entry.key()
-            val isBlacklisted = blacklist.any { key.contains(it) }
+            val isWhitelisted = GlossaryBank.ENTITY_WHITELIST.any { key.contains(it) }
 
-            if (key.endsWith(".NAME") && !isBlacklisted) {
+            if (key.endsWith(".NAME") && isWhitelisted) {
                 val eng = entry.msgId().replace(tagRegex, "").replace("\\\"", "\"").trim()
                 val cht = entry.msgStr().replace(tagRegex, "").replace("\\\"", "\"").trim()
 
@@ -507,9 +581,14 @@ class PoHelper(
     suspend fun clearDrafts(): Boolean = withContext(Dispatchers.IO) {
         val cachedFile = getCachedFile()
         val cachedKeysFile = getCachedKeysFile()
+        val cachedTermsFile = getCachedTermsFile()
         draftEntries.clear()
+        acceptedTerms.clear()
         if (cachedKeysFile.exists()) {
             cachedKeysFile.delete()
+        }
+        if (cachedTermsFile.exists()) {
+            cachedTermsFile.delete()
         }
         if (cachedFile.exists()) {
             val deleted = cachedFile.delete()
