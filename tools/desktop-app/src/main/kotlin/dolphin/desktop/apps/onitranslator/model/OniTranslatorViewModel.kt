@@ -429,10 +429,10 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         return if (entry == null) null else {
             val key = entry.key
             val sourceText = h.sourceEntry(key)?.msgId() ?: entry.msgId()
-            val oldSourceText = if (entry.msgidChanged) h.poEntry(key)?.msgId() else null
-            val chsReference = h.chsEntry(key)?.msgStr()
-            val draftText = h.draftEntry(key)?.msgStr()
-            val poText = h.poEntry(key)?.msgStr()
+            val oldSourceText = if (entry.msgidChanged) h.poEntry(key)?.msgId()?.takeIf { it.isNotBlank() } else null
+            val chsReference = h.chsEntry(key)?.msgStr()?.takeIf { it.isNotBlank() }
+            val draftText = h.draftEntry(key)?.msgStr()?.takeIf { it.isNotBlank() }
+            val poText = h.poEntry(key)?.msgStr()?.takeIf { it.isNotBlank() }
             EditorData(
                 target = entry,
                 sourceText = sourceText,

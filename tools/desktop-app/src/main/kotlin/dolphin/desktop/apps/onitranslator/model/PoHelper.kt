@@ -530,12 +530,13 @@ class PoHelper(
         // Header
         results.add("Category\tEnglish\tChinese\tPath")
 
-        val singleLevelExceptions = listOf("BLUEPRINTS", "ELEMENTS", "WORLD_TRAITS", "WORLDS")
+        val singleLevelExceptions = listOf("BLUEPRINTS", "ELEMENTS", "WORLD_TRAITS", "WORLDS", "CLUSTER_NAMES")
         val tagRegex = Regex("<[^>]+>")
 
         entryList.forEach { entry ->
             val key = entry.key()
-            val isWhitelisted = GlossaryBank.ENTITY_WHITELIST.any { key.contains(it) }
+            val isBlacklisted = GlossaryBank.ENTITY_BLACKLIST.any { key.contains(it) }
+            val isWhitelisted = !isBlacklisted && GlossaryBank.ENTITY_WHITELIST.any { key.contains(it) }
 
             if (key.endsWith(".NAME") && isWhitelisted) {
                 val eng = entry.msgId().replace(tagRegex, "").replace("\\\"", "\"").trim()

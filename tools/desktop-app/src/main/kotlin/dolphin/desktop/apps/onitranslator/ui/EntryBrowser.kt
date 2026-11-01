@@ -305,17 +305,19 @@ private fun EntryItemView(
                 verticalArrangement = Arrangement.spacedBy(4.dp),
             ) {
                 // Original English Source
-                EntryTagChip(tagType = EntryTagType.Source, text = data.sourceText)
+                if (data.sourceText.isNotBlank()) {
+                    EntryTagChip(tagType = EntryTagType.Source, text = data.sourceText)
+                }
                 // Simplified Reference
-                data.chsReference?.let {
+                data.chsReference?.takeIf { it.isNotBlank() }?.let {
                     EntryTagChip(tagType = EntryTagType.ChsRef, text = it)
                 }
                 // Existing Translation from strings.po
-                data.poText?.let {
+                data.poText?.takeIf { it.isNotBlank() }?.let {
                     EntryTagChip(tagType = EntryTagType.PoSave, text = it)
                 }
                 // Draft Translation (if exists and differs from poText)
-                data.draftText?.let { draft ->
+                data.draftText?.takeIf { it.isNotBlank() }?.let { draft ->
                     if (draft.trim() != data.poText?.trim()) {
                         EntryTagChip(tagType = EntryTagType.Draft, text = draft)
                     }

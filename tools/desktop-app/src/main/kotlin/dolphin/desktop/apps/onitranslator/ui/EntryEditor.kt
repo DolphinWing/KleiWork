@@ -84,6 +84,7 @@ import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_peek_close
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_peek_open
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_show_link
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_smart_paste
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_toggle_old_source
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_toggle_simplified
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_toggle_translated
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_undo_paste
@@ -178,6 +179,7 @@ private fun EntryEditorSection(
     var editedText by remember { mutableStateOf(entry.target.msgStr()) }
     var backupText by remember { mutableStateOf<String?>(null) }
     var undoCanonicalState by remember { mutableStateOf<Pair<String, String>?>(null) }
+    var showOldSource by remember { mutableStateOf(true) }
     var showRefs by remember { mutableStateOf(false) }
     var showPoSave by remember { mutableStateOf(false) }
     var isPeeking by remember { mutableStateOf(false) }
@@ -213,6 +215,7 @@ private fun EntryEditorSection(
         editedText = entry.target.msgStr()
         backupText = null
         undoCanonicalState = null
+        showOldSource = true
         isPeeking = false
     }
 
@@ -232,6 +235,7 @@ private fun EntryEditorSection(
                 entry,
                 onCopyToClipboard = { onEvent(AppEvent.Ui.CopyToClipboard(it)) },
                 onReplace = { editedText = onConvert(it) },
+                oldSourceVisible = showOldSource,
                 chsRefsVisible = showRefs,
                 poSaveVisible = showPoSave,
             )
@@ -292,6 +296,8 @@ private fun EntryEditorSection(
             EditorActionRow(
                 entry = entry,
                 editedText = editedText,
+                showOldSource = showOldSource,
+                onShowOldSourceChange = { showOldSource = it },
                 showRefs = showRefs,
                 onShowRefsChange = { showRefs = it },
                 showPoSave = showPoSave,
@@ -324,6 +330,8 @@ private fun EntryEditorSection(
 private fun EditorActionRow(
     entry: EditorData,
     editedText: String,
+    showOldSource: Boolean,
+    onShowOldSourceChange: (Boolean) -> Unit,
     showRefs: Boolean,
     onShowRefsChange: (Boolean) -> Unit,
     showPoSave: Boolean,
@@ -340,15 +348,27 @@ private fun EditorActionRow(
     diagnostic: TagDiagnostic? = null,
 ) {
     Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-        entry.chsReference?.let {
-            SimpleSwitch(checked = showRefs, onCheckedChange = onShowRefsChange, type = EntryTagType.ChsRef)
-        }
-        Spacer(Modifier.width(8.dp))
-        entry.poText?.let {
-            SimpleSwitch(checked = showPoSave, onCheckedChange = onShowPoSaveChange, type = EntryTagType.PoSave)
-        }
+        val hasSwitches = (entry.oldSourceText?.isNotBlank() == true) ||
+                (entry.chsReference?.isNotBlank() == true) ||
+                (entry.poText?.isNotBlank() == true)
 
-        Spacer(Modifier.width(16.dp))
+        if (hasSwitches) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                entry.oldSourceText?.takeIf { it.isNotBlank() }?.let {
+                    SimpleSwitch(checked = showOldSource, onCheckedChange = onShowOldSourceChange, type = EntryTagType.OldSource)
+                }
+                entry.chsReference?.takeIf { it.isNotBlank() }?.let {
+                    SimpleSwitch(checked = showRefs, onCheckedChange = onShowRefsChange, type = EntryTagType.ChsRef)
+                }
+                entry.poText?.takeIf { it.isNotBlank() }?.let {
+                    SimpleSwitch(checked = showPoSave, onCheckedChange = onShowPoSaveChange, type = EntryTagType.PoSave)
+                }
+            }
+            Spacer(Modifier.width(16.dp))
+        }
 
         if (editedText.shouldPeek(diagnostic)) {
             TooltipIconButton(
@@ -421,6 +441,7 @@ private fun ReferenceSection(
     entry: EditorData,
     onCopyToClipboard: (String) -> Unit,
     onReplace: ((String) -> Unit),
+    oldSourceVisible: Boolean = true,
     chsRefsVisible: Boolean = true,
     poSaveVisible: Boolean = true,
 ) {
@@ -438,7 +459,7 @@ private fun ReferenceSection(
             }
         )
         entry.oldSourceText?.let { text ->
-            if (text.isNotBlank()) {
+            if (text.isNotBlank() && oldSourceVisible) {
                 ReferenceView(
                     text,
                     type = EntryTagType.OldSource
@@ -563,6 +584,7 @@ private fun SimpleSwitch(
         positionProvider = TooltipDefaults.rememberTooltipPositionProvider(TooltipAnchorPosition.Above),
         tooltip = {
             val tooltipText = when (type) {
+                EntryTagType.OldSource -> stringResource(Res.string.tooltip_toggle_old_source)
                 EntryTagType.ChsRef -> stringResource(Res.string.tooltip_toggle_simplified)
                 EntryTagType.PoSave -> stringResource(Res.string.tooltip_toggle_translated)
                 else -> stringResource(type.label)

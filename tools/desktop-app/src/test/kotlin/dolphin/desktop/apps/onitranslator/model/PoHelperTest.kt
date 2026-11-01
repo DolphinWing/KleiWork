@@ -123,4 +123,54 @@ class PoHelperTest {
         assertEquals(" ", entry.id)
         assertEquals(" ", entry.str)
     }
+
+    @Test
+    fun testGlossaryBankFiltersFacadesAndStatusItems() {
+        val bank = GlossaryBank()
+        val tempTsv = java.io.File.createTempFile("test_glossary", ".tsv")
+        tempTsv.deleteOnExit()
+        tempTsv.writeText(
+            """
+            Category	English	Chinese	Path
+            BUILDINGS.PREFABS	Cot	簡易床	STRINGS.BUILDINGS.PREFABS.BED.NAME
+            BUILDINGS.PREFABS	Cot	小床	STRINGS.BUILDINGS.PREFABS.BED.FACADES.DEFAULT_BED.NAME
+            BUILDING.STATUSITEMS	Broken	壞掉的	STRINGS.BUILDING.STATUSITEMS.BROKEN.NAME
+            UI.SPACEDESTINATIONS	Metallic Asteroid	金屬小行星	STRINGS.UI.SPACEDESTINATIONS.METALLIC_ASTEROID.NAME
+            """.trimIndent()
+        )
+
+        val loaded = bank.loadFromTsv(tempTsv)
+        assertTrue(loaded)
+        assertEquals(2, bank.terms.size)
+        assertTrue(bank.terms.any { it.english == "Cot" && it.canonicalCht == "簡易床" })
+        assertTrue(bank.terms.any { it.english == "Metallic Asteroid" && it.canonicalCht == "金屬小行星" })
+        // Verify blacklisted items are rejected
+        assertTrue(bank.terms.none { it.key.contains(".FACADES.") })
+        assertTrue(bank.terms.none { it.key.contains("STATUSITEMS") })
+    }
+
+    @Test
+    fun testGlossaryBankFallbackIncludesLevel1Categories() {
+        val bank = GlossaryBank()
+        val entries = listOf(
+            PoEntry(key = "STRINGS.BUILDINGS.PREFABS.BED.FACADES.DEFAULT_BED.NAME", text = "", id = "Cot", str = "小床"),
+            PoEntry(key = "STRINGS.BUILDINGS.PREFABS.BED.NAME", text = "", id = "Cot", str = "簡易床"),
+            PoEntry(key = "STRINGS.BUILDING.STATUSITEMS.BROKEN.NAME", text = "", id = "Broken", str = "壞掉的"),
+            PoEntry(key = "STRINGS.UI.SPACEDESTINATIONS.METALLIC.NAME", text = "", id = "Metallic Asteroid", str = "金屬小行星"),
+            PoEntry(key = "STRINGS.DUPLICANTS.ROLES.ARTIST.NAME", text = "", id = "Master Artist", str = "藝術大師"),
+            PoEntry(key = "STRINGS.CREATURES.PLANT_MUTATIONS.BLOOMS.NAME", text = "", id = "Blooming", str = "盛開"),
+            PoEntry(key = "STRINGS.DUPLICANTS.ATTRIBUTES.ATHLETICS.NAME", text = "", id = "Athletics", str = "體能"),
+        )
+
+        bank.fallbackFromPoEntries(entries)
+        // Verify facades and statusitems skipped, Cot takes BED.NAME, and level 1 categories extracted
+        assertEquals(5, bank.terms.size)
+        val cotTerm = bank.findByEnglish("Cot")
+        assertEquals("簡易床", cotTerm?.canonicalCht)
+        assertEquals("STRINGS.BUILDINGS.PREFABS.BED.NAME", cotTerm?.key)
+        assertTrue(bank.terms.any { it.english == "Metallic Asteroid" })
+        assertTrue(bank.terms.any { it.english == "Master Artist" })
+        assertTrue(bank.terms.any { it.english == "Blooming" })
+        assertTrue(bank.terms.any { it.english == "Athletics" })
+    }
 }

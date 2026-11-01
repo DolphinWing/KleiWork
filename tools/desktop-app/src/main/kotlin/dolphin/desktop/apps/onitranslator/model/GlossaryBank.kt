@@ -42,6 +42,26 @@ class GlossaryBank {
             "WORLDS.",
             "SUBWORLDS.",
             "ROBOTS.MODELS.",
+            "SPACEDESTINATIONS.",
+            "DUPLICANTS.ROLES.",
+            "DUPLICANTS.SKILLGROUPS.",
+            "DUPLICANTS.ATTRIBUTES.",
+            "CREATURES.PLANT_MUTATIONS.",
+            "BUILDCATEGORIES.",
+            "CLUSTER_NAMES.",
+            "ROOMS.CATEGORY.",
+            "RESEARCH.TYPES.",
+        )
+
+        /**
+         * Blacklist of string key segments to reject.
+         * Filters out blueprint cosmetic skins and transient status items/alerts.
+         */
+        val ENTITY_BLACKLIST = listOf(
+            ".FACADES.",
+            ".FACADE",
+            "STATUSITEMS",
+            "STATUSITEM",
         )
     }
 
@@ -75,6 +95,7 @@ class GlossaryBank {
                     val english = parts[1].trim()
                     val cht = parts[2].trim()
                     val key = if (parts.size >= 4) parts[3].trim() else ""
+                    if (key.isNotBlank() && ENTITY_BLACKLIST.any { key.contains(it) }) return@forEachIndexed
                     if (english.isNotBlank() && cht.isNotBlank()) {
                         parsed.add(GlossaryTerm(category, english, cht, key))
                     }
@@ -96,14 +117,15 @@ class GlossaryBank {
      * Uses strict entity whitelist to avoid extracting generic UI or chore items.
      */
     fun fallbackFromPoEntries(entries: List<PoEntry>) {
-        val singleLevelExceptions = listOf("BLUEPRINTS", "ELEMENTS", "WORLD_TRAITS", "WORLDS")
+        val singleLevelExceptions = listOf("BLUEPRINTS", "ELEMENTS", "WORLD_TRAITS", "WORLDS", "CLUSTER_NAMES")
         val tagRegex = Regex("<[^>]+>")
         val seen = mutableSetOf<String>()
         val parsed = mutableListOf<GlossaryTerm>()
 
         entries.forEach { entry ->
             val key = entry.key()
-            val isWhitelisted = ENTITY_WHITELIST.any { key.contains(it) }
+            val isBlacklisted = ENTITY_BLACKLIST.any { key.contains(it) }
+            val isWhitelisted = !isBlacklisted && ENTITY_WHITELIST.any { key.contains(it) }
             if (key.endsWith(".NAME") && isWhitelisted) {
                 val eng = entry.msgId().replace(tagRegex, "").replace("\\\"", "\"").trim()
                 val cht = entry.msgStr().replace(tagRegex, "").replace("\\\"", "\"").trim()

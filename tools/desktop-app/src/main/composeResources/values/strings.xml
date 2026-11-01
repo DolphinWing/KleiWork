@@ -64,6 +64,7 @@
     <string name="tooltip_theme_toggle">Toggle theme</string>
     <string name="tooltip_show_link">Show link</string>
     <string name="tooltip_use_this_text">Use this text</string>
+    <string name="tooltip_toggle_old_source">Show/Hide Old English template text</string>
     <string name="tooltip_toggle_simplified">Show/Hide Simplified Chinese reference</string>
     <string name="tooltip_toggle_translated">Show/Hide Draft or Existing translation</string>
     <string name="tooltip_smart_paste">Smart Paste from AI (msgstr)</string>

@@ -22,6 +22,8 @@ fun EntryTagChip(
     containerColor: Color = MaterialTheme.colorScheme.surfaceVariant,
     contentColor: Color = MaterialTheme.colorScheme.onSurfaceVariant,
 ) {
+    if (text.isBlank()) return
+
     Box(
         modifier = modifier
             .clip(RoundedCornerShape(4.dp))
