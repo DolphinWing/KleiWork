@@ -1235,7 +1235,7 @@ msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_BED_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_HATCH.NAME"
-msgid "<link=\"BEDHATCH\">Hatch Plushie Cot</link>"
+msgid "<link=\"BEDHATCH\">Dura-Cot</link>"
 msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_BED_JORGE.DESC
@@ -1255,17 +1255,17 @@ msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_BED_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_PIP.NAME"
-msgid "<link=\"BEDPIP\">Pip Plushie Cot</link>"
+msgid "<link=\"BEDPIP\">Woodsy Cot</link>"
 msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_BED_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_PUFT.DESC"
-msgid "The Puft-shaped pillow emits a silent puff of air every time a Duplicant lays their head upon it."
+msgid "The Puft-shaped pillow emits a silent puff of fragrant air every time a Duplicant lays their head upon it."
 msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_BED_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_PUFT.NAME"
-msgid "<link=\"BEDPUFT\">Puft Plushie Cot</link>"
+msgid "<link=\"BEDPUFT\">Puff Cot</link>"
 msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_BED_ROCK.DESC
@@ -6120,7 +6120,7 @@ msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_HATCH.NAME"
-msgid "<link=\"EXTERIORWALL\">Hatch Spot</link>"
+msgid "<link=\"EXTERIORWALL\">Hatchspot</link>"
 msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_IGLOO.DESC
@@ -6360,7 +6360,7 @@ msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_BOTTOM.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_BOTTOM.NAME"
-msgid "<link=\"EXTERIORWALL\">Cactus Base</link>"
+msgid "<link=\"EXTERIORWALL\">Spiky Base</link>"
 msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_CURVE.DESC
@@ -6370,7 +6370,7 @@ msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_CURVE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_CURVE.NAME"
-msgid "<link=\"EXTERIORWALL\">Cactus Curve</link>"
+msgid "<link=\"EXTERIORWALL\">Spiky Curve</link>"
 msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_MIDDLE.DESC
@@ -6380,17 +6380,17 @@ msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_MIDDLE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_MIDDLE.NAME"
-msgid "<link=\"EXTERIORWALL\">Cactus Stem</link>"
+msgid "<link=\"EXTERIORWALL\">Spiky Stem</link>"
 msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_PIP.DESC"
-msgid "A guileless Pip clings to a cactus stem, oblivious to the plant's many spikes."
+msgid "A guileless Pip clings to a spiky stem, oblivious to the plant's many spikes."
 msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_PIP.NAME"
-msgid "<link=\"EXTERIORWALL\">Cactus Climber</link>"
+msgid "<link=\"EXTERIORWALL\">Spike Climber</link>"
 msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_TOP.DESC
@@ -6400,7 +6400,7 @@ msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_TOP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_TOP.NAME"
-msgid "<link=\"EXTERIORWALL\">Cactus Top</link>"
+msgid "<link=\"EXTERIORWALL\">Spiky Top</link>"
 msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_TOP_FLOWER.DESC
@@ -6410,7 +6410,7 @@ msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_TOP_FLOWER.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_TOP_FLOWER.NAME"
-msgid "<link=\"EXTERIORWALL\">Cactus Bloom Top</link>"
+msgid "<link=\"EXTERIORWALL\">Spiky Bloom Top</link>"
 msgstr ""
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_GRASS.DESC
@@ -9108,16 +9108,6 @@ msgctxt "STRINGS.BUILDING.STATUSITEMS.LOOKINGOKAY.TOOLTIP"
 msgid "Duplicants find this art piece quite charming"
 msgstr ""
 
-#. STRINGS.BUILDING.STATUSITEMS.LOOKINGSANDY.NAME
-msgctxt "STRINGS.BUILDING.STATUSITEMS.LOOKINGSANDY.NAME"
-msgid "Beachy"
-msgstr ""
-
-#. STRINGS.BUILDING.STATUSITEMS.LOOKINGSANDY.TOOLTIP
-msgctxt "STRINGS.BUILDING.STATUSITEMS.LOOKINGSANDY.TOOLTIP"
-msgid "This sculpture makes Duplicants feel like they're on vacation somewhere nice"
-msgstr ""
-
 #. STRINGS.BUILDING.STATUSITEMS.LOOKINGUGLY.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.LOOKINGUGLY.NAME"
 msgid "Crude"
@@ -10623,24 +10613,34 @@ msgctxt "STRINGS.BUILDING.STATUSITEMS.ROCKETSTRANDED.TOOLTIP"
 msgid "This rocket has run out of fuel and cannot move"
 msgstr ""
 
+#. STRINGS.BUILDING.STATUSITEMS.SANDBOXLOOKINGSANDY.NAME
+msgctxt "STRINGS.BUILDING.STATUSITEMS.SANDBOXLOOKINGSANDY.NAME"
+msgid "Beachy"
+msgstr ""
+
+#. STRINGS.BUILDING.STATUSITEMS.SANDBOXLOOKINGSANDY.TOOLTIP
+msgctxt "STRINGS.BUILDING.STATUSITEMS.SANDBOXLOOKINGSANDY.TOOLTIP"
+msgid "This sculpture makes Duplicants feel like they're on vacation somewhere nice"
+msgstr ""
+
 #. STRINGS.BUILDING.STATUSITEMS.SANDBOXSCULPTURECOLLAPSED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SANDBOXSCULPTURECOLLAPSED.NAME"
-msgid "Collapsed Sculpture"
+msgid "Collapsed Sand Art"
 msgstr ""
 
 #. STRINGS.BUILDING.STATUSITEMS.SANDBOXSCULPTURECOLLAPSED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SANDBOXSCULPTURECOLLAPSED.TOOLTIP"
-msgid "This sculpture has collapsed\n\nA Duplicant will be able to resculpt it during their downtime"
+msgid "This sand sculpture has dried out and collapsed\n\nDuplicants can resculpt it during their downtime"
 msgstr ""
 
 #. STRINGS.BUILDING.STATUSITEMS.SANDBOXSCULPTUREUNSTABLE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SANDBOXSCULPTUREUNSTABLE.NAME"
-msgid "Unstable Sculpture"
+msgid "Unstable Sand Art"
 msgstr ""
 
 #. STRINGS.BUILDING.STATUSITEMS.SANDBOXSCULPTUREUNSTABLE.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SANDBOXSCULPTUREUNSTABLE.TOOLTIP"
-msgid "This sculpture is structurally unsound\n\nIt will collapse in {TIME}"
+msgid "This sculpture is made of wet sand\n\nIt will dry out and collapse in {TIME}"
 msgstr ""
 
 #. STRINGS.BUILDING.STATUSITEMS.SKILL_POINTS_AVAILABLE.NAME
@@ -11141,6 +11141,16 @@ msgstr ""
 #. STRINGS.BUILDING.STATUSITEMS.TOP_PRIORITY_CHORE.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TOP_PRIORITY_CHORE.TOOLTIP"
 msgid "This errand has been set to <style=\"KKeyword\">Top Priority</style>\n\nThe colony will be in <style=\"KKeyword\">Yellow Alert</style> until this task is completed"
+msgstr ""
+
+#. STRINGS.BUILDING.STATUSITEMS.TRAMPOLINEBOUNCESREMAINING.NAME
+msgctxt "STRINGS.BUILDING.STATUSITEMS.TRAMPOLINEBOUNCESREMAINING.NAME"
+msgid "{BouncesLeft} Visits Remaining"
+msgstr ""
+
+#. STRINGS.BUILDING.STATUSITEMS.TRAMPOLINEBOUNCESREMAINING.TOOLTIP
+msgctxt "STRINGS.BUILDING.STATUSITEMS.TRAMPOLINEBOUNCESREMAINING.TOOLTIP"
+msgid "{BouncesLeft} more Duplicants can enjoy this amenity before its <style=\"KKeyword\">Rubber</style> surface will require maintenance"
 msgstr ""
 
 #. STRINGS.BUILDING.STATUSITEMS.TRANSITTUBEENTRANCEWAXREADY.NAME
@@ -23885,12 +23895,12 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.DESC"
-msgid "Damp sand is an excellent medium for creative expression, regardless of artistic skill."
+msgid "Sand art is naturally unstable and will eventually collapse."
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.EFFECT"
-msgid "Allows Duplicants to enjoy a <link=\"MORALE\">Morale</link>-boosting play session on their breaks."
+msgid "Allows Duplicants to enjoy a <link=\"MORALE\">Morale</link>-boosting play session on their breaks.\n\nNo artistic skill is required."
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDBOX_CASTLE_1.DESC
