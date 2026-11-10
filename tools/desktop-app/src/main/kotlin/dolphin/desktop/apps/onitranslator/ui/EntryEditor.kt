@@ -1,4 +1,4 @@
-@file:OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class)
+@file:OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class, ExperimentalLayoutApi::class)
 
 package dolphin.desktop.apps.onitranslator.ui
 
@@ -8,6 +8,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -48,6 +50,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.PointerEventType
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.Clipboard
 import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.text.font.FontFamily
@@ -62,6 +67,7 @@ import dolphin.desktop.apps.onitranslator.generated.resources.content_descriptio
 import dolphin.desktop.apps.onitranslator.generated.resources.glossary_accepted_info
 import dolphin.desktop.apps.onitranslator.generated.resources.glossary_accept_term
 import dolphin.desktop.apps.onitranslator.generated.resources.glossary_applied_success
+import dolphin.desktop.apps.onitranslator.generated.resources.glossary_apply_all_canonical
 import dolphin.desktop.apps.onitranslator.generated.resources.glossary_apply_canonical
 import dolphin.desktop.apps.onitranslator.generated.resources.glossary_conflict_alert
 import dolphin.desktop.apps.onitranslator.generated.resources.glossary_reset_canonical
@@ -78,6 +84,8 @@ import dolphin.desktop.apps.onitranslator.generated.resources.ic_visibility
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_visibility_off
 import dolphin.desktop.apps.onitranslator.generated.resources.label_translated_text
 import dolphin.desktop.apps.onitranslator.generated.resources.nisbet_ponder
+import dolphin.desktop.apps.onitranslator.generated.resources.tag_align_all_styles
+import dolphin.desktop.apps.onitranslator.generated.resources.tag_diagnostic_alert
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_canonical
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_this_text
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_peek_close
@@ -91,12 +99,15 @@ import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_undo_paste
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_use_this_text
 import dolphin.desktop.apps.onitranslator.model.EditorData
 import dolphin.desktop.apps.onitranslator.model.EntryTagType
+import dolphin.desktop.apps.onitranslator.model.GlossaryCandidateSpan
 import dolphin.desktop.apps.onitranslator.model.GlossaryConflict
 import dolphin.desktop.apps.onitranslator.model.GlossaryDiagnostic
 import dolphin.desktop.apps.onitranslator.model.GlossarySensor
 import dolphin.desktop.apps.onitranslator.model.GlossaryTerm
 import dolphin.desktop.apps.onitranslator.model.PoEntry
+import dolphin.desktop.apps.onitranslator.model.TagCandidateSpan
 import dolphin.desktop.apps.onitranslator.model.TagDiagnostic
+import dolphin.desktop.apps.onitranslator.model.TagIssueType
 import dolphin.desktop.apps.onitranslator.model.TagSensor
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.TooltipIconButton
@@ -183,6 +194,7 @@ private fun EntryEditorSection(
     var showRefs by remember { mutableStateOf(false) }
     var showPoSave by remember { mutableStateOf(false) }
     var isPeeking by remember { mutableStateOf(false) }
+    var hoveredSpanRange by remember { mutableStateOf<IntRange?>(null) }
     val isChanged = editedText != (entry.target.str.trim())
     val clipboard = LocalClipboard.current
     val scope = rememberCoroutineScope()
@@ -211,12 +223,58 @@ private fun EntryEditorSection(
         }
     }
 
+    // Live Candidate Spans for interactive quick-fixes
+    val glossarySpans = remember(editedText, liveGlossaryDiag) {
+        if (liveGlossaryDiag != null && liveGlossaryDiag.isUnreviewed) {
+            GlossarySensor.findAllCandidateSpans(editedText, liveGlossaryDiag.conflicts, entry.chsReference)
+        } else {
+            emptyList()
+        }
+    }
+
+    val tagSpans = remember(editedText, entry.sourceText, terms) {
+        TagSensor.findCandidateSpans(entry.sourceText, editedText, terms)
+    }
+
+    val highlightSpans = remember(glossarySpans, tagSpans, hoveredSpanRange) {
+        val list = mutableListOf<HighlightSpan>()
+        glossarySpans.forEach { span ->
+            val isTagText = span.conflict.linkTarget != null
+            val isHovered = hoveredSpanRange == span.range
+            // Purple for Situation A (link tag text mismatch), Red for standard plain-text glossary conflict
+            val baseColor = if (isTagText) Color(0x35AB47BC) else Color(0x35EF5350)
+            list.add(
+                HighlightSpan(
+                    range = span.range,
+                    backgroundColor = if (isHovered) baseColor.copy(alpha = 0.65f) else baseColor,
+                    isHovered = isHovered,
+                )
+            )
+        }
+        tagSpans.forEach { span ->
+            val isHovered = hoveredSpanRange == span.range
+            val baseColor = when (span.issueType) {
+                TagIssueType.STYLE_MISMATCH -> Color(0x35FFA726)
+                TagIssueType.MISSING_TAG_WRAP -> Color(0x3529B6F6)
+            }
+            list.add(
+                HighlightSpan(
+                    range = span.range,
+                    backgroundColor = if (isHovered) baseColor.copy(alpha = 0.65f) else baseColor,
+                    isHovered = isHovered,
+                )
+            )
+        }
+        list
+    }
+
     LaunchedEffect(entry.target.key) {
         editedText = entry.target.msgStr()
         backupText = null
         undoCanonicalState = null
         showOldSource = true
         isPeeking = false
+        hoveredSpanRange = null
     }
 
     Box(modifier = modifier.fillMaxSize()) {
@@ -251,17 +309,24 @@ private fun EntryEditorSection(
                 minLines = 5,
                 textStyle = MaterialTheme.typography.bodyMedium.copy(fontFamily = FontFamily.Monospace),
                 shape = MaterialTheme.shapes.medium,
+                visualTransformation = remember(highlightSpans) { DiagnosticVisualTransformation(highlightSpans) },
                 colors = TextFieldDefaults.colors(
                     focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
                     unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
                 )
             )
 
-            GlossarySensorBanner(
+            InteractiveDiagnosticBar(
                 diagnostic = liveGlossaryDiag,
+                glossarySpans = glossarySpans,
+                tagSpans = tagSpans,
                 undoState = undoCanonicalState,
-                onApplyCanonical = { conflict ->
-                    val applied = GlossarySensor.applyCanonical(editedText, conflict, entry.chsReference)
+                onApplyCanonicalBatch = { conflict, spans ->
+                    val applied = if (spans.isNotEmpty()) {
+                        GlossarySensor.applyBatchReplacement(editedText, spans)
+                    } else {
+                        GlossarySensor.applyCanonical(editedText, conflict, entry.chsReference)
+                    }
                     if (applied != editedText) {
                         backupText = editedText
                         undoCanonicalState = Pair(editedText, conflict.canonicalTranslation)
@@ -270,6 +335,36 @@ private fun EntryEditorSection(
                     } else {
                         onEvent(AppEvent.Ui.CopyToClipboard(conflict.canonicalTranslation))
                     }
+                },
+                onApplyCanonicalSingle = { conflict, span ->
+                    val applied = GlossarySensor.applySingleReplacement(editedText, span)
+                    if (applied != editedText) {
+                        backupText = editedText
+                        undoCanonicalState = Pair(editedText, conflict.canonicalTranslation)
+                        editedText = applied
+                        onEvent(AppEvent.Editor.Save(entry.target, applied))
+                    }
+                },
+                onApplyTagBatch = { spans ->
+                    val applied = TagSensor.applyBatchReplacement(editedText, spans)
+                    if (applied != editedText) {
+                        backupText = editedText
+                        undoCanonicalState = Pair(editedText, spans.firstOrNull()?.description ?: "標籤修復")
+                        editedText = applied
+                        onEvent(AppEvent.Editor.Save(entry.target, applied))
+                    }
+                },
+                onApplyTagSingle = { span ->
+                    val applied = TagSensor.applySingleReplacement(editedText, span)
+                    if (applied != editedText) {
+                        backupText = editedText
+                        undoCanonicalState = Pair(editedText, span.description)
+                        editedText = applied
+                        onEvent(AppEvent.Editor.Save(entry.target, applied))
+                    }
+                },
+                onHoverSpan = { range ->
+                    hoveredSpanRange = range
                 },
                 onUndoCanonical = {
                     undoCanonicalState?.let { (prevText, _) ->
@@ -689,11 +784,29 @@ private fun LinkSelectorPreview() {
     }
 }
 
+private fun Modifier.onPointerHover(onHover: (Boolean) -> Unit): Modifier = this.pointerInput(Unit) {
+    awaitPointerEventScope {
+        while (true) {
+            val event = awaitPointerEvent()
+            when (event.type) {
+                PointerEventType.Enter -> onHover(true)
+                PointerEventType.Exit -> onHover(false)
+            }
+        }
+    }
+}
+
 @Composable
-private fun GlossarySensorBanner(
+private fun InteractiveDiagnosticBar(
     diagnostic: GlossaryDiagnostic?,
+    glossarySpans: List<GlossaryCandidateSpan>,
+    tagSpans: List<TagCandidateSpan>,
     undoState: Pair<String, String>?,
-    onApplyCanonical: (GlossaryConflict) -> Unit,
+    onApplyCanonicalBatch: (GlossaryConflict, List<GlossaryCandidateSpan>) -> Unit,
+    onApplyCanonicalSingle: (GlossaryConflict, GlossaryCandidateSpan) -> Unit,
+    onApplyTagBatch: (List<TagCandidateSpan>) -> Unit,
+    onApplyTagSingle: (TagCandidateSpan) -> Unit,
+    onHoverSpan: (IntRange?) -> Unit,
     onUndoCanonical: () -> Unit,
     onDismissUndo: () -> Unit,
     onCopyToClipboard: (String) -> Unit,
@@ -701,7 +814,7 @@ private fun GlossarySensorBanner(
     onResetToCanonical: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    // In-place Undo Banner: shown immediately after auto-applying a canonical term
+    // In-place Undo Banner: shown immediately after auto-applying any fix
     if (undoState != null) {
         Surface(
             modifier = modifier.fillMaxWidth(),
@@ -747,115 +860,255 @@ private fun GlossarySensorBanner(
         return
     }
 
-    if (diagnostic == null || !diagnostic.hasConflict) return
+    val hasGlossary = diagnostic != null && diagnostic.hasConflict
+    val hasTags = tagSpans.isNotEmpty()
+    if (!hasGlossary && !hasTags) return
 
-    if (diagnostic.isUnreviewed) {
-        Surface(
-            modifier = modifier.fillMaxWidth(),
-            shape = MaterialTheme.shapes.small,
-            color = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.25f),
-            border = BorderStroke(1.dp, MaterialTheme.colorScheme.error.copy(alpha = 0.4f))
-        ) {
-            Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                diagnostic.conflicts.forEach { conflict ->
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
+    Column(modifier = modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        // Tag Repairs
+        if (hasTags) {
+            Surface(
+                modifier = Modifier.fillMaxWidth(),
+                shape = MaterialTheme.shapes.small,
+                color = MaterialTheme.colorScheme.tertiaryContainer.copy(alpha = 0.25f),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.tertiary.copy(alpha = 0.4f))
+            ) {
+                Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         Icon(
                             painterResource(Res.drawable.ic_report),
                             contentDescription = null,
-                            tint = MaterialTheme.colorScheme.error,
+                            tint = MaterialTheme.colorScheme.tertiary,
                             modifier = Modifier.size(18.dp)
                         )
                         Text(
-                            text = stringResource(
-                                Res.string.glossary_conflict_alert,
-                                conflict.matchedSourceText,
-                                conflict.canonicalTranslation
-                            ),
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurface,
-                            modifier = Modifier.weight(1f)
+                            text = stringResource(Res.string.tag_diagnostic_alert, "${tagSpans.size} 項待處理"),
+                            style = MaterialTheme.typography.titleSmall,
+                            color = MaterialTheme.colorScheme.onSurface
                         )
-                        // Always-visible copy canonical to clipboard button
-                        TooltipIconButton(
-                            painter = painterResource(Res.drawable.ic_content_copy),
-                            tooltip = stringResource(Res.string.tooltip_copy_canonical, conflict.canonicalTranslation),
-                            position = TooltipAnchorPosition.Above,
-                            onClick = { onCopyToClipboard(conflict.canonicalTranslation) }
-                        )
-                        Button(
-                            onClick = { onApplyCanonical(conflict) },
-                            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 6.dp),
-                            shape = MaterialTheme.shapes.small,
-                            colors = ButtonDefaults.buttonColors(
-                                containerColor = MaterialTheme.colorScheme.error,
-                                contentColor = MaterialTheme.colorScheme.onError
-                            )
-                        ) {
-                            Text(
-                                text = stringResource(Res.string.glossary_apply_canonical, conflict.canonicalTranslation),
-                                style = MaterialTheme.typography.labelSmall
-                            )
-                        }
                     }
-                }
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.End
-                ) {
-                    OutlinedButton(
-                        onClick = onAcceptNewTerm,
-                        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
-                        shape = MaterialTheme.shapes.small,
-                        colors = ButtonDefaults.outlinedButtonColors(
-                            contentColor = MaterialTheme.colorScheme.error
-                        ),
-                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.error.copy(alpha = 0.5f))
+
+                    FlowRow(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalArrangement = Arrangement.spacedBy(6.dp)
                     ) {
-                        Text(
-                            text = stringResource(Res.string.glossary_accept_term),
-                            style = MaterialTheme.typography.labelSmall
-                        )
+                        val styleSpans = tagSpans.filter { it.issueType == TagIssueType.STYLE_MISMATCH }
+                        if (styleSpans.size > 1) {
+                            Button(
+                                onClick = { onApplyTagBatch(styleSpans) },
+                                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
+                                shape = MaterialTheme.shapes.small,
+                                colors = ButtonDefaults.buttonColors(
+                                    containerColor = MaterialTheme.colorScheme.tertiary,
+                                    contentColor = MaterialTheme.colorScheme.onTertiary
+                                )
+                            ) {
+                                Text(
+                                    text = stringResource(Res.string.tag_align_all_styles, styleSpans.size),
+                                    style = MaterialTheme.typography.labelSmall
+                                )
+                            }
+                        }
+
+                        tagSpans.forEach { span ->
+                            FilledTonalButton(
+                                onClick = { onApplyTagSingle(span) },
+                                modifier = Modifier.onPointerHover { isHovered ->
+                                    onHoverSpan(if (isHovered) span.range else null)
+                                },
+                                contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
+                                shape = MaterialTheme.shapes.small,
+                            ) {
+                                Text(
+                                    text = span.description,
+                                    style = MaterialTheme.typography.labelSmall
+                                )
+                            }
+                        }
                     }
                 }
             }
         }
-    } else if (diagnostic.isAccepted) {
-        Surface(
-            modifier = modifier.fillMaxWidth(),
-            shape = MaterialTheme.shapes.small,
-            color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.25f),
-            border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.4f))
-        ) {
-            Row(
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 8.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                Icon(
-                    painterResource(Res.drawable.ic_done),
-                    contentDescription = null,
-                    tint = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.size(18.dp)
-                )
-                val canonicals = diagnostic.conflicts.joinToString(", ") { it.canonicalTranslation }
-                Text(
-                    text = stringResource(Res.string.glossary_accepted_info, canonicals),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onPrimaryContainer,
-                    modifier = Modifier.weight(1f)
-                )
-                TextButton(
-                    onClick = onResetToCanonical,
-                    contentPadding = PaddingValues(horizontal = 8.dp, vertical = 4.dp)
+
+        // Glossary Conflicts
+        if (diagnostic != null && diagnostic.hasConflict) {
+            if (diagnostic.isUnreviewed) {
+                Surface(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = MaterialTheme.shapes.small,
+                    color = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.25f),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.error.copy(alpha = 0.4f))
                 ) {
-                    Text(
-                        text = stringResource(Res.string.glossary_reset_canonical),
-                        style = MaterialTheme.typography.labelSmall
-                    )
+                    Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        diagnostic.conflicts.forEach { conflict ->
+                            val spansForConflict = glossarySpans.filter { it.conflict == conflict }
+
+                            Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                                ) {
+                                    Icon(
+                                        painterResource(Res.drawable.ic_report),
+                                        contentDescription = null,
+                                        tint = MaterialTheme.colorScheme.error,
+                                        modifier = Modifier.size(18.dp)
+                                    )
+                                    Text(
+                                        text = stringResource(
+                                            Res.string.glossary_conflict_alert,
+                                            conflict.matchedSourceText,
+                                            conflict.canonicalTranslation
+                                        ),
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = MaterialTheme.colorScheme.onSurface,
+                                        modifier = Modifier.weight(1f)
+                                    )
+                                    TooltipIconButton(
+                                        painter = painterResource(Res.drawable.ic_content_copy),
+                                        tooltip = stringResource(Res.string.tooltip_copy_canonical, conflict.canonicalTranslation),
+                                        position = TooltipAnchorPosition.Above,
+                                        onClick = { onCopyToClipboard(conflict.canonicalTranslation) }
+                                    )
+                                }
+
+                                FlowRow(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                    verticalArrangement = Arrangement.spacedBy(6.dp)
+                                ) {
+                                    if (spansForConflict.size > 1) {
+                                        Button(
+                                            onClick = { onApplyCanonicalBatch(conflict, spansForConflict) },
+                                            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 6.dp),
+                                            shape = MaterialTheme.shapes.small,
+                                            colors = ButtonDefaults.buttonColors(
+                                                containerColor = MaterialTheme.colorScheme.error,
+                                                contentColor = MaterialTheme.colorScheme.onError
+                                            )
+                                        ) {
+                                            Text(
+                                                text = stringResource(
+                                                    Res.string.glossary_apply_all_canonical,
+                                                    conflict.canonicalTranslation,
+                                                    spansForConflict.size
+                                                ),
+                                                style = MaterialTheme.typography.labelSmall
+                                            )
+                                        }
+
+                                        spansForConflict.forEachIndexed { index, span ->
+                                            OutlinedButton(
+                                                onClick = { onApplyCanonicalSingle(conflict, span) },
+                                                modifier = Modifier.onPointerHover { isHovered ->
+                                                    onHoverSpan(if (isHovered) span.range else null)
+                                                },
+                                                contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
+                                                shape = MaterialTheme.shapes.small,
+                                            ) {
+                                                Text(
+                                                    text = "#${index + 1}: ${span.text}",
+                                                    style = MaterialTheme.typography.labelSmall
+                                                )
+                                            }
+                                        }
+                                    } else if (spansForConflict.size == 1) {
+                                        val singleSpan = spansForConflict[0]
+                                        Button(
+                                            onClick = { onApplyCanonicalSingle(conflict, singleSpan) },
+                                            modifier = Modifier.onPointerHover { isHovered ->
+                                                onHoverSpan(if (isHovered) singleSpan.range else null)
+                                            },
+                                            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 6.dp),
+                                            shape = MaterialTheme.shapes.small,
+                                            colors = ButtonDefaults.buttonColors(
+                                                containerColor = MaterialTheme.colorScheme.error,
+                                                contentColor = MaterialTheme.colorScheme.onError
+                                            )
+                                        ) {
+                                            Text(
+                                                text = stringResource(Res.string.glossary_apply_canonical, conflict.canonicalTranslation),
+                                                style = MaterialTheme.typography.labelSmall
+                                            )
+                                        }
+                                    } else {
+                                        Button(
+                                            onClick = { onApplyCanonicalBatch(conflict, emptyList()) },
+                                            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 6.dp),
+                                            shape = MaterialTheme.shapes.small,
+                                            colors = ButtonDefaults.buttonColors(
+                                                containerColor = MaterialTheme.colorScheme.error,
+                                                contentColor = MaterialTheme.colorScheme.onError
+                                            )
+                                        ) {
+                                            Text(
+                                                text = stringResource(Res.string.glossary_apply_canonical, conflict.canonicalTranslation),
+                                                style = MaterialTheme.typography.labelSmall
+                                            )
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.End
+                        ) {
+                            OutlinedButton(
+                                onClick = onAcceptNewTerm,
+                                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
+                                shape = MaterialTheme.shapes.small,
+                                colors = ButtonDefaults.outlinedButtonColors(
+                                    contentColor = MaterialTheme.colorScheme.error
+                                ),
+                                border = BorderStroke(1.dp, MaterialTheme.colorScheme.error.copy(alpha = 0.5f))
+                            ) {
+                                Text(
+                                    text = stringResource(Res.string.glossary_accept_term),
+                                    style = MaterialTheme.typography.labelSmall
+                                )
+                            }
+                        }
+                    }
+                }
+            } else if (diagnostic.isAccepted) {
+                Surface(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = MaterialTheme.shapes.small,
+                    color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.25f),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.4f))
+                ) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 8.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        Icon(
+                            painterResource(Res.drawable.ic_done),
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier.size(18.dp)
+                        )
+                        val canonicals = diagnostic.conflicts.joinToString(", ") { it.canonicalTranslation }
+                        Text(
+                            text = stringResource(Res.string.glossary_accepted_info, canonicals),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onPrimaryContainer,
+                            modifier = Modifier.weight(1f)
+                        )
+                        TextButton(
+                            onClick = onResetToCanonical,
+                            contentPadding = PaddingValues(horizontal = 8.dp, vertical = 4.dp)
+                        ) {
+                            Text(
+                                text = stringResource(Res.string.glossary_reset_canonical),
+                                style = MaterialTheme.typography.labelSmall
+                            )
+                        }
+                    }
                 }
             }
         }

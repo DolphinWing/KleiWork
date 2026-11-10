@@ -100,6 +100,7 @@
     <string name="glossary_badge_accepted">ℹ️ New Term</string>
     <string name="glossary_conflict_alert">Terminology Conflict: Source has \"%1$s\", standard is \"%2$s\"</string>
     <string name="glossary_apply_canonical">Apply \"%1$s\"</string>
+    <string name="glossary_apply_all_canonical">Replace all with \"%1$s\" (%2$d places)</string>
     <string name="glossary_applied_success">Applied \"%1$s\"</string>
     <string name="glossary_undo_apply">Undo</string>
     <string name="tooltip_copy_canonical">Copy \"%1$s\" to clipboard</string>
@@ -107,6 +108,8 @@
     <string name="glossary_accepted_info">Using New Term (Canonical: \"%1$s\")</string>
     <string name="glossary_reset_canonical">Reset to Standard</string>
     <string name="toast_glossary_copied">Copied \"%1$s\" to clipboard for manual paste</string>
+    <string name="tag_align_all_styles">Align all official tags (%1$d places)</string>
+    <string name="tag_diagnostic_alert">Tag Issue: %1$s</string>
 
     <!-- Content Descriptions -->
     <string name="content_description_back">Back</string>

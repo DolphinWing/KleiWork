@@ -213,6 +213,28 @@
     * **卡片清單**：右上角 Chip 標示 `⚠️ 術語衝突` 或 `ℹ️ 採用新詞`。
     * **全域檢索**：`SearchType.Glossary` 一鍵篩選所有術語差異項目，供日後覆核調閱。
 
+### 4.11. 互動式診斷編輯器與視覺化修復 (Interactive Diagnostic Editor & Quick-Fix)
+
+為了消除翻譯者手動對位與漏改多重重複詞彙的負擔，`EntryEditor` 整合了行內可視化標記與「點擊即修復」互動工具列：
+* **行內即時高亮 (`DiagnosticVisualTransformation`)**：
+    * 採用裝飾層 `VisualTransformation` 與 1:1 `OffsetMapping.Identity`，徹底杜絕游標跳動與漂移。
+    * 內建防禦性邊界保護（`coerceIn(0, length)`），確保高頻打字與反白刪除時不拋出越界例外。
+    * **四色語意高亮**：
+        * 🔴 **紅色**：純文字名詞衝突（Glossary Plain-text Conflict）
+        * 🟣 **紫色**：標籤內文字錯位（Situation A: Tag Text Conflict，如 `<link="POWER">電力</link>` ➜ `電網`）
+        * 🔵 **藍色**：標籤缺失待包裹（Situation B: Missing Tag Wrap，如 `氧氣` ➜ `<link="OXYGEN">氧氣</link>`）
+        * 🟠 **橙色**：標籤樣式不符（Situation C: Style Mismatch，如官方 `<i>` vs 歷史 `<b>`）
+* **多處重複與 RTL 倒序批次置換**：
+    * 透過 `findCandidateSpans` 抓取本文內所有出現點之非重疊字元跨度（Non-overlapping Spans）。
+    * 採用由右至左（Right-to-Left, RTL）執行批次替換，確保低位索引絕對不跑位。
+    * 單條多處重複時提供「⚡ 一鍵全部替換」與個別「[#1]、[#2]」單點處置按鈕。
+* **外置語言學規則庫 (`glossary_rules.txt` & `LinguisticRules`)**：
+    * 將同音通假字對（如 `氣|汽`、`裡|裏`、`線|綫`）與斷詞邊界標點／虛詞／量詞完全從演算法抽離，儲存於 `src/main/composeResources/files/glossary_rules.txt`，確保核心程式碼 0 寫死中文字。
+* **互動快速修復工具列 (`FlowRow`)**：
+    * 採用 `FlowRow` 自然折行排版，徹底防止小視窗水平溢出。
+    * 具備 Hover 聚焦連動（滑鼠移到 Chip 時，輸入框中對應文字加粗並加深底色）。
+    * 提供一鍵修復、純文字複製、認可新詞與完整 Undo 復原機制。
+
 ---
 
 ## 5. 目錄結構 (Directory Structure)
@@ -220,8 +242,8 @@
 ```text
 src/main/kotlin/dolphin/desktop/apps/onitranslator/
 ├── app/          # 應用程式入口與全域 UI (Main, App, TopBar, BottomBar)
-├── model/        # 核心邏輯與資料模型 (ViewModel, PoHelper, PoEntry, GlossaryBank, GlossarySensor)
-├── ui/           # 主要 UI 畫面 (EntryBrowser, EntryEditor, ConfigScreen)
+├── model/        # 核心邏輯與資料模型 (ViewModel, PoHelper, PoEntry, GlossaryBank, GlossarySensor, TagSensor, LinguisticRules)
+├── ui/           # 主要 UI 畫面 (EntryBrowser, EntryEditor, ConfigScreen, NisbetPeek, DiagnosticVisualTransformation)
 ├── theme/        # Material 3 主題設定
 ├── widget/       # 共用 UI 元件
 └── generated/    # Compose Resources 自動生成的代碼
