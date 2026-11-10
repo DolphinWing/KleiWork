@@ -72,6 +72,9 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                 is AppEvent.File.ExportGlossary -> {
                     val file = helper?.exportGlossary()
                     if (file != null) {
+                        val terms = helper?.glossaryBank?.terms ?: emptyList()
+                        _state.update { it.copy(glossaryTerms = terms) }
+                        refreshDataSource()
                         SnackbarManager.showMessage(Res.string.toast_write_success, file.name, 0)
                     } else {
                         SnackbarManager.showMessage(Res.string.toast_write_failed)

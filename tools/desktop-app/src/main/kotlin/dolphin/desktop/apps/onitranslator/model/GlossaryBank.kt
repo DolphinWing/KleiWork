@@ -16,7 +16,21 @@ data class GlossaryTerm(
     val english: String,
     val canonicalCht: String,
     val key: String,
-)
+) {
+    /**
+     * True if the English term contains at least 2 words.
+     * Evaluated once upon term instantiation.
+     */
+    val isMultiWord: Boolean = english.trim().split(Regex("""\s+""")).filter { it.isNotBlank() }.size >= 2
+
+    /**
+     * Lazy-compiled word boundary regex pattern for plain text matching.
+     * Cached and reused across all diagnostic scans.
+     */
+    val wordRegex: Regex by lazy(LazyThreadSafetyMode.NONE) {
+        Regex("""\b${Regex.escape(english)}\b""", RegexOption.IGNORE_CASE)
+    }
+}
 
 /**
  * Manages the in-memory dictionary of approved terminology.
@@ -71,6 +85,13 @@ class GlossaryBank {
      * Terms sorted by English length descending to support greedy longest-match-first matching.
      */
     val terms: List<GlossaryTerm> get() = _terms
+
+    private var _multiWordTerms: List<GlossaryTerm> = emptyList()
+
+    /**
+     * Terms with 2 or more words, sorted by English length descending.
+     */
+    val multiWordTerms: List<GlossaryTerm> get() = _multiWordTerms
 
     private val termMap = mutableMapOf<String, GlossaryTerm>()
 
@@ -152,6 +173,7 @@ class GlossaryBank {
         _terms.clear()
         // Sort descending by length of English term to prioritize greedy longest matching
         _terms.addAll(newTerms.sortedByDescending { it.english.length })
+        _multiWordTerms = _terms.filter { it.isMultiWord }
         termMap.clear()
         _terms.forEach { term ->
             termMap[term.english.lowercase()] = term

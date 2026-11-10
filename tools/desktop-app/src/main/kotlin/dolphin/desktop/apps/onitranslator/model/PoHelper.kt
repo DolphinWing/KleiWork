@@ -567,10 +567,28 @@ class PoHelper(
         return@withContext try {
             outputFile.writeText(results.joinToString("\n"), StandardCharsets.UTF_8)
             log("Glossary exported to ${outputFile.absolutePath}")
+            if (glossaryBank.loadFromTsv(outputFile)) {
+                log("Reloaded ${glossaryBank.terms.size} terms from exported ${outputFile.name}")
+                refreshGlossaryDiagnostics()
+            }
             outputFile
         } catch (e: Exception) {
             log("Failed to export glossary: ${e.message}", LogType.Error)
             null
+        }
+    }
+
+    /**
+     * Re-diagnoses all entries against the current in-memory glossary bank.
+     */
+    fun refreshGlossaryDiagnostics() {
+        entryList.forEach { entry ->
+            entry.glossaryDiag = GlossarySensor.diagnose(
+                entry.msgId(),
+                entry.msgStr(),
+                glossaryBank.terms,
+                isAccepted = entry.key in acceptedTerms
+            )
         }
     }
 

@@ -32,6 +32,22 @@ data class GlossaryConflict(
 )
 
 /**
+ * Represents a localized candidate text span within a translation target string
+ * that has been identified for terminology replacement.
+ *
+ * @param range The exact character index range within the target string.
+ * @param text The current text at this range.
+ * @param replacement The canonical replacement string.
+ * @param conflict The associated glossary conflict.
+ */
+data class GlossaryCandidateSpan(
+    val range: IntRange,
+    val text: String,
+    val replacement: String,
+    val conflict: GlossaryConflict,
+)
+
+/**
  * Core scanning engine for terminology consistency.
  *
  * Features:
@@ -68,32 +84,33 @@ object GlossarySensor {
         val claimedSpans = mutableListOf<IntRange>()
         val identifiedTermKeys = mutableSetOf<String>()
 
-        // 1. Tag-First: Scan explicit ONI link tags
-        linkTagRegex.findAll(sourceText).forEach { match ->
-            val linkTarget = match.groupValues[1]
-            val linkText = match.groupValues[2]
+        // 1. Tag-First: Scan explicit ONI link tags (fast short-circuit if no tag present)
+        if (sourceText.contains("<link", ignoreCase = true)) {
+            linkTagRegex.findAll(sourceText).forEach { match ->
+                val linkTarget = match.groupValues[1]
+                val linkText = match.groupValues[2]
 
-            // Find matching term either by key path, key suffix, or English text
-            val matchedTerm = terms.firstOrNull { term ->
-                term.key.equals(linkTarget, ignoreCase = true) ||
-                    term.key.endsWith(".$linkTarget", ignoreCase = true) ||
-                    term.english.equals(linkText, ignoreCase = true)
-            }
+                // Find matching term either by key path, key suffix, or English text
+                val matchedTerm = terms.firstOrNull { term ->
+                    term.key.equals(linkTarget, ignoreCase = true) ||
+                        term.key.endsWith(".$linkTarget", ignoreCase = true) ||
+                        term.english.equals(linkText, ignoreCase = true)
+                }
 
-            if (matchedTerm != null) {
-                claimedSpans.add(match.range)
-                identifiedTermKeys.add(matchedTerm.key.ifBlank { matchedTerm.english })
+                if (matchedTerm != null) {
+                    claimedSpans.add(match.range)
+                    identifiedTermKeys.add(matchedTerm.key.ifBlank { matchedTerm.english })
 
-                // Verify if targetText contains the canonical translation
-                if (!targetText.contains(matchedTerm.canonicalCht)) {
-                    conflicts.add(
-                        GlossaryConflict(
-                            term = matchedTerm,
-                            canonicalTranslation = matchedTerm.canonicalCht,
-                            matchedSourceText = linkText,
-                            linkTarget = linkTarget,
-                        )
+                    val conflict = GlossaryConflict(
+                        term = matchedTerm,
+                        canonicalTranslation = matchedTerm.canonicalCht,
+                        matchedSourceText = linkText,
+                        linkTarget = linkTarget,
                     )
+                    // Verify if targetText contains the canonical translation, or still has candidate spans
+                    if (!targetText.contains(matchedTerm.canonicalCht) || findCandidateSpans(targetText, conflict).isNotEmpty()) {
+                        conflicts.add(conflict)
+                    }
                 }
             }
         }
@@ -103,47 +120,43 @@ object GlossarySensor {
         // with 2 or more words (e.g. "Cool Steam Vent", "Natural Gas").
         // Single-word terms (e.g. "All", "Building", "Water") are only matched when explicitly
         // tagged with <link="..."> to prevent false positives on common words or verbs.
-        for (term in terms) {
-            // Skip if this term was already identified in the tag phase
-            val termIdentifier = term.key.ifBlank { term.english }
-            if (identifiedTermKeys.contains(termIdentifier)) continue
+        // Fast bail-out: If sourceText has no spaces, it cannot contain any multi-word term.
+        if (sourceText.contains(' ')) {
+            for (term in terms) {
+                // Must have at least 2 words for unlinked plain text matching
+                if (!term.isMultiWord) continue
 
-            // Must have at least 2 words for unlinked plain text matching
-            val isMultiWord = term.english.trim().split(Regex("""\s+""")).filter { it.isNotBlank() }.size >= 2
-            if (!isMultiWord) continue
+                // Skip if this term was already identified in the tag phase
+                val termIdentifier = term.key.ifBlank { term.english }
+                if (identifiedTermKeys.contains(termIdentifier)) continue
 
-            // Require word boundary for English words
-            val pattern = """\b${Regex.escape(term.english)}\b"""
-            val regex = try {
-                Regex(pattern, RegexOption.IGNORE_CASE)
-            } catch (_: Exception) {
-                continue
-            }
+                // Fast bail-out: Substring check before running cached regex
+                if (!sourceText.contains(term.english, ignoreCase = true)) continue
 
-            val matches = regex.findAll(sourceText).toList()
-            for (match in matches) {
-                // If this match overlaps with any previously claimed span, skip it
-                val overlaps = claimedSpans.any { span ->
-                    match.range.first <= span.last && match.range.last >= span.first
-                }
-                if (overlaps) continue
+                val matches = term.wordRegex.findAll(sourceText).toList()
+                for (match in matches) {
+                    // If this match overlaps with any previously claimed span, skip it
+                    val overlaps = claimedSpans.any { span ->
+                        match.range.first <= span.last && match.range.last >= span.first
+                    }
+                    if (overlaps) continue
 
-                // Claim this span
-                claimedSpans.add(match.range)
-                identifiedTermKeys.add(termIdentifier)
+                    // Claim this span
+                    claimedSpans.add(match.range)
+                    identifiedTermKeys.add(termIdentifier)
 
-                // Check if target translation contains canonical Chinese text
-                if (!targetText.contains(term.canonicalCht)) {
-                    conflicts.add(
-                        GlossaryConflict(
-                            term = term,
-                            canonicalTranslation = term.canonicalCht,
-                            matchedSourceText = match.value,
-                            linkTarget = null,
-                        )
+                    val conflict = GlossaryConflict(
+                        term = term,
+                        canonicalTranslation = term.canonicalCht,
+                        matchedSourceText = match.value,
+                        linkTarget = null,
                     )
+                    // Check if target translation contains canonical Chinese text, or still has candidate spans
+                    if (!targetText.contains(term.canonicalCht) || findCandidateSpans(targetText, conflict).isNotEmpty()) {
+                        conflicts.add(conflict)
+                    }
+                    break // One conflict per unique term per entry is sufficient
                 }
-                break // One conflict per unique term per entry is sufficient
             }
         }
 
@@ -151,6 +164,233 @@ object GlossarySensor {
             conflicts = conflicts,
             isAccepted = isAccepted,
         )
+    }
+
+    /**
+     * Finds all candidate text spans in [targetText] that should be replaced with the canonical term.
+     * Guarantees that returned spans are non-overlapping and sorted by range.first.
+     */
+    fun findCandidateSpans(
+        targetText: String,
+        conflict: GlossaryConflict,
+        chsReference: String? = null,
+    ): List<GlossaryCandidateSpan> {
+        if (targetText.isEmpty()) return emptyList()
+        val canonical = conflict.canonicalTranslation
+        val result = mutableListOf<GlossaryCandidateSpan>()
+
+        // 1. Tag-First: match <link="TARGET"> in targetText
+        val linkTargets = mutableSetOf<String>()
+        conflict.linkTarget?.let { linkTargets.add(it) }
+        if (conflict.term.key.isNotBlank()) {
+            linkTargets.add(conflict.term.key)
+            val parts = conflict.term.key.split(".")
+            val shortId = parts.lastOrNull { it != "NAME" && it.isNotBlank() }
+            if (shortId != null) linkTargets.add(shortId)
+        }
+        if (conflict.term.english.isNotBlank()) {
+            linkTargets.add(conflict.term.english)
+        }
+
+        for (target in linkTargets) {
+            val tagRegex = Regex("""(<link="(?i)${Regex.escape(target)}">)([^<]*)(</link>)""")
+            tagRegex.findAll(targetText).forEach { match ->
+                val innerRange = match.groups[2]!!.range
+                val innerText = match.groups[2]!!.value
+                if (innerText != canonical) {
+                    result.add(
+                        GlossaryCandidateSpan(
+                            range = innerRange,
+                            text = innerText,
+                            replacement = canonical,
+                            conflict = conflict,
+                        )
+                    )
+                }
+            }
+        }
+        if (result.isNotEmpty()) {
+            return result.filterNonOverlapping()
+        }
+
+        // 2. Direct English match in targetText
+        val englishPattern = """\b${Regex.escape(conflict.matchedSourceText)}\b"""
+        val englishRegex = Regex(englishPattern, RegexOption.IGNORE_CASE)
+        englishRegex.findAll(targetText).forEach { match ->
+            result.add(
+                GlossaryCandidateSpan(
+                    range = match.range,
+                    text = match.value,
+                    replacement = canonical,
+                    conflict = conflict,
+                )
+            )
+        }
+        if (conflict.term.english != conflict.matchedSourceText) {
+            val fullEngRegex = Regex("""\b${Regex.escape(conflict.term.english)}\b""", RegexOption.IGNORE_CASE)
+            fullEngRegex.findAll(targetText).forEach { match ->
+                result.add(
+                    GlossaryCandidateSpan(
+                        range = match.range,
+                        text = match.value,
+                        replacement = canonical,
+                        conflict = conflict,
+                    )
+                )
+            }
+        }
+        if (result.isNotEmpty()) {
+            return result.filterNonOverlapping()
+        }
+
+        // 3. Simplified Chinese Reference Match (OpenCC)
+        if (!chsReference.isNullOrBlank()) {
+            conflict.linkTarget?.let { target ->
+                val chsTagRegex = Regex("""<link="(?i)${Regex.escape(target)}">([^<]+)</link>""")
+                chsTagRegex.find(chsReference)?.groupValues?.get(1)?.let { chsTerm ->
+                    val tcVariant = TextRefinery.sc2tc(chsTerm)
+                    if (tcVariant.isNotEmpty() && tcVariant != canonical) {
+                        var idx = 0
+                        while (idx < targetText.length) {
+                            val matchIdx = targetText.indexOf(tcVariant, idx)
+                            if (matchIdx < 0) break
+                            val range = matchIdx until (matchIdx + tcVariant.length)
+                            result.add(
+                                GlossaryCandidateSpan(
+                                    range = range,
+                                    text = tcVariant,
+                                    replacement = canonical,
+                                    conflict = conflict,
+                                )
+                            )
+                            idx = matchIdx + tcVariant.length
+                        }
+                    }
+                    if (chsTerm.isNotEmpty() && chsTerm != tcVariant && chsTerm != canonical) {
+                        var idx = 0
+                        while (idx < targetText.length) {
+                            val matchIdx = targetText.indexOf(chsTerm, idx)
+                            if (matchIdx < 0) break
+                            val range = matchIdx until (matchIdx + chsTerm.length)
+                            result.add(
+                                GlossaryCandidateSpan(
+                                    range = range,
+                                    text = chsTerm,
+                                    replacement = canonical,
+                                    conflict = conflict,
+                                )
+                            )
+                            idx = matchIdx + chsTerm.length
+                        }
+                    }
+                }
+            }
+        }
+        if (result.isNotEmpty()) {
+            return result.filterNonOverlapping()
+        }
+
+        // 4. Character Swap Variants (e.g. 氣 <-> 汽)
+        val charSwaps = LinguisticRules.characterVariants
+        for ((from, to) in charSwaps) {
+            if (canonical.contains(from)) {
+                val variant = canonical.replace(from, to)
+                if (variant != canonical) {
+                    var idx = 0
+                    while (idx < targetText.length) {
+                        val matchIdx = targetText.indexOf(variant, idx)
+                        if (matchIdx < 0) break
+                        val range = matchIdx until (matchIdx + variant.length)
+                        result.add(
+                            GlossaryCandidateSpan(
+                                range = range,
+                                text = variant,
+                                replacement = canonical,
+                                conflict = conflict,
+                            )
+                        )
+                        idx = matchIdx + variant.length
+                    }
+                }
+            }
+        }
+        if (result.isNotEmpty()) {
+            return result.filterNonOverlapping()
+        }
+
+        // 5. Longest Common Substring Heuristic (len >= 2)
+        val fuzzyRanges = findAllFuzzySubstrings(targetText, canonical)
+        for (r in fuzzyRanges) {
+            val spanText = targetText.substring(r)
+            if (spanText != canonical) {
+                result.add(
+                    GlossaryCandidateSpan(
+                        range = r,
+                        text = spanText,
+                        replacement = canonical,
+                        conflict = conflict,
+                    )
+                )
+            }
+        }
+
+        return result.filterNonOverlapping()
+    }
+
+    /**
+     * Finds all candidate text spans across all conflicts in [conflicts].
+     * Filters out any overlapping ranges across different conflicts, sorted by range.first.
+     */
+    fun findAllCandidateSpans(
+        targetText: String,
+        conflicts: List<GlossaryConflict>,
+        chsReference: String? = null,
+    ): List<GlossaryCandidateSpan> {
+        if (targetText.isEmpty() || conflicts.isEmpty()) return emptyList()
+        val allSpans = mutableListOf<GlossaryCandidateSpan>()
+        for (conflict in conflicts) {
+            allSpans.addAll(findCandidateSpans(targetText, conflict, chsReference))
+        }
+        return allSpans.filterNonOverlapping()
+    }
+
+    /**
+     * Replaces all candidate spans in [text] using Right-to-Left (RTL) replacement.
+     * Because replacements are executed from highest index to lowest index,
+     * earlier character offsets remain unaffected and strictly accurate.
+     */
+    fun applyBatchReplacement(
+        text: String,
+        spans: List<GlossaryCandidateSpan>,
+    ): String {
+        if (spans.isEmpty() || text.isEmpty()) return text
+        val validSpans = spans.filterNonOverlapping().sortedByDescending { it.range.first }
+        var result = text
+        for (span in validSpans) {
+            if (span.range.first in 0..result.length &&
+                span.range.last < result.length &&
+                span.range.first <= span.range.last
+            ) {
+                result = result.replaceRange(span.range, span.replacement)
+            }
+        }
+        return result
+    }
+
+    /**
+     * Replaces a single candidate span in [text].
+     */
+    fun applySingleReplacement(
+        text: String,
+        span: GlossaryCandidateSpan,
+    ): String {
+        if (span.range.first in 0..text.length &&
+            span.range.last < text.length &&
+            span.range.first <= span.range.last
+        ) {
+            return text.replaceRange(span.range, span.replacement)
+        }
+        return text
     }
 
     /**
@@ -167,79 +407,32 @@ object GlossarySensor {
         conflict: GlossaryConflict,
         chsReference: String? = null,
     ): String {
-        val canonical = conflict.canonicalTranslation
-
-        // 1. Tag-First: match <link="TARGET"> in currentText
-        val linkTargets = mutableSetOf<String>()
-        conflict.linkTarget?.let { linkTargets.add(it) }
-        if (conflict.term.key.isNotBlank()) {
-            linkTargets.add(conflict.term.key)
-            val parts = conflict.term.key.split(".")
-            val shortId = parts.lastOrNull { it != "NAME" && it.isNotBlank() }
-            if (shortId != null) linkTargets.add(shortId)
+        val spans = findCandidateSpans(currentText, conflict, chsReference)
+        return if (spans.isNotEmpty()) {
+            applyBatchReplacement(currentText, spans)
+        } else {
+            currentText
         }
-        if (conflict.term.english.isNotBlank()) {
-            linkTargets.add(conflict.term.english)
-        }
-
-        for (target in linkTargets) {
-            val tagRegex = Regex("""(<link="(?i)${Regex.escape(target)}">)([^<]*)(</link>)""")
-            if (tagRegex.containsMatchIn(currentText)) {
-                return tagRegex.replace(currentText, "$1$canonical$3")
-            }
-        }
-
-        // 2. Direct English match in currentText
-        val englishPattern = """\b${Regex.escape(conflict.matchedSourceText)}\b"""
-        val englishRegex = Regex(englishPattern, RegexOption.IGNORE_CASE)
-        if (englishRegex.containsMatchIn(currentText)) {
-            return englishRegex.replace(currentText, canonical)
-        }
-        if (conflict.term.english != conflict.matchedSourceText) {
-            val fullEngRegex = Regex("""\b${Regex.escape(conflict.term.english)}\b""", RegexOption.IGNORE_CASE)
-            if (fullEngRegex.containsMatchIn(currentText)) {
-                return fullEngRegex.replace(currentText, canonical)
-            }
-        }
-
-        // 3. Simplified Chinese Reference Match (OpenCC)
-        if (!chsReference.isNullOrBlank()) {
-            conflict.linkTarget?.let { target ->
-                val chsTagRegex = Regex("""<link="(?i)${Regex.escape(target)}">([^<]+)</link>""")
-                chsTagRegex.find(chsReference)?.groupValues?.get(1)?.let { chsTerm ->
-                    val tcVariant = TextRefinery.sc2tc(chsTerm)
-                    if (currentText.contains(tcVariant)) {
-                        return currentText.replace(tcVariant, canonical)
-                    }
-                    if (currentText.contains(chsTerm)) {
-                        return currentText.replace(chsTerm, canonical)
-                    }
-                }
-            }
-        }
-
-        // 4. Character Swap Variants (e.g. 氣 <-> 汽)
-        val charSwaps = listOf('氣' to '汽', '汽' to '氣', '裡' to '裏', '裏' to '裡', '線' to '綫', '綫' to '線')
-        for ((from, to) in charSwaps) {
-            if (canonical.contains(from)) {
-                val variant = canonical.replace(from, to)
-                if (currentText.contains(variant)) {
-                    return currentText.replace(variant, canonical)
-                }
-            }
-        }
-
-        // 5. Longest Common Substring Heuristic (len >= 2)
-        val bestMatch = findBestFuzzySubstring(currentText, canonical)
-        if (bestMatch != null) {
-            return currentText.replaceRange(bestMatch, canonical)
-        }
-
-        return currentText
     }
 
-    private fun findBestFuzzySubstring(text: String, canonical: String): IntRange? {
-        if (canonical.length < 3 || text.isEmpty()) return null
+    fun findBestFuzzySubstring(text: String, canonical: String): IntRange? {
+        return findAllFuzzySubstrings(text, canonical).firstOrNull()
+    }
+
+    fun findAllFuzzySubstrings(text: String, canonical: String): List<IntRange> {
+        if (canonical.length < 3 || text.isEmpty()) return emptyList()
+
+        // Track ranges that already match canonical exactly so we never flag them
+        val canonicalOccurrences = mutableListOf<IntRange>()
+        var cIdx = 0
+        while (cIdx < text.length) {
+            val fIdx = text.indexOf(canonical, cIdx)
+            if (fIdx < 0) break
+            canonicalOccurrences.add(fIdx until (fIdx + canonical.length))
+            cIdx = fIdx + canonical.length
+        }
+
+        val ranges = mutableListOf<IntRange>()
 
         for (subLen in (canonical.length - 1) downTo 2) {
             // Require overlap ratio >= 50% to prevent reckless overwriting
@@ -247,29 +440,43 @@ object GlossarySensor {
 
             for (start in 0..(canonical.length - subLen)) {
                 val sub = canonical.substring(start, start + subLen)
-                val subVariants = listOf(sub, sub.replace('氣', '汽'), sub.replace('汽', '氣'))
+                val subVariants = LinguisticRules.getVariants(sub)
                 for (v in subVariants) {
-                    val idx = text.indexOf(v)
-                    if (idx >= 0) {
+                    var searchFrom = 0
+                    while (searchFrom < text.length) {
+                        val idx = text.indexOf(v, searchFrom)
+                        if (idx < 0) break
+
+                        searchFrom = idx + v.length.coerceAtLeast(1)
+
+                        // If this match is already inside an exact canonical term, ignore it
+                        if (canonicalOccurrences.any { idx in it }) {
+                            continue
+                        }
+
                         val prefixCharsNeeded = start
                         val suffixCharsNeeded = canonical.length - (start + subLen)
 
                         var left = idx
                         var expandedLeft = 0
-                        while (left > 0 && expandedLeft < prefixCharsNeeded + 1) {
-                            val prevChar = text[left - 1]
-                            if (isDelim(prevChar)) break
-                            left--
-                            expandedLeft++
+                        if (prefixCharsNeeded > 0) {
+                            while (left > 0 && expandedLeft < prefixCharsNeeded) {
+                                val prevChar = text[left - 1]
+                                if (LinguisticRules.isDelim(prevChar)) break
+                                left--
+                                expandedLeft++
+                            }
                         }
 
                         var right = idx + v.length
                         var expandedRight = 0
-                        while (right < text.length && expandedRight < suffixCharsNeeded + 1) {
-                            val nextChar = text[right]
-                            if (isDelim(nextChar)) break
-                            right++
-                            expandedRight++
+                        if (suffixCharsNeeded > 0) {
+                            while (right < text.length && expandedRight < suffixCharsNeeded) {
+                                val nextChar = text[right]
+                                if (LinguisticRules.isDelim(nextChar)) break
+                                right++
+                                expandedRight++
+                            }
                         }
 
                         // Prevent incorrect expansions: if canonical expects prefix/suffix characters,
@@ -279,25 +486,52 @@ object GlossarySensor {
 
                         val range = left until right
                         if (range.count() >= 2) {
-                            return range
+                            val matchedText = text.substring(range)
+                            if (matchedText != canonical) {
+                                ranges.add(range)
+                            }
                         }
                     }
                 }
             }
+            if (ranges.isNotEmpty()) {
+                break
+            }
         }
-        return null
+        return ranges.filterNonOverlappingRanges()
     }
+}
 
-    private val BOUNDARY_CHARS = setOf(
-        '的', '了', '著', '過', '在', '從', '向', '與', '和', '或', '及', '由',
-        '將', '把', '被', '讓', '給', '至', '到', '使', '令', '是', '有', '無',
-        '非', '一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '個',
-        '座', '只', '台', '條', '位', '件', '種', '項', '處', '顆', '塊', '片',
-        '根', '支', '中', '內', '外', '上', '下', '前', '後', '這', '那', '此',
-        '，', '。', '、', '；', '：', '！', '？', '（', '）', '(', ')', '[',
-        ']', '{', '}', '<', '>', '"', '\'', '\\', '/', '+', '=', '|', '~',
-        '`', '@', '#', '$', '%', '^', '&', '*', ' ', '\t', '\r', '\n'
-    )
+/**
+ * Filters out overlapping candidate spans, preferring earlier and longer spans.
+ */
+fun List<GlossaryCandidateSpan>.filterNonOverlapping(): List<GlossaryCandidateSpan> {
+    if (size <= 1) return this
+    val sorted = this.sortedWith(compareBy({ it.range.first }, { -(it.range.last - it.range.first) }))
+    val result = mutableListOf<GlossaryCandidateSpan>()
+    var lastClaimedEnd = -1
+    for (span in sorted) {
+        if (span.range.first > lastClaimedEnd) {
+            result.add(span)
+            lastClaimedEnd = span.range.last
+        }
+    }
+    return result
+}
 
-    private fun isDelim(c: Char): Boolean = c in BOUNDARY_CHARS
+/**
+ * Filters out overlapping IntRanges, preferring earlier and longer ranges.
+ */
+fun List<IntRange>.filterNonOverlappingRanges(): List<IntRange> {
+    if (size <= 1) return this
+    val sorted = this.sortedWith(compareBy({ it.first }, { -(it.last - it.first) }))
+    val result = mutableListOf<IntRange>()
+    var lastClaimedEnd = -1
+    for (range in sorted) {
+        if (range.first > lastClaimedEnd) {
+            result.add(range)
+            lastClaimedEnd = range.last
+        }
+    }
+    return result
 }

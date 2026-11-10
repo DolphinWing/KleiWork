@@ -207,4 +207,100 @@ class GlossarySensorTest {
         assertEquals("Cool Steam Vent", bank.terms[0].english)
         assertEquals("Steam", bank.terms[1].english)
     }
+
+    @Test
+    fun testDiagnosePerformanceWithLargeEntrySet() {
+        val largeTerms = (1..1500).map { i ->
+            GlossaryTerm("CATEGORY", "Term Number $i", "標號 $i", "STRINGS.TERM_$i.NAME")
+        }
+        val source = "This text references Term Number 42 in plain text."
+        val target = "這段文字提到錯誤的翻譯。"
+
+        val start = System.currentTimeMillis()
+        var conflictCount = 0
+        repeat(5000) {
+            val diag = GlossarySensor.diagnose(source, target, largeTerms)
+            if (diag.hasConflict) conflictCount++
+        }
+        val elapsed = System.currentTimeMillis() - start
+        assertEquals(5000, conflictCount)
+        // 5000 diagnostics against 1500 terms must easily finish in under 2000ms
+        assertTrue(elapsed < 2000, "5000 diagnostics should complete in < 2000ms, took ${elapsed}ms")
+    }
+
+    @Test
+    fun testMultipleOccurrencesCandidateSpansAndRtlBatchReplacement() {
+        val gasTerm = GlossaryTerm("BUILDINGS", "Natural Gas Generator", "天然氣發電機", "STRINGS.BUILDINGS.PREFABS.GENERATOR.NAME")
+        val conflict = GlossaryConflict(
+            term = gasTerm,
+            canonicalTranslation = "天然氣發電機",
+            matchedSourceText = "Natural Gas Generator"
+        )
+        val target = "這是一台瓦斯發電機。請保持瓦斯發電機低溫。"
+
+        val spans = GlossarySensor.findCandidateSpans(target, conflict)
+        assertEquals(2, spans.size, "Should locate both occurrences of 瓦斯發電機")
+        assertEquals(4..8, spans[0].range)
+        assertEquals("瓦斯發電機", spans[0].text)
+        assertEquals("天然氣發電機", spans[0].replacement)
+
+        assertEquals(13..17, spans[1].range)
+        assertEquals("瓦斯發電機", spans[1].text)
+        assertEquals("天然氣發電機", spans[1].replacement)
+
+        // Test single replacement
+        val singleResult = GlossarySensor.applySingleReplacement(target, spans[0])
+        assertEquals("這是一台天然氣發電機。請保持瓦斯發電機低溫。", singleResult)
+
+        // Test RTL batch replacement (both replaced at once with zero index drift)
+        val batchResult = GlossarySensor.applyBatchReplacement(target, spans)
+        assertEquals("這是一台天然氣發電機。請保持天然氣發電機低溫。", batchResult)
+    }
+
+    @Test
+    fun testDiagnoseKeepsConflictWhenOneOccurrenceIsFixedAndOneRemains() {
+        val gasTerm = GlossaryTerm("BUILDINGS", "Natural Gas Generator", "天然氣發電機", "STRINGS.BUILDINGS.PREFABS.GENERATOR.NAME")
+        val terms = listOf(gasTerm)
+        val source = "A Natural Gas Generator burns Gas. Keep the Natural Gas Generator cool."
+        // One is fixed to canonical, but one still uses obsolete "瓦斯發電機"
+        val targetPartial = "這是一台天然氣發電機。請保持瓦斯發電機低溫。"
+
+        val diag = GlossarySensor.diagnose(source, targetPartial, terms)
+        assertTrue(diag.hasConflict, "Conflict banner should NOT disappear if another non-canonical occurrence remains")
+        assertEquals(1, diag.conflicts.size)
+
+        // When all are fixed:
+        val targetAllFixed = "這是一台天然氣發電機。請保持天然氣發電機低溫。"
+        val diagFixed = GlossarySensor.diagnose(source, targetAllFixed, terms)
+        assertFalse(diagFixed.hasConflict, "Conflict should clear when all occurrences are canonical")
+    }
+
+    @Test
+    fun testMultipleLinkTagsCandidateSpans() {
+        val powerTerm = GlossaryTerm("POWER", "Power", "電網", "STRINGS.UI.POWER.NAME")
+        val conflict = GlossaryConflict(
+            term = powerTerm,
+            canonicalTranslation = "電網",
+            matchedSourceText = "Power",
+            linkTarget = "POWER"
+        )
+        val target = "需要 <link=\"POWER\">電力</link> 和 <link=\"POWER\">電力</link> 供應。"
+
+        val spans = GlossarySensor.findCandidateSpans(target, conflict)
+        assertEquals(2, spans.size)
+        val replaced = GlossarySensor.applyBatchReplacement(target, spans)
+        assertEquals("需要 <link=\"POWER\">電網</link> 和 <link=\"POWER\">電網</link> 供應。", replaced)
+    }
+
+    @Test
+    fun testLinguisticRulesLoadingAndVariants() {
+        assertTrue(LinguisticRules.characterVariants.isNotEmpty(), "Character variants should be loaded")
+        assertTrue(LinguisticRules.boundaryChars.isNotEmpty(), "Boundary delimiters should be loaded")
+        assertTrue(LinguisticRules.isDelim('，'), "Fullwidth comma must be recognized as delimiter")
+        assertTrue(LinguisticRules.isDelim('保'), "Grammar particle 保 must be recognized as boundary")
+
+        val variants = LinguisticRules.getVariants("蒸氣噴孔")
+        assertTrue(variants.contains("蒸氣噴孔"))
+        assertTrue(variants.contains("蒸汽噴孔"))
+    }
 }

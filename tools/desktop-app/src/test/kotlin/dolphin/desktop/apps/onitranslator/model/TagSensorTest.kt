@@ -131,4 +131,64 @@ class TagSensorTest {
         val diag = TagSensor.diagnose(source, target)
         assertFalse(diag.hasIssue, "Complex email header should be valid if tags are balanced.")
     }
+
+    @Test
+    fun testStyleMismatchBoldToItalicAlignment() {
+        val source = "<i>Overheats at:</i> <b>75°C</b>"
+        val target = "<b>過熱於：</b> <b>75°C</b>"
+
+        val diag = TagSensor.diagnose(source, target)
+        assertTrue(diag.hasIssue)
+        assertTrue(diag.hasMismatch)
+
+        val spans = TagSensor.findStyleMismatchSpans(source, target)
+        assertEquals(2, spans.size) // both <b> spans in target can be aligned to <i>
+        // Specifically the first one:
+        assertEquals("<b>過熱於：</b>", spans[0].text)
+        assertEquals("<i>過熱於：</i>", spans[0].replacement)
+
+        // Replace only the first one
+        val replaced = TagSensor.applySingleReplacement(target, spans[0])
+        assertEquals("<i>過熱於：</i> <b>75°C</b>", replaced)
+
+        // Now verify diagnostic passes!
+        val diagAfter = TagSensor.diagnose(source, replaced)
+        assertFalse(diagAfter.hasIssue, "Style should be matched perfectly after alignment")
+    }
+
+    @Test
+    fun testStyleMismatchNonGreedyMultipleTags() {
+        val source = "<i>First</i> and <i>Second</i>"
+        val target = "<b>第一</b> 和 <b>第二</b>"
+
+        val spans = TagSensor.findStyleMismatchSpans(source, target)
+        assertEquals(2, spans.size, "Non-greedy matching must extract 2 distinct spans without swallowing the middle")
+        assertEquals("<b>第一</b>", spans[0].text)
+        assertEquals("<i>第一</i>", spans[0].replacement)
+        assertEquals("<b>第二</b>", spans[1].text)
+        assertEquals("<i>第二</i>", spans[1].replacement)
+
+        val batchReplaced = TagSensor.applyBatchReplacement(target, spans)
+        assertEquals("<i>第一</i> 和 <i>第二</i>", batchReplaced)
+    }
+
+    @Test
+    fun testMissingTagAutoWrap() {
+        val source = "Emits <link=\"OXYGEN\">Oxygen</link> gas."
+        val target = "排放氧氣。"
+        val terms = listOf(
+            GlossaryTerm("ELEMENTS", "Oxygen", "氧氣", "STRINGS.ELEMENTS.OXYGEN.NAME")
+        )
+
+        val spans = TagSensor.findMissingWrapSpans(source, target, terms)
+        assertEquals(1, spans.size)
+        assertEquals("氧氣", spans[0].text)
+        assertEquals("<link=\"OXYGEN\">氧氣</link>", spans[0].replacement)
+
+        val wrapped = TagSensor.applyBatchReplacement(target, spans)
+        assertEquals("排放<link=\"OXYGEN\">氧氣</link>。", wrapped)
+
+        val diag = TagSensor.diagnose(source, wrapped)
+        assertFalse(diag.hasIssue, "Tag mismatch should be resolved after wrapping")
+    }
 }
