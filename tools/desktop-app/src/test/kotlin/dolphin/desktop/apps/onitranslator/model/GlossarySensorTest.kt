@@ -298,9 +298,74 @@ class GlossarySensorTest {
         assertTrue(LinguisticRules.boundaryChars.isNotEmpty(), "Boundary delimiters should be loaded")
         assertTrue(LinguisticRules.isDelim('，'), "Fullwidth comma must be recognized as delimiter")
         assertTrue(LinguisticRules.isDelim('保'), "Grammar particle 保 must be recognized as boundary")
+        assertTrue(LinguisticRules.isDelim('<'), "< must be recognized as delimiter")
+        assertTrue(LinguisticRules.isDelim('>'), "> must be recognized as delimiter")
 
         val variants = LinguisticRules.getVariants("蒸氣噴孔")
         assertTrue(variants.contains("蒸氣噴孔"))
         assertTrue(variants.contains("蒸汽噴孔"))
+    }
+
+    @Test
+    fun testFuzzyExpansionNeverSwallowsTagDelimiters() {
+        // Jet Suit case: canonical is 噴射飛行衣 (5 chars), but target text has <link="JET_SUIT">飛行衣</link>
+        // Substring expansion must NOT swallow the '<' of '</link>' or '>' of '<link>'
+        val jetSuitTerm = GlossaryTerm("EQUIPMENT", "Jet Suit", "噴射飛行衣", "STRINGS.EQUIPMENT.PREFABS.JET_SUIT.NAME")
+        val conflict = GlossaryConflict(
+            term = jetSuitTerm,
+            canonicalTranslation = "噴射飛行衣",
+            matchedSourceText = "Jet Suits",
+            linkTarget = "OTHER_TAG", // non-matching linkTarget so it falls through to fuzzy matching
+        )
+        val target = "穿上你的<link=\"OTHER_TAG\">飛行衣</link>準備出發。"
+
+        val spans = GlossarySensor.findCandidateSpans(target, conflict)
+        for (span in spans) {
+            assertFalse(span.text.contains('<'), "Candidate span text '${span.text}' must never swallow '<'")
+            assertFalse(span.text.contains('>'), "Candidate span text '${span.text}' must never swallow '>'")
+        }
+    }
+
+    @Test
+    fun testSharedPrefixTermsDoNotConflictWhenBothAreCanonical() {
+        val railTerm = GlossaryTerm("BUILDINGS", "Conveyor Rail", "輸送帶軌道", "STRINGS.BUILDINGS.PREFABS.SOLIDCONDUIT.NAME")
+        val receptacleTerm = GlossaryTerm("BUILDINGS", "Conveyor Receptacle", "輸送帶存儲箱", "STRINGS.BUILDINGS.PREFABS.SOLIDCONDUITOUTBOX.NAME")
+        val terms = listOf(receptacleTerm, railTerm)
+
+        val source = "<style=\"KKeyword\">Conveyor Rail</style> cannot hold more materials\n\nRemove materials from <style=\"KKeyword\">Conveyor Receptacle</style> to make room"
+        val target = "<style=\"KKeyword\">輸送帶軌道</style>無法再承載更多材料\n\n從<style=\"KKeyword\">輸送帶存儲箱</style>移除材料，以騰出更多空間"
+
+        val diag = GlossarySensor.diagnose(source, target, terms)
+        assertFalse(diag.hasConflict, "Satisfaction count must recognize both terms as fully satisfied and produce NO conflict")
+        assertEquals(0, diag.conflicts.size)
+
+        val spans = GlossarySensor.findAllCandidateSpans(target, diag.conflicts)
+        assertTrue(spans.isEmpty(), "No candidate spans should be produced when all terms are canonical")
+    }
+
+    @Test
+    fun testKnownCanonicalProtectionPreventsFuzzyCannibalization() {
+        val railTerm = GlossaryTerm("BUILDINGS", "Conveyor Rail", "輸送帶軌道", "STRINGS.BUILDINGS.PREFABS.SOLIDCONDUIT.NAME")
+        val receptacleTerm = GlossaryTerm("BUILDINGS", "Conveyor Receptacle", "輸送帶存儲箱", "STRINGS.BUILDINGS.PREFABS.SOLIDCONDUITOUTBOX.NAME")
+        val terms = listOf(receptacleTerm, railTerm)
+
+        // Conveyor Rail is correctly translated to 輸送帶軌道, but Conveyor Receptacle is obsolete 輸送箱
+        val source = "<style=\"KKeyword\">Conveyor Rail</style> cannot hold more materials\n\nRemove materials from <style=\"KKeyword\">Conveyor Receptacle</style> to make room"
+        val target = "<style=\"KKeyword\">輸送帶軌道</style>無法再承載更多材料\n\n從<style=\"KKeyword\">輸送箱</style>移除材料，以騰出更多空間"
+
+        val diag = GlossarySensor.diagnose(source, target, terms)
+        assertTrue(diag.hasConflict, "Must diagnose conflict for the missing Conveyor Receptacle")
+        assertEquals(1, diag.conflicts.size)
+        assertEquals("Conveyor Receptacle", diag.conflicts[0].term.english)
+
+        // Ensure findCandidateSpans for Conveyor Receptacle does NOT eat the already-canonical 輸送帶軌道
+        val knownCanonicals = terms.map { it.canonicalCht }.toSet()
+        val spans = GlossarySensor.findCandidateSpans(target, diag.conflicts[0], knownCanonicals = knownCanonicals)
+        for (span in spans) {
+            assertFalse(
+                span.text.contains("輸送帶軌道"),
+                "Candidate span for Conveyor Receptacle must never cannibalize the valid canonical term '輸送帶軌道'"
+            )
+        }
     }
 }

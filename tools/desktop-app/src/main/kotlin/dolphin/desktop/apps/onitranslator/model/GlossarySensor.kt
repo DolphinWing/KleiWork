@@ -86,7 +86,11 @@ object GlossarySensor {
 
         // 1. Tag-First: Scan explicit ONI link tags (fast short-circuit if no tag present)
         if (sourceText.contains("<link", ignoreCase = true)) {
-            linkTagRegex.findAll(sourceText).forEach { match ->
+            val matches = linkTagRegex.findAll(sourceText).toList()
+            for (match in matches) {
+                claimedSpans.add(match.range)
+            }
+            for (match in matches) {
                 val linkTarget = match.groupValues[1]
                 val linkText = match.groupValues[2]
 
@@ -95,22 +99,35 @@ object GlossarySensor {
                     term.key.equals(linkTarget, ignoreCase = true) ||
                         term.key.endsWith(".$linkTarget", ignoreCase = true) ||
                         term.english.equals(linkText, ignoreCase = true)
+                } ?: continue
+
+                val termIdentifier = matchedTerm.key.ifBlank { matchedTerm.english }
+                if (identifiedTermKeys.contains(termIdentifier)) continue
+                identifiedTermKeys.add(termIdentifier)
+
+                val conflict = GlossaryConflict(
+                    term = matchedTerm,
+                    canonicalTranslation = matchedTerm.canonicalCht,
+                    matchedSourceText = linkText,
+                    linkTarget = linkTarget,
+                )
+
+                // Satisfaction Count & Tag Mismatch Check:
+                // 1) Explicit tag discrepancy: If targetText contains a <link="TARGET"> tag where inner text != canonical.
+                // 2) Occurrence count: If targetText contains fewer occurrences of canonical translation than source link tags.
+                val sourceTagCount = matches.count { m ->
+                    val t = m.groupValues[1]
+                    val txt = m.groupValues[2]
+                    t.equals(linkTarget, ignoreCase = true) ||
+                        t.equals(matchedTerm.key, ignoreCase = true) ||
+                        matchedTerm.key.endsWith(".$t", ignoreCase = true) ||
+                        matchedTerm.english.equals(txt, ignoreCase = true)
                 }
+                val targetCanonicalCount = countOccurrences(targetText, matchedTerm.canonicalCht)
+                val hasTagMismatch = hasTagDiscrepancy(targetText, conflict)
 
-                if (matchedTerm != null) {
-                    claimedSpans.add(match.range)
-                    identifiedTermKeys.add(matchedTerm.key.ifBlank { matchedTerm.english })
-
-                    val conflict = GlossaryConflict(
-                        term = matchedTerm,
-                        canonicalTranslation = matchedTerm.canonicalCht,
-                        matchedSourceText = linkText,
-                        linkTarget = linkTarget,
-                    )
-                    // Verify if targetText contains the canonical translation, or still has candidate spans
-                    if (!targetText.contains(matchedTerm.canonicalCht) || findCandidateSpans(targetText, conflict).isNotEmpty()) {
-                        conflicts.add(conflict)
-                    }
+                if (hasTagMismatch || targetCanonicalCount < sourceTagCount) {
+                    conflicts.add(conflict)
                 }
             }
         }
@@ -134,28 +151,33 @@ object GlossarySensor {
                 if (!sourceText.contains(term.english, ignoreCase = true)) continue
 
                 val matches = term.wordRegex.findAll(sourceText).toList()
-                for (match in matches) {
-                    // If this match overlaps with any previously claimed span, skip it
-                    val overlaps = claimedSpans.any { span ->
-                        match.range.first <= span.last && match.range.last >= span.first
-                    }
-                    if (overlaps) continue
+                val nonOverlappingMatches = matches.filter { match ->
+                    claimedSpans.none { span -> match.range.first <= span.last && match.range.last >= span.first }
+                }
+                if (nonOverlappingMatches.isEmpty()) continue
 
-                    // Claim this span
+                // Claim all non-overlapping spans of this term
+                for (match in nonOverlappingMatches) {
                     claimedSpans.add(match.range)
-                    identifiedTermKeys.add(termIdentifier)
+                }
+                identifiedTermKeys.add(termIdentifier)
 
-                    val conflict = GlossaryConflict(
-                        term = term,
-                        canonicalTranslation = term.canonicalCht,
-                        matchedSourceText = match.value,
-                        linkTarget = null,
-                    )
-                    // Check if target translation contains canonical Chinese text, or still has candidate spans
-                    if (!targetText.contains(term.canonicalCht) || findCandidateSpans(targetText, conflict).isNotEmpty()) {
-                        conflicts.add(conflict)
-                    }
-                    break // One conflict per unique term per entry is sufficient
+                val conflict = GlossaryConflict(
+                    term = term,
+                    canonicalTranslation = term.canonicalCht,
+                    matchedSourceText = nonOverlappingMatches.first().value,
+                    linkTarget = null,
+                )
+
+                // Satisfaction Count Check:
+                // If the canonical translation already appears in targetText at least as many times
+                // as the term appears in sourceText, the term is fully satisfied.
+                // Only diagnose a conflict if targetCanonicalCount < sourceCount.
+                val sourceCount = nonOverlappingMatches.size
+                val targetCanonicalCount = countOccurrences(targetText, term.canonicalCht)
+
+                if (targetCanonicalCount < sourceCount) {
+                    conflicts.add(conflict)
                 }
             }
         }
@@ -169,11 +191,17 @@ object GlossarySensor {
     /**
      * Finds all candidate text spans in [targetText] that should be replaced with the canonical term.
      * Guarantees that returned spans are non-overlapping and sorted by range.first.
+     *
+     * @param targetText The translated text to inspect.
+     * @param conflict The terminology discrepancy to find spans for.
+     * @param chsReference Optional Simplified Chinese reference string for OpenCC fallback matching.
+     * @param knownCanonicals Optional set of other canonical terms in the glossary to protect from being cannibalized.
      */
     fun findCandidateSpans(
         targetText: String,
         conflict: GlossaryConflict,
         chsReference: String? = null,
+        knownCanonicals: Set<String> = emptySet(),
     ): List<GlossaryCandidateSpan> {
         if (targetText.isEmpty()) return emptyList()
         val canonical = conflict.canonicalTranslation
@@ -318,11 +346,11 @@ object GlossarySensor {
             return result.filterNonOverlapping()
         }
 
-        // 5. Longest Common Substring Heuristic (len >= 2)
-        val fuzzyRanges = findAllFuzzySubstrings(targetText, canonical)
+        // 5. Longest Common Substring Heuristic (len >= 2) with Known Canonical Protection
+        val fuzzyRanges = findAllFuzzySubstrings(targetText, canonical, knownCanonicals)
         for (r in fuzzyRanges) {
             val spanText = targetText.substring(r)
-            if (spanText != canonical) {
+            if (spanText != canonical && !knownCanonicals.contains(spanText)) {
                 result.add(
                     GlossaryCandidateSpan(
                         range = r,
@@ -345,11 +373,17 @@ object GlossarySensor {
         targetText: String,
         conflicts: List<GlossaryConflict>,
         chsReference: String? = null,
+        knownCanonicals: Set<String> = emptySet(),
     ): List<GlossaryCandidateSpan> {
         if (targetText.isEmpty() || conflicts.isEmpty()) return emptyList()
+        val allCanonicals = if (knownCanonicals.isNotEmpty()) {
+            knownCanonicals
+        } else {
+            conflicts.map { it.canonicalTranslation }.filter { it.isNotBlank() }.toSet()
+        }
         val allSpans = mutableListOf<GlossaryCandidateSpan>()
         for (conflict in conflicts) {
-            allSpans.addAll(findCandidateSpans(targetText, conflict, chsReference))
+            allSpans.addAll(findCandidateSpans(targetText, conflict, chsReference, allCanonicals))
         }
         return allSpans.filterNonOverlapping()
     }
@@ -415,11 +449,28 @@ object GlossarySensor {
         }
     }
 
-    fun findBestFuzzySubstring(text: String, canonical: String): IntRange? {
-        return findAllFuzzySubstrings(text, canonical).firstOrNull()
+    fun findBestFuzzySubstring(
+        text: String,
+        canonical: String,
+        knownCanonicals: Set<String> = emptySet(),
+    ): IntRange? {
+        return findAllFuzzySubstrings(text, canonical, knownCanonicals).firstOrNull()
     }
 
-    fun findAllFuzzySubstrings(text: String, canonical: String): List<IntRange> {
+    /**
+     * Finds fuzzy substring ranges within [text] that match [canonical] (or its variants)
+     * with length >= 2, expanding to encompass nearby non-delimiter characters up to
+     * canonical length.
+     *
+     * Protected Ranges: Any range occupied by known canonical terms in [text]
+     * (including [canonical] itself and all [knownCanonicals]) is strictly guarded.
+     * Fuzzy matching will neither start inside nor expand into any protected range.
+     */
+    fun findAllFuzzySubstrings(
+        text: String,
+        canonical: String,
+        knownCanonicals: Set<String> = emptySet(),
+    ): List<IntRange> {
         if (canonical.length < 3 || text.isEmpty()) return emptyList()
 
         // Track ranges that already match canonical exactly so we never flag them
@@ -430,6 +481,20 @@ object GlossarySensor {
             if (fIdx < 0) break
             canonicalOccurrences.add(fIdx until (fIdx + canonical.length))
             cIdx = fIdx + canonical.length
+        }
+
+        // Track occurrences of OTHER known canonical terms in the text so we never cannibalize them
+        val protectedOccurrences = mutableListOf<IntRange>()
+        protectedOccurrences.addAll(canonicalOccurrences)
+        for (kc in knownCanonicals) {
+            if (kc == canonical || kc.length < 2 || !text.contains(kc)) continue
+            var pos = 0
+            while (pos < text.length) {
+                val idx = text.indexOf(kc, pos)
+                if (idx < 0) break
+                protectedOccurrences.add(idx until (idx + kc.length))
+                pos = idx + kc.length
+            }
         }
 
         val ranges = mutableListOf<IntRange>()
@@ -449,8 +514,8 @@ object GlossarySensor {
 
                         searchFrom = idx + v.length.coerceAtLeast(1)
 
-                        // If this match is already inside an exact canonical term, ignore it
-                        if (canonicalOccurrences.any { idx in it }) {
+                        // If this match is already inside ANY protected canonical term, ignore it
+                        if (protectedOccurrences.any { idx in it }) {
                             continue
                         }
 
@@ -462,7 +527,8 @@ object GlossarySensor {
                         if (prefixCharsNeeded > 0) {
                             while (left > 0 && expandedLeft < prefixCharsNeeded) {
                                 val prevChar = text[left - 1]
-                                if (LinguisticRules.isDelim(prevChar)) break
+                                if (prevChar == '<' || prevChar == '>' || LinguisticRules.isDelim(prevChar)) break
+                                if (protectedOccurrences.any { (left - 1) in it }) break
                                 left--
                                 expandedLeft++
                             }
@@ -473,7 +539,8 @@ object GlossarySensor {
                         if (suffixCharsNeeded > 0) {
                             while (right < text.length && expandedRight < suffixCharsNeeded) {
                                 val nextChar = text[right]
-                                if (LinguisticRules.isDelim(nextChar)) break
+                                if (nextChar == '<' || nextChar == '>' || LinguisticRules.isDelim(nextChar)) break
+                                if (protectedOccurrences.any { right in it }) break
                                 right++
                                 expandedRight++
                             }
@@ -487,7 +554,12 @@ object GlossarySensor {
                         val range = left until right
                         if (range.count() >= 2) {
                             val matchedText = text.substring(range)
-                            if (matchedText != canonical) {
+                            val overlapsProtected = protectedOccurrences.any { p ->
+                                p.first <= range.last && p.last >= range.first
+                            }
+                            if (!overlapsProtected && matchedText != canonical &&
+                                !knownCanonicals.contains(matchedText) &&
+                                !matchedText.contains('<') && !matchedText.contains('>')) {
                                 ranges.add(range)
                             }
                         }
@@ -499,6 +571,48 @@ object GlossarySensor {
             }
         }
         return ranges.filterNonOverlappingRanges()
+    }
+
+    /**
+     * Counts non-overlapping occurrences of [sub] within [text].
+     */
+    fun countOccurrences(text: String, sub: String): Int {
+        if (sub.isEmpty() || text.isEmpty()) return 0
+        var count = 0
+        var idx = 0
+        while (idx < text.length) {
+            val nextIdx = text.indexOf(sub, idx)
+            if (nextIdx < 0) break
+            count++
+            idx = nextIdx + sub.length
+        }
+        return count
+    }
+
+    /**
+     * Checks if [targetText] contains an explicit <link="TARGET"> tag whose inner text
+     * does not match [conflict.canonicalTranslation].
+     */
+    private fun hasTagDiscrepancy(targetText: String, conflict: GlossaryConflict): Boolean {
+        val linkTargets = mutableSetOf<String>()
+        conflict.linkTarget?.let { linkTargets.add(it) }
+        if (conflict.term.key.isNotBlank()) {
+            linkTargets.add(conflict.term.key)
+            val parts = conflict.term.key.split(".")
+            val shortId = parts.lastOrNull { it != "NAME" && it.isNotBlank() }
+            if (shortId != null) linkTargets.add(shortId)
+        }
+        if (conflict.term.english.isNotBlank()) {
+            linkTargets.add(conflict.term.english)
+        }
+
+        for (target in linkTargets) {
+            val tagRegex = Regex("""(<link="(?i)${Regex.escape(target)}">)([^<]*)(</link>)""")
+            if (tagRegex.findAll(targetText).any { it.groups[2]!!.value != conflict.canonicalTranslation }) {
+                return true
+            }
+        }
+        return false
     }
 }
 

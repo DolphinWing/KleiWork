@@ -201,9 +201,12 @@
     * **Tag 優先**：解析 `<link="KEY">` 標籤，直接鎖定遊戲專有名詞。
     * **雙詞複合門檻 (Multi-word Compound Rule)**：無 `<link>` 標籤之純文字僅比對 $\ge 2$ 個英文單字之複合名詞（如 `Cool Steam Vent`, `Natural Gas`）；單一英文單字（如 `Water`, `Steam`）因歧義度高，限定只在標籤存在時比對，徹底排除敘述文法句中的假警報。
     * **貪婪長詞優先 (Longest-Match-First)**：依英文長度降序排列，透過非重疊字元跨度 (Non-overlapping Span Tracking) 與 Regex 單字邊界比對，徹底消除「Cool Steam Vent」與「Steam」的子字串誤判。
+    * **滿足度計數 (Satisfaction Count, $C \ge S$)**：精確統計來源出現次數 $S$ 與譯文中標準詞出現次數 $C$。若 $C \ge S$（且無標籤內文字錯位），視為該條目之術語已全數滿足，主動跳過診斷警報，根絕不必要的假警報。
+    * **已知標準詞保護 (Known Canonical Protection)**：在候選跨度搜尋與模糊比對時，詞庫中所有已知的合法標準詞均被納入保護區間（`protectedOccurrences`）。比對游標嚴禁自其他標準詞內部發起，向左/向右擴展亦嚴禁跨入其他標準詞，徹底解決共享前綴之複合名詞（如 `輸送帶軌道` vs `輸送帶存儲箱`）互相判定為錯字並互相吞噬的互咬問題。
 * **防禦性決策閉環 (Review & Keep)**：
     * 捨棄高風險的全域批次強制取代，採用條目級審核。
     * **一鍵套用規範詞 (Safe Apply)**：五層替換階梯（Tag 內置換 $\rightarrow$ 英文置換 $\rightarrow$ 簡中對照 $\rightarrow$ 異體字轉換 $\rightarrow$ $\ge 50\%$ 重疊度模糊邊界擴展）。若無法安全定位，絕不盲目覆蓋破壞原文，改走系統剪貼簿複製與通知提醒。
+    * **標籤硬防禦 (Tag Boundary Guard)**：模糊邊界擴展時嚴格鎖定 `<` 與 `>`，絕不跨入任何標籤語法結構，防止標籤破裂。
     * **認可新詞（審閱保留）**：保留當前譯文不更動，條目被標記為已認可，隨時可復原。
 * **伴隨檔跨階段持久化 (Companion Sidecar)**：
     * 伴隨草稿在 `%TEMP%\strings.po.terms` 記錄已認可新詞之 Key 清單。
