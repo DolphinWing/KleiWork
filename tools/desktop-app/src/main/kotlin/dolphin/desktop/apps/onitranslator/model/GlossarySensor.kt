@@ -123,10 +123,14 @@ object GlossarySensor {
                         matchedTerm.key.endsWith(".$t", ignoreCase = true) ||
                         matchedTerm.english.equals(txt, ignoreCase = true)
                 }
-                val targetCanonicalCount = countOccurrences(targetText, matchedTerm.canonicalCht)
                 val hasTagMismatch = hasTagDiscrepancy(targetText, conflict)
+                val isTagSatisfied = if (sourceTagCount == 1) {
+                    targetText.contains(matchedTerm.canonicalCht)
+                } else {
+                    countOccurrences(targetText, matchedTerm.canonicalCht) >= sourceTagCount
+                }
 
-                if (hasTagMismatch || targetCanonicalCount < sourceTagCount) {
+                if (hasTagMismatch || !isTagSatisfied) {
                     conflicts.add(conflict)
                 }
             }
@@ -143,12 +147,12 @@ object GlossarySensor {
                 // Must have at least 2 words for unlinked plain text matching
                 if (!term.isMultiWord) continue
 
+                // Fast bail-out: Substring check before running cached regex or computing keys
+                if (!sourceText.contains(term.english, ignoreCase = true)) continue
+
                 // Skip if this term was already identified in the tag phase
                 val termIdentifier = term.key.ifBlank { term.english }
-                if (identifiedTermKeys.contains(termIdentifier)) continue
-
-                // Fast bail-out: Substring check before running cached regex
-                if (!sourceText.contains(term.english, ignoreCase = true)) continue
+                if (identifiedTermKeys.isNotEmpty() && identifiedTermKeys.contains(termIdentifier)) continue
 
                 val matches = term.wordRegex.findAll(sourceText).toList()
                 val nonOverlappingMatches = matches.filter { match ->
@@ -172,11 +176,15 @@ object GlossarySensor {
                 // Satisfaction Count Check:
                 // If the canonical translation already appears in targetText at least as many times
                 // as the term appears in sourceText, the term is fully satisfied.
-                // Only diagnose a conflict if targetCanonicalCount < sourceCount.
+                // Fast-path: When sourceCount is 1, a simple contains check is sufficient.
                 val sourceCount = nonOverlappingMatches.size
-                val targetCanonicalCount = countOccurrences(targetText, term.canonicalCht)
+                val isSatisfied = if (sourceCount == 1) {
+                    targetText.contains(term.canonicalCht)
+                } else {
+                    countOccurrences(targetText, term.canonicalCht) >= sourceCount
+                }
 
-                if (targetCanonicalCount < sourceCount) {
+                if (!isSatisfied) {
                     conflicts.add(conflict)
                 }
             }
