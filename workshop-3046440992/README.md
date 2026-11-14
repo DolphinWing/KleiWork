@@ -7,6 +7,7 @@
 * 2026/03/21 針對 2026 三月推出的 Unity 6/.netstandard 2.1 升級。
 * 2026/07/04 感謝 @yishan1331 幫忙修復因為新的 unity 6 版本的字型資源有誤造成 macOS 上的崩潰
 * 2026/07/21 針對 Linux 系統修正 unity 6 的字型素材。(在 Ubuntu 24.04 上測試)
+* 2026/11/14 感謝 @SmallBeeWayne 提供修正支援 [Tigin/oni-moono](https://github.com/tigin-backwards/oni-moono) 模組
 
 此為古靈精怪的 [字型模組](https://steamcommunity.com/sharedfiles/filedetails/?id=2119648603) 改良版，本包的原始碼請參考 [GitHub](https://github.com/DolphinWing/KleiWork/tree/master/workshop-3046440992)
 

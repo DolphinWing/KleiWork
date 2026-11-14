@@ -11,8 +11,8 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     
     <AssemblyTitle>FontLoader</AssemblyTitle>
-    <Version>2.3.0</Version>
-    <FileVersion>2026.721.0</FileVersion>
+    <Version>2.3.1</Version>
+    <FileVersion>2026.1114.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,16 +26,13 @@
     <Reference Include="UnityEngine" HintPath="..\OniManagedLibs\UnityEngine.dll" Private="False" />
     <Reference Include="UnityEngine.AssetBundleModule" HintPath="..\OniManagedLibs\UnityEngine.AssetBundleModule.dll" Private="False" />
     <Reference Include="UnityEngine.CoreModule" HintPath="..\OniManagedLibs\UnityEngine.CoreModule.dll" Private="False" />
-    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+    <!--<Reference Include="UnityEngine.TextCoreFontEngineModule">
       <HintPath>..\OniManagedLibs\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
 	  <Private>False</Private>
-    </Reference>
+    </Reference>-->
     <Reference Include="UnityEngine.UI" HintPath="..\OniManagedLibs\UnityEngine.UI.dll" Private="False" />
     <Reference Include="Unity.TextMeshPro" HintPath="..\OniManagedLibs\Unity.TextMeshPro.dll" Private="False" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\OniManagedLibs\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <Reference Include="Newtonsoft.Json" HintPath="..\OniManagedLibs\Newtonsoft.Json.dll" Private="False" />
   </ItemGroup>
 
 </Project>

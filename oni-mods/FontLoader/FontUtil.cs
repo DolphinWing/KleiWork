@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Reflection;
 using FontLoader.Config;
 using TMPro;
 using UnityEngine;
@@ -67,16 +68,15 @@ namespace FontLoader.Utils
                     return null;
                 }
 
-                // font.faceInfo.scale = config.Scale;
+                // 修復 AssetBundle 的 Shader（不限 Linux，Windows Unity 6 同樣需要）
+                var sourceFont = Localization.FontAsset ?? Resources.Load<TMP_FontAsset>("RobotoCondensed-Regular") ?? TMP_Settings.GetFontAsset();
+                if (sourceFont != null && sourceFont.material != null && font.material != null)
+                {
+                    font.material.shader = sourceFont.material.shader;
+                }
 
-                //if (Application.platform == RuntimePlatform.LinuxPlayer) {
-                //    var sourceFont = Resources.Load<TMP_FontAsset>("RobotoCondensed-Regular");
-                //    if (sourceFont != null)
-                //    {
-                //        font.material.shader = sourceFont.material.shader;
-                //    }
-                //}
-
+                ApplyFontScaleSafely(font, config.Scale);
+                
                 Debug.Log($"[FontLoader] Font Name: {font.name}");
                 ab.LoadAllAssets();
                 //Debug.Log($"[FontLoader] Atlas: {font.atlasTexture?.name ?? "NULL!"}");
@@ -92,6 +92,48 @@ namespace FontLoader.Utils
 
             // AssetBundle.UnloadAllAssetBundles(false);
             return null;
+        }
+
+        private static void ApplyFontScaleSafely(TMP_FontAsset font, float scale)
+        {
+            if (Math.Abs(scale - 1.0f) < 0.001f) return;
+
+            try
+            {
+                var fontInfoProp = typeof(TMP_FontAsset).GetProperty("fontInfo", BindingFlags.Public | BindingFlags.Instance);
+                if (fontInfoProp != null)
+                {
+                    var fontInfo = fontInfoProp.GetValue(font);
+                    if (fontInfo != null)
+                    {
+                        var scaleField = fontInfo.GetType().GetField("Scale", BindingFlags.Public | BindingFlags.Instance);
+                        if (scaleField != null)
+                        {
+                            scaleField.SetValue(fontInfo, scale);
+                            return;
+                        }
+                    }
+                }
+
+                var faceInfoProp = typeof(TMP_FontAsset).GetProperty("faceInfo", BindingFlags.Public | BindingFlags.Instance);
+                if (faceInfoProp != null)
+                {
+                    var faceInfo = faceInfoProp.GetValue(font);
+                    if (faceInfo != null)
+                    {
+                        var scaleProp = faceInfo.GetType().GetProperty("scale", BindingFlags.Public | BindingFlags.Instance);
+                        if (scaleProp != null && scaleProp.CanWrite)
+                        {
+                            scaleProp.SetValue(faceInfo, scale);
+                            faceInfoProp.SetValue(font, faceInfo);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.LogWarning($"[FontLoader] Could not apply custom font scale: {ex.Message}");
+            }
         }
     }
 }
