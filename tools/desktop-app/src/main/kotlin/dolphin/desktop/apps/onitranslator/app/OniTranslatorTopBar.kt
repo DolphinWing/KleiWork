@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.DockedSearchBar
 import androidx.compose.material3.DropdownMenu
@@ -53,6 +54,7 @@ import dolphin.desktop.apps.onitranslator.generated.resources.ic_refresh
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_report
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_save
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_search
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_sensor_window
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_settings
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_delete_draft
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_draft
@@ -69,6 +71,7 @@ import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_theme_togg
 import dolphin.desktop.apps.onitranslator.model.AppState
 import dolphin.desktop.apps.onitranslator.model.SearchType
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
+import dolphin.desktop.apps.onitranslator.ui.OniColor
 import dolphin.desktop.apps.onitranslator.widget.TooltipIconButton
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
@@ -279,18 +282,53 @@ private fun SearchTopBar(
 }
 
 @Composable
-fun SearchTypeRow(selected: SearchType, modifier: Modifier = Modifier, onClick: (SearchType) -> Unit) {
+fun SearchTypeRow(
+    selected: SearchType,
+    modifier: Modifier = Modifier,
+    diagnosticCount: Int = 0,
+    glossaryCount: Int = 0,
+    onClick: (SearchType) -> Unit,
+) {
     Row(modifier = modifier, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
         SearchType.entries.forEach { type ->
-            val label = when (type) {
+            val baseLabel = when (type) {
                 SearchType.Diagnostic -> stringResource(Res.string.tag_sensor_label)
                 SearchType.Glossary -> stringResource(Res.string.tag_glossary_label)
                 else -> type.name
+            }
+            val label = when (type) {
+                SearchType.Diagnostic -> if (diagnosticCount > 0) "$baseLabel ($diagnosticCount)" else baseLabel
+                SearchType.Glossary -> if (glossaryCount > 0) "$baseLabel ($glossaryCount)" else baseLabel
+                else -> baseLabel
+            }
+            val leadingIcon: (@Composable () -> Unit)? = when (type) {
+                SearchType.Diagnostic -> {
+                    {
+                        Icon(
+                            painterResource(Res.drawable.ic_sensor_window),
+                            contentDescription = null,
+                            modifier = Modifier.size(FilterChipDefaults.IconSize),
+                            tint = OniColor.Highlight,
+                        )
+                    }
+                }
+                SearchType.Glossary -> {
+                    {
+                        Icon(
+                            painterResource(Res.drawable.ic_report),
+                            contentDescription = null,
+                            modifier = Modifier.size(FilterChipDefaults.IconSize),
+                            tint = MaterialTheme.colorScheme.error,
+                        )
+                    }
+                }
+                else -> null
             }
             FilterChip(
                 selected = selected == type,
                 onClick = { onClick.invoke(type) },
                 label = { Text(label) },
+                leadingIcon = leadingIcon,
                 shape = CircleShape,
                 colors = FilterChipDefaults.filterChipColors(
                     containerColor = Color.Transparent,

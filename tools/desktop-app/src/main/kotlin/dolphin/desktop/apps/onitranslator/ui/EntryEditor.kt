@@ -959,7 +959,7 @@ private fun InteractiveDiagnosticBar(
                                     Text(
                                         text = stringResource(
                                             Res.string.glossary_conflict_alert,
-                                            conflict.matchedSourceText,
+                                            conflict.matchedSourceText.replace("\\\"", "\""),
                                             conflict.canonicalTranslation
                                         ),
                                         style = MaterialTheme.typography.bodySmall,

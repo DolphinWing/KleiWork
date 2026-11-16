@@ -114,6 +114,8 @@ fun OniTranslatorApp(
                             SearchTypeRow(
                                 selected = state.uiState.searchState.type,
                                 modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp),
+                                diagnosticCount = state.diagnosticCount,
+                                glossaryCount = state.glossaryCount,
                             ) { searchType ->
                                 onEvent(AppEvent.Search.TextChange(state.uiState.searchState.text, searchType))
                             }

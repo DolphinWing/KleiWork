@@ -19,6 +19,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.itemsIndexed
@@ -222,7 +224,11 @@ private fun EntryItemView(
     ) {
         Column(modifier = Modifier.padding(vertical = 8.dp, horizontal = 12.dp)) {
             // Header: Key and Index
-            Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(6.dp)
+            ) {
                 Text(
                     text = data.target.key(),
                     style = MaterialTheme.typography.labelSmall,
@@ -232,27 +238,38 @@ private fun EntryItemView(
                     overflow = TextOverflow.Ellipsis,
                     fontFamily = FontFamily.Monospace,
                 )
+
                 if (data.target.newly && !isSearchMode) {
-                    Text(
-                        text = stringResource(Res.string.label_new),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.error,
-                        modifier = Modifier.padding(horizontal = 4.dp)
-                    )
+                    Surface(
+                        shape = RoundedCornerShape(4.dp),
+                        color = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.5f),
+                    ) {
+                        Text(
+                            text = stringResource(Res.string.label_new),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.error,
+                            modifier = Modifier.padding(horizontal = 4.dp, vertical = 1.dp)
+                        )
+                    }
                 }
 
                 val isModified = data.poText != null &&
                         data.target.str.trim() != data.poText.trim()
                 if (isModified && !data.target.newly && !isSearchMode) {
-                    Text(
-                        text = stringResource(Res.string.label_modified),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.tertiary,
-                        modifier = Modifier.padding(horizontal = 4.dp)
-                    )
+                    Surface(
+                        shape = RoundedCornerShape(4.dp),
+                        color = MaterialTheme.colorScheme.tertiaryContainer.copy(alpha = 0.5f),
+                    ) {
+                        Text(
+                            text = stringResource(Res.string.label_modified),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.tertiary,
+                            modifier = Modifier.padding(horizontal = 4.dp, vertical = 1.dp)
+                        )
+                    }
                 }
 
-                // Tag Sensor Indicator
+                // Tag Sensor Indicator (Warning/Highlight issue)
                 data.target.diagnostic?.let { diag ->
                     if (diag.hasIssue) {
                         val tint = if (diag.hasMismatch) OniColor.Warning else OniColor.Highlight
@@ -260,31 +277,28 @@ private fun EntryItemView(
                             painterResource(Res.drawable.ic_sensor_window),
                             contentDescription = stringResource(Res.string.content_description_tag_sensor_warning),
                             tint = tint,
-                            modifier = Modifier.padding(horizontal = 4.dp).width(14.dp).height(14.dp)
+                            modifier = Modifier.size(16.dp)
                         )
                     }
                 }
 
-                // Glossary Sensor Indicator (Icon only to prevent overcrowding the header row)
+                // Glossary Sensor Conflict Indicator (Only show unreviewed conflicts that need correction)
                 data.target.glossaryDiag?.let { gDiag ->
                     if (gDiag.isUnreviewed) {
                         Icon(
                             painterResource(Res.drawable.ic_report),
                             contentDescription = stringResource(Res.string.glossary_badge_conflict),
                             tint = MaterialTheme.colorScheme.error,
-                            modifier = Modifier.padding(horizontal = 4.dp).width(14.dp).height(14.dp)
-                        )
-                    } else if (gDiag.isAccepted) {
-                        Icon(
-                            painterResource(Res.drawable.ic_done),
-                            contentDescription = stringResource(Res.string.glossary_badge_accepted),
-                            tint = MaterialTheme.colorScheme.primary,
-                            modifier = Modifier.padding(horizontal = 4.dp).width(14.dp).height(14.dp)
+                            modifier = Modifier.size(16.dp)
                         )
                     }
                 }
 
-                Text((index + 1).toString(), style = MaterialTheme.typography.labelSmall)
+                Text(
+                    text = (index + 1).toString(),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
+                )
             }
 
             Spacer(Modifier.height(8.dp))

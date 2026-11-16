@@ -356,11 +356,16 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         val refreshedEditorData = currentKey?.let { key ->
             helper?.allEntries()?.find { it.key == key }?.let { requestEditorData(it) }
         }
+        val all = helper?.allEntries() ?: emptyList()
+        val diagCount = all.count { it.diagnostic?.hasIssue == true }
+        val glossCount = all.count { it.glossaryDiag?.isUnreviewed == true }
         _state.update {
             it.copy(
                 filteredList = filtered,
                 changedList = list,
                 hasDraft = hasDraft,
+                diagnosticCount = diagCount,
+                glossaryCount = glossCount,
                 uiState = it.uiState.copy(editorData = refreshedEditorData)
             )
         }
