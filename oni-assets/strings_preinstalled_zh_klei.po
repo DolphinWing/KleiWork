@@ -412,12 +412,12 @@ msgstr "跋涉者套装"
 #. STRINGS.BLUEPRINTS.PERMIT_ALGAE_DISTILLERY_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ALGAE_DISTILLERY_PUFT.DESC"
 msgid "Whose job is it to clean out these slimy pipes?"
-msgstr ""
+msgstr "清理这些粘糊糊的管道又是谁的工作？"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ALGAE_DISTILLERY_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ALGAE_DISTILLERY_PUFT.NAME"
 msgid "<link=\"ALGAEDISTILLERY\">Puft Algae Distiller</link>"
-msgstr ""
+msgstr "<link=\"ALGAEDISTILLERY\">飞鱼藻类蒸馏器</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_3TONE_PURPLE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_3TONE_PURPLE.DESC"
@@ -492,12 +492,12 @@ msgstr "泳圈气压服腰带"
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_HATCH.DESC"
 msgid "A light purple atmo belt with buttons that have become darkened with use."
-msgstr ""
+msgstr "一条浅紫色的气压服腰带，上面的按钮因频繁使用而变得发暗。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_HATCH.NAME"
 msgid "Hatch Atmo Belt"
-msgstr ""
+msgstr "哈奇气压服腰带"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_NEUTRONIUM.DESC"
@@ -522,22 +522,22 @@ msgstr "颚鱼气压服腰带"
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_PIP.DESC"
 msgid "A deep green atmo belt for Duplicants who want to match their Pip pals."
-msgstr ""
+msgstr "一条深绿色的气压服腰带，专为想要和树鼠伙伴匹配的复制人准备。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_PIP.NAME"
 msgid "Pip Atmo Belt"
-msgstr ""
+msgstr "树鼠气压服腰带"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_PUFT.DESC"
 msgid "It looks like a critter's posterior trunk. Fortunately, it doesn't smell like one."
-msgstr ""
+msgstr "它看起来像小动物的尾部。幸好，闻起来不像。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_PUFT.NAME"
 msgid "Puft Atmo Belt"
-msgstr ""
+msgstr "飞鱼气压服腰带"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_RAPTOR.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_BELT_RAPTOR.DESC"
@@ -622,12 +622,12 @@ msgstr "电子气压服手套"
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_HATCH.DESC"
 msgid "What are these made of, stone?"
-msgstr ""
+msgstr "这是什么做的？石头？"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_HATCH.NAME"
 msgid "Hatch Atmo Gloves"
-msgstr ""
+msgstr "哈奇气压服手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_NEUTRONIUM.DESC"
@@ -652,12 +652,12 @@ msgstr "颚鱼气压服手套"
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_PIP.DESC"
 msgid "Carefully constructed to allow the dexterity required for petting critters."
-msgstr ""
+msgstr "精心设计，确保复制人保有抚摸小动物所需的灵活手感。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_PIP.NAME"
 msgid "Pip Atmo Gloves"
-msgstr ""
+msgstr "树鼠气压服手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_PLUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_PLUM.DESC"
@@ -672,12 +672,12 @@ msgstr "梅子气压服手套"
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_PUFT.DESC"
 msgid "They have a distinctly rubbery feel to them."
-msgstr ""
+msgstr "有一种明显的橡胶感。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_PUFT.NAME"
 msgid "Puft Atmo Gloves"
-msgstr ""
+msgstr "飞鱼气压服手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_RAPTOR.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_RAPTOR.DESC"
@@ -772,12 +772,12 @@ msgstr "深邃气压服头盔"
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_HATCH.DESC"
 msgid "The teeth help divide the visor into four quadrants. They are all slightly different sizes."
-msgstr ""
+msgstr "这些牙齿状结构将面罩分隔成四个区域。它们的尺寸都略有不同。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_HATCH.NAME"
 msgid "Hatch Atmo Helmet"
-msgstr ""
+msgstr "哈奇气压服头盔"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_NEUTRONIUM.DESC"
@@ -802,22 +802,22 @@ msgstr "颚鱼气压服头盔"
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_PIP.DESC"
 msgid "Enables Duplicants to cosplay as critters, anywhere in the cosmos!"
-msgstr ""
+msgstr "让复制人在宇宙的任何地方扮演小动物！"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_PIP.NAME"
 msgid "Pip Atmo Helmet"
-msgstr ""
+msgstr "树鼠气压服头盔"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_PUFT.DESC"
 msgid "It's a great way to give coworkers a nice jumpscare."
-msgstr ""
+msgstr "这是个给同事一次漂亮惊吓的绝佳方式。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_PUFT.NAME"
 msgid "Puft Atmo Helmet"
-msgstr ""
+msgstr "飞鱼气压服头盔"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_RAPTOR.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_HELMET_RAPTOR.DESC"
@@ -932,12 +932,12 @@ msgstr "古董气压服靴子"
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_HATCH.DESC"
 msgid "Heavyweight boots for industrious space colonists."
-msgstr ""
+msgstr "为勤奋的太空殖民者准备的重型靴子。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_HATCH.NAME"
 msgid "Hatch Atmo Boots"
-msgstr ""
+msgstr "哈奇气压服靴子"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_NEUTRONIUM.DESC"
@@ -962,22 +962,22 @@ msgstr "颚鱼气压服靴子"
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_PIP.DESC"
 msgid "Soft leather-lined boots for Duplicants' little back paws."
-msgstr ""
+msgstr "柔软的皮革内衬靴子，适合复制人的小小后爪。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_PIP.NAME"
 msgid "Pip Atmo Boots"
-msgstr ""
+msgstr "树鼠气压服靴子"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_PUFT.DESC"
 msgid "Reinforced knee paneling protects Duplicants from sharp corners in hostile environments."
-msgstr ""
+msgstr "加固的膝部护板，能保护复制人在恶劣环境中免受尖锐棱角的伤害。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_PUFT.NAME"
 msgid "Puft Atmo Boots"
-msgstr ""
+msgstr "飞鱼气压服靴子"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_RAPTOR.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_RAPTOR.DESC"
@@ -1082,12 +1082,12 @@ msgstr "古董气压服"
 #. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_HATCH.DESC"
 msgid "Perfect for when the monotony of colony life has you feeling a little dotty."
-msgstr ""
+msgstr "当殖民地生活的单调让你觉得有点迷糊时，用这个再合适不过了。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_HATCH.NAME"
 msgid "Hatch Atmo Suit"
-msgstr ""
+msgstr "哈奇气压服"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_NEUTRONIUM.DESC"
@@ -1112,22 +1112,22 @@ msgstr "颚鱼气压服"
 #. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_PIP.DESC"
 msgid "A green ombre suit with subtle detailing at the outer extremities."
-msgstr ""
+msgstr "一件绿色渐变色服装，外端带有细腻的细节设计。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_PIP.NAME"
 msgid "Pip Atmo Suit"
-msgstr ""
+msgstr "树鼠气压服"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_PUFT.DESC"
 msgid "Enables Duplicants to go undercover as their favorite flatulent fauna."
-msgstr ""
+msgstr "让复制人能够伪装成自己最爱的放屁小动物。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_PUFT.NAME"
 msgid "Puft Atmo Suit"
-msgstr ""
+msgstr "飞鱼气压服"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_RAPTOR.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMOSUIT_RAPTOR.DESC"
@@ -1242,17 +1242,17 @@ msgstr "<link=\"BED\">绗缝床铺</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_BED_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_HATCH.DESC"
 msgid "The lumps in this extra-extra-extra firm mattress are strategically placed to prevent oversleeping."
-msgstr ""
+msgstr "这张超超超硬床垫上的凸起放置巧妙，以防止睡过头。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_BED_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_HATCH.NAME"
 msgid "<link=\"BEDHATCH\">Dura-Cot</link>"
-msgstr ""
+msgstr "<link=\"BEDHATCH\">硬床铺</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_BED_JORGE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_JORGE.DESC"
 msgid "One person's junk is another person's bespoke bed."
-msgstr "一个人丢弃的垃圾却是别人的定制床。"
+msgstr "一个人的破烂却是别人的定制床。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_BED_JORGE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_JORGE.NAME"
@@ -1262,22 +1262,22 @@ msgstr "<link=\"BED\">手工床铺</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_BED_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_PIP.DESC"
 msgid "The Pip-shaped pillow doubles as a huggable comfort object for sleepy Duplicants."
-msgstr ""
+msgstr "树鼠造型的枕头，兼作困倦复制人可拥抱的安抚物。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_BED_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_PIP.NAME"
 msgid "<link=\"BEDPIP\">Woodsy Cot</link>"
-msgstr ""
+msgstr "<link=\"BED\">林间床铺</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_BED_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_PUFT.DESC"
 msgid "The Puft-shaped pillow emits a silent puff of fragrant air every time a Duplicant lays their head upon it."
-msgstr ""
+msgstr "每当复制人把头枕上去时，这种飞鱼造型的枕头便会无声地喷出芬芳气息。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_BED_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_PUFT.NAME"
 msgid "<link=\"BEDPUFT\">Puff Cot</link>"
-msgstr ""
+msgstr "<link=\"BEDPUFT\">喷浮床铺</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_BED_ROCK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_ROCK.DESC"
@@ -1432,62 +1432,62 @@ msgstr "尊贵中子制服裤子"
 #. STRINGS.BLUEPRINTS.PERMIT_CEILINGLIGHT_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CEILINGLIGHT_HATCH.DESC"
 msgid "An industrial light so solidly built, dropping it might put a hole in the floor tile."
-msgstr ""
+msgstr "坚固的工业灯具，掉下来可能会在地砖上砸个洞。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CEILINGLIGHT_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CEILINGLIGHT_HATCH.NAME"
 msgid "<link=\"CEILINGLIGHT\">Hatch Ceiling Light</link>"
-msgstr ""
+msgstr "<link=\"CEILINGLIGHT\">哈奇吸顶灯</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CEILINGLIGHT_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CEILINGLIGHT_PIP.DESC"
 msgid "It gives off just as much light as bulbs that aren't adorably overgrown."
-msgstr ""
+msgstr "它的亮度丝毫不输那些没有被过度生长的植物缠绕的灯泡。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CEILINGLIGHT_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CEILINGLIGHT_PIP.NAME"
 msgid "<link=\"CEILINGLIGHT\">Pip Ceiling Light</link>"
-msgstr ""
+msgstr "<link=\"CEILINGLIGHT\">树鼠吸顶灯</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CEILINGLIGHT_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CEILINGLIGHT_PUFT.DESC"
 msgid "Remember to dust behind the teeth!"
-msgstr ""
+msgstr "记得清理齿缝后面的灰尘！"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CEILINGLIGHT_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CEILINGLIGHT_PUFT.NAME"
 msgid "<link=\"CEILINGLIGHT\">Puft Ceiling Light</link>"
-msgstr ""
+msgstr "<link=\"CEILINGLIGHT\">飞鱼吸顶灯</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CENTRIFUGE_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CENTRIFUGE_HATCH.DESC"
 msgid "It rattles more than it probably should."
-msgstr ""
+msgstr "它震动得有点过分了。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CENTRIFUGE_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CENTRIFUGE_HATCH.NAME"
 msgid "<link=\"ASTRONAUTTRAININGCENTER\">Clunker Coaster</link>"
-msgstr ""
+msgstr "<link=\"ASTRONAUTTRAININGCENTER\">破烂飞车</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CENTRIFUGE_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CENTRIFUGE_PIP.DESC"
 msgid "Step right up and experience the thrill of zoomies firsthand!"
-msgstr ""
+msgstr "快来亲身体验一次疯跑的刺激吧！"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CENTRIFUGE_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CENTRIFUGE_PIP.NAME"
 msgid "<link=\"ASTRONAUTTRAININGCENTER\">Pipster Zipster</link>"
-msgstr ""
+msgstr "<link=\"ASTRONAUTTRAININGCENTER\">树鼠快车</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CENTRIFUGE_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CENTRIFUGE_PUFT.DESC"
 msgid "Round and round and round it goes, it never thinks, and never knows."
-msgstr ""
+msgstr "转啊转啊转不停，它不会思考，也毫不知情。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CENTRIFUGE_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CENTRIFUGE_PUFT.NAME"
 msgid "<link=\"ASTRONAUTTRAININGCENTER\">The Mindless Loop</link>"
-msgstr ""
+msgstr "<link=\"ASTRONAUTTRAININGCENTER\">没头脑之环</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CO2SCRUBBER_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CO2SCRUBBER_NEUTRONIUM.DESC"
@@ -1522,12 +1522,12 @@ msgstr "<link=\"GOURMETCOOKINGSTATION\">淳朴燃气灶</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_HATCH.DESC"
 msgid "It actually took a lot of expertise to make this look so cobbled-together."
-msgstr ""
+msgstr "为了让它看起来这么东拼西凑，其实需要相当专业知识。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_HATCH.NAME"
 msgid "<link=\"CORNERMOULDING\">Hatch Corner Trim</link>"
-msgstr ""
+msgstr "<link=\"CORNERMOULDING\">哈奇边角饰件</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_NEUTRONIUM.DESC"
@@ -1542,22 +1542,22 @@ msgstr "<link=\"CORNERMOULDING\">尊贵中子边角饰件</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_PIP.DESC"
 msgid "Rough-hewn planks of lumber assembled and painted to resemble a beloved critter's mane."
-msgstr ""
+msgstr "粗削的木板拼接在一起，再刷上颜料，模仿出某只深受喜爱的小动物鬃毛的样子。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_PIP.NAME"
 msgid "<link=\"CORNERMOULDING\">Pip Corner Trim</link>"
-msgstr ""
+msgstr "<link=\"CORNERMOULDING\">树鼠边角饰件</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_PUFT.DESC"
 msgid "Makes ceiling corner extra expressive."
-msgstr ""
+msgstr "让天花板角落更具表现力。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_PUFT.NAME"
 msgid "<link=\"CORNERMOULDING\">Puft Corner Trim</link>"
-msgstr ""
+msgstr "<link=\"CORNERMOULDING\">飞鱼边角饰件</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_RETRO_NAUTICAL.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CORNER_TILE_RETRO_NAUTICAL.DESC"
@@ -1582,42 +1582,42 @@ msgstr "复古LED工作台"
 #. STRINGS.BLUEPRINTS.PERMIT_CRITTER_CONDO_AIRBORNE_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CRITTER_CONDO_AIRBORNE_PIP.DESC"
 msgid "A homey holiday nest for flying critters."
-msgstr ""
+msgstr "一个温馨的度假巢，供飞行小动物栖息。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CRITTER_CONDO_AIRBORNE_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CRITTER_CONDO_AIRBORNE_PIP.NAME"
 msgid "<link=\"AIRBORNECRITTERCONDO\">Pip Airborne Critter Condo</link>"
-msgstr ""
+msgstr "<link=\"AIRBORNECRITTERCONDO\">树鼠飞行小动物公寓</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CRITTER_CONDO_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CRITTER_CONDO_HATCH.DESC"
 msgid "The thick plush walls and floor make this building's interior feel like a big cozy hug."
-msgstr ""
+msgstr "厚实的毛绒墙壁与地板，让这个建筑的内部感觉像被一个大大的温暖拥抱包裹着。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CRITTER_CONDO_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CRITTER_CONDO_HATCH.NAME"
 msgid "<link=\"CRITTERCONDO\">Hatch Critter Condo</link>"
-msgstr ""
+msgstr "<link=\"CRITTERCONDO\">哈奇小动物公寓</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CRITTER_CONDO_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CRITTER_CONDO_PUFT.DESC"
 msgid "The architect poured their heart and soul into making this building really aaagh-some."
-msgstr ""
+msgstr "建筑师倾注了全部心血，就为了让这个建筑看起来非常“哇”。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CRITTER_CONDO_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CRITTER_CONDO_PUFT.NAME"
 msgid "<link=\"CRITTERCONDO\">Puft Critter Condo</link>"
-msgstr ""
+msgstr "<link=\"CRITTERCONDO\">飞鱼小动物公寓</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_HATCH.DESC"
 msgid "For colonies that like to embrace their jagged edges."
-msgstr ""
+msgstr "用于那些乐于拥抱自身棱角的殖民地。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_HATCH.NAME"
 msgid "<link=\"CROWNMOULDING\">Hatch Ceiling Trim</link>"
-msgstr ""
+msgstr "<link=\"CROWNMOULDING\">哈奇天花板饰件</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_NEUTRONIUM.DESC"
@@ -1632,22 +1632,22 @@ msgstr "<link=\"CROWNMOULDING\">尊贵中子天花板饰件</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_PIP.DESC"
 msgid "Faux greenery and floral vining transform ceilings into celebrations of nature."
-msgstr ""
+msgstr "仿制绿植与藤蔓花卉将天花板变成大自然的庆典。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_PIP.NAME"
 msgid "<link=\"CROWNMOULDING\">Pip Ceiling Trim</link>"
-msgstr ""
+msgstr "<link=\"CROWNMOULDING\">树鼠天花板饰件</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_PUFT.DESC"
 msgid "Sure, it looks a little weird on its own. But it looks even weirder when built across the whole ceiling."
-msgstr ""
+msgstr "当然，单看有点怪。但要是铺满整个天花板，那才叫怪上加怪。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_PUFT.NAME"
 msgid "<link=\"CROWNMOULDING\">Puft Ceiling Trim</link>"
-msgstr ""
+msgstr "<link=\"CROWNMOULDING\">飞鱼天花板饰件</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_RETRO_NAUTICAL.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_RETRO_NAUTICAL.DESC"
@@ -1662,42 +1662,42 @@ msgstr "<link=\"CROWNMOULDING\">航海天花板饰件</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_DESALINATOR_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_DESALINATOR_HATCH.DESC"
 msgid "Some Duplicants believe there's a giant Hatch tongue inside that's gone numb from all the salt."
-msgstr ""
+msgstr "有些复制人相信，那里面有一条巨大的哈奇舌头，因盐分浸泡已经麻得没知觉了。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_DESALINATOR_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_DESALINATOR_HATCH.NAME"
 msgid "<link=\"DESALINATOR\">Hatch Desalinator</link>"
-msgstr ""
+msgstr "<link=\"DESALINATOR\">哈奇脱盐器</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_DOOR_EXTERNAL_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_DOOR_EXTERNAL_PUFT.DESC"
 msgid "The bottom \"teeth\" are a bit of a tripping hazard."
-msgstr ""
+msgstr "底下那排“牙齿”有点绊脚。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_DOOR_EXTERNAL_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_DOOR_EXTERNAL_PUFT.NAME"
 msgid "<link=\"PRESSUREDOOR\">Puft Mechanized Airlock Door</link>"
-msgstr ""
+msgstr "<link=\"PRESSUREDOOR\">飞鱼机械气闸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_DOOR_INTERNAL_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_DOOR_INTERNAL_PIP.DESC"
 msgid "It took someone a very long time to weave all those vines."
-msgstr ""
+msgstr "有人花了很长时间才把那些藤蔓全都编织好。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_DOOR_INTERNAL_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_DOOR_INTERNAL_PIP.NAME"
 msgid "<link=\"DOOR\">Pip Pneumatic Door</link>"
-msgstr ""
+msgstr "<link=\"DOOR\">树鼠气动门</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_DOOR_MANUAL_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_DOOR_MANUAL_HATCH.DESC"
 msgid "It sure would be hard to tell if there was a Hatch trapped between its panels."
-msgstr ""
+msgstr "要是真有一只好吃哈奇卡在板层之间，肯定很难发现。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_DOOR_MANUAL_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_DOOR_MANUAL_HATCH.NAME"
 msgid "<link=\"MANUALPRESSUREDOOR\">Hatch Manual Airlock Door</link>"
-msgstr ""
+msgstr "<link=\"MANUALPRESSUREDOOR\">哈奇手动气闸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_DRESS_FUTURESPACE_BLUE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_DRESS_FUTURESPACE_BLUE.DESC"
@@ -1752,12 +1752,12 @@ msgstr "<link=\"LUXURYBED\">哈奇床</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_PIP_C2.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_PIP_C2.DESC"
 msgid "For Duplicants who don't like to sleep alone."
-msgstr ""
+msgstr "为不喜欢独自睡觉的复制人准备的。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_PIP_C2.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_PIP_C2.NAME"
 msgid "<link=\"LUXURYBED\">Pip Plushies Bed</link>"
-msgstr ""
+msgstr "<link=\"LUXURYBED\">树鼠毛绒床</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_PIPSQUEAK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_PIPSQUEAK.DESC"
@@ -1767,17 +1767,17 @@ msgstr "非常适合侧睡和蜷睡的人。"
 #. STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_PIPSQUEAK.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_PIPSQUEAK.NAME"
 msgid "<link=\"LUXURYBED\">Pipsqueak Bed</link>"
-msgstr "<link=\"LUXURYBED\">树鼠床</link>"
+msgstr "<link=\"LUXURYBED\">小树鼠床</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_PUFT.DESC"
 msgid "A comfy, if somewhat 'fragrant', place to sleep."
-msgstr ""
+msgstr "一个舒适又有点“香气”的睡觉之处。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_PUFT.NAME"
 msgid "<link=\"LUXURYBED\">Puft Bed</link>"
-msgstr ""
+msgstr "<link=\"LUXURYBED\">飞鱼床</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_SUBMARINE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_SUBMARINE.DESC"
@@ -1792,32 +1792,32 @@ msgstr "<link=\"LUXURYBED\">水中火箭床</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_FARMTILEHYDROPONICROTATING_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FARMTILEHYDROPONICROTATING_PIP.DESC"
 msgid "This design takes a leaf out of the critter's book, so to speak."
-msgstr ""
+msgstr "这个设计可以说是借鉴了这小动物的做法。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FARMTILEHYDROPONICROTATING_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FARMTILEHYDROPONICROTATING_PIP.NAME"
 msgid "<link=\"HYDROPONICFARM\">Pip Hydroponic Farm</link>"
-msgstr ""
+msgstr "<link=\"HYDROPONICFARM\">树鼠液培砖</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FARMTILEROTATING_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FARMTILEROTATING_PIP.DESC"
 msgid "For farms that are ready to really branch out."
-msgstr ""
+msgstr "用于那些准备好真正开枝散叶的农场。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FARMTILEROTATING_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FARMTILEROTATING_PIP.NAME"
 msgid "<link=\"FARMTILE\">Pip Farm Tile</link>"
-msgstr ""
+msgstr "<link=\"FARMTILE\">树鼠土培砖</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FILTER_GAS_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FILTER_GAS_PUFT.DESC"
 msgid "It looks so very pleased with itself."
-msgstr ""
+msgstr "它自己看起来就挺高兴的。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FILTER_GAS_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FILTER_GAS_PUFT.NAME"
 msgid "<link=\"GASFILTER\">Puft Gas Filter</link>"
-msgstr ""
+msgstr "<link=\"GASFILTER\">飞鱼气体筛选器</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOORLAMP_COTTAGE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOORLAMP_COTTAGE.DESC"
@@ -1832,122 +1832,122 @@ msgstr "<link=\"FLOORLAMP\">故事时间电灯</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_BASIC_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_BASIC_HATCH.DESC"
 msgid "A hanging flower pot made from a single piece of stone, carved and painted. It's quite heavy."
-msgstr ""
+msgstr "一个由整块石头雕琢并上色制成的垂吊花盆。相当沉。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_BASIC_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_BASIC_HATCH.NAME"
 msgid "<link=\"FLOWERVASEHANGING\">Hatch Hanging Pot</link>"
-msgstr ""
+msgstr "<link=\"FLOWERVASEHANGING\">哈奇垂吊花盆</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_BASIC_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_BASIC_PIP.DESC"
 msgid "A hanging flower pot made from dense layers of compressed foliage."
-msgstr ""
+msgstr "一个由层层压实的枝叶制成的垂吊花盆。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_BASIC_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_BASIC_PIP.NAME"
 msgid "<link=\"FLOWERVASEHANGING\">Pip Hanging Pot</link>"
-msgstr ""
+msgstr "<link=\"FLOWERVASEHANGING\">树鼠垂吊花盆</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_BASIC_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_BASIC_PUFT.DESC"
 msgid "A hanging flower pot that looks like a Puft curled up for a nap near the ceiling. Aw!"
-msgstr ""
+msgstr "一个垂吊花盆，看起来像一只蜷起来在天花板附近打盹的喷浮飞鱼。哎呀，真可爱！"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_BASIC_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_BASIC_PUFT.NAME"
 msgid "<link=\"FLOWERVASEHANGING\">Puft Hanging Pot</link>"
-msgstr ""
+msgstr "<link=\"FLOWERVASEHANGING\">飞鱼垂吊花盆</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_HATCH.DESC"
 msgid "Naming it after a critter helped turn this pot's blotchy coloring into a selling point."
-msgstr ""
+msgstr "用小动物的名字来命名，让这个花盆斑驳的着色反而成了卖点。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_HATCH.NAME"
 msgid "<link=\"FLOWERVASEHANGINGFANCY\">Hatch Aero Pot</link>"
-msgstr ""
+msgstr "<link=\"FLOWERVASEHANGINGFANCY\">哈奇透明花盆</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_HATCH_C2.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_HATCH_C2.DESC"
 msgid "A thick, transparent plant container that's heavier than it looks."
-msgstr ""
+msgstr "一个厚实的透明植物容器，比看起来要沉。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_HATCH_C2.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_HATCH_C2.NAME"
 msgid "<link=\"FLOWERVASEHANGINGFANCY\">Crystal Hatch Aero Pot</link>"
-msgstr ""
+msgstr "<link=\"FLOWERVASEHANGINGFANCY\">水晶哈奇透明花盆</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_PIP.DESC"
 msgid "The deep all-over etching makes this pot exceedingly fragile, but look how pretty!"
-msgstr ""
+msgstr "通体深雕的纹路让这个花盆格外易碎，但看看它多漂亮啊！"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_PIP.NAME"
 msgid "<link=\"FLOWERVASEHANGINGFANCY\">Pip Aero Pot</link>"
-msgstr ""
+msgstr "<link=\"FLOWERVASEHANGINGFANCY\">树鼠透明花盆</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_PIP_C2.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_PIP_C2.DESC"
 msgid "Cheers up overworked Duplicants, no matter how tired they are."
-msgstr ""
+msgstr "无论多累，都能让操劳过度的复制人振作起来。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_PIP_C2.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_PIP_C2.NAME"
 msgid "<link=\"FLOWERVASEHANGINGFANCY\">Crystal Pip Aero Pot</link>"
-msgstr ""
+msgstr "<link=\"FLOWERVASEHANGINGFANCY\">水晶树鼠透明花盆</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_PUFT.DESC"
 msgid "Delicate glass tinted with iron polysulfides gives this pot a distinctive Puft hue."
-msgstr ""
+msgstr "经多硫化铁着色的精致玻璃，赋予这个花盆独特的喷浮飞鱼色调。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_PUFT.NAME"
 msgid "<link=\"FLOWERVASEHANGINGFANCY\">Puft Aero Pot</link>"
-msgstr ""
+msgstr "<link=\"FLOWERVASEHANGINGFANCY\">飞鱼透明花盆</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_PUFT_C2.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_PUFT_C2.DESC"
 msgid "It lingers in the air, just like a real Puft."
-msgstr ""
+msgstr "它在空气中停留，就像真正的喷浮飞鱼一样。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_PUFT_C2.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HANGING_PUFT_C2.NAME"
 msgid "<link=\"FLOWERVASEHANGINGFANCY\">Crystal Puft Aero Pot</link>"
-msgstr ""
+msgstr "<link=\"FLOWERVASEHANGINGFANCY\">水晶飞鱼透明花盆</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HATCH.DESC"
 msgid "A container for decorative plants, painted to look like a Hatch."
-msgstr ""
+msgstr "一个装饰性植物容器，漆成了好吃哈奇的样子。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_HATCH.NAME"
 msgid "<link=\"FLOWERVASE\">Hatch Flower Pot</link>"
-msgstr ""
+msgstr "<link=\"FLOWERVASE\">哈奇花盆</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_PIP.DESC"
 msgid "A container for decorative plants, carefully wrapped in fake leaves."
-msgstr ""
+msgstr "一个装饰性植物容器，外面精心缠满了假叶子。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_PIP.NAME"
 msgid "<link=\"FLOWERVASE\">Pip Flower Pot</link>"
-msgstr ""
+msgstr "<link=\"FLOWERVASE\">树鼠花盆</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_PUFT.DESC"
 msgid "A container for decorative plants, with Puft-inspired sgraffito detailing."
-msgstr ""
+msgstr "一个装饰性植物容器，带有灵感源自喷浮飞鱼的刮绘细节。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FLOWERVASE_PUFT.NAME"
 msgid "<link=\"FLOWERVASE \">Puft Flower Pot</link>"
-msgstr ""
+msgstr "<link=\"FLOWERVASE\">飞鱼花盆</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FOSSILSCULPTURE_IDLE_JAWBO.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FOSSILSCULPTURE_IDLE_JAWBO.DESC"
@@ -1992,12 +1992,12 @@ msgstr "《尖板》"
 #. STRINGS.BLUEPRINTS.PERMIT_FRIDGE_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_HATCH.DESC"
 msgid "Keeps perishables cold and out of reach of real critters."
-msgstr ""
+msgstr "让易腐食物保持低温，也远离真正的小动物。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FRIDGE_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_HATCH.NAME"
 msgid "<link=\"REFRIGERATOR\">Hatch Refrigerator</link>"
-msgstr ""
+msgstr "<link=\"REFRIGERATOR\">哈奇冰箱</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FRIDGE_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_NEUTRONIUM.DESC"
@@ -2012,22 +2012,22 @@ msgstr "<link=\"REFRIGERATOR\">尊贵中子冰箱</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_FRIDGE_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_PIP.DESC"
 msgid "Mmm, smells woodsy!"
-msgstr ""
+msgstr "嗯，闻起来像森林的味道！"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FRIDGE_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_PIP.NAME"
 msgid "<link=\"REFRIGERATOR\">Pip Refrigerator</link>"
-msgstr ""
+msgstr "<link=\"REFRIGERATOR\">树鼠冰箱</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FRIDGE_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_PUFT.DESC"
 msgid "You can almost hear it saying \"om nom nom\" whenever new items are added."
-msgstr ""
+msgstr "每当有新物品放进去，你几乎能听见它在说“嗷呜嗷呜”。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FRIDGE_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_PUFT.NAME"
 msgid "<link=\"REFRIGERATOR\">Puft Refrigerator</link>"
-msgstr ""
+msgstr "<link=\"REFRIGERATOR\">飞鱼冰箱</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_FRIDGE_STRIPES_NAUTICAL.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_STRIPES_NAUTICAL.DESC"
@@ -2072,12 +2072,12 @@ msgstr "<link=\"GASRESERVOIR\">尖块兽储气库</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_PUFT.DESC"
 msgid "When you think \"gas,\" think Puft!"
-msgstr ""
+msgstr "一想到“气体”，就要想到飞鱼！"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_PUFT.NAME"
 msgid "<link=\"GASRESERVOIR\">Puft Gas Reservoir</link>"
-msgstr ""
+msgstr "<link=\"GASRESERVOIR\">飞鱼储气库</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_STRIPES_NAUTICAL.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_STRIPES_NAUTICAL.DESC"
@@ -2132,12 +2132,12 @@ msgstr "<link=\"MANUALGENERATOR\">复古LED人力发电机</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_HATCH.DESC"
 msgid "It's extraordinarily clunky."
-msgstr ""
+msgstr "非常笨拙。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_HATCH.NAME"
 msgid "<link=\"GENERATORMANUALHATCH\">Hatch Manual Generator</link>"
-msgstr ""
+msgstr "<link=\"MANUALGENERATOR\">哈奇人力发电机</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_NAUTICAL.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_NAUTICAL.DESC"
@@ -2162,22 +2162,22 @@ msgstr "<link=\"MANUALGENERATOR\">尊贵中子人力发电机</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_PIP.DESC"
 msgid "It's a wonder that Duplicants don't get tangled up in the decorative vines more often."
-msgstr ""
+msgstr "复制人居然没怎么被这些装饰藤蔓缠住，真是个奇迹。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_PIP.NAME"
 msgid "<link=\"MANUALGENERATOR\">Pip Manual Generator</link>"
-msgstr ""
+msgstr "<link=\"MANUALGENERATOR\">树鼠人力发电机</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_PUFT.DESC"
 msgid "This power-generating building is truly eye-conic."
-msgstr ""
+msgstr "这个发电建筑眼睛真多啊。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_PUFT.NAME"
 msgid "<link=\"GENERATORMANUALPUFT\">Puft Manual Generator</link>"
-msgstr ""
+msgstr "<link=\"MANUALGENERATOR\">飞鱼人力发电机</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_ROCK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORMANUAL_ROCK.DESC"
@@ -2202,12 +2202,12 @@ msgstr "<link=\"MANUALGENERATOR\">涟漪人力发电机</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_GENERATORPHOS_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORPHOS_HATCH.DESC"
 msgid "It really feels as though it could walk right out of the room at any moment."
-msgstr ""
+msgstr "它给人的感觉，就好像随时都能自己走出这个房间一样。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GENERATORPHOS_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORPHOS_HATCH.NAME"
 msgid "<link=\"GENERATOR\">Hatch Coal Generator</link>"
-msgstr ""
+msgstr "<link=\"GENERATOR\">哈奇煤炭发电机</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GENERATORPHOS_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GENERATORPHOS_NEUTRONIUM.DESC"
@@ -2572,12 +2572,12 @@ msgstr "镉果冻手套"
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SHORT_SCUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SHORT_SCUM.DESC"
 msgid "Environmentally responsible gloves made from reconstituted pond scum. They're so silky!"
-msgstr ""
+msgstr "环保手套，由再生池塘浮渣制成。非常丝滑！"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SHORT_SCUM.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SHORT_SCUM.NAME"
 msgid "Scum Gloves"
-msgstr ""
+msgstr "浮渣手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_GLOVES_SNAPJACKET_BRINE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SNAPJACKET_BRINE.DESC"
@@ -2642,12 +2642,12 @@ msgstr "恒星飞行手套"
 #. STRINGS.BLUEPRINTS.PERMIT_HATCH_ATMO_OUTFIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_HATCH_ATMO_OUTFIT.NAME"
 msgid "Hatch Atmo Outfit"
-msgstr ""
+msgstr "哈奇气压服套装"
 
 #. STRINGS.BLUEPRINTS.PERMIT_HATCH_JETSUIT_OUTFIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_HATCH_JETSUIT_OUTFIT.NAME"
 msgid "Hatch Jet Outfit"
-msgstr ""
+msgstr "哈奇喷气服套装"
 
 #. STRINGS.BLUEPRINTS.PERMIT_HEADQUARTERS_CERES.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_HEADQUARTERS_CERES.DESC"
@@ -2692,12 +2692,12 @@ msgstr "<link=\"HEADQUARTERS\">遗忘打印舱</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_HQBASE_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_HATCH.DESC"
 msgid "It's got a real appetite for printing."
-msgstr ""
+msgstr "它还挺有兴趣打印的。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_HQBASE_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_HATCH.NAME"
 msgid "<link=\"HEADQUARTERS\">Hatch Printing Pod</link>"
-msgstr ""
+msgstr "<link=\"HEADQUARTERS\">哈奇打印舱</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.DESC"
@@ -2712,22 +2712,22 @@ msgstr "<link=\"HEADQUARTERS\">尊贵中子打印舱</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_HQBASE_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_PIP.DESC"
 msgid "It really should have been called a \"Pip-ting\" Pod."
-msgstr ""
+msgstr "其实应该叫“鼠印舱”的。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_HQBASE_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_PIP.NAME"
 msgid "<link=\"HEADQUARTERS\">Pip Printing Pod</link>"
-msgstr ""
+msgstr "<link=\"HEADQUARTERS\">树鼠打印舱</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_HQBASE_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_PUFT.DESC"
 msgid "Prints everything with a mildly gassy odor."
-msgstr ""
+msgstr "打印时带有轻微的气味。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_HQBASE_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_PUFT.NAME"
 msgid "<link=\"HEADQUARTERS\">Puft Printing Pod</link>"
-msgstr ""
+msgstr "<link=\"HEADQUARTERS\">飞鱼打印舱</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ICESCULPTURE_AMAZING_IDLE_BAMMOTH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ICESCULPTURE_AMAZING_IDLE_BAMMOTH.DESC"
@@ -2772,12 +2772,12 @@ msgstr "阴霾喷气服手套"
 #. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_HATCH.DESC"
 msgid "Triple-layered throughout, for long-lasting protection from pointy sharp things."
-msgstr ""
+msgstr "整体三层结构，持久抵御尖锐利器。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_HATCH.NAME"
 msgid "Hatch Jet Gloves"
-msgstr ""
+msgstr "哈奇气压服手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_NEUTRONIUM.DESC"
@@ -2812,22 +2812,22 @@ msgstr "镉喷气服手套"
 #. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_PIP.DESC"
 msgid "The palm side of the glove features tiny sensors to enable gentle handling of delicate objects."
-msgstr ""
+msgstr "手套的掌面嵌有微型传感器，便于轻柔地拿取易碎物品。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_PIP.NAME"
 msgid "Pip Jet Gloves"
-msgstr ""
+msgstr "树鼠喷气服手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_PUFT.DESC"
 msgid "Made out of a rubbery material that definitely wasn't sourced from expired critter parts."
-msgstr ""
+msgstr "由一种弹性材料制成，绝对不是用过期的小动物部件制成的。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_PUFT.NAME"
 msgid "Puft Jet Gloves"
-msgstr ""
+msgstr "飞鱼喷气服手套"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_00_ATOMIC_GLOOM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_00_ATOMIC_GLOOM.DESC"
@@ -2912,12 +2912,12 @@ msgstr "究极喷气服头盔"
 #. STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_HATCH.DESC"
 msgid "Streamlined industrial-grade construction, for the utilitarian with a sense of whimsy."
-msgstr ""
+msgstr "流线型的工业级构造，为兼具实用主义与奇思妙想的人准备。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_HATCH.NAME"
 msgid "Hatch Jet Helmet"
-msgstr ""
+msgstr "哈奇喷气服头盔"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_NEUTRONIUM.DESC"
@@ -2932,22 +2932,22 @@ msgstr "尊贵中子喷气服头盔"
 #. STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_PIP.DESC"
 msgid "For some Duplicants, flying around in a jet suit is just part of their nature."
-msgstr ""
+msgstr "对一些复制人来说，穿着喷气服四处飞来飞去是他们的天性。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_PIP.NAME"
 msgid "Pip Jet Helmet"
-msgstr ""
+msgstr "树鼠喷气服头盔"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_PUFT.DESC"
 msgid "It's very difficult to take someone seriously when they're wearing it."
-msgstr ""
+msgstr "穿上这东西，就很难让人把你当回事了。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_PUFT.NAME"
 msgid "Puft Jet Helmet"
-msgstr ""
+msgstr "飞鱼喷气服头盔"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_BASIC_BLACK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_BASIC_BLACK.DESC"
@@ -2972,12 +2972,12 @@ msgstr "白色喷气服靴子"
 #. STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_HATCH.DESC"
 msgid "Durable design and a bit too much compression, to be honest."
-msgstr ""
+msgstr "设计很耐穿，不过说实话，压缩感有点过头了。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_HATCH.NAME"
 msgid "Hatch Jet Boots"
-msgstr ""
+msgstr "哈奇喷气服靴子"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_NEUTRONIUM.DESC"
@@ -2992,22 +2992,22 @@ msgstr "尊贵中子喷气服靴子"
 #. STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_PIP.DESC"
 msgid "Protective little feeties, made entirely out of biodegradable materials."
-msgstr ""
+msgstr "保护小脚的护具，完全由可生物降解材料制成。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_PIP.NAME"
 msgid "Pip Jet Boots"
-msgstr ""
+msgstr "树鼠喷气服靴子"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_PUFT.DESC"
 msgid "The intentionally scuffed texture guarantees no one will ever know whether they're clean or dirty."
-msgstr ""
+msgstr "刻意做出的磨砂质感，保证谁也看不出它到底是干净还是脏的。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_PUFT.NAME"
 msgid "Puft Jet Boots"
-msgstr ""
+msgstr "飞鱼喷气服靴子"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JETSUIT_BLACK_HATCHSTONE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_BLACK_HATCHSTONE.DESC"
@@ -3062,12 +3062,12 @@ msgstr "究极隐秘喷气服"
 #. STRINGS.BLUEPRINTS.PERMIT_JETSUIT_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_HATCH.DESC"
 msgid "Lined with quadruple-layered interfacing that provides unmatched textile strength."
-msgstr ""
+msgstr "内衬四层衬布，提供无与伦比的织物强度。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JETSUIT_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_HATCH.NAME"
 msgid "Hatch Jet Suit"
-msgstr ""
+msgstr "哈奇喷气服"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JETSUIT_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_NEUTRONIUM.DESC"
@@ -3082,22 +3082,22 @@ msgstr "尊贵中子喷气服"
 #. STRINGS.BLUEPRINTS.PERMIT_JETSUIT_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_PIP.DESC"
 msgid "This vegetable-dyed ombre suit looks right at home while jetting around a farm <i>or</i> the sky."
-msgstr ""
+msgstr "这套植物染色的渐变色服装，无论是在农场间<i>还是</i>在天空中穿梭，都显得浑然天成。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JETSUIT_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_PIP.NAME"
 msgid "Pip Jet Suit"
-msgstr ""
+msgstr "树鼠喷气服"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JETSUIT_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_PUFT.DESC"
 msgid "Let he who has never dreamed of flying alongside the magnificent Puft throw the first ore chunk."
-msgstr ""
+msgstr "让从未梦想过与壮丽的喷浮飞鱼并肩飞行的人，扔出第一块矿石吧。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JETSUIT_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_PUFT.NAME"
 msgid "Puft Jet Suit"
-msgstr ""
+msgstr "飞鱼喷气服"
 
 #. STRINGS.BLUEPRINTS.PERMIT_JETSUIT_WHITE_ATOMIC.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_WHITE_ATOMIC.DESC"
@@ -3152,42 +3152,42 @@ msgstr "空气动力学飞行服"
 #. STRINGS.BLUEPRINTS.PERMIT_KILN_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_KILN_HATCH.DESC"
 msgid "Inspired by the digestive system of the colony's favorite totumvore."
-msgstr ""
+msgstr "灵感源自殖民地最爱的全食动物的消化系统。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_KILN_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_KILN_HATCH.NAME"
 msgid "<link=\"KILN\">Hatch Kiln</link>"
-msgstr ""
+msgstr "<link=\"KILN\">哈奇窑炉</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_LIQUIDATOR_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_LIQUIDATOR_HATCH.DESC"
 msgid "Overengineered for extreme sturdiness."
-msgstr ""
+msgstr "为极致坚固而过度设计。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_LIQUIDATOR_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_LIQUIDATOR_HATCH.NAME"
 msgid "<link=\"BOTTLEEMPTIER\">Hatch Bottle Emptier</link>"
-msgstr ""
+msgstr "<link=\"BOTTLEEMPTIER\">哈奇液桶排倒器</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_LIQUIDATOR_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_LIQUIDATOR_PIP.DESC"
 msgid "Makes the whole bottle emptying experience feel quite organic."
-msgstr ""
+msgstr "让整桶倒空的体验显得相当自然。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_LIQUIDATOR_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_LIQUIDATOR_PIP.NAME"
 msgid "<link=\"BOTTLEEMPTIER\">Pip Bottle Emptier</link>"
-msgstr ""
+msgstr "<link=\"BOTTLEEMPTIER\">树鼠液桶排倒器</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_LIQUIDATOR_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_LIQUIDATOR_PUFT.DESC"
 msgid "Duplicants can't help but giggle every time they watch this building work."
-msgstr ""
+msgstr "每次看着这个建筑运作，复制人都忍不住咯咯笑。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_LIQUIDATOR_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_LIQUIDATOR_PUFT.NAME"
 msgid "<link=\"BOTTLEEMPTIER\">Puft Bottle Emptier</link>"
-msgstr ""
+msgstr "<link=\"BOTTLEEMPTIER\">飞鱼液桶排倒器</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_LIQUIDCONDITIONER_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_LIQUIDCONDITIONER_NEUTRONIUM.DESC"
@@ -3642,12 +3642,12 @@ msgstr "<link=\"MECHANICALSURFBOARD\">危险鱼类机械冲浪板</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_METALREFINERY_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_METALREFINERY_HATCH.DESC"
 msgid "Spits out a nice, shiny version of whatever it's been \"fed.\""
-msgstr ""
+msgstr "不管“喂”它什么，它都会吐出一个闪亮的版本。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_METALREFINERY_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_METALREFINERY_HATCH.NAME"
 msgid "<link=\"METALREFINERY\">Hatch Metal Refinery</link>"
-msgstr ""
+msgstr "<link=\"METALREFINERY\">哈奇金属精炼器</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_METALREFINERY_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_METALREFINERY_NEUTRONIUM.DESC"
@@ -3672,12 +3672,12 @@ msgstr "<link=\"MILKPRESS\">尖块兽植物粉碎机</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_HATCH.DESC"
 msgid "Unlike its critter namesake, this building cannot, in fact, consume rocks."
-msgstr ""
+msgstr "与它同名的那个小动物不同，这个建筑实际上并不能吃石头。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_HATCH.NAME"
 msgid "<link=\"MINERALDEOXIDIXER\">Hatch Oxygen Diffuser</link>"
-msgstr ""
+msgstr "<link=\"MINERALDEOXIDIZER\">哈奇氧气扩散器</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_NEUTRONIUM.DESC"
@@ -3692,22 +3692,22 @@ msgstr "<link=\"MINERALDEOXIDIZER\">尊贵中子氧气扩散器</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_PIP.DESC"
 msgid "Designed to make this oxygen source blend seamlessly into natural environments."
-msgstr ""
+msgstr "意在让这一氧气来源无缝融入自然环境之中。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_PIP.NAME"
 msgid "<link=\"MINERALDEOXIDIXERHATCH\">Pip Oxygen Diffuser</link>"
-msgstr ""
+msgstr "<link=\"MINERALDEOXIDIZER\">树鼠氧气扩散器</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_PUFT.DESC"
 msgid "It adds some much-needed levity to the serious matter of breathable air."
-msgstr ""
+msgstr "它为可呼吸空气问题这件正经大事，增添了几分难得的轻松气息。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MINERALDEOXIDIZER_PUFT.NAME"
 msgid "<link=\"MINERALDEOXIDIXER\">Puft Oxygen Diffuser</link>"
-msgstr ""
+msgstr "<link=\"MINERALDEOXIDIZER\">飞鱼氧气扩散器</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_MINNOW_SWIM_OUTFIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_MINNOW_SWIM_OUTFIT.NAME"
@@ -4057,22 +4057,22 @@ msgstr "利亚姆头像"
 #. STRINGS.BLUEPRINTS.PERMIT_OUTHOUSE_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_OUTHOUSE_PIP.DESC"
 msgid "A natural place to answer Nature's call."
-msgstr ""
+msgstr "一个顺应自然召唤的天然之地。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_OUTHOUSE_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_OUTHOUSE_PIP.NAME"
 msgid "<link=\"OUTHOUSE\">Pip Outhouse</link>"
-msgstr ""
+msgstr "<link=\"OUTHOUSE\">树鼠户外厕所</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_OXYLITE_REFINERY_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_OXYLITE_REFINERY_HATCH.DESC"
 msgid "Burps up a portable chunk of a life-sustaining bubbly compound."
-msgstr ""
+msgstr "打嗝能吐出一块便携式生命维持气泡化合物。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_OXYLITE_REFINERY_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_OXYLITE_REFINERY_HATCH.NAME"
 msgid "<link=\"OXYLITEREFINERY\">Hatch Oxylite Refinery</link>"
-msgstr ""
+msgstr "<link=\"OXYLITEREFINERY\">哈奇氧石精炼炉</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PAINTING_ART_AQUATIC.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PAINTING_ART_AQUATIC.DESC"
@@ -4217,12 +4217,12 @@ msgstr "捕鱼跋涉裤"
 #. STRINGS.BLUEPRINTS.PERMIT_PARKSIGN_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PARKSIGN_PIP.DESC"
 msgid "It's a very good sign."
-msgstr ""
+msgstr "这是个非常好的标识。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PARKSIGN_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PARKSIGN_PIP.NAME"
 msgid "<link=\"PARKSIGN\">Pip Park Sign</link>"
-msgstr ""
+msgstr "<link=\"PARKSIGN\">树鼠公园标识</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PEDESTAL_ARCADE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PEDESTAL_ARCADE.DESC"
@@ -4287,42 +4287,42 @@ msgstr "<link=\"ITEMPEDESTAL\">镀铬基座</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_PERMIT_PJ_HATCH_OUTFIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PERMIT_PJ_HATCH_OUTFIT.NAME"
 msgid "Hatch Jammies Outfit"
-msgstr ""
+msgstr "哈奇睡衣套装"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PERMIT_PJ_PIP_OUTFIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PERMIT_PJ_PIP_OUTFIT.NAME"
 msgid "Pip Jammies Outfit"
-msgstr ""
+msgstr "树鼠睡衣套装"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PERMIT_PJ_PLUSH_HATCH_OUTFIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PERMIT_PJ_PLUSH_HATCH_OUTFIT.NAME"
 msgid "Hatch Onesie Outfit"
-msgstr ""
+msgstr "哈奇连体衣套装"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PERMIT_PJ_PLUSH_PIP_OUTFIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PERMIT_PJ_PLUSH_PIP_OUTFIT.NAME"
 msgid "Pip Onesie Outfit"
-msgstr ""
+msgstr "树鼠连体衣套装"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PERMIT_PJ_PLUSH_PUFT_OUTFIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PERMIT_PJ_PLUSH_PUFT_OUTFIT.NAME"
 msgid "Puft Onesie Outfit"
-msgstr ""
+msgstr "飞鱼连体衣套装"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PERMIT_PJ_PUFT_OUTFIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PERMIT_PJ_PUFT_OUTFIT.NAME"
 msgid "Puft Jammies Outfit"
-msgstr ""
+msgstr "飞鱼睡衣套装"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PIP_ATMO_OUTFIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PIP_ATMO_OUTFIT.NAME"
 msgid "Pip Atmo Outfit"
-msgstr ""
+msgstr "树鼠气压服套装"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PIP_JETSUIT_OUTFIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PIP_JETSUIT_OUTFIT.NAME"
 msgid "Pip Jet Outfit"
-msgstr ""
+msgstr "树鼠喷气服套装"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PJ_BIOCIRCUIT_WILDBERRY.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PJ_BIOCIRCUIT_WILDBERRY.DESC"
@@ -4367,82 +4367,82 @@ msgstr "三叠纪睡衣"
 #. STRINGS.BLUEPRINTS.PERMIT_PJ_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PJ_HATCH.DESC"
 msgid "The perfect sleepwear for indiscriminate snackers who need to camouflage food stains."
-msgstr ""
+msgstr "对不分场合乱吃零食，需要掩盖食物污渍的人来说，这是完美的睡衣。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PJ_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PJ_HATCH.NAME"
 msgid "Hatch Jammies"
-msgstr ""
+msgstr "哈奇睡衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PJ_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PJ_PIP.DESC"
 msgid "Sleepwear for the Duplicant who likes to stash seeds in their pockets \"for later.\""
-msgstr ""
+msgstr "专为喜欢在口袋里囤种子留着以后用的复制人准备的睡衣。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PJ_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PJ_PIP.NAME"
 msgid "Pip Jammies"
-msgstr ""
+msgstr "树鼠睡衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PJ_PLUSH_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PJ_PLUSH_HATCH.DESC"
 msgid "An ultra-cozy hooded Hatch suit made from thick bioengineered fleece."
-msgstr ""
+msgstr "一件超舒适的哈奇连帽睡衣，由厚实的生物工程绒毛面料制成。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PJ_PLUSH_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PJ_PLUSH_HATCH.NAME"
 msgid "Hatch Onesie"
-msgstr ""
+msgstr "哈奇连体衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PJ_PLUSH_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PJ_PLUSH_PIP.DESC"
 msgid "This plush one-piece suit immediately makes its wearer appear 10 times more adorable than usual."
-msgstr ""
+msgstr "这件毛绒连体衣一穿上身，立刻让穿着者比平时可爱十倍。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PJ_PLUSH_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PJ_PLUSH_PIP.NAME"
 msgid "Pip Onesie"
-msgstr ""
+msgstr "树鼠连体衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PJ_PLUSH_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PJ_PLUSH_PUFT.DESC"
 msgid "A comfy pull-on suit with an unfortunately functional posterior trunk."
-msgstr ""
+msgstr "一件舒适的套穿式服装，有条不幸能用的尾巴。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PJ_PLUSH_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PJ_PLUSH_PUFT.NAME"
 msgid "Puft Onesie"
-msgstr ""
+msgstr "飞鱼连体衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PJ_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PJ_PUFT.DESC"
 msgid "The buttons are quite eye-catching."
-msgstr ""
+msgstr "纽扣非常引人注目。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PJ_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PJ_PUFT.NAME"
 msgid "Puft Jammies"
-msgstr ""
+msgstr "飞鱼睡衣"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PLANTERBOX_PIP_C2.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PLANTERBOX_PIP_C2.DESC"
 msgid "A box that blooms, whether or not its contents have wilted."
-msgstr ""
+msgstr "一个会开花的箱子，不管里面的东西有没有枯萎。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PLANTERBOX_PIP_C2.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PLANTERBOX_PIP_C2.NAME"
 msgid "<link=\"PLANTERBOX\">Pip Planter Box</link>"
-msgstr ""
+msgstr "<link=\"PLANTERBOX\">树鼠种植箱</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PLANTTENDER_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PLANTTENDER_PIP.DESC"
 msgid "It's much more effective than trying to train critters to handle micronutrient fertilizer responsibly."
-msgstr ""
+msgstr "比起训练小动物负责任地处理微量元素肥料，这办法可有效多了。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PLANTTENDER_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PLANTTENDER_PIP.NAME"
 msgid "<link=\"FARMSTATION\">Pip Farm Station</link>"
-msgstr ""
+msgstr "<link=\"FARMSTATION\">树鼠农业站</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_AQUATIC.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_AQUATIC.DESC"
@@ -4477,12 +4477,12 @@ msgstr "<link=\"EXOBASEHEADQUARTERS\">遗忘迷你舱</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_HATCH.DESC"
 msgid "Sometimes, Duplicants will close their eyes and try to remember how many spots it has."
-msgstr ""
+msgstr "有时候，复制人会闭上眼，努力回想这上面到底有多少个斑点。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_HATCH.NAME"
 msgid "<link=\"EXOBASEHEADQUARTERS\">Hatch Mini-Pod</link>"
-msgstr ""
+msgstr "<link=\"EXOBASEHEADQUARTERS\">哈奇迷你舱</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_ICE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_ICE.DESC"
@@ -4507,52 +4507,52 @@ msgstr "<link=\"EXOBASEHEADQUARTERS\">尊贵中子迷你舱</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_PIP.DESC"
 msgid "No one talks about how hard it is for the janitor to keep all these textured surfaces clean."
-msgstr ""
+msgstr "没人提过，清洁工要把这些凹凸不平的表面全都擦干净有多难。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_PIP.NAME"
 msgid "<link=\"EXOBASEHEADQUARTERS\">Pip Mini-Pod</link>"
-msgstr ""
+msgstr "<link=\"EXOBASEHEADQUARTERS\">树鼠迷你舱</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_PUFT.DESC"
 msgid "Duplicants can be a bit squeamish about touching the eyeball knob on the lever."
-msgstr ""
+msgstr "复制人对去碰拉杆上那个眼球状的把手有点发怵。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PORTA_POD_Y_PUFT.NAME"
 msgid "<link=\"EXOBASEHEADQUARTERS\">Puft Mini-Pod</link>"
-msgstr ""
+msgstr "<link=\"EXOBASEHEADQUARTERS\">飞鱼迷你舱</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PUFT_ATMO_OUTFIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PUFT_ATMO_OUTFIT.NAME"
 msgid "Puft Atmo Outfit"
-msgstr ""
+msgstr "飞鱼气压服套装"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PUFT_JETSUIT_OUTFIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PUFT_JETSUIT_OUTFIT.NAME"
 msgid "Puft Jet Outfit"
-msgstr ""
+msgstr "飞鱼喷气服套装"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PUMPGAS_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PUMPGAS_PUFT.DESC"
 msgid "Deep in the bowels of a colony, this building pumps away faithfully."
-msgstr ""
+msgstr "在殖民地的最深处，这个建筑依然忠实地运转。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PUMPGAS_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PUMPGAS_PUFT.NAME"
 msgid "<link=\"GASPUMP\">Puft Gas Pump</link>"
-msgstr ""
+msgstr "<link=\"GASPUMP\">飞鱼气泵</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PUMPLIQUID_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PUMPLIQUID_PUFT.DESC"
 msgid "Pulls liquids in, pumps them out. Or rather, \"pufts\" them out."
-msgstr ""
+msgstr "把液体吸进来，再泵出去。或者更确切地说，“喷”出去。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_PUMPLIQUID_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_PUMPLIQUID_PUFT.NAME"
 msgid "<link=\"LIQUIDPUMP\">Puft Liquid Pump</link>"
-msgstr ""
+msgstr "<link=\"LIQUIDPUMP\">飞鱼液泵</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_COTTAGE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_COTTAGE.DESC"
@@ -4577,12 +4577,12 @@ msgstr "<link=\"RANCHSTATION\">丛生梳理站</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_HATCH.DESC"
 msgid "Makes even the most rough-and-tumble critters feel special."
-msgstr ""
+msgstr "让哪怕最闹腾的小动物也能感到特别关照。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_HATCH.NAME"
 msgid "<link=\"RANCHSTATION\">Hatch Grooming Station</link>"
-msgstr ""
+msgstr "<link=\"RANCHSTATION\">哈奇梳理站</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_NEUTRONIUM.DESC"
@@ -4597,22 +4597,22 @@ msgstr "<link=\"RANCHSTATION\">尊贵中子梳理站</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_PIP.DESC"
 msgid "The little Pip plushie keeps critters company while they're getting fussed over."
-msgstr ""
+msgstr "小树鼠毛绒玩偶会在小动物被精心照料时陪伴着它们。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_PIP.NAME"
 msgid "<link=\"RANCHSTATION\">Pip Grooming Station</link>"
-msgstr ""
+msgstr "<link=\"RANCHSTATION\">树鼠梳理站</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_PUFT.DESC"
 msgid "It's impossible to miss!"
-msgstr ""
+msgstr "想不注意都难！"
 
 #. STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_PUFT.NAME"
 msgid "<link=\"RANCHSTATION\">Puft Grooming Station</link>"
-msgstr ""
+msgstr "<link=\"RANCHSTATION\">飞鱼梳理站</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_RESEARCH_CENTER_CYBERPUNK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_RESEARCH_CENTER_CYBERPUNK.DESC"
@@ -4647,12 +4647,12 @@ msgstr "<link=\"RESETSKILLSSTATION\">尊贵中子技能涤除器</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_ROCKREFINERY_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ROCKREFINERY_HATCH.DESC"
 msgid "It just can't get enough of that cronchy cronch."
-msgstr ""
+msgstr "它就好这口。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_ROCKREFINERY_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_ROCKREFINERY_HATCH.NAME"
 msgid "<link=\"ROCKCRUSHER\">Hatch Rock Crusher</link>"
-msgstr ""
+msgstr "<link=\"ROCKCRUSHER\">哈奇碎石机</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_MARBLE_ATLAS_HAUL.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SCULPTURE_MARBLE_ATLAS_HAUL.DESC"
@@ -4877,12 +4877,12 @@ msgstr "系带徒步鞋"
 #. STRINGS.BLUEPRINTS.PERMIT_SHOES_SCOUT_SCUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SCOUT_SCUM.DESC"
 msgid "Sturdy boots paired with warm, machine-knitted crew socks."
-msgstr ""
+msgstr "结实的靴子，搭配温暖的机织中筒袜。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_SHOES_SCOUT_SCUM.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SCOUT_SCUM.NAME"
 msgid "Lace-up Boots"
-msgstr ""
+msgstr "系带靴"
 
 #. STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_BLUE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_BLUE.DESC"
@@ -4977,12 +4977,12 @@ msgstr "侦察短裤"
 #. STRINGS.BLUEPRINTS.PERMIT_SHORTS_SCOUT_HATCHSTONE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHORTS_SCOUT_HATCHSTONE.DESC"
 msgid "A comfy pair of shorts perfectly suited for animal husbandry work."
-msgstr ""
+msgstr "一条舒适的短裤，非常适合畜牧工作。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_SHORTS_SCOUT_HATCHSTONE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHORTS_SCOUT_HATCHSTONE.NAME"
 msgid "Ranger Shorts"
-msgstr ""
+msgstr "护林短裤"
 
 #. STRINGS.BLUEPRINTS.PERMIT_SMARTSTORAGELOCKER_GRAVITAS.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_SMARTSTORAGELOCKER_GRAVITAS.DESC"
@@ -5172,7 +5172,7 @@ msgstr "尊贵中子制服"
 #. STRINGS.BLUEPRINTS.PERMIT_STANDARD_SCOUT_OUTFIT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_STANDARD_SCOUT_OUTFIT.NAME"
 msgid "Ranger Outfit"
-msgstr ""
+msgstr "护林套装"
 
 #. STRINGS.BLUEPRINTS.PERMIT_STANDARD_SWIM_OUTFIT_BLUE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_STANDARD_SWIM_OUTFIT_BLUE.NAME"
@@ -5207,12 +5207,12 @@ msgstr "<link=\"STEAMTURBINE2\">尊贵中子蒸汽涡轮机</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_HATCH_C2.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_HATCH_C2.DESC"
 msgid "The purple patches soldered onto its exterior reinforce the structure in illogical areas."
-msgstr ""
+msgstr "外壁上焊着的那些紫色补丁，但加固的都是些没道理的地方。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_HATCH_C2.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_HATCH_C2.NAME"
 msgid "<link=\"STORAGELOCKER\">Hatch Storage Bin</link>"
-msgstr ""
+msgstr "<link=\"STORAGELOCKER\">哈奇存储箱</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_NEUTRONIUM.DESC"
@@ -5227,22 +5227,22 @@ msgstr "<link=\"STORAGELOCKER\">尊贵中子存储箱</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_PIP_C2.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_PIP_C2.DESC"
 msgid "Storing items here feels like feeding a small, sentient tree."
-msgstr ""
+msgstr "把东西存到这儿，感觉像是在喂一棵有灵性的小树。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_PIP_C2.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_PIP_C2.NAME"
 msgid "<link=\"STORAGELOCKER\">Pip Storage Bin</link>"
-msgstr ""
+msgstr "<link=\"STORAGELOCKER\">树鼠存储箱</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_PUFT_C2.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_PUFT_C2.DESC"
 msgid "It has a permanently grumpy expression, no matter what gets stored inside."
-msgstr ""
+msgstr "不管往里存什么，它都是一副永远闷闷不乐的表情。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_PUFT_C2.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_PUFT_C2.NAME"
 msgid "<link=\"STORAGELOCKER\">Puft Storage Bin</link>"
-msgstr ""
+msgstr "<link=\"STORAGELOCKER\">飞鱼存储箱</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_STRIPES_NAUTICAL.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_STRIPES_NAUTICAL.DESC"
@@ -5287,22 +5287,22 @@ msgstr "破浪潜水服"
 #. STRINGS.BLUEPRINTS.PERMIT_TOILETFLUSH_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOILETFLUSH_HATCH.DESC"
 msgid "An industrial-grade toilet for Duplicants with serious blockages."
-msgstr ""
+msgstr "一个工业级马桶，专为有严重堵塞问题的复制人准备。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOILETFLUSH_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOILETFLUSH_HATCH.NAME"
 msgid "<link=\"TOILETFLUSH\">Hatch Lavatory</link>"
-msgstr ""
+msgstr "<link=\"FLUSHTOILET\">哈奇抽水马桶</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOILETFLUSH_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOILETFLUSH_PUFT.DESC"
 msgid "Why is the toilet paper so...textured?"
-msgstr ""
+msgstr "这厕纸怎么……这么有质感？"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOILETFLUSH_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOILETFLUSH_PUFT.NAME"
 msgid "<link=\"FLUSHTOILET\">Puft Lavatory</link>"
-msgstr ""
+msgstr "<link=\"FLUSHTOILET\">飞鱼抽水马桶</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_FLANNEL_BLACK.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_FLANNEL_BLACK.DESC"
@@ -5657,12 +5657,12 @@ msgstr "尊贵中子制服衬衫"
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_SCOUT_HATCHSTONE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SCOUT_HATCHSTONE.DESC"
 msgid "It's paired with a tungsten-fiber neckerchief that can hold the weight of four adult critters in an emergency."
-msgstr ""
+msgstr "搭配一条钨纤维领巾，紧急情况下能承受四只成年小动物的重量。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_SCOUT_HATCHSTONE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SCOUT_HATCHSTONE.NAME"
 msgid "Ranger Shirt"
-msgstr ""
+msgstr "护林衬衫"
 
 #. STRINGS.BLUEPRINTS.PERMIT_TOP_SCOUT_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SCOUT_WHITE.DESC"
@@ -5847,22 +5847,22 @@ msgstr "滤液导线桥"
 #. STRINGS.BLUEPRINTS.PERMIT_VENTGAS_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_VENTGAS_PUFT.DESC"
 msgid "Usually not an exit that workers would enjoy lingering next to."
-msgstr ""
+msgstr "这通常不是一个工人乐意在旁逗留的排气口。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_VENTGAS_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_VENTGAS_PUFT.NAME"
 msgid "<link=\"GASVENT\">Puft Gas Vent</link>"
-msgstr ""
+msgstr "<link=\"GASVENT\">飞鱼排气口</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_VENTLIQUID_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_VENTLIQUID_PUFT.DESC"
 msgid "It's like a waterpark slide exit for liquids!"
-msgstr ""
+msgstr "就像是液体专属的水上乐园滑梯出口！"
 
 #. STRINGS.BLUEPRINTS.PERMIT_VENTLIQUID_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_VENTLIQUID_PUFT.NAME"
 msgid "<link=\"LIQUIDVENT\">Puft Liquid Vent</link>"
-msgstr ""
+msgstr "<link=\"LIQUIDVENT\">飞鱼排液口</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_BEAKER.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_BEAKER.DESC"
@@ -6127,12 +6127,12 @@ msgstr "<link=\"EXTERIORWALL\">尖块兽雕刻壁纸</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_HATCH.DESC"
 msgid "An all-over print featuring the Hatch's familiar monochromatic spots."
-msgstr ""
+msgstr "一种全尺寸图案壁纸，采用好吃哈奇标志性的单色斑点。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_HATCH.NAME"
 msgid "<link=\"EXTERIORWALL\">Hatchspot</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">哈奇斑点壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_IGLOO.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_IGLOO.DESC"
@@ -6157,12 +6157,12 @@ msgstr "<link=\"EXTERIORWALL\">像素颚鱼壁纸</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_PIP.DESC"
 msgid "An all-over print that zooms into the leaf-like texture of a Pip's swishy mane."
-msgstr ""
+msgstr "一种全尺寸图案壁纸，聚焦于树鼠飘逸鬃毛的叶片质感。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_PIP.NAME"
 msgid "<link=\"EXTERIORWALL\">Pipleaf</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">树鼠叶子壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_PLUS_BLUE_NAUTICAL_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_PLUS_BLUE_NAUTICAL_WHITE.DESC"
@@ -6177,12 +6177,12 @@ msgstr "<link=\"EXTERIORWALL\">航海数码壁纸</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_PUFT.DESC"
 msgid "Faux-fur walls for the true Puft connoisseur. So fluffy!"
-msgstr ""
+msgstr "为真正的喷浮飞鱼鉴赏家打造的仿毛皮壁纸。非常蓬松！"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_PUFT.NAME"
 msgid "<link=\"EXTERIORWALL\">Puftpuff</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">飞鱼喷浮壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_RAPTOR.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_RAPTOR.DESC"
@@ -6347,212 +6347,212 @@ msgstr "<link=\"EXTERIORWALL\">航海条纹壁纸</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_ALGAE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_ALGAE.DESC"
 msgid "Undulating lines in alternating shades of slippery algae."
-msgstr ""
+msgstr "以深浅交替的滑腻藻类波浪线条。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_ALGAE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_ALGAE.NAME"
 msgid "<link=\"EXTERIORWALL\">Algae Ripple</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">藻类波纹壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_ALGAE_TOP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_ALGAE_TOP.DESC"
 msgid "Warm-hued stones with a small heap of algae in the foreground."
-msgstr ""
+msgstr "暖色调的石头，前景处点缀着一小堆藻类。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_ALGAE_TOP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_ALGAE_TOP.NAME"
 msgid "<link=\"EXTERIORWALL\">Sandstone Algae Ripple</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">砂岩藻类波纹壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_BOTTOM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_BOTTOM.DESC"
 msgid "A cactus stem firmly planted in a mound of algae."
-msgstr ""
+msgstr "一根仙人掌茎，稳稳地扎在一堆藻类里。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_BOTTOM.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_BOTTOM.NAME"
 msgid "<link=\"EXTERIORWALL\">Spiky Base</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">尖刺底部壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_CURVE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_CURVE.DESC"
 msgid "A cactus stem that took a 90-degree turn."
-msgstr ""
+msgstr "一根拐了90度弯的仙人掌茎。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_CURVE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_CURVE.NAME"
 msgid "<link=\"EXTERIORWALL\">Spiky Curve</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">尖刺弯曲壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_MIDDLE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_MIDDLE.DESC"
 msgid "These arms weren't made for hugging."
-msgstr ""
+msgstr "这双胳膊可不是用来拥抱的。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_MIDDLE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_MIDDLE.NAME"
 msgid "<link=\"EXTERIORWALL\">Spiky Stem</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">尖刺茎部壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_PIP.DESC"
 msgid "A guileless Pip clings to a spiky stem, oblivious to the plant's many spikes."
-msgstr ""
+msgstr "一只天真无邪的树鼠紧紧攀着一根带刺的茎，完全没注意到这株植物满身的尖刺。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_PIP.NAME"
 msgid "<link=\"EXTERIORWALL\">Spike Climber</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">尖刺攀爬者壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_TOP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_TOP.DESC"
 msgid "The spiky top end of a prickly plant."
-msgstr ""
+msgstr "一株多刺植物带刺的顶端。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_TOP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_TOP.NAME"
 msgid "<link=\"EXTERIORWALL\">Spiky Top</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">尖刺顶部壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_TOP_FLOWER.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_TOP_FLOWER.DESC"
 msgid "Is it a symbol of hope blooming in prickly circumstances, or just a cool little plant hat?"
-msgstr ""
+msgstr "它究竟是荆棘丛中绽放的希望象征，还是只是一顶挺酷的小植物帽子？"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_TOP_FLOWER.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_TOP_FLOWER.NAME"
 msgid "<link=\"EXTERIORWALL\">Spiky Bloom Top</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">尖刺顶花壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_GRASS.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_GRASS.DESC"
 msgid "A trio of grass blades sprouts from a small heap of algae."
-msgstr ""
+msgstr "一小堆藻类中长了三片草叶。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_GRASS.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_GRASS.NAME"
 msgid "<link=\"EXTERIORWALL\">Grassy Algae</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">长草藻类壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_HATCH_A.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_HATCH_A.DESC"
 msgid "A perpetually hungry critter makes an unexpected entrance."
-msgstr ""
+msgstr "一只永远吃不饱的小动物，出人意料地登场了。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_HATCH_A.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_HATCH_A.NAME"
 msgid "<link=\"EXTERIORWALL\">Hello, Hatch</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">你好哈奇壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_HATCH_B.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_HATCH_B.DESC"
 msgid "This wallpaper features a critter with perfect posture."
-msgstr ""
+msgstr "这款壁纸的主角，是一只姿态完美的小动物。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_HATCH_B.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_HATCH_B.NAME"
 msgid "<link=\"EXTERIORWALL\">Hatch Upright</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">哈奇直立壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_HATCH_C.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_HATCH_C.DESC"
 msgid "A toothsome critter at rest."
-msgstr ""
+msgstr "一只可口的小动物，正在歇息。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_HATCH_C.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_HATCH_C.NAME"
 msgid "<link=\"EXTERIORWALL\">Hatch Sploot</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">哈奇平趴壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_HATCH_D.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_HATCH_D.DESC"
 msgid "These little legs are no match for gravity."
-msgstr ""
+msgstr "这双小短腿敌不过重力。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_HATCH_D.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_HATCH_D.NAME"
 msgid "<link=\"EXTERIORWALL\">Downward Hatch</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">下降哈奇壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PIP_A.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PIP_A.DESC"
 msgid "Masterfully hidden, this Pip evades notice entirely."
-msgstr ""
+msgstr "这只树鼠藏得很巧妙，完全避开了人们的注意。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PIP_A.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PIP_A.NAME"
 msgid "<link=\"EXTERIORWALL\">Invisible Pip</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">隐形树鼠壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PIP_B.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PIP_B.DESC"
 msgid "A cheerful critter with its four feet firmly planted on the ground...for now."
-msgstr ""
+msgstr "一只欢快的小动物，四脚稳稳地踩在地上……暂时而已。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PIP_B.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PIP_B.NAME"
 msgid "<link=\"EXTERIORWALL\">Grounded Pip</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">地面树鼠壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PIP_C.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PIP_C.DESC"
 msgid "The serenity of a perfectly curled Pip cannot be overstated."
-msgstr ""
+msgstr "一只蜷得恰到好处的树鼠，那份安宁怎么夸都不为过。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PIP_C.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PIP_C.NAME"
 msgid "<link=\"EXTERIORWALL\">Sleeping Pip</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">睡觉树鼠壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PIP_E.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PIP_E.DESC"
 msgid "A cheerful critter posed against a sandstone-y backdrop."
-msgstr ""
+msgstr "一只欢快的小动物，衬着砂岩色的背景。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PIP_E.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PIP_E.NAME"
 msgid "<link=\"EXTERIORWALL\">Simply Pip</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">简单树鼠壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PUFT_A.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PUFT_A.DESC"
 msgid "A mouth-breathing critter hovers against a sandstone-y backdrop. It has no thoughts."
-msgstr ""
+msgstr "一只张嘴喘气的小动物悬停在砂岩色的背景前。它脑中空空的。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PUFT_A.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PUFT_A.NAME"
 msgid "<link=\"EXTERIORWALL\">Simply Puft</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">简单飞鱼壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PUFT_B.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PUFT_B.DESC"
 msgid "This airborne critter zigged when it should have zagged."
-msgstr ""
+msgstr "这只飞行小动物，该往右偏的时候偏偏往左偏了。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PUFT_B.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PUFT_B.NAME"
 msgid "<link=\"EXTERIORWALL\">Puft Crash</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">飞鱼坠机壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PUFT_C.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PUFT_C.DESC"
 msgid "This critter's single braincell is on standby right now."
-msgstr ""
+msgstr "这只小动物的唯一脑细胞，此刻正在待机。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PUFT_C.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_PUFT_C.NAME"
 msgid "<link=\"EXTERIORWALL\">Surprised Puft</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">惊讶飞鱼壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_SANDSTONE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_SANDSTONE.DESC"
 msgid "Warm-hued stones dotted with bubbles."
-msgstr ""
+msgstr "暖色调的石头上点缀着气泡。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_T_SANDSTONE.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_SANDSTONE.NAME"
 msgid "<link=\"EXTERIORWALL\">Sandstone Bubbles</link>"
-msgstr ""
+msgstr "<link=\"EXTERIORWALL\">砂岩气泡壁纸</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_CHARCOAL_WHITE.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_CHARCOAL_WHITE.DESC"
@@ -6887,32 +6887,32 @@ msgstr "<link=\"EXTERIORWALL\">高能见度X形壁纸</link>"
 #. STRINGS.BLUEPRINTS.PERMIT_WASH_BASIN_PIP.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WASH_BASIN_PIP.DESC"
 msgid "The perfect place to wash up after countless cycles spent working the farm."
-msgstr ""
+msgstr "在农场里辛勤劳作无数个周期之后，这里正是洗漱的完美场所。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WASH_BASIN_PIP.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WASH_BASIN_PIP.NAME"
 msgid "<link=\"WASHBASIN\">Pip Wash Basin</link>"
-msgstr ""
+msgstr "<link=\"WASHBASIN\">树鼠洗手盆</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WASH_SINK_HATCH.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WASH_SINK_HATCH.DESC"
 msgid "How clean can one's hands possibly be after washing up here?"
-msgstr ""
+msgstr "在这里洗完手，手到底能有多干净呢？"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WASH_SINK_HATCH.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WASH_SINK_HATCH.NAME"
 msgid "<link=\"WASHSINK\">Hatch Sink</link>"
-msgstr ""
+msgstr "<link=\"WASHSINK\">哈奇洗手池</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WASH_SINK_PUFT.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WASH_SINK_PUFT.DESC"
 msgid "Patting the eyeballs does <i>not</i> help wet hands dry any faster."
-msgstr ""
+msgstr "拍打那些眼球，<i>不会</i>让湿手干得更快。"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WASH_SINK_PUFT.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WASH_SINK_PUFT.NAME"
 msgid "<link=\"WASHSINK\">Puft Sink</link>"
-msgstr ""
+msgstr "<link=\"WASHSINK\">飞鱼洗手池</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WATERPUMP_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WATERPUMP_NEUTRONIUM.DESC"
@@ -6922,7 +6922,7 @@ msgstr "有些复制人幻想着偷走那根锻造金质泵柄，当作精美手
 #. STRINGS.BLUEPRINTS.PERMIT_WATERPUMP_NEUTRONIUM.NAME
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WATERPUMP_NEUTRONIUM.NAME"
 msgid "<link=\"LIQUIDPUMPINGSTATION\">Regal Neutronium Pitcher Pump</link>"
-msgstr ""
+msgstr "<link=\"LIQUIDPUMPINGSTATION\">尊贵中子手压泵</link>"
 
 #. STRINGS.BLUEPRINTS.PERMIT_WATERPURIFIER_NEUTRONIUM.DESC
 msgctxt "STRINGS.BLUEPRINTS.PERMIT_WATERPURIFIER_NEUTRONIUM.DESC"
@@ -7246,7 +7246,7 @@ msgstr "优化的{COUNT_TEXT}"
 #. STRINGS.BUILDING.STATUSITEMS.BUILDINGBOOSTEDBYSUPPORTBUILDING.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.BUILDINGBOOSTEDBYSUPPORTBUILDING.TOOLTIP"
 msgid "One or more support buildings are increasing this building's speed:{BOOSTS_LIST}"
-msgstr ""
+msgstr "有至少一个辅助建筑正在提高这个建筑的速度：{BOOSTS_LIST}"
 
 #. STRINGS.BUILDING.STATUSITEMS.BUILDINGDISABLED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.BUILDINGDISABLED.NAME"
@@ -7351,7 +7351,7 @@ msgstr "通行许可：允许"
 #. STRINGS.BUILDING.STATUSITEMS.CHECKPOINT.TOOLTIPS.LOGIC_CONTROLLED_CLOSED
 msgctxt "STRINGS.BUILDING.STATUSITEMS.CHECKPOINT.TOOLTIPS.LOGIC_CONTROLLED_CLOSED"
 msgid "Automated Checkpoint is receiving a <b><style=\"logic_off\">Red Signal</style></b>, preventing Duplicants from passing"
-msgstr ""
+msgstr "这个自动化的检查站接收到了<b><style=\"logic_off\">红色信号</style></b>，从而阻止复制人通过"
 
 #. STRINGS.BUILDING.STATUSITEMS.CHECKPOINT.TOOLTIPS.LOGIC_CONTROLLED_DISCONNECTED
 msgctxt "STRINGS.BUILDING.STATUSITEMS.CHECKPOINT.TOOLTIPS.LOGIC_CONTROLLED_DISCONNECTED"
@@ -7361,7 +7361,7 @@ msgstr "这个检查站尚未连接到<style=\"KKeyword\">自动化</style>电�
 #. STRINGS.BUILDING.STATUSITEMS.CHECKPOINT.TOOLTIPS.LOGIC_CONTROLLED_OPEN
 msgctxt "STRINGS.BUILDING.STATUSITEMS.CHECKPOINT.TOOLTIPS.LOGIC_CONTROLLED_OPEN"
 msgid "Automated Checkpoint is receiving a <b><style=\"logic_on\">Green Signal</style></b>, allowing Duplicants to pass"
-msgstr ""
+msgstr "这个自动化的检查站接收到了<b><style=\"logic_on\">绿色信号</style></b>，从而允许复制人通过"
 
 #. STRINGS.BUILDING.STATUSITEMS.CLINICOUTSIDEHOSPITAL.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.CLINICOUTSIDEHOSPITAL.NAME"
@@ -10632,6 +10632,9 @@ msgid ""
 "\n"
 "Blockage must be cleared before contents can be flushed"
 msgstr ""
+"复制人光顾时产生的多出来的<style=\"KKeyword\">污染水</style>堵塞了输出<style=\"KKeyword\">管道</style>\n"
+"\n"
+"必须清除堵塞物才能冲走内容物"
 
 #. STRINGS.BUILDING.STATUSITEMS.OUTPUTTILEBLOCKED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.OUTPUTTILEBLOCKED.NAME"
@@ -11629,7 +11632,7 @@ msgstr "优化的建筑：{COUNT}"
 #. STRINGS.BUILDING.STATUSITEMS.SUPPORTBUILDINGACTIVE.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SUPPORTBUILDINGACTIVE.TOOLTIP"
 msgid "This support building is currently providing the {BOOST_NAME} effect to the following buildings:{BUILDING_LIST}"
-msgstr ""
+msgstr "这个辅助建筑当前正在为以下建筑提供{BOOST_NAME}效果：{BUILDING_LIST}"
 
 #. STRINGS.BUILDING.STATUSITEMS.SUPPORTBUILDINGINACTIVE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SUPPORTBUILDINGINACTIVE.NAME"
@@ -11653,6 +11656,9 @@ msgid ""
 "    • No compatible buildings nearby\n"
 "    • Compatible buildings are already optimized by another support building"
 msgstr ""
+"这个建筑由于以下原因之一而闲置：\n"
+"    • 附近无兼容建筑\n"
+"    • 兼容建筑已被其他辅助建筑优化"
 
 #. STRINGS.BUILDING.STATUSITEMS.SWITCHSTATUSACTIVE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SWITCHSTATUSACTIVE.NAME"
@@ -11855,12 +11861,12 @@ msgstr ""
 #. STRINGS.BUILDING.STATUSITEMS.TRAMPOLINEBOUNCESREMAINING.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TRAMPOLINEBOUNCESREMAINING.NAME"
 msgid "{BouncesLeft} of {MaxBounces} remaining"
-msgstr ""
+msgstr "剩余次数{BouncesLeft}/{MaxBounces}"
 
 #. STRINGS.BUILDING.STATUSITEMS.TRAMPOLINEBOUNCESREMAINING.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TRAMPOLINEBOUNCESREMAINING.TOOLTIP"
 msgid "{BouncesLeft} of {MaxBounces} remaining tooltip"
-msgstr ""
+msgstr "剩余次数{BouncesLeft}/{MaxBounces}的悬停提示"
 
 #. STRINGS.BUILDING.STATUSITEMS.TRANSITTUBEENTRANCEWAXREADY.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TRANSITTUBEENTRANCEWAXREADY.NAME"
@@ -12018,6 +12024,10 @@ msgid ""
 "    • Power consumption: <b>{0}</b>\n"
 "    • Duplicants who spend at least <b>{1}</b> of their ride in Turbo Mode gain extra <style=\"KKeyword\">Morale</style>"
 msgstr ""
+"这个建筑以最大功率运行\n"
+"\n"
+"    • 电力消耗：<b>{0}</b>\n"
+"    • 涡轮模式至少占<b>{1}</b>骑行时间的复制人可获得额外<style=\"KKeyword\">士气</style>"
 
 #. STRINGS.BUILDING.STATUSITEMS.UNASSIGNED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.UNASSIGNED.NAME"
@@ -12680,7 +12690,7 @@ msgstr "<link=\"AIRBORNECRITTERCONDO\">飞行小动物公寓</link>"
 #. STRINGS.BUILDINGS.PREFABS.AIRCONDITIONER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.AIRCONDITIONER.DESC"
 msgid "A thermo regulator doesn't remove heat, but relocates it to a new area."
-msgstr "温度调节器不能减少热量，只能把热量转到其他地方。"
+msgstr "气温调节器不能减少热量，只能把热量转到其他地方。"
 
 #. STRINGS.BUILDINGS.PREFABS.AIRCONDITIONER.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.AIRCONDITIONER.EFFECT"
@@ -12690,7 +12700,7 @@ msgstr "冷却通入的<link=\"ELEMENTSGAS\">气体</link>，但会向周围环�
 #. STRINGS.BUILDINGS.PREFABS.AIRCONDITIONER.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.AIRCONDITIONER.NAME"
 msgid "<link=\"AIRCONDITIONER\">Thermo Regulator</link>"
-msgstr "<link=\"AIRCONDITIONER\">温度调节器</link>"
+msgstr "<link=\"AIRCONDITIONER\">气温调节器</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.AIRFILTER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.AIRFILTER.DESC"
@@ -12851,7 +12861,7 @@ msgstr "<link=\"ARTIFACTCARGOBAY\">工艺品运输舱</link>"
 #. STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.DESC"
 msgid "When it's in turbo mode, this ride delivers truly dizzying levels of delight."
-msgstr ""
+msgstr "开启涡轮模式后，过山车能带来真正让人晕头转向的快乐。"
 
 #. STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.EFFECT"
@@ -12878,22 +12888,22 @@ msgstr ""
 #. STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_NORMAL
 msgctxt "STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_NORMAL"
 msgid "{attrib}: {amount} (Normal)"
-msgstr ""
+msgstr "{attrib}：{amount}（正常）"
 
 #. STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_NORMAL_TOOLTIP
 msgctxt "STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_NORMAL_TOOLTIP"
 msgid "Duplicants will gain {amount} {attrib} if Turbo Mode is on for less than {percent} of their ride"
-msgstr ""
+msgstr "如果涡轮模式开启时间少于{percent}骑行时间，则复制人会获得{amount}{attrib}。"
 
 #. STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_TURBO
 msgctxt "STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_TURBO"
 msgid "{attrib}: {amount} (Turbo)"
-msgstr ""
+msgstr "{attrib}：{amount}（涡轮）"
 
 #. STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_TURBO_TOOLTIP
 msgctxt "STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_TURBO_TOOLTIP"
 msgid "Duplicants will gain {amount} {attrib} if Turbo Mode is on for at least {percent} of their ride"
-msgstr ""
+msgstr "如果涡轮模式开启至少为{percent}骑行时间，则复制人会获得{amount}{attrib}。"
 
 #. STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.NAME"
@@ -15193,7 +15203,7 @@ msgid ""
 msgstr ""
 "将<link=\"REFINEDCARBON\">精炼碳</link>挤压成<link=\"DIAMOND\">钻石</link>。\n"
 "\n"
-"只有在队列中安排配方且已发现<link=\"REFINEDCARBON\">精炼碳</link>，复制人才会进行制作。"
+"只有在队列中安排配方且已发现原料，复制人才会进行制作。"
 
 #. STRINGS.BUILDINGS.PREFABS.DIAMONDPRESS.EFFECT_DLC5
 msgctxt "STRINGS.BUILDINGS.PREFABS.DIAMONDPRESS.EFFECT_DLC5"
@@ -15204,7 +15214,7 @@ msgid ""
 msgstr ""
 "将<link=\"REFINEDCARBON\">精炼碳</link>挤压成<link=\"DIAMOND\">钻石</link>，将<link=\"COQUINA\">壳灰岩</link>挤压成<link=\"PEARL\">珍珠</link>。\n"
 "\n"
-"只有在队列中安排配方且已发现<link=\"REFINEDCARBON\">精炼碳</link>，复制人才会进行制作。"
+"只有在队列中安排配方且已发现原料，复制人才会进行制作。"
 
 #. STRINGS.BUILDINGS.PREFABS.DIAMONDPRESS.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.DIAMONDPRESS.NAME"
@@ -15276,7 +15286,7 @@ msgstr "<link=\"DISTILLATIONCOLUMN\">蒸馏塔</link>"
 #. STRINGS.BUILDINGS.PREFABS.DLC1COSMICRESEARCHCENTER.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.DLC1COSMICRESEARCHCENTER.DESC"
 msgid "Planetariums allow the simulated exploration of locations recorded in <link=\"DATABANK\">Data Banks</link>."
-msgstr ""
+msgstr "天象仪可以模拟<link=\"DATABANK\">数据磁盘</link>中记录的探索地点。"
 
 #. STRINGS.BUILDINGS.PREFABS.DLC1COSMICRESEARCHCENTER.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.DLC1COSMICRESEARCHCENTER.EFFECT"
@@ -15285,6 +15295,9 @@ msgid ""
 "\n"
 "Consumes <link=\"DATABANK\">Data Banks</link> generated by exploration."
 msgstr ""
+"进行<link=\"RESEARCH\">数据分析研究</link>以解锁新技术。\n"
+"\n"
+"消耗探索产生的<link=\"DATABANK\">数据磁盘</link>。"
 
 #. STRINGS.BUILDINGS.PREFABS.DLC1COSMICRESEARCHCENTER.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.DLC1COSMICRESEARCHCENTER.NAME"
@@ -17422,7 +17435,7 @@ msgstr ""
 #. STRINGS.BUILDINGS.PREFABS.FORGETOOLS.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.FORGETOOLS.NAME"
 msgid "<link=\"FORGETOOLS\">Forge Tools</link>"
-msgstr ""
+msgstr "<link=\"FORGETOOLS\">锻造工具</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.FOSSILDIG.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.FOSSILDIG.DESC"
@@ -27082,12 +27095,12 @@ msgstr "艺术品质"
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.DESC"
 msgid "Damp sand is an excellent medium for creative expression, regardless of artistic skill."
-msgstr ""
+msgstr "潮湿的沙子是绝佳的创意表达媒介，无论艺术水平如何。"
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.EFFECT"
 msgid "Allows Duplicants to enjoy a <link=\"MORALE\">Morale</link>-boosting play session on their breaks."
-msgstr ""
+msgstr "允许复制人在休息时间游玩，提升复制人的<link=\"MORALE\">士气</link>。"
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDBOX_CASTLE_1.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDBOX_CASTLE_1.DESC"
@@ -27112,12 +27125,12 @@ msgstr "沙堡"
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_CASTLE_SIMPLE.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_CASTLE_SIMPLE.DESC"
 msgid "A simple collection of turrets, unbound by the constraints of architecture."
-msgstr ""
+msgstr "一组简简单单的炮塔，不受建筑学条条框框的束缚。"
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_CASTLE_SIMPLE.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_CASTLE_SIMPLE.NAME"
 msgid "Sand Castle"
-msgstr ""
+msgstr "《沙堡》"
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_MERPIP.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_MERPIP.DESC"
@@ -27162,7 +27175,7 @@ msgstr "《鱼之吻》"
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SEALOVERS.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SEALOVERS.DESC"
 msgid "A pair of Seaquines prepare to engage in a deepsea disco dance-off."
-msgstr "一对海树鼠在准备参加深海迪斯科舞会。"
+msgstr "一对海马在准备参加深海迪斯科舞会。"
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SEALOVERS.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SEALOVERS.NAME"
@@ -27172,17 +27185,17 @@ msgstr "《深深的鞠躬》"
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SNOWMAN.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SNOWMAN.DESC"
 msgid "This grainy character looks like they're winning a game of Limbo."
-msgstr ""
+msgstr "这个颗粒感十足的角色，看起来像是就要赢了林波舞游戏一样。"
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SNOWMAN.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SNOWMAN.NAME"
 msgid "The Sandman"
-msgstr ""
+msgstr "《沙人》"
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.NAME"
 msgid "<link=\"SANDBOXBUILDING\">Sandpit</link>"
-msgstr ""
+msgstr "<link=\"SANDBOXBUILDING\">沙坑</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.SAUNA.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.SAUNA.DESC"
@@ -27449,7 +27462,7 @@ msgid ""
 msgstr ""
 "展示珍藏物品并增加<link=\"DECOR\">装饰度</link>，从而提升<link=\"MORALE\">士气</link>。\n"
 "\n"
-"必须由复制人绘制。"
+"必须安装在背景墙上。"
 
 #. STRINGS.BUILDINGS.PREFABS.SHELF.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.SHELF.NAME"
@@ -28572,12 +28585,12 @@ msgstr "<link=\"STORAGELOCKERSMART\">智能存储箱</link>"
 #. STRINGS.BUILDINGS.PREFABS.STORAGELOCKERSMART.SIDESCREEN_ACTIVATE
 msgctxt "STRINGS.BUILDINGS.PREFABS.STORAGELOCKERSMART.SIDESCREEN_ACTIVATE"
 msgid "High Threshold:"
-msgstr ""
+msgstr "上限阈值："
 
 #. STRINGS.BUILDINGS.PREFABS.STORAGELOCKERSMART.SIDESCREEN_DEACTIVATE
 msgctxt "STRINGS.BUILDINGS.PREFABS.STORAGELOCKERSMART.SIDESCREEN_DEACTIVATE"
 msgid "Low Threshold:"
-msgstr ""
+msgstr "下限阈值："
 
 #. STRINGS.BUILDINGS.PREFABS.STORAGELOCKERSMART.SIDESCREEN_TITLE
 msgctxt "STRINGS.BUILDINGS.PREFABS.STORAGELOCKERSMART.SIDESCREEN_TITLE"
@@ -28937,7 +28950,7 @@ msgstr "{attrib}：{amount}（无人）"
 #. STRINGS.BUILDINGS.PREFABS.TELEPHONE.EFFECT_BABBLE_TOOLTIP
 msgctxt "STRINGS.BUILDINGS.PREFABS.TELEPHONE.EFFECT_BABBLE_TOOLTIP"
 msgid "Duplicants will gain {amount} {attrib} if they chat only with themselves."
-msgstr "如果复制人只能和自己聊天，则会获得{amount}{attrib}。"
+msgstr "复制人如果只能和自己聊天，则会获得{amount}{attrib}。"
 
 #. STRINGS.BUILDINGS.PREFABS.TELEPHONE.EFFECT_CHAT
 msgctxt "STRINGS.BUILDINGS.PREFABS.TELEPHONE.EFFECT_CHAT"
@@ -28947,7 +28960,7 @@ msgstr "{attrib}：{amount}（至少一名复制人）"
 #. STRINGS.BUILDINGS.PREFABS.TELEPHONE.EFFECT_CHAT_TOOLTIP
 msgctxt "STRINGS.BUILDINGS.PREFABS.TELEPHONE.EFFECT_CHAT_TOOLTIP"
 msgid "Duplicants will gain {amount} {attrib} if they chat with at least one other Duplicant."
-msgstr "如果复制人至少和一名其他复制人聊天，则会获得{amount}{attrib}。"
+msgstr "复制人如果至少和一名其他复制人聊天，则会获得{amount}{attrib}。"
 
 #. STRINGS.BUILDINGS.PREFABS.TELEPHONE.EFFECT_LONG_DISTANCE
 msgctxt "STRINGS.BUILDINGS.PREFABS.TELEPHONE.EFFECT_LONG_DISTANCE"
@@ -28957,7 +28970,7 @@ msgstr "{attrib}：{amount}（至少一名隔着太空的复制人）"
 #. STRINGS.BUILDINGS.PREFABS.TELEPHONE.EFFECT_LONG_DISTANCE_TOOLTIP
 msgctxt "STRINGS.BUILDINGS.PREFABS.TELEPHONE.EFFECT_LONG_DISTANCE_TOOLTIP"
 msgid "Duplicants will gain {amount} {attrib} if they chat with at least one other Duplicant across space."
-msgstr "如果复制人至少和其他一名复制人隔着太空聊天，则会获得{amount}{attrib}。"
+msgstr "复制人如果至少和其他一名复制人隔着太空聊天，则会获得{amount}{attrib}。"
 
 #. STRINGS.BUILDINGS.PREFABS.TELEPHONE.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.TELEPHONE.NAME"
@@ -33100,7 +33113,7 @@ msgstr ""
 "\n"
 "只有当<link=\"LOGICELEMENTSENSORLIQUID\">液体元素传感器</link>检测到水时才启用<link=\"LIQUIDPUMP\">液泵</link>。\n"
 "\n"
-"只有当<link=\"LOGICTEMPERATURESENSOR\">温度传感器</link>检测到太热时才会启用<link=\"AIRCONDITIONER\">温度调节器</link>。\n"
+"只有当<link=\"LOGICTEMPERATURESENSOR\">温度传感器</link>检测到太热时才会启用<link=\"AIRCONDITIONER\">气温调节器</link>。\n"
 "\n"
 
 #. STRINGS.CODEX.AUTOMATION.PARAGRAPH_2
@@ -35634,6 +35647,9 @@ msgid ""
 "\n"
 "Maintaining populations of these critters in the right areas can reduce the burden of farming or ranching work borne by my Duplicants."
 msgstr ""
+"适当引导后，自然行为有助于耕种和养殖的小动物。有些能帮助孵蛋，有些则种植<link=\"PLANTS\">种子</link>或收获<link=\"PLANTCATEGORYMAKESORISFOOD\">作物</link>。\n"
+"\n"
+"在合适区域维持这些小动物的种群数量能减少我的复制人对于耕种或养殖工作的劳动负担。"
 
 #. STRINGS.CODEX.CRITTER_TYPES.FARM_FRIENDLY.TITLE
 msgctxt "STRINGS.CODEX.CRITTER_TYPES.FARM_FRIENDLY.TITLE"
@@ -35726,6 +35742,9 @@ msgid ""
 "\n"
 "These bright critters may also fulfil some <link=\"PLANTS\">Plants'</link> light requirements for growth."
 msgstr ""
+"能产生<link=\"LIGHT\">光</link>的小动物，可以提升我的复制人的<link=\"MORALE\">士气</link>并帮助他们更快工作。\n"
+"\n"
+"这些明亮的小动物也能满足一些<link=\"PLANTS\">植物</link>生长的光照需求。"
 
 #. STRINGS.CODEX.CRITTER_TYPES.PRODUCES_LIGHT.TITLE
 msgctxt "STRINGS.CODEX.CRITTER_TYPES.PRODUCES_LIGHT.TITLE"
@@ -42730,7 +42749,7 @@ msgstr "由于树鼠依靠树皮和木头生存，所以它们的匿藏行为是
 #. STRINGS.CODEX.PIP.BODY.CONTAINER3
 msgctxt "STRINGS.CODEX.PIP.BODY.CONTAINER3"
 msgid "Although the Pip lacks truly opposable thumbs, it nonetheless has highly dexterous paws that allow it to rummage through most tight to reach spaces in search of seeds and other treasures."
-msgstr "尽管树鼠没有真正的对生拇指，但它灵巧的爪子可以让它在最狭窄的地方寻找种子和其他宝物。"
+msgstr "尽管树鼠没有真正的对生拇指，但它灵巧的爪子可以让它在最狭窄的地方翻找种子和其他宝物。"
 
 #. STRINGS.CODEX.PIP.SPECIES_SUBTITLE
 msgctxt "STRINGS.CODEX.PIP.SPECIES_SUBTITLE"
@@ -44076,7 +44095,7 @@ msgstr "<link=\"DECORATION\">装饰建筑</link>"
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.DININGTABLETYPE.CONFLICTINGROOMS
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.DININGTABLETYPE.CONFLICTINGROOMS"
 msgid "    • <link=\"BANQUETHALL\">Banquet Hall</link> (No Mess Table)\n"
-msgstr ""
+msgstr "    • <link=\"BANQUETHALL\">宴会厅</link>（无小餐桌）\n"
 
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.DININGTABLETYPE.DESCRIPTION
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.DININGTABLETYPE.DESCRIPTION"
@@ -44095,6 +44114,9 @@ msgid ""
 "    • <link=\"GREATHALL\">Great Hall</link>\n"
 "    • <link=\"BANQUETHALL\">Banquet Hall</link> (Communal Table)"
 msgstr ""
+"    • <link=\"MESSHALL\">食堂</link>\n"
+"    • <link=\"GREATHALL\">餐厅</link>\n"
+"    • <link=\"BANQUETHALL\">宴会厅</link>（公用餐桌）"
 
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.DININGTABLETYPE.TITLE
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.DININGTABLETYPE.TITLE"
@@ -48390,12 +48412,12 @@ msgstr "针胆团"
 #. STRINGS.CODEX.VARIANT_AQUATIC.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.VARIANT_AQUATIC.BODY.CONTAINER1"
 msgid "<smallcaps>Pictured: \"Merpip\" Pip variant</smallcaps>"
-msgstr "<smallcaps>图片：“海树鼠”变种</smallcaps>"
+msgstr "<smallcaps>图片：“树鼠鱼”变种</smallcaps>"
 
 #. STRINGS.CODEX.VARIANT_AQUATIC.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.VARIANT_AQUATIC.BODY.CONTAINER2"
 msgid "Merpips are skilled swimmers with poweful tails that enable them to navigate liquid environments in search of aquatic seeds to bury."
-msgstr "海树鼠拥有强壮的尾巴，能够在液体环境中熟练游泳，寻找水生种子进行掩埋。"
+msgstr "树鼠鱼拥有强壮的尾巴，能够在液体环境中熟练游泳，寻找水生种子进行掩埋。"
 
 #. STRINGS.CODEX.VARIANT_AQUATIC.SUBTITLE
 msgctxt "STRINGS.CODEX.VARIANT_AQUATIC.SUBTITLE"
@@ -48405,7 +48427,7 @@ msgstr "小动物变种"
 #. STRINGS.CODEX.VARIANT_AQUATIC.TITLE
 msgctxt "STRINGS.CODEX.VARIANT_AQUATIC.TITLE"
 msgid "Merpip"
-msgstr "海树鼠"
+msgstr "树鼠鱼"
 
 #. STRINGS.CODEX.VARIANT_DELICACY.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.VARIANT_DELICACY.BODY.CONTAINER1"
@@ -49399,7 +49421,7 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"作为对我们付出努力的额外感谢，幸存者还送给我们一只友善的海树鼠和一件独特小饰品！"
+"作为对我们付出努力的额外感谢，幸存者还送给我们一只友善的树鼠鱼和一件独特小饰品！"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.FINDING_MINNOW.POPUPS.POPUP_COMPLETE_POI_A_DESCRIPTION"
@@ -49577,7 +49599,7 @@ msgstr "超级可持续发展"
 #. STRINGS.COLONY_ACHIEVEMENTS.MISC_REQUIREMENTS.CLEAN_ENERGY_DESCRIPTION
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.MISC_REQUIREMENTS.CLEAN_ENERGY_DESCRIPTION"
 msgid "Generate 240,000kJ of power without using coal, natural gas, petrol or wood generators."
-msgstr "不使用煤炭、天然气、石油或木材发电机，生产240,000千焦的电力。"
+msgstr "不使用煤炭、天然气、石油和木材发电机，生产240,000千焦的电力。"
 
 #. STRINGS.COLONY_ACHIEVEMENTS.MISC_REQUIREMENTS.CLEAR_FOW
 msgctxt "STRINGS.COLONY_ACHIEVEMENTS.MISC_REQUIREMENTS.CLEAR_FOW"
@@ -51455,7 +51477,7 @@ msgstr "这只小动物最近的一餐加速了其<style=\"KKeyword\">生物柴�
 #. STRINGS.CREATURES.MODIFIERS.ICEBELLYWELLFED.NAME
 msgctxt "STRINGS.CREATURES.MODIFIERS.ICEBELLYWELLFED.NAME"
 msgid "Growing Fur"
-msgstr "正在皮毛"
+msgstr "生长皮毛"
 
 #. STRINGS.CREATURES.MODIFIERS.ICEBELLYWELLFED.TOOLTIP
 msgctxt "STRINGS.CREATURES.MODIFIERS.ICEBELLYWELLFED.TOOLTIP"
@@ -54758,7 +54780,7 @@ msgstr "<link=\"PACUCLEANER\">大嘴鱼</link>"
 #. STRINGS.CREATURES.SPECIES.PACU.VARIANT_CLEANER.SUBTITLE
 msgctxt "STRINGS.CREATURES.SPECIES.PACU.VARIANT_CLEANER.SUBTITLE"
 msgid "Water-Purifying Critter Morph"
-msgstr ""
+msgstr "净水的小动物变种"
 
 #. STRINGS.CREATURES.SPECIES.PACU.VARIANT_TROPICAL.BABY.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.PACU.VARIANT_TROPICAL.BABY.DESC"
@@ -54800,7 +54822,7 @@ msgstr "<link=\"PACUTROPICAL\">热带帕库鱼</link>"
 #. STRINGS.CREATURES.SPECIES.PACU.VARIANT_TROPICAL.SUBTITLE
 msgctxt "STRINGS.CREATURES.SPECIES.PACU.VARIANT_TROPICAL.SUBTITLE"
 msgid "High-Decor Critter Morph"
-msgstr ""
+msgstr "高装饰小动物变种"
 
 #. STRINGS.CREATURES.SPECIES.PACUEGG.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.PACUEGG.DESC"
@@ -56569,14 +56591,14 @@ msgid ""
 "\n"
 "In time it will mature into a fully grown<link=\"SQUIRREL\">Merpip</link>."
 msgstr ""
-"一只湿漉漉的海树鼠幼崽。\n"
+"一只湿漉漉的树鼠鱼幼崽。\n"
 "\n"
-"它会逐渐长大成熟，变成<link=\"SQUIRREL\">海树鼠</link>成年体。"
+"它会逐渐长大成熟，变成<link=\"SQUIRREL\">树鼠鱼</link>成年体。"
 
 #. STRINGS.CREATURES.SPECIES.SQUIRREL.VARIANT_AQUATIC.BABY.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SQUIRREL.VARIANT_AQUATIC.BABY.NAME"
 msgid "<link=\"SQUIRREL\">Mipsqueak</link>"
-msgstr "<link=\"SQUIRREL\">海树鼠幼崽</link>"
+msgstr "<link=\"SQUIRREL\">树鼠鱼幼崽</link>"
 
 #. STRINGS.CREATURES.SPECIES.SQUIRREL.VARIANT_AQUATIC.DESC
 msgctxt "STRINGS.CREATURES.SPECIES.SQUIRREL.VARIANT_AQUATIC.DESC"
@@ -56585,19 +56607,19 @@ msgid ""
 "\n"
 "They are known to bury aquatic plant <link=\"PLANTS\">Seeds</link> in <link=\"ELEMENTSLIQUID\">Liquid</link> environments whenever they can find a suitable area with enough space."
 msgstr ""
-"海树鼠是一种令人讨厌但没有敌意的生物，以<link=\"CAVIAR\">鱼子酱</link>和<link=\"CRITTERCATEGORYMOLTING\">小动物壳</link>为食。\n"
+"树鼠鱼是一种令人讨厌但没有敌意的生物，以<link=\"CAVIAR\">鱼子酱</link>和<link=\"CRITTERCATEGORYMOLTING\">小动物壳</link>为食。\n"
 "\n"
 "众所周知，它们一旦找到足够大的合适区域，就会把<link=\"PLANTS\">种子</link>种到<link=\"ELEMENTSLIQUID\">液体</link>环境中。"
 
 #. STRINGS.CREATURES.SPECIES.SQUIRREL.VARIANT_AQUATIC.EGG_NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SQUIRREL.VARIANT_AQUATIC.EGG_NAME"
 msgid "<link=\"SQUIRREL\">Merpip Egg</link>"
-msgstr "<link=\"SQUIRREL\">海树鼠蛋</link>"
+msgstr "<link=\"SQUIRREL\">树鼠鱼卵</link>"
 
 #. STRINGS.CREATURES.SPECIES.SQUIRREL.VARIANT_AQUATIC.NAME
 msgctxt "STRINGS.CREATURES.SPECIES.SQUIRREL.VARIANT_AQUATIC.NAME"
 msgid "<link=\"SQUIRREL\">Merpip</link>"
-msgstr "<link=\"SQUIRREL\">海树鼠</link>"
+msgstr "<link=\"SQUIRREL\">树鼠鱼</link>"
 
 #. STRINGS.CREATURES.SPECIES.SQUIRREL.VARIANT_AQUATIC.SUBTITLE
 msgctxt "STRINGS.CREATURES.SPECIES.SQUIRREL.VARIANT_AQUATIC.SUBTITLE"
@@ -64768,7 +64790,7 @@ msgstr ""
 #. STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERTURBO.NAME
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERTURBO.NAME"
 msgid "Turbo Space Racer Ride"
-msgstr ""
+msgstr "涡轮太空过山车之旅"
 
 #. STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERTURBO.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERTURBO.TOOLTIP"
@@ -64777,6 +64799,9 @@ msgid ""
 "\n"
 "Leisure activities increase Duplicants' <style=\"KKeyword\">Morale</style>"
 msgstr ""
+"这名复制人刚体验完极速飞驰，到现在脑袋还嗡嗡作响。\n"
+"\n"
+"休闲活动可提升复制人的<style=\"KKeyword\">士气</style>"
 
 #. STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERTURBO.TOOLTIP_DLC1
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERTURBO.TOOLTIP_DLC1"
@@ -64785,6 +64810,9 @@ msgid ""
 "\n"
 "Leisure activities increase Duplicants' <style=\"KKeyword\">Morale</style>"
 msgstr ""
+"这名复制人在高速飞驰后，驾驶本能特别敏锐\n"
+"\n"
+"休闲活动可提升复制人的<style=\"KKeyword\">士气</style>"
 
 #. STRINGS.DUPLICANTS.MODIFIERS.ATEFROZENFOOD.NAME
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ATEFROZENFOOD.NAME"
@@ -66845,7 +66873,7 @@ msgstr "这名复制人最近玩了电子游戏，感觉像冠军一样"
 #. STRINGS.DUPLICANTS.MODIFIERS.PLAYEDSANDBOX.NAME
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.PLAYEDSANDBOX.NAME"
 msgid "Played in Sandpit"
-msgstr ""
+msgstr "在沙坑中游玩"
 
 #. STRINGS.DUPLICANTS.MODIFIERS.PLAYEDSANDBOX.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.PLAYEDSANDBOX.TOOLTIP"
@@ -74831,12 +74859,12 @@ msgstr "赋予仿生复制人尽情修补和焊接所需的技能。"
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_OP1.NAME
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_OP1.NAME"
 msgid "<link=\"BOOSTEROP1\">Engineering Booster</link>"
-msgstr ""
+msgstr "<link=\"BOOSTEROP1\">工程增幅块</link>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_OP1.SHORT_DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_OP1.SHORT_DESC"
 msgid "Starts with a preinstalled <b><link=\"BOOSTEROP1\">Engineering Booster</link></b>"
-msgstr ""
+msgstr "开始时预装了<b><link=\"BOOSTEROP1\">工程增幅块</link></b>"
 
 #. STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_OP1.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_OP1.SHORT_DESC_TOOLTIP"
@@ -75864,7 +75892,7 @@ msgstr "<link=\"FROZENINK\">凝冻鱿鱼墨汁</link>"
 #. STRINGS.ELEMENTS.FROZENPHYTOOIL.DESC
 msgctxt "STRINGS.ELEMENTS.FROZENPHYTOOIL.DESC"
 msgid "Frozen Phyto Oil is thick, slippery <link=\"SLIMEMOLD\">Slime</link> extract, frozen into a <link=\"ELEMENTSSOLID\">Solid</link> state."
-msgstr ""
+msgstr "凝冻植物润滑油是一种冻结成<link=\"ELEMENTSSOLID\">固态</link>的浓而滑的<link=\"SLIMEMOLD\">菌泥</link>提取物。"
 
 #. STRINGS.ELEMENTS.FROZENPHYTOOIL.NAME
 msgctxt "STRINGS.ELEMENTS.FROZENPHYTOOIL.NAME"
@@ -77163,7 +77191,7 @@ msgstr "<link=\"PHOSPHORUSGAS\">气态磷</link>"
 #. STRINGS.ELEMENTS.PHYTOOIL.DESC
 msgctxt "STRINGS.ELEMENTS.PHYTOOIL.DESC"
 msgid "Phyto Oil is a thick, slippery <link=\"ELEMENTSLIQUID\">Liquid</link> extracted from pureed <link=\"SLIMEMOLD\">Slime</link>."
-msgstr ""
+msgstr "植物润滑油是从<link=\"SLIMEMOLD\">菌泥</link>中提取的浓而滑的<link=\"ELEMENTSLIQUID\">液体</link>。"
 
 #. STRINGS.ELEMENTS.PHYTOOIL.NAME
 msgctxt "STRINGS.ELEMENTS.PHYTOOIL.NAME"
@@ -82959,17 +82987,17 @@ msgstr "鼠标"
 #. STRINGS.INPUT.MOUSE_LEFT
 msgctxt "STRINGS.INPUT.MOUSE_LEFT"
 msgid "Left Mouse"
-msgstr ""
+msgstr "鼠标左键"
 
 #. STRINGS.INPUT.MOUSE_MIDDLE
 msgctxt "STRINGS.INPUT.MOUSE_MIDDLE"
 msgid "Middle Mouse"
-msgstr ""
+msgstr "鼠标中键"
 
 #. STRINGS.INPUT.MOUSE_RIGHT
 msgctxt "STRINGS.INPUT.MOUSE_RIGHT"
 msgid "Right Mouse"
-msgstr ""
+msgstr "鼠标右键"
 
 #. STRINGS.INPUT.MOUSE_SCROLL_DOWN
 msgctxt "STRINGS.INPUT.MOUSE_SCROLL_DOWN"
@@ -83604,7 +83632,7 @@ msgstr "擦拭"
 #. STRINGS.INPUT_BINDINGS.ROOT.MOVERELOCATETO
 msgctxt "STRINGS.INPUT_BINDINGS.ROOT.MOVERELOCATETO"
 msgid "Move To/Relocate To"
-msgstr ""
+msgstr "移动至/迁移至"
 
 #. STRINGS.INPUT_BINDINGS.ROOT.NAME
 msgctxt "STRINGS.INPUT_BINDINGS.ROOT.NAME"
@@ -84077,17 +84105,17 @@ msgstr "赋予仿生复制人尽情修补和焊接所需的技能。"
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP1.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP1.NAME"
 msgid "<link=\"BOOSTEROP1\">Engineering Booster</link>"
-msgstr ""
+msgstr "<link=\"BOOSTEROP1\">工程增幅块</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP2.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP2.DESC"
 msgid "Grants a Bionic Duplicant mastery of infrastructural construction skills."
-msgstr ""
+msgstr "赋予仿生复制人基础设施建造技能的完全掌握。"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP2.NAME
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP2.NAME"
 msgid "<link=\"BOOSTEROP2\">Advanced Construction Booster</link>"
-msgstr ""
+msgstr "<link=\"BOOSTEROP2\">高级建造增幅块</link>"
 
 #. STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_PILOT1.DESC
 msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_PILOT1.DESC"
@@ -90300,7 +90328,7 @@ msgstr "冰"
 #. STRINGS.MISC.TAGS.ICEORE
 msgctxt "STRINGS.MISC.TAGS.ICEORE"
 msgid "<link=\"ICE\">Ice</link>"
-msgstr ""
+msgstr "<link=\"ICE\">冰</link>"
 
 #. STRINGS.MISC.TAGS.ICEORE_DESC
 msgctxt "STRINGS.MISC.TAGS.ICEORE_DESC"
@@ -90684,7 +90712,7 @@ msgstr "一些<link=\"ELEMENTSLIQUID\">液体</link>和<link=\"ELEMENTSSOLID\">�
 #. STRINGS.MISC.TAGS.SNOW
 msgctxt "STRINGS.MISC.TAGS.SNOW"
 msgid "<link=\"SNOW\">Snow</link>"
-msgstr ""
+msgstr "<link=\"SNOW\">雪</link>"
 
 #. STRINGS.MISC.TAGS.SOLID
 msgctxt "STRINGS.MISC.TAGS.SOLID"
@@ -90714,7 +90742,7 @@ msgstr "故事特质"
 #. STRINGS.MISC.TAGS.SUBLIMATING
 msgctxt "STRINGS.MISC.TAGS.SUBLIMATING"
 msgid "<link=\"SUBLIMATING\">Sublimator</link>"
-msgstr ""
+msgstr "<link=\"SUBLIMATING\">升华物</link>"
 
 #. STRINGS.MISC.TAGS.SUBLIMATING_DESC
 msgctxt "STRINGS.MISC.TAGS.SUBLIMATING_DESC"
@@ -96677,7 +96705,7 @@ msgstr "存在背景墙"
 #. STRINGS.ROOMS.CRITERIA.KITCHENREFRIGERATOR.CONFLICT_DESCRIPTION
 msgctxt "STRINGS.ROOMS.CRITERIA.KITCHENREFRIGERATOR.CONFLICT_DESCRIPTION"
 msgid "<link=\"REQUIREMENTCLASSKITCHENREFRIGERATOR\">Refrigerator</link>"
-msgstr ""
+msgstr "<link=\"REQUIREMENTCLASSKITCHENREFRIGERATOR\">冰箱</link>"
 
 #. STRINGS.ROOMS.CRITERIA.KITCHENREFRIGERATOR.DESCRIPTION
 msgctxt "STRINGS.ROOMS.CRITERIA.KITCHENREFRIGERATOR.DESCRIPTION"
@@ -96687,7 +96715,7 @@ msgstr "需要一个冰箱或小型冰箱"
 #. STRINGS.ROOMS.CRITERIA.KITCHENREFRIGERATOR.NAME
 msgctxt "STRINGS.ROOMS.CRITERIA.KITCHENREFRIGERATOR.NAME"
 msgid "<link=\"REQUIREMENTCLASSKITCHENREFRIGERATOR\">Refrigerator</link>"
-msgstr ""
+msgstr "<link=\"REQUIREMENTCLASSKITCHENREFRIGERATOR\">冰箱</link>"
 
 #. STRINGS.ROOMS.CRITERIA.LIGHTDUTYGENERATORTYPE.CONFLICT_DESCRIPTION
 msgctxt "STRINGS.ROOMS.CRITERIA.LIGHTDUTYGENERATORTYPE.CONFLICT_DESCRIPTION"
@@ -98627,6 +98655,13 @@ msgid ""
 "\n"
 "Although pockets of <link=\"OXYGEN\">Oxygen</link> allow Duplicants to begin the work of colony-building in this biome, the key to long-term survival is the cultivation of <link=\"BLUEGRASS\">Alveo Vera</link> plants. They produce harvestable <link=\"OXYROCK\">Oxylite</link> and their beauty--much like that of the dreamy <link=\"ICEFLOWER\">Idylla Flower</link>--is a wonderful salve for existential dread."
 msgstr ""
+"这种生态中零下环境使得一切都保持在冰冻状态，但只要殖民地具有了熔化丰富的<link=\"ICE\">冰</link>沉积物所需的手段，就能生产足量的<link=\"WATER\">水</link>，满足殖民地的需要。初步的扫描发现了<link=\"CINNABAR\">朱砂矿</link>，可用于<link=\"POWER\">电力</link>系统。\n"
+"\n"
+"<link=\"SNOW\">雪</link>是一种现成的建造材料。要注意，如果周围环境很热，导致物态变化，建筑的完整性可能会受到破坏。\n"
+"\n"
+"<link=\"HARDSKINBERRY\">刺壳果灌木</link>既能让复制人吃饱，也能让当地的<link=\"WOODDEER\">狐鹿</link>生存，后者的<link=\"WOOD\">木质</link>角提供了一种可再生的燃料来源，以及温度稳定的吸引人的建筑材料。\n"
+"\n"
+"尽管充满<link=\"OXYGEN\">氧气</link>的洞穴能让复制人在这种生态开始殖民地的建设，但长期生存的关键是种植<link=\"BLUEGRASS\">气囊芦荟</link>。气囊芦荟能产生可收获的<link=\"OXYROCK\">氧石</link>，其外表的美丽——和梦幻的<link=\"ICEFLOWER\">恬静花</link>类似——是缓解生存恐惧的绝妙灵药。"
 
 #. STRINGS.SUBWORLDS.JUNGLE.DESC
 msgctxt "STRINGS.SUBWORLDS.JUNGLE.DESC"
@@ -99309,7 +99344,7 @@ msgstr "<link=\"BUILDCATEGORYFARM\">耕牧</link>"
 #. STRINGS.UI.BUILDCATEGORIES.FARM.TOOLTIP
 msgctxt "STRINGS.UI.BUILDCATEGORIES.FARM.TOOLTIP"
 msgid "Plants and critters sure grow up fast when well cared-for. {Hotkey}"
-msgstr "如果妥善照料，植物和小动物的成长肯定很快。{Hotkey}"
+msgstr "经过妥善照料，植物和小动物的成长肯定很快。{Hotkey}"
 
 #. STRINGS.UI.BUILDCATEGORIES.FOOD.NAME
 msgctxt "STRINGS.UI.BUILDCATEGORIES.FOOD.NAME"
@@ -99474,7 +99509,7 @@ msgstr "<link=\"POWER\">电力</link>泄漏：{0}"
 #. STRINGS.UI.BUILDINGEFFECTS.CAPTURE_METHOD_FISH_TRAP
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.CAPTURE_METHOD_FISH_TRAP"
 msgid "Capture Method: Fish Trap"
-msgstr "捕捉方式：捕鱼器"
+msgstr "捕捉方式：捕鱼陷阱"
 
 #. STRINGS.UI.BUILDINGEFFECTS.CAPTURE_METHOD_FLYING_TRAP
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.CAPTURE_METHOD_FLYING_TRAP"
@@ -99534,7 +99569,7 @@ msgstr "    • 食物：{Foodlist}"
 #. STRINGS.UI.BUILDINGEFFECTS.DIET_CONSUMED_ELLIPSIS
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.DIET_CONSUMED_ELLIPSIS"
 msgid ", <link=\"{LinkID}\">...</link>"
-msgstr ""
+msgstr "，<link=\"{LinkID}\">……</link>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.DIET_CONSUMED_ITEM
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.DIET_CONSUMED_ITEM"
@@ -99544,12 +99579,12 @@ msgstr "{Food}：{Amount}"
 #. STRINGS.UI.BUILDINGEFFECTS.DIET_CONSUMED_SEPARATOR
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.DIET_CONSUMED_SEPARATOR"
 msgid ", "
-msgstr ""
+msgstr "，"
 
 #. STRINGS.UI.BUILDINGEFFECTS.DIET_HEADER
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.DIET_HEADER"
 msgid "<link=\"{LinkID}\">Digestion:</link>"
-msgstr ""
+msgstr "<link=\"{LinkID}\">消化：</link>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.DIET_PRODUCED
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.DIET_PRODUCED"
@@ -99569,7 +99604,7 @@ msgstr "{Item}：正确喂食后可产{Amount}"
 #. STRINGS.UI.BUILDINGEFFECTS.DIET_PRODUCED_ITEM_VARIABLE
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.DIET_PRODUCED_ITEM_VARIABLE"
 msgid "{Item}: Mass produced varies by element consumed. View critter in database for details"
-msgstr ""
+msgstr "{Item}：产生的物质因消耗的物质而异。在数据库中查看小动物获取详情"
 
 #. STRINGS.UI.BUILDINGEFFECTS.DIET_STORED
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.DIET_STORED"
@@ -100039,7 +100074,7 @@ msgstr "由具备技能的复制人操作"
 #. STRINGS.UI.BUILDINGEFFECTS.RESEARCH_MATERIALS
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.RESEARCH_MATERIALS"
 msgid "{0}: {1} per <link=\"RESEARCHING1\">Research</link> point"
-msgstr ""
+msgstr "{0}：每<link=\"RESEARCHING1\">研究</link>点消耗<style=\"consumed\">{1}</style>"
 
 #. STRINGS.UI.BUILDINGEFFECTS.ROCKETRESTRICTION_BUILDINGS
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.ROCKETRESTRICTION_BUILDINGS"
@@ -100253,7 +100288,7 @@ msgstr "这一建筑类别可能需要或禁止处于某些<style=\"KKeyword\">�
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.CAPTURE_METHOD_FISH_TRAP
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.CAPTURE_METHOD_FISH_TRAP"
 msgid "This critter can be captured and moved using a <link=\"FISHTRAP\">Fish Trap</link>"
-msgstr "可以使用<link=\"FISHTRAP\">捕鱼器</link>来捕捉并移动这只小动物"
+msgstr "可以使用<link=\"FISHTRAP\">捕鱼陷阱</link>来捕捉并移动这只小动物"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.CAPTURE_METHOD_FLYING_TRAP
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.CAPTURE_METHOD_FLYING_TRAP"
@@ -100343,7 +100378,7 @@ msgstr ""
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DIET_CONSUMED_ELLIPSIS
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DIET_CONSUMED_ELLIPSIS"
 msgid "...({Count} more)"
-msgstr ""
+msgstr "……（及{Count}项）"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DIET_HEADER
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.DIET_HEADER"
@@ -101094,12 +101129,12 @@ msgstr ""
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SUPPORTBUILDING_NO_STACKABLE
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SUPPORTBUILDING_NO_STACKABLE"
 msgid "This support building's effect will not stack with others of the same type"
-msgstr ""
+msgstr "这个辅助建筑的效果不会与其他同类型的建筑叠加"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SUPPORTBUILDING_STACKABLE
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SUPPORTBUILDING_STACKABLE"
 msgid "This support building's effect can be stacked with others of the same type"
-msgstr ""
+msgstr "这个辅助建筑的效果可以与其他同类型的建筑叠加"
 
 #. STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SUPPORTBUILDINGCOMPATIBILITY
 msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SUPPORTBUILDINGCOMPATIBILITY"
@@ -104170,11 +104205,14 @@ msgid ""
 "\n"
 "Click to enable the Printing Pod to project this view"
 msgstr ""
+"一窥花园生态的深处\n"
+"\n"
+"点击以启用打印舱投影这个远景"
 
 #. STRINGS.UI.DETAILTABS.COSMETICS.VISTAS.PREHISTORICVISTA.NAME
 msgctxt "STRINGS.UI.DETAILTABS.COSMETICS.VISTAS.PREHISTORICVISTA.NAME"
 msgid "Garden Vista"
-msgstr ""
+msgstr "花园远景"
 
 #. STRINGS.UI.DETAILTABS.COSMETICS.VISTAS.REEFVISTA.DESC
 msgctxt "STRINGS.UI.DETAILTABS.COSMETICS.VISTAS.REEFVISTA.DESC"
@@ -106329,12 +106367,12 @@ msgstr "选择远景"
 #. STRINGS.UI.FACADE_SELECTION_PANEL.STORE_BUTTON_TOOLTIP
 msgctxt "STRINGS.UI.FACADE_SELECTION_PANEL.STORE_BUTTON_TOOLTIP"
 msgid "See more blueprints in the Supply Closet"
-msgstr ""
+msgstr "在供应柜查看更多蓝图"
 
 #. STRINGS.UI.FACADE_SELECTION_PANEL.STORE_BUTTON_TOOLTIP_NO_BLUEPRINTS
 msgctxt "STRINGS.UI.FACADE_SELECTION_PANEL.STORE_BUTTON_TOOLTIP_NO_BLUEPRINTS"
 msgid "There are no blueprints available for this building yet"
-msgstr ""
+msgstr "这个建筑还没有可用蓝图"
 
 #. STRINGS.UI.FILE_NAME_DIALOG.ENTER_TEXT
 msgctxt "STRINGS.UI.FILE_NAME_DIALOG.ENTER_TEXT"
@@ -107825,12 +107863,12 @@ msgstr "决定了在世界生成期间是否生成传送器"
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.UNAVAILABLE.NAME
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.UNAVAILABLE.NAME"
 msgid "N/A"
-msgstr ""
+msgstr "不适用"
 
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.UNAVAILABLE.TOOLTIP
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.UNAVAILABLE.TOOLTIP"
 msgid "This setting is not available for the selected asteroid"
-msgstr ""
+msgstr "这项设置在所选小行星不可用"
 
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.WORLD_CHOICE.NAME
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.WORLD_CHOICE.NAME"
@@ -111023,7 +111061,7 @@ msgid ""
 "\n"
 "Output will be the <style=\"KKeyword\">Temperature</style> of the plant at the time of production"
 msgstr ""
-"达到峰值条件时产生<style=\"produced\">{1}</style>的<style=\"KKeyword\">{0}</style>\n"
+"满足巅峰条件时产生<style=\"produced\">{1}</style>的<style=\"KKeyword\">{0}</style>\n"
 "\n"
 "输出物温度为生产时的植物<style=\"KKeyword\">温度</style>"
 
@@ -112192,7 +112230,7 @@ msgstr "x{OwnedCount}"
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.ITEM_PLAYER_UNLOCKED_BUT_UNOWNABLE
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.ITEM_PLAYER_UNLOCKED_BUT_UNOWNABLE"
 msgid "Part of my colony's permanent collection."
-msgstr ""
+msgstr "我的殖民地永久收藏的一部分。"
 
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.ITEM_RARITY_DETAILS
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.ITEM_RARITY_DETAILS"
@@ -112332,12 +112370,12 @@ msgstr "舒适的床"
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.BUILDINGS_DOOR
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.BUILDINGS_DOOR"
 msgid "Doors"
-msgstr ""
+msgstr "门"
 
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.BUILDINGS_ELECTIC_WIRES
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.BUILDINGS_ELECTIC_WIRES"
 msgid "Power"
-msgstr ""
+msgstr "电力"
 
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.BUILDINGS_FLOWER_VASE
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.BUILDINGS_FLOWER_VASE"
@@ -112357,7 +112395,7 @@ msgstr "工业"
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.BUILDINGS_PLUMBING
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.BUILDINGS_PLUMBING"
 msgid "Pipes, Pumps, and Vents"
-msgstr ""
+msgstr "管道，泵，排口"
 
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.BUILDINGS_PRINTING_POD
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.BUILDINGS_PRINTING_POD"
@@ -114125,12 +114163,12 @@ msgstr ""
 #. STRINGS.UI.NEWBUILDCATEGORIES.SUPPORT.BUILDMENUTITLE
 msgctxt "STRINGS.UI.NEWBUILDCATEGORIES.SUPPORT.BUILDMENUTITLE"
 msgid "Support"
-msgstr "维生"
+msgstr "辅助"
 
 #. STRINGS.UI.NEWBUILDCATEGORIES.SUPPORT.NAME
 msgctxt "STRINGS.UI.NEWBUILDCATEGORIES.SUPPORT.NAME"
 msgid "Support"
-msgstr "维生"
+msgstr "辅助"
 
 #. STRINGS.UI.NEWBUILDCATEGORIES.SUPPORT.TOOLTIP
 msgctxt "STRINGS.UI.NEWBUILDCATEGORIES.SUPPORT.TOOLTIP"
@@ -117840,7 +117878,7 @@ msgstr "<style=\"KKeyword\">简略</style>艺术质量"
 #. STRINGS.UI.ROLES_SCREEN.PERKS.CAN_BUILD_ADVANCED_POWER.DESCRIPTION
 msgctxt "STRINGS.UI.ROLES_SCREEN.PERKS.CAN_BUILD_ADVANCED_POWER.DESCRIPTION"
 msgid "<link=\"STEAMTURBINE2\">Steam Turbine</link> and <link=\"WIREREFINEDHIGHWATTAGE\">Heavi-Watt Conductive Wire</link> Construction"
-msgstr ""
+msgstr "<link=\"STEAMTURBINE2\">蒸汽涡轮机</link>与<link=\"WIREREFINEDHIGHWATTAGE\">高负荷导线</link>的建造"
 
 #. STRINGS.UI.ROLES_SCREEN.PERKS.CAN_CLOTHING_ALTERATION.DESCRIPTION
 msgctxt "STRINGS.UI.ROLES_SCREEN.PERKS.CAN_CLOTHING_ALTERATION.DESCRIPTION"
@@ -131706,7 +131744,7 @@ msgstr "水位"
 #. STRINGS.UI.VITALSSCREEN.OPTIONAL_CONDITIONS.BASE
 msgctxt "STRINGS.UI.VITALSSCREEN.OPTIONAL_CONDITIONS.BASE"
 msgid "<b>Peak Conditions</b>"
-msgstr "<b>峰值条件</b>"
+msgstr "<b>巅峰条件</b>"
 
 #. STRINGS.UI.VITALSSCREEN.OPTIONAL_CONDITIONS.TOOLTIP
 msgctxt "STRINGS.UI.VITALSSCREEN.OPTIONAL_CONDITIONS.TOOLTIP"
@@ -131715,9 +131753,9 @@ msgid ""
 "\n"
 "Peak conditions are not required for plant survival"
 msgstr ""
-"当满足峰值条件时，这株植物会表现出独特行为\n"
+"当满足巅峰条件时，这株植物会表现出独特行为\n"
 "\n"
-"植物生存不需要满足峰值条件"
+"植物生存不需要满足巅峰条件"
 
 #. STRINGS.UI.VITALSSCREEN.POLLINATION
 msgctxt "STRINGS.UI.VITALSSCREEN.POLLINATION"
@@ -134006,119 +134044,606 @@ msgctxt "STRINGS.WORLDS.WATERMOONLET.NAME"
 msgid "Water Asteroid"
 msgstr "水域小行星"
 
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SHORT_SCUM.DESC"
-#~ msgid "permit_gloves_short_scum_desc"
-#~ msgstr "permit_gloves_short_scum_desc"
+#~ msgctxt "STRINGS.CODEX.CRITTER_TYPES.AIRBORNE.DESCRIPTION"
+#~ msgid ""
+#~ "Critters who float or fly through the world. While most are docile, some species are <link=\"CRITTERCATEGORYHOSTILE\">Hostile</link> and should be treated with extreme caution.\n"
+#~ "\n"
+#~ "When calculating how <link=\"CREATURES::GUIDE::MOOD\">Crowded</link> their environment is, they will consider both <link=\"CRITTERCATEGORYAIRBORNE\">Airborne</link> and <link=\"CRITTERCATEGORYLAND\">Land</link>-based critters"
+#~ msgstr ""
+#~ "在世界中漂浮或飞行的小动物。大多数都是温顺物种，但也有一些物种具有<link=\"CRITTERCATEGORYHOSTILE\">敌意</link>，应极其谨慎对待。\n"
+#~ "\n"
+#~ "计算环境<link=\"CREATURES::GUIDE::MOOD\">拥挤</link>程度时，它们会考虑<link=\"CRITTERCATEGORYAIRBORNE\">飞行</link>小动物和<link=\"CRITTERCATEGORYLAND\">陆生</link>小动物两者"
 
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SHORT_SCUM.NAME"
-#~ msgid "permit_gloves_short_scum_name"
-#~ msgstr "permit_gloves_short_scum_name"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_HATCH.NAME"
+#~ msgid "<link=\"BEDHATCH\">Hatch Plushie Cot</link>"
+#~ msgstr "<link=\"BEDHATCH\">哈奇毛绒床铺</link>"
 
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_HATCH.DESC"
-#~ msgid "permit_hqbase_hatch_desc"
-#~ msgstr "permit_hqbase_hatch_desc"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_PIP.NAME"
+#~ msgid "<link=\"BEDPIP\">Pip Plushie Cot</link>"
+#~ msgstr "<link=\"BEDPIP\">树鼠毛绒床铺</link>"
 
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_HATCH.NAME"
-#~ msgid "permit_hqbase_hatch_name"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_PUFT.NAME"
+#~ msgid "<link=\"BEDPUFT\">Puft Plushie Cot</link>"
+#~ msgstr "<link=\"BEDPUFT\">飞鱼毛绒床铺</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_COBALT_WHITE.NAME"
+#~| msgid "<link=\"EXTERIORWALL\">Cobalt X</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_BOTTOM.NAME"
+#~ msgid "<link=\"EXTERIORWALL\">Cactus Base</link>"
+#~ msgstr "<link=\"EXTERIORWALL\">钴蓝X形壁纸</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.EXTERIORWALL.FACADES.STRIPES_CIRCLE_MUSH.NAME"
+#~| msgid "<link=\"EXTERIORWALL\">Mush Curves</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_CURVE.NAME"
+#~ msgid "<link=\"EXTERIORWALL\">Cactus Curve</link>"
+#~ msgstr "<link=\"EXTERIORWALL\">软泥曲线壁纸</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.EXTERIORWALL.FACADES.STRIPES_MUSH.NAME"
+#~| msgid "<link=\"EXTERIORWALL\">Mush Stripe</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_MIDDLE.NAME"
+#~ msgid "<link=\"EXTERIORWALL\">Cactus Stem</link>"
+#~ msgstr "<link=\"EXTERIORWALL\">软泥条纹壁纸</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_X_COBALT_WHITE.NAME"
+#~| msgid "<link=\"EXTERIORWALL\">Cobalt X</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_T_CACTUS_TOP.NAME"
+#~ msgid "<link=\"EXTERIORWALL\">Cactus Top</link>"
+#~ msgstr "<link=\"EXTERIORWALL\">钴蓝X形壁纸</link>"
+
+#~ msgctxt "STRINGS.CREATURES.SPECIES.PACU.VARIANT_TROPICAL.SUBTITLE"
+#~ msgid "High-Decor Critter"
+#~ msgstr "高装饰小动物"
+
+#~ msgctxt "STRINGS.MISC.TAGS.ICEORE"
+#~ msgid "<link=\"ICEORE\">Ice</link>"
+#~ msgstr "<link=\"ICEORE\">冰</link>"
+
+#~ msgctxt "STRINGS.MISC.TAGS.SNOW"
+#~ msgid "<link=\"STABLESNOW\">Snow</link>"
+#~ msgstr "<link=\"STABLESNOW\">雪</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ALGAE_DISTILLERY_PUFT.DESC"
+#~ msgid "permit_algae_distillery_puft description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.ALGAEDISTILLERY.NAME"
+#~| msgid "<link=\"ALGAEDISTILLERY\">Algae Distiller</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ALGAE_DISTILLERY_PUFT.NAME"
+#~ msgid "<link=\"ALGAEDISTILLERY\">permit_algae_distillery_puft name</link>"
+#~ msgstr "<link=\"ALGAEDISTILLERY\">藻类蒸馏器</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_CENTRIFUGE_HATCH.DESC"
+#~ msgid "permit_centrifuge_hatch description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.NAME"
+#~| msgid "<link=\"ASTRONAUTTRAININGCENTER\">Space Racer</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_CENTRIFUGE_HATCH.NAME"
+#~ msgid "<link=\"ASTRONAUTTRAININGCENTER\">permit_centrifuge_hatch name</link>"
+#~ msgstr "<link=\"ASTRONAUTTRAININGCENTER\">太空过山车</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_CENTRIFUGE_PIP.DESC"
+#~ msgid "permit_centrifuge_pip description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.NAME"
+#~| msgid "<link=\"ASTRONAUTTRAININGCENTER\">Space Racer</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_CENTRIFUGE_PIP.NAME"
+#~ msgid "<link=\"ASTRONAUTTRAININGCENTER\">permit_centrifuge_pip name</link>"
+#~ msgstr "<link=\"ASTRONAUTTRAININGCENTER\">太空过山车</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_CENTRIFUGE_PUFT.DESC"
+#~ msgid "permit_centrifuge_puft description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.NAME"
+#~| msgid "<link=\"ASTRONAUTTRAININGCENTER\">Space Racer</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_CENTRIFUGE_PUFT.NAME"
+#~ msgid "<link=\"ASTRONAUTTRAININGCENTER\">permit_centrifuge_puft name</link>"
+#~ msgstr "<link=\"ASTRONAUTTRAININGCENTER\">太空过山车</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_DESALINATOR_HATCH.DESC"
+#~ msgid "permit_desalinator_hatch description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.DESALINATOR.NAME"
+#~| msgid "<link=\"DESALINATOR\">Desalinator</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_DESALINATOR_HATCH.NAME"
+#~ msgid "<link=\"DESALINATOR\">permit_desalinator_hatch name</link>"
+#~ msgstr "<link=\"DESALINATOR\">脱盐器</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_HATCH.DESC"
+#~ msgid "permit_fridge_hatch description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.REFRIGERATOR.FACADES.DEFAULT_REFRIGERATOR.NAME"
+#~| msgid "<link=\"REFRIGERATOR\">Refrigerator</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_HATCH.NAME"
+#~ msgid "<link=\"REFRIGERATOR\">permit_fridge_hatch name</link>"
+#~ msgstr "<link=\"REFRIGERATOR\">冰箱</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_PIP.DESC"
+#~ msgid "permit_fridge_pip description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.REFRIGERATOR.FACADES.DEFAULT_REFRIGERATOR.NAME"
+#~| msgid "<link=\"REFRIGERATOR\">Refrigerator</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_PIP.NAME"
+#~ msgid "<link=\"REFRIGERATOR\">permit_fridge_pip name</link>"
+#~ msgstr "<link=\"REFRIGERATOR\">冰箱</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_PUFT.DESC"
+#~ msgid "permit_fridge_puft description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.REFRIGERATOR.FACADES.DEFAULT_REFRIGERATOR.NAME"
+#~| msgid "<link=\"REFRIGERATOR\">Refrigerator</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_PUFT.NAME"
+#~ msgid "<link=\"REFRIGERATOR\">permit_fridge_puft name</link>"
+#~ msgstr "<link=\"REFRIGERATOR\">冰箱</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_PUFT.DESC"
+#~ msgid "permit_gasstorage_puft description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.GASRESERVOIR.FACADES.DEFAULT_GASRESERVOIR.NAME"
+#~| msgid "<link=\"GASRESERVOIR\">Gas Reservoir</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_PUFT.NAME"
+#~ msgid "<link=\"GASRESERVOIR\">permit_gasstorage_puft name</link>"
+#~ msgstr "<link=\"GASRESERVOIR\">储气库</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_HATCH.NAME"
+#~| msgid "permit_hqbase_hatch_name"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_HATCH_ATMO_OUTFIT.NAME"
+#~ msgid "permit_hatch_atmo_outfit"
 #~ msgstr "permit_hqbase_hatch_name"
 
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_PIP.DESC"
-#~ msgid "permit_hqbase_pip_desc"
-#~ msgstr "permit_hqbase_pip_desc"
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_HATCH.DESC"
+#~ msgid "permit_jet_gloves_hatch description"
+#~ msgstr "装备描述"
 
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_PIP.NAME"
-#~ msgid "permit_hqbase_pip_name"
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.NAME"
+#~| msgid "permit_hqbase_neutronium name"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_HATCH.NAME"
+#~ msgid "permit_jet_gloves_hatch name"
+#~ msgstr "permit_hqbase_neutronium name"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_PIP.DESC"
+#~ msgid "permit_jet_gloves_pip description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.NAME"
+#~| msgid "permit_hqbase_neutronium name"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_PIP.NAME"
+#~ msgid "permit_jet_gloves_pip name"
+#~ msgstr "permit_hqbase_neutronium name"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_PUFT.DESC"
+#~ msgid "permit_jet_gloves_puft description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.NAME"
+#~| msgid "permit_hqbase_neutronium name"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_GLOVES_PUFT.NAME"
+#~ msgid "permit_jet_gloves_puft name"
+#~ msgstr "permit_hqbase_neutronium name"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_HATCH.DESC"
+#~ msgid "permit_jet_helmet_hatch description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_HATCH.NAME"
+#~| msgid "permit_hqbase_hatch_name"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_HATCH.NAME"
+#~ msgid "permit_jet_helmet_hatch name"
+#~ msgstr "permit_hqbase_hatch_name"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_PIP.DESC"
+#~ msgid "permit_jet_helmet_pip description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_PIP.NAME"
+#~| msgid "permit_hqbase_pip_name"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_PIP.NAME"
+#~ msgid "permit_jet_helmet_pip name"
 #~ msgstr "permit_hqbase_pip_name"
 
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_PUFT.DESC"
-#~ msgid "permit_hqbase_puft_desc"
-#~ msgstr "permit_hqbase_puft_desc"
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_PUFT.DESC"
+#~ msgid "permit_jet_helmet_puft description"
+#~ msgstr "装备描述"
 
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_PUFT.NAME"
-#~ msgid "permit_hqbase_puft_name"
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_PUFT.NAME"
+#~| msgid "permit_hqbase_puft_name"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_HELMET_PUFT.NAME"
+#~ msgid "permit_jet_helmet_puft name"
 #~ msgstr "permit_hqbase_puft_name"
 
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SCOUT_SCUM.DESC"
-#~ msgid "permit_shoes_scout_scum_desc"
-#~ msgstr "permit_shoes_scout_scum_desc"
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_HATCH.DESC"
+#~ msgid "permit_jet_shoes_hatch description"
+#~ msgstr "装备描述"
 
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SCOUT_SCUM.NAME"
-#~ msgid "permit_shoes_scout_scum_name"
-#~ msgstr "permit_shoes_scout_scum_name"
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_HATCH.NAME"
+#~| msgid "permit_hqbase_hatch_name"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_HATCH.NAME"
+#~ msgid "permit_jet_shoes_hatch name"
+#~ msgstr "permit_hqbase_hatch_name"
 
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHORTS_SCOUT_HATCHSTONE.DESC"
-#~ msgid "permit_shorts_scout_hatchstone_desc"
-#~ msgstr "permit_shorts_scout_hatchstone_desc"
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_PIP.DESC"
+#~ msgid "permit_jet_shoes_pip description"
+#~ msgstr "装备描述"
 
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHORTS_SCOUT_HATCHSTONE.NAME"
-#~ msgid "permit_shorts_scout_hatchstone_name"
-#~ msgstr "permit_shorts_scout_hatchstone_name"
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.NAME"
+#~| msgid "permit_hqbase_neutronium name"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_PIP.NAME"
+#~ msgid "permit_jet_shoes_pip name"
+#~ msgstr "permit_hqbase_neutronium name"
 
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SCOUT_HATCHSTONE.DESC"
-#~ msgid "permit_top_scout_hatchstone_desc"
-#~ msgstr "permit_top_scout_hatchstone_desc"
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_PUFT.DESC"
+#~ msgid "permit_jet_shoes_puft description"
+#~ msgstr "装备描述"
 
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SCOUT_HATCHSTONE.NAME"
-#~ msgid "permit_top_scout_hatchstone_name"
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_PUFT.NAME"
+#~| msgid "permit_hqbase_puft_name"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JET_SHOES_PUFT.NAME"
+#~ msgid "permit_jet_shoes_puft name"
+#~ msgstr "permit_hqbase_puft_name"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_HATCH.DESC"
+#~ msgid "permit_jetsuit_hatch description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SCOUT_HATCHSTONE.NAME"
+#~| msgid "permit_top_scout_hatchstone_name"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_HATCH.NAME"
+#~ msgid "permit_jetsuit_hatch name"
 #~ msgstr "permit_top_scout_hatchstone_name"
 
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WATERPUMP_NEUTRONIUM.NAME"
-#~ msgid "<link=\"LIQUIDPUMPINGSTATION\">Regal Neutronium Water Pump</link>"
-#~ msgstr "<link=\"LIQUIDPUMPINGSTATION\">尊贵中子手压泵</link>"
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_PIP.DESC"
+#~ msgid "permit_jetsuit_pip description"
+#~ msgstr "装备描述"
 
-#~ msgctxt "STRINGS.BUILDING.STATUSITEMS.BUILDINGBOOSTEDBYSUPPORTBUILDING.TOOLTIP"
-#~ msgid "One or more annex buildings are increasing this building's speed:{BOOSTS_LIST}"
-#~ msgstr "有至少一个附属建筑正在提高这个建筑的速度：{BOOSTS_LIST}"
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_PIP.NAME"
+#~| msgid "permit_hqbase_pip_name"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_PIP.NAME"
+#~ msgid "permit_jetsuit_pip name"
+#~ msgstr "permit_hqbase_pip_name"
 
-#~ msgctxt "STRINGS.BUILDING.STATUSITEMS.CHECKPOINT.TOOLTIPS.LOGIC_CONTROLLED_CLOSED"
-#~ msgid "Automated Checkpoint is receiving a <b><style=\"logic_on\">Red Signal</style></b>, preventing Duplicants from passing"
-#~ msgstr "这个自动化的检查站接收到<b><style=\"logic_on\">红色信号</style></b>，从而阻止复制人通过"
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_PUFT.DESC"
+#~ msgid "permit_jetsuit_puft description"
+#~ msgstr "装备描述"
 
-#~ msgctxt "STRINGS.BUILDING.STATUSITEMS.CHECKPOINT.TOOLTIPS.LOGIC_CONTROLLED_OPEN"
-#~ msgid "Automated Checkpoint is receiving a <b><style=\"logic_off\">Green Signal</style></b>, allowing Duplicants to pass"
-#~ msgstr "这个自动化的检查站接收到了<b><style=\"logic_off\">绿色信号</style></b>，从而允许复制人通过"
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_PUFT.NAME"
+#~| msgid "permit_hqbase_puft_name"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_PUFT.NAME"
+#~ msgid "permit_jetsuit_puft name"
+#~ msgstr "permit_hqbase_puft_name"
 
-#~ msgctxt "STRINGS.BUILDING.STATUSITEMS.OUTPUTPIPEFULL_LAVATORY.TOOLTIP"
-#~ msgid ""
-#~ "Excess <style=\"KKeyword\">Polluted Water</style> from Duplicant visits has blocked this output <style=\"KKeyword\">Pipe</style> is blocked\n"
-#~ "\n"
-#~ "Blockage must be cleared before contents can be flushed"
-#~ msgstr ""
-#~ "复制人光顾时产生的过多style=\"KKeyword\">污染水</style>堵塞了输出<style=\"KKeyword\">管道</style>\n"
-#~ "\n"
-#~ "必须清除堵塞物才能继续冲水"
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_KILN_HATCH.DESC"
+#~ msgid "permit_kiln_hatch description"
+#~ msgstr "装备描述"
 
-#~ msgctxt "STRINGS.BUILDING.STATUSITEMS.SUPPORTBUILDINGACTIVE.TOOLTIP"
-#~ msgid "This annex building is currently providing the {BOOST_NAME} effect to the following buildings:{BUILDING_LIST}"
-#~ msgstr "这个附属建筑当前正在为以下建筑提供{BOOST_NAME}效果：{BUILDING_LIST}"
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_FLAMINGO_WHITE.NAME"
+#~| msgid "<link=\"EXTERIORWALL\">Petal Corner</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_KILN_HATCH.NAME"
+#~ msgid "<link=\"KILN\">permit_kiln_hatch name</link>"
+#~ msgstr "<link=\"EXTERIORWALL\">花瓣凹角壁纸</link>"
 
-#~ msgctxt "STRINGS.BUILDING.STATUSITEMS.SUPPORTBUILDINGNORECEPTORS.TOOLTIP"
-#~ msgid ""
-#~ "This building is idle for one of the following reasons:\n"
-#~ "    • No compatible buildings nearby\n"
-#~ "    • Compatible buildings are already optimized by another annex building"
-#~ msgstr ""
-#~ "这个建筑由于以下原因之一而闲置：\n"
-#~ "    • 附近无兼容建筑\n"
-#~ "    • 兼容建筑已被其他附属建筑优化"
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_METALREFINERY_HATCH.DESC"
+#~ msgid "permit_metalrefinery_hatch description"
+#~ msgstr "装备描述"
 
-#~ msgctxt "STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.DESC"
-#~ msgid "Duplicants who get on this ride may experience dizzying levels of delight."
-#~ msgstr "乘坐赛车的复制人可能会体验到眼花缭乱的愉悦。"
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.METALREFINERY.NAME"
+#~| msgid "<link=\"METALREFINERY\">Metal Refinery</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_METALREFINERY_HATCH.NAME"
+#~ msgid "<link=\"METALREFINERY\">permit_metalrefinery_hatch name</link>"
+#~ msgstr "<link=\"METALREFINERY\">金属精炼器</link>"
 
-#~ msgctxt "STRINGS.BUILDINGS.PREFABS.DLC1COSMICRESEARCHCENTER.DESC"
-#~ msgid "Planetariums allow the simulated exploration of locations recorded in <link=\"ORBITALRESEARCHDATABANK\">Data Banks</link>."
-#~ msgstr "天象仪可以模拟<link=\"ORBITALRESEARCHDATABANK\">数据磁盘</link>中记录的探索地点。"
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_OXYLITE_REFINERY_HATCH.DESC"
+#~ msgid "permit_oxylite_refinery_hatch description"
+#~ msgstr "装备描述"
 
-#~ msgctxt "STRINGS.BUILDINGS.PREFABS.DLC1COSMICRESEARCHCENTER.EFFECT"
-#~ msgid ""
-#~ "Conducts <link=\"RESEARCH\">Data Analysis Research</link> to unlock new technologies.\n"
-#~ "\n"
-#~ "Consumes <link=\"ORBITALRESEARCHDATABANK\">Data Banks</link> generated by exploration."
-#~ msgstr ""
-#~ "进行<link=\"RESEARCH\">数据分析研究</link>以解锁新技术。\n"
-#~ "\n"
-#~ "消耗探索产生的<link=\"ORBITALRESEARCHDATABANK\">数据磁盘</link>。"
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.OXYLITEREFINERY.NAME"
+#~| msgid "<link=\"OXYLITEREFINERY\">Oxylite Refinery</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_OXYLITE_REFINERY_HATCH.NAME"
+#~ msgid "<link=\"OXYLITEREFINERY\">permit_oxylite_refinery_hatch name</link>"
+#~ msgstr "<link=\"OXYLITEREFINERY\">氧石精炼炉</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_PARKSIGN_PIP.DESC"
+#~ msgid "permit_parksign_pip description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.PARKSIGN.NAME"
+#~| msgid "<link=\"PARKSIGN\">Park Sign</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_PARKSIGN_PIP.NAME"
+#~ msgid "<link=\"PARKSIGN\">permit_parksign_pip name</link>"
+#~ msgstr "<link=\"PARKSIGN\">公园标识</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_PLANTTENDER_PIP.DESC"
+#~ msgid "permit_planttender_pip description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.FARMSTATION.NAME"
+#~| msgid "<link=\"FARMSTATION\">Farm Station</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_PLANTTENDER_PIP.NAME"
+#~ msgid "<link=\"FARMSTATION\">permit_planttender_pip name</link>"
+#~ msgstr "<link=\"FARMSTATION\">农业站</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_PUFT.NAME"
+#~| msgid "permit_hqbase_puft_name"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_PUFT_ATMO_OUTFIT.NAME"
+#~ msgid "permit_puft_atmo_outfit"
+#~ msgstr "permit_hqbase_puft_name"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_PUMPGAS_PUFT.DESC"
+#~ msgid "permit_pumpgas_puft description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.GASPUMP.NAME"
+#~| msgid "<link=\"GASPUMP\">Gas Pump</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_PUMPGAS_PUFT.NAME"
+#~ msgid "<link=\"GASPUMP\">permit_pumpgas_puft name</link>"
+#~ msgstr "<link=\"GASPUMP\">气泵</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_PUMPLIQUID_PUFT.DESC"
+#~ msgid "permit_pumpliquid_puft description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.LIQUIDPUMP.NAME"
+#~| msgid "<link=\"LIQUIDPUMP\">Liquid Pump</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_PUMPLIQUID_PUFT.NAME"
+#~ msgid "<link=\"LIQUIDPUMP\">permit_pumpliquid_puft name</link>"
+#~ msgstr "<link=\"LIQUIDPUMP\">液泵</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_RANCHERSTATION_PIP.DESC"
+#~ msgid "permit_rancherstation_pip description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_JETSUIT_BLACK_HATCHSTONE.NAME"
+#~| msgid "Hatchstone Stealth Jet Suit"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHORTS_SCOUT_HATCHSTONE.NAME"
+#~ msgid "Hatchstone Shorts"
+#~ msgstr "哈奇石隐秘喷气服"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOILETFLUSH_PUFT.DESC"
+#~ msgid "permit_toiletflush_puft description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.EXTERIORWALL.FACADES.GRAPES.NAME"
+#~| msgid "<link=\"EXTERIORWALL\">Grape Escape</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOILETFLUSH_PUFT.NAME"
+#~ msgid "<link=\"FLUSHTOILET\">permit_toiletflush_puft name</link>"
+#~ msgstr "<link=\"EXTERIORWALL\">葡萄逍遥壁纸</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHORTS_SCOUT_BROWN.NAME"
+#~| msgid "Scout Shorts"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SCOUT_HATCHSTONE.NAME"
+#~ msgid "Scouting Shirt"
+#~ msgstr "侦察短裤"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_VENTGAS_PUFT.DESC"
+#~ msgid "permit_ventgas_puft description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.EXTERIORWALL.FACADES.GRAPES.NAME"
+#~| msgid "<link=\"EXTERIORWALL\">Grape Escape</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_VENTGAS_PUFT.NAME"
+#~ msgid "<link=\"GASVENT\">permit_ventgas_puft name</link>"
+#~ msgstr "<link=\"EXTERIORWALL\">葡萄逍遥壁纸</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_VENTLIQUID_PUFT.DESC"
+#~ msgid "permit_ventliquid_puft description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.LIQUIDVENT.NAME"
+#~| msgid "<link=\"LIQUIDVENT\">Liquid Vent</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_VENTLIQUID_PUFT.NAME"
+#~ msgid "<link=\"LIQUIDVENT\">permit_ventliquid_puft name</link>"
+#~ msgstr "<link=\"LIQUIDVENT\">排液口</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_HATCH.DESC"
+#~ msgid "permit_walls_hatch description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_FLAMINGO_WHITE.NAME"
+#~| msgid "<link=\"EXTERIORWALL\">Petal Corner</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_HATCH.NAME"
+#~ msgid "<link=\"EXTERIORWALL\">permit_walls_hatch name</link>"
+#~ msgstr "<link=\"EXTERIORWALL\">花瓣凹角壁纸</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_PIP.DESC"
+#~ msgid "permit_walls_pip description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_FLAMINGO_WHITE.NAME"
+#~| msgid "<link=\"EXTERIORWALL\">Petal Corner</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_PIP.NAME"
+#~ msgid "<link=\"EXTERIORWALL\">permit_walls_pip name</link>"
+#~ msgstr "<link=\"EXTERIORWALL\">花瓣凹角壁纸</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_PUFT.DESC"
+#~ msgid "permit_walls_puft description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_FLAMINGO_WHITE.NAME"
+#~| msgid "<link=\"EXTERIORWALL\">Petal Corner</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_PUFT.NAME"
+#~ msgid "<link=\"EXTERIORWALL\">permit_walls_puft name</link>"
+#~ msgstr "<link=\"EXTERIORWALL\">花瓣凹角壁纸</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WASH_BASIN_PIP.DESC"
+#~ msgid "permit_wash_basin_pip description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.WASHBASIN.NAME"
+#~| msgid "<link=\"WASHBASIN\">Wash Basin</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WASH_BASIN_PIP.NAME"
+#~ msgid "<link=\"WASHBASIN\">permit_wash_basin_pip name</link>"
+#~ msgstr "<link=\"WASHBASIN\">洗手盆</link>"
+
+#, fuzzy
+#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
+#~| msgid "Equipment description"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WASH_SINK_PUFT.DESC"
+#~ msgid "permit_wash_sink_puft description"
+#~ msgstr "装备描述"
+
+#, fuzzy
+#~| msgctxt "STRINGS.BUILDINGS.PREFABS.EXTERIORWALL.FACADES.GRAPES.NAME"
+#~| msgid "<link=\"EXTERIORWALL\">Grape Escape</link>"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WASH_SINK_PUFT.NAME"
+#~ msgid "<link=\"WASHSINK\">permit_wash_sink_puft name</link>"
+#~ msgstr "<link=\"EXTERIORWALL\">葡萄逍遥壁纸</link>"
 
 #~ msgctxt "STRINGS.BUILDINGS.PREFABS.FORGETOOLS.NAME"
 #~ msgid "<link=\"HEARTH\">Forge Tools</link>"
@@ -134138,10 +134663,6 @@ msgstr "水域小行星"
 #~ "\n"
 #~ "必须由复制人雕刻。"
 
-#~ msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.NAME"
-#~ msgid "<link=\"SANDBOXBUILDING\">Sand Pile</link>"
-#~ msgstr "<link=\"SANDBOXBUILDING\">沙堆</link>"
-
 #~ msgctxt "STRINGS.BUILDINGS.PREFABS.STORAGELOCKERSMART.SIDESCREEN_ACTIVATE"
 #~ msgid "Base Limit:"
 #~ msgstr "基础值限制："
@@ -134154,153 +134675,27 @@ msgstr "水域小行星"
 #~ msgid "A wet location with abundant food resources."
 #~ msgstr "一个潮湿且食物资源丰富的地点。"
 
+#, fuzzy
+#~| msgctxt "STRINGS.CLUSTER_NAMES.AQUATIC_CLASSIC_CLUSTER.NAME"
+#~| msgid "Marinea Cluster"
 #~ msgctxt "STRINGS.CLUSTER_NAMES.AQUATIC_BASE_GAME_LAB_CLUSTER.NAME"
-#~ msgid "Flooded Marinea"
-#~ msgstr "泛滥的汪洋星"
+#~ msgid "Marinea Trench Cluster"
+#~ msgstr "汪洋星星群"
 
 #~ msgctxt "STRINGS.CLUSTER_NAMES.AQUATIC_LAB_CLUSTER.DESCRIPTION"
 #~ msgid "A cluster of visitable planetoids with a Reef starting world."
 #~ msgstr "一片可前往的小行星群，以珊瑚生态开局。"
 
+#, fuzzy
+#~| msgctxt "STRINGS.CLUSTER_NAMES.AQUATIC_CLASSIC_CLUSTER.NAME"
+#~| msgid "Marinea Cluster"
 #~ msgctxt "STRINGS.CLUSTER_NAMES.AQUATIC_LAB_CLUSTER.NAME"
-#~ msgid "Flooded Marinea Cluster"
-#~ msgstr "泛滥的汪洋星星群"
-
-#~ msgctxt "STRINGS.CODEX.CRITTER_TYPES.FARM_FRIENDLY.DESCRIPTION"
-#~ msgid ""
-#~ "Critters whose natural behaviors are conducive to farming and ranching, when appropriately directed. Some help incubate eggs, while others plant  <link=\"PLANTS\">Seeds</link>  or harvest <link=\"PLANTCATEGORYMAKESORISFOOD\">Crops</link>.\n"
-#~ "\n"
-#~ "Maintaining populations of these critters in the right areas can reduce the burden of farming or ranching work borne by my Duplicants."
-#~ msgstr ""
-#~ "适当引导后，自然行为有助于耕种和养殖的小动物。有些能帮助孵蛋，有些则种植<link=\"PLANTS\">种子</link>或收获<link=\"PLANTCATEGORYMAKESORISFOOD\">作物</link>。\n"
-#~ "\n"
-#~ "在合适区域维持这些小动物的种群数量能减少我的复制人对于耕种或养殖工作的劳动负担。"
-
-#~ msgctxt "STRINGS.CODEX.CRITTER_TYPES.PRODUCES_LIGHT.DESCRIPTION"
-#~ msgid ""
-#~ "Critters who produce <link=\"LIGHT\">Light</link> that improves my Duplicants' <link=\"MORALE\">Morale</link> and helps them work faster.\n"
-#~ "\n"
-#~ "These bright critters may also fulfil some <link=\"PLANTS\">Plants'</link>  light requirements for growth."
-#~ msgstr ""
-#~ "能产生<link=\"LIGHT\">光</link>的小动物，可以提升我的复制人的<link=\"MORALE\">士气</link>并帮助他们更快工作。\n"
-#~ "\n"
-#~ "这些明亮的小动物也能满足一些<link=\"PLANTS\">植物</link>生长的光照需求。"
-
-#~ msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.DININGTABLETYPE.CONFLICTINGROOMS"
-#~ msgid "    • <link=\"GREATERHALL\">Banquet Hall</link> (No Mess Table)\n"
-#~ msgstr "    • <link=\"GREATERHALL\">宴会厅</link>（无小餐桌）\n"
-
-#~ msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.DININGTABLETYPE.ROOMSREQUIRING"
-#~ msgid ""
-#~ "    • <link=\"MESSHALL\">Mess Hall</link>\n"
-#~ "    • <link=\"GREATHALL\">Great Hall</link>\n"
-#~ "    • <link=\"GREATERHALL\">Banquet Hall</link> (Communal Table)"
-#~ msgstr ""
-#~ "    • <link=\"MESSHALL\">食堂</link>\n"
-#~ "    • <link=\"GREATHALL\">餐厅</link>\n"
-#~ "    • <link=\"GREATERHALL\">宴会厅</link>（公用餐桌）"
-
-#~ msgctxt "STRINGS.CREATURES.SPECIES.PACU.VARIANT_CLEANER.SUBTITLE"
-#~ msgid "Water-Purifying Critter"
-#~ msgstr "净水的小动物"
-
-#~ msgctxt "STRINGS.CREATURES.SPECIES.PACU.VARIANT_TROPICAL.SUBTITLE"
-#~ msgid "High-Decor Critter"
-#~ msgstr "高装饰小动物"
+#~ msgid "Marinea Trench Cluster"
+#~ msgstr "汪洋星星群"
 
 #~ msgctxt "STRINGS.DUPLICANTS.MODIFIERS.PLAYEDSANDBOX.NAME"
 #~ msgid "Sculpted Sand Pile"
 #~ msgstr "雕刻了沙堆"
-
-#~ msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_OP1.NAME"
-#~ msgid "<link=\"BOOSTEROP1\">Electrical Engineering Booster</link>"
-#~ msgstr "<link=\"BOOSTEROP1\">电气工程增幅块</link>"
-
-#~ msgctxt "STRINGS.DUPLICANTS.TRAITS.STARTWITHBOOSTER_OP1.SHORT_DESC"
-#~ msgid "Starts with a preinstalled <b><link=\"BOOSTEROP1\">Electrical Engineering Booster</link></b>"
-#~ msgstr "开始时预装了<b><link=\"BOOSTEROP1\">电气工程增幅块</link></b>"
-
-#~ msgctxt "STRINGS.ELEMENTS.FROZENPHYTOOIL.DESC"
-#~ msgid "Frozen Phyto Oil is thick, slippery <link=\"SLIME\">Slime</link> extract, frozen into a <link=\"ELEMENTSSOLID\">Solid</link> state."
-#~ msgstr "凝冻植物润滑油是一种冻结成<link=\"ELEMENTSSOLID\">固态</link>的浓而滑的<link=\"SLIME\">菌泥</link>提取物。"
-
-#~ msgctxt "STRINGS.ELEMENTS.PHYTOOIL.DESC"
-#~ msgid "Phyto Oil is a thick, slippery <link=\"ELEMENTSLIQUID\">Liquid</link> extracted from pureed <link=\"SLIME\">Slime</link>."
-#~ msgstr "植物润滑油是从<link=\"SLIME\">菌泥</link>中提取的浓而滑的<link=\"ELEMENTSLIQUID\">液体</link>。"
-
-#~ msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP1.NAME"
-#~ msgid "<link=\"BOOSTEROP1\">Electrical Engineering Booster</link>"
-#~ msgstr "<link=\"BOOSTEROP1\">电气工程增幅块</link>"
-
-#~ msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP2.DESC"
-#~ msgid "Grants a Bionic Duplicant complete mastery of engineering skills."
-#~ msgstr "赋予仿生复制人工程技能的完全掌握。"
-
-#~ msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP2.NAME"
-#~ msgid "<link=\"BOOSTEROP2\">Mechatronics Engineering Booster</link>"
-#~ msgstr "<link=\"BOOSTEROP2\">机电工程增幅块</link>"
-
-#~ msgctxt "STRINGS.MISC.TAGS.ICEORE"
-#~ msgid "<link=\"ICEORE\">Ice</link>"
-#~ msgstr "<link=\"ICEORE\">冰</link>"
-
-#~ msgctxt "STRINGS.MISC.TAGS.SNOW"
-#~ msgid "<link=\"STABLESNOW\">Snow</link>"
-#~ msgstr "<link=\"STABLESNOW\">雪</link>"
-
-#~ msgctxt "STRINGS.MISC.TAGS.SUBLIMATING"
-#~ msgid "<link=\"SUBLIMATES\">Sublimator</link>"
-#~ msgstr "<link=\"SUBLIMATES\">升华物</link>"
-
-#~ msgctxt "STRINGS.ROOMS.CRITERIA.KITCHENREFRIGERATOR.CONFLICT_DESCRIPTION"
-#~ msgid "<link=\"KITCHENREFRIGERATOR\">Refrigerator</link>"
-#~ msgstr "<link=\"KITCHENREFRIGERATOR\">冰箱</link>"
-
-#~ msgctxt "STRINGS.ROOMS.CRITERIA.KITCHENREFRIGERATOR.NAME"
-#~ msgid "<link=\"KITCHENREFRIGERATOR\">Refrigerator</link>"
-#~ msgstr "<link=\"KITCHENREFRIGERATOR\">冰箱</link>"
-
-#~ msgctxt "STRINGS.SUBWORLDS.ICECAVES.UTILITY"
-#~ msgid ""
-#~ "The below-freezing climate in this biome keeps elements frozen solid, but once a colony has established the means necessary to melt the abundant <link=\"ICE\">Ice</link> deposits, it should be able to produce enough <link=\"WATER\">Water</link> to meet its needs. Initial scans reveal the presence of <link=\"CINNABAR\">Cinnabar Ore</link> that can be used in <link=\"POWER\">Power</link> systems.\n"
-#~ "\n"
-#~ "<link=\"STABLESNOW\">Snow</link> is a readily available construction material. Note that its structural integrity may be undermined if surrounding areas become hot enough to trigger a state change.\n"
-#~ "\n"
-#~ "<link=\"HARDSKINBERRY\">Pikeapple Bushes</link> feed both Duplicants and the native <link=\"WOODDEER\">Flox</link>, a critter whose <link=\"WOOD\">Wood</link>, antlers offer a renewable source of fuel and attractive temperature-stable construction materials.\n"
-#~ "\n"
-#~ "Although pockets of <link=\"OXYGEN\">Oxygen</link> allow Duplicants to begin the work of colony-building in this biome, the key to long-term survival is the cultivation of <link=\"BLUEGRASS\">Alveo Vera</link> plants. They produce harvestable <link=\"OXYROCK\">Oxylite</link> and their beauty--much like that of the dreamy <link=\"ICEFLOWER\">Idylla Flower</link>--is a wonderful salve for existential dread."
-#~ msgstr ""
-#~ "这种生态中零下环境使得一切都保持在冰冻状态，但只要殖民地具有了熔化丰富的<link=\"ICE\">冰</link>沉积物所需的手段，就能生产足量的<link=\"WATER\">水</link>，满足殖民地的需要。初步的扫描发现了<link=\"CINNABAR\">朱砂矿</link>，可用于<link=\"POWER\">电力</link>系统。\n"
-#~ "\n"
-#~ "<link=\"STABLESNOW\">雪</link>是一种现成的建造材料。要注意，如果周围环境很热，导致物态变化，建筑的完整性可能会受到破坏。\n"
-#~ "\n"
-#~ "<link=\"HARDSKINBERRY\">刺壳果灌木</link>既能让复制人吃饱，也能让当地的<link=\"WOODDEER\">狐鹿</link>生存，后者的<link=\"WOOD\">木质</link>角提供了一种可再生的燃料来源，以及温度稳定的吸引人的建筑材料。\n"
-#~ "\n"
-#~ "尽管充满<link=\"OXYGEN\">氧气</link>的洞穴能让复制人在这种生态开始殖民地的建设，但长期生存的关键是种植<link=\"BLUEGRASS\">气囊芦荟</link>。气囊芦荟能产生可收获的<link=\"OXYROCK\">氧石</link>，其外表的美丽——和梦幻的<link=\"ICEFLOWER\">恬静花</link>类似——是缓解生存恐惧的绝妙灵药。"
-
-#~ msgctxt "STRINGS.UI.BUILDCATEGORIES.GRAVITAS.NAME"
-#~ msgid "<link=\"GRAVITAS\">Gravitas</link>"
-#~ msgstr "<link=\"GRAVITAS\">庄严科技</link>"
-
-#~ msgctxt "STRINGS.UI.BUILDCATEGORIES.GRAVITAS.TOOLTIP"
-#~ msgid "Debug buildings. {Hotkey}"
-#~ msgstr "调试建筑。{Hotkey}"
-
-#~ msgctxt "STRINGS.UI.BUILDINGEFFECTS.DIET_HEADER"
-#~ msgid "Digestion:"
-#~ msgstr "消化："
-
-#~ msgctxt "STRINGS.UI.BUILDINGEFFECTS.RESEARCH_MATERIALS"
-#~ msgid "{0}: {1} per <link=\"RESEARCH\">Research</link> point"
-#~ msgstr "{0}：每<link=\"RESEARCH\">研究</link>点消耗<style=\"consumed\">{1}</style>"
-
-#~ msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SUPPORTBUILDING_NO_STACKABLE"
-#~ msgid "This annex building's effect will not stack with others of the same type"
-#~ msgstr "这个附属建筑的效果不会与其他同类型的建筑叠加"
-
-#~ msgctxt "STRINGS.UI.BUILDINGEFFECTS.TOOLTIPS.SUPPORTBUILDING_STACKABLE"
-#~ msgid "This annex building's effect can be stacked with others of the same type"
-#~ msgstr "这个附属建筑的效果可以与其他同类型的建筑叠加"
 
 #~ msgctxt "STRINGS.UI.DETAILTABS.COSMETICS.VISTAS.PREHISTORICVISTA.DESC"
 #~ msgid ""
@@ -134315,18 +134710,6 @@ msgstr "水域小行星"
 #~ msgctxt "STRINGS.UI.DETAILTABS.COSMETICS.VISTAS.PREHISTORICVISTA.NAME"
 #~ msgid "Prehistoric Vista"
 #~ msgstr "史前远景"
-
-#~ msgctxt "STRINGS.UI.FACADE_SELECTION_PANEL.STORE_BUTTON_TOOLTIP"
-#~ msgid "See more Blueprints in the Supply Closet"
-#~ msgstr "在供应柜查看更多蓝图"
-
-#~ msgctxt "STRINGS.UI.FACADE_SELECTION_PANEL.STORE_BUTTON_TOOLTIP_NO_BLUEPRINTS"
-#~ msgid "There are no Blueprints available for this building yet"
-#~ msgstr "这个建筑还没有可用蓝图。"
-
-#~ msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.ITEM_PLAYER_UNLOCKED_BUT_UNOWNABLE"
-#~ msgid "This blueprint is part of my colony's permanent collection."
-#~ msgstr "这个蓝图是我的殖民地永久收藏的一部分。"
 
 #~ msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.BUILDINGS_ELECTIC_WIRES"
 #~ msgid "Electrical"
@@ -134356,15 +134739,69 @@ msgstr "水域小行星"
 #~ msgid "Marinea Trench"
 #~ msgstr "汪洋星海沟"
 
-#~ msgctxt "STRINGS.CODEX.CRITTER_TYPES.AIRBORNE.DESCRIPTION"
-#~ msgid ""
-#~ "Critters who float or fly through the world. While most are docile, some species are <link=\"CRITTERCATEGORYHOSTILE\">Hostile</link> and should be treated with extreme caution.\n"
-#~ "\n"
-#~ "When calculating how <link=\"CREATURES::GUIDE::MOOD\">Crowded</link> their environment is, they will consider both <link=\"CRITTERCATEGORYAIRBORNE\">Airborne</link> and <link=\"CRITTERCATEGORYLAND\">Land</link>-based critters"
-#~ msgstr ""
-#~ "在世界中漂浮或飞行的小动物。大多数都是温顺物种，但也有一些物种具有<link=\"CRITTERCATEGORYHOSTILE\">敌意</link>，应极其谨慎对待。\n"
-#~ "\n"
-#~ "计算环境<link=\"CREATURES::GUIDE::MOOD\">拥挤</link>程度时，它们会考虑<link=\"CRITTERCATEGORYAIRBORNE\">飞行</link>小动物和<link=\"CRITTERCATEGORYLAND\">陆生</link>小动物两者"
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SHORT_SCUM.DESC"
+#~ msgid "permit_gloves_short_scum_desc"
+#~ msgstr "permit_gloves_short_scum_desc"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_GLOVES_SHORT_SCUM.NAME"
+#~ msgid "permit_gloves_short_scum_name"
+#~ msgstr "permit_gloves_short_scum_name"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_HATCH.DESC"
+#~ msgid "permit_hqbase_hatch_desc"
+#~ msgstr "permit_hqbase_hatch_desc"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_PIP.DESC"
+#~ msgid "permit_hqbase_pip_desc"
+#~ msgstr "permit_hqbase_pip_desc"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_PUFT.DESC"
+#~ msgid "permit_hqbase_puft_desc"
+#~ msgstr "permit_hqbase_puft_desc"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SCOUT_SCUM.DESC"
+#~ msgid "permit_shoes_scout_scum_desc"
+#~ msgstr "permit_shoes_scout_scum_desc"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SCOUT_SCUM.NAME"
+#~ msgid "permit_shoes_scout_scum_name"
+#~ msgstr "permit_shoes_scout_scum_name"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHORTS_SCOUT_HATCHSTONE.DESC"
+#~ msgid "permit_shorts_scout_hatchstone_desc"
+#~ msgstr "permit_shorts_scout_hatchstone_desc"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHORTS_SCOUT_HATCHSTONE.NAME"
+#~ msgid "permit_shorts_scout_hatchstone_name"
+#~ msgstr "permit_shorts_scout_hatchstone_name"
+
+#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SCOUT_HATCHSTONE.DESC"
+#~ msgid "permit_top_scout_hatchstone_desc"
+#~ msgstr "permit_top_scout_hatchstone_desc"
+
+#~ msgctxt "STRINGS.CLUSTER_NAMES.AQUATIC_BASE_GAME_LAB_CLUSTER.NAME"
+#~ msgid "Flooded Marinea"
+#~ msgstr "泛滥的汪洋星"
+
+#~ msgctxt "STRINGS.CLUSTER_NAMES.AQUATIC_LAB_CLUSTER.NAME"
+#~ msgid "Flooded Marinea Cluster"
+#~ msgstr "泛滥的汪洋星星群"
+
+#~ msgctxt "STRINGS.ITEMS.BIONIC_BOOSTERS.BOOSTER_OP2.NAME"
+#~ msgid "<link=\"BOOSTEROP2\">Mechatronics Engineering Booster</link>"
+#~ msgstr "<link=\"BOOSTEROP2\">机电工程增幅块</link>"
+
+#~ msgctxt "STRINGS.UI.BUILDCATEGORIES.GRAVITAS.NAME"
+#~ msgid "<link=\"GRAVITAS\">Gravitas</link>"
+#~ msgstr "<link=\"GRAVITAS\">庄严科技</link>"
+
+#~ msgctxt "STRINGS.UI.BUILDCATEGORIES.GRAVITAS.TOOLTIP"
+#~ msgid "Debug buildings. {Hotkey}"
+#~ msgstr "调试建筑。{Hotkey}"
+
+#~ msgctxt "STRINGS.UI.BUILDINGEFFECTS.DIET_HEADER"
+#~ msgid "Digestion:"
+#~ msgstr "消化："
 
 #~ msgctxt "STRINGS.BUILDING.STATUSITEMS.COLONYLACKSREQUIREDSKILLPERK.TOOLTIP"
 #~ msgid ""
@@ -134788,13 +135225,6 @@ msgstr "水域小行星"
 #~ msgstr "<link=\"BEACHCHAIR\">沙滩椅</link>"
 
 #, fuzzy
-#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
-#~| msgid "Equipment description"
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_CLAM.DESC"
-#~ msgid "permit_elegantbed_clam description"
-#~ msgstr "装备描述"
-
-#, fuzzy
 #~| msgctxt "STRINGS.BUILDINGS.PREFABS.LUXURYBED.FACADES.BOAT.NAME"
 #~| msgid "<link=\"LUXURYBED\">Dreamboat Bed</link>"
 #~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ELEGANTBED_CLAM.NAME"
@@ -134907,13 +135337,6 @@ msgstr "水域小行星"
 #~ msgstr "<link=\"EXTERIORWALL\">花瓣凹角壁纸</link>"
 
 #, fuzzy
-#~| msgctxt "STRINGS.BUILDINGS.PREFABS.EXTERIORWALL.FACADES.GRAPES.NAME"
-#~| msgid "<link=\"EXTERIORWALL\">Grape Escape</link>"
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_PUFFER.NAME"
-#~ msgid "<link=\"EXTERIORWALL\">permit_walls_aqua_puffer name</link>"
-#~ msgstr "<link=\"EXTERIORWALL\">葡萄逍遥壁纸</link>"
-
-#, fuzzy
 #~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_FLAMINGO_WHITE.NAME"
 #~| msgid "<link=\"EXTERIORWALL\">Petal Corner</link>"
 #~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_AQUA_SILT.NAME"
@@ -134968,20 +135391,6 @@ msgstr "水域小行星"
 #~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_PLUS_BLUE_NAUTICAL_WHITE.NAME"
 #~ msgid "<link=\"EXTERIORWALL\">permit_walls_plus_blue_nautical_white name</link>"
 #~ msgstr "<link=\"EXTERIORWALL\">亮蛞蝓凹角壁纸</link>"
-
-#, fuzzy
-#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
-#~| msgid "Equipment description"
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA.DESC"
-#~ msgid "permit_walls_sea description"
-#~ msgstr "装备描述"
-
-#, fuzzy
-#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_FLAMINGO_WHITE.NAME"
-#~| msgid "<link=\"EXTERIORWALL\">Petal Corner</link>"
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_SEA.NAME"
-#~ msgid "<link=\"EXTERIORWALL\">permit_walls_sea name</link>"
-#~ msgstr "<link=\"EXTERIORWALL\">花瓣凹角壁纸</link>"
 
 #, fuzzy
 #~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_WALLS_TRIANGLE_FLAMINGO_WHITE.NAME"
@@ -135140,13 +135549,6 @@ msgstr "水域小行星"
 #, fuzzy
 #~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.NAME"
 #~| msgid "permit_hqbase_neutronium name"
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_GLOVES_ELECTRO.NAME"
-#~ msgid "permit_atmo_gloves_electro name"
-#~ msgstr "permit_hqbase_neutronium name"
-
-#, fuzzy
-#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.NAME"
-#~| msgid "permit_hqbase_neutronium name"
 #~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_ATMO_SHOES_BASIC_ELECTRO.NAME"
 #~ msgid "permit_atmo_shoes_basic_electro name"
 #~ msgstr "permit_hqbase_neutronium name"
@@ -135192,27 +135594,6 @@ msgstr "水域小行星"
 #~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_CROWN_MOULDING_RETRO_NAUTICAL.NAME"
 #~ msgid "<link=\"CROWNMOULDING\">permit_crown_moulding_retro_nautical name</link>"
 #~ msgstr "<link=\"CROWNMOULDING\">天花板饰件</link>"
-
-#, fuzzy
-#~| msgctxt "STRINGS.BUILDINGS.PREFABS.REFRIGERATOR.FACADES.DEFAULT_REFRIGERATOR.NAME"
-#~| msgid "<link=\"REFRIGERATOR\">Refrigerator</link>"
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_STRIPES_NAUTICAL.NAME"
-#~ msgid "<link=\"REFRIGERATOR\">permit_fridge_stripes_nautical name</link>"
-#~ msgstr "<link=\"REFRIGERATOR\">冰箱</link>"
-
-#, fuzzy
-#~| msgctxt "STRINGS.BUILDINGS.PREFABS.REFRIGERATOR.FACADES.DEFAULT_REFRIGERATOR.NAME"
-#~| msgid "<link=\"REFRIGERATOR\">Refrigerator</link>"
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_FRIDGE_WATERBUBBLES.NAME"
-#~ msgid "<link=\"REFRIGERATOR\">permit_fridge_waterbubbles name</link>"
-#~ msgstr "<link=\"REFRIGERATOR\">冰箱</link>"
-
-#, fuzzy
-#~| msgctxt "STRINGS.BUILDINGS.PREFABS.GASRESERVOIR.FACADES.DEFAULT_GASRESERVOIR.NAME"
-#~| msgid "<link=\"GASRESERVOIR\">Gas Reservoir</link>"
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_STRIPES_NAUTICAL.NAME"
-#~ msgid "<link=\"GASRESERVOIR\">permit_gasstorage_stripes_nautical name</link>"
-#~ msgstr "<link=\"GASRESERVOIR\">储气库</link>"
 
 #, fuzzy
 #~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_GASSTORAGE_DARTLE.NAME"
@@ -135299,13 +135680,6 @@ msgstr "水域小行星"
 #~ msgstr "permit_hqbase_neutronium name"
 
 #, fuzzy
-#~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.NAME"
-#~| msgid "permit_hqbase_neutronium name"
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_SHOES_SWIM_BLUE.NAME"
-#~ msgid "permit_shoes_swim_blue name"
-#~ msgstr "permit_hqbase_neutronium name"
-
-#, fuzzy
 #~| msgctxt "STRINGS.BUILDINGS.PREFABS.STORAGELOCKER.FACADES.DEFAULT_STORAGELOCKER.NAME"
 #~| msgid "<link=\"STORAGELOCKER\">Storage Bin</link>"
 #~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_STORAGELOCKER_STRIPES_NAUTICAL.NAME"
@@ -135320,32 +135694,11 @@ msgstr "水域小行星"
 #~ msgstr "<link=\"STORAGELOCKER\">存储箱</link>"
 
 #, fuzzy
-#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
-#~| msgid "Equipment description"
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_SWIMSUIT_MERM.DESC"
-#~ msgid "permit_swimsuit_merm description"
-#~ msgstr "装备描述"
-
-#, fuzzy
 #~| msgctxt "STRINGS.BLUEPRINTS.PERMIT_HQBASE_NEUTRONIUM.NAME"
 #~| msgid "permit_hqbase_neutronium name"
 #~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_SWIMSUIT_MERM.NAME"
 #~ msgid "permit_swimsuit_merm name"
 #~ msgstr "permit_hqbase_neutronium name"
-
-#, fuzzy
-#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
-#~| msgid "Equipment description"
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_BLUE.DESC"
-#~ msgid "permit_top_swim_blue description"
-#~ msgstr "装备描述"
-
-#, fuzzy
-#~| msgctxt "STRINGS.UI.CODEX.EQUIPMENT.DESC"
-#~| msgid "Equipment description"
-#~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_TOP_SWIM_GREEN.DESC"
-#~ msgid "permit_top_swim_green description"
-#~ msgstr "装备描述"
 
 #, fuzzy
 #~| msgctxt "STRINGS.BUILDINGS.PREFABS.UNDERWATERCRITTERCONDO.NAME"

@@ -11262,13 +11262,13 @@ msgstr "渦輪模式已開啟"
 
 #. STRINGS.BUILDING.STATUSITEMS.TURBOMODE.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TURBOMODE.TOOLTIP"
-msgid "This building is operating at maximum power\n\n    • Power consumption: <b>{0}</b>\n    • Heat production: <b>{1}</b>\n    • Boiling the surrounding liquid"
-msgstr "該建築目前正以最大功率運作\n\n    • 電力消耗：<b>{0}</b>\n    • 熱量產生：<b>{1}</b>\n    • 正在煮沸周圍液體"
+msgid "This building is operating at maximum <style=\"KKeyword\">Power</style>\n\n    • <style=\"KKeyword\">Power</style> consumption: <b>{0}</b>\n    • <style=\"KKeyword\">Heat</style> production: <b>{1}</b>\n    • Boiling the surrounding liquid"
+msgstr "此建築正以最大<style=\"KKeyword\">電力</style>運轉\n\n    • <style=\"KKeyword\">電力</style>消耗：<b>{0}</b>\n    • <style=\"KKeyword\">熱量</style>產生：<b>{1}</b>\n    • 正在煮沸周圍液體"
 
 #. STRINGS.BUILDING.STATUSITEMS.TURBOMODE.TOOLTIP_RECREATION
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TURBOMODE.TOOLTIP_RECREATION"
-msgid "This building is operating at maximum power\n\n    • Power consumption: <b>{0}</b>\n    • Duplicants who spend at least <b>{1}</b> of their ride in Turbo Mode gain extra <style=\"KKeyword\">Morale</style>"
-msgstr "此建築正以最大功率運轉\n\n    • 消耗電力：<b>{0}</b>\n    • 在加速模式下搭乘時間達 <b>{1}</b> 以上的複製人可獲得額外<style=\"KKeyword\">士氣</style>"
+msgid "This building is operating at maximum <style=\"KKeyword\">Power</style>\n\n    • <style=\"KKeyword\">Power</style> consumption: <b>{0}</b>\n    • Duplicants who spend at least <b>{1}</b> of their ride in Turbo Mode gain extra <style=\"KKeyword\">Morale</style>"
+msgstr "此建築正以最大<style=\"KKeyword\">電力</style>運轉\n\n    • <style=\"KKeyword\">電力</style>消耗：<b>{0}</b>\n    • 在加速模式下搭乘時間達 <b>{1}</b> 以上的複製人可獲得額外<style=\"KKeyword\">士氣</style>"
 
 #. STRINGS.BUILDING.STATUSITEMS.UNASSIGNED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.UNASSIGNED.NAME"
@@ -11992,8 +11992,8 @@ msgstr "若在加速模式下的搭乘時間少於 {percent}，複製人將獲�
 
 #. STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_TURBO
 msgctxt "STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_TURBO"
-msgid "{attrib}: {amount} (Turbo)"
-msgstr "{attrib}: {amount} (加速)"
+msgid "{attrib}: {amount} (Turbo Mode)"
+msgstr "{attrib}: {amount} (加速模式)"
 
 #. STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_TURBO_TOOLTIP
 msgctxt "STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_TURBO_TOOLTIP"
@@ -23985,6 +23985,16 @@ msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SEALOVE
 msgid "A Deep Bow"
 msgstr "深鞠躬"
 
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SHELL_SIMPLE.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SHELL_SIMPLE.DESC"
+msgid "sandsculpture_shell_simple desc."
+msgstr "sandsculpture_shell_simple desc."
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SHELL_SIMPLE.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SHELL_SIMPLE.NAME"
+msgid "sandsculpture_shell_simple name"
+msgstr "sandsculpture_shell_simple name"
+
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SNOWMAN.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SNOWMAN.DESC"
 msgid "This grainy character looks like they're winning a game of Limbo."
@@ -23994,6 +24004,36 @@ msgstr "這個滿是砂礫的傢伙，看起來就像正要在凌波舞比賽中
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SNOWMAN.NAME"
 msgid "The Sandman"
 msgstr "沙人"
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SOFTSERVE.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SOFTSERVE.DESC"
+msgid "sandsculpture_softserve desc"
+msgstr "sandsculpture_softserve desc"
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SOFTSERVE.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SOFTSERVE.NAME"
+msgid "sandsculpture_softserve name"
+msgstr "sandsculpture_softserve name"
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_STARFISH_SIMPLE.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_STARFISH_SIMPLE.DESC"
+msgid "sandsculpture_starfish_simple desc"
+msgstr "sandsculpture_starfish_simple desc"
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_STARFISH_SIMPLE.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_STARFISH_SIMPLE.NAME"
+msgid "sandsculpture_starfish_simple name"
+msgstr "sandsculpture_starfish_simple name"
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_TOMBSTONE_SIMPLE.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_TOMBSTONE_SIMPLE.DESC"
+msgid "sandsculpture_tombstone_simple desc"
+msgstr "sandsculpture_tombstone_simple desc"
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_TOMBSTONE_SIMPLE.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_TOMBSTONE_SIMPLE.NAME"
+msgid "sandsculpture_tombstone_simple name"
+msgstr "sandsculpture_tombstone_simple name"
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.NAME"
@@ -25728,12 +25768,12 @@ msgstr "為水生<link=\"CREATURES\">小動物</link>供應<link=\"MILK\">鹹乳
 #. STRINGS.BUILDINGS.PREFABS.UNDERWATERMILKFEEDER.EFFECT_DLC5
 msgctxt "STRINGS.BUILDINGS.PREFABS.UNDERWATERMILKFEEDER.EFFECT_DLC5"
 msgid "Dispenses <link=\"MILK\">Brackene</link> or <link=\"INK\">Squid Ink</link> to aquatic <link=\"CREATURES\">Critters</link>.\n\nAccessing the fountain significantly improves <link=\"CREATURES\">Critters</link>' moods."
-msgstr "為水生<link=\"CREATURES\">小動物</link>提供<link=\"MILK\">鹹乳</link>或<link=\"INK\">墨魚汁</link>。\n\n使用直飲機能顯著改善<link=\"CREATURES\">小動物</link>的心情。"
+msgstr "為水生<link=\"CREATURES\">小動物</link>提供<link=\"MILK\">鹹乳</link>或<link=\"INK\">墨魚汁</link>。\n\n使用飲水機能顯著改善<link=\"CREATURES\">小動物</link>的心情。"
 
 #. STRINGS.BUILDINGS.PREFABS.UNDERWATERMILKFEEDER.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.UNDERWATERMILKFEEDER.NAME"
 msgid "<link=\"UNDERWATERMILKFEEDER\">Aquatic Critter Fountain</link>"
-msgstr "<link=\"UNDERWATERMILKFEEDER\">水生小動物直飲器</link>"
+msgstr "<link=\"UNDERWATERMILKFEEDER\">水生小動物飲水機</link>"
 
 #. STRINGS.BUILDINGS.PREFABS.UNDERWATERMILKINGSTATION.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.UNDERWATERMILKINGSTATION.DESC"
@@ -29633,7 +29673,7 @@ msgstr "凝露珠"
 #. STRINGS.CODEX.DEWDRIPPERPLANT.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.DEWDRIPPERPLANT.BODY.CONTAINER1"
 msgid "The Dew Dripper is sometimes referred to as the \"purple starling\" of the plant world for the magnificent feather-like leaves that encircle its base.\n\nThis sculptural plant slow-drips excess sap that coagulates upon contact with air. The resulting globule is so dense that its weight would snap the Dew Dripper's hollow stem if planted in the ground.\n\nNo one has ever been seriously injured by a falling Dewdrip, but it's best not to linger beneath them."
-msgstr "凝露藤根部環繞著華麗的羽毛狀葉子，有時被稱為植物界的「紫椋鳥」。\n\n這種雕塑般的植物會緩慢滴下多餘的樹液，樹液接觸空氣後便會凝固。形成的凝結物極其緻密，若種植在地面上，其重量會折斷凝露草的空心莖。\n\n從未有人被掉落的凝露珠嚴重傷害，但最好不要在其下方逗留。"
+msgstr "凝露藤根部環繞著華麗的羽毛狀葉子，有時被稱為植物界的「紫椋鳥」。\n\n這種雕塑般的植物會緩慢滴下多餘的樹液，樹液接觸空氣後便會凝固。形成的凝結物極其緻密，若種植在地面上，其重量會折斷凝露藤的空心莖。\n\n從未有人被掉落的凝露珠嚴重傷害，但最好不要在其下方逗留。"
 
 #. STRINGS.CODEX.DEWDRIPPERPLANT.SUBTITLE
 msgctxt "STRINGS.CODEX.DEWDRIPPERPLANT.SUBTITLE"
@@ -29893,7 +29933,7 @@ msgstr "火箭必須儲備足夠的<link=\"BUILDCATEGORYOXYGEN\">氧氣</link>�
 #. STRINGS.CODEX.EXOBASESDLC1.PARAGRAPH_4
 msgctxt "STRINGS.CODEX.EXOBASESDLC1.PARAGRAPH_4"
 msgid "Goods can be teleported between worlds with connected Supply Teleporters through <link=\"ELEMENTSGAS\">Gas</link>, <link=\"ELEMENTSLIQUID\">Liquid</link>, and <link=\"ELEMENTSSOLID\">Solid</link> conduits.\n\nPlanetoids not connected through Supply Teleporters can use rockets to transport goods, either by landing on a <link=\"LAUNCHPAD\">Rocket Platform</link> or a <link=\"ORBITALCARGOMODULE\">Orbital Cargo Module</link> deployed from a rocket in orbit. Additionally, the <link=\"RAILGUN\">Interplanetary Launcher</link> can send <link=\"RAILGUNPAYLOAD\">Interplanetary Payloads</link> full of goods through space but must be opened by a <link=\"RAILGUNPAYLOADOPENER\">Payload Opener</link>. A <link=\"LANDINGBEACON\">Targeting Beacon</link> can guide payloads and orbital modules to land at a specific location on a Planetoid surface."
-msgstr "貨物可以透過連接補給傳送器上的<link=\"ELEMENTSGAS\">氣體</link>、<link=\"ELEMENTSLIQUID\">液體</link>與<link=\"ELEMENTSSOLID\">固體</link>輸送帶軌道在兩個世界中傳送。\n\n未與補給傳送器連接的小行星，可利用火箭運輸貨物，方法是降落在<link=\"LAUNCHPAD\">火箭平台</link>上，或從軌道上的火箭部署<link=\"ORBITALCARGOMODULE\">軌道貨艙模組</link>。此外，<link=\"RAILGUN\">軌道炮</link>能將裝滿貨物的<link=\"RAILGUNPAYLOAD\">星際貨箱</link>送入太空，但需由<link=\"RAILGUNPAYLOADOPENER\">星際貨箱拆箱機</link>打開。<link=\"LANDINGBEACON\">定位信標</link>則可引導貨運艙和軌道模組，降落在小行星表面的特定位置。"
+msgstr "貨物可以透過連接補給傳送器上的<link=\"ELEMENTSGAS\">氣體</link>、<link=\"ELEMENTSLIQUID\">液體</link>與<link=\"ELEMENTSSOLID\">固體</link>輸送帶軌道在兩個世界中傳送。\n\n未與補給傳送器連接的小行星，可利用火箭運輸貨物，方法是降落在<link=\"LAUNCHPAD\">火箭平台</link>上，或從軌道上的火箭部署<link=\"ORBITALCARGOMODULE\">軌道貨艙模組</link>。此外，<link=\"RAILGUN\">軌道炮</link>能將裝滿貨物的<link=\"RAILGUNPAYLOAD\">星際貨箱</link>送入太空，但需由<link=\"RAILGUNPAYLOADOPENER\">星際貨箱拆封機</link>打開。<link=\"LANDINGBEACON\">定位信標</link>則可引導貨運艙和軌道模組，降落在小行星表面的特定位置。"
 
 #. STRINGS.CODEX.EXOBASESDLC1.PARAGRAPH_5
 msgctxt "STRINGS.CODEX.EXOBASESDLC1.PARAGRAPH_5"
@@ -29908,7 +29948,7 @@ msgstr "<link=\"EXOBASES\">太空旅行</link>"
 #. STRINGS.CODEX.EXPERIMENT52B.BODY.CONTAINER1
 msgctxt "STRINGS.CODEX.EXPERIMENT52B.BODY.CONTAINER1"
 msgid "Experiment 52B is an aggressive, yet sessile creature that produces 5 kilograms of sap per 1000 kcal it consumes.\n\nDuplicants would do well to maintain a safe distance when delivering food to Experiment 52B.\n\nWhile this creature may look like a tree, its taxonomy more closely resembles a giant land-based coral with cybernetic implants.\n\nAlthough normally lab-grown creatures would be given a better name than Experiment 52B, in this particular case the experimenting scientists weren't sure that they were done."
-msgstr "實驗體 52B 是一種具有攻擊性的定點植物，每消耗 1000 大卡食物會產生 5 公斤原生膠。\n\n複製人在向實驗 52B 運送食物時最好保持安全距離。\n\n雖然這種生物可能看起來像一棵樹，但它的分類更類似於帶有控制植入體的巨型陸基珊瑚。\n\n雖然通常實驗室培育的生物會被賦予比實驗體 52B 更好的名字，但在這種特殊情況下，實驗科學家並不確定它們是否已經完成。"
+msgstr "實驗體 52B 是一種具有攻擊性的定點植物，每消耗 1000 大卡食物會產生 5 公斤原生膠。\n\n複製人在向實驗體 52B 運送食物時最好保持安全距離。\n\n雖然這種生物可能看起來像一棵樹，但它的分類更類似於帶有控制植入體的巨型陸基珊瑚。\n\n雖然通常實驗室培育的生物會被賦予比實驗體 52B 更好的名字，但在這種特殊情況下，實驗科學家並不確定它們是否已經完成。"
 
 #. STRINGS.CODEX.EXPERIMENT52B.SUBTITLE
 msgctxt "STRINGS.CODEX.EXPERIMENT52B.SUBTITLE"
@@ -32213,7 +32253,7 @@ msgstr "來自另一個時代的回音強行闖入我的腦海，迫使我聆聽
 #. STRINGS.CODEX.MYLOG.BODY.PLANETARYECHOES.TITLE
 msgctxt "STRINGS.CODEX.MYLOG.BODY.PLANETARYECHOES.TITLE"
 msgid "The Shattered Planet"
-msgstr "破碎的星球"
+msgstr "破碎星球"
 
 #. STRINGS.CODEX.MYLOG.BODY.PRINTINGPOD.BODY
 msgctxt "STRINGS.CODEX.MYLOG.BODY.PRINTINGPOD.BODY"
@@ -32408,7 +32448,7 @@ msgstr "由於大大的眼睛，帕庫魚常被認為是目光空洞的，但牠
 #. STRINGS.CODEX.PACU.BODY.CONTAINER2
 msgctxt "STRINGS.CODEX.PACU.BODY.CONTAINER2"
 msgid "Feeding this critter its favorite <link=\"PACUTREAT\">Pacu Treat</link> helps tame it and keep it content."
-msgstr "餵食這種小動物牠最喜歡的<link=\"PACUTREAT\">帕庫點心</link>，有助於馴化並讓牠保持滿足。"
+msgstr "餵食這種小動物牠最喜歡的<link=\"PACUTREAT\">帕庫魚食</link>，有助於馴化並讓牠保持滿足。"
 
 #. STRINGS.CODEX.PACU.SPECIES_SUBTITLE
 msgctxt "STRINGS.CODEX.PACU.SPECIES_SUBTITLE"
@@ -33702,8 +33742,8 @@ msgstr "<link=\"REQUIREMENTCLASSSUBMERGIBLE\">可淹沒</link>"
 
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUPPORTBUILDING.DESCRIPTION
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUPPORTBUILDING.DESCRIPTION"
-msgid "Support buildings are tools that optimize work speed for eligible buildings that are within range and line of sight. Once built, they function independently."
-msgstr "支援建築是一種工具，能為其範圍與視線內符合條件的建築最佳化工作速度。一旦建成，它們便會獨立運作。"
+msgid "Support buildings are tools that optimize work speed for eligible buildings that are within range and line of sight. Certain ones have stackable effects when built side-by-side with others of the same type.\n\nOnce built, support buildings function independently."
+msgstr "支援建築是一種輔助設施，能為範圍與視線內符合條件的建築最佳化工作速度。部分支援建築在與同類型建築並排建造時，還具有可疊加的效果。\n\n一旦建造完成，支援建築便會獨立運作。"
 
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUPPORTBUILDING.FLAVOUR
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUPPORTBUILDING.FLAVOUR"
@@ -44460,6 +44500,16 @@ msgctxt "STRINGS.CREATURES.STATUSITEMS.HEALTHSTATUS.TOOLTIP"
 msgid "Current physical status: {healthState}"
 msgstr "目前身體狀況：{healthState}"
 
+#. STRINGS.CREATURES.STATUSITEMS.HIDINGFROMMETEORS.NAME
+msgctxt "STRINGS.CREATURES.STATUSITEMS.HIDINGFROMMETEORS.NAME"
+msgid "Taking Cover"
+msgstr "找掩護"
+
+#. STRINGS.CREATURES.STATUSITEMS.HIDINGFROMMETEORS.TOOLTIP
+msgctxt "STRINGS.CREATURES.STATUSITEMS.HIDINGFROMMETEORS.TOOLTIP"
+msgid "This critter is burrowing underground to escape a <style=\"KKeyword\">Meteor Shower</style>\n\nIt will resurface once the meteors stop falling"
+msgstr "這隻小動物正鑽入地底躲避<style=\"KKeyword\">流星雨</style>\n\n等流星停止墜落後，牠就會重新鑽出地面"
+
 #. STRINGS.CREATURES.STATUSITEMS.HIGH_YIELD.LINE_ITEM
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HIGH_YIELD.LINE_ITEM"
 msgid "    • {0}\n"
@@ -46380,13 +46430,13 @@ msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.WILTTEMPRANGEMOD.NAME"
 msgid "Viable Temperature Range"
 msgstr "生長溫度範圍"
 
-#. STRINGS.DUPLICANTS.ATTRIBUTES.YIELDAMOUNT.DESC
-msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.YIELDAMOUNT.DESC"
+#. STRINGS.DUPLICANTS.ATTRIBUTES.YIELDFACTOR.DESC
+msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.YIELDFACTOR.DESC"
 msgid "Plant production relative to the base crop"
-msgstr "相對於基礎作物的產量"
+msgstr "相對於基礎作物的植物產量"
 
-#. STRINGS.DUPLICANTS.ATTRIBUTES.YIELDAMOUNT.NAME
-msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.YIELDAMOUNT.NAME"
+#. STRINGS.DUPLICANTS.ATTRIBUTES.YIELDFACTOR.NAME
+msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.YIELDFACTOR.NAME"
 msgid "Yield Amount"
 msgstr "產量"
 
@@ -50227,8 +50277,8 @@ msgstr "這名複製人在搭完刺激的雲霄飛車後感覺勇氣百倍\n\n�
 
 #. STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTER.TOOLTIP_DLC1
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTER.TOOLTIP_DLC1"
-msgid "This Duplicant's piloting instincts are extra sharp right now\n\nLeisure activities increase Duplicants' <style=\"KKeyword\">Morale</style>"
-msgstr "這名複製人的駕駛直覺此刻格外敏銳\n\n休閒活動能提升複製人的<style=\"KKeyword\">士氣</style>"
+msgid "This Duplicant's feeling sharp after a recent \"test flight\"\n\nLeisure activities increase Duplicants' <style=\"KKeyword\">Morale</style>"
+msgstr "這名複製人在剛結束一趟「試飛」後，感覺精神格外敏銳\n\n休閒活動能提升複製人的<style=\"KKeyword\">士氣</style>"
 
 #. STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERSPINNING.NAME
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERSPINNING.NAME"
@@ -50237,8 +50287,8 @@ msgstr "飛馳中"
 
 #. STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERSPINNING.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERSPINNING.TOOLTIP"
-msgid "This Duplicant is on a wild roller coaster ride\n\nIt's helping them release pent-up <style=\"KKeyword\">Stress</style>"
-msgstr "這名複製人正在經歷一場狂野的雲霄飛車之旅\n\n這有助於釋放積壓已久的<style=\"KKeyword\">壓力</style>"
+msgid "This Duplicant is riding a roller coaster!\n\nIt's helping them release pent-up <style=\"KKeyword\">Stress</style>"
+msgstr "這名複製人正在搭雲霄飛車！\n\n這有助於釋放積壓已久的<style=\"KKeyword\">壓力</style>"
 
 #. STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERTURBO.NAME
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERTURBO.NAME"
@@ -50252,8 +50302,8 @@ msgstr "這名複製人剛體驗完極速飛馳，至今仍興奮不已\n\n休�
 
 #. STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERTURBO.TOOLTIP_DLC1
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERTURBO.TOOLTIP_DLC1"
-msgid "This Duplicant's piloting instincts are supercharged after a ride at top speed\n\nLeisure activities increase Duplicants' <style=\"KKeyword\">Morale</style>"
-msgstr "這名複製人在體驗極速飛馳後，駕駛直覺已被全面激發\n\n休閒活動能提升複製人的<style=\"KKeyword\">士氣</style>"
+msgid "This Duplicant's turbo-speed \"test flight\" left them ready for more\n\nLeisure activities increase Duplicants' <style=\"KKeyword\">Morale</style>"
+msgstr "經歷過這場極速「試飛」後，這名複製人已經迫不及待想再來一趟了\n\n休閒活動能提升複製人的<style=\"KKeyword\">士氣</style>"
 
 #. STRINGS.DUPLICANTS.MODIFIERS.ATEFROZENFOOD.NAME
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ATEFROZENFOOD.NAME"
@@ -57323,7 +57373,7 @@ msgstr "過敏"
 #. STRINGS.DUPLICANTS.TRAITS.ALLERGIES.SHORT_DESC
 msgctxt "STRINGS.DUPLICANTS.TRAITS.ALLERGIES.SHORT_DESC"
 msgid "Allergic reaction to <b><link=\"POLLENGERMS\">Floral Scent</link></b>"
-msgstr "<b><link=\"POLLENGERMS\">花香</link></b>的過敏反應"
+msgstr "<b><link=\"POLLENGERMS\">花粉症</link></b>的過敏反應"
 
 #. STRINGS.DUPLICANTS.TRAITS.ALLERGIES.SHORT_DESC_TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.TRAITS.ALLERGIES.SHORT_DESC_TOOLTIP"
@@ -65428,7 +65478,7 @@ msgstr "預設飛行頭盔"
 #. STRINGS.EQUIPMENT.PREFABS.JET_SUIT_SHOES.DESC
 msgctxt "STRINGS.EQUIPMENT.PREFABS.JET_SUIT_SHOES.DESC"
 msgid "Default footwear for jet suits."
-msgstr "飛行衣的預設靴子"
+msgstr "飛行衣的預設鞋子"
 
 #. STRINGS.EQUIPMENT.PREFABS.JET_SUIT_SHOES.NAME
 msgctxt "STRINGS.EQUIPMENT.PREFABS.JET_SUIT_SHOES.NAME"
@@ -72392,8 +72442,8 @@ msgstr "礦物"
 
 #. STRINGS.MISC.TAGS.ORGANICS
 msgctxt "STRINGS.MISC.TAGS.ORGANICS"
-msgid "Organic"
-msgstr "有機物"
+msgid "<link=\"ORGANICS\">Organic</link>"
+msgstr "<link=\"ORGANICS\">有機物</link>"
 
 #. STRINGS.MISC.TAGS.ORGANICS_DESC
 msgctxt "STRINGS.MISC.TAGS.ORGANICS_DESC"
@@ -79743,7 +79793,7 @@ msgstr "複製人在此可以安心呼吸，因為<link=\"OXYCORAL\">煙囪珊�
 #. STRINGS.SUBWORLDS.REGOLITH.DESC
 msgctxt "STRINGS.SUBWORLDS.REGOLITH.DESC"
 msgid "The Regolith Biome contains a bounty of <link=\"REGOLITH\">Regolith</link> which is very useful as a material for filtration."
-msgstr "風化層生態系含有大量的<link=\"REGOLITH\">表土</link>，作為過濾介質非常有用。"
+msgstr "風化生態系含有大量的<link=\"REGOLITH\">表土</link>，作為過濾介質非常有用。"
 
 #. STRINGS.SUBWORLDS.REGOLITH.NAME
 msgctxt "STRINGS.SUBWORLDS.REGOLITH.NAME"
@@ -87203,12 +87253,12 @@ msgstr "就像外交豁免權，但是沒有外交。複製人永遠不會生病
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.IMMUNESYSTEM.LEVELS.STRONG.ATTRIBUTE_MODIFIER_NAME
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.IMMUNESYSTEM.LEVELS.STRONG.ATTRIBUTE_MODIFIER_NAME"
 msgid "Germ Resistance (Difficulty Down)"
-msgstr "病菌抵抗（難度降低）"
+msgstr "病菌抗性（難度降低）"
 
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.IMMUNESYSTEM.LEVELS.STRONG.NAME
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.IMMUNESYSTEM.LEVELS.STRONG.NAME"
 msgid "Germ Resistant"
-msgstr "病菌抵抗"
+msgstr "抗菌體質"
 
 #. STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.IMMUNESYSTEM.LEVELS.STRONG.TOOLTIP
 msgctxt "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS.IMMUNESYSTEM.LEVELS.STRONG.TOOLTIP"
@@ -94373,12 +94423,12 @@ msgstr "{0} 的服裝"
 #. STRINGS.UI.OVERLAYS.DECOR.CLOTHING_TRAIT_DECORDOWN
 msgctxt "STRINGS.UI.OVERLAYS.DECOR.CLOTHING_TRAIT_DECORDOWN"
 msgid "{0}'s Outfit (Shabby Dresser)"
-msgstr "{0} 的服裝（邋遢）"
+msgstr "{0} 的服裝（邋遢的衣著）"
 
 #. STRINGS.UI.OVERLAYS.DECOR.CLOTHING_TRAIT_DECORUP
 msgctxt "STRINGS.UI.OVERLAYS.DECOR.CLOTHING_TRAIT_DECORUP"
 msgid "{0}'s Outfit (Innately Stylish)"
-msgstr "{0} 的服裝（時尚）"
+msgstr "{0} 的服裝（天生時尚）"
 
 #. STRINGS.UI.OVERLAYS.DECOR.CLUTTER
 msgctxt "STRINGS.UI.OVERLAYS.DECOR.CLUTTER"
@@ -104083,7 +104133,7 @@ msgstr "額外需求"
 #. STRINGS.UI.UISIDESCREENS.FABRICATORSIDESCREEN.ADDITIONAL_REQUIREMENTS_TOOLTIP
 msgctxt "STRINGS.UI.UISIDESCREENS.FABRICATORSIDESCREEN.ADDITIONAL_REQUIREMENTS_TOOLTIP"
 msgid "This recipe requires Radbolts to be collected by the building's input port\n\nOpen the <b>Automation Overlay</b> {Hotkey/Overlay13} to view building ports"
-msgstr "此配方需要透過建築物的輸入端收集輻射粒子。\n\n開啟<b>自動化</b> {Hotkey/Overlay13} 即可檢視建築"
+msgstr "此配方需要透過建築物的輸入端收集輻射粒子。\n\n開啟<b>自動化概覽</b> {Hotkey/Overlay13} 即可檢視建築"
 
 #. STRINGS.UI.UISIDESCREENS.FABRICATORSIDESCREEN.ALL_INGREDIENTS_IN_CATEGORY_DISOVERED
 msgctxt "STRINGS.UI.UISIDESCREENS.FABRICATORSIDESCREEN.ALL_INGREDIENTS_IN_CATEGORY_DISOVERED"
@@ -109908,7 +109958,7 @@ msgstr "穀神小行星"
 #. STRINGS.WORLDS.CERESCLASSICSHATTERED.DESCRIPTION
 msgctxt "STRINGS.WORLDS.CERESCLASSICSHATTERED.DESCRIPTION"
 msgid "The heavily damaged remnants of a frosty location with sub-zero temperatures throughout.\n\n<smallcaps>Exploring the rubble of Blasted Ceres's sub-zero temperatures is particularly challenging, yet natural fuel sources provide a valuable payoff.</smallcaps>"
-msgstr "一個冰霜覆蓋、遭遇嚴重受損後的遺骸，到處都是低於冰點的溫度。\n\n<smallcaps>在酷寒溫度中探索破碎的穀神星相當具有挑戰性，但天然燃料源可作為寶貴的回報。</smallcaps>"
+msgstr "一個冰霜覆蓋、遭遇嚴重受損後的遺骸，到處都是低於冰點的溫度。\n\n<smallcaps>在酷寒溫度中探索被炸毀的穀神星相當具有挑戰性，但天然燃料源可作為寶貴的回報。</smallcaps>"
 
 #. STRINGS.WORLDS.CERESCLASSICSHATTERED.NAME
 msgctxt "STRINGS.WORLDS.CERESCLASSICSHATTERED.NAME"

@@ -11260,12 +11260,12 @@ msgstr ""
 
 #. STRINGS.BUILDING.STATUSITEMS.TURBOMODE.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TURBOMODE.TOOLTIP"
-msgid "This building is operating at maximum power\n\n    • Power consumption: <b>{0}</b>\n    • Heat production: <b>{1}</b>\n    • Boiling the surrounding liquid"
+msgid "This building is operating at maximum <style=\"KKeyword\">Power</style>\n\n    • <style=\"KKeyword\">Power</style> consumption: <b>{0}</b>\n    • <style=\"KKeyword\">Heat</style> production: <b>{1}</b>\n    • Boiling the surrounding liquid"
 msgstr ""
 
 #. STRINGS.BUILDING.STATUSITEMS.TURBOMODE.TOOLTIP_RECREATION
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TURBOMODE.TOOLTIP_RECREATION"
-msgid "This building is operating at maximum power\n\n    • Power consumption: <b>{0}</b>\n    • Duplicants who spend at least <b>{1}</b> of their ride in Turbo Mode gain extra <style=\"KKeyword\">Morale</style>"
+msgid "This building is operating at maximum <style=\"KKeyword\">Power</style>\n\n    • <style=\"KKeyword\">Power</style> consumption: <b>{0}</b>\n    • Duplicants who spend at least <b>{1}</b> of their ride in Turbo Mode gain extra <style=\"KKeyword\">Morale</style>"
 msgstr ""
 
 #. STRINGS.BUILDING.STATUSITEMS.UNASSIGNED.NAME
@@ -11990,7 +11990,7 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_TURBO
 msgctxt "STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_TURBO"
-msgid "{attrib}: {amount} (Turbo)"
+msgid "{attrib}: {amount} (Turbo Mode)"
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_TURBO_TOOLTIP
@@ -23983,6 +23983,16 @@ msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SEALOVE
 msgid "A Deep Bow"
 msgstr ""
 
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SHELL_SIMPLE.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SHELL_SIMPLE.DESC"
+msgid "sandsculpture_shell_simple desc."
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SHELL_SIMPLE.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SHELL_SIMPLE.NAME"
+msgid "sandsculpture_shell_simple name"
+msgstr ""
+
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SNOWMAN.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SNOWMAN.DESC"
 msgid "This grainy character looks like they're winning a game of Limbo."
@@ -23991,6 +24001,36 @@ msgstr ""
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SNOWMAN.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SNOWMAN.NAME"
 msgid "The Sandman"
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SOFTSERVE.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SOFTSERVE.DESC"
+msgid "sandsculpture_softserve desc"
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SOFTSERVE.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SOFTSERVE.NAME"
+msgid "sandsculpture_softserve name"
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_STARFISH_SIMPLE.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_STARFISH_SIMPLE.DESC"
+msgid "sandsculpture_starfish_simple desc"
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_STARFISH_SIMPLE.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_STARFISH_SIMPLE.NAME"
+msgid "sandsculpture_starfish_simple name"
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_TOMBSTONE_SIMPLE.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_TOMBSTONE_SIMPLE.DESC"
+msgid "sandsculpture_tombstone_simple desc"
+msgstr ""
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_TOMBSTONE_SIMPLE.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_TOMBSTONE_SIMPLE.NAME"
+msgid "sandsculpture_tombstone_simple name"
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.NAME
@@ -33700,7 +33740,7 @@ msgstr ""
 
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUPPORTBUILDING.DESCRIPTION
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUPPORTBUILDING.DESCRIPTION"
-msgid "Support buildings are tools that optimize work speed for eligible buildings that are within range and line of sight. Once built, they function independently."
+msgid "Support buildings are tools that optimize work speed for eligible buildings that are within range and line of sight. Certain ones have stackable effects when built side-by-side with others of the same type.\n\nOnce built, support buildings function independently."
 msgstr ""
 
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUPPORTBUILDING.FLAVOUR
@@ -44458,6 +44498,16 @@ msgctxt "STRINGS.CREATURES.STATUSITEMS.HEALTHSTATUS.TOOLTIP"
 msgid "Current physical status: {healthState}"
 msgstr ""
 
+#. STRINGS.CREATURES.STATUSITEMS.HIDINGFROMMETEORS.NAME
+msgctxt "STRINGS.CREATURES.STATUSITEMS.HIDINGFROMMETEORS.NAME"
+msgid "Taking Cover"
+msgstr ""
+
+#. STRINGS.CREATURES.STATUSITEMS.HIDINGFROMMETEORS.TOOLTIP
+msgctxt "STRINGS.CREATURES.STATUSITEMS.HIDINGFROMMETEORS.TOOLTIP"
+msgid "This critter is burrowing underground to escape a <style=\"KKeyword\">Meteor Shower</style>\n\nIt will resurface once the meteors stop falling"
+msgstr ""
+
 #. STRINGS.CREATURES.STATUSITEMS.HIGH_YIELD.LINE_ITEM
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HIGH_YIELD.LINE_ITEM"
 msgid "    • {0}\n"
@@ -46378,13 +46428,13 @@ msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.WILTTEMPRANGEMOD.NAME"
 msgid "Viable Temperature Range"
 msgstr ""
 
-#. STRINGS.DUPLICANTS.ATTRIBUTES.YIELDAMOUNT.DESC
-msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.YIELDAMOUNT.DESC"
+#. STRINGS.DUPLICANTS.ATTRIBUTES.YIELDFACTOR.DESC
+msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.YIELDFACTOR.DESC"
 msgid "Plant production relative to the base crop"
 msgstr ""
 
-#. STRINGS.DUPLICANTS.ATTRIBUTES.YIELDAMOUNT.NAME
-msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.YIELDAMOUNT.NAME"
+#. STRINGS.DUPLICANTS.ATTRIBUTES.YIELDFACTOR.NAME
+msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.YIELDFACTOR.NAME"
 msgid "Yield Amount"
 msgstr ""
 
@@ -50225,7 +50275,7 @@ msgstr ""
 
 #. STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTER.TOOLTIP_DLC1
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTER.TOOLTIP_DLC1"
-msgid "This Duplicant's piloting instincts are extra sharp right now\n\nLeisure activities increase Duplicants' <style=\"KKeyword\">Morale</style>"
+msgid "This Duplicant's feeling sharp after a recent \"test flight\"\n\nLeisure activities increase Duplicants' <style=\"KKeyword\">Morale</style>"
 msgstr ""
 
 #. STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERSPINNING.NAME
@@ -50235,7 +50285,7 @@ msgstr ""
 
 #. STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERSPINNING.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERSPINNING.TOOLTIP"
-msgid "This Duplicant is on a wild roller coaster ride\n\nIt's helping them release pent-up <style=\"KKeyword\">Stress</style>"
+msgid "This Duplicant is riding a roller coaster!\n\nIt's helping them release pent-up <style=\"KKeyword\">Stress</style>"
 msgstr ""
 
 #. STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERTURBO.NAME
@@ -50250,7 +50300,7 @@ msgstr ""
 
 #. STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERTURBO.TOOLTIP_DLC1
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERTURBO.TOOLTIP_DLC1"
-msgid "This Duplicant's piloting instincts are supercharged after a ride at top speed\n\nLeisure activities increase Duplicants' <style=\"KKeyword\">Morale</style>"
+msgid "This Duplicant's turbo-speed \"test flight\" left them ready for more\n\nLeisure activities increase Duplicants' <style=\"KKeyword\">Morale</style>"
 msgstr ""
 
 #. STRINGS.DUPLICANTS.MODIFIERS.ATEFROZENFOOD.NAME
@@ -72390,7 +72440,7 @@ msgstr ""
 
 #. STRINGS.MISC.TAGS.ORGANICS
 msgctxt "STRINGS.MISC.TAGS.ORGANICS"
-msgid "Organic"
+msgid "<link=\"ORGANICS\">Organic</link>"
 msgstr ""
 
 #. STRINGS.MISC.TAGS.ORGANICS_DESC
