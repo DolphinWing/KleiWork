@@ -79,6 +79,8 @@
     *   `filteredList`: 當前顯示的編輯列表 (`EditorData`)。
     *   `changedList`: 本次工作階段 (Session) 實際修改過的 Key 清單 (`List<String>`)。
     *   `hasDraft`: 目前硬碟上是否存在實體草稿檔。
+    *   `diagnosticCount`: 全域標籤待修條目總數（即時統計全量 `allEntries()`）。
+    *   `glossaryCount`: 全域未審閱詞彙衝突待處理總數。
     *   `uiState`: 包含下方的 UI 狀態。
 *   **`UiState`**: 純 UI 相關的短暫狀態。
     *   `isLoading`: 是否正在處理中。
@@ -127,15 +129,21 @@
 1.  **待辦模式 (Default / Diff Mode)**
     *   **觸發時機**：搜尋模式未啟用時。
     *   **頂端狀態欄 (Toolbar Status)**：顯示「全部: %1$d, 已變更: %2$d」，分別對應待辦項目總數 (`filteredList.size`) 與本次工作階段實際已翻譯項目數 (`changedList.size`)。
-    *   **視覺標記**：
-        *   `MODIFIED`: 內容與正式檔 `PoSave` 不同時顯示。
-        *   `NEW`: 範本中新增的 Key。
-        *   `Draft Chip`: 下方顯示草稿檔中的原始內容，供比對。
+    *   **卡片指示器與膠囊標籤重構 (Header Badges & Icons)**：
+        *   `NEW`: 採用 `errorContainer` 半透明背景之圓角膠囊（Pill Badge），標示範本新增 Key。
+        *   `MODIFIED`: 採用 `tertiaryContainer` 半透明背景之圓角膠囊，內容與正式檔 `PoSave` 不同時顯示。
+        *   🟠 **標籤診斷指示**：`ic_sensor_window`（16dp），存在語法錯誤或標籤對稱性問題時呈現。
+        *   🔴 **詞彙衝突指示**：`ic_report`（16dp），僅在存在**未審閱詞彙衝突**時強高亮提示；已審閱保留之新詞不顯示圖示，確保卡片右上角只聚焦於待處置問題。
+        *   `Draft Chip`: 卡片下方顯示草稿檔中的原始內容，供精確比對。
         *   **卡片修改狀態**：由各項目實體之 `target.changed > 0` 獨立驅動卡片高亮邊框，解耦平行陣列索引依賴。
 
-2.  **全覽模式 (Search / Library Mode)**
+2.  **全覽模式 (Search / Library Mode) 與資訊前置 (Information Scaffolding)**
     *   **觸發時機**：啟用搜尋模式 (`isActive = true`)。
     *   **行為**：自動隱藏 `MODIFIED`/`NEW` 標籤，提供純淨的字典查詢體驗。
+    *   **FilterChip 即時待處理總數**：搜尋列下方之 `SearchTypeRow` 整合全域即時計數與 Leading Icon：
+        *   `[🟠 標籤診斷 (X)]`：即時顯示全域標籤待修條目數。
+        *   `[🔴 詞彙衝突 (Y)]`：即時顯示全域未審閱專有名詞衝突數。
+        *   資訊前置設計讓校對者無需點進分類即可一覽待處理總量，且點擊後精確過濾。
 
 3.  **重新整理 (Refresh)**：
     *   觸發 `RefreshSource` 時會清空編輯器狀態，確保 UI 一致性。
@@ -182,13 +190,17 @@
 
 核心邏輯（如 `TagSensor`, `NisbetPeek` 解析層，以及 `PoHelper` 的多行解析與引號轉義機制）配備單元測試，確保複雜標籤語法與字串處理的穩健性。
 
-### 4.9. 排版精煉與引號轉換 (Quote Refactoring)
+### 4.9. 排版精煉與引號轉換 (Quote Refactoring & Display Standardization)
 
 為了使翻譯後的字串符合中文直角引號排版規範，`TextRefinery` 整合了防禦性引號轉換機制：
 * **對稱引號精煉**：在譯文進行 Refinery 的最後階段，會自動將成對的英文引號（同時支援轉義的 `\"` 與一般的 `"`）交替替換為 `「` 與 `」`。
 * **防禦性偶數判定**：僅在非 Tag 的純文字（Plain Text）區段偵測到**偶數個且大於 0** 的引號總數時，才觸發替換。若引號數為奇數（代表譯文配對殘缺），則保持原樣不做更動，避免破壞排版。
 * **標籤安全防護 (Token-free 狀態機)**：為避免毀壞 `<link=\"...\">` 等標籤內的屬性引號，內部採用了極輕量的括號狀態機（`inTag` 開關）。當指針處於 `<` 與 `>` 區間時，自動忽略任何引號計算與替換。同時此設計完全獨立於 `OniToken` 之外，避免了重組時字面 `\\n` 被誤還原成實際換行的副作用。
 * **限定套用範圍 (Git Diff & 歷史保護)**：為保護歷史特意留存的引號並避免產生大量 Git Diff，自動引號精煉**僅限於新項目**（即 Newly 新增項目、MsgidChanged 英文變更項目、與 Fallback 遞補項目）。當載入已翻譯的歷史項目時，系統會維持其原貌。此外，當使用者點選「套用簡中參考」手動轉換時，亦會套用此精煉機制。
+* **UI 資源與引號顯示規範**：
+    * 繁體中文資源檔（`values-zh-rTW/strings.xml`）全面統一採用國字方角括號「%1$s」（如 `套用「%1$s」`、`詞彙衝突：原文包含「%1$s」，規範譯名為「%2$s」`）。
+    * 英文資源檔（`values/strings.xml`）採用標準 XML 實體 `&quot;%1$s&quot;`。
+    * 程式碼插值前（如 `EntryEditor`）一律落實 Unescape，過濾 PO 檔原生反斜線，徹底杜絕 UI 介面洩漏 `\"` 字面雜質。
 
 ### 4.10. 詞彙一致性感測與管理 (Terminology Consistency & Glossary Sensor)
 
@@ -237,6 +249,21 @@
     * 採用 `FlowRow` 自然折行排版，徹底防止小視窗水平溢出。
     * 具備 Hover 聚焦連動（滑鼠移到 Chip 時，輸入框中對應文字加粗並加深底色）。
     * 提供一鍵修復、純文字複製、認可新詞與完整 Undo 復原機制。
+
+### 4.12. 標籤樣式感測與防禦機制 (Tag Sensor Style Alignment & Multi-pass Protection)
+
+為了防止在對齊官方 `<i>` 與歷史 `<b>` 樣式時發生「誤判複合標籤」或「過度替換」，`TagSensor` 實作了三層防禦架構：
+* **標籤特徵解析 (Tag Feature Extraction)**：
+    * 透過 `extractFormattedSpans` 為每個 `<b>` 和 `<i>` 提取內部複合標籤特徵（`compoundTagSignature`，如 `style=logic_on`、`style=logic_off`、`color=#...`）。
+    * 純文字格式標籤標記為 `null`，使單純粗體/斜體與複合樣式在資料特徵層徹底解耦。
+* **多階段排除與滿足配對 (Multi-pass Exclusion & Satisfaction Pairing)**：
+    * **Pass 1（字面完全相符排除）**：標籤內部文字完全一致者（如 `<b>75°C</b>` 對 `<b>75°C</b>`），視為已滿足（Satisfied）並 1:1 排除，避免無效替換。
+    * **Pass 2（複合標籤結構相符排除）**：若譯文與原文的複合標籤特徵數量 1:1 對應（如譯文有 3 個 `<b><style="logic_on">`，原文亦有 3 個 `<b><style="logic_on">`），直接 1:1 抵銷並排除，絕不誤判定為 `<b> ➜ <i>` 待修候選。
+    * **Pass 3（孤兒標籤篩選）**：經前兩輪過濾後，僅保留真正未被原文格式滿足的標籤（如 `<b>只會</b>` 對應 `<i>only</i>`）。
+* **配額守衛 (Quota Guard)**：
+    * 最終候選數量嚴格受限於整體標籤差額配額：
+      $$\text{quota} = \min(|source_i - target_i|,\, |source_b - target_b|)$$
+    * 徹底杜絕舊版 Greedy 全域 Regex 導致候選數量暴增、一鍵套用反而改壞正確標籤的嚴重副作用。
 
 ---
 

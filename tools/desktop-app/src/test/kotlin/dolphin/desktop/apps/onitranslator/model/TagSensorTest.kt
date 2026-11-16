@@ -142,18 +142,36 @@ class TagSensorTest {
         assertTrue(diag.hasMismatch)
 
         val spans = TagSensor.findStyleMismatchSpans(source, target)
-        assertEquals(2, spans.size) // both <b> spans in target can be aligned to <i>
-        // Specifically the first one:
+        assertEquals(1, spans.size, "Verbatim matching 75°C must be excluded, only <b>過熱於：</b> should be flagged")
         assertEquals("<b>過熱於：</b>", spans[0].text)
         assertEquals("<i>過熱於：</i>", spans[0].replacement)
 
-        // Replace only the first one
-        val replaced = TagSensor.applySingleReplacement(target, spans[0])
+        val replaced = TagSensor.applyBatchReplacement(target, spans)
         assertEquals("<i>過熱於：</i> <b>75°C</b>", replaced)
 
         // Now verify diagnostic passes!
         val diagAfter = TagSensor.diagnose(source, replaced)
         assertFalse(diagAfter.hasIssue, "Style should be matched perfectly after alignment")
+    }
+
+    @Test
+    fun testStyleMismatchWithCompoundStyleTags() {
+        val source = "Contains an internal Memory, and will output whatever signal is stored in that Memory.\n\nSignals sent to the Inputs <i>only</i> affect the Memory, and do not pass through to the Output. \n\nSending a <b><style=\"logic_on\">Green Signal</style></b> to the Set Port (S) will set the memory to <b><style=\"logic_on\">Green</style></b>. \n\nSending a <b><style=\"logic_on\">Green Signal</style></b> to the Reset Port (R) will reset the memory back to <b><style=\"logic_off\">Red</style></b>."
+        val target = "內含一個記憶體，會輸出其中儲存的訊號。\n\n傳送至輸入端的訊號<b>只會</b>影響記憶體，並不會傳遞至輸出端。\n\n傳送<b><style=\"logic_on\">綠色訊號</style></b>到設定端（S），會設定記憶體為<b><style=\"logic_on\">綠色</style></b>。\n\n傳送<b><style=\"logic_on\">綠色訊號</style></b>到重設端（R），會將記憶體重設為<b><style=\"logic_off\">紅色</style></b>。"
+
+        val diag = TagSensor.diagnose(source, target)
+        println("testStyleMismatchWithCompoundStyleTags diag: hasIssue=${diag.hasIssue}, hasMismatch=${diag.hasMismatch}, diffReport=${diag.getDiffReport()}")
+        assertTrue(diag.hasIssue)
+        assertTrue(diag.hasMismatch)
+
+        val spans = TagSensor.findStyleMismatchSpans(source, target)
+        println("testStyleMismatchWithCompoundStyleTags spans count: ${spans.size}, spans=$spans")
+        assertEquals(1, spans.size, "Only the plain bold tag '<b>只會</b>' should be flagged, not the 3 matching compound style tags")
+        assertEquals("<b>只會</b>", spans[0].text)
+        assertEquals("<i>只會</i>", spans[0].replacement)
+
+        val replaced = TagSensor.applyBatchReplacement(target, spans)
+        assertFalse(TagSensor.diagnose(source, replaced).hasIssue)
     }
 
     @Test

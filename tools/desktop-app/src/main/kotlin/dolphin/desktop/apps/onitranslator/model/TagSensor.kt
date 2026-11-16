@@ -50,6 +50,39 @@ object TagSensor {
         )
     }
 
+    private val FORMATTED_TAG_REGEX = Regex("""<(b|i)>(.*?)</\1>""", RegexOption.DOT_MATCHES_ALL)
+    private val INNER_TAG_SIG_REGEX = Regex("""^<([a-zA-Z0-9_]+)(?:\s*=\s*["']?([^"'>\s]*)["']?)?>""")
+
+    private data class FormattedTagSpan(
+        val range: IntRange,
+        val tag: String, // "b" or "i"
+        val text: String,
+        val inner: String,
+        val compoundTagSignature: String?,
+    )
+
+    private fun extractFormattedSpans(text: String): List<FormattedTagSpan> {
+        if (text.isEmpty()) return emptyList()
+        return FORMATTED_TAG_REGEX.findAll(text).map { match ->
+            val tag = match.groupValues[1]
+            val inner = match.groupValues[2]
+            val trimmedInner = inner.trim()
+            val sigMatch = INNER_TAG_SIG_REGEX.find(trimmedInner)
+            val compoundSig = sigMatch?.let {
+                val tagName = it.groupValues[1].lowercase()
+                val attrVal = it.groupValues.getOrNull(2)?.lowercase() ?: ""
+                if (attrVal.isNotEmpty()) "$tagName=$attrVal" else tagName
+            }
+            FormattedTagSpan(
+                range = match.range,
+                tag = tag,
+                text = match.value,
+                inner = inner,
+                compoundTagSignature = compoundSig,
+            )
+        }.toList()
+    }
+
     /**
      * Finds style mismatches between source and target (e.g. official <i> vs target <b>).
      */
@@ -62,42 +95,79 @@ object TagSensor {
         val sourceB = sourceTags["b"] ?: 0
         val targetB = targetTags["b"] ?: 0
 
-        val result = mutableListOf<TagCandidateSpan>()
+        val sourceSpans = extractFormattedSpans(source)
+        val targetSpans = extractFormattedSpans(target)
 
         // Situation 1: Source has more <i> and Target has more <b> (convert <b>...</b> to <i>...</i>)
         if (sourceI > targetI && targetB > sourceB) {
-            val boldRegex = Regex("""<b>(.*?)</b>""", RegexOption.DOT_MATCHES_ALL)
-            boldRegex.findAll(target).forEach { match ->
-                val inner = match.groupValues[1]
-                result.add(
-                    TagCandidateSpan(
-                        range = match.range,
-                        text = match.value,
-                        replacement = "<i>$inner</i>",
-                        issueType = TagIssueType.STYLE_MISMATCH,
-                        description = "對齊官方標籤: <b>...</b> ➜ <i>...</i>"
-                    )
-                )
+            val quota = minOf(sourceI - targetI, targetB - sourceB)
+            val availableSourceB = sourceSpans.filter { it.tag == "b" }.toMutableList()
+            val unsatisfiedTargetB = mutableListOf<FormattedTagSpan>()
+
+            for (tgt in targetSpans.filter { it.tag == "b" }) {
+                // Pass 1: Verbatim inner content match (e.g. <b>75°C</b>)
+                val verbatimIdx = availableSourceB.indexOfFirst { it.inner.trim() == tgt.inner.trim() }
+                if (verbatimIdx >= 0) {
+                    availableSourceB.removeAt(verbatimIdx)
+                    continue
+                }
+                // Pass 2: Compound tag signature match (e.g. <b><style="logic_on">...</style></b>)
+                if (tgt.compoundTagSignature != null) {
+                    val compIdx = availableSourceB.indexOfFirst { it.compoundTagSignature == tgt.compoundTagSignature }
+                    if (compIdx >= 0) {
+                        availableSourceB.removeAt(compIdx)
+                        continue
+                    }
+                }
+                unsatisfiedTargetB.add(tgt)
             }
+
+            return unsatisfiedTargetB.take(quota).map { tgt ->
+                TagCandidateSpan(
+                    range = tgt.range,
+                    text = tgt.text,
+                    replacement = "<i>${tgt.inner}</i>",
+                    issueType = TagIssueType.STYLE_MISMATCH,
+                    description = "對齊官方標籤: <b>...</b> ➜ <i>...</i>"
+                )
+            }.filterNonOverlappingTagSpans()
         }
         // Situation 2: Source has more <b> and Target has more <i> (convert <i>...</i> to <b>...</b>)
         else if (sourceB > targetB && targetI > sourceI) {
-            val italicRegex = Regex("""<i>(.*?)</i>""", RegexOption.DOT_MATCHES_ALL)
-            italicRegex.findAll(target).forEach { match ->
-                val inner = match.groupValues[1]
-                result.add(
-                    TagCandidateSpan(
-                        range = match.range,
-                        text = match.value,
-                        replacement = "<b>$inner</b>",
-                        issueType = TagIssueType.STYLE_MISMATCH,
-                        description = "對齊官方標籤: <i>...</i> ➜ <b>...</b>"
-                    )
-                )
+            val quota = minOf(sourceB - targetB, targetI - sourceI)
+            val availableSourceI = sourceSpans.filter { it.tag == "i" }.toMutableList()
+            val unsatisfiedTargetI = mutableListOf<FormattedTagSpan>()
+
+            for (tgt in targetSpans.filter { it.tag == "i" }) {
+                // Pass 1: Verbatim inner content match
+                val verbatimIdx = availableSourceI.indexOfFirst { it.inner.trim() == tgt.inner.trim() }
+                if (verbatimIdx >= 0) {
+                    availableSourceI.removeAt(verbatimIdx)
+                    continue
+                }
+                // Pass 2: Compound tag signature match
+                if (tgt.compoundTagSignature != null) {
+                    val compIdx = availableSourceI.indexOfFirst { it.compoundTagSignature == tgt.compoundTagSignature }
+                    if (compIdx >= 0) {
+                        availableSourceI.removeAt(compIdx)
+                        continue
+                    }
+                }
+                unsatisfiedTargetI.add(tgt)
             }
+
+            return unsatisfiedTargetI.take(quota).map { tgt ->
+                TagCandidateSpan(
+                    range = tgt.range,
+                    text = tgt.text,
+                    replacement = "<b>${tgt.inner}</b>",
+                    issueType = TagIssueType.STYLE_MISMATCH,
+                    description = "對齊官方標籤: <i>...</i> ➜ <b>...</b>"
+                )
+            }.filterNonOverlappingTagSpans()
         }
 
-        return result.filterNonOverlappingTagSpans()
+        return emptyList()
     }
 
     /**
