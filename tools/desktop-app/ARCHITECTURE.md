@@ -158,11 +158,14 @@
     *   編輯器下方列出 `Source`, `ChsRef`, `PoSave` 三重參考，並可手動切換顯示。
     *   列表項目採用 Tertiary 色系標記「已修改」狀態，與 `PoSave` 標籤產生視覺連動。
 
-*   **AI 協作與智慧貼上**：
+*   **AI 協作與寫入/檢視動作分離 (Action Separation)**：
     *   支援從剪貼簿提取 `msgstr` 並自動解析轉義字元，實現一鍵同步。
+    *   **物理空間隔離防誤觸**：編輯器底部操作列將破壞性之「智慧貼上（Write Action）」保留於左側輔助區，將非破壞性之「NisbetPeek（Inspection Action）」移至右側決策區（靠近取消與套用，並以 VerticalDivider 區隔），徹底杜絕誤觸改寫內文之風險。
 
-*   **NisbetPeek 預覽系統**：
-    *   模擬遊戲內渲染效果（顏色、連結、插值）。
+*   **NisbetPeek 預覽系統與 Codex 實體透視**：
+    *   **遊戲語意樣式精準還原**：支援 `<style="logic_on">`（電路綠）、`<style="logic_off">`（警示紅）、`<style="KKeyword">`（官方 Codex 青藍色 `#26C6DA`）、`<style="flavor_text/lore">`（背景故事斜體灰）。
+    *   **連結膠囊化樣式**：`<link>` 呈現專屬粉紅底線與微底色膠囊襯底。
+    *   **Codex 實體目標透視卡片 (Link Target IDs)**：自動提取文字內所有 `<link="ID">` 實體，於預覽區下方以 FlowRow 條列顯示 `[文字 ➜ TARGET_ID]`（如 `門 ➜ BUILDING_DOOR`），方便校對者一覽百科連結指向是否正確。
     *   內建 `Tag Sensor` 診斷，即時提示標籤不對稱或語法錯誤。
 
 *   **列表導航與桌面捲軸**：

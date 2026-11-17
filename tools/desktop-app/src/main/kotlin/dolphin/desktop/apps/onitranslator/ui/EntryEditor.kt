@@ -15,10 +15,12 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -38,6 +40,7 @@ import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.TooltipAnchorPosition
 import androidx.compose.material3.TooltipBox
 import androidx.compose.material3.TooltipDefaults
+import androidx.compose.material3.VerticalDivider
 import androidx.compose.material3.rememberTooltipState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -465,15 +468,6 @@ private fun EditorActionRow(
             Spacer(Modifier.width(16.dp))
         }
 
-        if (editedText.shouldPeek(diagnostic)) {
-            TooltipIconButton(
-                painter = painterResource(if (isPeeking) Res.drawable.ic_visibility_off else Res.drawable.ic_visibility),
-                tooltip = if (isPeeking) stringResource(Res.string.tooltip_peek_close) else stringResource(Res.string.tooltip_peek_open),
-                position = TooltipAnchorPosition.Above,
-                onClick = { onPeekingChange(!isPeeking) }
-            )
-        }
-
         TooltipIconButton(
             painter = painterResource(Res.drawable.ic_auto_awesome),
             tooltip = stringResource(Res.string.tooltip_smart_paste),
@@ -507,6 +501,30 @@ private fun EditorActionRow(
         }
 
         Spacer(Modifier.weight(1f))
+
+        if (editedText.shouldPeek(diagnostic)) {
+            val peekBg = if (isPeeking) MaterialTheme.colorScheme.primaryContainer else Color.Transparent
+            val peekContent = if (isPeeking) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onSurfaceVariant
+            Surface(
+                shape = CircleShape,
+                color = peekBg,
+                contentColor = peekContent,
+            ) {
+                TooltipIconButton(
+                    painter = painterResource(if (isPeeking) Res.drawable.ic_visibility_off else Res.drawable.ic_visibility),
+                    tooltip = if (isPeeking) stringResource(Res.string.tooltip_peek_close) else stringResource(Res.string.tooltip_peek_open),
+                    position = TooltipAnchorPosition.Above,
+                    onClick = { onPeekingChange(!isPeeking) }
+                )
+            }
+            Spacer(Modifier.width(8.dp))
+            VerticalDivider(
+                modifier = Modifier.height(18.dp),
+                color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)
+            )
+            Spacer(Modifier.width(8.dp))
+        }
+
         TextButton(onClick = { onEvent(AppEvent.Editor.Select(null)) }) {
             Text(stringResource(Res.string.button_cancel))
         }

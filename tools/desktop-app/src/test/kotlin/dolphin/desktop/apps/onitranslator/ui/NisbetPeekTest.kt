@@ -77,4 +77,22 @@ class NisbetPeekTest {
         assertEquals("color", (tokens[1] as OniToken.OpeningTag).name)
         assertEquals("link", (tokens[3] as OniToken.ClosingTag).name)
     }
+
+    @Test
+    fun testExtractLinkedEntities() {
+        val standard = """We need a <link="PLANTERBOX">Planter Box</link> for farming."""
+        assertEquals(listOf("Planter Box" to "PLANTERBOX"), extractLinkedEntities(standard))
+
+        val compound = """Construct a <link="MANUALGENERATOR"><b>Manual Generator</b></link> now."""
+        assertEquals(listOf("Manual Generator" to "MANUALGENERATOR"), extractLinkedEntities(compound))
+
+        val quoteless = """See <link=DOOR>Pneumatic Door</link> here."""
+        assertEquals(listOf("Pneumatic Door" to "DOOR"), extractLinkedEntities(quoteless))
+
+        val escapedQuotes = """Sample <link=\"METALORE\">Metal</link> from PO file."""
+        assertEquals(listOf("Metal" to "METALORE"), extractLinkedEntities(escapedQuotes))
+
+        val doubleEscaped = """Sample <link=\\"OXYGEN\\">Oxygen</link> from serialized string."""
+        assertEquals(listOf("Oxygen" to "OXYGEN"), extractLinkedEntities(doubleEscaped))
+    }
 }

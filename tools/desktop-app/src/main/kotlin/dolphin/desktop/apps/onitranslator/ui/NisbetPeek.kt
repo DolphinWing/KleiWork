@@ -7,9 +7,12 @@ import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -22,19 +25,31 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.PointerIcon
+import androidx.compose.ui.input.pointer.pointerHoverIcon
+import androidx.compose.ui.input.pointer.pointerInput
+import dolphin.desktop.apps.onitranslator.model.SnackbarManager
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.BaselineShift
@@ -50,9 +65,11 @@ import dolphin.desktop.apps.onitranslator.generated.resources.NisbetWhistle
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.button_close
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_close
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_link
 import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_1
 import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_2
 import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_3
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_peek_close
 import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_4
 import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_5
 import dolphin.desktop.apps.onitranslator.generated.resources.peek_quote_error_1
@@ -111,6 +128,8 @@ object OniColor {
     val Success = Color(0xFF81C784) // Green
     val Metadata = Color(0xFF9E9E9E) // Gray
     val Dynamic = Color(0xFF81D4FA)  // Light Blue
+    val Keyword = Color(0xFF26C6DA)  // Cyan/Teal for Klei KKeyword
+    val Lore = Color(0xFFB0BEC5)     // Blue-Gray for flavor_text / lore
     val Unrecognized = Color(0x4D000000) // Faded black for unknown tags
 }
 
@@ -203,6 +222,7 @@ fun String.peek(): AnnotatedString {
     val tokens = this.toOniTokens()
     val defaultAlpha = 0.6f
     val tagStack = mutableListOf<String>()
+    val linkStarts = mutableListOf<Pair<Int, String>>()
 
     return buildAnnotatedString {
         tokens.forEach { token ->
@@ -215,6 +235,12 @@ fun String.peek(): AnnotatedString {
                 }
 
                 is OniToken.ClosingTag -> {
+                    if (token.name == "link" && linkStarts.isNotEmpty()) {
+                        val (start, id) = linkStarts.removeAt(linkStarts.size - 1)
+                        if (length > start) {
+                            addStringAnnotation(tag = "link", annotation = id, start = start, end = length)
+                        }
+                    }
                     if (tagStack.isNotEmpty() && tagStack.last() == token.name) {
                         tagStack.removeAt(tagStack.size - 1)
                         pop()
@@ -226,15 +252,30 @@ fun String.peek(): AnnotatedString {
                 }
 
                 is OniToken.OpeningTag -> {
+                    if (token.name == "link") {
+                        val rawId = token.raw.substringAfter("=").substringBefore(">").trim(' ', '"', '\\')
+                        linkStarts.add(length to rawId)
+                    }
                     val style = when (token.name) {
                         "b" -> SpanStyle(fontWeight = FontWeight.Bold)
                         "i" -> SpanStyle(fontStyle = FontStyle.Italic)
-                        "link" -> SpanStyle(color = OniColor.Link, textDecoration = TextDecoration.Underline)
+                        "link" -> SpanStyle(
+                            color = OniColor.Link,
+                            textDecoration = TextDecoration.Underline,
+                            background = OniColor.Link.copy(alpha = 0.12f),
+                            fontWeight = FontWeight.Medium,
+                        )
                         "sub" -> SpanStyle(baselineShift = BaselineShift.Subscript, fontSize = 10.sp)
                         "sup" -> SpanStyle(baselineShift = BaselineShift.Superscript, fontSize = 10.sp)
                         "style" -> {
-                            if (token.raw.contains("logic_off")) SpanStyle(color = OniColor.Warning)
-                            else SpanStyle(color = OniColor.Highlight)
+                            val rawLower = token.raw.lowercase()
+                            when {
+                                rawLower.contains("logic_on") -> SpanStyle(color = OniColor.Success, fontWeight = FontWeight.Bold)
+                                rawLower.contains("logic_off") -> SpanStyle(color = OniColor.Warning, fontWeight = FontWeight.Bold)
+                                rawLower.contains("kkeyword") -> SpanStyle(color = OniColor.Keyword, fontWeight = FontWeight.SemiBold)
+                                rawLower.contains("flavor_text") || rawLower.contains("lore") -> SpanStyle(color = OniColor.Lore, fontStyle = FontStyle.Italic)
+                                else -> SpanStyle(color = OniColor.Highlight)
+                            }
                         }
 
                         "color" -> {
@@ -284,6 +325,11 @@ fun String.peek(): AnnotatedString {
                         pop()
                     }
                 }
+            }
+        }
+        linkStarts.forEach { (start, id) ->
+            if (length > start) {
+                addStringAnnotation(tag = "link", annotation = id, start = start, end = length)
             }
         }
         repeat(tagStack.size) { pop() }
@@ -341,7 +387,7 @@ fun NisbetPeekDrawer(
         visible = visible,
         enter = slideInHorizontally { it } + fadeIn(),
         exit = slideOutHorizontally { it } + fadeOut(),
-        modifier = modifier.fillMaxHeight().width(360.dp)
+        modifier = modifier.fillMaxHeight().width(420.dp)
     ) {
         Surface(
             modifier = Modifier.fillMaxSize(),
@@ -350,29 +396,48 @@ fun NisbetPeekDrawer(
             shadowElevation = 8.dp,
             // border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
         ) {
-            Column(modifier = Modifier.padding(16.dp).verticalScroll(rememberScrollState())) {
+            Column(modifier = Modifier.fillMaxSize()) {
+                // Fixed Header: Title and top-right close button
                 Row(
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 12.dp),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(
                         stringResource(Res.string.peek_title),
                         style = MaterialTheme.typography.titleSmall,
-                        color = MaterialTheme.colorScheme.secondary,
-                        modifier = Modifier.padding(bottom = 12.dp)
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
-                    IconButton(onClick = onDismiss, modifier = Modifier.size(24.dp)) {
+                    IconButton(onClick = onDismiss, modifier = Modifier.size(28.dp)) {
                         Icon(
                             painterResource(Res.drawable.ic_close),
                             contentDescription = stringResource(Res.string.button_close),
                             tint = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
-
                 }
 
+                HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
+
+                // Scrollable Content
+                Column(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxWidth()
+                        .verticalScroll(rememberScrollState())
+                        .padding(16.dp)
+                ) {
+
                 NisbetPeekCard(text = text)
+
+                val linkedEntities = remember(text) { extractLinkedEntities(text) }
+                if (linkedEntities.isNotEmpty()) {
+                    Spacer(Modifier.height(12.dp))
+                    LinkedEntitiesCard(linkedEntities)
+                }
 
                 // Tag Sensor Report
                 diagnostic?.let { diag ->
@@ -422,6 +487,29 @@ fun NisbetPeekDrawer(
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
                         }
+                    }
+                }
+                }
+
+                HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
+
+                // Sticky Bottom Action: Full-width button matching bottom-right opening ergonomic zone
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 12.dp)
+                ) {
+                    OutlinedButton(
+                        onClick = onDismiss,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Icon(
+                            painter = painterResource(Res.drawable.ic_close),
+                            contentDescription = null,
+                            modifier = Modifier.size(16.dp)
+                        )
+                        Spacer(Modifier.width(8.dp))
+                        Text(stringResource(Res.string.tooltip_peek_close))
                     }
                 }
             }
@@ -480,20 +568,131 @@ fun NisbetPeekCard(
     text: String,
     modifier: Modifier = Modifier
 ) {
+    val annotatedString = text.peek()
+    var layoutResult by remember { mutableStateOf<TextLayoutResult?>(null) }
+
     Surface(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(8.dp),
-        color = MaterialTheme.colorScheme.surface, // .copy(alpha = 0.3f),
+        color = MaterialTheme.colorScheme.surface,
         border = BorderStroke(2.dp, MaterialTheme.colorScheme.outlineVariant)
     ) {
-        Box(modifier = Modifier.padding(12.dp)) {
+        Box(
+            modifier = Modifier
+                .padding(12.dp)
+                .pointerInput(annotatedString) {
+                    detectTapGestures { pos ->
+                        val layout = layoutResult ?: return@detectTapGestures
+                        val offset = layout.getOffsetForPosition(pos)
+                        val annotations = annotatedString.getStringAnnotations(tag = "link", start = offset, end = offset)
+                        annotations.firstOrNull()?.let { annotation ->
+                            val linkId = annotation.item
+                            try {
+                                val stringSelection = java.awt.datatransfer.StringSelection(linkId)
+                                java.awt.Toolkit.getDefaultToolkit().systemClipboard.setContents(stringSelection, null)
+                            } catch (_: Exception) {}
+                            SnackbarManager.showMessage(linkId)
+                        }
+                    }
+                }
+        ) {
             Text(
-                text = text.peek(),
+                text = annotatedString,
+                onTextLayout = { layoutResult = it },
                 style = MaterialTheme.typography.bodyMedium.copy(
                     lineHeight = 20.sp, letterSpacing = 0.5.sp
                 ),
                 color = MaterialTheme.colorScheme.onSurface
             )
+        }
+    }
+}
+
+/**
+ * Extracts distinct linked entities (<link="ID">Text</link>) from text for preview inspection.
+ * Strips nested inner tags (e.g. <b>) and handles escaped quotes (\") and unquoted IDs cleanly.
+ */
+fun extractLinkedEntities(text: String): List<Pair<String, String>> {
+    if (!text.contains("<link", ignoreCase = true)) return emptyList()
+    val regex = Regex("""<link\s*=\s*\\*"?([^\\">]+)\\*"?>\s*(.*?)\s*</link>""", setOf(RegexOption.IGNORE_CASE, RegexOption.DOT_MATCHES_ALL))
+    val tagRegex = Regex("""<[^>]+>""")
+    return regex.findAll(text).map { match ->
+        val rawInner = match.groupValues[2]
+        val cleanText = rawInner.replace(tagRegex, "").trim()
+        val linkId = match.groupValues[1].trim()
+        (if (cleanText.isNotEmpty()) cleanText else linkId) to linkId
+    }.distinct().toList()
+}
+
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun LinkedEntitiesCard(entities: List<Pair<String, String>>) {
+    Surface(
+        color = MaterialTheme.colorScheme.surface,
+        shape = RoundedCornerShape(8.dp),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f)),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                Icon(
+                    painterResource(Res.drawable.ic_link),
+                    contentDescription = null,
+                    tint = OniColor.Link,
+                    modifier = Modifier.size(16.dp)
+                )
+                Text(
+                    text = "連結目標實體 (Link Target IDs)",
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.primary,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            FlowRow(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                verticalArrangement = Arrangement.spacedBy(6.dp)
+            ) {
+                entities.forEach { (linkText, linkId) ->
+                    Surface(
+                        onClick = {
+                            try {
+                                val stringSelection = java.awt.datatransfer.StringSelection(linkId)
+                                java.awt.Toolkit.getDefaultToolkit().systemClipboard.setContents(stringSelection, null)
+                            } catch (_: Exception) {}
+                            SnackbarManager.showMessage(linkId)
+                        },
+                        shape = RoundedCornerShape(4.dp),
+                        color = OniColor.Link.copy(alpha = 0.12f),
+                        border = BorderStroke(1.dp, OniColor.Link.copy(alpha = 0.35f)),
+                        modifier = Modifier.pointerHoverIcon(PointerIcon.Hand)
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(4.dp)
+                        ) {
+                            Text(
+                                text = linkText,
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurface,
+                                fontWeight = FontWeight.Bold
+                            )
+                            Text(
+                                text = "➜",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = OniColor.Link
+                            )
+                            Text(
+                                text = linkId,
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                fontFamily = FontFamily.Monospace
+                            )
+                        }
+                    }
+                }
+            }
         }
     }
 }
