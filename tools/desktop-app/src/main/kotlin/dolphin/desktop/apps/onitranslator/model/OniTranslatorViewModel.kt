@@ -398,12 +398,13 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
             if (query.isBlank()) {
                 return@withContext all.mapNotNull { requestEditorData(it) }
             }
-            val normalizedQuery = query.normalizeForSearch()
+            val cleanQuery = query.normalizeTextForSearch()
             val normalizedKeyQuery = query.normalizeKeyForSearch()
             val searchResult = all.filter { item ->
+                item.key().contains(query, ignoreCase = true) ||
                 item.key().normalizeKeyForSearch().contains(normalizedKeyQuery, ignoreCase = true) ||
-                item.msgId().normalizeForSearch().contains(normalizedQuery, ignoreCase = true) ||
-                item.msgStr().normalizeForSearch().contains(normalizedQuery, ignoreCase = true)
+                item.msgId().matchesSearch(cleanQuery) ||
+                item.msgStr().matchesSearch(cleanQuery)
             }
             return@withContext searchResult.mapNotNull { requestEditorData(it) }
         }
@@ -434,17 +435,6 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
             updateUiState { it.copy(searchState = it.searchState.copy(text = text)) }
             refreshPipeline()
         }
-
-    private fun String.normalizeForSearch(): String {
-        val noTags = this.replace(Regex("<[^>]+>"), "")
-        val unescapedQuotes = noTags.replace("\\\"", "\"")
-        val noNewlines = unescapedQuotes.replace("\\n", " ").replace("\n", " ").replace("\r", " ").replace("\t", " ")
-        return noNewlines.replace(Regex("\\s+"), " ").trim()
-    }
-
-    private fun String.normalizeKeyForSearch(): String {
-        return this.replace(".", "").replace("_", "").replace(" ", "").trim()
-    }
 
     suspend fun rememberLastWindowState(windowState: WindowState) {
         val pos = windowState.position
@@ -504,4 +494,25 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         val clipboard: java.awt.datatransfer.Clipboard = java.awt.Toolkit.getDefaultToolkit().systemClipboard
         clipboard.setContents(stringSelection, null)
     }
+}
+
+internal fun String.normalizeTextForSearch(): String {
+    val unescapedQuotes = this.replace("\\\"", "\"")
+    val noNewlines = unescapedQuotes.replace("\\n", " ").replace("\n", " ").replace("\r", " ").replace("\t", " ")
+    return noNewlines.replace(Regex("\\s+"), " ").trim()
+}
+
+internal fun String.stripTags(): String {
+    return this.replace(Regex("<[^>]+>"), "")
+}
+
+internal fun String.matchesSearch(cleanQuery: String): Boolean {
+    val raw = this.normalizeTextForSearch()
+    if (raw.contains(cleanQuery, ignoreCase = true)) return true
+    val stripped = raw.stripTags()
+    return stripped.contains(cleanQuery, ignoreCase = true)
+}
+
+internal fun String.normalizeKeyForSearch(): String {
+    return this.replace(".", "").replace("_", "").replace(" ", "").trim()
 }
