@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.DockedSearchBar
 import androidx.compose.material3.DropdownMenu
@@ -109,8 +110,8 @@ fun OniTranslatorTopBar(
                 },
                 scrollBehavior = scrollBehavior
             )
-            HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = .5f))
         }
+        HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = .5f))
     }
 }
 
@@ -223,7 +224,10 @@ private fun SearchTopBar(
     }
 
     Surface(color = MaterialTheme.colorScheme.surfaceContainer) {
-        Box(contentAlignment = Alignment.Center, modifier = Modifier.padding(vertical = 8.dp, horizontal = 12.dp)) {
+        Box(
+            contentAlignment = Alignment.Center,
+            modifier = Modifier.fillMaxWidth().height(64.dp).padding(horizontal = 12.dp)
+        ) {
             DockedSearchBar(
                 inputField = {
                     SearchBarDefaults.InputField(

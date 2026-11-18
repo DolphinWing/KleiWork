@@ -228,7 +228,7 @@ fun EntryFilterBar(
         verticalAlignment = Alignment.CenterVertically,
     ) {
         EntryFilterMode.entries.forEach { mode ->
-            val isSelected = !isSearchActive && filterMode == mode
+            val isSelected = filterMode == mode
             val baseLabel = when (mode) {
                 EntryFilterMode.Pending -> stringResource(Res.string.filter_pending)
                 EntryFilterMode.Diagnostic -> stringResource(Res.string.tag_sensor_label)

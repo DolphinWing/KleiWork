@@ -189,15 +189,8 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     }
 
     private suspend fun onFilterModeChange(mode: EntryFilterMode) {
-        if (state.value.filterMode == mode && !state.value.uiState.searchState.isActive) return
-        _state.update {
-            it.copy(
-                filterMode = mode,
-                uiState = it.uiState.copy(
-                    searchState = it.uiState.searchState.copy(isActive = false, text = "")
-                )
-            )
-        }
+        if (state.value.filterMode == mode) return
+        _state.update { it.copy(filterMode = mode) }
         refreshPipeline()
     }
 
@@ -391,31 +384,28 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         val h = helper ?: return@withContext emptyList()
         val all = h.allEntries()
         val sState = state.value.uiState.searchState
+        val filterMode = state.value.filterMode
 
-        // When search is active, search across all entries
-        if (sState.isActive) {
+        // 1. Determine base entries by active filterMode
+        val baseEntries: List<PoEntry> = when (filterMode) {
+            EntryFilterMode.Pending -> h.buildChangeList()
+            EntryFilterMode.Diagnostic -> all.filter { it.diagnostic?.hasIssue == true }
+            EntryFilterMode.Glossary -> all.filter { it.glossaryDiag?.isUnreviewed == true }
+            EntryFilterMode.All -> all
+        }
+
+        // 2. If search is active with a query, perform compound/orthogonal filtering
+        if (sState.isActive && sState.text.isNotBlank()) {
             val query = sState.text
-            if (query.isBlank()) {
-                return@withContext all.mapNotNull { requestEditorData(it) }
-            }
             val cleanQuery = query.normalizeTextForSearch()
             val normalizedKeyQuery = query.normalizeKeyForSearch()
-            val searchResult = all.filter { item ->
+            val searchResult = baseEntries.filter { item ->
                 item.key().contains(query, ignoreCase = true) ||
                 item.key().normalizeKeyForSearch().contains(normalizedKeyQuery, ignoreCase = true) ||
                 item.msgId().matchesSearch(cleanQuery) ||
                 item.msgStr().matchesSearch(cleanQuery)
             }
             return@withContext searchResult.mapNotNull { requestEditorData(it) }
-        }
-
-        // When search is not active, filter according to filterMode
-        val filterMode = state.value.filterMode
-        val baseEntries: List<PoEntry> = when (filterMode) {
-            EntryFilterMode.Pending -> h.buildChangeList()
-            EntryFilterMode.Diagnostic -> all.filter { it.diagnostic?.hasIssue == true }
-            EntryFilterMode.Glossary -> all.filter { it.glossaryDiag?.isUnreviewed == true }
-            EntryFilterMode.All -> all
         }
 
         baseEntries.mapNotNull { requestEditorData(it) }
