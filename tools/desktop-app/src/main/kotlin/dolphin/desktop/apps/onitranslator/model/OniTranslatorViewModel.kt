@@ -55,7 +55,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
             when (event) {
                 // Search & Source
                 is AppEvent.Browser.FilterChange -> onFilterModeChange(event.mode)
-                is AppEvent.Search.TextChange -> search(event.text, event.type)
+                is AppEvent.Search.TextChange -> search(event.text)
                 is AppEvent.Search.ActiveChange -> onSearchActiveChange(event.isActive)
                 is AppEvent.File.RefreshSource -> translate()
 
@@ -189,8 +189,15 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     }
 
     private suspend fun onFilterModeChange(mode: EntryFilterMode) {
-        if (state.value.filterMode == mode) return
-        _state.update { it.copy(filterMode = mode) }
+        if (state.value.filterMode == mode && !state.value.uiState.searchState.isActive) return
+        _state.update {
+            it.copy(
+                filterMode = mode,
+                uiState = it.uiState.copy(
+                    searchState = it.uiState.searchState.copy(isActive = false, text = "")
+                )
+            )
+        }
         refreshPipeline()
     }
 
@@ -375,7 +382,6 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                 glossaryCount = glossCount,
                 uiState = it.uiState.copy(
                     editorData = refreshedEditorData,
-                    searchState = it.uiState.searchState.copy(results = computed)
                 )
             )
         }
@@ -389,20 +395,15 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         // When search is active, search across all entries
         if (sState.isActive) {
             val query = sState.text
+            if (query.isBlank()) {
+                return@withContext all.mapNotNull { requestEditorData(it) }
+            }
             val normalizedQuery = query.normalizeForSearch()
+            val normalizedKeyQuery = query.normalizeKeyForSearch()
             val searchResult = all.filter { item ->
-                when (sState.type) {
-                    SearchType.Origin -> item.msgId().normalizeForSearch().contains(normalizedQuery, ignoreCase = true)
-                    SearchType.Key -> {
-                        val normalizedKey = item.key().normalizeKeyForSearch()
-                        val normalizedKeyQuery = query.normalizeKeyForSearch()
-                        normalizedKey.contains(normalizedKeyQuery, ignoreCase = true)
-                    }
-                    SearchType.Text -> item.msgStr().normalizeForSearch().contains(normalizedQuery, ignoreCase = true)
-                    SearchType.Diagnostic -> item.diagnostic?.hasIssue == true
-                    SearchType.Glossary -> item.glossaryDiag?.hasConflict == true &&
-                            (query.isBlank() || item.msgId().contains(query, ignoreCase = true) || item.msgStr().contains(query, ignoreCase = true))
-                }
+                item.key().normalizeKeyForSearch().contains(normalizedKeyQuery, ignoreCase = true) ||
+                item.msgId().normalizeForSearch().contains(normalizedQuery, ignoreCase = true) ||
+                item.msgStr().normalizeForSearch().contains(normalizedQuery, ignoreCase = true)
             }
             return@withContext searchResult.mapNotNull { requestEditorData(it) }
         }
@@ -428,9 +429,9 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         return@withContext Pair(exported.absolutePath, if (result) cost else -1)
     }
 
-    private suspend fun search(text: String, type: SearchType = state.value.uiState.searchState.type) =
+    private suspend fun search(text: String) =
         withContext(Dispatchers.IO) {
-            updateUiState { it.copy(searchState = it.searchState.copy(text = text, type = type)) }
+            updateUiState { it.copy(searchState = it.searchState.copy(text = text)) }
             refreshPipeline()
         }
 

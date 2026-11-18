@@ -104,43 +104,28 @@ fun OniTranslatorApp(
                 contentColor = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier.fillMaxSize()
             ) { paddingValues ->
-                Column(Modifier.padding(paddingValues)) {
-                    AnimatedVisibility(
-                        visible = state.uiState.searchState.isActive,
-                        enter = expandVertically(),
-                        exit = shrinkVertically()
-                    ) {
-                        Column(modifier = Modifier.background(MaterialTheme.colorScheme.surfaceContainer)) {
-                            SearchTypeRow(
-                                selected = state.uiState.searchState.type,
-                                modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp),
-                                diagnosticCount = state.diagnosticCount,
-                                glossaryCount = state.glossaryCount,
-                            ) { searchType ->
-                                onEvent(AppEvent.Search.TextChange(state.uiState.searchState.text, searchType))
-                            }
-                            HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
-                        }
-                    }
-                    Row(modifier = Modifier.fillMaxSize()) {
-                        EntryBrowser(
-                            state = state,
-                            onEvent = onEvent,
-                            modifier = Modifier.weight(0.4f),
-                            listState = listState,
-                        )
-                        VerticalDivider(
-                            modifier = Modifier.fillMaxHeight().width(1.dp),
-                            color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)
-                        )
-                        EntryEditor(
-                            entry = state.uiState.editorData,
-                            modifier = Modifier.weight(0.6f),
-                            onEvent = onEvent,
-                            onConvert = onEditorConvert,
-                            terms = state.glossaryTerms,
-                        )
-                    }
+                Row(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(paddingValues)
+                ) {
+                    EntryBrowser(
+                        state = state,
+                        onEvent = onEvent,
+                        modifier = Modifier.weight(0.4f),
+                        listState = listState,
+                    )
+                    VerticalDivider(
+                        modifier = Modifier.fillMaxHeight().width(1.dp),
+                        color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)
+                    )
+                    EntryEditor(
+                        entry = state.uiState.editorData,
+                        modifier = Modifier.weight(0.6f),
+                        onEvent = onEvent,
+                        onConvert = onEditorConvert,
+                        terms = state.glossaryTerms,
+                    )
                 }
             }
 
@@ -149,11 +134,7 @@ fun OniTranslatorApp(
                 onEvent = onEvent,
                 onExitApplication = onExitApplication,
                 onJumpToIndex = { targetIndex ->
-                    val list = if (state.uiState.searchState.isActive) {
-                        state.uiState.searchState.results
-                    } else {
-                        state.filteredList
-                    }
+                    val list = state.filteredList
                     val zeroBased = targetIndex - 1
                     if (zeroBased in list.indices) {
                         coroutineScope.launch {

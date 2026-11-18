@@ -57,7 +57,11 @@
 
     <!-- Empty States -->
     <string name="empty_list_title">一切就緒！</string>
-    <string name="empty_list_message">目前沒有已修改的項目。點擊搜尋瀏覽全部翻譯，或刷新以檢查變更。</string>
+    <string name="empty_list_message">目前沒有待處理項目。可切換至「全部」檢視所有字串，或刷新以檢查變更。</string>
+
+    <!-- Filter Modes -->
+    <string name="filter_pending">待處理</string>
+    <string name="filter_all">全部</string>
 
     <!-- Tooltips -->
     <string name="tooltip_copy_this_text">複製此文字</string>

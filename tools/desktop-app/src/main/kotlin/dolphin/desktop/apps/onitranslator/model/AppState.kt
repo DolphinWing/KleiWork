@@ -45,9 +45,7 @@ data class UiState(
  */
 data class SearchState(
     val isActive: Boolean = false,
-    val type: SearchType = SearchType.Key,
     val text: String = "",
-    val results: List<EditorData> = emptyList(),
 )
 
 /**

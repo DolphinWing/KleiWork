@@ -32,12 +32,7 @@ import org.jetbrains.compose.resources.stringResource
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun OniTranslatorBottomBar(state: AppState, modifier: Modifier = Modifier) {
-    // Derived state for the item list size
-    val listSize = if (state.uiState.searchState.isActive) {
-        state.uiState.searchState.results.size
-    } else {
-        state.filteredList.size
-    }
+    val listSize = state.filteredList.size
 
     // Determine the status text: prefer processStatus, fallback to item count
     val statusText = if (state.uiState.processStatus.isNotBlank()) {

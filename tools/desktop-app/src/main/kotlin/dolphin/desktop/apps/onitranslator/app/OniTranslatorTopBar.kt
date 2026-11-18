@@ -7,14 +7,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.DockedSearchBar
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilterChip
-import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -33,7 +29,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
@@ -54,7 +49,6 @@ import dolphin.desktop.apps.onitranslator.generated.resources.ic_refresh
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_report
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_save
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_search
-import dolphin.desktop.apps.onitranslator.generated.resources.ic_sensor_window
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_settings
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_delete_draft
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_draft
@@ -64,14 +58,10 @@ import dolphin.desktop.apps.onitranslator.generated.resources.menu_save_file
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_settings
 import dolphin.desktop.apps.onitranslator.generated.resources.menu_show_logs
 import dolphin.desktop.apps.onitranslator.generated.resources.placeholder_search
-import dolphin.desktop.apps.onitranslator.generated.resources.tag_sensor_label
-import dolphin.desktop.apps.onitranslator.generated.resources.tag_glossary_label
 import dolphin.desktop.apps.onitranslator.generated.resources.toolbar_status
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_theme_toggle
 import dolphin.desktop.apps.onitranslator.model.AppState
-import dolphin.desktop.apps.onitranslator.model.SearchType
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
-import dolphin.desktop.apps.onitranslator.ui.OniColor
 import dolphin.desktop.apps.onitranslator.widget.TooltipIconButton
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
@@ -87,7 +77,7 @@ fun OniTranslatorTopBar(
         if (state.uiState.searchState.isActive) {
             SearchTopBar(
                 searchText = state.uiState.searchState.text,
-                onSearchTextChange = { onEvent(AppEvent.Search.TextChange(it, state.uiState.searchState.type)) },
+                onSearchTextChange = { onEvent(AppEvent.Search.TextChange(it)) },
                 onActiveChange = { onEvent(AppEvent.Search.ActiveChange(it)) }
             )
         } else {
@@ -281,74 +271,6 @@ private fun SearchTopBar(
     }
 }
 
-@Composable
-fun SearchTypeRow(
-    selected: SearchType,
-    modifier: Modifier = Modifier,
-    diagnosticCount: Int = 0,
-    glossaryCount: Int = 0,
-    onClick: (SearchType) -> Unit,
-) {
-    Row(modifier = modifier, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-        SearchType.entries.forEach { type ->
-            val baseLabel = when (type) {
-                SearchType.Diagnostic -> stringResource(Res.string.tag_sensor_label)
-                SearchType.Glossary -> stringResource(Res.string.tag_glossary_label)
-                else -> type.name
-            }
-            val label = when (type) {
-                SearchType.Diagnostic -> if (diagnosticCount > 0) "$baseLabel ($diagnosticCount)" else baseLabel
-                SearchType.Glossary -> if (glossaryCount > 0) "$baseLabel ($glossaryCount)" else baseLabel
-                else -> baseLabel
-            }
-            val leadingIcon: (@Composable () -> Unit)? = when (type) {
-                SearchType.Diagnostic -> {
-                    {
-                        Icon(
-                            painterResource(Res.drawable.ic_sensor_window),
-                            contentDescription = null,
-                            modifier = Modifier.size(FilterChipDefaults.IconSize),
-                            tint = OniColor.Highlight,
-                        )
-                    }
-                }
-                SearchType.Glossary -> {
-                    {
-                        Icon(
-                            painterResource(Res.drawable.ic_report),
-                            contentDescription = null,
-                            modifier = Modifier.size(FilterChipDefaults.IconSize),
-                            tint = MaterialTheme.colorScheme.error,
-                        )
-                    }
-                }
-                else -> null
-            }
-            FilterChip(
-                selected = selected == type,
-                onClick = { onClick.invoke(type) },
-                label = { Text(label) },
-                leadingIcon = leadingIcon,
-                shape = CircleShape,
-                colors = FilterChipDefaults.filterChipColors(
-                    containerColor = Color.Transparent,
-                    labelColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                    selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
-                    selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer,
-                ),
-                border = FilterChipDefaults.filterChipBorder(
-                    enabled = true,
-                    selected = selected == type,
-                    borderColor = MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
-                    selectedBorderColor = Color.Transparent,
-                    borderWidth = 1.dp,
-                    selectedBorderWidth = 0.dp,
-                )
-            )
-        }
-    }
-}
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview
 @Composable
@@ -372,7 +294,6 @@ private fun OniTranslatorTopBarPreview() {
                             ),
                             onEvent = {},
                         )
-                        SearchTypeRow(selected = SearchType.Text, onClick = {})
                     }
                 }
             }

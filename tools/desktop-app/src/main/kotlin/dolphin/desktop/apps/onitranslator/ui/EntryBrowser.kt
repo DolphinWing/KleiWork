@@ -6,6 +6,7 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.VerticalScrollbar
 import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -18,17 +19,22 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.rememberScrollbarAdapter
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilterChip
+import androidx.compose.material3.FilterChipDefaults
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
@@ -36,8 +42,6 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
@@ -58,6 +62,8 @@ import dolphin.desktop.apps.onitranslator.generated.resources.button_search
 import dolphin.desktop.apps.onitranslator.generated.resources.content_description_tag_sensor_warning
 import dolphin.desktop.apps.onitranslator.generated.resources.empty_list_message
 import dolphin.desktop.apps.onitranslator.generated.resources.empty_list_title
+import dolphin.desktop.apps.onitranslator.generated.resources.filter_all
+import dolphin.desktop.apps.onitranslator.generated.resources.filter_pending
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_assignment_turned_in
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_done
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_refresh
@@ -68,8 +74,11 @@ import dolphin.desktop.apps.onitranslator.generated.resources.label_modified
 import dolphin.desktop.apps.onitranslator.generated.resources.label_new
 import dolphin.desktop.apps.onitranslator.generated.resources.glossary_badge_conflict
 import dolphin.desktop.apps.onitranslator.generated.resources.glossary_badge_accepted
+import dolphin.desktop.apps.onitranslator.generated.resources.tag_glossary_label
+import dolphin.desktop.apps.onitranslator.generated.resources.tag_sensor_label
 import dolphin.desktop.apps.onitranslator.model.AppState
 import dolphin.desktop.apps.onitranslator.model.EditorData
+import dolphin.desktop.apps.onitranslator.model.EntryFilterMode
 import dolphin.desktop.apps.onitranslator.model.EntryTagType
 import dolphin.desktop.apps.onitranslator.model.PoEntry
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
@@ -85,103 +94,202 @@ fun EntryBrowser(
     modifier: Modifier = Modifier,
     listState: LazyListState = rememberLazyListState(),
 ) {
-    val list by remember(
-        state.uiState.searchState.isActive,
-        state.uiState.searchState.text,
-        state.uiState.searchState.results,
-        state.filteredList
-    ) {
-        mutableStateOf(if (state.uiState.searchState.isActive) state.uiState.searchState.results else state.filteredList)
-    }
+    val list = state.filteredList
 
     Surface(modifier = modifier, color = MaterialTheme.colorScheme.background) {
-        if (state.uiState.isLoading && state.uiState.searchState.text.isBlank()) {
-            // Show Skeleton Screen only when not searching
-            LazyColumn(
-                modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(8.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                items(10) {
-                    EntryItemPlaceholder()
-                }
-            }
-        } else if (list.isEmpty()) {
-            Box(modifier = modifier.fillMaxSize().padding(32.dp), contentAlignment = Alignment.Center) {
-                Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
-                ) {
-                    Icon(
-                        painterResource(Res.drawable.ic_assignment_turned_in),
-                        contentDescription = null,
-                        modifier = Modifier.width(64.dp).height(64.dp),
-                        tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.3f)
-                    )
-                    Text(
-                        text = stringResource(Res.string.empty_list_title),
-                        style = MaterialTheme.typography.headlineSmall,
-                        color = MaterialTheme.colorScheme.onSurface
-                    )
-                    Text(
-                        text = stringResource(Res.string.empty_list_message),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.fillMaxWidth(0.8f),
-                        textAlign = androidx.compose.ui.text.style.TextAlign.Center
-                    )
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                        ElevatedButton(
-                            onClick = { onEvent(AppEvent.File.RefreshSource) },
-                            contentPadding = PaddingValues(horizontal = 24.dp, vertical = 12.dp)
-                        ) {
-                            Icon(painterResource(Res.drawable.ic_refresh), contentDescription = null)
-                            Spacer(modifier = Modifier.width(8.dp))
-                            Text(stringResource(Res.string.button_refresh))
-                        }
+        Column(modifier = Modifier.fillMaxSize()) {
+            EntryFilterBar(
+                filterMode = state.filterMode,
+                isSearchActive = state.uiState.searchState.isActive,
+                diagnosticCount = state.diagnosticCount,
+                glossaryCount = state.glossaryCount,
+                onModeChange = { onEvent(AppEvent.Browser.FilterChange(it)) },
+            )
+            HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
 
-                        ElevatedButton(
-                            onClick = { onEvent(AppEvent.Search.ActiveChange(true)) },
-                            contentPadding = PaddingValues(horizontal = 24.dp, vertical = 12.dp)
-                        ) {
-                            Icon(painterResource(Res.drawable.ic_search), contentDescription = null)
-                            Spacer(modifier = Modifier.width(8.dp))
-                            Text(stringResource(Res.string.button_search))
+            Box(modifier = Modifier.fillMaxWidth().weight(1f)) {
+                if (state.uiState.isLoading && state.uiState.searchState.text.isBlank()) {
+                    // Show Skeleton Screen only when not searching
+                    LazyColumn(
+                        modifier = Modifier.fillMaxSize(),
+                        contentPadding = PaddingValues(8.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        items(10) {
+                            EntryItemPlaceholder()
                         }
                     }
-                }
-            }
-        } else {
-            // Show actual list with draggable desktop scrollbar
-            Box(modifier = Modifier.fillMaxSize()) {
-                LazyColumn(
-                    modifier = Modifier.fillMaxSize(),
-                    contentPadding = PaddingValues(start = 8.dp, top = 8.dp, end = 16.dp, bottom = 8.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp),
-                    state = listState
-                ) {
-                    itemsIndexed(list) { index, entry ->
-                        val isSearchMode = state.uiState.searchState.isActive
-                        val originalIndex = if (isSearchMode) -1 else index
-                        val changedValue = if (isSearchMode) 0L else entry.target.changed
-                        val selected = state.uiState.editorData == entry
-                        EntryItemView(
-                            data = entry,
-                            onItemClick = { onEvent(AppEvent.Editor.Select(it)) },
-                            index = originalIndex, // Pass original index or -1 if not available
-                            changed = changedValue,
-                            selected = selected,
-                            isSearchMode = isSearchMode,
+                } else if (list.isEmpty()) {
+                    Box(modifier = Modifier.fillMaxSize().padding(32.dp), contentAlignment = Alignment.Center) {
+                        Column(
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.spacedBy(16.dp)
+                        ) {
+                            Icon(
+                                painterResource(Res.drawable.ic_assignment_turned_in),
+                                contentDescription = null,
+                                modifier = Modifier.width(64.dp).height(64.dp),
+                                tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.3f)
+                            )
+                            Text(
+                                text = stringResource(Res.string.empty_list_title),
+                                style = MaterialTheme.typography.headlineSmall,
+                                color = MaterialTheme.colorScheme.onSurface
+                            )
+                            Text(
+                                text = stringResource(Res.string.empty_list_message),
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.fillMaxWidth(0.8f),
+                                textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                            )
+                            Spacer(modifier = Modifier.height(8.dp))
+                            Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                                ElevatedButton(
+                                    onClick = { onEvent(AppEvent.File.RefreshSource) },
+                                    contentPadding = PaddingValues(horizontal = 24.dp, vertical = 12.dp)
+                                ) {
+                                    Icon(painterResource(Res.drawable.ic_refresh), contentDescription = null)
+                                    Spacer(modifier = Modifier.width(8.dp))
+                                    Text(stringResource(Res.string.button_refresh))
+                                }
+
+                                if (state.filterMode == EntryFilterMode.Pending) {
+                                    ElevatedButton(
+                                        onClick = { onEvent(AppEvent.Browser.FilterChange(EntryFilterMode.All)) },
+                                        contentPadding = PaddingValues(horizontal = 24.dp, vertical = 12.dp)
+                                    ) {
+                                        Text(stringResource(Res.string.filter_all))
+                                    }
+                                } else {
+                                    ElevatedButton(
+                                        onClick = { onEvent(AppEvent.Search.ActiveChange(true)) },
+                                        contentPadding = PaddingValues(horizontal = 24.dp, vertical = 12.dp)
+                                    ) {
+                                        Icon(painterResource(Res.drawable.ic_search), contentDescription = null)
+                                        Spacer(modifier = Modifier.width(8.dp))
+                                        Text(stringResource(Res.string.button_search))
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    // Show actual list with draggable desktop scrollbar
+                    Box(modifier = Modifier.fillMaxSize()) {
+                        LazyColumn(
+                            modifier = Modifier.fillMaxSize(),
+                            contentPadding = PaddingValues(start = 8.dp, top = 8.dp, end = 16.dp, bottom = 8.dp),
+                            verticalArrangement = Arrangement.spacedBy(8.dp),
+                            state = listState
+                        ) {
+                            itemsIndexed(list) { index, entry ->
+                                val isSearchMode = state.uiState.searchState.isActive
+                                val originalIndex = if (isSearchMode) -1 else index
+                                val changedValue = if (isSearchMode) 0L else entry.target.changed
+                                val selected = state.uiState.editorData == entry
+                                EntryItemView(
+                                    data = entry,
+                                    onItemClick = { onEvent(AppEvent.Editor.Select(it)) },
+                                    index = originalIndex,
+                                    changed = changedValue,
+                                    selected = selected,
+                                    isSearchMode = isSearchMode,
+                                )
+                            }
+                        }
+
+                        VerticalScrollbar(
+                            adapter = rememberScrollbarAdapter(scrollState = listState),
+                            modifier = Modifier.align(Alignment.CenterEnd).fillMaxHeight()
                         )
                     }
                 }
-
-                VerticalScrollbar(
-                    adapter = rememberScrollbarAdapter(scrollState = listState),
-                    modifier = Modifier.align(Alignment.CenterEnd).fillMaxHeight()
-                )
             }
+        }
+    }
+}
+
+@Composable
+fun EntryFilterBar(
+    filterMode: EntryFilterMode,
+    isSearchActive: Boolean,
+    diagnosticCount: Int,
+    glossaryCount: Int,
+    onModeChange: (EntryFilterMode) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .horizontalScroll(rememberScrollState())
+            .padding(horizontal = 8.dp, vertical = 6.dp),
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        EntryFilterMode.entries.forEach { mode ->
+            val isSelected = !isSearchActive && filterMode == mode
+            val baseLabel = when (mode) {
+                EntryFilterMode.Pending -> stringResource(Res.string.filter_pending)
+                EntryFilterMode.Diagnostic -> stringResource(Res.string.tag_sensor_label)
+                EntryFilterMode.Glossary -> stringResource(Res.string.tag_glossary_label)
+                EntryFilterMode.All -> stringResource(Res.string.filter_all)
+            }
+            val label = when (mode) {
+                EntryFilterMode.Diagnostic -> if (diagnosticCount > 0) "$baseLabel ($diagnosticCount)" else baseLabel
+                EntryFilterMode.Glossary -> if (glossaryCount > 0) "$baseLabel ($glossaryCount)" else baseLabel
+                else -> baseLabel
+            }
+            val leadingIcon: (@Composable () -> Unit)? = when (mode) {
+                EntryFilterMode.Diagnostic -> {
+                    {
+                        Icon(
+                            painterResource(Res.drawable.ic_sensor_window),
+                            contentDescription = null,
+                            modifier = Modifier.size(FilterChipDefaults.IconSize),
+                            tint = if (diagnosticCount > 0) OniColor.Highlight else MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                }
+                EntryFilterMode.Glossary -> {
+                    {
+                        Icon(
+                            painterResource(Res.drawable.ic_report),
+                            contentDescription = null,
+                            modifier = Modifier.size(FilterChipDefaults.IconSize),
+                            tint = if (glossaryCount > 0) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                }
+                else -> null
+            }
+
+            FilterChip(
+                selected = isSelected,
+                onClick = { onModeChange(mode) },
+                label = {
+                    Text(
+                        text = label,
+                        style = MaterialTheme.typography.labelMedium,
+                    )
+                },
+                leadingIcon = leadingIcon,
+                shape = CircleShape,
+                colors = FilterChipDefaults.filterChipColors(
+                    containerColor = Color.Transparent,
+                    labelColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                    selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
+                    selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                ),
+                border = FilterChipDefaults.filterChipBorder(
+                    enabled = true,
+                    selected = isSelected,
+                    borderColor = MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
+                    selectedBorderColor = Color.Transparent,
+                    borderWidth = 1.dp,
+                    selectedBorderWidth = 0.dp,
+                )
+            )
         }
     }
 }

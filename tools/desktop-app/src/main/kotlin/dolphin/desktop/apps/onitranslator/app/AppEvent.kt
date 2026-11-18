@@ -2,7 +2,6 @@ package dolphin.desktop.apps.onitranslator.app
 
 import dolphin.desktop.apps.onitranslator.model.Configs
 import dolphin.desktop.apps.onitranslator.model.EntryFilterMode
-import dolphin.desktop.apps.onitranslator.model.SearchType
 import dolphin.desktop.apps.onitranslator.model.UiState
 import dolphin.desktop.apps.onitranslator.model.PoEntry
 import dolphin.desktop.apps.onitranslator.model.GlossaryConflict
@@ -20,7 +19,7 @@ sealed interface AppEvent {
         data class ActiveChange(val isActive: Boolean) : Search
 
         // Triggered when user types or changes the search target (e.g., Key, Value)
-        data class TextChange(val text: String, val type: SearchType) : Search
+        data class TextChange(val text: String) : Search
     }
 
     /**

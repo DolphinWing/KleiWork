@@ -76,8 +76,9 @@
 *   **`AppState`**: 全域應用程式狀態。
     *   `configs`: 設定檔資料。
     *   `logs`: 歷史日誌 (`List<LogEntry>`)。
-    *   `filteredList`: 當前顯示的編輯列表 (`EditorData`)。
+    *   `filteredList`: 當前顯示的編輯列表 (`EditorData`)。統一由單一響應式管線 (`computeFilteredList()`) 運算生產，為 UI 唯一之 Single Source of Truth。
     *   `changedList`: 本次工作階段 (Session) 實際修改過的 Key 清單 (`List<String>`)。
+    *   `filterMode`: 列表當前篩選模式 (`EntryFilterMode`: `Pending`, `Diagnostic`, `Glossary`, `All`)。
     *   `hasDraft`: 目前硬碟上是否存在實體草稿檔。
     *   `diagnosticCount`: 全域標籤待修條目總數（即時統計全量 `allEntries()`）。
     *   `glossaryCount`: 全域未審閱詞彙衝突待處理總數。
@@ -85,7 +86,7 @@
 *   **`UiState`**: 純 UI 相關的短暫狀態。
     *   `isLoading`: 是否正在處理中。
     *   `processStatus`: 即時狀態訊息（如：儲存中...）。
-    *   `searchState`: 搜尋關鍵字、結果與是否啟用搜尋模式。
+    *   `searchState`: 搜尋關鍵字與是否啟用搜尋模式 (`isActive`, `text`)。
     *   `editorData`: 右側編輯器當前選中的資料。
     *   `dialogState`: 控制對話框 (Config, Save Confirm, Log Window, Jump Dialog, Exit Confirm Dialog) 的顯示。
 
@@ -124,12 +125,20 @@
 *   `PoHelper` 內部產生 `LogEntry` (Info/Warning/Error)，並開放 `log()` 方法供 ViewModel 呼叫。
 *   **`OniTranslatorBottomBar`** 負責呈現最新狀態，閒置時顯示當前項目總數。
 
-### 4.4. 列表顯示與搜尋邏輯 (List & Search Logic)
+### 4.4. 列表篩選與搜尋架構 (List Filtering & Search Architecture)
 
-1.  **待辦模式 (Default / Diff Mode)**
-    *   **觸發時機**：搜尋模式未啟用時。
-    *   **頂端狀態欄 (Toolbar Status)**：顯示「全部: %1$d, 已變更: %2$d」，分別對應待辦項目總數 (`filteredList.size`) 與本次工作階段實際已翻譯項目數 (`changedList.size`)。
-    *   **卡片指示器與膠囊標籤重構 (Header Badges & Icons)**：
+1.  **左側常駐篩選標籤 (Permanent Filter Tabs / `EntryFilterBar`)**
+    *   **設計動機**：過往「標籤診斷」與「詞彙衝突」附屬於頂端搜尋列，導致校對者必須展開搜尋介面才能檢視問題。重構後將其提升為左側列表頂端的常駐過濾標籤 (`EntryFilterMode`)，與待辦項目具備對等之第一級公民地位。
+    *   **四種過濾模式**：
+        *   `待處理 (Pending)`：預設檢視，精確載入範本新增 (`newly`)、原文變動 (`msgidChanged`) 與記憶體異動 (`modified`) 之待辦清單 (`buildChangeList()`)。
+        *   `標籤診斷 (Diagnostic)`：篩選全量條目中存在標籤語法錯誤或對稱性問題之項目；Tab 上即時呈現全域待修總數 `(count)` 與琥珀金高亮圖示。
+        *   `詞彙衝突 (Glossary)`：篩選全量條目中包含未審閱專有名詞衝突之項目；Tab 上即時呈現待處理總數 `(count)` 與警示紅圖示。
+        *   `全部 (All)`：直接瀏覽完整 PO 字典庫，無需啟用搜尋即可翻閱全量條目。
+    *   **單一響應式管線 (Single Reactive Pipeline)**：所有過濾邏輯統一收斂於 ViewModel 的 `computeFilteredList()`，輸出唯一之 `state.filteredList`，消除過往 UI 端 `results` 與 `filteredList` 的平行狀態與判斷分岐。
+
+2.  **頂端狀態欄與卡片指示 (Toolbar Status & Card Indicators)**
+    *   **頂端狀態欄 (Toolbar Status)**：顯示「全部: %1$d, 已變更: %2$d」，分別對應當前篩選列表總數 (`filteredList.size`) 與本次工作階段實際已翻譯項目數 (`changedList.size`)。
+    *   **卡片指示器與膠囊標籤 (Header Badges & Icons)**：
         *   `NEW`: 採用 `errorContainer` 半透明背景之圓角膠囊（Pill Badge），標示範本新增 Key。
         *   `MODIFIED`: 採用 `tertiaryContainer` 半透明背景之圓角膠囊，內容與正式檔 `PoSave` 不同時顯示。
         *   🟠 **標籤診斷指示**：`ic_sensor_window`（16dp），存在語法錯誤或標籤對稱性問題時呈現。
@@ -137,15 +146,12 @@
         *   `Draft Chip`: 卡片下方顯示草稿檔中的原始內容，供精確比對。
         *   **卡片修改狀態**：由各項目實體之 `target.changed > 0` 獨立驅動卡片高亮邊框，解耦平行陣列索引依賴。
 
-2.  **全覽模式 (Search / Library Mode) 與資訊前置 (Information Scaffolding)**
-    *   **觸發時機**：啟用搜尋模式 (`isActive = true`)。
-    *   **行為**：自動隱藏 `MODIFIED`/`NEW` 標籤，提供純淨的字典查詢體驗。
-    *   **FilterChip 即時待處理總數**：搜尋列下方之 `SearchTypeRow` 整合全域即時計數與 Leading Icon：
-        *   `[🟠 標籤診斷 (X)]`：即時顯示全域標籤待修條目數。
-        *   `[🔴 詞彙衝突 (Y)]`：即時顯示全域未審閱專有名詞衝突數。
-        *   資訊前置設計讓校對者無需點進分類即可一覽待處理總量，且點擊後精確過濾。
+3.  **搜尋欄解耦與全域關鍵字搜尋 (Universal Keyword Search)**
+    *   **介面精簡**：徹底移除橫跨左右兩欄之滑動式 `SearchTypeRow`，頂端搜尋欄回歸為純粹、即時的關鍵字查詢。
+    *   **全域比對**：輸入搜尋關鍵字時，自動同步比對條目之 Key、英文原文 (`msgId`) 與中文譯文 (`msgStr`)，無需手動切換搜尋類別。
+    *   **模式互斥切換**：啟用搜尋模式 (`isActive = true`) 時，搜尋結果直接驅動 `filteredList`；點擊左側任一 Filter Tab 則平滑退出搜尋並切換至該過濾檢視。
 
-3.  **重新整理 (Refresh)**：
+4.  **重新整理 (Refresh)**：
     *   觸發 `RefreshSource` 時會清空編輯器狀態，確保 UI 一致性。
 
 ### 4.5. 開發與除錯 (Debug Mode)
