@@ -1,6 +1,7 @@
 package dolphin.desktop.apps.onitranslator.app
 
 import dolphin.desktop.apps.onitranslator.model.Configs
+import dolphin.desktop.apps.onitranslator.model.EntryFilterMode
 import dolphin.desktop.apps.onitranslator.model.SearchType
 import dolphin.desktop.apps.onitranslator.model.UiState
 import dolphin.desktop.apps.onitranslator.model.PoEntry
@@ -20,6 +21,13 @@ sealed interface AppEvent {
 
         // Triggered when user types or changes the search target (e.g., Key, Value)
         data class TextChange(val text: String, val type: SearchType) : Search
+    }
+
+    /**
+     * Entry browser list filtering events.
+     */
+    sealed interface Browser : AppEvent {
+        data class FilterChange(val mode: EntryFilterMode) : Browser
     }
 
     /**

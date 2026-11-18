@@ -54,6 +54,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         scope.launch {
             when (event) {
                 // Search & Source
+                is AppEvent.Browser.FilterChange -> onFilterModeChange(event.mode)
                 is AppEvent.Search.TextChange -> search(event.text, event.type)
                 is AppEvent.Search.ActiveChange -> onSearchActiveChange(event.isActive)
                 is AppEvent.File.RefreshSource -> translate()
@@ -157,11 +158,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                 updateUiState { it.copy(dialogState = OniDialogState.LogWindow(logs = state.value.logs)) }
 
             is AppEvent.Ui.ShowJumpDialog -> {
-                val count = if (state.value.uiState.searchState.isActive) {
-                    state.value.uiState.searchState.results.size
-                } else {
-                    state.value.filteredList.size
-                }
+                val count = state.value.filteredList.size
                 if (count > 0) {
                     updateUiState { it.copy(dialogState = OniDialogState.JumpDialog(totalCount = count)) }
                 }
@@ -191,17 +188,23 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         ConfigManager.save(state.value.configs, newConfig)
     }
 
+    private suspend fun onFilterModeChange(mode: EntryFilterMode) {
+        if (state.value.filterMode == mode) return
+        _state.update { it.copy(filterMode = mode) }
+        refreshPipeline()
+    }
+
     private suspend fun onSearchActiveChange(isActive: Boolean) {
         if (state.value.uiState.searchState.isActive == isActive) return
-        if (isActive) {
-            // Trigger search with empty text to load ALL items when entering search mode
-            search("")
-            updateUiState { it.copy(searchState = it.searchState.copy(isActive = true)) }
-        } else {
-            // clear search text when closing search
-            search("")
-            updateUiState { it.copy(searchState = it.searchState.copy(isActive = false)) }
+        updateUiState {
+            it.copy(
+                searchState = it.searchState.copy(
+                    isActive = isActive,
+                    text = if (!isActive) "" else it.searchState.text
+                )
+            )
         }
+        refreshPipeline()
     }
 
     private suspend fun onSaveFileRequest(useCache: Boolean) {
@@ -322,9 +325,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         helper?.runTranslationProcess()
         val terms = helper?.glossaryBank?.terms ?: emptyList()
         _state.update { it.copy(glossaryTerms = terms) }
-        refreshDataSource()
-        val results = helper?.allEntries()?.mapNotNull { entry -> requestEditorData(entry) } ?: emptyList()
-        updateUiState { it.copy(searchState = it.searchState.copy(results = results)) }
+        refreshPipeline()
     }
 
     private suspend fun edit(key: String, value: String) {
@@ -348,31 +349,74 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         }
     }
 
-    private suspend fun refreshDataSource() = withContext(Dispatchers.IO) {
-        val filtered = helper?.buildChangeList()?.mapNotNull { requestEditorData(it) } ?: emptyList()
-        val list = filtered.filter { it.target.changed > 0 }.map { it.target.key }
-        val hasDraft = helper?.hasDraft() ?: false
-        val currentKey = state.value.uiState.editorData?.target?.key
-        val refreshedEditorData = currentKey?.let { key ->
-            helper?.allEntries()?.find { it.key == key }?.let { requestEditorData(it) }
-        }
-        val all = helper?.allEntries() ?: emptyList()
+    private suspend fun refreshDataSource() = refreshPipeline()
+
+    private suspend fun refreshPipeline() = withContext(Dispatchers.IO) {
+        val h = helper ?: return@withContext
+        val all = h.allEntries()
         val diagCount = all.count { it.diagnostic?.hasIssue == true }
         val glossCount = all.count { it.glossaryDiag?.isUnreviewed == true }
+        val hasDraft = h.hasDraft()
+
+        val computed = computeFilteredList()
+        val list = computed.filter { it.target.changed > 0 }.map { it.target.key }
+
+        val currentKey = state.value.uiState.editorData?.target?.key
+        val refreshedEditorData = currentKey?.let { key ->
+            all.find { it.key == key }?.let { requestEditorData(it) }
+        }
+
         _state.update {
             it.copy(
-                filteredList = filtered,
+                filteredList = computed,
                 changedList = list,
                 hasDraft = hasDraft,
                 diagnosticCount = diagCount,
                 glossaryCount = glossCount,
-                uiState = it.uiState.copy(editorData = refreshedEditorData)
+                uiState = it.uiState.copy(
+                    editorData = refreshedEditorData,
+                    searchState = it.uiState.searchState.copy(results = computed)
+                )
             )
         }
-        if (state.value.uiState.searchState.isActive) {
-            val sState = state.value.uiState.searchState
-            search(sState.text, sState.type)
+    }
+
+    private suspend fun computeFilteredList(): List<EditorData> = withContext(Dispatchers.IO) {
+        val h = helper ?: return@withContext emptyList()
+        val all = h.allEntries()
+        val sState = state.value.uiState.searchState
+
+        // When search is active, search across all entries
+        if (sState.isActive) {
+            val query = sState.text
+            val normalizedQuery = query.normalizeForSearch()
+            val searchResult = all.filter { item ->
+                when (sState.type) {
+                    SearchType.Origin -> item.msgId().normalizeForSearch().contains(normalizedQuery, ignoreCase = true)
+                    SearchType.Key -> {
+                        val normalizedKey = item.key().normalizeKeyForSearch()
+                        val normalizedKeyQuery = query.normalizeKeyForSearch()
+                        normalizedKey.contains(normalizedKeyQuery, ignoreCase = true)
+                    }
+                    SearchType.Text -> item.msgStr().normalizeForSearch().contains(normalizedQuery, ignoreCase = true)
+                    SearchType.Diagnostic -> item.diagnostic?.hasIssue == true
+                    SearchType.Glossary -> item.glossaryDiag?.hasConflict == true &&
+                            (query.isBlank() || item.msgId().contains(query, ignoreCase = true) || item.msgStr().contains(query, ignoreCase = true))
+                }
+            }
+            return@withContext searchResult.mapNotNull { requestEditorData(it) }
         }
+
+        // When search is not active, filter according to filterMode
+        val filterMode = state.value.filterMode
+        val baseEntries: List<PoEntry> = when (filterMode) {
+            EntryFilterMode.Pending -> h.buildChangeList()
+            EntryFilterMode.Diagnostic -> all.filter { it.diagnostic?.hasIssue == true }
+            EntryFilterMode.Glossary -> all.filter { it.glossaryDiag?.isUnreviewed == true }
+            EntryFilterMode.All -> all
+        }
+
+        baseEntries.mapNotNull { requestEditorData(it) }
     }
 
     private suspend fun save(cacheIt: Boolean = false): Pair<String, Long> = withContext(Dispatchers.IO) {
@@ -387,22 +431,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     private suspend fun search(text: String, type: SearchType = state.value.uiState.searchState.type) =
         withContext(Dispatchers.IO) {
             updateUiState { it.copy(searchState = it.searchState.copy(text = text, type = type)) }
-            val normalizedQuery = text.normalizeForSearch()
-            val searchResult = helper?.allEntries()?.filter { item ->
-                when (type) {
-                    SearchType.Origin -> item.msgId().normalizeForSearch().contains(normalizedQuery, ignoreCase = true)
-                    SearchType.Key -> {
-                        val normalizedKey = item.key().normalizeKeyForSearch()
-                        val normalizedKeyQuery = text.normalizeKeyForSearch()
-                        normalizedKey.contains(normalizedKeyQuery, ignoreCase = true)
-                    }
-                    SearchType.Text -> item.msgStr().normalizeForSearch().contains(normalizedQuery, ignoreCase = true)
-                    SearchType.Diagnostic -> item.diagnostic?.hasIssue == true
-                    SearchType.Glossary -> item.glossaryDiag?.hasConflict == true &&
-                            (text.isBlank() || item.msgId().contains(text, ignoreCase = true) || item.msgStr().contains(text, ignoreCase = true))
-                }
-            }?.mapNotNull { entry -> requestEditorData(entry) } ?: emptyList()
-            updateUiState { it.copy(searchState = it.searchState.copy(results = searchResult)) }
+            refreshPipeline()
         }
 
     private fun String.normalizeForSearch(): String {

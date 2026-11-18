@@ -13,6 +13,8 @@ data class AppState(
     val filteredList: List<EditorData> = emptyList(),
     // Keys of entries that have been modified in this session
     val changedList: List<String> = emptyList(),
+    // Active filter mode for the entry list
+    val filterMode: EntryFilterMode = EntryFilterMode.Pending,
     val logs: List<LogEntry> = emptyList(),
     val appVersion: String = "0.0.0",
     val hasDraft: Boolean = false,
