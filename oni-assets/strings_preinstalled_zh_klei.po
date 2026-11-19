@@ -9501,16 +9501,6 @@ msgctxt "STRINGS.BUILDING.STATUSITEMS.LOOKINGOKAY.TOOLTIP"
 msgid "Duplicants find this art piece quite charming"
 msgstr "复制人会觉得这件作品很有魅力"
 
-#. STRINGS.BUILDING.STATUSITEMS.LOOKINGSANDY.NAME
-msgctxt "STRINGS.BUILDING.STATUSITEMS.LOOKINGSANDY.NAME"
-msgid "Beachy"
-msgstr "海滩风"
-
-#. STRINGS.BUILDING.STATUSITEMS.LOOKINGSANDY.TOOLTIP
-msgctxt "STRINGS.BUILDING.STATUSITEMS.LOOKINGSANDY.TOOLTIP"
-msgid "This sculpture makes Duplicants feel like they're on vacation somewhere nice"
-msgstr "这个雕塑让复制人感觉像是在一个美好的地方度假一样"
-
 #. STRINGS.BUILDING.STATUSITEMS.LOOKINGUGLY.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.LOOKINGUGLY.NAME"
 msgid "Crude"
@@ -11256,37 +11246,47 @@ msgctxt "STRINGS.BUILDING.STATUSITEMS.ROCKETSTRANDED.TOOLTIP"
 msgid "This rocket has run out of fuel and cannot move"
 msgstr "这艘火箭用尽燃料了，无法移动"
 
+#. STRINGS.BUILDING.STATUSITEMS.SANDBOXLOOKINGSANDY.NAME
+msgctxt "STRINGS.BUILDING.STATUSITEMS.SANDBOXLOOKINGSANDY.NAME"
+msgid "Beachy"
+msgstr "海滩风"
+
+#. STRINGS.BUILDING.STATUSITEMS.SANDBOXLOOKINGSANDY.TOOLTIP
+msgctxt "STRINGS.BUILDING.STATUSITEMS.SANDBOXLOOKINGSANDY.TOOLTIP"
+msgid "This sculpture makes Duplicants feel like they're on vacation somewhere nice"
+msgstr "这个雕塑让复制人感觉像是在一个美好的地方度假一样"
+
 #. STRINGS.BUILDING.STATUSITEMS.SANDBOXSCULPTURECOLLAPSED.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SANDBOXSCULPTURECOLLAPSED.NAME"
-msgid "Collapsed Sculpture"
-msgstr "倒塌雕塑"
+msgid "Collapsed Sand Art"
+msgstr "倒塌的沙子艺术"
 
 #. STRINGS.BUILDING.STATUSITEMS.SANDBOXSCULPTURECOLLAPSED.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SANDBOXSCULPTURECOLLAPSED.TOOLTIP"
 msgid ""
-"This sculpture has collapsed\n"
+"This sand sculpture has dried out and collapsed\n"
 "\n"
-"A Duplicant will be able to resculpt it during their downtime"
+"Duplicants can resculpt it during their downtime"
 msgstr ""
-"这个雕塑已经倒塌\n"
+"这个沙子雕塑已经干燥并倒塌\n"
 "\n"
 "复制人会在休息时间重新完成雕塑"
 
 #. STRINGS.BUILDING.STATUSITEMS.SANDBOXSCULPTUREUNSTABLE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SANDBOXSCULPTUREUNSTABLE.NAME"
-msgid "Unstable Sculpture"
-msgstr "不稳雕塑"
+msgid "Unstable Sand Art"
+msgstr "不稳定的沙子艺术"
 
 #. STRINGS.BUILDING.STATUSITEMS.SANDBOXSCULPTUREUNSTABLE.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SANDBOXSCULPTUREUNSTABLE.TOOLTIP"
 msgid ""
-"This sculpture is structurally unsound\n"
+"This sculpture is made of wet sand\n"
 "\n"
-"It will collapse in {TIME}"
+"It will dry out and collapse in {TIME}"
 msgstr ""
-"这个雕塑结构不稳固\n"
+"这个雕塑由湿沙子制成\n"
 "\n"
-"它将在{TIME}后倒塌"
+"它将在{TIME}后干燥并倒塌"
 
 #. STRINGS.BUILDING.STATUSITEMS.SKILL_POINTS_AVAILABLE.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.SKILL_POINTS_AVAILABLE.NAME"
@@ -11860,13 +11860,13 @@ msgstr ""
 
 #. STRINGS.BUILDING.STATUSITEMS.TRAMPOLINEBOUNCESREMAINING.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TRAMPOLINEBOUNCESREMAINING.NAME"
-msgid "{BouncesLeft} of {MaxBounces} remaining"
-msgstr "剩余次数{BouncesLeft}/{MaxBounces}"
+msgid "{BouncesLeft} Visits Remaining"
+msgstr "剩余{BouncesLeft}次使用"
 
 #. STRINGS.BUILDING.STATUSITEMS.TRAMPOLINEBOUNCESREMAINING.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TRAMPOLINEBOUNCESREMAINING.TOOLTIP"
-msgid "{BouncesLeft} of {MaxBounces} remaining tooltip"
-msgstr "剩余次数{BouncesLeft}/{MaxBounces}的悬停提示"
+msgid "{BouncesLeft} more Duplicants can enjoy this amenity before its <style=\"KKeyword\">Rubber</style> surface will require maintenance"
+msgstr "在<style=\"KKeyword\">橡胶</style>表面需要维护之前，这个设备还可以再让复制人享受{BouncesLeft}次"
 
 #. STRINGS.BUILDING.STATUSITEMS.TRANSITTUBEENTRANCEWAXREADY.NAME
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TRANSITTUBEENTRANCEWAXREADY.NAME"
@@ -12004,29 +12004,29 @@ msgstr "涡轮模式开启"
 #. STRINGS.BUILDING.STATUSITEMS.TURBOMODE.TOOLTIP
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TURBOMODE.TOOLTIP"
 msgid ""
-"This building is operating at maximum power\n"
+"This building is operating at maximum <style=\"KKeyword\">Power</style>\n"
 "\n"
-"    • Power consumption: <b>{0}</b>\n"
-"    • Heat production: <b>{1}</b>\n"
+"    • <style=\"KKeyword\">Power</style> consumption: <b>{0}</b>\n"
+"    • <style=\"KKeyword\">Heat</style> production: <b>{1}</b>\n"
 "    • Boiling the surrounding liquid"
 msgstr ""
-"这个建筑以最大功率运行\n"
+"这个建筑以最大<style=\"KKeyword\">功率</style>运行\n"
 "\n"
-"    • 电力消耗：<b>{0}</b>\n"
-"    • 热量产生：<b>{1}</b>\n"
+"    • <style=\"KKeyword\">电力</style>消耗：<b>{0}</b>\n"
+"    • <style=\"KKeyword\">热量</style>产生：<b>{1}</b>\n"
 "    • 使周围液体沸腾"
 
 #. STRINGS.BUILDING.STATUSITEMS.TURBOMODE.TOOLTIP_RECREATION
 msgctxt "STRINGS.BUILDING.STATUSITEMS.TURBOMODE.TOOLTIP_RECREATION"
 msgid ""
-"This building is operating at maximum power\n"
+"This building is operating at maximum <style=\"KKeyword\">Power</style>\n"
 "\n"
-"    • Power consumption: <b>{0}</b>\n"
+"    • <style=\"KKeyword\">Power</style> consumption: <b>{0}</b>\n"
 "    • Duplicants who spend at least <b>{1}</b> of their ride in Turbo Mode gain extra <style=\"KKeyword\">Morale</style>"
 msgstr ""
-"这个建筑以最大功率运行\n"
+"这个建筑以最大<style=\"KKeyword\">功率</style>运行\n"
 "\n"
-"    • 电力消耗：<b>{0}</b>\n"
+"    • <style=\"KKeyword\">电力</style>消耗：<b>{0}</b>\n"
 "    • 涡轮模式至少占<b>{1}</b>骑行时间的复制人可获得额外<style=\"KKeyword\">士气</style>"
 
 #. STRINGS.BUILDING.STATUSITEMS.UNASSIGNED.NAME
@@ -12897,8 +12897,8 @@ msgstr "如果涡轮模式开启时间少于{percent}骑行时间，则复制人
 
 #. STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_TURBO
 msgctxt "STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_TURBO"
-msgid "{attrib}: {amount} (Turbo)"
-msgstr "{attrib}：{amount}（涡轮）"
+msgid "{attrib}: {amount} (Turbo Mode)"
+msgstr "{attrib}：{amount}（涡轮模式）"
 
 #. STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_TURBO_TOOLTIP
 msgctxt "STRINGS.BUILDINGS.PREFABS.ASTRONAUTTRAININGCENTER.MODEEFFECT_TURBO_TOOLTIP"
@@ -14922,11 +14922,11 @@ msgstr "数据磁盘还可以用于火箭的机器驾驶舱的编程。"
 #. STRINGS.BUILDINGS.PREFABS.DATAMINER.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.DATAMINER.EFFECT"
 msgid ""
-"Mass-produces <link=\"DATABANK\">Data Banks</link> that can be processed into <link=\"RESEARCHDLC1\">Data Analysis Research</link> points.\n"
+"Mass-produces <link=\"DATABANK\">Data Banks</link> that can be processed into <link=\"RESEARCH\">Interstellar Research</link> points.\n"
 "\n"
 "Duplicants will not fabricate items unless recipes are queued."
 msgstr ""
-"批量生产可处理成<link=\"RESEARCHDLC1\">数据分析研究</link>点数的<link=\"DATABANK\">数据磁盘</link>。\n"
+"批量生产可处理成<link=\"RESEARCH\">数据分析研究</link>点数的<link=\"DATABANK\">数据磁盘</link>。\n"
 "\n"
 "只有在队列中安排配方复制人才会进行制作。"
 
@@ -27094,13 +27094,19 @@ msgstr "艺术品质"
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.DESC"
-msgid "Damp sand is an excellent medium for creative expression, regardless of artistic skill."
-msgstr "潮湿的沙子是绝佳的创意表达媒介，无论艺术水平如何。"
+msgid "Sand art is naturally unstable and will eventually collapse."
+msgstr "沙子艺术本身不稳定，最终会倒塌。"
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.EFFECT"
-msgid "Allows Duplicants to enjoy a <link=\"MORALE\">Morale</link>-boosting play session on their breaks."
-msgstr "允许复制人在休息时间游玩，提升复制人的<link=\"MORALE\">士气</link>。"
+msgid ""
+"Allows Duplicants to enjoy a <link=\"MORALE\">Morale</link>-boosting play session on their breaks.\n"
+"\n"
+"No artistic skill is required."
+msgstr ""
+"允许复制人在休息时间游玩，提升复制人的<link=\"MORALE\">士气</link>。\n"
+"\n"
+"不需要艺术技能。"
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDBOX_CASTLE_1.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDBOX_CASTLE_1.DESC"
@@ -27182,6 +27188,16 @@ msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SEALOVE
 msgid "A Deep Bow"
 msgstr "《深深的鞠躬》"
 
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SHELL_SIMPLE.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SHELL_SIMPLE.DESC"
+msgid "A series of artfully arranged aquatic shapes dreamed up by a happy Duplicant."
+msgstr "一系列由快乐的复制人精心设计的水生形状。"
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SHELL_SIMPLE.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SHELL_SIMPLE.NAME"
+msgid "Shell-ebrate"
+msgstr "《庆祝时壳》"
+
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SNOWMAN.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SNOWMAN.DESC"
 msgid "This grainy character looks like they're winning a game of Limbo."
@@ -27191,6 +27207,36 @@ msgstr "这个颗粒感十足的角色，看起来像是就要赢了林波舞游
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SNOWMAN.NAME"
 msgid "The Sandman"
 msgstr "《沙人》"
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SOFTSERVE.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SOFTSERVE.DESC"
+msgid "Something about the way this sand has been sculpted makes Duplicants' mouths water."
+msgstr "这种沙子的雕刻方式让复制人垂涎三尺。"
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SOFTSERVE.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SOFTSERVE.NAME"
+msgid "Sweet Stuff"
+msgstr "《甜品》"
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_STARFISH_SIMPLE.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_STARFISH_SIMPLE.DESC"
+msgid "The sculptor declined to include the critter's sixth limb, citing artistic liberty."
+msgstr "这位雕塑家拒绝将这只小动物的第六肢纳入作品中，理由是艺术自由。"
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_STARFISH_SIMPLE.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_STARFISH_SIMPLE.NAME"
+msgid "Five-Pointed Starnacle"
+msgstr "《五角星》"
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_TOMBSTONE_SIMPLE.DESC
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_TOMBSTONE_SIMPLE.DESC"
+msgid "Celebrates a possible future reunion between the sculptor and their long-departed friend."
+msgstr "庆祝这位雕塑家和他已故朋友未来可能的重聚。"
+
+#. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_TOMBSTONE_SIMPLE.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_TOMBSTONE_SIMPLE.NAME"
+msgid "Welcome Back"
+msgstr "《欢迎回来》"
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.NAME"
@@ -30099,11 +30145,11 @@ msgstr "木材燃烧器很小而且很容易维护，但会产生相当多的热
 #. STRINGS.BUILDINGS.PREFABS.WOODGASGENERATOR.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.WOODGASGENERATOR.EFFECT"
 msgid ""
-"Burns <link=\"WOOD\">Wood</link> to produce electrical <link=\"POWER\">Power</link>.\n"
+"Burns <link=\"BUILDINGWOOD\">Lumber</link> to produce electrical <link=\"POWER\">Power</link>.\n"
 "\n"
 "Produces <link=\"CARBONDIOXIDE\">Carbon Dioxide</link> and <link=\"HEAT\">Heat</link>."
 msgstr ""
-"燃烧<link=\"WOOD\">木材</link>以产生<link=\"POWER\">电力</link>。\n"
+"燃烧<link=\"BUILDINGWOOD\">木料</link>以产生<link=\"POWER\">电力</link>。\n"
 "\n"
 "产生<link=\"CARBONDIOXIDE\">二氧化碳</link>和<link=\"HEAT\">热量</link>。"
 
@@ -44413,8 +44459,14 @@ msgstr "<link=\"REQUIREMENTCLASSSUBMERGIBLE\">可潜水建筑</link>"
 
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUPPORTBUILDING.DESCRIPTION
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUPPORTBUILDING.DESCRIPTION"
-msgid "Support buildings are tools that optimize work speed for eligible buildings that are within range and line of sight. Once built, they function independently."
-msgstr "辅助建筑是能优化范围和视线内符合条件建筑的工具。建成后可独立发挥作用。"
+msgid ""
+"Support buildings are tools that optimize work speed for eligible buildings that are within range and line of sight. Certain ones have stackable effects when built side-by-side with others of the same type.\n"
+"\n"
+"Once built, support buildings function independently."
+msgstr ""
+"辅助建筑是能优化范围和视线内符合条件建筑的工具。某些辅助建筑在与其他同类型建筑并排建造时效果可以叠加。\n"
+"\n"
+"建成后，辅助建筑可独立发挥作用。"
 
 #. STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUPPORTBUILDING.FLAVOUR
 msgctxt "STRINGS.CODEX.ROOM_REQUIREMENT_CLASS.SUPPORTBUILDING.FLAVOUR"
@@ -58515,6 +58567,22 @@ msgctxt "STRINGS.CREATURES.STATUSITEMS.HEALTHSTATUS.TOOLTIP"
 msgid "Current physical status: {healthState}"
 msgstr "当前身体状态：{healthState}"
 
+#. STRINGS.CREATURES.STATUSITEMS.HIDINGFROMMETEORS.NAME
+msgctxt "STRINGS.CREATURES.STATUSITEMS.HIDINGFROMMETEORS.NAME"
+msgid "Taking Cover"
+msgstr "寻找掩体"
+
+#. STRINGS.CREATURES.STATUSITEMS.HIDINGFROMMETEORS.TOOLTIP
+msgctxt "STRINGS.CREATURES.STATUSITEMS.HIDINGFROMMETEORS.TOOLTIP"
+msgid ""
+"This critter is burrowing underground to escape a <style=\"KKeyword\">Meteor Shower</style>\n"
+"\n"
+"It will resurface once the meteors stop falling"
+msgstr ""
+"这只小动物正钻入地下躲避<style=\"KKeyword\">流星雨</style>\n"
+"\n"
+"它在流星停止坠落时会重新出来"
+
 #. STRINGS.CREATURES.STATUSITEMS.HIGH_YIELD.LINE_ITEM
 msgctxt "STRINGS.CREATURES.STATUSITEMS.HIGH_YIELD.LINE_ITEM"
 msgid "    • {0}\n"
@@ -59216,7 +59284,7 @@ msgstr ""
 #. STRINGS.CREATURES.STATUSITEMS.RUMMAGINGSEED.NAME
 msgctxt "STRINGS.CREATURES.STATUSITEMS.RUMMAGINGSEED.NAME"
 msgid "Rummaging for seeds"
-msgstr "搜寻种子"
+msgstr "翻找种子"
 
 #. STRINGS.CREATURES.STATUSITEMS.RUMMAGINGSEED.TOOLTIP
 msgctxt "STRINGS.CREATURES.STATUSITEMS.RUMMAGINGSEED.TOOLTIP"
@@ -60760,13 +60828,13 @@ msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.WILTTEMPRANGEMOD.NAME"
 msgid "Viable Temperature Range"
 msgstr "适用的温度范围"
 
-#. STRINGS.DUPLICANTS.ATTRIBUTES.YIELDAMOUNT.DESC
-msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.YIELDAMOUNT.DESC"
+#. STRINGS.DUPLICANTS.ATTRIBUTES.YIELDFACTOR.DESC
+msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.YIELDFACTOR.DESC"
 msgid "Plant production relative to the base crop"
 msgstr "与基本作物相比，植物的产量"
 
-#. STRINGS.DUPLICANTS.ATTRIBUTES.YIELDAMOUNT.NAME
-msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.YIELDAMOUNT.NAME"
+#. STRINGS.DUPLICANTS.ATTRIBUTES.YIELDFACTOR.NAME
+msgctxt "STRINGS.DUPLICANTS.ATTRIBUTES.YIELDFACTOR.NAME"
 msgid "Yield Amount"
 msgstr "产量"
 
@@ -64763,11 +64831,11 @@ msgstr ""
 #. STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTER.TOOLTIP_DLC1
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTER.TOOLTIP_DLC1"
 msgid ""
-"This Duplicant's piloting instincts are extra sharp right now\n"
+"This Duplicant's feeling sharp after a recent \"test flight\"\n"
 "\n"
 "Leisure activities increase Duplicants' <style=\"KKeyword\">Morale</style>"
 msgstr ""
-"这名复制人的驾驶本能现在特别敏锐\n"
+"这名复制人最近“试飞”后感觉很敏锐\n"
 "\n"
 "休闲活动可提升复制人的<style=\"KKeyword\">士气</style>"
 
@@ -64779,11 +64847,11 @@ msgstr "疾驰"
 #. STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERSPINNING.TOOLTIP
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERSPINNING.TOOLTIP"
 msgid ""
-"This Duplicant is on a wild roller coaster ride\n"
+"This Duplicant is riding a roller coaster!\n"
 "\n"
 "It's helping them release pent-up <style=\"KKeyword\">Stress</style>"
 msgstr ""
-"这名复制人正在经历一场疯狂的过山车之旅\n"
+"这名复制人正在坐过山车！\n"
 "\n"
 "休闲活动可提升复制人的<style=\"KKeyword\">士气</style>"
 
@@ -64806,11 +64874,11 @@ msgstr ""
 #. STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERTURBO.TOOLTIP_DLC1
 msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERTURBO.TOOLTIP_DLC1"
 msgid ""
-"This Duplicant's piloting instincts are supercharged after a ride at top speed\n"
+"This Duplicant's turbo-speed \"test flight\" left them ready for more\n"
 "\n"
 "Leisure activities increase Duplicants' <style=\"KKeyword\">Morale</style>"
 msgstr ""
-"这名复制人在高速飞驰后，驾驶本能特别敏锐\n"
+"这名复制人的涡轮加速的“试飞”让他准备好迎接更多挑战了\n"
 "\n"
 "休闲活动可提升复制人的<style=\"KKeyword\">士气</style>"
 
@@ -83857,7 +83925,7 @@ msgstr "沙盒"
 #. STRINGS.INPUT_BINDINGS.SANDBOX.SANDBOXBRUSH
 msgctxt "STRINGS.INPUT_BINDINGS.SANDBOX.SANDBOXBRUSH"
 msgid "Sandbox Brush"
-msgstr "沙盒：刷子"
+msgstr "沙盒：笔刷"
 
 #. STRINGS.INPUT_BINDINGS.SANDBOX.SANDBOXCLEARFLOOR
 msgctxt "STRINGS.INPUT_BINDINGS.SANDBOX.SANDBOXCLEARFLOOR"
@@ -90044,11 +90112,11 @@ msgstr "<link=\"COMBUSTIBLELIQUID\">可燃液体</link>"
 #. STRINGS.MISC.TAGS.COMBUSTIBLELIQUID_DESC
 msgctxt "STRINGS.MISC.TAGS.COMBUSTIBLELIQUID_DESC"
 msgid ""
-"Combustible Liquids can be burned as fuels to be used in energy production, such as in a <link=\"PETROLEUMGENERATOR\">Petroleum Generator</link> or a <link=\"KEROSENEENGINECLUSTER\">Petroleum Engine</link>.\n"
+"Combustible Liquids can be burned as fuels to be used in energy production, such as in a <link=\"PETROLEUMGENERATOR\">Petroleum Generator</link> or a <link=\"KEROSENEENGINE\">Petroleum Engine</link>.\n"
 "\n"
 "Though these liquids have other uses, such as fertilizer for growing a <link=\"BEANPLANTSEED\">Nosh Bean</link>, their primary usefulness lies in their ability to be burned for <link=\"POWER\">Power</link>."
 msgstr ""
-"可燃液体可作为燃料用于能量生产，比如用于<link=\"PETROLEUMGENERATOR\">石油发电机</link>或<link=\"KEROSENEENGINECLUSTER\">石油引擎</link>中。\n"
+"可燃液体可作为燃料用于能量生产，比如用于<link=\"PETROLEUMGENERATOR\">石油发电机</link>或<link=\"KEROSENEENGINE\">石油引擎</link>中。\n"
 "\n"
 "尽管这些液体也有其他用途，比如作为<link=\"BEANPLANTSEED\">小吃豆</link>生长的养料，但它们最主要的用途还是当燃料<link=\"POWER\">发电</link>。"
 
@@ -90497,8 +90565,8 @@ msgstr "矿石"
 
 #. STRINGS.MISC.TAGS.ORGANICS
 msgctxt "STRINGS.MISC.TAGS.ORGANICS"
-msgid "Organic"
-msgstr "有机物"
+msgid "<link=\"ORGANICS\">Organic</link>"
+msgstr "<link=\"ORGANICS\">有机</link>"
 
 #. STRINGS.MISC.TAGS.ORGANICS_DESC
 msgctxt "STRINGS.MISC.TAGS.ORGANICS_DESC"
@@ -118442,7 +118510,7 @@ msgstr "固体"
 #. STRINGS.UI.SANDBOXTOOLS.SETTINGS.BRUSH.NAME
 msgctxt "STRINGS.UI.SANDBOXTOOLS.SETTINGS.BRUSH.NAME"
 msgid "Brush"
-msgstr "刷子"
+msgstr "笔刷"
 
 #. STRINGS.UI.SANDBOXTOOLS.SETTINGS.BRUSH.TOOLTIP
 msgctxt "STRINGS.UI.SANDBOXTOOLS.SETTINGS.BRUSH.TOOLTIP"
@@ -118457,7 +118525,7 @@ msgstr "噪声B"
 #. STRINGS.UI.SANDBOXTOOLS.SETTINGS.BRUSH_NOISE_DENSITY.TOOLTIP
 msgctxt "STRINGS.UI.SANDBOXTOOLS.SETTINGS.BRUSH_NOISE_DENSITY.TOOLTIP"
 msgid "Adjust brush noisiness B"
-msgstr "调整刷子噪度B"
+msgstr "调整笔刷噪声B"
 
 #. STRINGS.UI.SANDBOXTOOLS.SETTINGS.BRUSH_NOISE_SCALE.NAME
 msgctxt "STRINGS.UI.SANDBOXTOOLS.SETTINGS.BRUSH_NOISE_SCALE.NAME"
@@ -118467,7 +118535,7 @@ msgstr "噪声A"
 #. STRINGS.UI.SANDBOXTOOLS.SETTINGS.BRUSH_NOISE_SCALE.TOOLTIP
 msgctxt "STRINGS.UI.SANDBOXTOOLS.SETTINGS.BRUSH_NOISE_SCALE.TOOLTIP"
 msgid "Adjust brush noisiness A"
-msgstr "调整刷子噪度A"
+msgstr "调整笔刷噪声A"
 
 #. STRINGS.UI.SANDBOXTOOLS.SETTINGS.BRUSH_SHAPE.CIRCLE_TOOLTIP
 msgctxt "STRINGS.UI.SANDBOXTOOLS.SETTINGS.BRUSH_SHAPE.CIRCLE_TOOLTIP"
@@ -118487,7 +118555,7 @@ msgstr "选择方刷"
 #. STRINGS.UI.SANDBOXTOOLS.SETTINGS.BRUSH_SHAPE.TOOLTIP
 msgctxt "STRINGS.UI.SANDBOXTOOLS.SETTINGS.BRUSH_SHAPE.TOOLTIP"
 msgid "Adjust brush shape"
-msgstr "调整刷子形状"
+msgstr "调整笔刷形状"
 
 #. STRINGS.UI.SANDBOXTOOLS.SETTINGS.BRUSH_SIZE.NAME
 msgctxt "STRINGS.UI.SANDBOXTOOLS.SETTINGS.BRUSH_SIZE.NAME"
@@ -118497,7 +118565,7 @@ msgstr "大小"
 #. STRINGS.UI.SANDBOXTOOLS.SETTINGS.BRUSH_SIZE.TOOLTIP
 msgctxt "STRINGS.UI.SANDBOXTOOLS.SETTINGS.BRUSH_SIZE.TOOLTIP"
 msgid "Adjust brush size"
-msgstr "调整刷子大小"
+msgstr "调整笔刷大小"
 
 #. STRINGS.UI.SANDBOXTOOLS.SETTINGS.CLEAR_FLOOR.NAME
 msgctxt "STRINGS.UI.SANDBOXTOOLS.SETTINGS.CLEAR_FLOOR.NAME"
@@ -118657,7 +118725,7 @@ msgstr "取样"
 #. STRINGS.UI.SANDBOXTOOLS.SETTINGS.SAMPLE.TOOLTIP
 msgctxt "STRINGS.UI.SANDBOXTOOLS.SETTINGS.SAMPLE.TOOLTIP"
 msgid "Copy the settings from a cell to use with brush tools {Hotkey}"
-msgstr "复制一个方格的数据，再用于刷子工具 {Hotkey}"
+msgstr "复制一个方格的数据，再用于笔刷工具 {Hotkey}"
 
 #. STRINGS.UI.SANDBOXTOOLS.SETTINGS.SPAWN_ENTITY.NAME
 msgctxt "STRINGS.UI.SANDBOXTOOLS.SETTINGS.SPAWN_ENTITY.NAME"
@@ -123953,12 +124021,12 @@ msgstr "打印模拟物"
 #. STRINGS.UI.TOOLS.SANDBOX.BRUSH.NAME
 msgctxt "STRINGS.UI.TOOLS.SANDBOX.BRUSH.NAME"
 msgid "Brush"
-msgstr "刷子"
+msgstr "笔刷"
 
 #. STRINGS.UI.TOOLS.SANDBOX.BRUSH.NAME_BACKWALL
 msgctxt "STRINGS.UI.TOOLS.SANDBOX.BRUSH.NAME_BACKWALL"
 msgid "Brush Backwall"
-msgstr "背景墙刷子"
+msgstr "背景墙笔刷"
 
 #. STRINGS.UI.TOOLS.SANDBOX.CLEAR_FLOOR.HOVERACTION
 msgctxt "STRINGS.UI.TOOLS.SANDBOX.CLEAR_FLOOR.HOVERACTION"
@@ -134053,6 +134121,42 @@ msgstr "水域小行星"
 #~ "在世界中漂浮或飞行的小动物。大多数都是温顺物种，但也有一些物种具有<link=\"CRITTERCATEGORYHOSTILE\">敌意</link>，应极其谨慎对待。\n"
 #~ "\n"
 #~ "计算环境<link=\"CREATURES::GUIDE::MOOD\">拥挤</link>程度时，它们会考虑<link=\"CRITTERCATEGORYAIRBORNE\">飞行</link>小动物和<link=\"CRITTERCATEGORYLAND\">陆生</link>小动物两者"
+
+#~ msgctxt "STRINGS.BUILDING.STATUSITEMS.SANDBOXSCULPTUREUNSTABLE.NAME"
+#~ msgid "Unstable Sculpture"
+#~ msgstr "不稳雕塑"
+
+#~ msgctxt "STRINGS.BUILDING.STATUSITEMS.TRAMPOLINEBOUNCESREMAINING.TOOLTIP"
+#~ msgid "{BouncesLeft} of {MaxBounces} remaining tooltip"
+#~ msgstr "剩余次数{BouncesLeft}/{MaxBounces}的悬停提示"
+
+#~ msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.DESC"
+#~ msgid "Damp sand is an excellent medium for creative expression, regardless of artistic skill."
+#~ msgstr "潮湿的沙子是绝佳的创意表达媒介，无论艺术水平如何。"
+
+#~ msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTER.TOOLTIP_DLC1"
+#~ msgid ""
+#~ "This Duplicant's piloting instincts are extra sharp right now\n"
+#~ "\n"
+#~ "Leisure activities increase Duplicants' <style=\"KKeyword\">Morale</style>"
+#~ msgstr ""
+#~ "这名复制人的驾驶本能现在特别敏锐\n"
+#~ "\n"
+#~ "休闲活动可提升复制人的<style=\"KKeyword\">士气</style>"
+
+#~ msgctxt "STRINGS.DUPLICANTS.MODIFIERS.ASTRONAUTTRAININGCENTERTURBO.TOOLTIP_DLC1"
+#~ msgid ""
+#~ "This Duplicant's piloting instincts are supercharged after a ride at top speed\n"
+#~ "\n"
+#~ "Leisure activities increase Duplicants' <style=\"KKeyword\">Morale</style>"
+#~ msgstr ""
+#~ "这名复制人在高速飞驰后，驾驶本能特别敏锐\n"
+#~ "\n"
+#~ "休闲活动可提升复制人的<style=\"KKeyword\">士气</style>"
+
+#~ msgctxt "STRINGS.MISC.TAGS.ORGANICS"
+#~ msgid "Organic"
+#~ msgstr "有机物"
 
 #~ msgctxt "STRINGS.BLUEPRINTS.PERMIT_BED_HATCH.NAME"
 #~ msgid "<link=\"BEDHATCH\">Hatch Plushie Cot</link>"

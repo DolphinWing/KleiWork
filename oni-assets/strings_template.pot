@@ -23985,12 +23985,12 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SHELL_SIMPLE.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SHELL_SIMPLE.DESC"
-msgid "sandsculpture_shell_simple desc."
+msgid "A series of artfully arranged aquatic shapes dreamed up by a happy Duplicant."
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SHELL_SIMPLE.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SHELL_SIMPLE.NAME"
-msgid "sandsculpture_shell_simple name"
+msgid "Shell-ebrate"
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SNOWMAN.DESC
@@ -24005,32 +24005,32 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SOFTSERVE.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SOFTSERVE.DESC"
-msgid "sandsculpture_softserve desc"
+msgid "Something about the way this sand has been sculpted makes Duplicants' mouths water."
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SOFTSERVE.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_SOFTSERVE.NAME"
-msgid "sandsculpture_softserve name"
+msgid "Sweet Stuff"
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_STARFISH_SIMPLE.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_STARFISH_SIMPLE.DESC"
-msgid "sandsculpture_starfish_simple desc"
+msgid "The sculptor declined to include the critter's sixth limb, citing artistic liberty."
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_STARFISH_SIMPLE.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_STARFISH_SIMPLE.NAME"
-msgid "sandsculpture_starfish_simple name"
+msgid "Five-Pointed Starnacle"
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_TOMBSTONE_SIMPLE.DESC
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_TOMBSTONE_SIMPLE.DESC"
-msgid "sandsculpture_tombstone_simple desc"
+msgid "Celebrates a possible future reunion between the sculptor and their long-departed friend."
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_TOMBSTONE_SIMPLE.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.FACADES.SANDSCULPTURE_TOMBSTONE_SIMPLE.NAME"
-msgid "sandsculpture_tombstone_simple name"
+msgid "Welcome Back"
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.SANDBOXBUILDING.NAME
@@ -26355,7 +26355,7 @@ msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.WOODGASGENERATOR.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.WOODGASGENERATOR.EFFECT"
-msgid "Burns <link=\"WOOD\">Wood</link> to produce electrical <link=\"POWER\">Power</link>.\n\nProduces <link=\"CARBONDIOXIDE\">Carbon Dioxide</link> and <link=\"HEAT\">Heat</link>."
+msgid "Burns <link=\"BUILDINGWOOD\">Lumber</link> to produce electrical <link=\"POWER\">Power</link>.\n\nProduces <link=\"CARBONDIOXIDE\">Carbon Dioxide</link> and <link=\"HEAT\">Heat</link>."
 msgstr ""
 
 #. STRINGS.BUILDINGS.PREFABS.WOODGASGENERATOR.NAME
