@@ -1,9 +1,14 @@
 package dolphin.desktop.apps.onitranslator.model
 
+import kotlinx.coroutines.runBlocking
 import java.io.BufferedReader
+import java.io.File
 import java.io.StringReader
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFailsWith
+import kotlin.test.assertNotNull
+import kotlin.test.assertNull
 import kotlin.test.assertTrue
 
 class PoHelperTest {
@@ -172,5 +177,56 @@ class PoHelperTest {
         assertTrue(bank.terms.any { it.english == "Master Artist" })
         assertTrue(bank.terms.any { it.english == "Blooming" })
         assertTrue(bank.terms.any { it.english == "Athletics" })
+    }
+
+    @Test
+    fun testEntryMapIndexAndTemplateOrder() = runBlocking {
+        val tempDir = File(System.getProperty("java.io.tmpdir"), "po_helper_index_test_${System.currentTimeMillis()}")
+        val assetsDir = File(tempDir, "assets").apply { mkdirs() }
+        val workshopDir = File(tempDir, "workshop").apply { mkdirs() }
+        try {
+            File(assetsDir, "strings_template.pot").writeText(
+                """
+                #. STRINGS.Z_SECOND
+                msgctxt "STRINGS.Z_SECOND"
+                msgid "Second"
+                msgstr ""
+
+                #. STRINGS.A_FIRST
+                msgctxt "STRINGS.A_FIRST"
+                msgid "First"
+                msgstr ""
+                """.trimIndent()
+            )
+            val testHelper = PoHelper(
+                Configs(
+                    oniAssetsDir = assetsDir.absolutePath,
+                    oniWorkshopDir = workshopDir.absolutePath,
+                    dataBankPath = ""
+                ),
+                mockRefinery
+            )
+            testHelper.runTranslationProcess()
+
+            val entries = testHelper.allEntries()
+            assertEquals(listOf("STRINGS.Z_SECOND", "STRINGS.A_FIRST"), entries.map { it.key })
+
+            val entry = testHelper.entry("STRINGS.A_FIRST")
+            assertNotNull(entry)
+            assertEquals("First", entry.id)
+            assertNull(testHelper.entry("STRINGS.NON_EXISTENT"))
+
+            testHelper.update("STRINGS.A_FIRST", "第一")
+            assertEquals("第一", testHelper.entry("STRINGS.A_FIRST")?.str)
+            assertTrue(testHelper.entry("STRINGS.A_FIRST")?.changed ?: 0L > 0L)
+
+            // allEntries() returns an unmodifiable view
+            val mutableView = entries as MutableList<PoEntry>
+            assertFailsWith<UnsupportedOperationException> {
+                mutableView.clear()
+            }
+        } finally {
+            tempDir.deleteRecursively()
+        }
     }
 }

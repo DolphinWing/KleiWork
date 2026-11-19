@@ -11,6 +11,7 @@ import java.io.File
 import java.io.FileInputStream
 import java.io.InputStreamReader
 import java.nio.charset.StandardCharsets
+import java.util.Collections
 
 data class LogEntry(
     val message: String,
@@ -39,6 +40,7 @@ class PoHelper(
         private const val ONI_CHS_PO = "strings_preinstalled_zh_klei.po"
         const val ONI_PO = "strings.po"
         private const val MAX_LOG_SIZE = 200
+        private val ESCAPE_QUOTE_REGEX = Regex("(?<!\\\\)\"")
     }
 
     private val templateMap = LinkedHashMap<String, PoEntry>()
@@ -46,6 +48,8 @@ class PoHelper(
     private val translatedEntries = HashMap<String, PoEntry>()
     private val draftEntries = HashMap<String, PoEntry>()
     private val entryList: MutableList<PoEntry> = mutableListOf()
+    // Secondary index for O(1) key lookups without altering template-driven output order
+    private val entryMap = HashMap<String, PoEntry>()
     val glossaryBank = GlossaryBank()
     val acceptedTerms = mutableSetOf<String>()
 
@@ -53,7 +57,8 @@ class PoHelper(
     fun chsEntry(key: String): PoEntry? = simplifiedMap[key]
     fun draftEntry(key: String): PoEntry? = draftEntries[key]
     fun poEntry(key: String): PoEntry? = translatedEntries[key]
-    fun allEntries(): List<PoEntry> = entryList.toList()
+    fun entry(key: String): PoEntry? = entryMap[key]
+    fun allEntries(): List<PoEntry> = Collections.unmodifiableList(entryList)
     fun hasDraft(): Boolean = getCachedFile().exists()
 
     private val _loading = MutableStateFlow(true)
@@ -121,6 +126,7 @@ class PoHelper(
     private suspend fun buildPoList() {
         log("Building word list (Template: ${templateMap.size}, Existing: ${translatedEntries.size})...")
         entryList.clear()
+        entryMap.clear()
 
         if (glossaryBank.terms.isEmpty()) {
             glossaryBank.fallbackFromPoEntries(translatedEntries.values.toList())
@@ -153,6 +159,7 @@ class PoHelper(
                 newEntry.changed = 1L
             }
             entryList.add(newEntry)
+            entryMap[newEntry.key] = newEntry
         }
         log("Final word list size: ${entryList.size}")
     }
@@ -246,7 +253,7 @@ class PoHelper(
 
     fun sanitizeLoadedQuote(input: String): String = input.replace("\\\\\"", "\\\"")
 
-    fun escapePoQuote(input: String): String = input.replace(Regex("(?<!\\\\)\""), "\\\\\"")
+    fun escapePoQuote(input: String): String = input.replace(ESCAPE_QUOTE_REGEX, "\\\\\"")
 
     fun parsePoFile(reader: BufferedReader): List<PoEntry> {
         val list = mutableListOf<PoEntry>()
@@ -325,7 +332,7 @@ class PoHelper(
     }
 
     fun update(key: String, value: String) {
-        entryList.find { it.key == key }?.apply {
+        entryMap[key]?.apply {
             str = value
             changed = System.currentTimeMillis()
             diagnostic = TagSensor.diagnose(msgId(), msgStr())
@@ -336,7 +343,7 @@ class PoHelper(
 
     fun acceptTerm(key: String) {
         acceptedTerms.add(key)
-        entryList.find { it.key == key }?.apply {
+        entryMap[key]?.apply {
             glossaryDiag = GlossarySensor.diagnose(msgId(), msgStr(), glossaryBank.terms, isAccepted = true)
         }
         saveDraftTerms()
@@ -344,7 +351,7 @@ class PoHelper(
 
     fun resetTerm(key: String) {
         acceptedTerms.remove(key)
-        entryList.find { it.key == key }?.apply {
+        entryMap[key]?.apply {
             glossaryDiag = GlossarySensor.diagnose(msgId(), msgStr(), glossaryBank.terms, isAccepted = false)
         }
         saveDraftTerms()
