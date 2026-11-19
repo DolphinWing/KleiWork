@@ -13,12 +13,15 @@ import dolphin.desktop.apps.onitranslator.generated.resources.toast_write_succes
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import java.io.File
 
@@ -40,7 +43,8 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     private val _windowConfig = mutableStateOf(WindowConfig())
     private val windowConfig: State<WindowConfig> = _windowConfig
 
-    private val scope = CoroutineScope(Dispatchers.Default)
+    private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
+    private val ioMutex = Mutex()
     private var autoClearJob: Job? = null
     private var autoSaveJob: Job? = null
 
@@ -63,7 +67,10 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                 is AppEvent.File.SaveDraft -> saveFileInternal(useCache = true)
                 is AppEvent.File.Save -> onSaveFileRequest(event.useCache)
                 is AppEvent.File.DeleteDraft -> {
-                    val result = helper?.clearDrafts() == true
+                    autoSaveJob?.cancel()
+                    val result = ioMutex.withLock {
+                        helper?.clearDrafts() == true
+                    }
                     if (result) {
                         SnackbarManager.showMessage(Res.string.toast_draft_cleared)
                         refreshDataSource()
@@ -96,6 +103,9 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                             oldConfigs.oniAssetsDir != newConfigs.oniAssetsDir ||
                             oldConfigs.dataBankPath != newConfigs.dataBankPath
 
+                    if (!newConfigs.autoSaveEnabled) {
+                        autoSaveJob?.cancel()
+                    }
                     saveConfig(newConfigs, shouldReload = pathChanged)
                     updateUiState { it.copy(dialogState = null) }
                 }
@@ -224,7 +234,14 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         }
     }
 
-    private suspend fun saveFileInternal(useCache: Boolean) {
+    private suspend fun saveFileInternal(useCache: Boolean) = ioMutex.withLock {
+        if (!useCache) {
+            autoSaveJob?.cancel()
+        }
+        saveFileLocked(useCache)
+    }
+
+    private suspend fun saveFileLocked(useCache: Boolean) {
         val (path, cost) = save(useCache)
         if (cost > 0) {
             SnackbarManager.showMessage(Res.string.toast_write_success, path, cost)
@@ -239,8 +256,11 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     }
 
     suspend fun saveDraftSync(): Boolean {
-        val (_, cost) = save(cacheIt = true)
-        return cost > 0
+        autoSaveJob?.cancel()
+        return ioMutex.withLock {
+            val (_, cost) = save(cacheIt = true)
+            cost > 0
+        }
     }
 
     private fun loadEditorData(entry: PoEntry?) {
@@ -341,10 +361,12 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         autoSaveJob?.cancel()
         autoSaveJob = scope.launch {
             delay(configs.autoSaveIntervalMinutes * 60 * 1000L)
-            // Only auto-save if there are unsaved changes in this session
-            if (state.value.changedList.isNotEmpty()) {
-                saveFileInternal(useCache = true)
-                helper?.log("Auto-saved draft after ${configs.autoSaveIntervalMinutes} minutes of idle.")
+            ioMutex.withLock {
+                // Re-check inside lock to avoid resurrecting drafts after a concurrent formal save
+                if (state.value.changedList.isNotEmpty()) {
+                    saveFileLocked(useCache = true)
+                    helper?.log("Auto-saved draft after ${configs.autoSaveIntervalMinutes} minutes of idle.")
+                }
             }
         }
     }
@@ -435,6 +457,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         }
 
     suspend fun rememberLastWindowState(windowState: WindowState) {
+        autoSaveJob?.cancel()
         val pos = windowState.position
         val size = windowState.size
         if (pos is WindowPosition.Absolute) {
