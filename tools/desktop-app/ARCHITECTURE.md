@@ -100,6 +100,10 @@
 
 **合併邏輯**：Draft > PoSave > ChsRef (converted) > Source (English)。
 
+**雙結構索引 (Ordered List + O(1) Lookup Map)**：
+*   **`entryList`**：依 `templateMap` 順序建立與保存，確保 UI 列表與寫出 `.po` 檔案的順序 100% 遵循 `strings_template.pot`；透過 `allEntries()` 對外提供唯讀視圖 (`Collections.unmodifiableList`)，避免無謂陣列複製。
+*   **`entryMap`**：同步維護的 `HashMap<String, PoEntry>` 旁路索引，支援 `entry(key)`、`update()`、`acceptTerm()` 與 `resetTerm()` 之 $O(1)$ 即時定位。
+
 **差異判定 (Diff Logic)**：
 為了精確篩選出「待辦項目」，`PoHelper` 採用以下判定公式：
 *   **Newly**: Key 存在於 Template 但完全不存在於 `strings.po`。
@@ -134,7 +138,7 @@
         *   `標籤診斷 (Diagnostic)`：篩選全量條目中存在標籤語法錯誤或對稱性問題之項目；Tab 上即時呈現全域待修總數 `(count)` 與琥珀金高亮圖示。
         *   `詞彙衝突 (Glossary)`：篩選全量條目中包含未審閱專有名詞衝突之項目；Tab 上即時呈現待處理總數 `(count)` 與警示紅圖示。
         *   `全部 (All)`：直接瀏覽完整 PO 字典庫，無需啟用搜尋即可翻閱全量條目。
-    *   **單一響應式管線 (Single Reactive Pipeline)**：所有過濾邏輯統一收斂於 ViewModel 的 `computeFilteredList()`，輸出唯一之 `state.filteredList`，消除過往 UI 端 `results` 與 `filteredList` 的平行狀態與判斷分岐。
+    *   **單一響應式管線 (Single Reactive Pipeline)**：所有過濾邏輯統一收斂於 ViewModel 的 `computeFilteredList()`，輸出唯一之 `state.filteredList`，消除過往 UI 端 `results` 與 `filteredList` 的平行狀態與判斷分岐。同時區分 **資料異動路徑 (`refreshDataSource`)** 與 **純視圖過濾路徑 (`refreshFilter`)**，使搜尋打字與 Tab 切換不重跑全域統計與磁碟 I/O。
 
 2.  **頂端狀態欄與卡片指示 (Toolbar Status & Card Indicators)**
     *   **頂端狀態欄 (Toolbar Status)**：顯示「全部: %1$d, 已變更: %2$d」，分別對應當前篩選列表總數 (`filteredList.size`) 與本次工作階段實際已翻譯項目數 (`changedList.size`)。

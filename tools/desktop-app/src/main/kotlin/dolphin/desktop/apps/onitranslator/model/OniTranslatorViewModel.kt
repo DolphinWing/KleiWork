@@ -191,7 +191,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     private suspend fun onFilterModeChange(mode: EntryFilterMode) {
         if (state.value.filterMode == mode) return
         _state.update { it.copy(filterMode = mode) }
-        refreshPipeline()
+        refreshFilter()
     }
 
     private suspend fun onSearchActiveChange(isActive: Boolean) {
@@ -204,7 +204,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                 )
             )
         }
-        refreshPipeline()
+        refreshFilter()
     }
 
     private suspend fun onSaveFileRequest(useCache: Boolean) {
@@ -325,7 +325,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         helper?.runTranslationProcess()
         val terms = helper?.glossaryBank?.terms ?: emptyList()
         _state.update { it.copy(glossaryTerms = terms) }
-        refreshPipeline()
+        refreshDataSource()
     }
 
     private suspend fun edit(key: String, value: String) {
@@ -349,27 +349,28 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         }
     }
 
-    private suspend fun refreshDataSource() = refreshPipeline()
-
-    private suspend fun refreshPipeline() = withContext(Dispatchers.IO) {
+    /**
+     * Refreshes global counters, draft status, active editor data, and the filtered list after data mutations.
+     */
+    private suspend fun refreshDataSource() = withContext(Dispatchers.IO) {
         val h = helper ?: return@withContext
         val all = h.allEntries()
         val diagCount = all.count { it.diagnostic?.hasIssue == true }
         val glossCount = all.count { it.glossaryDiag?.isUnreviewed == true }
         val hasDraft = h.hasDraft()
+        val changedKeys = all.filter { it.changed > 0 }.map { it.key }
 
-        val computed = computeFilteredList()
-        val list = computed.filter { it.target.changed > 0 }.map { it.target.key }
+        val computed = computeFilteredList(h, all)
 
         val currentKey = state.value.uiState.editorData?.target?.key
         val refreshedEditorData = currentKey?.let { key ->
-            all.find { it.key == key }?.let { requestEditorData(it) }
+            h.entry(key)?.let { requestEditorData(it) }
         }
 
         _state.update {
             it.copy(
                 filteredList = computed,
-                changedList = list,
+                changedList = changedKeys,
                 hasDraft = hasDraft,
                 diagnosticCount = diagCount,
                 glossaryCount = glossCount,
@@ -380,9 +381,16 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         }
     }
 
-    private suspend fun computeFilteredList(): List<EditorData> = withContext(Dispatchers.IO) {
-        val h = helper ?: return@withContext emptyList()
-        val all = h.allEntries()
+    /**
+     * Re-evaluates only the visible filtered list for pure view changes (search keystrokes, tab switches).
+     */
+    private suspend fun refreshFilter() = withContext(Dispatchers.IO) {
+        val h = helper ?: return@withContext
+        val computed = computeFilteredList(h, h.allEntries())
+        _state.update { it.copy(filteredList = computed) }
+    }
+
+    private fun computeFilteredList(h: PoHelper, all: List<PoEntry>): List<EditorData> {
         val sState = state.value.uiState.searchState
         val filterMode = state.value.filterMode
 
@@ -405,10 +413,10 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                 item.msgId().matchesSearch(cleanQuery) ||
                 item.msgStr().matchesSearch(cleanQuery)
             }
-            return@withContext searchResult.mapNotNull { requestEditorData(it) }
+            return searchResult.mapNotNull { requestEditorData(it) }
         }
 
-        baseEntries.mapNotNull { requestEditorData(it) }
+        return baseEntries.mapNotNull { requestEditorData(it) }
     }
 
     private suspend fun save(cacheIt: Boolean = false): Pair<String, Long> = withContext(Dispatchers.IO) {
@@ -423,7 +431,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     private suspend fun search(text: String) =
         withContext(Dispatchers.IO) {
             updateUiState { it.copy(searchState = it.searchState.copy(text = text)) }
-            refreshPipeline()
+            refreshFilter()
         }
 
     suspend fun rememberLastWindowState(windowState: WindowState) {
@@ -486,14 +494,17 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     }
 }
 
+private val MULTI_SPACE_REGEX = Regex("\\s+")
+private val TAG_REGEX = Regex("<[^>]+>")
+
 internal fun String.normalizeTextForSearch(): String {
     val unescapedQuotes = this.replace("\\\"", "\"")
     val noNewlines = unescapedQuotes.replace("\\n", " ").replace("\n", " ").replace("\r", " ").replace("\t", " ")
-    return noNewlines.replace(Regex("\\s+"), " ").trim()
+    return noNewlines.replace(MULTI_SPACE_REGEX, " ").trim()
 }
 
 internal fun String.stripTags(): String {
-    return this.replace(Regex("<[^>]+>"), "")
+    return this.replace(TAG_REGEX, "")
 }
 
 internal fun String.matchesSearch(cleanQuery: String): Boolean {
