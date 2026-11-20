@@ -19093,7 +19093,7 @@ msgstr "此元件會持續儲存設定端（S）收到的綠色訊號，直到�
 #. STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.EFFECT
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.EFFECT"
 msgid "Contains an internal Memory, and will output whatever signal is stored in that Memory.\n\nSignals sent to the Inputs <i>only</i> affect the Memory, and do not pass through to the Output. \n\nSending a <b><style=\"logic_on\">Green Signal</style></b> to the Set Port (S) will set the memory to <b><style=\"logic_on\">Green</style></b>. \n\nSending a <b><style=\"logic_on\">Green Signal</style></b> to the Reset Port (R) will reset the memory back to <b><style=\"logic_off\">Red</style></b>."
-msgstr "內含一個記憶體，會輸出其中儲存的訊號。\n\n傳送至輸入端的訊號<b>只會</b>影響記憶體，並不會傳遞至輸出端。\n\n傳送<b><style=\"logic_on\">綠色訊號</style></b>到設定端（S），會設定記憶體為<b><style=\"logic_on\">綠色</style></b>。\n\n傳送<b><style=\"logic_on\">綠色訊號</style></b>到重設端（R），會將記憶體重設為<b><style=\"logic_off\">紅色</style></b>。"
+msgstr "內含一個記憶體，會輸出其中儲存的訊號。\n\n傳送至輸入端的訊號<i>只會</i>影響記憶體，並不會傳遞至輸出端。\n\n傳送<b><style=\"logic_on\">綠色訊號</style></b>到設定端（S），會設定記憶體為<b><style=\"logic_on\">綠色</style></b>。\n\n傳送<b><style=\"logic_on\">綠色訊號</style></b>到重設端（R），會將記憶體重設為<b><style=\"logic_off\">紅色</style></b>。"
 
 #. STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.NAME
 msgctxt "STRINGS.BUILDINGS.PREFABS.LOGICMEMORY.NAME"
@@ -31123,7 +31123,7 @@ msgstr "<smallcaps>[偵測到日誌片段]\n[語音辨識系統無法使用]</sm
 #. STRINGS.CODEX.INVESTIGATIONS.DLC3_POTATOBATTERY.BODY.CONTAINER3
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC3_POTATOBATTERY.BODY.CONTAINER3"
 msgid "<smallcaps>[Log fragmentation detected]\n[Voice Recognition unavailable]</smallcaps>\n\n[LOG BEGINS]\n\n...word of our efforts has spread!\n\nThe bioengineers report that some of their creatures' eggs contain phosphorescent albumen that requires only basic processing in order to trigger chemical reactions that produce storable energy. It displays unprecedented biocompatibility with the prosthetics Dr. Gossmann has been developing.\n\nThe Director assigned us a half-dozen new graduates last week. They work the night shift—this generation never sleeps!\n\nNo one has met them yet, but their data is always neatly compiled for us to find in the morning.\n\nThey seem determined to prioritize the use of metallic and radioactive components rather than plant or animal-based ones.\n\nYouthful idealism, perhaps?\n\nNevertheless, their findings <i>are</i> quite compelling.\n\nI admire their mettle.\n\n[LOG ENDS]\n------------------\n"
-msgstr "<smallcaps>[偵測到日誌片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[日誌開始]\n\n……我們成果的訊息已經傳開了！\n\n生物工程師報告說，他們的一些生物的卵含有磷光蛋白，只需進行基本處理即可引發產生可儲存能量的化學反應。它與 Gossmann 博士正在開發的義肢表現出前所未有的生物相容性。\n\n上週，總監給我們分配了六名應屆畢業生。他們負責夜班——這些年輕人從不睡覺！\n\n還沒有人見過他們，但他們的數據總是整齊地整理好，以便我們早上找到。\n\n他們似乎更傾向於使用金屬和放射性成分，而不是植物或動物成分。\n\n也許是年輕人的理想主義吧？\n\n不過，他們的發現<b>確實</b>很有說服力。\n\n我欽佩他們的勇氣。\n\n[日誌結束]\n------------------\n"
+msgstr "<smallcaps>[偵測到日誌片段]\n[語音辨識系統無法使用]</smallcaps>\n\n[日誌開始]\n\n……我們成果的訊息已經傳開了！\n\n生物工程師報告說，他們的一些生物的卵含有磷光蛋白，只需進行基本處理即可引發產生可儲存能量的化學反應。它與 Gossmann 博士正在開發的義肢表現出前所未有的生物相容性。\n\n上週，總監給我們分配了六名應屆畢業生。他們負責夜班——這些年輕人從不睡覺！\n\n還沒有人見過他們，但他們的數據總是整齊地整理好，以便我們早上找到。\n\n他們似乎更傾向於使用金屬和放射性成分，而不是植物或動物成分。\n\n也許是年輕人的理想主義吧？\n\n不過，他們的發現<i>確實</i>很有說服力。\n\n我欽佩他們的勇氣。\n\n[日誌結束]\n------------------\n"
 
 #. STRINGS.CODEX.INVESTIGATIONS.DLC3_POTATOBATTERY.SUBTITLE
 msgctxt "STRINGS.CODEX.INVESTIGATIONS.DLC3_POTATOBATTERY.SUBTITLE"
@@ -83918,7 +83918,7 @@ msgstr "<i>零號元素裝扮包</b>"
 #. STRINGS.UI.COSMETIC2.MIXING_TOOLTIP
 msgctxt "STRINGS.UI.COSMETIC2.MIXING_TOOLTIP"
 msgid "<i>Classic Critter Cosmetics Pack</i> features cosmetic blueprints inspired by Pips, Hatches, and Pufts"
-msgstr "<i>《經典小動物裝扮包》</i>收錄以樹鼠、哈奇與帕夫為靈感設計的造型藍圖"
+msgstr "<i>經典小動物裝扮包</i>收錄以樹鼠、哈奇與帕夫為靈感設計的造型藍圖"
 
 #. STRINGS.UI.COSMETIC2.NAME
 msgctxt "STRINGS.UI.COSMETIC2.NAME"
@@ -83928,7 +83928,7 @@ msgstr "經典小動物裝扮包"
 #. STRINGS.UI.COSMETIC2.NAME_ITAL
 msgctxt "STRINGS.UI.COSMETIC2.NAME_ITAL"
 msgid "<i>Classic Critter Cosmetics Pack</i>"
-msgstr "<i>《經典小動物裝扮包》</i>"
+msgstr "<i>經典小動物裝扮包</i>"
 
 #. STRINGS.UI.CRAFT
 msgctxt "STRINGS.UI.CRAFT"
@@ -91418,22 +91418,22 @@ msgstr "這藍圖可以由任何一位複製人穿戴。"
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.COLLECTION
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.COLLECTION"
 msgid "Part of {Collection} collection."
-msgstr "{Collection}合集的一部分。"
+msgstr "屬於{Collection}系列。"
 
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.COLLECTION_COMING_SOON
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.COLLECTION_COMING_SOON"
 msgid "Part of {Collection} collection. Coming soon!"
-msgstr "{Collection}合集的一部分。即將到來！"
+msgstr "屬於{Collection}系列。即將推出！"
 
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.COLLECTION_COMING_SOON_THE
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.COLLECTION_COMING_SOON_THE"
 msgid "Part of the {Collection} collection. Coming soon!"
-msgstr "{Collection} 系列的一部分。敬請期待！"
+msgstr "屬於{Collection}系列。即將推出！"
 
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.COLLECTION_THE
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.COLLECTION_THE"
 msgid "Part of the {Collection} collection."
-msgstr "屬於 {Collection} 系列。"
+msgstr "屬於{Collection}系列。"
 
 #. STRINGS.UI.KLEI_INVENTORY_SCREEN.COLUMN_HEADERS.CATEGORY_HEADER
 msgctxt "STRINGS.UI.KLEI_INVENTORY_SCREEN.COLUMN_HEADERS.CATEGORY_HEADER"
