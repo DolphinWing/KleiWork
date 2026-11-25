@@ -27,15 +27,49 @@ data class TagCandidateSpan(
  * Tag Sensor: The specialized diagnostic tool for tag consistency.
  */
 object TagSensor {
+    const val NEWLINE_TOKEN = "\\n"
+
     /**
-     * Counts the opening tags and dynamic tokens in a string.
+     * Counts logical line breaks in [text], treating both literal `\n` escapes and
+     * raw `\r\n` / `\r` / `\n` characters equivalently.
+     */
+    fun countNewlines(text: String): Int {
+        if (text.isEmpty()) return 0
+        var count = 0
+        var i = 0
+        while (i < text.length) {
+            when (text[i]) {
+                '\r' -> {
+                    count++
+                    if (i + 1 < text.length && text[i + 1] == '\n') i++
+                }
+                '\n' -> count++
+                '\\' -> {
+                    if (i + 1 < text.length && text[i + 1] == 'n') {
+                        count++
+                        i++
+                    }
+                }
+            }
+            i++
+        }
+        return count
+    }
+
+    /**
+     * Counts the opening tags, dynamic tokens, and line breaks in a string.
      */
     fun countTags(text: String): Map<String, Int> {
         val tokens = text.toOniTokens()
         // println("TagSensor tokens: $tokens")
         val tags = tokens.filterIsInstance<OniToken.OpeningTag>().map { it.name }
         val dynamics = tokens.filterIsInstance<OniToken.Dynamic>().map { it.raw }
-        return (tags + dynamics).groupingBy { it }.eachCount()
+        val counts = (tags + dynamics).groupingBy { it }.eachCount().toMutableMap()
+        val newlines = countNewlines(text)
+        if (newlines > 0) {
+            counts[NEWLINE_TOKEN] = newlines
+        }
+        return counts
     }
 
     /**

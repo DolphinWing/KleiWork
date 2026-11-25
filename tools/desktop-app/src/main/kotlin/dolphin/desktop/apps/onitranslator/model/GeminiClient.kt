@@ -169,6 +169,15 @@ class GeminiClient(
             if (apiKey.isBlank() || text.isBlank()) return text
             return text.replace(apiKey, "[REDACTED]")
         }
+
+        /**
+         * Normalizes any JSON-decoded line breaks back into PO literal `\n` escape sequences
+         * without double-escaping existing literal `\n` tokens.
+         */
+        private fun normalizePoOptionText(text: String): String =
+            text.replace("\r\n", "\\n")
+                .replace("\r", "\\n")
+                .replace("\n", "\\n")
     }
 
     /**
@@ -418,7 +427,7 @@ class GeminiClient(
             GeminiOption(
                 label = (o["label"] as? JsonPrimitive)?.contentOrNull.orEmpty(),
                 score = (o["score"] as? JsonPrimitive)?.let { p -> p.intOrNull ?: p.doubleOrNull?.toInt() } ?: 0,
-                text = (o["text"] as? JsonPrimitive)?.contentOrNull.orEmpty(),
+                text = normalizePoOptionText((o["text"] as? JsonPrimitive)?.contentOrNull.orEmpty()),
                 rationale = (o["rationale"] as? JsonPrimitive)?.contentOrNull.orEmpty(),
             )
         } ?: emptyList()

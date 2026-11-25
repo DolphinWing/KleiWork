@@ -209,4 +209,33 @@ class TagSensorTest {
         val diag = TagSensor.diagnose(source, wrapped)
         assertFalse(diag.hasIssue, "Tag mismatch should be resolved after wrapping")
     }
+
+    @Test
+    fun testNewlineCountAndMismatch() {
+        val singleMatch = TagSensor.diagnose("Line 1\\nLine 2", "第一行\\n第二行")
+        assertFalse(singleMatch.hasIssue)
+        assertEquals(1, singleMatch.sourceTags[TagSensor.NEWLINE_TOKEN])
+        assertEquals(1, singleMatch.targetTags[TagSensor.NEWLINE_TOKEN])
+
+        val doubleMatch = TagSensor.diagnose("Para 1\\n\\nPara 2", "第一段\\n\\n第二段")
+        assertFalse(doubleMatch.hasIssue)
+        assertEquals(2, doubleMatch.sourceTags[TagSensor.NEWLINE_TOKEN])
+
+        val missingSingle = TagSensor.diagnose("Line 1\\nLine 2", "單行被合併")
+        assertTrue(missingSingle.hasMismatch)
+        assertTrue(missingSingle.hasIssue)
+        assertEquals(1 to 0, missingSingle.getDiffReport()[TagSensor.NEWLINE_TOKEN])
+
+        val collapsedDouble = TagSensor.diagnose("Para 1\\n\\nPara 2", "第一段\\n第二段")
+        assertTrue(collapsedDouble.hasMismatch)
+        assertEquals(2 to 1, collapsedDouble.getDiffReport()[TagSensor.NEWLINE_TOKEN])
+
+        val extraTarget = TagSensor.diagnose("Single line", "多出\\n換行")
+        assertTrue(extraTarget.hasMismatch)
+        assertEquals(0 to 1, extraTarget.getDiffReport()[TagSensor.NEWLINE_TOKEN])
+
+        val mixedRawAndLiteral = TagSensor.diagnose("A\r\nB\nC", "甲\\n乙\\n丙")
+        assertFalse(mixedRawAndLiteral.hasIssue)
+        assertEquals(2, mixedRawAndLiteral.sourceTags[TagSensor.NEWLINE_TOKEN])
+    }
 }

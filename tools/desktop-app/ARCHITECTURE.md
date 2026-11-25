@@ -13,7 +13,7 @@
 - **詞彙替換**：透過 `replacement_strings.xml` 定義專有詞彙的自動修正規則。
 - **安全暫存**：支援閒置自動存檔與手動草稿管理，並具備版本衝突視覺提示。
 - **差異比對**：能識別原廠檔案的變更 (msgid change)，確保翻譯能追蹤英文原文的更新。
-- **Tag Sensor (標籤感測器)**：自動對比原文與譯文的標籤數量，確保 `link`, `style`, `color` 等關鍵標籤對稱。
+- **Tag Sensor (標籤感測器)**：自動對比原文與譯文的標籤與換行 (`\n`) 數量，確保 `link`, `style`, `color` 等關鍵標籤與段落換行對稱。
 - **Glossary Sensor (詞彙感測器)**：具備標籤優先與貪婪長詞比對演算法，檢驗 AI 譯文與既有專有名詞的一致性，支援「一鍵套用規範詞」與「認可新詞（審閱保留）」雙態決策閉環。
 - **強韌解析**：採用狀態機 (State-machine) 解析器，支援 PO 檔案 Header 處理與不規則空行。
 
@@ -279,6 +279,8 @@
     * **Pass 1（字面完全相符排除）**：標籤內部文字完全一致者（如 `<b>75°C</b>` 對 `<b>75°C</b>`），視為已滿足（Satisfied）並 1:1 排除，避免無效替換。
     * **Pass 2（複合標籤結構相符排除）**：若譯文與原文的複合標籤特徵數量 1:1 對應（如譯文有 3 個 `<b><style="logic_on">`，原文亦有 3 個 `<b><style="logic_on">`），直接 1:1 抵銷並排除，絕不誤判定為 `<b> ➜ <i>` 待修候選。
     * **Pass 3（孤兒標籤篩選）**：經前兩輪過濾後，僅保留真正未被原文格式滿足的標籤（如 `<b>只會</b>` 對應 `<i>only</i>`）。
+* **換行對稱檢查 (`NEWLINE_TOKEN = "\\n"`)**：
+    * `countTags()` 同步統計所有邏輯換行符（相容字面 `\n` 與實體 `\r\n` / `\r` / `\n`），納入全庫 `TagDiagnostic`、卡片警示、`NisbetPeek` 報告與 `BrigetteDesk` 候選卡檢驗，確保單換行或雙換行不被誤刪或增減。
 * **配額守衛 (Quota Guard)**：
     * 最終候選數量嚴格受限於整體標籤差額配額：
       $$\text{quota} = \min(|source_i - target_i|,\, |source_b - target_b|)$$
@@ -305,7 +307,7 @@
     * API Key 僅透過 `x-goog-api-key` HTTP Header 傳遞，並於所有錯誤訊息及原始 Body 紀錄中強制遮罩為 `[REDACTED]`。
 * **Structured Output 與 Thinking 過濾**：
     * `generationConfig` 指定 `responseMimeType = "application/json"` 並強制附上 OpenAPI `responseSchema`，確保回傳固定結構（`matchedTerms`、`analysis`、`options`、`recommendedIndex`、`conclusion`）。
-    * 解析 `candidates[0].content.parts` 時自動過濾 `thought == true` 思考片段，並於 `recommendedIndex` 越界時自動鉗位。
+    * 解析 `candidates[0].content.parts` 時自動過濾 `thought == true` 思考片段，於 `recommendedIndex` 越界時自動鉗位，並將 `options[].text` 內被 JSON 反序列化為實體斷行的 `\r\n` / `\r` / `\n` 正規化還原為 PO 字面 `\n`（`PoHelper.escapePoValue` 寫檔時亦提供最終防線）。
 * **非同步取消、動態模型查詢與 429 配額解析**：
     * 透過 `suspendCancellableCoroutine` 橋接 `HttpClient.sendAsync`，協程取消時立即呼叫 `future.cancel(true)` 中斷網路連線；同時提取 `usageMetadata`（含 `promptTokenCount`、`candidatesTokenCount`、`thoughtsTokenCount`、`totalTokenCount`）與毫秒耗時 `elapsedMs`。
     * `listModels` 查詢 `GET /v1beta/models`，自動篩選支援 `generateContent` 之 `gemini-*` 純文字候選模型（排除 `nano-banana`、`-image`、`imagen`、`veo`、`-tts`、`-audio`、`-live`、`robotics`、`computer-use`、`deep-research`、`embedding` 等非翻譯特化子模型；過濾為空時仍安全降級）供設定頁即時挑選。
@@ -345,7 +347,7 @@ Step 4 完成 [`BrigetteDeskDrawer`](src/main/kotlin/dolphin/desktop/apps/onitra
     * **動態 Context 晶片列 (`DeskContextChip`)**：採用 `.clip(shape)` 嚴格裁切圓角之自訂晶片（避免桌面端 Material `FilterChip` 預設觸控熱區在滑鼠懸停時出現方形灰底邊界），於記憶體內即時切換「同組詞條」與「近期譯文」開關並立即在本機重算 Prompt 與命中數量（0 API 成本），支援展開命中的「術語表」。
     * **Ready 預覽態**：輸入框自適應撐滿剩餘垂直空間，直接顯示可編輯之 Prompt 預覽區（含字元數統計與一鍵重設），讓譯者在發送前確認並微調指令，按下「發送至 Gemini」才正式發出請求。
     * **Loading 態**：顯示 `NisbetThinking` 插圖、進度條、每 100ms 更新之經過秒數與「取消」按鈕。
-    * **Success 態**：顯示 Brigette 分析與結語，並將 2–3 組評分候選譯文渲染為可點擊選項卡；每張卡片即時執行 `TagSensor.diagnose()` 與 `GlossarySensor.diagnose()` 呈現雙感測徽章，並提供行內 **`NisbetPeekCard` 遊戲預覽切換**。亦支援展開並微調 Prompt 後再次重送。
+    * **Success 態**：顯示 Brigette 分析與結語，並將 2–3 組評分候選譯文渲染為可點擊選項卡；每張卡片即時執行 `TagSensor.diagnose()` 與 `GlossarySensor.diagnose()` 呈現標籤、術語與換行一致徽章，並提供行內 **`NisbetPeekCard` 遊戲預覽切換**。亦支援展開並微調 Prompt 後再次重送。
     * **Error 態**：區分缺 Key／未選模型／驗證失敗（引導開啟設定）與 HTTP 429 配額類型（`PerMinute` 等待秒數 vs `PerDay` 每日上限）。
 * **一鍵套用與累計統計**：
     * 點擊「套用所選譯文」比照智慧貼上同步備份 `backupText`（相容既有復原按鈕）、寫入編輯器並自動存檔；疊層頁尾左下角即時顯示 Session 累計請求數／Token（含懸停明細），結果態並同時呈現單次耗時與 Token 明細，[`OniTranslatorBottomBar`](src/main/kotlin/dolphin/desktop/apps/onitranslator/app/OniTranslatorBottomBar.kt) 亦同步呈現本次 Session 累計統計。

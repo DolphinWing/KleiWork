@@ -255,6 +255,16 @@ class PoHelper(
 
     fun escapePoQuote(input: String): String = input.replace(ESCAPE_QUOTE_REGEX, "\\\\\"")
 
+    /**
+     * Escapes quotes and normalizes any raw line breaks into PO literal `\n` sequences
+     * so written `.po` entries always remain valid single-line strings.
+     */
+    fun escapePoValue(input: String): String =
+        escapePoQuote(input)
+            .replace("\r\n", "\\n")
+            .replace("\r", "\\n")
+            .replace("\n", "\\n")
+
     fun parsePoFile(reader: BufferedReader): List<PoEntry> {
         val list = mutableListOf<PoEntry>()
         var line: String?
@@ -459,10 +469,10 @@ class PoHelper(
                 writer.appendLine("MIME-Version: 1.0")
                 writer.appendLine("Content-Type: text/plain; charset=UTF-8")
                 list.forEach { entry ->
-                    val formattedStr = "\"${escapePoQuote(entry.str)}\""
+                    val formattedStr = "\"${escapePoValue(entry.str)}\""
                     val templateId = templateMap[entry.key]?.id ?: entry.id
-                    val formattedId = "\"${escapePoQuote(templateId)}\""
-                    val formattedCtxt = "\"${escapePoQuote(entry.text)}\""
+                    val formattedId = "\"${escapePoValue(templateId)}\""
+                    val formattedCtxt = "\"${escapePoValue(entry.text)}\""
 
                     writer.newLine()
                     writer.appendLine("#. ${entry.key}")

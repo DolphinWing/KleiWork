@@ -302,4 +302,11 @@ class PoHelperTest {
             tempDir.deleteRecursively()
         }
     }
+
+    @Test
+    fun testEscapePoValueNormalizesRawNewlines() {
+        val raw = "第一行\r\n第二行\n\n含\"引號\"與既有\\n換行"
+        val escaped = helper.escapePoValue(raw)
+        assertEquals("""第一行\n第二行\n\n含\"引號\"與既有\n換行""", escaped)
+    }
 }

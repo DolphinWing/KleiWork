@@ -129,6 +129,36 @@ class GeminiClientTest {
     }
 
     @Test
+    fun testParseResponseNormalizesJsonNewlinesToPoLiteral() {
+        val apiResponse = """
+            {
+              "candidates": [
+                {
+                  "content": {
+                    "parts": [
+                      {
+                        "text": "{\"matchedTerms\":[],\"analysis\":\"分析段落\\n保留換行。\",\"options\":[{\"label\":\"單換行\",\"score\":10,\"text\":\"第一行\\n第二行\",\"rationale\":\"ok\"},{\"label\":\"雙換行\",\"score\":9,\"text\":\"第一段\\n\\n第二段\",\"rationale\":\"ok\"},{\"label\":\"已雙重跳脫\",\"score\":9,\"text\":\"甲\\\\n\\\\n乙\",\"rationale\":\"ok\"},{\"label\":\"CRLF\",\"score\":8,\"text\":\"上行\\r\\n下行\",\"rationale\":\"ok\"}],\"recommendedIndex\":0,\"conclusion\":\"完成。\"}"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+        """.trimIndent()
+
+        val success = assertIs<GeminiResponse.Success>(
+            client.parseResponse(200, apiResponse, 120L, "gemini-2.5-flash")
+        )
+        val options = success.result.payload.options
+        assertEquals("第一行\\n第二行", options[0].text)
+        assertEquals("第一段\\n\\n第二段", options[1].text)
+        assertEquals("甲\\n\\n乙", options[2].text)
+        assertEquals("上行\\n下行", options[3].text)
+        // Analysis prose preserves real newlines for UI readability
+        assertEquals("分析段落\n保留換行。", success.result.payload.analysis)
+    }
+
+    @Test
     fun testParseErrorResponsesAndApiKeyRedaction() {
         val secretKey = "AIzaSySecretTestKey12345"
 

@@ -93,6 +93,8 @@ import dolphin.desktop.apps.onitranslator.generated.resources.brigette_retry
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_send_request
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_sensor_glossary_ok
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_sensor_glossary_warn
+import dolphin.desktop.apps.onitranslator.generated.resources.brigette_sensor_newlines_ok
+import dolphin.desktop.apps.onitranslator.generated.resources.brigette_sensor_newlines_warn
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_sensor_tags_ok
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_sensor_tags_warn
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_show_prompt
@@ -909,6 +911,20 @@ private fun ScoredOptionCard(
                             stringResource(Res.string.brigette_sensor_glossary_ok)
                         },
                         isWarning = glossDiag.hasConflict,
+                    )
+                }
+
+                val sourceNewlines = tagDiag.sourceTags[TagSensor.NEWLINE_TOKEN] ?: 0
+                val targetNewlines = tagDiag.targetTags[TagSensor.NEWLINE_TOKEN] ?: 0
+                if (sourceNewlines > 0 || targetNewlines > 0) {
+                    val newlineMismatch = sourceNewlines != targetNewlines
+                    SensorPill(
+                        text = if (newlineMismatch) {
+                            stringResource(Res.string.brigette_sensor_newlines_warn, sourceNewlines, targetNewlines)
+                        } else {
+                            stringResource(Res.string.brigette_sensor_newlines_ok, targetNewlines)
+                        },
+                        isWarning = newlineMismatch,
                     )
                 }
 
