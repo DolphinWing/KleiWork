@@ -56,5 +56,22 @@ class BrigetteConfigAndStatsTest {
         assertFalse(state.visible)
         assertTrue(state.contextOptions.includeSiblings)
         assertFalse(state.contextOptions.includeRecent)
+        assertFalse(state.isPromptEdited)
+    }
+
+    @Test
+    fun testBrigetteDeskStateTracksEditablePromptDiff() {
+        val initial = BrigetteDeskState(
+            visible = true,
+            builtPromptPreview = "Original prompt",
+            editablePrompt = "Original prompt",
+        )
+        assertFalse(initial.isPromptEdited)
+
+        val edited = initial.copy(editablePrompt = "Original prompt\nExtra note")
+        assertTrue(edited.isPromptEdited)
+
+        val reset = edited.copy(editablePrompt = edited.builtPromptPreview)
+        assertFalse(reset.isPromptEdited)
     }
 }

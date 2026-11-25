@@ -450,14 +450,71 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         return loaded
     }
 
+    private suspend fun composeBrief(entry: EditorData, options: PromptContextOptions): TranslationBrief {
+        val systemPrompt = loadSystemPrompt()
+        val recentSnapshot = recentTranslations.toList()
+        val allEntries = helper?.allEntries().orEmpty()
+        val glossaryTerms = state.value.glossaryTerms
+        return PromptComposer.compose(
+            entry = entry,
+            systemInstruction = systemPrompt,
+            glossaryTerms = glossaryTerms,
+            allEntries = allEntries,
+            chsLookup = { key -> helper?.chsEntry(key)?.msgStr() },
+            recentTranslations = recentSnapshot,
+            options = options,
+        )
+    }
+
     private suspend fun onBrigetteEvent(event: AppEvent.Brigette) {
         when (event) {
+            is AppEvent.Brigette.Open -> {
+                aiRequestJob?.cancel()
+                val targetKey = event.entry.target.key()
+                val options = state.value.uiState.brigetteDesk.contextOptions
+                val brief = try {
+                    composeBrief(event.entry, options)
+                } catch (e: Exception) {
+                    updateUiState {
+                        it.copy(
+                            brigetteDesk = it.brigetteDesk.copy(
+                                visible = true,
+                                entryKey = targetKey,
+                                contextOptions = options,
+                                isLoading = false,
+                                result = null,
+                                error = GeminiError.ParseError("Failed to load system prompt: ${e.message}"),
+                            )
+                        )
+                    }
+                    return
+                }
+                updateUiState {
+                    it.copy(
+                        brigetteDesk = BrigetteDeskState(
+                            visible = true,
+                            entryKey = targetKey,
+                            contextOptions = options,
+                            contextSnapshot = brief.snapshot,
+                            builtPromptPreview = brief.userPrompt,
+                            editablePrompt = brief.userPrompt,
+                            isLoading = false,
+                            startedAtMs = 0L,
+                            result = null,
+                            selectedOptionIndex = 0,
+                            error = null,
+                        )
+                    )
+                }
+            }
+
             is AppEvent.Brigette.Request -> {
                 aiRequestJob?.cancel()
                 val targetKey = event.entry.target.key()
-                val options = event.optionsOverride ?: state.value.uiState.brigetteDesk.contextOptions
-                val systemPrompt = try {
-                    loadSystemPrompt()
+                val currentDesk = state.value.uiState.brigetteDesk
+                val options = event.optionsOverride ?: currentDesk.contextOptions
+                val baseBrief = try {
+                    composeBrief(event.entry, options)
                 } catch (e: Exception) {
                     updateUiState {
                         it.copy(
@@ -473,18 +530,10 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                     return
                 }
 
-                val recentSnapshot = recentTranslations.toList()
-                val allEntries = helper?.allEntries().orEmpty()
-                val glossaryTerms = state.value.glossaryTerms
-                val brief = PromptComposer.compose(
-                    entry = event.entry,
-                    systemInstruction = systemPrompt,
-                    glossaryTerms = glossaryTerms,
-                    allEntries = allEntries,
-                    chsLookup = { key -> helper?.chsEntry(key)?.msgStr() },
-                    recentTranslations = recentSnapshot,
-                    options = options,
-                )
+                val effectivePrompt = event.promptOverride?.takeIf { it.isNotBlank() }
+                    ?: currentDesk.editablePrompt.takeIf { it.isNotBlank() && currentDesk.entryKey == targetKey }
+                    ?: baseBrief.userPrompt
+                val brief = baseBrief.copy(userPrompt = effectivePrompt)
 
                 val configs = state.value.configs
                 val effectiveKey = configs.effectiveGeminiApiKey()
@@ -497,8 +546,9 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                                 visible = true,
                                 entryKey = targetKey,
                                 contextOptions = options,
-                                contextSnapshot = brief.snapshot,
-                                builtPromptPreview = brief.userPrompt,
+                                contextSnapshot = baseBrief.snapshot,
+                                builtPromptPreview = baseBrief.userPrompt,
+                                editablePrompt = effectivePrompt,
                                 isLoading = false,
                                 result = null,
                                 error = GeminiError.MissingApiKey(),
@@ -515,8 +565,9 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                                 visible = true,
                                 entryKey = targetKey,
                                 contextOptions = options,
-                                contextSnapshot = brief.snapshot,
-                                builtPromptPreview = brief.userPrompt,
+                                contextSnapshot = baseBrief.snapshot,
+                                builtPromptPreview = baseBrief.userPrompt,
+                                editablePrompt = effectivePrompt,
                                 isLoading = false,
                                 result = null,
                                 error = GeminiError.ModelNotFound("Gemini model ID is not configured.", 404),
@@ -532,8 +583,9 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                             visible = true,
                             entryKey = targetKey,
                             contextOptions = options,
-                            contextSnapshot = brief.snapshot,
-                            builtPromptPreview = brief.userPrompt,
+                            contextSnapshot = baseBrief.snapshot,
+                            builtPromptPreview = baseBrief.userPrompt,
+                            editablePrompt = effectivePrompt,
                             isLoading = true,
                             startedAtMs = System.currentTimeMillis(),
                             result = null,
@@ -606,8 +658,34 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
             }
 
             is AppEvent.Brigette.UpdateContextOptions -> {
+                val brief = try {
+                    composeBrief(event.entry, event.options)
+                } catch (_: Exception) {
+                    null
+                }
                 updateUiState {
-                    it.copy(brigetteDesk = it.brigetteDesk.copy(contextOptions = event.options))
+                    it.copy(
+                        brigetteDesk = it.brigetteDesk.copy(
+                            contextOptions = event.options,
+                            contextSnapshot = brief?.snapshot ?: it.brigetteDesk.contextSnapshot,
+                            builtPromptPreview = brief?.userPrompt ?: it.brigetteDesk.builtPromptPreview,
+                            editablePrompt = brief?.userPrompt ?: it.brigetteDesk.editablePrompt,
+                        )
+                    )
+                }
+            }
+
+            is AppEvent.Brigette.UpdatePrompt -> {
+                updateUiState {
+                    it.copy(brigetteDesk = it.brigetteDesk.copy(editablePrompt = event.text))
+                }
+            }
+
+            is AppEvent.Brigette.ResetPrompt -> {
+                updateUiState {
+                    it.copy(
+                        brigetteDesk = it.brigetteDesk.copy(editablePrompt = it.brigetteDesk.builtPromptPreview)
+                    )
                 }
             }
 

@@ -125,6 +125,9 @@ fun OniTranslatorApp(
                         onEvent = onEvent,
                         onConvert = onEditorConvert,
                         terms = state.glossaryTerms,
+                        brigetteDesk = state.uiState.brigetteDesk,
+                        geminiModel = state.configs.geminiModel,
+                        sessionStats = state.geminiSessionStats,
                     )
                 }
             }

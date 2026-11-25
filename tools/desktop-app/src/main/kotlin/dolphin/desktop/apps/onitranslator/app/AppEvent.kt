@@ -112,12 +112,19 @@ sealed interface AppEvent {
      * BrigetteDesk Gemini translation assistant actions.
      */
     sealed interface Brigette : AppEvent {
+        data class Open(val entry: EditorData) : Brigette
         data class Request(
             val entry: EditorData,
             val optionsOverride: PromptContextOptions? = null,
+            val promptOverride: String? = null,
         ) : Brigette
         object Cancel : Brigette
-        data class UpdateContextOptions(val options: PromptContextOptions) : Brigette
+        data class UpdateContextOptions(
+            val entry: EditorData,
+            val options: PromptContextOptions,
+        ) : Brigette
+        data class UpdatePrompt(val text: String) : Brigette
+        object ResetPrompt : Brigette
         data class SelectOption(val index: Int) : Brigette
         data class ApplyOption(val entry: PoEntry, val text: String) : Brigette
         object Dismiss : Brigette

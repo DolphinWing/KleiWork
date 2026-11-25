@@ -83,6 +83,39 @@
     <string name="tooltip_undo_paste">復原智慧貼上</string>
     <string name="tooltip_peek_open">讓 Nisbet 偷看</string>
     <string name="tooltip_peek_close">關閉預覽</string>
+    <string name="tooltip_brigette_translate">使用 BrigetteDesk (Gemini) 翻譯</string>
+
+    <!-- BrigetteDesk AI Assistant -->
+    <string name="brigette_desk_title">BrigetteDesk 譯桌</string>
+    <string name="brigette_ctx_glossary">術語表 (%1$d)</string>
+    <string name="brigette_ctx_siblings">同組詞條 (%1$d)</string>
+    <string name="brigette_ctx_recent">近期譯文 (%1$d)</string>
+    <string name="brigette_show_prompt">檢視 Prompt</string>
+    <string name="brigette_send_request">發送至 Gemini</string>
+    <string name="brigette_prompt_editor_label">Prompt 預覽（發送前可微調）</string>
+    <string name="brigette_prompt_reset">重設</string>
+    <string name="brigette_prompt_char_count">%1$d 字元</string>
+    <string name="brigette_resend">重新發送</string>
+    <string name="brigette_retry">重試</string>
+    <string name="brigette_open_settings">開啟設定</string>
+    <string name="brigette_apply_option">套用所選譯文</string>
+    <string name="brigette_loading_elapsed">Brigette 分析中… %1$ss</string>
+    <string name="brigette_recommended">推薦</string>
+    <string name="brigette_preview_show">遊戲預覽</string>
+    <string name="brigette_preview_hide">收合預覽</string>
+    <string name="brigette_sensor_tags_ok">標籤正常</string>
+    <string name="brigette_sensor_tags_warn">標籤異常</string>
+    <string name="brigette_sensor_glossary_ok">術語一致</string>
+    <string name="brigette_sensor_glossary_warn">術語衝突 (%1$d)</string>
+    <string name="brigette_error_missing_key">尚未設定 Gemini API Key，請於「設定」填入或設定環境變數 GEMINI_API_KEY。</string>
+    <string name="brigette_error_missing_model">尚未選擇 Gemini 模型，請開啟「設定」載入並選取可用模型。</string>
+    <string name="brigette_error_unauthorized">API Key 驗證失敗（HTTP %1$d），請於「設定」確認金鑰。</string>
+    <string name="brigette_error_rate_daily">已達今日免費額度上限（RPD），請切換其他模型或至 AI Studio 查看用量。</string>
+    <string name="brigette_error_rate_minute_delay">觸發每分鐘速率上限（RPM），建議約 %1$d 秒後重試。</string>
+    <string name="brigette_error_rate_generic">已達速率上限（HTTP 429），請稍候重試。</string>
+    <string name="brigette_error_cancelled">已取消本次翻譯請求。</string>
+    <string name="bottom_bar_ai_stats">AI: %1$d 次 · %2$d tok</string>
+    <string name="bottom_bar_ai_stats_detail">本次工作階段 AI 統計 — 請求: %1$d 次｜輸入: %2$d｜輸出: %3$d｜思考: %4$d｜合計: %5$d tok｜總耗時: %6$ss</string>
 
     <!-- NisbetPeek Quotes -->
     <string name="peek_quote_1">這段翻譯看起來不錯！</string>

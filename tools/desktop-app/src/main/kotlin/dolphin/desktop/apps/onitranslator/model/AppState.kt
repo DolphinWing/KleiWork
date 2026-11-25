@@ -82,12 +82,16 @@ data class BrigetteDeskState(
     val contextOptions: PromptContextOptions = PromptContextOptions(),
     val contextSnapshot: PromptContextSnapshot? = null,
     val builtPromptPreview: String = "",
+    val editablePrompt: String = "",
     val isLoading: Boolean = false,
     val startedAtMs: Long = 0L,
     val result: GeminiTranslationResult? = null,
     val selectedOptionIndex: Int = 0,
     val error: GeminiError? = null,
-)
+) {
+    val isPromptEdited: Boolean
+        get() = editablePrompt != builtPromptPreview
+}
 
 /**
  * Encapsulates the state of the search functionality.

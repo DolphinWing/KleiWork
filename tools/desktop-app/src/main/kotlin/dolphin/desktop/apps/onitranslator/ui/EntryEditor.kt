@@ -89,6 +89,7 @@ import dolphin.desktop.apps.onitranslator.generated.resources.label_translated_t
 import dolphin.desktop.apps.onitranslator.generated.resources.nisbet_ponder
 import dolphin.desktop.apps.onitranslator.generated.resources.tag_align_all_styles
 import dolphin.desktop.apps.onitranslator.generated.resources.tag_diagnostic_alert
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_brigette_translate
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_canonical
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_this_text
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_peek_close
@@ -100,8 +101,10 @@ import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_toggle_sim
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_toggle_translated
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_undo_paste
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_use_this_text
+import dolphin.desktop.apps.onitranslator.model.BrigetteDeskState
 import dolphin.desktop.apps.onitranslator.model.EditorData
 import dolphin.desktop.apps.onitranslator.model.EntryTagType
+import dolphin.desktop.apps.onitranslator.model.GeminiSessionStats
 import dolphin.desktop.apps.onitranslator.model.GlossaryCandidateSpan
 import dolphin.desktop.apps.onitranslator.model.GlossaryConflict
 import dolphin.desktop.apps.onitranslator.model.GlossaryDiagnostic
@@ -128,6 +131,9 @@ fun EntryEditor(
     modifier: Modifier = Modifier,
     onConvert: (String) -> String = { it },
     terms: List<GlossaryTerm> = emptyList(),
+    brigetteDesk: BrigetteDeskState = BrigetteDeskState(),
+    geminiModel: String = "",
+    sessionStats: GeminiSessionStats = GeminiSessionStats(),
 ) {
     if (entry == null) {
         Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -140,7 +146,7 @@ fun EntryEditor(
         }
     } else {
         key(entry) { // reset all states
-            EntryEditorSection(entry, onEvent, onConvert, modifier, terms)
+            EntryEditorSection(entry, onEvent, onConvert, modifier, terms, brigetteDesk, geminiModel, sessionStats)
         }
     }
 }
@@ -189,6 +195,9 @@ private fun EntryEditorSection(
     onConvert: (String) -> String,
     modifier: Modifier = Modifier,
     terms: List<GlossaryTerm> = emptyList(),
+    brigetteDesk: BrigetteDeskState = BrigetteDeskState(),
+    geminiModel: String = "",
+    sessionStats: GeminiSessionStats = GeminiSessionStats(),
 ) {
     var editedText by remember { mutableStateOf(entry.target.msgStr()) }
     var backupText by remember { mutableStateOf<String?>(null) }
@@ -296,6 +305,10 @@ private fun EntryEditorSection(
                 entry,
                 onCopyToClipboard = { onEvent(AppEvent.Ui.CopyToClipboard(it)) },
                 onReplace = { editedText = onConvert(it) },
+                onBrigetteRequest = {
+                    isPeeking = false
+                    onEvent(AppEvent.Brigette.Open(entry))
+                },
                 oldSourceVisible = showOldSource,
                 chsRefsVisible = showRefs,
                 poSaveVisible = showPoSave,
@@ -401,7 +414,12 @@ private fun EntryEditorSection(
                 showPoSave = showPoSave,
                 onShowPoSaveChange = { showPoSave = it },
                 isPeeking = isPeeking,
-                onPeekingChange = { isPeeking = it },
+                onPeekingChange = { nextPeeking ->
+                    if (nextPeeking && brigetteDesk.visible) {
+                        onEvent(AppEvent.Brigette.Dismiss)
+                    }
+                    isPeeking = nextPeeking
+                },
                 backupText = backupText,
                 onEditedTextChange = { editedText = it },
                 onBackupTextChange = { backupText = it },
@@ -414,11 +432,32 @@ private fun EntryEditorSection(
         }
 
         NisbetPeekDrawer(
-            visible = isPeeking && editedText.shouldPeek(liveDiagnostic),
+            visible = isPeeking && !brigetteDesk.visible && editedText.shouldPeek(liveDiagnostic),
             text = editedText,
             emotion = emotion,
             diagnostic = liveDiagnostic,
             onDismiss = { isPeeking = false },
+            modifier = Modifier.align(Alignment.CenterEnd)
+        )
+
+        BrigetteDeskDrawer(
+            state = brigetteDesk,
+            sourceText = entry.sourceText,
+            glossaryTerms = terms,
+            configuredModel = geminiModel,
+            sessionStats = sessionStats,
+            onEvent = onEvent,
+            onToggleContextOptions = { opts ->
+                onEvent(AppEvent.Brigette.UpdateContextOptions(entry, opts))
+            },
+            onSendRequest = { opts, prompt ->
+                onEvent(AppEvent.Brigette.Request(entry, optionsOverride = opts, promptOverride = prompt))
+            },
+            onApplyTranslation = { text ->
+                backupText = editedText
+                editedText = text
+                onEvent(AppEvent.Brigette.ApplyOption(entry.target, text))
+            },
             modifier = Modifier.align(Alignment.CenterEnd)
         )
     }
@@ -554,6 +593,7 @@ private fun ReferenceSection(
     entry: EditorData,
     onCopyToClipboard: (String) -> Unit,
     onReplace: ((String) -> Unit),
+    onBrigetteRequest: (() -> Unit)? = null,
     oldSourceVisible: Boolean = true,
     chsRefsVisible: Boolean = true,
     poSaveVisible: Boolean = true,
@@ -569,7 +609,8 @@ private fun ReferenceSection(
                     t
                 }
                 onCopyToClipboard.invoke(textToCopy)
-            }
+            },
+            onBrigetteRequest = onBrigetteRequest,
         )
         entry.oldSourceText?.let { text ->
             if (text.isNotBlank() && oldSourceVisible) {
@@ -606,6 +647,7 @@ private fun ReferenceView(
     type: EntryTagType,
     onReplace: (() -> Unit)? = null,
     onCopyToClipboard: ((String) -> Unit)? = null,
+    onBrigetteRequest: (() -> Unit)? = null,
 ) {
     var linkSelector by remember { mutableStateOf(false) }
     // use regex to find link content
@@ -651,6 +693,13 @@ private fun ReferenceView(
                 ) {
                     listener.invoke("")
                 }
+            }
+            onBrigetteRequest?.let { listener ->
+                TooltipIconButton(
+                    painter = painterResource(Res.drawable.ic_auto_awesome),
+                    tooltip = stringResource(Res.string.tooltip_brigette_translate),
+                    onClick = listener,
+                )
             }
             onReplace?.let { listener ->
                 TooltipIconButton(

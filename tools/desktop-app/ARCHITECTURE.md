@@ -329,11 +329,26 @@ Step 3 完成設定持久化與 [`OniTranslatorViewModel`](src/main/kotlin/dolph
     * `Configs.effectiveGeminiApiKey()` 在設定欄位留空時自動 fallback 讀取環境變數 `GEMINI_API_KEY`。
     * [`ConfigScreen`](src/main/kotlin/dolphin/desktop/apps/onitranslator/ui/ConfigScreen.kt) 支援 API Key 遮罩切換、`ExposedDropdownMenuBox` 載入並選取 AI Studio 最新模型或手動輸入 Model ID；僅異動 Gemini 設定時維持 `pathChanged = false`，不觸發 PO 檔重載。
 * **MVI 生命週期與競態防護**：
-    * `AppEvent.Brigette` 涵蓋 `Request`、`Cancel`、`UpdateContextOptions`、`SelectOption`、`ApplyOption`、`Dismiss`。
+    * `AppEvent.Brigette` 涵蓋 `Open`（僅在本機組裝並開啟預覽）、`UpdateContextOptions`、`UpdatePrompt`、`ResetPrompt`、`Request`、`Cancel`、`SelectOption`、`ApplyOption`、`Dismiss`。
     * 切換條目（`Editor.Select`）、取消或關閉疊層時立即取消 `aiRequestJob`；非同步回應返回時核對 `entryKey` 一致性才更新狀態，防止舊條目覆寫。
 * **近期譯文視窗與 Session 統計**：
     * ViewModel 維護上限 3 筆的 `recentTranslations`（隨 `edit()` 更新並去重），供 `PromptComposer` 動態取用。
     * 每次翻譯請求成功自動累加 `AppState.geminiSessionStats`，並將精簡遙測寫入 `PoHelper.log()`（嚴禁寫入 API Key）；`ApplyOption` 比照智慧貼上直接呼叫 `edit()` 落地並觸發 AutoSave。
+
+### 4.16. BrigetteDesk 疊層介面與統計呈現 (Step 4)
+
+Step 4 完成 [`BrigetteDeskDrawer`](src/main/kotlin/dolphin/desktop/apps/onitranslator/ui/BrigetteDesk.kt) 疊層 UI、編輯器觸發入口與底部狀態列累計呈現：
+* **預覽後確認再發 (Stage-then-Send)、響應式版面與互斥疊層**：
+    * [`EntryEditor`](src/main/kotlin/dolphin/desktop/apps/onitranslator/ui/EntryEditor.kt) 於 `EntryTagType.Source` 原文參考卡片右側（緊鄰複製按鈕）新增 `BrigetteDesk` 入口按鈕，點擊僅先在本機跑 `PromptComposer` 並展開疊層預覽（不立即消耗 API 額度），與 `NisbetPeekDrawer` 採互斥顯示。
+    * 疊層寬度採響應式滿版設計（左側保留 `20.dp` 視覺縫隙與圓角邊框以維持疊層層次感並保持左側列表可見），隨視窗縮放自動延展。
+* **四態疊層、可編修 Prompt 與遊戲內預覽**：
+    * **動態 Context 晶片列 (`DeskContextChip`)**：採用 `.clip(shape)` 嚴格裁切圓角之自訂晶片（避免桌面端 Material `FilterChip` 預設觸控熱區在滑鼠懸停時出現方形灰底邊界），於記憶體內即時切換「同組詞條」與「近期譯文」開關並立即在本機重算 Prompt 與命中數量（0 API 成本），支援展開命中的「術語表」。
+    * **Ready 預覽態**：輸入框自適應撐滿剩餘垂直空間，直接顯示可編輯之 Prompt 預覽區（含字元數統計與一鍵重設），讓譯者在發送前確認並微調指令，按下「發送至 Gemini」才正式發出請求。
+    * **Loading 態**：顯示 `NisbetThinking` 插圖、進度條、每 100ms 更新之經過秒數與「取消」按鈕。
+    * **Success 態**：顯示 Brigette 分析與結語，並將 2–3 組評分候選譯文渲染為可點擊選項卡；每張卡片即時執行 `TagSensor.diagnose()` 與 `GlossarySensor.diagnose()` 呈現雙感測徽章，並提供行內 **`NisbetPeekCard` 遊戲預覽切換**。亦支援展開並微調 Prompt 後再次重送。
+    * **Error 態**：區分缺 Key／未選模型／驗證失敗（引導開啟設定）與 HTTP 429 配額類型（`PerMinute` 等待秒數 vs `PerDay` 每日上限）。
+* **一鍵套用與累計統計**：
+    * 點擊「套用所選譯文」比照智慧貼上同步備份 `backupText`（相容既有復原按鈕）、寫入編輯器並自動存檔；疊層頁尾左下角即時顯示 Session 累計請求數／Token（含懸停明細），結果態並同時呈現單次耗時與 Token 明細，[`OniTranslatorBottomBar`](src/main/kotlin/dolphin/desktop/apps/onitranslator/app/OniTranslatorBottomBar.kt) 亦同步呈現本次 Session 累計統計。
 
 ---
 
@@ -343,7 +358,7 @@ Step 3 完成設定持久化與 [`OniTranslatorViewModel`](src/main/kotlin/dolph
 src/main/kotlin/dolphin/desktop/apps/onitranslator/
 ├── app/          # 應用程式入口與全域 UI (Main, App, TopBar, BottomBar)
 ├── model/        # 核心邏輯與資料模型 (ViewModel, PoHelper, PoEntry, GlossaryBank, GlossarySensor, TagSensor, LinguisticRules, PromptComposer, GeminiClient)
-├── ui/           # 主要 UI 畫面 (EntryBrowser, EntryEditor, ConfigScreen, NisbetPeek, DiagnosticVisualTransformation)
+├── ui/           # 主要 UI 畫面 (EntryBrowser, EntryEditor, ConfigScreen, NisbetPeek, BrigetteDesk, DiagnosticVisualTransformation)
 ├── theme/        # Material 3 主題設定
 ├── widget/       # 共用 UI 元件
 └── generated/    # Compose Resources 自動生成的代碼
