@@ -24,11 +24,10 @@ repositories {
 
 dependencies {
     implementation(compose.desktop.currentOs)
-    // implementation(compose.material)
-    implementation(compose.material3)
-    implementation(compose.preview)
-    implementation(compose.uiTooling)
-    implementation(compose.components.resources)
+    implementation(libs.compose.material3)
+    implementation(libs.compose.ui.tooling.preview)
+    implementation(libs.compose.ui.tooling)
+    implementation(libs.compose.components.resources)
 
     // https://github.com/houbb/opencc4j
     implementation(libs.opencc4j)

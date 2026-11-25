@@ -109,9 +109,9 @@ class PoHelper(
         log("Previous translations (strings.po) size: ${translatedEntries.size}")
 
         val draftFile = getCachedFile()
+        draftEntries.clear()
         if (draftFile.exists()) {
             log("Loading Draft...")
-            draftEntries.clear()
             draftEntries.putAll(loadFile(draftFile).associateBy { it.key })
             log("Draft entries size: ${draftEntries.size}")
         }
@@ -338,6 +338,35 @@ class PoHelper(
             diagnostic = TagSensor.diagnose(msgId(), msgStr())
             glossaryDiag = GlossarySensor.diagnose(msgId(), msgStr(), glossaryBank.terms, isAccepted = key in acceptedTerms)
             log("Updated '$key'.")
+        }
+    }
+
+    /**
+     * Synchronizes in-memory baselines after a formal save to strings.po succeeds.
+     * Clears in-memory drafts, updates translatedEntries to match what was written,
+     * and resets per-entry session/diff flags while preserving diagnostics.
+     */
+    fun commitFormalSave() {
+        draftEntries.clear()
+        translatedEntries.clear()
+        for (i in entryList.indices) {
+            val current = entryList[i]
+            val savedId = templateMap[current.key]?.id ?: current.id
+            val committed = current.copy(
+                id = savedId,
+                newly = false,
+                msgidChanged = false,
+                changed = 0L,
+            )
+            entryList[i] = committed
+            entryMap[committed.key] = committed
+            // Store an independent snapshot so subsequent in-place update() calls do not mutate the baseline
+            translatedEntries[committed.key] = PoEntry(
+                key = committed.key,
+                text = committed.text,
+                id = savedId,
+                str = committed.str,
+            )
         }
     }
 

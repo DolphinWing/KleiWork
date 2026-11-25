@@ -13,6 +13,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
@@ -232,105 +233,102 @@ fun BrigetteDeskDrawer(
                 HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f))
 
                 // Main Content (Loading / Error / Success / Ready Editable Prompt Preview)
-                if (!state.isLoading && state.error == null && state.result == null) {
-                    Box(
-                        modifier = Modifier
-                            .weight(1f)
-                            .fillMaxWidth()
-                            .padding(16.dp),
-                    ) {
-                        EditablePromptCard(
-                            promptText = state.editablePrompt,
-                            isEdited = state.isPromptEdited,
-                            onPromptChange = { onEvent(AppEvent.Brigette.UpdatePrompt(it)) },
-                            onReset = { onEvent(AppEvent.Brigette.ResetPrompt) },
-                            fillHeight = true,
-                        )
+                when {
+                    state.isLoading -> {
+                        DeskScrollContainer(modifier = Modifier.weight(1f)) {
+                            BrigetteLoadingView(
+                                startedAtMs = state.startedAtMs,
+                                onCancel = { onEvent(AppEvent.Brigette.Cancel) },
+                            )
+                        }
                     }
-                } else {
-                    Column(
-                        modifier = Modifier
-                            .weight(1f)
-                            .fillMaxWidth()
-                            .verticalScroll(rememberScrollState())
-                            .padding(16.dp),
-                        verticalArrangement = Arrangement.spacedBy(12.dp),
-                    ) {
-                        when {
-                            state.isLoading -> {
-                                BrigetteLoadingView(
-                                    startedAtMs = state.startedAtMs,
-                                    onCancel = { onEvent(AppEvent.Brigette.Cancel) },
-                                )
-                            }
 
-                            state.error != null -> {
-                                BrigetteErrorView(
-                                    error = state.error,
-                                    onOpenSettings = { onEvent(AppEvent.Ui.ShowConfig) },
-                                    onRetry = { onSendRequest(state.contextOptions, state.editablePrompt) },
-                                )
-                            }
+                    state.error != null -> {
+                        DeskScrollContainer(modifier = Modifier.weight(1f)) {
+                            BrigetteErrorView(
+                                error = state.error,
+                                onOpenSettings = { onEvent(AppEvent.Ui.ShowConfig) },
+                                onRetry = { onSendRequest(state.contextOptions, state.editablePrompt) },
+                            )
+                        }
+                    }
 
-                            state.result != null -> {
-                                val payload = state.result.payload
-                                if (payload.analysis.isNotBlank()) {
-                                    Surface(
-                                        shape = RoundedCornerShape(8.dp),
-                                        color = MaterialTheme.colorScheme.surface,
-                                        border = BorderStroke(
-                                            1.dp,
-                                            MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f),
-                                        ),
-                                        modifier = Modifier.fillMaxWidth(),
-                                    ) {
-                                        Text(
-                                            text = payload.analysis,
-                                            style = MaterialTheme.typography.bodySmall,
-                                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                            modifier = Modifier.padding(10.dp),
-                                        )
-                                    }
-                                }
-
-                                payload.options.forEachIndexed { index, option ->
-                                    val isSelected = index == state.selectedOptionIndex
-                                    val isRecommended = index == payload.recommendedIndex
-                                    val isPreviewVisible = index in previewIndices
-
-                                    ScoredOptionCard(
-                                        option = option,
-                                        sourceText = sourceText,
-                                        glossaryTerms = glossaryTerms,
-                                        isSelected = isSelected,
-                                        isRecommended = isRecommended,
-                                        previewVisible = isPreviewVisible,
-                                        onSelect = { onEvent(AppEvent.Brigette.SelectOption(index)) },
-                                        onTogglePreview = {
-                                            previewIndices = if (isPreviewVisible) {
-                                                previewIndices - index
-                                            } else {
-                                                previewIndices + index
-                                            }
-                                        },
+                    state.result != null -> {
+                        val payload = state.result.payload
+                        DeskScrollContainer(modifier = Modifier.weight(1f)) {
+                            if (payload.analysis.isNotBlank()) {
+                                Surface(
+                                    shape = RoundedCornerShape(8.dp),
+                                    color = MaterialTheme.colorScheme.surface,
+                                    border = BorderStroke(
+                                        1.dp,
+                                        MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f),
+                                    ),
+                                    modifier = Modifier.fillMaxWidth(),
+                                ) {
+                                    Text(
+                                        text = payload.analysis,
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                        modifier = Modifier.padding(10.dp),
                                     )
                                 }
+                            }
 
-                                if (payload.conclusion.isNotBlank()) {
-                                    Surface(
-                                        shape = RoundedCornerShape(8.dp),
-                                        color = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.35f),
-                                        modifier = Modifier.fillMaxWidth(),
-                                    ) {
-                                        Text(
-                                            text = payload.conclusion,
-                                            style = MaterialTheme.typography.bodySmall,
-                                            color = MaterialTheme.colorScheme.onSurface,
-                                            modifier = Modifier.padding(10.dp),
-                                        )
-                                    }
+                            payload.options.forEachIndexed { index, option ->
+                                val isSelected = index == state.selectedOptionIndex
+                                val isRecommended = index == payload.recommendedIndex
+                                val isPreviewVisible = index in previewIndices
+
+                                ScoredOptionCard(
+                                    option = option,
+                                    sourceText = sourceText,
+                                    glossaryTerms = glossaryTerms,
+                                    isSelected = isSelected,
+                                    isRecommended = isRecommended,
+                                    previewVisible = isPreviewVisible,
+                                    onSelect = { onEvent(AppEvent.Brigette.SelectOption(index)) },
+                                    onTogglePreview = {
+                                        previewIndices = if (isPreviewVisible) {
+                                            previewIndices - index
+                                        } else {
+                                            previewIndices + index
+                                        }
+                                    },
+                                )
+                            }
+
+                            if (payload.conclusion.isNotBlank()) {
+                                Surface(
+                                    shape = RoundedCornerShape(8.dp),
+                                    color = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.35f),
+                                    modifier = Modifier.fillMaxWidth(),
+                                ) {
+                                    Text(
+                                        text = payload.conclusion,
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = MaterialTheme.colorScheme.onSurface,
+                                        modifier = Modifier.padding(10.dp),
+                                    )
                                 }
                             }
+                        }
+                    }
+
+                    else -> {
+                        Box(
+                            modifier = Modifier
+                                .weight(1f)
+                                .fillMaxWidth()
+                                .padding(16.dp),
+                        ) {
+                            EditablePromptCard(
+                                promptText = state.editablePrompt,
+                                isEdited = state.isPromptEdited,
+                                onPromptChange = { onEvent(AppEvent.Brigette.UpdatePrompt(it)) },
+                                onReset = { onEvent(AppEvent.Brigette.ResetPrompt) },
+                                fillHeight = true,
+                            )
                         }
                     }
                 }
@@ -412,6 +410,21 @@ fun BrigetteDeskDrawer(
             }
         }
     }
+}
+
+@Composable
+private fun DeskScrollContainer(
+    modifier: Modifier = Modifier,
+    content: @Composable ColumnScope.() -> Unit,
+) {
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .verticalScroll(rememberScrollState())
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp),
+        content = content,
+    )
 }
 
 @Composable
@@ -842,7 +855,11 @@ private fun ScoredOptionCard(
                         text = "${option.score}/10",
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onPrimaryContainer,
+                        color = if (option.score >= 9) {
+                            MaterialTheme.colorScheme.onPrimaryContainer
+                        } else {
+                            MaterialTheme.colorScheme.onSecondaryContainer
+                        },
                         modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
                     )
                 }

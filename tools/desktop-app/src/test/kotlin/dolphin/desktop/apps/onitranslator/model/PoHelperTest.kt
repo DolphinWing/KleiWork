@@ -7,6 +7,7 @@ import java.io.StringReader
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith
+import kotlin.test.assertFalse
 import kotlin.test.assertNotNull
 import kotlin.test.assertNull
 import kotlin.test.assertTrue
@@ -225,6 +226,78 @@ class PoHelperTest {
             assertFailsWith<UnsupportedOperationException> {
                 mutableView.clear()
             }
+        } finally {
+            tempDir.deleteRecursively()
+        }
+    }
+
+    @Test
+    fun testCommitFormalSaveSyncsBaselineAndClearsPending(): Unit = runBlocking {
+        val tempDir = File(System.getProperty("java.io.tmpdir"), "po_helper_commit_test_${System.currentTimeMillis()}")
+        val assetsDir = File(tempDir, "assets").apply { mkdirs() }
+        val workshopDir = File(tempDir, "workshop").apply { mkdirs() }
+        try {
+            File(assetsDir, "strings_template.pot").writeText(
+                """
+                #. STRINGS.EXISTING
+                msgctxt "STRINGS.EXISTING"
+                msgid "New English"
+                msgstr ""
+
+                #. STRINGS.NEW_ITEM
+                msgctxt "STRINGS.NEW_ITEM"
+                msgid "Brand New"
+                msgstr ""
+                """.trimIndent()
+            )
+            File(workshopDir, "strings.po").writeText(
+                """
+                #. STRINGS.EXISTING
+                msgctxt "STRINGS.EXISTING"
+                msgid "Old English"
+                msgstr "舊翻譯"
+                """.trimIndent()
+            )
+            val testHelper = PoHelper(
+                Configs(
+                    oniAssetsDir = assetsDir.absolutePath,
+                    oniWorkshopDir = workshopDir.absolutePath,
+                    dataBankPath = ""
+                ),
+                mockRefinery
+            )
+            testHelper.runTranslationProcess()
+
+            assertEquals(true, testHelper.entry("STRINGS.EXISTING")?.msgidChanged)
+            assertEquals(true, testHelper.entry("STRINGS.NEW_ITEM")?.newly)
+            assertEquals(2, testHelper.buildChangeList().size)
+
+            testHelper.update("STRINGS.EXISTING", "新翻譯")
+            testHelper.commitFormalSave()
+
+            assertEquals("新翻譯", testHelper.poEntry("STRINGS.EXISTING")?.str)
+            assertEquals("New English", testHelper.poEntry("STRINGS.EXISTING")?.id)
+            assertNotNull(testHelper.poEntry("STRINGS.NEW_ITEM"))
+            assertNull(testHelper.draftEntry("STRINGS.EXISTING"))
+
+            val existing = testHelper.entry("STRINGS.EXISTING")
+            assertNotNull(existing)
+            assertEquals(0L, existing.changed)
+            assertFalse(existing.newly)
+            assertFalse(existing.msgidChanged)
+
+            val newItem = testHelper.entry("STRINGS.NEW_ITEM")
+            assertNotNull(newItem)
+            assertEquals(0L, newItem.changed)
+            assertFalse(newItem.newly)
+            assertFalse(newItem.msgidChanged)
+
+            assertTrue(testHelper.buildChangeList().isEmpty())
+
+            // Ensure translatedEntries stores an independent snapshot from entryList
+            testHelper.update("STRINGS.EXISTING", "二次修改")
+            assertEquals("二次修改", testHelper.entry("STRINGS.EXISTING")?.str)
+            assertEquals("新翻譯", testHelper.poEntry("STRINGS.EXISTING")?.str)
         } finally {
             tempDir.deleteRecursively()
         }

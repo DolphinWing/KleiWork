@@ -261,8 +261,8 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
         if (cost > 0) {
             SnackbarManager.showMessage(Res.string.toast_write_success, path, cost)
             if (!useCache) {
-                // Formal save committed all changes to strings.po: reset in-memory changed flags
-                helper?.allEntries()?.forEach { it.changed = 0L }
+                // Formal save committed all changes to strings.po: sync in-memory baselines
+                helper?.commitFormalSave()
             }
             refreshDataSource()
         } else {
