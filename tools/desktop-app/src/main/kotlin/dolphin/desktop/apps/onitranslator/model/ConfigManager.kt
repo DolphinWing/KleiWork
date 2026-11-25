@@ -71,6 +71,8 @@ object ConfigManager {
             glossaryDir = props[Incs.KEY_GLOSSARY_DIR] ?: "",
             autoSaveEnabled = props[Incs.KEY_AUTO_SAVE_ENABLED]?.toBooleanStrictOrNull() ?: false,
             autoSaveIntervalMinutes = props[Incs.KEY_AUTO_SAVE_INTERVAL]?.toIntOrNull() ?: 5,
+            geminiApiKey = props[Incs.KEY_GEMINI_API_KEY] ?: "",
+            geminiModel = props[Incs.KEY_GEMINI_MODEL] ?: "",
         )
 
         val windowConfig = WindowConfig(
@@ -98,6 +100,8 @@ object ConfigManager {
             appendLine("${Incs.KEY_GLOSSARY_DIR}=${configs.glossaryDir}")
             appendLine("${Incs.KEY_AUTO_SAVE_ENABLED}=${configs.autoSaveEnabled}")
             appendLine("${Incs.KEY_AUTO_SAVE_INTERVAL}=${configs.autoSaveIntervalMinutes}")
+            appendLine("${Incs.KEY_GEMINI_API_KEY}=${configs.geminiApiKey}")
+            appendLine("${Incs.KEY_GEMINI_MODEL}=${configs.geminiModel}")
             appendLine("${Incs.KEY_WINDOW_POS_X}=${windowConfig.x}")
             appendLine("${Incs.KEY_WINDOW_POS_Y}=${windowConfig.y}")
             appendLine("${Incs.KEY_WINDOW_WIDTH}=${windowConfig.width}")

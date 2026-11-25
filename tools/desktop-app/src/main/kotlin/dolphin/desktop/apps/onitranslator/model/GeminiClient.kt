@@ -26,6 +26,7 @@ import java.time.Duration
 import java.util.concurrent.CompletionException
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
+import kotlin.math.ceil
 
 /**
  * Single scored localization candidate returned by Gemini in Brigette format.
@@ -70,6 +71,25 @@ data class GeminiTranslationResult(
 )
 
 /**
+ * Metadata for an available Gemini model returned by `GET /v1beta/models`.
+ */
+data class GeminiModelInfo(
+    val id: String,
+    val displayName: String = id,
+    val description: String = "",
+    val inputTokenLimit: Int = 0,
+    val outputTokenLimit: Int = 0,
+)
+
+/**
+ * Result wrapper returned by [GeminiClient.listModels].
+ */
+sealed interface GeminiModelListResponse {
+    data class Success(val models: List<GeminiModelInfo>) : GeminiModelListResponse
+    data class Failure(val error: GeminiError) : GeminiModelListResponse
+}
+
+/**
  * Typed error hierarchy for Gemini API calls.
  */
 sealed class GeminiError(
@@ -78,7 +98,17 @@ sealed class GeminiError(
 ) {
     class MissingApiKey(message: String = "Gemini API key is not configured.") : GeminiError(message)
     class Unauthorized(message: String, httpStatus: Int) : GeminiError(message, httpStatus)
-    class RateLimited(message: String, httpStatus: Int = 429) : GeminiError(message, httpStatus)
+    class RateLimited(
+        message: String,
+        httpStatus: Int = 429,
+        val retryDelaySeconds: Int? = null,
+        val quotaId: String? = null,
+    ) : GeminiError(message, httpStatus) {
+        val isDailyQuota: Boolean
+            get() = quotaId?.contains("PerDay", ignoreCase = true) == true
+        val isMinuteQuota: Boolean
+            get() = quotaId?.contains("PerMinute", ignoreCase = true) == true
+    }
     class ModelNotFound(message: String, httpStatus: Int = 404) : GeminiError(message, httpStatus)
     class ServiceUnavailable(message: String, httpStatus: Int = 503) : GeminiError(message, httpStatus)
     class ApiError(message: String, httpStatus: Int) : GeminiError(message, httpStatus)
@@ -110,6 +140,20 @@ class GeminiClient(
     companion object {
         const val DEFAULT_BASE_URL = "https://generativelanguage.googleapis.com/v1beta"
         const val DEFAULT_MODEL = "gemini-2.5-flash"
+
+        private val NON_TEXT_MODEL_KEYWORDS = listOf(
+            "nano-banana",
+            "-image",
+            "imagen",
+            "veo",
+            "-tts",
+            "-audio",
+            "-live",
+            "robotics",
+            "computer-use",
+            "deep-research",
+            "embedding",
+        )
 
         private val json = Json {
             ignoreUnknownKeys = true
@@ -163,12 +207,14 @@ class GeminiClient(
         return try {
             val response = sendAsyncCancellable(request)
             val elapsedMs = ((System.nanoTime() - startNs) / 1_000_000L).coerceAtLeast(0L)
+            val retryAfter = response.headers().firstValue("retry-after").orElse(null)
             parseResponse(
                 httpStatus = response.statusCode(),
                 responseBody = response.body().orEmpty(),
                 elapsedMs = elapsedMs,
                 modelName = cleanModel,
                 apiKeyToRedact = cleanKey,
+                retryAfterHeader = retryAfter,
             )
         } catch (e: CancellationException) {
             throw e
@@ -176,6 +222,42 @@ class GeminiClient(
             val unwrapped = (e as? CompletionException)?.cause ?: e
             val rawMsg = unwrapped.message ?: unwrapped::class.simpleName ?: "Network failure"
             GeminiResponse.Failure(GeminiError.NetworkError(sanitize(rawMsg, cleanKey)))
+        }
+    }
+
+    /**
+     * Queries Google AI Studio `GET /v1beta/models` using [apiKey] and returns models
+     * that support `generateContent`. Useful for live model discovery and key validation.
+     */
+    suspend fun listModels(apiKey: String): GeminiModelListResponse {
+        val cleanKey = apiKey.trim()
+        if (cleanKey.isBlank()) {
+            return GeminiModelListResponse.Failure(GeminiError.MissingApiKey())
+        }
+
+        val endpoint = "${baseUrl.trimEnd('/')}/models?pageSize=200"
+        val request = HttpRequest.newBuilder()
+            .uri(URI.create(endpoint))
+            .timeout(requestTimeout)
+            .header("x-goog-api-key", cleanKey)
+            .GET()
+            .build()
+
+        return try {
+            val response = sendAsyncCancellable(request)
+            val retryAfter = response.headers().firstValue("retry-after").orElse(null)
+            parseModelListResponse(
+                httpStatus = response.statusCode(),
+                responseBody = response.body().orEmpty(),
+                apiKeyToRedact = cleanKey,
+                retryAfterHeader = retryAfter,
+            )
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Throwable) {
+            val unwrapped = (e as? CompletionException)?.cause ?: e
+            val rawMsg = unwrapped.message ?: unwrapped::class.simpleName ?: "Network failure"
+            GeminiModelListResponse.Failure(GeminiError.NetworkError(sanitize(rawMsg, cleanKey)))
         }
     }
 
@@ -266,9 +348,10 @@ class GeminiClient(
         elapsedMs: Long,
         modelName: String,
         apiKeyToRedact: String = "",
+        retryAfterHeader: String? = null,
     ): GeminiResponse {
         if (httpStatus !in 200..299) {
-            return GeminiResponse.Failure(mapHttpError(httpStatus, responseBody, apiKeyToRedact))
+            return GeminiResponse.Failure(mapHttpError(httpStatus, responseBody, apiKeyToRedact, retryAfterHeader))
         }
 
         val root = try {
@@ -403,16 +486,133 @@ class GeminiClient(
         return trimmed
     }
 
-    private fun mapHttpError(httpStatus: Int, responseBody: String, apiKeyToRedact: String): GeminiError {
+    internal fun parseModelListResponse(
+        httpStatus: Int,
+        responseBody: String,
+        apiKeyToRedact: String = "",
+        retryAfterHeader: String? = null,
+    ): GeminiModelListResponse {
+        if (httpStatus !in 200..299) {
+            return GeminiModelListResponse.Failure(mapHttpError(httpStatus, responseBody, apiKeyToRedact, retryAfterHeader))
+        }
+
+        val root = try {
+            json.parseToJsonElement(responseBody).jsonObject
+        } catch (e: Exception) {
+            return GeminiModelListResponse.Failure(
+                GeminiError.ParseError(
+                    message = sanitize("Invalid JSON from Gemini models endpoint: ${e.message}", apiKeyToRedact),
+                    rawBody = sanitize(responseBody, apiKeyToRedact),
+                )
+            )
+        }
+
+        val modelsArray = root["models"] as? JsonArray
+            ?: return GeminiModelListResponse.Failure(
+                GeminiError.ParseError(
+                    message = "Gemini models response is missing 'models' array.",
+                    rawBody = sanitize(responseBody, apiKeyToRedact),
+                )
+            )
+
+        val parsed = modelsArray.mapNotNull { elem ->
+            val obj = elem as? JsonObject ?: return@mapNotNull null
+            val methods = (obj["supportedGenerationMethods"] as? JsonArray)
+                ?.mapNotNull { (it as? JsonPrimitive)?.contentOrNull }
+                ?: emptyList()
+            if ("generateContent" !in methods) return@mapNotNull null
+
+            val rawName = (obj["name"] as? JsonPrimitive)?.contentOrNull?.trim().orEmpty()
+            val id = rawName.removePrefix("models/")
+            if (id.isBlank()) return@mapNotNull null
+
+            GeminiModelInfo(
+                id = id,
+                displayName = (obj["displayName"] as? JsonPrimitive)?.contentOrNull?.takeIf { it.isNotBlank() } ?: id,
+                description = (obj["description"] as? JsonPrimitive)?.contentOrNull.orEmpty(),
+                inputTokenLimit = (obj["inputTokenLimit"] as? JsonPrimitive)?.intOrNull ?: 0,
+                outputTokenLimit = (obj["outputTokenLimit"] as? JsonPrimitive)?.intOrNull ?: 0,
+            )
+        }
+
+        val textCandidates = parsed.filter(::isTextTranslationCandidate)
+        val filtered = textCandidates.ifEmpty { parsed }.sortedByDescending { it.id }
+        return GeminiModelListResponse.Success(filtered)
+    }
+
+    private fun isTextTranslationCandidate(model: GeminiModelInfo): Boolean {
+        if (!model.id.startsWith("gemini-", ignoreCase = true)) return false
+        return NON_TEXT_MODEL_KEYWORDS.none { keyword ->
+            model.id.contains(keyword, ignoreCase = true) ||
+                model.displayName.contains(keyword, ignoreCase = true)
+        }
+    }
+
+    private fun mapHttpError(
+        httpStatus: Int,
+        responseBody: String,
+        apiKeyToRedact: String,
+        retryAfterHeader: String? = null,
+    ): GeminiError {
         val detail = extractErrorMessage(responseBody) ?: responseBody.take(240).ifBlank { "HTTP $httpStatus" }
         val safeDetail = sanitize(detail, apiKeyToRedact)
         return when (httpStatus) {
             401, 403 -> GeminiError.Unauthorized(safeDetail, httpStatus)
             404 -> GeminiError.ModelNotFound(safeDetail, httpStatus)
-            429 -> GeminiError.RateLimited(safeDetail, httpStatus)
+            429 -> {
+                val (retryDelaySeconds, quotaId) = extractRateLimitInfo(responseBody, retryAfterHeader)
+                GeminiError.RateLimited(
+                    message = safeDetail,
+                    httpStatus = httpStatus,
+                    retryDelaySeconds = retryDelaySeconds,
+                    quotaId = quotaId,
+                )
+            }
             503 -> GeminiError.ServiceUnavailable(safeDetail, httpStatus)
             else -> GeminiError.ApiError(safeDetail, httpStatus)
         }
+    }
+
+    private fun extractRateLimitInfo(responseBody: String, retryAfterHeader: String?): Pair<Int?, String?> {
+        var retrySeconds: Int? = null
+        var quotaId: String? = null
+
+        if (responseBody.isNotBlank()) {
+            try {
+                val details = json.parseToJsonElement(responseBody)
+                    .jsonObject["error"]?.jsonObject
+                    ?.get("details") as? JsonArray
+
+                details?.forEach { elem ->
+                    val detailObj = elem as? JsonObject ?: return@forEach
+                    val type = (detailObj["@type"] as? JsonPrimitive)?.contentOrNull.orEmpty()
+                    if (type.contains("RetryInfo", ignoreCase = true)) {
+                        val rawDelay = (detailObj["retryDelay"] as? JsonPrimitive)?.contentOrNull
+                        val parsed = parseRetryDelaySeconds(rawDelay)
+                        if (parsed != null) retrySeconds = parsed
+                    } else if (type.contains("QuotaFailure", ignoreCase = true)) {
+                        val firstViolation = (detailObj["violations"] as? JsonArray)?.firstOrNull() as? JsonObject
+                        val qId = (firstViolation?.get("quotaId") as? JsonPrimitive)?.contentOrNull
+                            ?: (firstViolation?.get("quotaMetric") as? JsonPrimitive)?.contentOrNull
+                        if (!qId.isNullOrBlank()) quotaId = qId
+                    }
+                }
+            } catch (_: Exception) {
+                // Ignore malformed details and fall back to Retry-After header
+            }
+        }
+
+        if (retrySeconds == null && !retryAfterHeader.isNullOrBlank()) {
+            retrySeconds = retryAfterHeader.trim().toIntOrNull()
+        }
+        return retrySeconds to quotaId
+    }
+
+    private fun parseRetryDelaySeconds(rawDelay: String?): Int? {
+        if (rawDelay.isNullOrBlank()) return null
+        val numericPart = rawDelay.trim().removeSuffix("s").trim()
+        val seconds = numericPart.toDoubleOrNull() ?: return null
+        return ceil(seconds).toInt().coerceAtLeast(1)
     }
 
     private fun extractErrorMessage(responseBody: String): String? {

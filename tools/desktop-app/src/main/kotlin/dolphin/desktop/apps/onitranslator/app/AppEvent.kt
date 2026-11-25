@@ -1,10 +1,12 @@
 package dolphin.desktop.apps.onitranslator.app
 
 import dolphin.desktop.apps.onitranslator.model.Configs
+import dolphin.desktop.apps.onitranslator.model.EditorData
 import dolphin.desktop.apps.onitranslator.model.EntryFilterMode
 import dolphin.desktop.apps.onitranslator.model.UiState
 import dolphin.desktop.apps.onitranslator.model.PoEntry
 import dolphin.desktop.apps.onitranslator.model.GlossaryConflict
+import dolphin.desktop.apps.onitranslator.model.PromptContextOptions
 
 /**
  * Represents all possible user interactions and system events that can trigger state changes
@@ -58,6 +60,9 @@ sealed interface AppEvent {
 
         // Successfully saved configuration to persistent storage
         data class Saved(val configs: Configs) : Config
+
+        // Query Google AI Studio for available generateContent models
+        data class FetchGeminiModels(val apiKey: String) : Config
     }
 
     /**
@@ -101,5 +106,20 @@ sealed interface AppEvent {
         data class ApplyCanonical(val entry: PoEntry, val conflict: GlossaryConflict) : Glossary
         data class AcceptNewTerm(val entryKey: String) : Glossary
         data class ResetToCanonical(val entryKey: String) : Glossary
+    }
+
+    /**
+     * BrigetteDesk Gemini translation assistant actions.
+     */
+    sealed interface Brigette : AppEvent {
+        data class Request(
+            val entry: EditorData,
+            val optionsOverride: PromptContextOptions? = null,
+        ) : Brigette
+        object Cancel : Brigette
+        data class UpdateContextOptions(val options: PromptContextOptions) : Brigette
+        data class SelectOption(val index: Int) : Brigette
+        data class ApplyOption(val entry: PoEntry, val text: String) : Brigette
+        object Dismiss : Brigette
     }
 }

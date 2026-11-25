@@ -204,6 +204,8 @@ private fun M3DialogHost(
                     onConfigChange = { onEvent(AppEvent.Config.Change(it)) },
                     onApply = { onEvent(AppEvent.Config.Saved(it)) },
                     onDismissRequest = { onEvent(AppEvent.Ui.DismissDialog) },
+                    geminiModelsState = state.uiState.geminiModelsState,
+                    onFetchGeminiModels = { onEvent(AppEvent.Config.FetchGeminiModels(it)) },
                 )
             }
 

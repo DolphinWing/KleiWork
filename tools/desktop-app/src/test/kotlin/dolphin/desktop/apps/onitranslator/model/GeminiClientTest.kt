@@ -186,6 +186,141 @@ class GeminiClientTest {
     }
 
     @Test
+    fun testParseRateLimitedExtractsRetryDelayAndQuotaId() {
+        val dailyQuotaBody = """
+            {
+              "error": {
+                "code": 429,
+                "message": "You exceeded your current quota.",
+                "status": "RESOURCE_EXHAUSTED",
+                "details": [
+                  {
+                    "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+                    "violations": [
+                      {
+                        "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+                        "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "type.googleapis.com/google.rpc.RetryInfo",
+                    "retryDelay": "18.2s"
+                  }
+                ]
+              }
+            }
+        """.trimIndent()
+
+        val dailyFailure = assertIs<GeminiResponse.Failure>(
+            client.parseResponse(429, dailyQuotaBody, 10L, "gemini-flash")
+        )
+        val dailyErr = assertIs<GeminiError.RateLimited>(dailyFailure.error)
+        assertEquals(19, dailyErr.retryDelaySeconds)
+        assertEquals("GenerateRequestsPerDayPerProjectPerModel-FreeTier", dailyErr.quotaId)
+        assertTrue(dailyErr.isDailyQuota)
+        assertFalse(dailyErr.isMinuteQuota)
+
+        val minuteQuotaBody = """
+            {
+              "error": {
+                "status": "RESOURCE_EXHAUSTED",
+                "message": "RPM exceeded",
+                "details": [
+                  {
+                    "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+                    "violations": [
+                      {"quotaId": "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"}
+                    ]
+                  }
+                ]
+              }
+            }
+        """.trimIndent()
+        val minuteFailure = assertIs<GeminiResponse.Failure>(
+            client.parseResponse(429, minuteQuotaBody, 10L, "gemini-flash", retryAfterHeader = "25")
+        )
+        val minuteErr = assertIs<GeminiError.RateLimited>(minuteFailure.error)
+        assertEquals(25, minuteErr.retryDelaySeconds)
+        assertTrue(minuteErr.isMinuteQuota)
+        assertFalse(minuteErr.isDailyQuota)
+    }
+
+    @Test
+    fun testParseModelListResponseFiltersAndSorts() {
+        val secretKey = "AIzaSySecretListKey"
+        val body = """
+            {
+              "models": [
+                {
+                  "name": "models/text-embedding-004",
+                  "displayName": "Text Embedding",
+                  "supportedGenerationMethods": ["embedContent"]
+                },
+                {
+                  "name": "models/gemma-3-27b-it",
+                  "displayName": "Gemma 3 27B",
+                  "supportedGenerationMethods": ["generateContent"]
+                },
+                {
+                  "name": "models/gemini-nano-banana-2.1",
+                  "displayName": "Nano Banana 2.1",
+                  "supportedGenerationMethods": ["generateContent"]
+                },
+                {
+                  "name": "models/gemini-2.5-flash-image",
+                  "displayName": "Nano Banana",
+                  "supportedGenerationMethods": ["generateContent"]
+                },
+                {
+                  "name": "models/gemini-2.5-flash-preview-tts",
+                  "displayName": "Gemini 2.5 Flash Preview TTS",
+                  "supportedGenerationMethods": ["generateContent"]
+                },
+                {
+                  "name": "models/gemini-robotics-er-1.5-preview",
+                  "displayName": "Gemini Robotics-ER 1.5 Preview",
+                  "supportedGenerationMethods": ["generateContent"]
+                },
+                {
+                  "name": "models/gemini-2.5-computer-use-preview",
+                  "displayName": "Gemini 2.5 Computer Use Preview",
+                  "supportedGenerationMethods": ["generateContent"]
+                },
+                {
+                  "name": "models/gemini-3.5-flash-lite",
+                  "displayName": "Gemini 3.5 Flash-Lite",
+                  "inputTokenLimit": 1000000,
+                  "outputTokenLimit": 8192,
+                  "supportedGenerationMethods": ["generateContent", "countTokens"]
+                },
+                {
+                  "name": "models/gemini-3.8-flash",
+                  "displayName": "Gemini 3.8 Flash",
+                  "inputTokenLimit": 1048576,
+                  "outputTokenLimit": 65536,
+                  "supportedGenerationMethods": ["generateContent"]
+                }
+              ]
+            }
+        """.trimIndent()
+
+        val success = assertIs<GeminiModelListResponse.Success>(
+            client.parseModelListResponse(200, body)
+        )
+        assertEquals(listOf("gemini-3.8-flash", "gemini-3.5-flash-lite"), success.models.map { it.id })
+        assertEquals("Gemini 3.8 Flash", success.models.first().displayName)
+        assertEquals(1048576, success.models.first().inputTokenLimit)
+
+        val errResp = assertIs<GeminiModelListResponse.Failure>(
+            client.parseModelListResponse(403, """{"error":{"message":"Denied $secretKey"}}""", secretKey)
+        )
+        val unauth = assertIs<GeminiError.Unauthorized>(errResp.error)
+        assertFalse(unauth.message.contains(secretKey))
+        assertTrue(unauth.message.contains("[REDACTED]"))
+    }
+
+    @Test
     fun testMissingApiKeyFailsFastWithoutNetwork(): Unit = runBlocking {
         val brief = TranslationBrief("sys", "user", PromptContextSnapshot())
         val failure = assertIs<GeminiResponse.Failure>(

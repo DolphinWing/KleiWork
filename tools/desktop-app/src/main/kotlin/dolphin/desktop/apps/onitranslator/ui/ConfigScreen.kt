@@ -7,10 +7,20 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ExposedDropdownMenuAnchorType
+import androidx.compose.material3.ExposedDropdownMenuBox
+import androidx.compose.material3.ExposedDropdownMenuDefaults
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Slider
@@ -20,18 +30,34 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.button_apply
 import dolphin.desktop.apps.onitranslator.generated.resources.button_cancel
 import dolphin.desktop.apps.onitranslator.generated.resources.draft_path
+import dolphin.desktop.apps.onitranslator.generated.resources.gemini_api_key
+import dolphin.desktop.apps.onitranslator.generated.resources.gemini_api_key_hint
+import dolphin.desktop.apps.onitranslator.generated.resources.gemini_api_key_hint_env_active
+import dolphin.desktop.apps.onitranslator.generated.resources.gemini_load_models
+import dolphin.desktop.apps.onitranslator.generated.resources.gemini_model_id
+import dolphin.desktop.apps.onitranslator.generated.resources.gemini_models_loaded
+import dolphin.desktop.apps.onitranslator.generated.resources.gemini_settings_title
 import dolphin.desktop.apps.onitranslator.generated.resources.github_root
 import dolphin.desktop.apps.onitranslator.generated.resources.glossary_dir
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_done
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_visibility
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_visibility_off
 import dolphin.desktop.apps.onitranslator.generated.resources.label_auto_save
 import dolphin.desktop.apps.onitranslator.generated.resources.label_auto_save_interval
 import dolphin.desktop.apps.onitranslator.generated.resources.manual_setup
@@ -39,7 +65,9 @@ import dolphin.desktop.apps.onitranslator.generated.resources.oni_asset_dir
 import dolphin.desktop.apps.onitranslator.generated.resources.oni_workshop_dir
 import dolphin.desktop.apps.onitranslator.generated.resources.quick_setup
 import dolphin.desktop.apps.onitranslator.generated.resources.string_map_path_cannot_be_empty
+import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_toggle_api_key_visibility
 import dolphin.desktop.apps.onitranslator.model.Configs
+import dolphin.desktop.apps.onitranslator.model.GeminiModelsState
 import dolphin.desktop.apps.onitranslator.model.PoHelper
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
 import dolphin.desktop.apps.onitranslator.widget.FilePicker
@@ -66,9 +94,27 @@ fun ConfigScreen(
     onConfigChange: ((configs: Configs) -> Unit)? = null,
     onApply: (Configs) -> Unit = {},
     onCancel: () -> Unit = {},
+    geminiModelsState: GeminiModelsState = GeminiModelsState(),
+    onFetchGeminiModels: (String) -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
-    Column(modifier = modifier.fillMaxWidth().padding(16.dp)) {
+    var apiKeyVisible by remember { mutableStateOf(false) }
+    var modelMenuExpanded by remember { mutableStateOf(false) }
+    var wasLoadingModels by remember { mutableStateOf(false) }
+
+    LaunchedEffect(geminiModelsState.isLoading, geminiModelsState.models) {
+        if (wasLoadingModels && !geminiModelsState.isLoading && geminiModelsState.models.isNotEmpty()) {
+            modelMenuExpanded = true
+        }
+        wasLoadingModels = geminiModelsState.isLoading
+    }
+
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .verticalScroll(rememberScrollState())
+            .padding(16.dp)
+    ) {
         // Quick Setup Section
         Text(stringResource(Res.string.quick_setup), style = MaterialTheme.typography.titleMedium)
         Spacer(Modifier.height(8.dp))
@@ -198,6 +244,139 @@ fun ConfigScreen(
         )
 
         Spacer(Modifier.height(16.dp))
+        HorizontalDivider()
+        Spacer(Modifier.height(16.dp))
+
+        // BrigetteDesk (Gemini AI) Settings Section
+        Text(stringResource(Res.string.gemini_settings_title), style = MaterialTheme.typography.titleMedium)
+        Spacer(Modifier.height(8.dp))
+
+        val hasEnvKey = remember { !System.getenv("GEMINI_API_KEY").isNullOrBlank() }
+        OutlinedTextField(
+            value = configs.geminiApiKey,
+            onValueChange = { onConfigChange?.invoke(configs.copy(geminiApiKey = it)) },
+            label = { Text(stringResource(Res.string.gemini_api_key)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+            visualTransformation = if (apiKeyVisible) VisualTransformation.None else PasswordVisualTransformation(),
+            trailingIcon = {
+                IconButton(onClick = { apiKeyVisible = !apiKeyVisible }) {
+                    Icon(
+                        painter = painterResource(if (apiKeyVisible) Res.drawable.ic_visibility_off else Res.drawable.ic_visibility),
+                        contentDescription = stringResource(Res.string.tooltip_toggle_api_key_visibility),
+                    )
+                }
+            },
+            supportingText = {
+                Text(
+                    stringResource(
+                        if (hasEnvKey) Res.string.gemini_api_key_hint_env_active
+                        else Res.string.gemini_api_key_hint
+                    )
+                )
+            },
+        )
+
+        Spacer(Modifier.height(8.dp))
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.Top,
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            ExposedDropdownMenuBox(
+                expanded = modelMenuExpanded && geminiModelsState.models.isNotEmpty(),
+                onExpandedChange = {
+                    if (geminiModelsState.models.isNotEmpty()) {
+                        modelMenuExpanded = it
+                    }
+                },
+                modifier = Modifier.weight(1f),
+            ) {
+                OutlinedTextField(
+                    value = configs.geminiModel,
+                    onValueChange = { onConfigChange?.invoke(configs.copy(geminiModel = it)) },
+                    label = { Text(stringResource(Res.string.gemini_model_id)) },
+                    singleLine = true,
+                    trailingIcon = {
+                        if (geminiModelsState.models.isNotEmpty()) {
+                            ExposedDropdownMenuDefaults.TrailingIcon(expanded = modelMenuExpanded)
+                        }
+                    },
+                    supportingText = when {
+                        geminiModelsState.error != null -> {
+                            {
+                                Text(
+                                    text = geminiModelsState.error,
+                                    color = MaterialTheme.colorScheme.error,
+                                )
+                            }
+                        }
+
+                        geminiModelsState.models.isNotEmpty() -> {
+                            { Text(stringResource(Res.string.gemini_models_loaded, geminiModelsState.models.size)) }
+                        }
+
+                        else -> null
+                    },
+                    modifier = Modifier
+                        .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryEditable, enabled = true)
+                        .fillMaxWidth(),
+                )
+
+                ExposedDropdownMenu(
+                    expanded = modelMenuExpanded && geminiModelsState.models.isNotEmpty(),
+                    onDismissRequest = { modelMenuExpanded = false },
+                ) {
+                    geminiModelsState.models.forEach { modelInfo ->
+                        DropdownMenuItem(
+                            text = {
+                                Column {
+                                    Text(modelInfo.id, style = MaterialTheme.typography.bodyMedium)
+                                    val sub = buildString {
+                                        if (modelInfo.displayName != modelInfo.id) {
+                                            append(modelInfo.displayName)
+                                        }
+                                        if (modelInfo.inputTokenLimit > 0) {
+                                            if (isNotEmpty()) append(" • ")
+                                            append("in ${modelInfo.inputTokenLimit / 1000}k")
+                                        }
+                                    }
+                                    if (sub.isNotEmpty()) {
+                                        Text(
+                                            text = sub,
+                                            style = MaterialTheme.typography.labelSmall,
+                                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                        )
+                                    }
+                                }
+                            },
+                            onClick = {
+                                onConfigChange?.invoke(configs.copy(geminiModel = modelInfo.id))
+                                modelMenuExpanded = false
+                            },
+                        )
+                    }
+                }
+            }
+
+            FilledTonalButton(
+                onClick = { onFetchGeminiModels(configs.geminiApiKey) },
+                enabled = !geminiModelsState.isLoading && (configs.geminiApiKey.isNotBlank() || hasEnvKey),
+                modifier = Modifier.padding(top = 8.dp),
+            ) {
+                if (geminiModelsState.isLoading) {
+                    CircularProgressIndicator(
+                        modifier = Modifier.size(16.dp),
+                        strokeWidth = 2.dp,
+                    )
+                    Spacer(Modifier.width(6.dp))
+                }
+                Text(stringResource(Res.string.gemini_load_models))
+            }
+        }
+
+        Spacer(Modifier.height(16.dp))
 
         // Action buttons
         Row(
@@ -227,6 +406,8 @@ internal fun ConfigDialogContent(
     onConfigChange: (configs: Configs) -> Unit = {},
     onApply: (Configs) -> Unit = {},
     onDismissRequest: () -> Unit,
+    geminiModelsState: GeminiModelsState = GeminiModelsState(),
+    onFetchGeminiModels: (String) -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
     Surface(
@@ -239,6 +420,8 @@ internal fun ConfigDialogContent(
             onConfigChange = onConfigChange,
             onApply = onApply,
             onCancel = onDismissRequest,
+            geminiModelsState = geminiModelsState,
+            onFetchGeminiModels = onFetchGeminiModels,
         )
     }
 }

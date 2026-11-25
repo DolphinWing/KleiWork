@@ -21,6 +21,7 @@ data class AppState(
     val glossaryTerms: List<GlossaryTerm> = emptyList(),
     val diagnosticCount: Int = 0,
     val glossaryCount: Int = 0,
+    val geminiSessionStats: GeminiSessionStats = GeminiSessionStats(),
     val uiState: UiState = UiState(),
 )
 
@@ -35,9 +36,57 @@ data class UiState(
     val editorData: EditorData? = null,
     // Determines which overlay or dialog is currently active
     val dialogState: OniDialogState? = null,
+    val brigetteDesk: BrigetteDeskState = BrigetteDeskState(),
+    val geminiModelsState: GeminiModelsState = GeminiModelsState(),
     val windowPosition: WindowPosition = WindowPosition.PlatformDefault,
     val windowSize: DpSize = WindowConfig().toDpSize(),
     val darkTheme: Boolean? = null,
+)
+
+/**
+ * Cumulative Gemini API usage telemetry for the current application session.
+ */
+data class GeminiSessionStats(
+    val requestCount: Int = 0,
+    val totalPromptTokens: Int = 0,
+    val totalCandidateTokens: Int = 0,
+    val totalThoughtsTokens: Int = 0,
+    val totalTokens: Int = 0,
+    val totalElapsedMs: Long = 0L,
+) {
+    fun record(usage: GeminiUsage): GeminiSessionStats = copy(
+        requestCount = requestCount + 1,
+        totalPromptTokens = totalPromptTokens + usage.promptTokens,
+        totalCandidateTokens = totalCandidateTokens + usage.candidateTokens,
+        totalThoughtsTokens = totalThoughtsTokens + usage.thoughtsTokens,
+        totalTokens = totalTokens + usage.totalTokens,
+        totalElapsedMs = totalElapsedMs + usage.elapsedMs,
+    )
+}
+
+/**
+ * Transient state for loading available Gemini models in ConfigScreen.
+ */
+data class GeminiModelsState(
+    val isLoading: Boolean = false,
+    val models: List<GeminiModelInfo> = emptyList(),
+    val error: String? = null,
+)
+
+/**
+ * Transient overlay state for the BrigetteDesk AI translation assistant.
+ */
+data class BrigetteDeskState(
+    val visible: Boolean = false,
+    val entryKey: String = "",
+    val contextOptions: PromptContextOptions = PromptContextOptions(),
+    val contextSnapshot: PromptContextSnapshot? = null,
+    val builtPromptPreview: String = "",
+    val isLoading: Boolean = false,
+    val startedAtMs: Long = 0L,
+    val result: GeminiTranslationResult? = null,
+    val selectedOptionIndex: Int = 0,
+    val error: GeminiError? = null,
 )
 
 /**

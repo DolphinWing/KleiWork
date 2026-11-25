@@ -16,6 +16,8 @@ object Incs {
     const val KEY_DARK_THEME = "darkTheme"
     const val KEY_AUTO_SAVE_ENABLED = "autoSaveEnabled"
     const val KEY_AUTO_SAVE_INTERVAL = "autoSaveInterval"
+    const val KEY_GEMINI_API_KEY = "geminiApiKey"
+    const val KEY_GEMINI_MODEL = "geminiModel"
 }
 
 /**

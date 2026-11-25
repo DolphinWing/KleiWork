@@ -37,6 +37,14 @@
     <string name="draft_path">Draft path (Read-only)</string>
     <string name="label_auto_save">Enable Auto-save (Idle)</string>
     <string name="label_auto_save_interval">Interval %1$d minutes</string>
+    <string name="gemini_settings_title">BrigetteDesk (Gemini AI)</string>
+    <string name="gemini_api_key">Gemini API Key</string>
+    <string name="gemini_api_key_hint_env_active">Leave blank to use GEMINI_API_KEY environment variable</string>
+    <string name="gemini_api_key_hint">Optional; can also be supplied via GEMINI_API_KEY</string>
+    <string name="gemini_model_id">Gemini Model ID</string>
+    <string name="gemini_load_models">Load Models</string>
+    <string name="gemini_models_loaded">Loaded %1$d available models; click to select</string>
+    <string name="tooltip_toggle_api_key_visibility">Show/Hide API Key</string>
 
     <!-- Messages & Dialogs -->
     <string name="status_loading">Loading…</string>

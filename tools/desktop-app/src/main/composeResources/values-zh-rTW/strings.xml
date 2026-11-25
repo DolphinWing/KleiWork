@@ -37,6 +37,14 @@
     <string name="draft_path">草稿存放路徑 (唯讀)</string>
     <string name="label_auto_save">啟動自動暫存 (閒置觸發)</string>
     <string name="label_auto_save_interval">閒置時間 %1$d 分鐘</string>
+    <string name="gemini_settings_title">BrigetteDesk (Gemini AI)</string>
+    <string name="gemini_api_key">Gemini API Key</string>
+    <string name="gemini_api_key_hint_env_active">留空時將自動採用環境變數 GEMINI_API_KEY</string>
+    <string name="gemini_api_key_hint">可留空並改由環境變數 GEMINI_API_KEY 提供</string>
+    <string name="gemini_model_id">Gemini 模型 ID</string>
+    <string name="gemini_load_models">載入模型</string>
+    <string name="gemini_models_loaded">已載入 %1$d 個可用模型，點此展開選取</string>
+    <string name="tooltip_toggle_api_key_visibility">顯示／隱藏 API Key</string>
 
     <!-- Messages & Dialogs -->
     <string name="status_loading">載入中…</string>

@@ -38,6 +38,8 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
 
     private var helper: PoHelper? = null
     private var textRefinery: TextRefinery? = null
+    private val geminiClient = GeminiClient()
+    private var cachedSystemPrompt: String? = null
 
     // A mutable state for windowConfig to be used by window state remembering
     private val _windowConfig = mutableStateOf(WindowConfig())
@@ -47,6 +49,9 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     private val ioMutex = Mutex()
     private var autoClearJob: Job? = null
     private var autoSaveJob: Job? = null
+    private var aiRequestJob: Job? = null
+    private var modelListJob: Job? = null
+    private val recentTranslations = ArrayDeque<RecentTranslationContext>()
 
     init {
         scope.launch {
@@ -94,6 +99,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                     _state.update { it.copy(configs = event.configs) }
                 }
                 is AppEvent.Config.Saved -> {
+                    modelListJob?.cancel()
                     val oldConfigs = state.value.configs
                     val newConfigs = event.configs
                     _state.update { it.copy(configs = newConfigs) }
@@ -109,9 +115,10 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                     saveConfig(newConfigs, shouldReload = pathChanged)
                     updateUiState { it.copy(dialogState = null) }
                 }
+                is AppEvent.Config.FetchGeminiModels -> fetchGeminiModels(event.apiKey)
 
                 // Editor
-                is AppEvent.Editor.Select -> loadEditorData(event.entry)
+                is AppEvent.Editor.Select -> onSelectEditorEntry(event.entry)
                 is AppEvent.Editor.Save -> edit(event.entry.key, event.newText)
                 is AppEvent.Editor.SmartCopyError -> SnackbarManager.showMessage(event.message)
 
@@ -139,6 +146,9 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                     scheduleAutoSave()
                 }
 
+                // BrigetteDesk AI Assistant
+                is AppEvent.Brigette -> onBrigetteEvent(event)
+
                 // UI & System
                 is AppEvent.Ui -> onUiEvent(event)
             }
@@ -148,7 +158,12 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
     private suspend fun onUiEvent(event: AppEvent.Ui) {
         when (event) {
             is AppEvent.Ui.ShowConfig ->
-                updateUiState { it.copy(dialogState = OniDialogState.ConfigDialog(state.value.configs)) }
+                updateUiState {
+                    it.copy(
+                        dialogState = OniDialogState.ConfigDialog(state.value.configs),
+                        geminiModelsState = it.geminiModelsState.copy(error = null),
+                    )
+                }
 
             is AppEvent.Ui.ShowDebugSaveDialog -> {
                 val save = requestSaveData()
@@ -350,8 +365,272 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
 
     private suspend fun edit(key: String, value: String) {
         helper?.update(key, value)
+        recordRecentTranslation(key, value)
         refreshDataSource()
         scheduleAutoSave()
+    }
+
+    private fun recordRecentTranslation(key: String, value: String) {
+        val cleanKey = key.trim('"')
+        val sourceText = helper?.sourceEntry(key)?.msgId() ?: helper?.entry(key)?.msgId() ?: ""
+        if (cleanKey.isBlank() || value.isBlank() || value == sourceText) return
+
+        recentTranslations.removeAll { it.key == cleanKey }
+        recentTranslations.addFirst(
+            RecentTranslationContext(
+                key = cleanKey,
+                sourceText = sourceText,
+                translatedText = value,
+            )
+        )
+        while (recentTranslations.size > PromptComposer.DEFAULT_MAX_RECENT) {
+            recentTranslations.removeLast()
+        }
+    }
+
+    private fun onSelectEditorEntry(entry: PoEntry?) {
+        val targetKey = entry?.key().orEmpty()
+        val currentDesk = state.value.uiState.brigetteDesk
+        if (currentDesk.entryKey.isNotBlank() && currentDesk.entryKey != targetKey) {
+            aiRequestJob?.cancel()
+            updateUiState {
+                it.copy(
+                    brigetteDesk = BrigetteDeskState(contextOptions = it.brigetteDesk.contextOptions)
+                )
+            }
+        }
+        loadEditorData(entry)
+    }
+
+    private fun fetchGeminiModels(rawApiKey: String) {
+        modelListJob?.cancel()
+        val effectiveKey = rawApiKey.trim().ifBlank { state.value.configs.effectiveGeminiApiKey() }
+        updateUiState {
+            it.copy(geminiModelsState = it.geminiModelsState.copy(isLoading = true, error = null))
+        }
+        modelListJob = scope.launch {
+            val response = withContext(Dispatchers.IO) {
+                geminiClient.listModels(effectiveKey)
+            }
+            when (response) {
+                is GeminiModelListResponse.Success -> {
+                    updateUiState {
+                        it.copy(
+                            geminiModelsState = GeminiModelsState(
+                                isLoading = false,
+                                models = response.models,
+                                error = null,
+                            )
+                        )
+                    }
+                    helper?.log("Loaded ${response.models.size} Gemini models.")
+                }
+
+                is GeminiModelListResponse.Failure -> {
+                    updateUiState {
+                        it.copy(
+                            geminiModelsState = it.geminiModelsState.copy(
+                                isLoading = false,
+                                error = response.error.message,
+                            )
+                        )
+                    }
+                    helper?.log("Failed to load Gemini models: ${response.error.message}", LogType.Warning)
+                }
+            }
+        }
+    }
+
+    private suspend fun loadSystemPrompt(): String {
+        cachedSystemPrompt?.let { return it }
+        val loaded = withContext(Dispatchers.IO) {
+            Res.readBytes(PromptComposer.SYSTEM_PROMPT_RESOURCE).decodeToString()
+        }
+        cachedSystemPrompt = loaded
+        return loaded
+    }
+
+    private suspend fun onBrigetteEvent(event: AppEvent.Brigette) {
+        when (event) {
+            is AppEvent.Brigette.Request -> {
+                aiRequestJob?.cancel()
+                val targetKey = event.entry.target.key()
+                val options = event.optionsOverride ?: state.value.uiState.brigetteDesk.contextOptions
+                val systemPrompt = try {
+                    loadSystemPrompt()
+                } catch (e: Exception) {
+                    updateUiState {
+                        it.copy(
+                            brigetteDesk = it.brigetteDesk.copy(
+                                visible = true,
+                                entryKey = targetKey,
+                                contextOptions = options,
+                                isLoading = false,
+                                error = GeminiError.ParseError("Failed to load system prompt: ${e.message}"),
+                            )
+                        )
+                    }
+                    return
+                }
+
+                val recentSnapshot = recentTranslations.toList()
+                val allEntries = helper?.allEntries().orEmpty()
+                val glossaryTerms = state.value.glossaryTerms
+                val brief = PromptComposer.compose(
+                    entry = event.entry,
+                    systemInstruction = systemPrompt,
+                    glossaryTerms = glossaryTerms,
+                    allEntries = allEntries,
+                    chsLookup = { key -> helper?.chsEntry(key)?.msgStr() },
+                    recentTranslations = recentSnapshot,
+                    options = options,
+                )
+
+                val configs = state.value.configs
+                val effectiveKey = configs.effectiveGeminiApiKey()
+                val model = configs.geminiModel.trim()
+
+                if (effectiveKey.isBlank()) {
+                    updateUiState {
+                        it.copy(
+                            brigetteDesk = it.brigetteDesk.copy(
+                                visible = true,
+                                entryKey = targetKey,
+                                contextOptions = options,
+                                contextSnapshot = brief.snapshot,
+                                builtPromptPreview = brief.userPrompt,
+                                isLoading = false,
+                                result = null,
+                                error = GeminiError.MissingApiKey(),
+                            )
+                        )
+                    }
+                    return
+                }
+
+                if (model.isBlank()) {
+                    updateUiState {
+                        it.copy(
+                            brigetteDesk = it.brigetteDesk.copy(
+                                visible = true,
+                                entryKey = targetKey,
+                                contextOptions = options,
+                                contextSnapshot = brief.snapshot,
+                                builtPromptPreview = brief.userPrompt,
+                                isLoading = false,
+                                result = null,
+                                error = GeminiError.ModelNotFound("Gemini model ID is not configured.", 404),
+                            )
+                        )
+                    }
+                    return
+                }
+
+                updateUiState {
+                    it.copy(
+                        brigetteDesk = it.brigetteDesk.copy(
+                            visible = true,
+                            entryKey = targetKey,
+                            contextOptions = options,
+                            contextSnapshot = brief.snapshot,
+                            builtPromptPreview = brief.userPrompt,
+                            isLoading = true,
+                            startedAtMs = System.currentTimeMillis(),
+                            result = null,
+                            selectedOptionIndex = 0,
+                            error = null,
+                        )
+                    )
+                }
+
+                aiRequestJob = scope.launch {
+                    val response = withContext(Dispatchers.IO) {
+                        geminiClient.generateTranslation(
+                            brief = brief,
+                            apiKey = effectiveKey,
+                            model = model,
+                        )
+                    }
+                    val latestDesk = state.value.uiState.brigetteDesk
+                    if (latestDesk.entryKey != targetKey || !latestDesk.visible) return@launch
+
+                    when (response) {
+                        is GeminiResponse.Success -> {
+                            val res = response.result
+                            _state.update {
+                                it.copy(
+                                    geminiSessionStats = it.geminiSessionStats.record(res.usage),
+                                    uiState = it.uiState.copy(
+                                        brigetteDesk = it.uiState.brigetteDesk.copy(
+                                            isLoading = false,
+                                            result = res,
+                                            selectedOptionIndex = res.payload.recommendedIndex,
+                                            error = null,
+                                        )
+                                    )
+                                )
+                            }
+                            helper?.log(
+                                "BrigetteDesk [${res.usage.modelName}] $targetKey: ${res.usage.elapsedMs}ms, ${res.usage.totalTokens} tokens"
+                            )
+                        }
+
+                        is GeminiResponse.Failure -> {
+                            updateUiState {
+                                it.copy(
+                                    brigetteDesk = it.brigetteDesk.copy(
+                                        isLoading = false,
+                                        error = response.error,
+                                    )
+                                )
+                            }
+                            helper?.log(
+                                "BrigetteDesk failed for $targetKey: ${response.error.message}",
+                                LogType.Warning,
+                            )
+                        }
+                    }
+                }
+            }
+
+            is AppEvent.Brigette.Cancel -> {
+                aiRequestJob?.cancel()
+                updateUiState {
+                    it.copy(
+                        brigetteDesk = it.brigetteDesk.copy(
+                            isLoading = false,
+                            error = GeminiError.Cancelled(),
+                        )
+                    )
+                }
+            }
+
+            is AppEvent.Brigette.UpdateContextOptions -> {
+                updateUiState {
+                    it.copy(brigetteDesk = it.brigetteDesk.copy(contextOptions = event.options))
+                }
+            }
+
+            is AppEvent.Brigette.SelectOption -> {
+                updateUiState {
+                    it.copy(brigetteDesk = it.brigetteDesk.copy(selectedOptionIndex = event.index))
+                }
+            }
+
+            is AppEvent.Brigette.ApplyOption -> {
+                edit(event.entry.key, event.text)
+                updateUiState {
+                    it.copy(brigetteDesk = it.brigetteDesk.copy(visible = false, isLoading = false))
+                }
+            }
+
+            is AppEvent.Brigette.Dismiss -> {
+                aiRequestJob?.cancel()
+                updateUiState {
+                    it.copy(brigetteDesk = it.brigetteDesk.copy(visible = false, isLoading = false))
+                }
+            }
+        }
     }
 
     private fun scheduleAutoSave() {
