@@ -32,6 +32,7 @@ dependencies {
 
     // https://github.com/houbb/opencc4j
     implementation(libs.opencc4j)
+    implementation(libs.kotlinx.serialization.json)
 
     testImplementation(kotlin("test"))
 }

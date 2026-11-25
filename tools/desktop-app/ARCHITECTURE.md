@@ -28,6 +28,8 @@
 *   **關鍵函式庫**:
     *   `opencc4j`: 簡繁轉換核心。
     *   `kotlinx.coroutines`: 非同步任務處理。
+    *   `kotlinx-serialization-json`: 純 JSON AST 模式（`JsonObject` / `buildJsonObject`，免編譯外掛、零反射與零 `$$serializer` ProGuard 規則），供 Gemini API 通訊與穩定打包使用。
+    *   JDK `java.net.http.HttpClient`: 輕量非同步 HTTPS 客戶端。
     *   **Compose Resources**: 用於型別安全的多語系、圖片與字體管理。
 
 ---
@@ -202,7 +204,7 @@
 
 ### 4.8. 品質保證 (Testing)
 
-核心邏輯（如 `TagSensor`, `NisbetPeek` 解析層，以及 `PoHelper` 的多行解析與引號轉義機制）配備單元測試，確保複雜標籤語法與字串處理的穩健性。
+核心邏輯（如 `TagSensor`, `NisbetPeek` 解析層，`PoHelper` 的多行解析與引號轉義機制，以及 `PromptComposer` 與 `GeminiClient`）配備單元測試，確保複雜標籤語法、字串處理與 API 通訊的穩健性；實機連線測試另有 Opt-in Live Smoke Test（詳見第 4.14 節）。
 
 ### 4.9. 排版精煉與引號轉換 (Quote Refactoring & Display Standardization)
 
@@ -292,6 +294,28 @@
     * 當條目處於 `msgidChanged` 時自動注入 `oldSourceText` 與 `poText` 供模型做最小幅微調；所有 PO 字串比照 4.2 節空白保留政策，絕不 `.trim()` 並完整保留字面 `\n`。
     * 支援透過 `PromptContextOptions` 獨立開關「同組關聯詞條」與「近期譯文」。
 
+### 4.14. Gemini API 通訊層與實機驗證 (BrigetteDesk — Step 2: `GeminiClient`)
+
+為確保發佈打包（Release ProGuard）的穩定性並維持極簡依賴樹，系統透過 [`GeminiClient`](src/main/kotlin/dolphin/desktop/apps/onitranslator/model/GeminiClient.kt) 直接對接 Google AI Studio REST API：
+* **零反射序列化與輕量傳輸**：
+    * 採用 JDK 內建 `java.net.http.HttpClient` 搭配 `kotlinx-serialization-json` 純 JSON AST 解碼（免編譯器外掛、零反射與零 `$$serializer` 混淆風險），避免引入大型 SDK 的傳遞依賴。
+    * API Key 僅透過 `x-goog-api-key` HTTP Header 傳遞，並於所有錯誤訊息及原始 Body 紀錄中強制遮罩為 `[REDACTED]`。
+* **Structured Output 與 Thinking 過濾**：
+    * `generationConfig` 指定 `responseMimeType = "application/json"` 並強制附上 OpenAPI `responseSchema`，確保回傳固定結構（`matchedTerms`、`analysis`、`options`、`recommendedIndex`、`conclusion`）。
+    * 解析 `candidates[0].content.parts` 時自動過濾 `thought == true` 思考片段，並於 `recommendedIndex` 越界時自動鉗位。
+* **非同步取消與遙測**：
+    * 透過 `suspendCancellableCoroutine` 橋接 `HttpClient.sendAsync`，協程取消時立即呼叫 `future.cancel(true)` 中斷網路連線；同時提取 `usageMetadata`（含 `promptTokenCount`、`candidatesTokenCount`、`thoughtsTokenCount`、`totalTokenCount`）與毫秒耗時 `elapsedMs`。
+* **Opt-in 實機煙霧測試 (Live Smoke Test)**：
+    * [`GeminiClientTest`](src/test/kotlin/dolphin/desktop/apps/onitranslator/model/GeminiClientTest.kt) 內建 `testLiveSmokeAgainstAiStudio`，平時執行 `.\gradlew.bat test` 會透過 `Assumptions.assumeTrue` 自動跳過，不影響離線測試。
+    * 需針對 Free Tier 或付費模型做實機驗證時，於 PowerShell 設定環境變數後單獨執行：
+      ```powershell
+      $env:GEMINI_API_KEY="YOUR_AI_STUDIO_KEY"
+      $env:GEMINI_LIVE_TEST="true"
+      # 選用，預設為 gemini-2.5-flash
+      $env:GEMINI_MODEL="gemini-2.5-flash"
+      .\gradlew.bat test --tests "*GeminiClientTest.testLiveSmokeAgainstAiStudio*" --info
+      ```
+
 ---
 
 ## 5. 目錄結構 (Directory Structure)
@@ -299,7 +323,7 @@
 ```text
 src/main/kotlin/dolphin/desktop/apps/onitranslator/
 ├── app/          # 應用程式入口與全域 UI (Main, App, TopBar, BottomBar)
-├── model/        # 核心邏輯與資料模型 (ViewModel, PoHelper, PoEntry, GlossaryBank, GlossarySensor, TagSensor, LinguisticRules, PromptComposer)
+├── model/        # 核心邏輯與資料模型 (ViewModel, PoHelper, PoEntry, GlossaryBank, GlossarySensor, TagSensor, LinguisticRules, PromptComposer, GeminiClient)
 ├── ui/           # 主要 UI 畫面 (EntryBrowser, EntryEditor, ConfigScreen, NisbetPeek, DiagnosticVisualTransformation)
 ├── theme/        # Material 3 主題設定
 ├── widget/       # 共用 UI 元件
