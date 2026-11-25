@@ -279,6 +279,19 @@
       $$\text{quota} = \min(|source_i - target_i|,\, |source_b - target_b|)$$
     * 徹底杜絕舊版 Greedy 全域 Regex 導致候選數量暴增、一鍵套用反而改壞正確標籤的嚴重副作用。
 
+### 4.13. AI 翻譯輔助與 Prompt 引擎 (BrigetteDesk — Step 1: `PromptComposer`)
+
+為了在串接 Google AI Studio 時兼顧翻譯品質、術語一致性與 Free Tier Token 節制，系統將 Prompt 組裝抽離為純函式模組 [`PromptComposer`](src/main/kotlin/dolphin/desktop/apps/onitranslator/model/PromptComposer.kt)：
+* **API 專用系統指令 (`brigette_system_prompt.md`)**：
+    * 提煉自 `brigette-oni-localization.md`，完整保留 Brigette Aurora 人格、六項在地化鐵律（術語鎖定、標籤完整保留、台灣慣用語、標點與直角引號規範、角色名保留英文、純淨 PO 輸出）與「不以問句結尾」規範，同時移除網頁 Gem 專屬的 Google Drive / Skills 工具指令並定義 Structured JSON 輸出契約。
+* **動態單條術語檢索 (`extractRelevantGlossary`)**：
+    * 嚴禁全量傳送 `glossary.tsv`。採兩階段過濾：優先解析 `<link="ID">` 精準命中規範詞，再保護所有 XML 樣式標籤後以 word-boundary 掃描純文字（依英文長度降序、上限 25 條）。
+* **正反序無關之同組上下文 (`findSiblingEntries`)**：
+    * 依 `msgctxt` 父層前綴（至少三層結構）自動撈取直接兄弟條目（依 `.NAME` / `.TITLE` / `.DESC` / `.EFFECT` / `.TOOLTIP` 優先排序），無論譯者先翻標題或先翻說明皆可維持稱呼與語氣一致。
+* **差異與歷史保留 (`compose`)**：
+    * 當條目處於 `msgidChanged` 時自動注入 `oldSourceText` 與 `poText` 供模型做最小幅微調；所有 PO 字串比照 4.2 節空白保留政策，絕不 `.trim()` 並完整保留字面 `\n`。
+    * 支援透過 `PromptContextOptions` 獨立開關「同組關聯詞條」與「近期譯文」。
+
 ---
 
 ## 5. 目錄結構 (Directory Structure)
@@ -286,7 +299,7 @@
 ```text
 src/main/kotlin/dolphin/desktop/apps/onitranslator/
 ├── app/          # 應用程式入口與全域 UI (Main, App, TopBar, BottomBar)
-├── model/        # 核心邏輯與資料模型 (ViewModel, PoHelper, PoEntry, GlossaryBank, GlossarySensor, TagSensor, LinguisticRules)
+├── model/        # 核心邏輯與資料模型 (ViewModel, PoHelper, PoEntry, GlossaryBank, GlossarySensor, TagSensor, LinguisticRules, PromptComposer)
 ├── ui/           # 主要 UI 畫面 (EntryBrowser, EntryEditor, ConfigScreen, NisbetPeek, DiagnosticVisualTransformation)
 ├── theme/        # Material 3 主題設定
 ├── widget/       # 共用 UI 元件

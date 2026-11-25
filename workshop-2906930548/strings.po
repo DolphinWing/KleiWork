@@ -83943,7 +83943,7 @@ msgstr "持續"
 #. STRINGS.UI.CRASHSCREEN.BODY
 msgctxt "STRINGS.UI.CRASHSCREEN.BODY"
 msgid "Help! A black hole ate my game!"
-msgstr "幫幫我！黑洞吃了我的遊戲！"
+msgstr "救命啊！我的遊戲被黑洞吞掉啦！"
 
 #. STRINGS.UI.CRASHSCREEN.CONTINUEBUTTON
 msgctxt "STRINGS.UI.CRASHSCREEN.CONTINUEBUTTON"
