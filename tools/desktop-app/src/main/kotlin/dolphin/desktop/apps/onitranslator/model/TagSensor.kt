@@ -9,8 +9,18 @@ import dolphin.desktop.apps.onitranslator.ui.toOniTokens
  */
 enum class TagIssueType {
     STYLE_MISMATCH,   // e.g. <b>...</b> instead of <i>...</i>
-    MISSING_TAG_WRAP, // e.g. unlinked term that source has <link> for
+    MISSING_TAG_WRAP, // e.g. unlinked term or missing <style="..."> wrap present in source
+    NEWLINE_MISMATCH, // e.g. \n <-> \n\n run length mismatch or excess \n in target
 }
+
+/**
+ * Represents a contiguous block of one or more consecutive line breaks in PO text.
+ */
+data class NewlineRun(
+    val range: IntRange,
+    val count: Int,
+    val raw: String,
+)
 
 /**
  * Represents a localized tag candidate span in the target text that can be repaired.
@@ -30,31 +40,50 @@ object TagSensor {
     const val NEWLINE_TOKEN = "\\n"
 
     /**
+     * Finds contiguous blocks of consecutive line breaks in [text], treating both literal `\n`
+     * escapes and raw `\r\n` / `\r` / `\n` characters equivalently.
+     */
+    fun findNewlineRuns(text: String): List<NewlineRun> {
+        if (text.isEmpty()) return emptyList()
+        val runs = mutableListOf<NewlineRun>()
+        var i = 0
+        while (i < text.length) {
+            var runStart = -1
+            var runEnd = -1
+            var runCount = 0
+            while (i < text.length) {
+                val tokenLen = when {
+                    text[i] == '\r' && i + 1 < text.length && text[i + 1] == '\n' -> 2
+                    text[i] == '\r' || text[i] == '\n' -> 1
+                    text[i] == '\\' && i + 1 < text.length && text[i + 1] == 'n' -> 2
+                    else -> 0
+                }
+                if (tokenLen == 0) break
+                if (runStart < 0) runStart = i
+                runEnd = i + tokenLen - 1
+                runCount++
+                i += tokenLen
+            }
+            if (runCount > 0) {
+                runs.add(
+                    NewlineRun(
+                        range = runStart..runEnd,
+                        count = runCount,
+                        raw = text.substring(runStart, runEnd + 1),
+                    )
+                )
+            } else {
+                i++
+            }
+        }
+        return runs
+    }
+
+    /**
      * Counts logical line breaks in [text], treating both literal `\n` escapes and
      * raw `\r\n` / `\r` / `\n` characters equivalently.
      */
-    fun countNewlines(text: String): Int {
-        if (text.isEmpty()) return 0
-        var count = 0
-        var i = 0
-        while (i < text.length) {
-            when (text[i]) {
-                '\r' -> {
-                    count++
-                    if (i + 1 < text.length && text[i + 1] == '\n') i++
-                }
-                '\n' -> count++
-                '\\' -> {
-                    if (i + 1 < text.length && text[i + 1] == 'n') {
-                        count++
-                        i++
-                    }
-                }
-            }
-            i++
-        }
-        return count
-    }
+    fun countNewlines(text: String): Int = findNewlineRuns(text).sumOf { it.count }
 
     /**
      * Counts the opening tags, dynamic tokens, and line breaks in a string.
@@ -162,7 +191,7 @@ object TagSensor {
                     text = tgt.text,
                     replacement = "<i>${tgt.inner}</i>",
                     issueType = TagIssueType.STYLE_MISMATCH,
-                    description = "對齊官方標籤: <b>...</b> ➜ <i>...</i>"
+                    description = "<b>...</b> ➜ <i>...</i>"
                 )
             }.filterNonOverlappingTagSpans()
         }
@@ -196,7 +225,7 @@ object TagSensor {
                     text = tgt.text,
                     replacement = "<b>${tgt.inner}</b>",
                     issueType = TagIssueType.STYLE_MISMATCH,
-                    description = "對齊官方標籤: <i>...</i> ➜ <b>...</b>"
+                    description = "<i>...</i> ➜ <b>...</b>"
                 )
             }.filterNonOverlappingTagSpans()
         }
@@ -205,7 +234,8 @@ object TagSensor {
     }
 
     /**
-     * Finds terms in target that were wrapped with <link> in source, but left unlinked in target.
+     * Finds terms in target that were wrapped with `<link>` in source, but left unlinked in target.
+     * Supports both unescaped (`"`) and PO-escaped (`\"`) link attributes.
      */
     fun findMissingWrapSpans(
         source: String,
@@ -213,15 +243,16 @@ object TagSensor {
         terms: List<GlossaryTerm>,
     ): List<TagCandidateSpan> {
         if (source.isEmpty() || target.isEmpty() || terms.isEmpty()) return emptyList()
-        val linkTagRegex = Regex("""<link="([^"]+)">([^<]+)</link>""", RegexOption.IGNORE_CASE)
+        val linkTagRegex = Regex("""<link\s*=\s*(\\*")([^\\">]+)\\*">([^<]+)</link>""", RegexOption.IGNORE_CASE)
         val sourceLinks = linkTagRegex.findAll(source).toList()
         if (sourceLinks.isEmpty()) return emptyList()
 
         val result = mutableListOf<TagCandidateSpan>()
 
         for (match in sourceLinks) {
-            val linkTarget = match.groupValues[1]
-            val linkText = match.groupValues[2]
+            val quote = match.groupValues[1]
+            val linkTarget = match.groupValues[2]
+            val linkText = match.groupValues[3]
 
             val matchedTerm = terms.firstOrNull { term ->
                 term.key.equals(linkTarget, ignoreCase = true) ||
@@ -233,26 +264,200 @@ object TagSensor {
             if (canonical.isEmpty()) continue
 
             // If target already contains this link tag around the term, skip
-            val existingLinkRegex = Regex("""<link="(?i)${Regex.escape(linkTarget)}">\s*${Regex.escape(canonical)}\s*</link>""")
+            val existingLinkRegex = Regex("""<link\s*=\s*\\*"(?i)${Regex.escape(linkTarget)}\\*">\s*${Regex.escape(canonical)}\s*</link>""")
             if (existingLinkRegex.containsMatchIn(target)) continue
 
             // Check if canonical exists in target outside tags
             val safeRanges = findSafePlainTextRanges(target, canonical)
             for (range in safeRanges) {
-                val wrapReplacement = """<link="$linkTarget">$canonical</link>"""
+                val wrapReplacement = "<link=$quote$linkTarget$quote>$canonical</link>"
                 result.add(
                     TagCandidateSpan(
                         range = range,
                         text = canonical,
                         replacement = wrapReplacement,
                         issueType = TagIssueType.MISSING_TAG_WRAP,
-                        description = "自動包裹: <link=\"$linkTarget\">$canonical</link>"
+                        description = "+ <link=\"$linkTarget\">$canonical</link>"
                     )
                 )
             }
         }
 
         return result.filterNonOverlappingTagSpans()
+    }
+
+    /**
+     * Finds plain-text substrings in [target] that correspond to `<style="...">` wrapped spans in [source]
+     * when the target is missing those style wrappers. Uses conservative matching via glossary terms,
+     * [chsReference] same-attribute `<style>` values (via OpenCC), and literal text matching.
+     */
+    fun findMissingStyleWrapSpans(
+        source: String,
+        target: String,
+        terms: List<GlossaryTerm>,
+        chsReference: String? = null,
+    ): List<TagCandidateSpan> {
+        if (source.isEmpty() || target.isEmpty() || !source.contains("<style", ignoreCase = true)) {
+            return emptyList()
+        }
+        val styleTagRegex = Regex("""<style\s*=\s*(\\*")([^\\">]+)\\*">([^<]+)</style>""", RegexOption.IGNORE_CASE)
+        val sourceStyles = styleTagRegex.findAll(source).toList()
+        if (sourceStyles.isEmpty()) return emptyList()
+
+        val sourceCountsByAttr = sourceStyles.groupingBy { it.groupValues[2].lowercase() }.eachCount()
+        val targetCountsByAttr = styleTagRegex.findAll(target)
+            .groupingBy { it.groupValues[2].lowercase() }
+            .eachCount()
+        val remainingQuota = sourceCountsByAttr.mapValues { (attr, srcCount) ->
+            (srcCount - (targetCountsByAttr[attr] ?: 0)).coerceAtLeast(0)
+        }.toMutableMap()
+        if (remainingQuota.values.none { it > 0 }) return emptyList()
+
+        val chsByAttr = if (!chsReference.isNullOrBlank() && chsReference.contains("<style", ignoreCase = true)) {
+            styleTagRegex.findAll(chsReference).groupBy(
+                keySelector = { it.groupValues[2].lowercase() },
+                valueTransform = { it.groupValues[3].trim() },
+            )
+        } else {
+            emptyMap()
+        }
+
+        val result = mutableListOf<TagCandidateSpan>()
+        val claimedRanges = mutableListOf<IntRange>()
+        val seenOrdinalByAttr = mutableMapOf<String, Int>()
+
+        for (match in sourceStyles) {
+            val quote = match.groupValues[1]
+            val styleAttr = match.groupValues[2]
+            val attrLower = styleAttr.lowercase()
+            val quota = remainingQuota[attrLower] ?: 0
+            if (quota <= 0) continue
+
+            val ordinal = seenOrdinalByAttr[attrLower] ?: 0
+            seenOrdinalByAttr[attrLower] = ordinal + 1
+
+            val innerEng = match.groupValues[3].trim()
+            if (innerEng.isEmpty()) continue
+
+            val candidates = linkedSetOf<String>()
+            val matchedTerm = terms.firstOrNull { it.english.equals(innerEng, ignoreCase = true) }
+            if (matchedTerm != null && matchedTerm.canonicalCht.isNotBlank()) {
+                candidates.add(matchedTerm.canonicalCht)
+            }
+            val chsList = chsByAttr[attrLower].orEmpty()
+            val orderedChs = buildList {
+                chsList.getOrNull(ordinal)?.let { add(it) }
+                chsList.forEachIndexed { idx, s -> if (idx != ordinal) add(s) }
+            }
+            for (chsInner in orderedChs) {
+                if (chsInner.isBlank()) continue
+                val tcVariant = TextRefinery.sc2tc(chsInner).trim()
+                if (tcVariant.isNotEmpty()) candidates.add(tcVariant)
+                candidates.add(chsInner)
+            }
+            candidates.add(innerEng)
+
+            var selectedRanges: List<IntRange> = emptyList()
+            var selectedText = ""
+            for (candidate in candidates) {
+                val safe = findSafePlainTextRanges(target, candidate).filter { r ->
+                    claimedRanges.none { c -> r.first <= c.last && r.last >= c.first }
+                }
+                if (safe.isNotEmpty()) {
+                    selectedRanges = safe
+                    selectedText = candidate
+                    break
+                }
+            }
+
+            if (selectedRanges.isNotEmpty()) {
+                val toEmit = selectedRanges.take(quota)
+                for (r in toEmit) {
+                    claimedRanges.add(r)
+                    result.add(
+                        TagCandidateSpan(
+                            range = r,
+                            text = selectedText,
+                            replacement = "<style=$quote$styleAttr$quote>$selectedText</style>",
+                            issueType = TagIssueType.MISSING_TAG_WRAP,
+                            description = "+ <style=\"$styleAttr\">$selectedText</style>",
+                        )
+                    )
+                }
+                remainingQuota[attrLower] = quota - toEmit.size
+            }
+        }
+
+        return result.filterNonOverlappingTagSpans()
+    }
+
+    /**
+     * Builds actionable newline repair candidates when source and target newline runs differ.
+     * - Case A (same number of newline runs, different run lengths such as `\n` vs `\n\n`): align runs 1:1.
+     * - Case B (target has more total newlines than source): emit per-run removal candidates without batch delete.
+     * - Case C (target has fewer runs than source): return empty so valid breaks are never offered for deletion.
+     */
+    fun findNewlineSpans(source: String, target: String): List<TagCandidateSpan> {
+        val sourceRuns = findNewlineRuns(source)
+        val targetRuns = findNewlineRuns(target)
+        val sourceTotal = sourceRuns.sumOf { it.count }
+        val targetTotal = targetRuns.sumOf { it.count }
+
+        if (sourceTotal == targetTotal && sourceRuns.map { it.count } == targetRuns.map { it.count }) {
+            return emptyList()
+        }
+
+        // Case A: Equal run count with individual run-length mismatch (e.g. \n <-> \n\n)
+        if (sourceRuns.isNotEmpty() && sourceRuns.size == targetRuns.size) {
+            return targetRuns.mapIndexedNotNull { idx, tgtRun ->
+                val expectedCount = sourceRuns[idx].count
+                if (tgtRun.count == expectedCount) {
+                    null
+                } else {
+                    val replacement = "\\n".repeat(expectedCount)
+                    val actualDisplay = "\\n".repeat(tgtRun.count)
+                    TagCandidateSpan(
+                        range = tgtRun.range,
+                        text = tgtRun.raw,
+                        replacement = replacement,
+                        issueType = TagIssueType.NEWLINE_MISMATCH,
+                        description = "#${idx + 1}: $actualDisplay ➜ $replacement",
+                    )
+                }
+            }
+        }
+
+        // Case B: Target has excess newlines compared to source -> offer individual removal candidates
+        if (targetTotal > sourceTotal && targetRuns.isNotEmpty()) {
+            return targetRuns.mapIndexed { idx, tgtRun ->
+                val actualDisplay = "\\n".repeat(tgtRun.count)
+                TagCandidateSpan(
+                    range = tgtRun.range,
+                    text = tgtRun.raw,
+                    replacement = "",
+                    issueType = TagIssueType.NEWLINE_MISMATCH,
+                    description = "#${idx + 1}: − $actualDisplay",
+                )
+            }
+        }
+
+        // Case C: Missing entire newline run in target -> highlight via dual-pane UI without destructive chips
+        return emptyList()
+    }
+
+    /**
+     * Returns non-overlapping ranges in [text] for complete `<tag>...</tag>` elements whose names
+     * appear in [tagNames] (e.g. `"link"`, `"style"`), used to highlight missing wrappers in the Source pane.
+     */
+    fun findTagRangesByNames(text: String, tagNames: Set<String>): List<IntRange> {
+        if (text.isEmpty() || tagNames.isEmpty()) return emptyList()
+        val ranges = mutableListOf<IntRange>()
+        for (name in tagNames) {
+            val escaped = Regex.escape(name)
+            val regex = Regex("""<$escaped\b[^>]*>.*?</$escaped>""", setOf(RegexOption.IGNORE_CASE, RegexOption.DOT_MATCHES_ALL))
+            regex.findAll(text).forEach { ranges.add(it.range) }
+        }
+        return ranges.sortedBy { it.first }
     }
 
     private fun findSafePlainTextRanges(text: String, targetSubstring: String): List<IntRange> {
@@ -279,9 +484,12 @@ object TagSensor {
             if (inAngle && (i in range)) return true
             if (text[i] == '>') inAngle = false
         }
-        // Also check if range is already enclosed inside a <link...>...</link>
-        val linkRegex = Regex("""<link="[^"]*">(.*?)</link>""", RegexOption.IGNORE_CASE)
-        for (m in linkRegex.findAll(text)) {
+        // Also check if range is already enclosed inside <link...>...</link> or <style...>...</style>
+        val wrappedRegex = Regex(
+            """<(?:link|style)\s*=\s*\\*"[^"]*\\*">(.*?)</(?:link|style)>""",
+            setOf(RegexOption.IGNORE_CASE, RegexOption.DOT_MATCHES_ALL),
+        )
+        for (m in wrappedRegex.findAll(text)) {
             if (range.first >= m.range.first && range.last <= m.range.last) {
                 return true
             }
@@ -290,16 +498,19 @@ object TagSensor {
     }
 
     /**
-     * Unified search for all tag candidate spans (style mismatches & missing wraps).
+     * Unified search for all tag candidate spans (style mismatches, missing link/style wraps, & newlines).
      */
     fun findCandidateSpans(
         source: String,
         target: String,
         terms: List<GlossaryTerm> = emptyList(),
+        chsReference: String? = null,
     ): List<TagCandidateSpan> {
         val styles = findStyleMismatchSpans(source, target)
-        val wraps = findMissingWrapSpans(source, target, terms)
-        return (styles + wraps).filterNonOverlappingTagSpans()
+        val linkWraps = findMissingWrapSpans(source, target, terms)
+        val styleWraps = findMissingStyleWrapSpans(source, target, terms, chsReference)
+        val newlines = findNewlineSpans(source, target)
+        return (styles + linkWraps + styleWraps + newlines).filterNonOverlappingTagSpans()
     }
 
     /**

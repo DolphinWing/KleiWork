@@ -213,6 +213,22 @@ fun String.toOniTokens(): List<OniToken> {
     return tokens
 }
 
+private val KNOWN_ONI_TAGS = setOf(
+    "b",
+    "i",
+    "link",
+    "sub",
+    "sup",
+    "style",
+    "color",
+    "alpha",
+    "size",
+    "smallcaps",
+    "indent",
+)
+
+private val ALPHA_HEX_REGEX = Regex("""#([A-Fa-f0-9]{2})""")
+
 /**
  * The magic function that turns tokens into Nisbet's vision.
  */
@@ -221,7 +237,7 @@ fun String.toOniTokens(): List<OniToken> {
 fun String.peek(): AnnotatedString {
     val tokens = this.toOniTokens()
     val defaultAlpha = 0.6f
-    val tagStack = mutableListOf<String>()
+    val tagStack = mutableListOf<Pair<String, SpanStyle>>()
     val linkStarts = mutableListOf<Pair<Int, String>>()
 
     return buildAnnotatedString {
@@ -241,9 +257,25 @@ fun String.peek(): AnnotatedString {
                             addStringAnnotation(tag = "link", annotation = id, start = start, end = length)
                         }
                     }
-                    if (tagStack.isNotEmpty() && tagStack.last() == token.name) {
-                        tagStack.removeAt(tagStack.size - 1)
-                        pop()
+                    // Unity TMP has no </alpha> closing tag; </color> can close either <color> or <alpha>
+                    val matchIdx = if (token.name == "alpha") {
+                        -1
+                    } else {
+                        tagStack.indexOfLast { (name, _) ->
+                            if (token.name == "color") (name == "color" || name == "alpha") else name == token.name
+                        }
+                    }
+                    if (matchIdx >= 0) {
+                        val popCount = tagStack.size - matchIdx
+                        val reopen = tagStack.subList(matchIdx + 1, tagStack.size).toList()
+                        repeat(popCount) { pop() }
+                        while (tagStack.size > matchIdx) {
+                            tagStack.removeAt(tagStack.size - 1)
+                        }
+                        reopen.forEach { (name, style) ->
+                            tagStack.add(name to style)
+                            pushStyle(style)
+                        }
                     } else {
                         pushStyle(SpanStyle(color = OniColor.Warning.copy(alpha = 0.5f), fontSize = 8.sp))
                         append("</${token.name}>")
@@ -290,7 +322,11 @@ fun String.peek(): AnnotatedString {
                             } else SpanStyle(color = OniColor.Highlight)
                         }
 
-                        "alpha" -> SpanStyle(color = MaterialTheme.colorScheme.onSurface.copy(alpha = defaultAlpha))
+                        "alpha" -> {
+                            val hexAlpha = ALPHA_HEX_REGEX.find(token.raw)?.groupValues?.get(1)?.toIntOrNull(16)
+                            val resolvedAlpha = if (hexAlpha != null) (hexAlpha / 255f).coerceIn(0f, 1f) else defaultAlpha
+                            SpanStyle(color = MaterialTheme.colorScheme.onSurface.copy(alpha = resolvedAlpha))
+                        }
                         "size" -> SpanStyle(fontSize = 12.sp)
                         "smallcaps" -> SpanStyle(fontFeatureSettings = "smcp")
                         "indent" -> SpanStyle(baselineShift = BaselineShift.None) // Indent is hard to simulate in SpanStyle, but we keep it safe
@@ -303,21 +339,8 @@ fun String.peek(): AnnotatedString {
                         }
                     }
 
-                    if (token.name in listOf(
-                            "b",
-                            "i",
-                            "link",
-                            "sub",
-                            "sup",
-                            "style",
-                            "color",
-                            "alpha",
-                            "size",
-                            "smallcaps",
-                            "indent"
-                        )
-                    ) {
-                        tagStack.add(token.name)
+                    if (token.name in KNOWN_ONI_TAGS) {
+                        tagStack.add(token.name to style)
                         pushStyle(style)
                     } else {
                         pushStyle(style)
@@ -349,29 +372,60 @@ fun String.shouldPeek(diagnostic: TagDiagnostic? = null): Boolean {
 }
 
 /**
- * Detects if the string has ONI syntax errors.
+ * Detects if the string has ONI / Unity TextMeshPro rich-text syntax errors.
+ *
+ * Follows Unity TextMeshPro semantics rather than strict XML LIFO nesting:
+ * - Angle-bracketed emails containing `@` (e.g. `<msklodowska@gravitas.nova>`) are already treated as
+ *   [OniToken.Plain] by [toOniTokens].
+ * - `<alpha>` is a TMP color-channel state tag with no `</alpha>` closing tag: `</alpha>` is always rejected,
+ *   while `</color>` may close either `<color>` or `<alpha>` (one-way compatibility) and `<alpha=#AA>...<alpha=#FF>`
+ *   state overrides do not require a closing tag.
+ * - Independent per-tag depth tracking allows legal TMP crossed nesting (e.g. `<size=12><alpha=#AA>...</size></color>`,
+ *   `<i><smallcaps>...</i>...</smallcaps>`), while still flagging unknown tags, unmatched closings, and unclosed tags.
  */
 fun String.hasOniSyntaxError(): Boolean {
     val tokens = this.toOniTokens()
-    val tagStack = mutableListOf<String>()
-    val knownTags = listOf("b", "i", "link", "sub", "sup", "style", "color", "alpha", "size", "smallcaps", "indent")
+    var colorDepth = 0
+    var alphaDepth = 0
+    val tagDepths = mutableMapOf<String, Int>()
 
-    tokens.forEach { token ->
+    for (token in tokens) {
         when (token) {
             is OniToken.OpeningTag -> {
-                if (token.name !in knownTags) return true
-                tagStack.add(token.name)
+                if (token.name !in KNOWN_ONI_TAGS) return true
+                when (token.name) {
+                    "color" -> colorDepth++
+                    "alpha" -> alphaDepth++
+                    else -> tagDepths[token.name] = (tagDepths[token.name] ?: 0) + 1
+                }
             }
 
             is OniToken.ClosingTag -> {
-                if (tagStack.isEmpty() || tagStack.last() != token.name) return true
-                tagStack.removeAt(tagStack.size - 1)
+                when (token.name) {
+                    "alpha" -> return true
+                    "color" -> {
+                        if (colorDepth > 0) {
+                            colorDepth--
+                        } else if (alphaDepth > 0) {
+                            alphaDepth--
+                        } else {
+                            return true
+                        }
+                    }
+
+                    else -> {
+                        if (token.name !in KNOWN_ONI_TAGS) return true
+                        val current = tagDepths[token.name] ?: 0
+                        if (current <= 0) return true
+                        tagDepths[token.name] = current - 1
+                    }
+                }
             }
 
             else -> {}
         }
     }
-    return tagStack.isNotEmpty()
+    return colorDepth > 0 || tagDepths.values.any { it > 0 }
 }
 
 @Composable

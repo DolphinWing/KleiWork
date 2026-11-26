@@ -168,6 +168,9 @@
     <string name="toast_glossary_copied">已複製標準譯名「%1$s」至剪貼簿供手動貼上</string>
     <string name="tag_align_all_styles">⚡ 全部對齊官方標籤 (共 %1$d 處)</string>
     <string name="tag_diagnostic_alert">標籤診斷：%1$s</string>
+    <string name="tag_newline_mismatch_summary">換行 (\\n) 不符：原文 %1$d 個 (%2$s) vs 譯文 %3$d 個 (%4$s)</string>
+    <string name="tag_align_all_newlines">⚡ 全部對齊換行 (共 %1$d 處)</string>
+    <string name="tag_copy_newline">複製 \\n</string>
 
     <!-- Content Descriptions -->
     <string name="content_description_back">返回</string>

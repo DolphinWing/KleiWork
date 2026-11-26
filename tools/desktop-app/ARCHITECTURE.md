@@ -179,7 +179,8 @@
     *   **物理空間隔離防誤觸**：編輯器底部操作列將破壞性之「智慧貼上（Write Action）」保留於左側輔助區，將非破壞性之「NisbetPeek（Inspection Action）」移至右側決策區（靠近取消與套用，並以 VerticalDivider 區隔），徹底杜絕誤觸改寫內文之風險。
 
 *   **NisbetPeek 預覽系統與 Codex 實體透視**：
-    *   **遊戲語意樣式精準還原**：支援 `<style="logic_on">`（電路綠）、`<style="logic_off">`（警示紅）、`<style="KKeyword">`（官方 Codex 青藍色 `#26C6DA`）、`<style="flavor_text/lore">`（背景故事斜體灰）。
+    *   **遊戲語意樣式精準還原**：支援 `<style="logic_on">`（電路綠）、`<style="logic_off">`（警示紅）、`<style="KKeyword">`（官方 Codex 青藍色 `#26C6DA`）、`<style="flavor_text/lore">`（背景故事斜體灰），並解析 `<alpha=#XX>` 兩位數十六進位透明度。
+    *   **Unity TextMeshPro (TMP) 富文本相容規則**：`toOniTokens()` 將含 `@` 的尖括號 Email（如 `<msklodowska@gravitas.nova>`）視為純文字；`hasOniSyntaxError()` 與 `peek()` 遵循 TMP 規範——允許 `<alpha=#AA>` 以 `</color>` 單向閉合或僅以 `<alpha=#FF>` 覆寫（但拒絕不存在的 `</alpha>`），並改採各標籤獨立深度追蹤以相容合法交叉閉合（如 `<size=12><alpha=#AA>...</size></color>`、`<i><smallcaps>...</i>...</smallcaps>`）。
     *   **連結膠囊化樣式**：`<link>` 呈現專屬粉紅底線與微底色膠囊襯底。
     *   **Codex 實體目標透視卡片 (Link Target IDs)**：自動提取文字內所有 `<link="ID">` 實體，於預覽區下方以 FlowRow 條列顯示 `[文字 ➜ TARGET_ID]`（如 `門 ➜ BUILDING_DOOR`），方便校對者一覽百科連結指向是否正確。
     *   內建 `Tag Sensor` 診斷，即時提示標籤不對稱或語法錯誤。
@@ -253,21 +254,21 @@
 * **行內即時高亮 (`DiagnosticVisualTransformation`)**：
     * 採用裝飾層 `VisualTransformation` 與 1:1 `OffsetMapping.Identity`，徹底杜絕游標跳動與漂移。
     * 內建防禦性邊界保護（`coerceIn(0, length)`），確保高頻打字與反白刪除時不拋出越界例外。
-    * **四色語意高亮**：
+    * **五色語意高亮（編輯器 + Source 原文雙欄同步）**：
         * 🔴 **紅色**：純文字名詞衝突（Glossary Plain-text Conflict）
         * 🟣 **紫色**：標籤內文字錯位（Situation A: Tag Text Conflict，如 `<link="POWER">電力</link>` ➜ `電網`）
-        * 🔵 **藍色**：標籤缺失待包裹（Situation B: Missing Tag Wrap，如 `氧氣` ➜ `<link="OXYGEN">氧氣</link>`）
+        * 🔵 **藍色**：標籤缺失待包裹（Situation B: Missing Tag Wrap，含 `<link="...">` 與 `<style="...">`；`Source` 原文卡片同步高亮缺失標籤）
         * 🟠 **橙色**：標籤樣式不符（Situation C: Style Mismatch，如官方 `<i>` vs 歷史 `<b>`）
+        * 🟢 **青綠 (Teal)**：換行數量不符（Newline Mismatch，原文 `Source` 卡片與譯文編輯框雙欄同步標亮 `\n` 區段並於工具列顯示區段摘要與「複製 `\n`」鈕）
 * **多處重複與 RTL 倒序批次置換**：
     * 透過 `findCandidateSpans` 抓取本文內所有出現點之非重疊字元跨度（Non-overlapping Spans）。
     * 採用由右至左（Right-to-Left, RTL）執行批次替換，確保低位索引絕對不跑位。
     * 單條多處重複時提供「⚡ 一鍵全部替換」與個別「[#1]、[#2]」單點處置按鈕。
 * **外置語言學規則庫 (`glossary_rules.txt` & `LinguisticRules`)**：
     * 將同音通假字對（如 `氣|汽`、`裡|裏`、`線|綫`）與斷詞邊界標點／虛詞／量詞完全從演算法抽離，儲存於 `src/main/composeResources/files/glossary_rules.txt`，確保核心程式碼 0 寫死中文字。
-* **互動快速修復工具列 (`FlowRow`)**：
-    * 採用 `FlowRow` 自然折行排版，徹底防止小視窗水平溢出。
-    * 具備 Hover 聚焦連動（滑鼠移到 Chip 時，輸入框中對應文字加粗並加深底色）。
-    * 提供一鍵修復、純文字複製、認可新詞與完整 Undo 復原機制。
+* **互動快速修復工具列與彈性佈局 (`EditorStretchLayout` + 分頁式診斷卡)**：
+    * `EntryEditor` 將底部的 `EditorActionRow` 釘選於視窗頁尾，上方透過自訂 `EditorStretchLayout` 維持原本「中央編輯框自動撐滿剩餘視窗高度、把診斷卡推至底部」的操作手感；同時對 `Source` 原文卡片與譯文輸入框均不設最大高度上限，僅替編輯框設 `200.dp` 最小高度底線，遇 Codex 長文與雙診斷時由外層捲動自然承載而不壓扁輸入框。
+    * `InteractiveDiagnosticBar` 將標籤與詞彙兩類診斷整合為單一張 **分頁切換＋可收合** 卡片，並將「認可新詞」按鈕併入操作按鈕列，最大化保留譯文編輯區高度；滑鼠移到修復 Chip 時輸入框對應文字同步加粗與加深底色，並提供一鍵修復、純文字複製與完整 Undo 復原機制。
 
 ### 4.12. 標籤樣式感測與防禦機制 (Tag Sensor Style Alignment & Multi-pass Protection)
 
@@ -279,8 +280,15 @@
     * **Pass 1（字面完全相符排除）**：標籤內部文字完全一致者（如 `<b>75°C</b>` 對 `<b>75°C</b>`），視為已滿足（Satisfied）並 1:1 排除，避免無效替換。
     * **Pass 2（複合標籤結構相符排除）**：若譯文與原文的複合標籤特徵數量 1:1 對應（如譯文有 3 個 `<b><style="logic_on">`，原文亦有 3 個 `<b><style="logic_on">`），直接 1:1 抵銷並排除，絕不誤判定為 `<b> ➜ <i>` 待修候選。
     * **Pass 3（孤兒標籤篩選）**：經前兩輪過濾後，僅保留真正未被原文格式滿足的標籤（如 `<b>只會</b>` 對應 `<i>only</i>`）。
-* **換行對稱檢查 (`NEWLINE_TOKEN = "\\n"`)**：
+* **換行對稱檢查 (`NEWLINE_TOKEN = "\\n"`) 與區段修復 (`findNewlineSpans`)**：
     * `countTags()` 同步統計所有邏輯換行符（相容字面 `\n` 與實體 `\r\n` / `\r` / `\n`），納入全庫 `TagDiagnostic`、卡片警示、`NisbetPeek` 報告與 `BrigetteDesk` 候選卡檢驗，確保單換行或雙換行不被誤刪或增減。
+    * `findNewlineRuns()`／`findNewlineSpans()` 將連續換行分組對比：區段數 1:1 對應但長度不符（如 `\n` ↔ `\n\n`）提供單點與批次對齊；譯文換行過多提供單點移除（刻意不提供全刪）；漏掉整處換行則改由雙欄 Teal 高亮與摘要橫幅輔助人工定位，避免猜測中文斷句。
+* **缺失包裹偵測 (`findMissingWrapSpans` & `findMissingStyleWrapSpans`)**：
+    * 完整相容 PO 記憶體轉義引號（`\"` 與 `"`）並延用原文引號風格輸出，同時保護已位於 `<link>`／`<style>` 內的文字不重複包裹。
+    * 針對原文 `<style="...">`，依屬性扣除既有用量配額後，按「詞庫規範詞 → 簡中參考同屬性 `<style>` 轉繁體 → 原文字面」三層保守定位並提供藍色一鍵包裹修復。
+* **Unity TextMeshPro 語法診斷相容 (`hasOniSyntaxError`)**：
+    * Email 防誤判：`toOniTokens()` 將含 `@` 的 `<...>` 視為純文字。
+    * `<alpha>` 單向與交叉閉合相容：依 TMP 規格允許 `<alpha=#AA>` 以 `</color>` 關閉或純以 `<alpha=#FF>` 覆寫、允許合法交叉巢狀閉合，同時持續擋下無效 `</alpha>`、未知標籤與未閉合標籤（詳見 4.6 節）。
 * **配額守衛 (Quota Guard)**：
     * 最終候選數量嚴格受限於整體標籤差額配額：
       $$\text{quota} = \min(|source_i - target_i|,\, |source_b - target_b|)$$

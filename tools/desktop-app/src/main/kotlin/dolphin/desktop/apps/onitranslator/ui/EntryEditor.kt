@@ -7,6 +7,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
@@ -26,6 +27,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilledTonalButton
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -56,14 +58,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.PointerEventType
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.platform.Clipboard
 import androidx.compose.ui.platform.LocalClipboard
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Constraints
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import dolphin.desktop.apps.onitranslator.app.AppEvent
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.brigette_round_collapse
+import dolphin.desktop.apps.onitranslator.generated.resources.brigette_round_expand
 import dolphin.desktop.apps.onitranslator.generated.resources.button_apply
 import dolphin.desktop.apps.onitranslator.generated.resources.button_cancel
 import dolphin.desktop.apps.onitranslator.generated.resources.content_description_clear
@@ -87,8 +97,16 @@ import dolphin.desktop.apps.onitranslator.generated.resources.ic_visibility
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_visibility_off
 import dolphin.desktop.apps.onitranslator.generated.resources.label_translated_text
 import dolphin.desktop.apps.onitranslator.generated.resources.nisbet_ponder
+import dolphin.desktop.apps.onitranslator.generated.resources.tag_align_all_newlines
 import dolphin.desktop.apps.onitranslator.generated.resources.tag_align_all_styles
+import dolphin.desktop.apps.onitranslator.generated.resources.tag_copy_newline
 import dolphin.desktop.apps.onitranslator.generated.resources.tag_diagnostic_alert
+import dolphin.desktop.apps.onitranslator.generated.resources.tag_glossary_label
+import dolphin.desktop.apps.onitranslator.generated.resources.tag_newline_mismatch_summary
+import dolphin.desktop.apps.onitranslator.generated.resources.tag_sensor_label
+import dolphin.desktop.apps.onitranslator.generated.resources.tag_sensor_mismatch
+import dolphin.desktop.apps.onitranslator.generated.resources.tag_sensor_source_error
+import dolphin.desktop.apps.onitranslator.generated.resources.tag_sensor_target_error
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_brigette_translate
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_canonical
 import dolphin.desktop.apps.onitranslator.generated.resources.tooltip_copy_this_text
@@ -244,11 +262,44 @@ private fun EntryEditorSection(
         }
     }
 
-    val tagSpans = remember(editedText, entry.sourceText, terms) {
-        TagSensor.findCandidateSpans(entry.sourceText, editedText, terms)
+    val tagSpans = remember(editedText, entry.sourceText, terms, entry.chsReference) {
+        TagSensor.findCandidateSpans(entry.sourceText, editedText, terms, entry.chsReference)
     }
 
-    val highlightSpans = remember(glossarySpans, tagSpans, hoveredSpanRange) {
+    val hasNewlineMismatch = (liveDiagnostic.sourceTags[TagSensor.NEWLINE_TOKEN] ?: 0) !=
+        (liveDiagnostic.targetTags[TagSensor.NEWLINE_TOKEN] ?: 0)
+
+    val sourceHighlights = remember(entry.sourceText, liveDiagnostic) {
+        val list = mutableListOf<HighlightSpan>()
+        if (hasNewlineMismatch) {
+            TagSensor.findNewlineRuns(entry.sourceText).forEach { run ->
+                list.add(
+                    HighlightSpan(
+                        range = run.range,
+                        backgroundColor = Color(0x4526A69A),
+                        isHovered = true,
+                    )
+                )
+            }
+        }
+        val missingWrapTags = buildSet {
+            if ((liveDiagnostic.sourceTags["link"] ?: 0) > (liveDiagnostic.targetTags["link"] ?: 0)) add("link")
+            if ((liveDiagnostic.sourceTags["style"] ?: 0) > (liveDiagnostic.targetTags["style"] ?: 0)) add("style")
+        }
+        if (missingWrapTags.isNotEmpty()) {
+            TagSensor.findTagRangesByNames(entry.sourceText, missingWrapTags).forEach { range ->
+                list.add(
+                    HighlightSpan(
+                        range = range,
+                        backgroundColor = Color(0x3029B6F6),
+                    )
+                )
+            }
+        }
+        list
+    }
+
+    val highlightSpans = remember(glossarySpans, tagSpans, hoveredSpanRange, hasNewlineMismatch, editedText) {
         val list = mutableListOf<HighlightSpan>()
         glossarySpans.forEach { span ->
             val isTagText = span.conflict.linkTarget != null
@@ -268,6 +319,7 @@ private fun EntryEditorSection(
             val baseColor = when (span.issueType) {
                 TagIssueType.STYLE_MISMATCH -> Color(0x35FFA726)
                 TagIssueType.MISSING_TAG_WRAP -> Color(0x3529B6F6)
+                TagIssueType.NEWLINE_MISMATCH -> Color(0x3526A69A)
             }
             list.add(
                 HighlightSpan(
@@ -276,6 +328,17 @@ private fun EntryEditorSection(
                     isHovered = isHovered,
                 )
             )
+        }
+        if (hasNewlineMismatch && tagSpans.none { it.issueType == TagIssueType.NEWLINE_MISMATCH }) {
+            // Case C (missing entire breaks): highlight remaining \n runs softly for visual comparison with Source
+            TagSensor.findNewlineRuns(editedText).forEach { run ->
+                list.add(
+                    HighlightSpan(
+                        range = run.range,
+                        backgroundColor = Color(0x2826A69A),
+                    )
+                )
+            }
         }
         list
     }
@@ -290,145 +353,187 @@ private fun EntryEditorSection(
     }
 
     Box(modifier = modifier.fillMaxSize()) {
-        Column(
-            modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
-        ) {
-            Text(
-                entry.target.key,
-                style = MaterialTheme.typography.titleMedium,
-                color = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.fillMaxWidth()
-            )
+        Column(modifier = Modifier.fillMaxSize()) {
+            BoxWithConstraints(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth(),
+            ) {
+                val availableViewportHeight = (maxHeight - 24.dp).coerceAtLeast(0.dp)
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .verticalScroll(rememberScrollState())
+                        .padding(horizontal = 16.dp, vertical = 12.dp),
+                ) {
+                    EditorStretchLayout(
+                        viewportHeight = availableViewportHeight,
+                        minEditorHeight = 200.dp,
+                        spacing = 12.dp,
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        Column(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalArrangement = Arrangement.spacedBy(12.dp),
+                        ) {
+                            Text(
+                                entry.target.key,
+                                style = MaterialTheme.typography.titleMedium,
+                                color = MaterialTheme.colorScheme.primary,
+                                modifier = Modifier.fillMaxWidth()
+                            )
 
-            ReferenceSection(
-                entry,
-                onCopyToClipboard = { onEvent(AppEvent.Ui.CopyToClipboard(it)) },
-                onReplace = { editedText = onConvert(it) },
-                onBrigetteRequest = {
-                    isPeeking = false
-                    onEvent(AppEvent.Brigette.Open(entry))
-                },
-                oldSourceVisible = showOldSource,
-                chsRefsVisible = showRefs,
-                poSaveVisible = showPoSave,
-            )
+                            ReferenceSection(
+                                entry,
+                                onCopyToClipboard = { onEvent(AppEvent.Ui.CopyToClipboard(it)) },
+                                onReplace = { editedText = onConvert(it) },
+                                onBrigetteRequest = {
+                                    isPeeking = false
+                                    onEvent(AppEvent.Brigette.Open(entry))
+                                },
+                                sourceHighlights = sourceHighlights,
+                                oldSourceVisible = showOldSource,
+                                chsRefsVisible = showRefs,
+                                poSaveVisible = showPoSave,
+                            )
+                        }
 
-            OutlinedTextField(
-                value = editedText,
-                onValueChange = {
-                    editedText = it
-                    undoCanonicalState = null
-                },
-                label = { Text(stringResource(Res.string.label_translated_text)) },
-                modifier = Modifier.fillMaxWidth().weight(1f),
-                minLines = 5,
-                textStyle = MaterialTheme.typography.bodyMedium.copy(fontFamily = FontFamily.Monospace),
-                shape = MaterialTheme.shapes.medium,
-                visualTransformation = remember(highlightSpans) { DiagnosticVisualTransformation(highlightSpans) },
-                colors = TextFieldDefaults.colors(
-                    focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
-                    unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
-                )
-            )
+                        OutlinedTextField(
+                            value = editedText,
+                            onValueChange = {
+                                editedText = it
+                                undoCanonicalState = null
+                            },
+                            label = { Text(stringResource(Res.string.label_translated_text)) },
+                            modifier = Modifier.fillMaxWidth(),
+                            minLines = 6,
+                            textStyle = MaterialTheme.typography.bodyMedium.copy(fontFamily = FontFamily.Monospace),
+                            shape = MaterialTheme.shapes.medium,
+                            visualTransformation = remember(highlightSpans) { DiagnosticVisualTransformation(highlightSpans) },
+                            colors = TextFieldDefaults.colors(
+                                focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
+                                unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f),
+                            )
+                        )
 
-            InteractiveDiagnosticBar(
-                diagnostic = liveGlossaryDiag,
-                glossarySpans = glossarySpans,
-                tagSpans = tagSpans,
-                undoState = undoCanonicalState,
-                onApplyCanonicalBatch = { conflict, spans ->
-                    val applied = if (spans.isNotEmpty()) {
-                        GlossarySensor.applyBatchReplacement(editedText, spans)
-                    } else {
-                        GlossarySensor.applyCanonical(editedText, conflict, entry.chsReference)
+                        Box(modifier = Modifier.fillMaxWidth()) {
+                            InteractiveDiagnosticBar(
+                                diagnostic = liveGlossaryDiag,
+                                tagDiagnostic = liveDiagnostic,
+                                sourceText = entry.sourceText,
+                                editedText = editedText,
+                                glossarySpans = glossarySpans,
+                                tagSpans = tagSpans,
+                                undoState = undoCanonicalState,
+                                onApplyCanonicalBatch = { conflict, spans ->
+                                    val applied = if (spans.isNotEmpty()) {
+                                        GlossarySensor.applyBatchReplacement(editedText, spans)
+                                    } else {
+                                        GlossarySensor.applyCanonical(editedText, conflict, entry.chsReference)
+                                    }
+                                    if (applied != editedText) {
+                                        backupText = editedText
+                                        undoCanonicalState = Pair(editedText, conflict.canonicalTranslation)
+                                        hoveredSpanRange = null
+                                        editedText = applied
+                                        onEvent(AppEvent.Editor.Save(entry.target, applied))
+                                    } else {
+                                        onEvent(AppEvent.Ui.CopyToClipboard(conflict.canonicalTranslation))
+                                    }
+                                },
+                                onApplyCanonicalSingle = { conflict, span ->
+                                    val applied = GlossarySensor.applySingleReplacement(editedText, span)
+                                    if (applied != editedText) {
+                                        backupText = editedText
+                                        undoCanonicalState = Pair(editedText, conflict.canonicalTranslation)
+                                        hoveredSpanRange = null
+                                        editedText = applied
+                                        onEvent(AppEvent.Editor.Save(entry.target, applied))
+                                    }
+                                },
+                                onApplyTagBatch = { spans ->
+                                    val applied = TagSensor.applyBatchReplacement(editedText, spans)
+                                    if (applied != editedText) {
+                                        backupText = editedText
+                                        undoCanonicalState = Pair(editedText, spans.firstOrNull()?.description ?: "Tag Fix")
+                                        hoveredSpanRange = null
+                                        editedText = applied
+                                        onEvent(AppEvent.Editor.Save(entry.target, applied))
+                                    }
+                                },
+                                onApplyTagSingle = { span ->
+                                    val applied = TagSensor.applySingleReplacement(editedText, span)
+                                    if (applied != editedText) {
+                                        backupText = editedText
+                                        undoCanonicalState = Pair(editedText, span.description)
+                                        hoveredSpanRange = null
+                                        editedText = applied
+                                        onEvent(AppEvent.Editor.Save(entry.target, applied))
+                                    }
+                                },
+                                onHoverSpan = { range ->
+                                    hoveredSpanRange = range
+                                },
+                                onUndoCanonical = {
+                                    undoCanonicalState?.let { (prevText, _) ->
+                                        hoveredSpanRange = null
+                                        editedText = prevText
+                                        onEvent(AppEvent.Editor.Save(entry.target, prevText))
+                                        undoCanonicalState = null
+                                        backupText = null
+                                    }
+                                },
+                                onDismissUndo = {
+                                    undoCanonicalState = null
+                                },
+                                onCopyToClipboard = { text ->
+                                    onEvent(AppEvent.Ui.CopyToClipboard(text))
+                                },
+                                onAcceptNewTerm = {
+                                    onEvent(AppEvent.Glossary.AcceptNewTerm(entry.target.key))
+                                },
+                                onResetToCanonical = {
+                                    onEvent(AppEvent.Glossary.ResetToCanonical(entry.target.key))
+                                }
+                            )
+                        }
                     }
-                    if (applied != editedText) {
-                        backupText = editedText
-                        undoCanonicalState = Pair(editedText, conflict.canonicalTranslation)
-                        editedText = applied
-                        onEvent(AppEvent.Editor.Save(entry.target, applied))
-                    } else {
-                        onEvent(AppEvent.Ui.CopyToClipboard(conflict.canonicalTranslation))
-                    }
-                },
-                onApplyCanonicalSingle = { conflict, span ->
-                    val applied = GlossarySensor.applySingleReplacement(editedText, span)
-                    if (applied != editedText) {
-                        backupText = editedText
-                        undoCanonicalState = Pair(editedText, conflict.canonicalTranslation)
-                        editedText = applied
-                        onEvent(AppEvent.Editor.Save(entry.target, applied))
-                    }
-                },
-                onApplyTagBatch = { spans ->
-                    val applied = TagSensor.applyBatchReplacement(editedText, spans)
-                    if (applied != editedText) {
-                        backupText = editedText
-                        undoCanonicalState = Pair(editedText, spans.firstOrNull()?.description ?: "標籤修復")
-                        editedText = applied
-                        onEvent(AppEvent.Editor.Save(entry.target, applied))
-                    }
-                },
-                onApplyTagSingle = { span ->
-                    val applied = TagSensor.applySingleReplacement(editedText, span)
-                    if (applied != editedText) {
-                        backupText = editedText
-                        undoCanonicalState = Pair(editedText, span.description)
-                        editedText = applied
-                        onEvent(AppEvent.Editor.Save(entry.target, applied))
-                    }
-                },
-                onHoverSpan = { range ->
-                    hoveredSpanRange = range
-                },
-                onUndoCanonical = {
-                    undoCanonicalState?.let { (prevText, _) ->
-                        editedText = prevText
-                        onEvent(AppEvent.Editor.Save(entry.target, prevText))
-                        undoCanonicalState = null
-                        backupText = null
-                    }
-                },
-                onDismissUndo = {
-                    undoCanonicalState = null
-                },
-                onCopyToClipboard = { text ->
-                    onEvent(AppEvent.Ui.CopyToClipboard(text))
-                },
-                onAcceptNewTerm = {
-                    onEvent(AppEvent.Glossary.AcceptNewTerm(entry.target.key))
-                },
-                onResetToCanonical = {
-                    onEvent(AppEvent.Glossary.ResetToCanonical(entry.target.key))
                 }
-            )
+            }
 
-            EditorActionRow(
-                entry = entry,
-                editedText = editedText,
-                showOldSource = showOldSource,
-                onShowOldSourceChange = { showOldSource = it },
-                showRefs = showRefs,
-                onShowRefsChange = { showRefs = it },
-                showPoSave = showPoSave,
-                onShowPoSaveChange = { showPoSave = it },
-                isPeeking = isPeeking,
-                onPeekingChange = { nextPeeking ->
-                    if (nextPeeking && brigetteDesk.visible) {
-                        onEvent(AppEvent.Brigette.Dismiss)
-                    }
-                    isPeeking = nextPeeking
-                },
-                backupText = backupText,
-                onEditedTextChange = { editedText = it },
-                onBackupTextChange = { backupText = it },
-                isChanged = isChanged,
-                onEvent = onEvent,
-                clipboard = clipboard,
-                scope = scope,
-                diagnostic = liveDiagnostic
-            )
+            HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f))
+
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp, vertical = 8.dp),
+            ) {
+                EditorActionRow(
+                    entry = entry,
+                    editedText = editedText,
+                    showOldSource = showOldSource,
+                    onShowOldSourceChange = { showOldSource = it },
+                    showRefs = showRefs,
+                    onShowRefsChange = { showRefs = it },
+                    showPoSave = showPoSave,
+                    onShowPoSaveChange = { showPoSave = it },
+                    isPeeking = isPeeking,
+                    onPeekingChange = { nextPeeking ->
+                        if (nextPeeking && brigetteDesk.visible) {
+                            onEvent(AppEvent.Brigette.Dismiss)
+                        }
+                        isPeeking = nextPeeking
+                    },
+                    backupText = backupText,
+                    onEditedTextChange = { editedText = it },
+                    onBackupTextChange = { backupText = it },
+                    isChanged = isChanged,
+                    onEvent = onEvent,
+                    clipboard = clipboard,
+                    scope = scope,
+                    diagnostic = liveDiagnostic
+                )
+            }
         }
 
         NisbetPeekDrawer(
@@ -460,6 +565,46 @@ private fun EntryEditorSection(
             },
             modifier = Modifier.align(Alignment.CenterEnd)
         )
+    }
+}
+
+@Composable
+private fun EditorStretchLayout(
+    viewportHeight: Dp,
+    minEditorHeight: Dp,
+    spacing: Dp,
+    modifier: Modifier = Modifier,
+    content: @Composable () -> Unit,
+) {
+    Layout(content = content, modifier = modifier) { measurables, constraints ->
+        require(measurables.size == 3) { "EditorStretchLayout expects exactly 3 children." }
+        val gapPx = spacing.roundToPx()
+        val viewportPx = viewportHeight.roundToPx()
+        val minEditorPx = minEditorHeight.roundToPx()
+
+        val unconstrainedVertical = constraints.copy(minHeight = 0, maxHeight = Constraints.Infinity)
+        val topPlaceable = measurables[0].measure(unconstrainedVertical)
+        val bottomPlaceable = measurables[2].measure(unconstrainedVertical)
+
+        val bottomGapPx = if (bottomPlaceable.height > 0) gapPx else 0
+        val remainingForEditor = viewportPx - topPlaceable.height - gapPx - bottomGapPx - bottomPlaceable.height
+        val effectiveMinEditorPx = maxOf(minEditorPx, remainingForEditor)
+
+        val editorPlaceable = measurables[1].measure(
+            constraints.copy(minHeight = effectiveMinEditorPx, maxHeight = Constraints.Infinity)
+        )
+
+        val totalHeight = topPlaceable.height + gapPx + editorPlaceable.height + bottomGapPx + bottomPlaceable.height
+        layout(constraints.maxWidth, totalHeight) {
+            var y = 0
+            topPlaceable.placeRelative(0, y)
+            y += topPlaceable.height + gapPx
+            editorPlaceable.placeRelative(0, y)
+            y += editorPlaceable.height + bottomGapPx
+            if (bottomPlaceable.height > 0) {
+                bottomPlaceable.placeRelative(0, y)
+            }
+        }
     }
 }
 
@@ -594,6 +739,7 @@ private fun ReferenceSection(
     onCopyToClipboard: (String) -> Unit,
     onReplace: ((String) -> Unit),
     onBrigetteRequest: (() -> Unit)? = null,
+    sourceHighlights: List<HighlightSpan> = emptyList(),
     oldSourceVisible: Boolean = true,
     chsRefsVisible: Boolean = true,
     poSaveVisible: Boolean = true,
@@ -601,6 +747,7 @@ private fun ReferenceSection(
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         ReferenceView(
             entry.sourceText, type = EntryTagType.Source,
+            highlights = sourceHighlights,
             onCopyToClipboard = { text ->
                 val textToCopy = text.ifBlank {
                     var t = "msgctxt \"${entry.target.key()}\"\n"
@@ -645,6 +792,7 @@ private fun ReferenceSection(
 private fun ReferenceView(
     text: String,
     type: EntryTagType,
+    highlights: List<HighlightSpan> = emptyList(),
     onReplace: (() -> Unit)? = null,
     onCopyToClipboard: ((String) -> Unit)? = null,
     onBrigetteRequest: (() -> Unit)? = null,
@@ -664,19 +812,54 @@ private fun ReferenceView(
         }
     }
 
+    val renderedText = remember(text, highlights) {
+        if (highlights.isEmpty() || text.isEmpty()) {
+            null
+        } else {
+            buildAnnotatedString {
+                append(text)
+                val len = text.length
+                for (span in highlights) {
+                    val start = span.range.first.coerceIn(0, len)
+                    val end = (span.range.last + 1).coerceIn(start, len)
+                    if (start < end) {
+                        addStyle(
+                            SpanStyle(
+                                background = span.backgroundColor,
+                                fontWeight = if (span.isHovered) FontWeight.Bold else FontWeight.Normal,
+                            ),
+                            start = start,
+                            end = end,
+                        )
+                    }
+                }
+            }
+        }
+    }
+
     Surface(
         shape = MaterialTheme.shapes.medium,
         color = type.containerColor(MaterialTheme.colorScheme),
         modifier = Modifier.fillMaxWidth(),
     ) {
         Row(modifier = Modifier.padding(8.dp), verticalAlignment = Alignment.CenterVertically) {
-            Text(
-                text = text,
-                style = MaterialTheme.typography.bodyMedium,
-                color = type.contentColor(MaterialTheme.colorScheme),
-                fontFamily = FontFamily.Monospace,
-                modifier = Modifier.weight(1f),
-            )
+            if (renderedText != null) {
+                Text(
+                    text = renderedText,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = type.contentColor(MaterialTheme.colorScheme),
+                    fontFamily = FontFamily.Monospace,
+                    modifier = Modifier.weight(1f),
+                )
+            } else {
+                Text(
+                    text = text,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = type.contentColor(MaterialTheme.colorScheme),
+                    fontFamily = FontFamily.Monospace,
+                    modifier = Modifier.weight(1f),
+                )
+            }
 
             onCopyToClipboard?.let { listener ->
                 if (links.count() > 0) {
@@ -863,9 +1046,52 @@ private fun Modifier.onPointerHover(onHover: (Boolean) -> Unit): Modifier = this
     }
 }
 
+private enum class DiagnosticTab { TAG, GLOSSARY }
+
+@Composable
+private fun DiagnosticTabChip(
+    label: String,
+    selected: Boolean,
+    isAccepted: Boolean = false,
+    accentColor: androidx.compose.ui.graphics.Color,
+    containerColor: androidx.compose.ui.graphics.Color,
+    onClick: () -> Unit,
+) {
+    Surface(
+        onClick = onClick,
+        shape = MaterialTheme.shapes.small,
+        color = if (selected) containerColor else MaterialTheme.colorScheme.surface.copy(alpha = 0.65f),
+        border = BorderStroke(
+            width = if (selected) 1.5.dp else 1.dp,
+            color = if (selected) accentColor else MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f),
+        ),
+    ) {
+        Row(
+            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(4.dp),
+        ) {
+            Icon(
+                painter = painterResource(if (isAccepted) Res.drawable.ic_done else Res.drawable.ic_report),
+                contentDescription = null,
+                tint = accentColor,
+                modifier = Modifier.size(14.dp),
+            )
+            Text(
+                text = label,
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurface,
+            )
+        }
+    }
+}
+
 @Composable
 private fun InteractiveDiagnosticBar(
     diagnostic: GlossaryDiagnostic?,
+    tagDiagnostic: TagDiagnostic?,
+    sourceText: String,
+    editedText: String,
     glossarySpans: List<GlossaryCandidateSpan>,
     tagSpans: List<TagCandidateSpan>,
     undoState: Pair<String, String>?,
@@ -881,194 +1107,282 @@ private fun InteractiveDiagnosticBar(
     onResetToCanonical: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    // In-place Undo Banner: shown immediately after auto-applying any fix
-    if (undoState != null) {
-        Surface(
-            modifier = modifier.fillMaxWidth(),
-            shape = MaterialTheme.shapes.small,
-            color = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.35f),
-            border = BorderStroke(1.dp, MaterialTheme.colorScheme.secondary.copy(alpha = 0.4f))
-        ) {
-            Row(
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 8.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                Icon(
-                    painterResource(Res.drawable.ic_done),
-                    contentDescription = null,
-                    tint = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.size(18.dp)
-                )
-                Text(
-                    text = stringResource(Res.string.glossary_applied_success, undoState.second),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurface,
-                    modifier = Modifier.weight(1f)
-                )
-                OutlinedButton(
-                    onClick = onUndoCanonical,
-                    contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
-                    shape = MaterialTheme.shapes.small,
-                ) {
-                    Text(
-                        text = stringResource(Res.string.glossary_undo_apply),
-                        style = MaterialTheme.typography.labelSmall
-                    )
-                }
-                TooltipIconButton(
-                    painter = painterResource(Res.drawable.ic_close),
-                    tooltip = stringResource(Res.string.content_description_clear),
-                    position = TooltipAnchorPosition.Above,
-                    onClick = onDismissUndo
-                )
-            }
-        }
-        return
-    }
-
     val hasGlossary = diagnostic != null && diagnostic.hasConflict
-    val hasTags = tagSpans.isNotEmpty()
-    if (!hasGlossary && !hasTags) return
+    val hasTagIssues = tagSpans.isNotEmpty() || tagDiagnostic?.hasIssue == true
+    if (undoState == null && !hasGlossary && !hasTagIssues) return
 
-    Column(modifier = modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        // Tag Repairs
-        if (hasTags) {
+    Column(
+        modifier = modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(6.dp),
+    ) {
+        // In-place Undo Banner: stacked above any remaining diagnostic issues so sequential fixes keep working
+        if (undoState != null) {
             Surface(
                 modifier = Modifier.fillMaxWidth(),
                 shape = MaterialTheme.shapes.small,
-                color = MaterialTheme.colorScheme.tertiaryContainer.copy(alpha = 0.25f),
-                border = BorderStroke(1.dp, MaterialTheme.colorScheme.tertiary.copy(alpha = 0.4f))
+                color = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.35f),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.secondary.copy(alpha = 0.4f))
             ) {
-                Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        Icon(
-                            painterResource(Res.drawable.ic_report),
-                            contentDescription = null,
-                            tint = MaterialTheme.colorScheme.tertiary,
-                            modifier = Modifier.size(18.dp)
-                        )
-                        Text(
-                            text = stringResource(Res.string.tag_diagnostic_alert, "${tagSpans.size} 項待處理"),
-                            style = MaterialTheme.typography.titleSmall,
-                            color = MaterialTheme.colorScheme.onSurface
-                        )
-                    }
-
-                    FlowRow(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                        verticalArrangement = Arrangement.spacedBy(6.dp)
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    Icon(
+                        painterResource(Res.drawable.ic_done),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.size(18.dp)
+                    )
+                    Text(
+                        text = stringResource(Res.string.glossary_applied_success, undoState.second),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurface,
+                        modifier = Modifier.weight(1f)
+                    )
+                    OutlinedButton(
+                        onClick = onUndoCanonical,
+                        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
+                        shape = MaterialTheme.shapes.small,
                     ) {
-                        val styleSpans = tagSpans.filter { it.issueType == TagIssueType.STYLE_MISMATCH }
-                        if (styleSpans.size > 1) {
-                            Button(
-                                onClick = { onApplyTagBatch(styleSpans) },
-                                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
-                                shape = MaterialTheme.shapes.small,
-                                colors = ButtonDefaults.buttonColors(
-                                    containerColor = MaterialTheme.colorScheme.tertiary,
-                                    contentColor = MaterialTheme.colorScheme.onTertiary
-                                )
-                            ) {
-                                Text(
-                                    text = stringResource(Res.string.tag_align_all_styles, styleSpans.size),
-                                    style = MaterialTheme.typography.labelSmall
-                                )
-                            }
-                        }
-
-                        tagSpans.forEach { span ->
-                            FilledTonalButton(
-                                onClick = { onApplyTagSingle(span) },
-                                modifier = Modifier.onPointerHover { isHovered ->
-                                    onHoverSpan(if (isHovered) span.range else null)
-                                },
-                                contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
-                                shape = MaterialTheme.shapes.small,
-                            ) {
-                                Text(
-                                    text = span.description,
-                                    style = MaterialTheme.typography.labelSmall
-                                )
-                            }
-                        }
+                        Text(
+                            text = stringResource(Res.string.glossary_undo_apply),
+                            style = MaterialTheme.typography.labelSmall
+                        )
                     }
+                    TooltipIconButton(
+                        painter = painterResource(Res.drawable.ic_close),
+                        tooltip = stringResource(Res.string.content_description_clear),
+                        position = TooltipAnchorPosition.Above,
+                        onClick = onDismissUndo
+                    )
                 }
             }
         }
 
-        // Glossary Conflicts
-        if (diagnostic != null && diagnostic.hasConflict) {
-            if (diagnostic.isUnreviewed) {
-                Surface(
-                    modifier = Modifier.fillMaxWidth(),
-                    shape = MaterialTheme.shapes.small,
-                    color = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.25f),
-                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.error.copy(alpha = 0.4f))
-                ) {
-                    Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                        diagnostic.conflicts.forEach { conflict ->
-                            val spansForConflict = glossarySpans.filter { it.conflict == conflict }
+        if (hasGlossary || hasTagIssues) {
+            val sourceNewlines = tagDiagnostic?.sourceTags?.get(TagSensor.NEWLINE_TOKEN) ?: 0
+            val targetNewlines = tagDiagnostic?.targetTags?.get(TagSensor.NEWLINE_TOKEN) ?: 0
+            val hasNewlineMismatch = sourceNewlines != targetNewlines
+            val otherTagDiffs = tagDiagnostic?.getDiffReport()
+                ?.filterKeys { it != TagSensor.NEWLINE_TOKEN }
+                .orEmpty()
+            val tagIssueCount = if (tagSpans.isNotEmpty()) {
+                tagSpans.size
+            } else {
+                otherTagDiffs.size +
+                    (if (hasNewlineMismatch) 1 else 0) +
+                    (if (tagDiagnostic?.sourceError == true) 1 else 0) +
+                    (if (tagDiagnostic?.targetError == true) 1 else 0)
+            }
 
-                            Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                                Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    verticalAlignment = Alignment.CenterVertically,
-                                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                                ) {
-                                    Icon(
-                                        painterResource(Res.drawable.ic_report),
-                                        contentDescription = null,
-                                        tint = MaterialTheme.colorScheme.error,
-                                        modifier = Modifier.size(18.dp)
-                                    )
-                                    Text(
-                                        text = stringResource(
-                                            Res.string.glossary_conflict_alert,
-                                            conflict.matchedSourceText.replace("\\\"", "\""),
-                                            conflict.canonicalTranslation
-                                        ),
-                                        style = MaterialTheme.typography.bodySmall,
-                                        color = MaterialTheme.colorScheme.onSurface,
-                                        modifier = Modifier.weight(1f)
-                                    )
-                                    TooltipIconButton(
-                                        painter = painterResource(Res.drawable.ic_content_copy),
-                                        tooltip = stringResource(Res.string.tooltip_copy_canonical, conflict.canonicalTranslation),
-                                        position = TooltipAnchorPosition.Above,
-                                        onClick = { onCopyToClipboard(conflict.canonicalTranslation) }
-                                    )
-                                }
+            var activeTab by remember(sourceText) {
+                mutableStateOf(if (hasTagIssues) DiagnosticTab.TAG else DiagnosticTab.GLOSSARY)
+            }
+            if (activeTab == DiagnosticTab.TAG && !hasTagIssues && hasGlossary) {
+                activeTab = DiagnosticTab.GLOSSARY
+            } else if (activeTab == DiagnosticTab.GLOSSARY && !hasGlossary && hasTagIssues) {
+                activeTab = DiagnosticTab.TAG
+            }
+            var isCollapsed by remember(sourceText) { mutableStateOf(false) }
 
-                                FlowRow(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                                    verticalArrangement = Arrangement.spacedBy(6.dp)
-                                ) {
-                                    if (spansForConflict.size > 1) {
-                                        Button(
-                                            onClick = { onApplyCanonicalBatch(conflict, spansForConflict) },
-                                            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 6.dp),
+            val cardAccentColor = when (activeTab) {
+                DiagnosticTab.TAG -> MaterialTheme.colorScheme.tertiary
+                DiagnosticTab.GLOSSARY -> if (diagnostic?.isAccepted == true) {
+                    MaterialTheme.colorScheme.primary
+                } else {
+                    MaterialTheme.colorScheme.error
+                }
+            }
+            val cardBgColor = when (activeTab) {
+                DiagnosticTab.TAG -> MaterialTheme.colorScheme.tertiaryContainer.copy(alpha = 0.25f)
+                DiagnosticTab.GLOSSARY -> if (diagnostic?.isAccepted == true) {
+                    MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.25f)
+                } else {
+                    MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.25f)
+                }
+            }
+
+            Surface(
+                modifier = Modifier.fillMaxWidth(),
+                shape = MaterialTheme.shapes.small,
+                color = cardBgColor,
+                border = BorderStroke(1.dp, cardAccentColor.copy(alpha = 0.4f)),
+            ) {
+                Column(modifier = Modifier.fillMaxWidth()) {
+                    // Compact Tabbed + Collapsible Header Row
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 10.dp, vertical = 6.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    ) {
+                        if (hasTagIssues) {
+                            DiagnosticTabChip(
+                                label = "${stringResource(Res.string.tag_sensor_label)} ($tagIssueCount)",
+                                selected = activeTab == DiagnosticTab.TAG,
+                                accentColor = MaterialTheme.colorScheme.tertiary,
+                                containerColor = MaterialTheme.colorScheme.tertiaryContainer.copy(alpha = 0.7f),
+                                onClick = {
+                                    activeTab = DiagnosticTab.TAG
+                                    isCollapsed = false
+                                },
+                            )
+                        }
+                        if (hasGlossary) {
+                            val glossAccepted = diagnostic.isAccepted
+                            DiagnosticTabChip(
+                                label = "${stringResource(Res.string.tag_glossary_label)} (${diagnostic.conflicts.size})",
+                                selected = activeTab == DiagnosticTab.GLOSSARY,
+                                isAccepted = glossAccepted,
+                                accentColor = if (glossAccepted) {
+                                    MaterialTheme.colorScheme.primary
+                                } else {
+                                    MaterialTheme.colorScheme.error
+                                },
+                                containerColor = if (glossAccepted) {
+                                    MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.7f)
+                                } else {
+                                    MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.7f)
+                                },
+                                onClick = {
+                                    activeTab = DiagnosticTab.GLOSSARY
+                                    isCollapsed = false
+                                },
+                            )
+                        }
+                        Spacer(Modifier.weight(1f))
+                        TextButton(
+                            onClick = { isCollapsed = !isCollapsed },
+                            contentPadding = PaddingValues(horizontal = 8.dp, vertical = 2.dp),
+                        ) {
+                            Text(
+                                text = stringResource(
+                                    if (isCollapsed) Res.string.brigette_round_expand else Res.string.brigette_round_collapse
+                                ),
+                                style = MaterialTheme.typography.labelSmall,
+                            )
+                        }
+                    }
+
+                    if (!isCollapsed) {
+                        HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.35f))
+
+                        Column(
+                            modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
+                            verticalArrangement = Arrangement.spacedBy(6.dp),
+                        ) {
+                            if (activeTab == DiagnosticTab.TAG) {
+                                if (hasNewlineMismatch) {
+                                    val sourceRuns = remember(sourceText) { TagSensor.findNewlineRuns(sourceText) }
+                                    val targetRuns = remember(editedText) { TagSensor.findNewlineRuns(editedText) }
+                                    val sourcePattern = sourceRuns.joinToString(", ") { "\\n".repeat(it.count) }.ifEmpty { "0" }
+                                    val targetPattern = targetRuns.joinToString(", ") { "\\n".repeat(it.count) }.ifEmpty { "0" }
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        verticalAlignment = Alignment.CenterVertically,
+                                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                    ) {
+                                        Text(
+                                            text = stringResource(
+                                                Res.string.tag_newline_mismatch_summary,
+                                                sourceNewlines,
+                                                sourcePattern,
+                                                targetNewlines,
+                                                targetPattern,
+                                            ),
+                                            style = MaterialTheme.typography.bodySmall,
+                                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                            modifier = Modifier.weight(1f),
+                                        )
+                                        OutlinedButton(
+                                            onClick = { onCopyToClipboard("\\n") },
+                                            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 2.dp),
                                             shape = MaterialTheme.shapes.small,
-                                            colors = ButtonDefaults.buttonColors(
-                                                containerColor = MaterialTheme.colorScheme.error,
-                                                contentColor = MaterialTheme.colorScheme.onError
-                                            )
                                         ) {
                                             Text(
-                                                text = stringResource(
-                                                    Res.string.glossary_apply_all_canonical,
-                                                    conflict.canonicalTranslation,
-                                                    spansForConflict.size
-                                                ),
-                                                style = MaterialTheme.typography.labelSmall
+                                                text = stringResource(Res.string.tag_copy_newline),
+                                                style = MaterialTheme.typography.labelSmall,
                                             )
                                         }
+                                    }
+                                }
 
-                                        spansForConflict.forEachIndexed { index, span ->
-                                            OutlinedButton(
-                                                onClick = { onApplyCanonicalSingle(conflict, span) },
+                                if (tagDiagnostic != null && (tagDiagnostic.sourceError || tagDiagnostic.targetError || otherTagDiffs.isNotEmpty())) {
+                                    Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                                        if (tagDiagnostic.sourceError) {
+                                            Text(
+                                                text = stringResource(Res.string.tag_sensor_source_error),
+                                                style = MaterialTheme.typography.bodySmall,
+                                                color = OniColor.Highlight,
+                                            )
+                                        }
+                                        if (tagDiagnostic.targetError) {
+                                            Text(
+                                                text = stringResource(Res.string.tag_sensor_target_error),
+                                                style = MaterialTheme.typography.bodySmall,
+                                                color = OniColor.Warning,
+                                            )
+                                        }
+                                        otherTagDiffs.forEach { (tag, diff) ->
+                                            Text(
+                                                text = stringResource(Res.string.tag_sensor_mismatch, tag, diff.first, diff.second),
+                                                style = MaterialTheme.typography.bodySmall,
+                                                color = OniColor.Warning,
+                                            )
+                                        }
+                                    }
+                                }
+
+                                if (tagSpans.isNotEmpty()) {
+                                    FlowRow(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                        verticalArrangement = Arrangement.spacedBy(6.dp)
+                                    ) {
+                                        val styleSpans = tagSpans.filter { it.issueType == TagIssueType.STYLE_MISMATCH }
+                                        if (styleSpans.size > 1) {
+                                            Button(
+                                                onClick = { onApplyTagBatch(styleSpans) },
+                                                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
+                                                shape = MaterialTheme.shapes.small,
+                                                colors = ButtonDefaults.buttonColors(
+                                                    containerColor = MaterialTheme.colorScheme.tertiary,
+                                                    contentColor = MaterialTheme.colorScheme.onTertiary
+                                                )
+                                            ) {
+                                                Text(
+                                                    text = stringResource(Res.string.tag_align_all_styles, styleSpans.size),
+                                                    style = MaterialTheme.typography.labelSmall
+                                                )
+                                            }
+                                        }
+
+                                        // Only allow batch alignment for 1:1 run-length repairs (Case A), never batch-delete excess breaks (Case B)
+                                        val alignableNewlineSpans = tagSpans.filter {
+                                            it.issueType == TagIssueType.NEWLINE_MISMATCH && it.replacement.isNotEmpty()
+                                        }
+                                        if (alignableNewlineSpans.size > 1) {
+                                            Button(
+                                                onClick = { onApplyTagBatch(alignableNewlineSpans) },
+                                                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
+                                                shape = MaterialTheme.shapes.small,
+                                                colors = ButtonDefaults.buttonColors(
+                                                    containerColor = MaterialTheme.colorScheme.tertiary,
+                                                    contentColor = MaterialTheme.colorScheme.onTertiary
+                                                )
+                                            ) {
+                                                Text(
+                                                    text = stringResource(Res.string.tag_align_all_newlines, alignableNewlineSpans.size),
+                                                    style = MaterialTheme.typography.labelSmall
+                                                )
+                                            }
+                                        }
+
+                                        tagSpans.forEach { span ->
+                                            FilledTonalButton(
+                                                onClick = { onApplyTagSingle(span) },
                                                 modifier = Modifier.onPointerHover { isHovered ->
                                                     onHoverSpan(if (isHovered) span.range else null)
                                                 },
@@ -1076,104 +1390,175 @@ private fun InteractiveDiagnosticBar(
                                                 shape = MaterialTheme.shapes.small,
                                             ) {
                                                 Text(
-                                                    text = "#${index + 1}: ${span.text}",
+                                                    text = span.description,
                                                     style = MaterialTheme.typography.labelSmall
                                                 )
                                             }
                                         }
-                                    } else if (spansForConflict.size == 1) {
-                                        val singleSpan = spansForConflict[0]
-                                        Button(
-                                            onClick = { onApplyCanonicalSingle(conflict, singleSpan) },
-                                            modifier = Modifier.onPointerHover { isHovered ->
-                                                onHoverSpan(if (isHovered) singleSpan.range else null)
-                                            },
-                                            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 6.dp),
-                                            shape = MaterialTheme.shapes.small,
-                                            colors = ButtonDefaults.buttonColors(
-                                                containerColor = MaterialTheme.colorScheme.error,
-                                                contentColor = MaterialTheme.colorScheme.onError
-                                            )
-                                        ) {
-                                            Text(
-                                                text = stringResource(Res.string.glossary_apply_canonical, conflict.canonicalTranslation),
-                                                style = MaterialTheme.typography.labelSmall
-                                            )
+                                    }
+                                }
+                            } else if (diagnostic != null && diagnostic.hasConflict) {
+                                if (diagnostic.isUnreviewed) {
+                                    diagnostic.conflicts.forEachIndexed { conflictIndex, conflict ->
+                                        val spansForConflict = glossarySpans.filter { it.conflict == conflict }
+                                        val isLastConflict = conflictIndex == diagnostic.conflicts.lastIndex
+
+                                        Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                                            Row(
+                                                modifier = Modifier.fillMaxWidth(),
+                                                verticalAlignment = Alignment.CenterVertically,
+                                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                                            ) {
+                                                Icon(
+                                                    painterResource(Res.drawable.ic_report),
+                                                    contentDescription = null,
+                                                    tint = MaterialTheme.colorScheme.error,
+                                                    modifier = Modifier.size(16.dp)
+                                                )
+                                                Text(
+                                                    text = stringResource(
+                                                        Res.string.glossary_conflict_alert,
+                                                        conflict.matchedSourceText.replace("\\\"", "\""),
+                                                        conflict.canonicalTranslation
+                                                    ),
+                                                    style = MaterialTheme.typography.bodySmall,
+                                                    color = MaterialTheme.colorScheme.onSurface,
+                                                    modifier = Modifier.weight(1f)
+                                                )
+                                                TooltipIconButton(
+                                                    painter = painterResource(Res.drawable.ic_content_copy),
+                                                    tooltip = stringResource(Res.string.tooltip_copy_canonical, conflict.canonicalTranslation),
+                                                    position = TooltipAnchorPosition.Above,
+                                                    onClick = { onCopyToClipboard(conflict.canonicalTranslation) }
+                                                )
+                                            }
+
+                                            FlowRow(
+                                                modifier = Modifier.fillMaxWidth(),
+                                                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                                verticalArrangement = Arrangement.spacedBy(6.dp)
+                                            ) {
+                                                if (spansForConflict.size > 1) {
+                                                    Button(
+                                                        onClick = { onApplyCanonicalBatch(conflict, spansForConflict) },
+                                                        contentPadding = PaddingValues(horizontal = 14.dp, vertical = 6.dp),
+                                                        shape = MaterialTheme.shapes.small,
+                                                        colors = ButtonDefaults.buttonColors(
+                                                            containerColor = MaterialTheme.colorScheme.error,
+                                                            contentColor = MaterialTheme.colorScheme.onError
+                                                        )
+                                                    ) {
+                                                        Text(
+                                                            text = stringResource(
+                                                                Res.string.glossary_apply_all_canonical,
+                                                                conflict.canonicalTranslation,
+                                                                spansForConflict.size
+                                                            ),
+                                                            style = MaterialTheme.typography.labelSmall
+                                                        )
+                                                    }
+
+                                                    spansForConflict.forEachIndexed { index, span ->
+                                                        OutlinedButton(
+                                                            onClick = { onApplyCanonicalSingle(conflict, span) },
+                                                            modifier = Modifier.onPointerHover { isHovered ->
+                                                                onHoverSpan(if (isHovered) span.range else null)
+                                                            },
+                                                            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
+                                                            shape = MaterialTheme.shapes.small,
+                                                        ) {
+                                                            Text(
+                                                                text = "#${index + 1}: ${span.text}",
+                                                                style = MaterialTheme.typography.labelSmall
+                                                            )
+                                                        }
+                                                    }
+                                                } else if (spansForConflict.size == 1) {
+                                                    val singleSpan = spansForConflict[0]
+                                                    Button(
+                                                        onClick = { onApplyCanonicalSingle(conflict, singleSpan) },
+                                                        modifier = Modifier.onPointerHover { isHovered ->
+                                                            onHoverSpan(if (isHovered) singleSpan.range else null)
+                                                        },
+                                                        contentPadding = PaddingValues(horizontal = 14.dp, vertical = 6.dp),
+                                                        shape = MaterialTheme.shapes.small,
+                                                        colors = ButtonDefaults.buttonColors(
+                                                            containerColor = MaterialTheme.colorScheme.error,
+                                                            contentColor = MaterialTheme.colorScheme.onError
+                                                        )
+                                                    ) {
+                                                        Text(
+                                                            text = stringResource(Res.string.glossary_apply_canonical, conflict.canonicalTranslation),
+                                                            style = MaterialTheme.typography.labelSmall
+                                                        )
+                                                    }
+                                                } else {
+                                                    Button(
+                                                        onClick = { onApplyCanonicalBatch(conflict, emptyList()) },
+                                                        contentPadding = PaddingValues(horizontal = 14.dp, vertical = 6.dp),
+                                                        shape = MaterialTheme.shapes.small,
+                                                        colors = ButtonDefaults.buttonColors(
+                                                            containerColor = MaterialTheme.colorScheme.error,
+                                                            contentColor = MaterialTheme.colorScheme.onError
+                                                        )
+                                                    ) {
+                                                        Text(
+                                                            text = stringResource(Res.string.glossary_apply_canonical, conflict.canonicalTranslation),
+                                                            style = MaterialTheme.typography.labelSmall
+                                                        )
+                                                    }
+                                                }
+
+                                                if (isLastConflict) {
+                                                    OutlinedButton(
+                                                        onClick = onAcceptNewTerm,
+                                                        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
+                                                        shape = MaterialTheme.shapes.small,
+                                                        colors = ButtonDefaults.outlinedButtonColors(
+                                                            contentColor = MaterialTheme.colorScheme.error
+                                                        ),
+                                                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.error.copy(alpha = 0.5f))
+                                                    ) {
+                                                        Text(
+                                                            text = stringResource(Res.string.glossary_accept_term),
+                                                            style = MaterialTheme.typography.labelSmall
+                                                        )
+                                                    }
+                                                }
+                                            }
                                         }
-                                    } else {
-                                        Button(
-                                            onClick = { onApplyCanonicalBatch(conflict, emptyList()) },
-                                            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 6.dp),
-                                            shape = MaterialTheme.shapes.small,
-                                            colors = ButtonDefaults.buttonColors(
-                                                containerColor = MaterialTheme.colorScheme.error,
-                                                contentColor = MaterialTheme.colorScheme.onError
-                                            )
+                                    }
+                                } else if (diagnostic.isAccepted) {
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        verticalAlignment = Alignment.CenterVertically,
+                                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                                    ) {
+                                        Icon(
+                                            painterResource(Res.drawable.ic_done),
+                                            contentDescription = null,
+                                            tint = MaterialTheme.colorScheme.primary,
+                                            modifier = Modifier.size(16.dp)
+                                        )
+                                        val canonicals = diagnostic.conflicts.joinToString(", ") { it.canonicalTranslation }
+                                        Text(
+                                            text = stringResource(Res.string.glossary_accepted_info, canonicals),
+                                            style = MaterialTheme.typography.bodySmall,
+                                            color = MaterialTheme.colorScheme.onPrimaryContainer,
+                                            modifier = Modifier.weight(1f)
+                                        )
+                                        TextButton(
+                                            onClick = onResetToCanonical,
+                                            contentPadding = PaddingValues(horizontal = 8.dp, vertical = 2.dp)
                                         ) {
                                             Text(
-                                                text = stringResource(Res.string.glossary_apply_canonical, conflict.canonicalTranslation),
+                                                text = stringResource(Res.string.glossary_reset_canonical),
                                                 style = MaterialTheme.typography.labelSmall
                                             )
                                         }
                                     }
                                 }
                             }
-                        }
-
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.End
-                        ) {
-                            OutlinedButton(
-                                onClick = onAcceptNewTerm,
-                                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
-                                shape = MaterialTheme.shapes.small,
-                                colors = ButtonDefaults.outlinedButtonColors(
-                                    contentColor = MaterialTheme.colorScheme.error
-                                ),
-                                border = BorderStroke(1.dp, MaterialTheme.colorScheme.error.copy(alpha = 0.5f))
-                            ) {
-                                Text(
-                                    text = stringResource(Res.string.glossary_accept_term),
-                                    style = MaterialTheme.typography.labelSmall
-                                )
-                            }
-                        }
-                    }
-                }
-            } else if (diagnostic.isAccepted) {
-                Surface(
-                    modifier = Modifier.fillMaxWidth(),
-                    shape = MaterialTheme.shapes.small,
-                    color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.25f),
-                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.4f))
-                ) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 8.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        Icon(
-                            painterResource(Res.drawable.ic_done),
-                            contentDescription = null,
-                            tint = MaterialTheme.colorScheme.primary,
-                            modifier = Modifier.size(18.dp)
-                        )
-                        val canonicals = diagnostic.conflicts.joinToString(", ") { it.canonicalTranslation }
-                        Text(
-                            text = stringResource(Res.string.glossary_accepted_info, canonicals),
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onPrimaryContainer,
-                            modifier = Modifier.weight(1f)
-                        )
-                        TextButton(
-                            onClick = onResetToCanonical,
-                            contentPadding = PaddingValues(horizontal = 8.dp, vertical = 4.dp)
-                        ) {
-                            Text(
-                                text = stringResource(Res.string.glossary_reset_canonical),
-                                style = MaterialTheme.typography.labelSmall
-                            )
                         }
                     }
                 }

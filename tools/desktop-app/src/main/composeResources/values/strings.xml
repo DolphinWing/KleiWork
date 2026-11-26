@@ -168,6 +168,9 @@
     <string name="toast_glossary_copied">Copied &quot;%1$s&quot; to clipboard for manual paste</string>
     <string name="tag_align_all_styles">Align all official tags (%1$d places)</string>
     <string name="tag_diagnostic_alert">Tag Issue: %1$s</string>
+    <string name="tag_newline_mismatch_summary">Newlines (\\n) mismatch: Source %1$d (%2$s) vs Target %3$d (%4$s)</string>
+    <string name="tag_align_all_newlines">Align all newlines (%1$d places)</string>
+    <string name="tag_copy_newline">Copy \\n</string>
 
     <!-- Content Descriptions -->
     <string name="content_description_back">Back</string>
