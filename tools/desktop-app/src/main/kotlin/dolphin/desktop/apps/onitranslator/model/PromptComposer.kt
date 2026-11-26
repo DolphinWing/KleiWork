@@ -304,4 +304,80 @@ object PromptComposer {
             ),
         )
     }
+
+    /**
+     * Formats an active multi-round [BrigetteDeskState] conversation into clean Traditional Chinese
+     * Markdown so translators can seamlessly hand off deep discussions to Web Brigette (Gem)
+     * without raw JSON noise.
+     */
+    fun formatHandoffMarkdown(
+        entryKey: String,
+        initialPrompt: String,
+        rounds: List<BrigetteRound>,
+        selectedRoundIndex: Int = rounds.lastIndex.coerceAtLeast(0),
+        selectedOptionIndex: Int = 0,
+        draftFollowUp: String = "",
+    ): String {
+        val cleanDraft = draftFollowUp.trim()
+        val chosenOption = rounds.getOrNull(selectedRoundIndex)?.result?.payload?.options?.getOrNull(selectedOptionIndex)
+
+        return buildString {
+            appendLine("# ONI 在地化延伸討論交接 (BrigetteDesk Handoff)")
+            appendLine()
+            appendLine("以下是我剛在 ONI Translator (BrigetteDesk) 進行中的翻譯討論紀錄，請承接完整上下文改以一般自由對話深入討論與定案（不需再輸出 JSON 格式）：")
+            if (entryKey.isNotBlank()) {
+                appendLine()
+                appendLine("- **條目 Key**: `$entryKey`")
+            }
+
+            if (initialPrompt.isNotBlank()) {
+                appendLine()
+                appendLine("## 1. 原始請求與上下文")
+                appendLine(initialPrompt.trimEnd())
+            }
+
+            if (rounds.isNotEmpty()) {
+                appendLine()
+                appendLine("## 2. 已進行之討論紀錄")
+                rounds.forEachIndexed { rIndex, round ->
+                    val roundType = if (round.isFollowUp) "追問" else "初始分析"
+                    appendLine()
+                    appendLine("### Round ${rIndex + 1}（$roundType）")
+                    if (round.isFollowUp) {
+                        appendLine("- **我的追問**: ${round.userPrompt.trim()}")
+                    }
+                    val payload = round.result.payload
+                    if (payload.analysis.isNotBlank()) {
+                        appendLine("- **Brigette 分析**: ${payload.analysis.trim()}")
+                    }
+                    if (payload.options.isNotEmpty()) {
+                        appendLine("- **候選譯文**:")
+                        payload.options.forEachIndexed { oIndex, opt ->
+                            val badges = buildList {
+                                if (oIndex == payload.recommendedIndex) add("★推薦")
+                                if (rIndex == selectedRoundIndex && oIndex == selectedOptionIndex) add("[目前暫選]")
+                            }.joinToString(" ")
+                            val badgePrefix = if (badges.isNotEmpty()) "$badges " else ""
+                            val rationaleSuffix = if (opt.rationale.isNotBlank()) " — ${opt.rationale.trim()}" else ""
+                            appendLine("  ${oIndex + 1}. $badgePrefix**${opt.label}**（${opt.score}/10）：`${opt.text}`$rationaleSuffix")
+                        }
+                    }
+                    if (payload.conclusion.isNotBlank()) {
+                        appendLine("- **結語**: ${payload.conclusion.trim()}")
+                    }
+                }
+            }
+
+            if (chosenOption != null || cleanDraft.isNotEmpty()) {
+                appendLine()
+                appendLine("## 3. 目前焦點與後續討論")
+                if (chosenOption != null) {
+                    appendLine("- **目前暫選譯文**（Round ${selectedRoundIndex + 1} · ${chosenOption.label}）：`${chosenOption.text}`")
+                }
+                if (cleanDraft.isNotEmpty()) {
+                    appendLine("- **我想接著討論**：$cleanDraft")
+                }
+            }
+        }.trimEnd()
+    }
 }

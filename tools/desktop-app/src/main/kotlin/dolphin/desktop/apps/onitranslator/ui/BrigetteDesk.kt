@@ -107,6 +107,7 @@ import dolphin.desktop.apps.onitranslator.generated.resources.ic_report
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_visibility
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_visibility_off
 import dolphin.desktop.apps.onitranslator.model.BrigetteDeskState
+import dolphin.desktop.apps.onitranslator.model.BrigetteRound
 import dolphin.desktop.apps.onitranslator.model.GeminiError
 import dolphin.desktop.apps.onitranslator.model.GeminiOption
 import dolphin.desktop.apps.onitranslator.model.GeminiPayload
@@ -149,7 +150,7 @@ fun BrigetteDeskDrawer(
         visible = state.visible,
         enter = slideInHorizontally { it } + fadeIn(),
         exit = slideOutHorizontally { it } + fadeOut(),
-        modifier = modifier.fillMaxSize().padding(start = 20.dp),
+        modifier = modifier.fillMaxSize().padding(start = 32.dp),
     ) {
         var showGlossaryDetails by remember(state.entryKey) { mutableStateOf(false) }
         var showPromptInResult by remember(state.entryKey) { mutableStateOf(false) }
@@ -235,6 +236,7 @@ fun BrigetteDeskDrawer(
                 HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f))
 
                 // Main Content (Loading / Error / Success / Ready Editable Prompt Preview)
+                val latestResult = state.result
                 when {
                     state.isLoading -> {
                         DeskScrollContainer(modifier = Modifier.weight(1f)) {
@@ -255,8 +257,8 @@ fun BrigetteDeskDrawer(
                         }
                     }
 
-                    state.result != null -> {
-                        val payload = state.result.payload
+                    latestResult != null -> {
+                        val payload = latestResult.payload
                         DeskScrollContainer(modifier = Modifier.weight(1f)) {
                             if (payload.analysis.isNotBlank()) {
                                 Surface(
@@ -338,7 +340,7 @@ fun BrigetteDeskDrawer(
                 HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
 
                 // Sticky Footer: Usage Telemetry & Primary Actions
-                val selectedOption = state.result?.payload?.options?.getOrNull(state.selectedOptionIndex)
+                val selectedOption = state.selectedOption
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -1104,37 +1106,44 @@ private fun BrigetteDeskSuccessPreview() {
         ),
         builtPromptPreview = "## Target Entry\nmsgid \"$source\"",
         editablePrompt = "## Target Entry\nmsgid \"$source\"",
-        result = GeminiTranslationResult(
-            payload = GeminiPayload(
-                matchedTerms = listOf("Oxygen => 氧氣", "Gas Pipe => 氣體管道"),
-                analysis = "建築物功能說明，需保留 <link> 與 <style> 標籤並鎖定既有術語。",
-                options = listOf(
-                    GeminiOption(
-                        label = "選項 A（鎖定術語）",
-                        score = 10,
-                        text = "在<style=\"KKeyword\">氣體管道</style>通風口之間輸送<link=\"OXYGEN\">氧氣</link>。",
-                        rationale = "術語與遊戲內標籤完全對齊，句型簡潔自然。",
+        rounds = listOf(
+            BrigetteRound(
+                userPrompt = "## Target Entry\nmsgid \"$source\"",
+                isFollowUp = false,
+                result = GeminiTranslationResult(
+                    payload = GeminiPayload(
+                        matchedTerms = listOf("Oxygen => 氧氣", "Gas Pipe => 氣體管道"),
+                        analysis = "建築物功能說明，需保留 <link> 與 <style> 標籤並鎖定既有術語。",
+                        options = listOf(
+                            GeminiOption(
+                                label = "選項 A（鎖定術語）",
+                                score = 10,
+                                text = "在<style=\"KKeyword\">氣體管道</style>通風口之間輸送<link=\"OXYGEN\">氧氣</link>。",
+                                rationale = "術語與遊戲內標籤完全對齊，句型簡潔自然。",
+                            ),
+                            GeminiOption(
+                                label = "選項 B（口語流暢）",
+                                score = 8,
+                                text = "負責將<link=\"OXYGEN\">氧氣</link>輸送至各個<style=\"KKeyword\">氣體管道</style>通風口。",
+                                rationale = "較為口語，但略偏離原文結構。",
+                            ),
+                        ),
+                        recommendedIndex = 0,
+                        conclusion = "建議採用選項 A，術語鎖定與標籤對稱皆已達標。",
                     ),
-                    GeminiOption(
-                        label = "選項 B（口語流暢）",
-                        score = 8,
-                        text = "負責將<link=\"OXYGEN\">氧氣</link>輸送至各個<style=\"KKeyword\">氣體管道</style>通風口。",
-                        rationale = "較為口語，但略偏離原文結構。",
+                    usage = GeminiUsage(
+                        promptTokens = 540,
+                        candidateTokens = 210,
+                        thoughtsTokens = 64,
+                        totalTokens = 814,
+                        elapsedMs = 2150L,
+                        modelName = "gemini-3.6-flash",
                     ),
+                    rawJson = "{}",
                 ),
-                recommendedIndex = 0,
-                conclusion = "建議採用選項 A，術語鎖定與標籤對稱皆已達標。",
-            ),
-            usage = GeminiUsage(
-                promptTokens = 540,
-                candidateTokens = 210,
-                thoughtsTokens = 64,
-                totalTokens = 814,
-                elapsedMs = 2150L,
-                modelName = "gemini-3.6-flash",
-            ),
-            rawJson = "{}",
+            )
         ),
+        selectedRoundIndex = 0,
         selectedOptionIndex = 0,
     )
 

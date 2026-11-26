@@ -6,6 +6,7 @@ import androidx.compose.ui.window.WindowPosition
 import androidx.compose.ui.window.WindowState
 import dolphin.desktop.apps.onitranslator.app.AppEvent
 import dolphin.desktop.apps.onitranslator.generated.resources.Res
+import dolphin.desktop.apps.onitranslator.generated.resources.brigette_handoff_copied
 import dolphin.desktop.apps.onitranslator.generated.resources.toast_draft_cleared
 import dolphin.desktop.apps.onitranslator.generated.resources.toast_glossary_copied
 import dolphin.desktop.apps.onitranslator.generated.resources.toast_write_failed
@@ -482,7 +483,8 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                                 entryKey = targetKey,
                                 contextOptions = options,
                                 isLoading = false,
-                                result = null,
+                                rounds = emptyList(),
+                                pendingFollowUp = "",
                                 error = GeminiError.ParseError("Failed to load system prompt: ${e.message}"),
                             )
                         )
@@ -500,8 +502,10 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                             editablePrompt = brief.userPrompt,
                             isLoading = false,
                             startedAtMs = 0L,
-                            result = null,
+                            rounds = emptyList(),
+                            selectedRoundIndex = 0,
                             selectedOptionIndex = 0,
+                            pendingFollowUp = "",
                             error = null,
                         )
                     )
@@ -523,6 +527,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                                 entryKey = targetKey,
                                 contextOptions = options,
                                 isLoading = false,
+                                rounds = emptyList(),
                                 error = GeminiError.ParseError("Failed to load system prompt: ${e.message}"),
                             )
                         )
@@ -550,7 +555,8 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                                 builtPromptPreview = baseBrief.userPrompt,
                                 editablePrompt = effectivePrompt,
                                 isLoading = false,
-                                result = null,
+                                rounds = emptyList(),
+                                pendingFollowUp = "",
                                 error = GeminiError.MissingApiKey(),
                             )
                         )
@@ -569,7 +575,8 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                                 builtPromptPreview = baseBrief.userPrompt,
                                 editablePrompt = effectivePrompt,
                                 isLoading = false,
-                                result = null,
+                                rounds = emptyList(),
+                                pendingFollowUp = "",
                                 error = GeminiError.ModelNotFound("Gemini model ID is not configured.", 404),
                             )
                         )
@@ -588,8 +595,10 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                             editablePrompt = effectivePrompt,
                             isLoading = true,
                             startedAtMs = System.currentTimeMillis(),
-                            result = null,
+                            rounds = emptyList(),
+                            selectedRoundIndex = 0,
                             selectedOptionIndex = 0,
+                            pendingFollowUp = "",
                             error = null,
                         )
                     )
@@ -609,14 +618,21 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                     when (response) {
                         is GeminiResponse.Success -> {
                             val res = response.result
+                            val round1 = BrigetteRound(
+                                userPrompt = effectivePrompt,
+                                isFollowUp = false,
+                                result = res,
+                            )
                             _state.update {
                                 it.copy(
                                     geminiSessionStats = it.geminiSessionStats.record(res.usage),
                                     uiState = it.uiState.copy(
                                         brigetteDesk = it.uiState.brigetteDesk.copy(
                                             isLoading = false,
-                                            result = res,
+                                            rounds = listOf(round1),
+                                            selectedRoundIndex = 0,
                                             selectedOptionIndex = res.payload.recommendedIndex,
+                                            pendingFollowUp = "",
                                             error = null,
                                         )
                                     )
@@ -638,6 +654,148 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                             }
                             helper?.log(
                                 "BrigetteDesk failed for $targetKey: ${response.error.message}",
+                                LogType.Warning,
+                            )
+                        }
+                    }
+                }
+            }
+
+            is AppEvent.Brigette.FollowUp -> {
+                val trimmedMessage = event.message.trim()
+                val currentDesk = state.value.uiState.brigetteDesk
+                if (trimmedMessage.isBlank() || currentDesk.rounds.isEmpty()) return
+
+                aiRequestJob?.cancel()
+
+                val configs = state.value.configs
+                val effectiveKey = configs.effectiveGeminiApiKey()
+                val model = configs.geminiModel.trim()
+
+                if (effectiveKey.isBlank()) {
+                    updateUiState {
+                        it.copy(
+                            brigetteDesk = it.brigetteDesk.copy(
+                                isLoading = false,
+                                pendingFollowUp = trimmedMessage,
+                                error = GeminiError.MissingApiKey(),
+                            )
+                        )
+                    }
+                    return
+                }
+
+                if (model.isBlank()) {
+                    updateUiState {
+                        it.copy(
+                            brigetteDesk = it.brigetteDesk.copy(
+                                isLoading = false,
+                                pendingFollowUp = trimmedMessage,
+                                error = GeminiError.ModelNotFound("Gemini model ID is not configured.", 404),
+                            )
+                        )
+                    }
+                    return
+                }
+
+                val systemPrompt = try {
+                    loadSystemPrompt()
+                } catch (e: Exception) {
+                    updateUiState {
+                        it.copy(
+                            brigetteDesk = it.brigetteDesk.copy(
+                                isLoading = false,
+                                pendingFollowUp = trimmedMessage,
+                                error = GeminiError.ParseError("Failed to load system prompt: ${e.message}"),
+                            )
+                        )
+                    }
+                    return
+                }
+
+                val history = currentDesk.rounds.flatMap { round ->
+                    listOf(
+                        GeminiTurn(GeminiTurn.ROLE_USER, round.userPrompt),
+                        GeminiTurn(GeminiTurn.ROLE_MODEL, round.result.rawJson),
+                    )
+                }
+                val targetKey = currentDesk.entryKey
+                val baseRoundCount = currentDesk.rounds.size
+                val brief = TranslationBrief(
+                    systemInstruction = systemPrompt,
+                    userPrompt = trimmedMessage,
+                    snapshot = currentDesk.contextSnapshot ?: PromptContextSnapshot(),
+                )
+
+                updateUiState {
+                    it.copy(
+                        brigetteDesk = it.brigetteDesk.copy(
+                            isLoading = true,
+                            startedAtMs = System.currentTimeMillis(),
+                            pendingFollowUp = trimmedMessage,
+                            error = null,
+                        )
+                    )
+                }
+
+                aiRequestJob = scope.launch {
+                    val response = withContext(Dispatchers.IO) {
+                        geminiClient.generateTranslation(
+                            brief = brief,
+                            apiKey = effectiveKey,
+                            model = model,
+                            history = history,
+                            followUpMessage = trimmedMessage,
+                        )
+                    }
+                    val latestDesk = state.value.uiState.brigetteDesk
+                    if (latestDesk.entryKey != targetKey ||
+                        !latestDesk.visible ||
+                        latestDesk.rounds.size != baseRoundCount
+                    ) {
+                        return@launch
+                    }
+
+                    when (response) {
+                        is GeminiResponse.Success -> {
+                            val res = response.result
+                            val nextRound = BrigetteRound(
+                                userPrompt = trimmedMessage,
+                                isFollowUp = true,
+                                result = res,
+                            )
+                            _state.update {
+                                val updatedRounds = it.uiState.brigetteDesk.rounds + nextRound
+                                it.copy(
+                                    geminiSessionStats = it.geminiSessionStats.record(res.usage),
+                                    uiState = it.uiState.copy(
+                                        brigetteDesk = it.uiState.brigetteDesk.copy(
+                                            isLoading = false,
+                                            rounds = updatedRounds,
+                                            selectedRoundIndex = updatedRounds.lastIndex,
+                                            selectedOptionIndex = res.payload.recommendedIndex,
+                                            pendingFollowUp = "",
+                                            error = null,
+                                        )
+                                    )
+                                )
+                            }
+                            helper?.log(
+                                "BrigetteDesk [R${baseRoundCount + 1} ${res.usage.modelName}] $targetKey: ${res.usage.elapsedMs}ms, ${res.usage.totalTokens} tokens"
+                            )
+                        }
+
+                        is GeminiResponse.Failure -> {
+                            updateUiState {
+                                it.copy(
+                                    brigetteDesk = it.brigetteDesk.copy(
+                                        isLoading = false,
+                                        error = response.error,
+                                    )
+                                )
+                            }
+                            helper?.log(
+                                "BrigetteDesk follow-up failed for $targetKey: ${response.error.message}",
                                 LogType.Warning,
                             )
                         }
@@ -691,7 +849,15 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
 
             is AppEvent.Brigette.SelectOption -> {
                 updateUiState {
-                    it.copy(brigetteDesk = it.brigetteDesk.copy(selectedOptionIndex = event.index))
+                    val desk = it.brigetteDesk
+                    val lastRound = desk.rounds.lastIndex.coerceAtLeast(0)
+                    val targetRound = (event.roundIndex ?: lastRound).coerceIn(0, lastRound)
+                    it.copy(
+                        brigetteDesk = desk.copy(
+                            selectedRoundIndex = targetRound,
+                            selectedOptionIndex = event.index,
+                        )
+                    )
                 }
             }
 
@@ -699,6 +865,25 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
                 edit(event.entry.key, event.text)
                 updateUiState {
                     it.copy(brigetteDesk = it.brigetteDesk.copy(visible = false, isLoading = false))
+                }
+            }
+
+            is AppEvent.Brigette.CopyHandoff -> {
+                val currentDesk = state.value.uiState.brigetteDesk
+                if (currentDesk.rounds.isNotEmpty()) {
+                    val initialPrompt = currentDesk.rounds.first().userPrompt.ifBlank {
+                        currentDesk.editablePrompt
+                    }
+                    val markdown = PromptComposer.formatHandoffMarkdown(
+                        entryKey = currentDesk.entryKey,
+                        initialPrompt = initialPrompt,
+                        rounds = currentDesk.rounds,
+                        selectedRoundIndex = currentDesk.selectedRoundIndex,
+                        selectedOptionIndex = currentDesk.selectedOptionIndex,
+                        draftFollowUp = event.draftFollowUp,
+                    )
+                    copyToSystemClipboard(markdown)
+                    SnackbarManager.showMessage(Res.string.brigette_handoff_copied)
                 }
             }
 

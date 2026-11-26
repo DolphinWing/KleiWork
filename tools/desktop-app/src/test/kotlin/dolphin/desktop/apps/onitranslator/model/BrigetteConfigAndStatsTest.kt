@@ -74,4 +74,44 @@ class BrigetteConfigAndStatsTest {
         val reset = edited.copy(editablePrompt = edited.builtPromptPreview)
         assertFalse(reset.isPromptEdited)
     }
+
+    @Test
+    fun testBrigetteDeskStateMultiRoundSelectionAndLatestResult() {
+        val r1 = GeminiTranslationResult(
+            payload = GeminiPayload(
+                options = listOf(
+                    GeminiOption("A", 9, "譯文一", "r1"),
+                    GeminiOption("B", 8, "譯文二", "r1b"),
+                ),
+                recommendedIndex = 0,
+            ),
+            usage = GeminiUsage(),
+            rawJson = "{\"r\":1}",
+        )
+        val r2 = GeminiTranslationResult(
+            payload = GeminiPayload(
+                options = listOf(
+                    GeminiOption("A2", 10, "修訂譯文", "r2"),
+                ),
+                recommendedIndex = 0,
+            ),
+            usage = GeminiUsage(),
+            rawJson = "{\"r\":2}",
+        )
+
+        val state = BrigetteDeskState(
+            visible = true,
+            rounds = listOf(
+                BrigetteRound("initial", isFollowUp = false, result = r1),
+                BrigetteRound("shorter please", isFollowUp = true, result = r2),
+            ),
+            selectedRoundIndex = 1,
+            selectedOptionIndex = 0,
+        )
+        assertEquals(r2, state.result)
+        assertEquals("修訂譯文", state.selectedOption?.text)
+
+        val fallbackToRound1 = state.copy(selectedRoundIndex = 0, selectedOptionIndex = 1)
+        assertEquals("譯文二", fallbackToRound1.selectedOption?.text)
+    }
 }

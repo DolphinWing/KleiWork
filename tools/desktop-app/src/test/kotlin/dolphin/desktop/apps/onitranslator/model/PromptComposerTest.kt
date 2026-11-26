@@ -256,4 +256,53 @@ class PromptComposerTest {
         println("=== END SAMPLE ===")
         assertTrue(brief.userPrompt.isNotBlank())
     }
+
+    @Test
+    fun testFormatHandoffMarkdownIncludesRoundsSelectionAndDraft() {
+        val round1Result = GeminiTranslationResult(
+            payload = GeminiPayload(
+                analysis = "第一輪結構分析。",
+                options = listOf(
+                    GeminiOption("選項 A", 9, "氣體管道", "符合術語"),
+                    GeminiOption("選項 B", 8, "輸送氣管", "偏口語"),
+                ),
+                recommendedIndex = 0,
+                conclusion = "建議選項 A。",
+            ),
+            usage = GeminiUsage(modelName = "gemini-2.5-flash"),
+            rawJson = "{}",
+        )
+        val round2Result = GeminiTranslationResult(
+            payload = GeminiPayload(
+                analysis = "依要求再精簡。",
+                options = listOf(
+                    GeminiOption("選項 A2", 10, "氣管", "更短"),
+                ),
+                recommendedIndex = 0,
+                conclusion = "可改採簡稱。",
+            ),
+            usage = GeminiUsage(modelName = "gemini-2.5-flash"),
+            rawJson = "{}",
+        )
+        val markdown = PromptComposer.formatHandoffMarkdown(
+            entryKey = "STRINGS.BUILDINGS.PREFABS.GASCONDUIT.NAME",
+            initialPrompt = "## Target Entry\nmsgid \"Gas Pipe\"",
+            rounds = listOf(
+                BrigetteRound(userPrompt = "## Target Entry\nmsgid \"Gas Pipe\"", isFollowUp = false, result = round1Result),
+                BrigetteRound(userPrompt = "有沒有更精簡的說法", isFollowUp = true, result = round2Result),
+            ),
+            selectedRoundIndex = 0,
+            selectedOptionIndex = 0,
+            draftFollowUp = "擔心與玩家習慣衝突",
+        )
+
+        assertTrue(markdown.contains("不需再輸出 JSON 格式"))
+        assertTrue(markdown.contains("STRINGS.BUILDINGS.PREFABS.GASCONDUIT.NAME"))
+        assertTrue(markdown.contains("Round 1（初始分析）"))
+        assertTrue(markdown.contains("Round 2（追問）"))
+        assertTrue(markdown.contains("有沒有更精簡的說法"))
+        assertTrue(markdown.contains("★推薦 [目前暫選] **選項 A**"))
+        assertTrue(markdown.contains("**目前暫選譯文**（Round 1 · 選項 A）：`氣體管道`"))
+        assertTrue(markdown.contains("**我想接著討論**：擔心與玩家習慣衝突"))
+    }
 }

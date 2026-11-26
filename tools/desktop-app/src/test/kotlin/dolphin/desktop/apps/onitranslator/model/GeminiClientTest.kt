@@ -45,6 +45,50 @@ class GeminiClientTest {
     }
 
     @Test
+    fun testBuildRequestBodyMultiTurnHistoryAndTrimming() {
+        val brief = TranslationBrief(
+            systemInstruction = "Brigette system rules",
+            userPrompt = "Initial entry prompt",
+            snapshot = PromptContextSnapshot(),
+        )
+        val twoTurnHistory = listOf(
+            GeminiTurn(GeminiTurn.ROLE_USER, "Initial entry prompt"),
+            GeminiTurn(GeminiTurn.ROLE_MODEL, """{"options":[]}"""),
+        )
+        val followUpBody = client.buildRequestBody(
+            brief = brief,
+            history = twoTurnHistory,
+            followUpMessage = "Make option A shorter",
+        )
+        val contents = Json.parseToJsonElement(followUpBody).jsonObject["contents"]!!.jsonArray
+        assertEquals(3, contents.size)
+        assertEquals("user", contents[0].jsonObject["role"]!!.jsonPrimitive.content)
+        assertEquals("Initial entry prompt", contents[0].jsonObject["parts"]!!.jsonArray[0].jsonObject["text"]!!.jsonPrimitive.content)
+        assertEquals("model", contents[1].jsonObject["role"]!!.jsonPrimitive.content)
+        assertEquals("user", contents[2].jsonObject["role"]!!.jsonPrimitive.content)
+        assertEquals("Make option A shorter", contents[2].jsonObject["parts"]!!.jsonArray[0].jsonObject["text"]!!.jsonPrimitive.content)
+
+        // Build 7 completed rounds (14 turns) and verify trimming keeps Round 1 + latest 4 rounds + active follow-up (11 turns)
+        val longHistory = (1..7).flatMap { round ->
+            listOf(
+                GeminiTurn(GeminiTurn.ROLE_USER, "u$round"),
+                GeminiTurn(GeminiTurn.ROLE_MODEL, "m$round"),
+            )
+        }
+        val trimmedBody = client.buildRequestBody(
+            brief = brief,
+            history = longHistory,
+            followUpMessage = "u8",
+        )
+        val trimmedContents = Json.parseToJsonElement(trimmedBody).jsonObject["contents"]!!.jsonArray
+        assertEquals(GeminiClient.MAX_HISTORY_ROUNDS * 2 + 1, trimmedContents.size)
+        val turnTexts = trimmedContents.map {
+            it.jsonObject["parts"]!!.jsonArray[0].jsonObject["text"]!!.jsonPrimitive.content
+        }
+        assertEquals(listOf("u1", "m1", "u4", "m4", "u5", "m5", "u6", "m6", "u7", "m7", "u8"), turnTexts)
+    }
+
+    @Test
     fun testParseSuccessResponseWithUsageAndThoughts() {
         val payloadJson = """
             {

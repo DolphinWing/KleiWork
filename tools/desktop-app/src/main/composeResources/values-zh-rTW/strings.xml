@@ -116,6 +116,7 @@
     <string name="brigette_error_rate_minute_delay">觸發每分鐘速率上限（RPM），建議約 %1$d 秒後重試。</string>
     <string name="brigette_error_rate_generic">已達速率上限（HTTP 429），請稍候重試。</string>
     <string name="brigette_error_cancelled">已取消本次翻譯請求。</string>
+    <string name="brigette_handoff_copied">已複製交接紀錄至剪貼簿，可直接貼至網頁版繼續討論</string>
     <string name="bottom_bar_ai_stats">AI: %1$d 次 · %2$d tok</string>
     <string name="bottom_bar_ai_stats_detail">本次工作階段 AI 統計 — 請求: %1$d 次｜輸入: %2$d｜輸出: %3$d｜思考: %4$d｜合計: %5$d tok｜總耗時: %6$ss</string>
 

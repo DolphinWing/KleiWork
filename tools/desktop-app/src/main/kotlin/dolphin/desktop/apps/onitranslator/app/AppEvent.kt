@@ -118,6 +118,7 @@ sealed interface AppEvent {
             val optionsOverride: PromptContextOptions? = null,
             val promptOverride: String? = null,
         ) : Brigette
+        data class FollowUp(val message: String) : Brigette
         object Cancel : Brigette
         data class UpdateContextOptions(
             val entry: EditorData,
@@ -125,8 +126,9 @@ sealed interface AppEvent {
         ) : Brigette
         data class UpdatePrompt(val text: String) : Brigette
         object ResetPrompt : Brigette
-        data class SelectOption(val index: Int) : Brigette
+        data class SelectOption(val index: Int, val roundIndex: Int? = null) : Brigette
         data class ApplyOption(val entry: PoEntry, val text: String) : Brigette
+        data class CopyHandoff(val draftFollowUp: String = "") : Brigette
         object Dismiss : Brigette
     }
 }

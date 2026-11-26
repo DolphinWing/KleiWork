@@ -74,6 +74,15 @@ data class GeminiModelsState(
 )
 
 /**
+ * Single completed conversation round (initial brief or follow-up + Gemini result) in BrigetteDesk.
+ */
+data class BrigetteRound(
+    val userPrompt: String,
+    val isFollowUp: Boolean = false,
+    val result: GeminiTranslationResult,
+)
+
+/**
  * Transient overlay state for the BrigetteDesk AI translation assistant.
  */
 data class BrigetteDeskState(
@@ -85,12 +94,20 @@ data class BrigetteDeskState(
     val editablePrompt: String = "",
     val isLoading: Boolean = false,
     val startedAtMs: Long = 0L,
-    val result: GeminiTranslationResult? = null,
+    val rounds: List<BrigetteRound> = emptyList(),
+    val selectedRoundIndex: Int = 0,
     val selectedOptionIndex: Int = 0,
+    val pendingFollowUp: String = "",
     val error: GeminiError? = null,
 ) {
     val isPromptEdited: Boolean
         get() = editablePrompt != builtPromptPreview
+
+    val result: GeminiTranslationResult?
+        get() = rounds.lastOrNull()?.result
+
+    val selectedOption: GeminiOption?
+        get() = rounds.getOrNull(selectedRoundIndex)?.result?.payload?.options?.getOrNull(selectedOptionIndex)
 }
 
 /**

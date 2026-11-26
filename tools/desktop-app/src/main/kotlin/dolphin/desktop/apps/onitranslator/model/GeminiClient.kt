@@ -39,6 +39,19 @@ data class GeminiOption(
 )
 
 /**
+ * Single conversational turn (`"user"` or `"model"`) sent in the Gemini `contents` array.
+ */
+data class GeminiTurn(
+    val role: String,
+    val text: String,
+) {
+    companion object {
+        const val ROLE_USER = "user"
+        const val ROLE_MODEL = "model"
+    }
+}
+
+/**
  * Structured JSON payload matching `brigette_system_prompt.md`.
  */
 data class GeminiPayload(
@@ -140,6 +153,24 @@ class GeminiClient(
     companion object {
         const val DEFAULT_BASE_URL = "https://generativelanguage.googleapis.com/v1beta"
         const val DEFAULT_MODEL = "gemini-2.5-flash"
+        const val MAX_HISTORY_ROUNDS = 5
+
+        /**
+         * Bounds conversation history while always preserving Round 1 (full target entry + glossary/sibling context)
+         * plus the most recent completed rounds.
+         */
+        internal fun trimHistoryTurns(
+            history: List<GeminiTurn>,
+            maxRounds: Int = MAX_HISTORY_ROUNDS,
+        ): List<GeminiTurn> {
+            if (history.isEmpty() || maxRounds <= 0) return emptyList()
+            val maxTurns = maxRounds * 2
+            if (history.size <= maxTurns) return history
+            if (maxRounds == 1) return history.take(2)
+            val firstRound = history.take(2)
+            val recentTail = history.takeLast((maxRounds - 1) * 2)
+            return firstRound + recentTail
+        }
 
         private val NON_TEXT_MODEL_KEYWORDS = listOf(
             "nano-banana",
@@ -181,7 +212,8 @@ class GeminiClient(
     }
 
     /**
-     * Sends [brief] to Gemini `generateContent` with a strict Structured Output JSON schema.
+     * Sends [brief] (and optional multi-turn [history] + [followUpMessage]) to Gemini `generateContent`
+     * with a strict Structured Output JSON schema.
      * Supports structured concurrency cancellation via [suspendCancellableCoroutine].
      */
     suspend fun generateTranslation(
@@ -189,6 +221,8 @@ class GeminiClient(
         apiKey: String,
         model: String = DEFAULT_MODEL,
         temperature: Double = 0.3,
+        history: List<GeminiTurn> = emptyList(),
+        followUpMessage: String? = null,
     ): GeminiResponse {
         val cleanKey = apiKey.trim()
         if (cleanKey.isBlank()) {
@@ -202,7 +236,7 @@ class GeminiClient(
 
         val encodedModel = URLEncoder.encode(cleanModel, StandardCharsets.UTF_8)
         val endpoint = "${baseUrl.trimEnd('/')}/models/$encodedModel:generateContent"
-        val requestBody = buildRequestBody(brief, temperature)
+        val requestBody = buildRequestBody(brief, temperature, history, followUpMessage)
 
         val request = HttpRequest.newBuilder()
             .uri(URI.create(endpoint))
@@ -287,7 +321,14 @@ class GeminiClient(
         }
     }
 
-    internal fun buildRequestBody(brief: TranslationBrief, temperature: Double = 0.3): String {
+    internal fun buildRequestBody(
+        brief: TranslationBrief,
+        temperature: Double = 0.3,
+        history: List<GeminiTurn> = emptyList(),
+        followUpMessage: String? = null,
+    ): String {
+        val boundedHistory = trimHistoryTurns(history)
+        val activeUserText = followUpMessage?.takeIf { it.isNotBlank() } ?: brief.userPrompt
         val body = buildJsonObject {
             if (brief.systemInstruction.isNotBlank()) {
                 put("system_instruction", buildJsonObject {
@@ -298,10 +339,18 @@ class GeminiClient(
             }
 
             put("contents", buildJsonArray {
+                boundedHistory.forEach { turn ->
+                    add(buildJsonObject {
+                        put("role", turn.role)
+                        put("parts", buildJsonArray {
+                            add(buildJsonObject { put("text", turn.text) })
+                        })
+                    })
+                }
                 add(buildJsonObject {
-                    put("role", "user")
+                    put("role", GeminiTurn.ROLE_USER)
                     put("parts", buildJsonArray {
-                        add(buildJsonObject { put("text", brief.userPrompt) })
+                        add(buildJsonObject { put("text", activeUserText) })
                     })
                 })
             })

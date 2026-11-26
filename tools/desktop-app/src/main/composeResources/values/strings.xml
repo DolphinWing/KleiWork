@@ -116,6 +116,7 @@
     <string name="brigette_error_rate_minute_delay">Rate limit (RPM) reached. Retry in ~%1$ds.</string>
     <string name="brigette_error_rate_generic">Rate limit reached (HTTP 429). Please wait and retry.</string>
     <string name="brigette_error_cancelled">Request cancelled.</string>
+    <string name="brigette_handoff_copied">Copied conversation handoff to clipboard</string>
     <string name="bottom_bar_ai_stats">AI: %1$d req · %2$d tok</string>
     <string name="bottom_bar_ai_stats_detail">Session AI Usage — Requests: %1$d | In: %2$d | Out: %3$d | Thoughts: %4$d | Total: %5$d tok | Time: %6$ss</string>
 

@@ -92,7 +92,7 @@
     *   `searchState`: 搜尋關鍵字與是否啟用搜尋模式 (`isActive`, `text`)。
     *   `editorData`: 右側編輯器當前選中的資料。
     *   `dialogState`: 控制對話框 (Config, Save Confirm, Log Window, Jump Dialog, Exit Confirm Dialog) 的顯示。
-    *   `brigetteDesk`: `BrigetteDesk` AI 翻譯疊層狀態（可見性、目標 Key、記憶體動態 `PromptContextOptions`、快照、Prompt 預覽、載入計時、結果與錯誤）。
+    *   `brigetteDesk`: `BrigetteDesk` AI 翻譯疊層狀態（可見性、目標 Key、記憶體動態 `PromptContextOptions`、快照、Prompt 預覽、載入計時、多輪對話紀錄 `rounds: List<BrigetteRound>`、跨輪選取索引 `selectedRoundIndex`／`selectedOptionIndex`、待重試追問草稿 `pendingFollowUp` 與錯誤）。
     *   `geminiModelsState`: 設定頁載入可用模型列表之載入狀態、模型清單與錯誤訊息。
 
 ### 4.2. 翻譯與檔案處理 (`PoHelper`)
@@ -295,9 +295,10 @@
     * 嚴禁全量傳送 `glossary.tsv`。採兩階段過濾：優先解析 `<link="ID">` 精準命中規範詞，再保護所有 XML 樣式標籤後以 word-boundary 掃描純文字（依英文長度降序、上限 25 條）。
 * **正反序無關之同組上下文 (`findSiblingEntries`)**：
     * 依 `msgctxt` 父層前綴（至少三層結構）自動撈取直接兄弟條目（依 `.NAME` / `.TITLE` / `.DESC` / `.EFFECT` / `.TOOLTIP` 優先排序），無論譯者先翻標題或先翻說明皆可維持稱呼與語氣一致。
-* **差異與歷史保留 (`compose`)**：
+* **差異與歷史保留 (`compose`) & 網頁交接格式 (`formatHandoffMarkdown`)**：
     * 當條目處於 `msgidChanged` 時自動注入 `oldSourceText` 與 `poText` 供模型做最小幅微調；所有 PO 字串比照 4.2 節空白保留政策，絕不 `.trim()` 並完整保留字面 `\n`。
     * 支援透過 `PromptContextOptions` 獨立開關「同組關聯詞條」與「近期譯文」。
+    * 提供 `formatHandoffMarkdown()` 將多輪 `BrigetteRound` 討論、目前暫選選項與未送出追問草稿組裝為乾淨的繁體中文 Markdown（附帶「結束 JSON 模式、改採自由對話」交接指令），便於長討論一鍵複製轉往網頁版 Brigette Gem。
 
 ### 4.14. Gemini API 通訊層與實機驗證 (BrigetteDesk — Step 2: `GeminiClient`)
 
@@ -308,8 +309,9 @@
 * **Structured Output 與 Thinking 過濾**：
     * `generationConfig` 指定 `responseMimeType = "application/json"` 並強制附上 OpenAPI `responseSchema`，確保回傳固定結構（`matchedTerms`、`analysis`、`options`、`recommendedIndex`、`conclusion`）。
     * 解析 `candidates[0].content.parts` 時自動過濾 `thought == true` 思考片段，於 `recommendedIndex` 越界時自動鉗位，並將 `options[].text` 內被 JSON 反序列化為實體斷行的 `\r\n` / `\r` / `\n` 正規化還原為 PO 字面 `\n`（`PoHelper.escapePoValue` 寫檔時亦提供最終防線）。
-* **非同步取消、動態模型查詢與 429 配額解析**：
+* **非同步取消、多輪對話裁切、動態模型查詢與 429 配額解析**：
     * 透過 `suspendCancellableCoroutine` 橋接 `HttpClient.sendAsync`，協程取消時立即呼叫 `future.cancel(true)` 中斷網路連線；同時提取 `usageMetadata`（含 `promptTokenCount`、`candidatesTokenCount`、`thoughtsTokenCount`、`totalTokenCount`）與毫秒耗時 `elapsedMs`。
+    * `generateTranslation` 與 `buildRequestBody` 支援傳入多輪歷史 (`history: List<GeminiTurn>`) 與追問訊息 (`followUpMessage`)，並透過 `trimHistoryTurns` 將歷史上限定在 `MAX_HISTORY_ROUNDS`（預設 5 輪，永遠保留第 1 輪完整條目與術語上下文 + 最近完成輪次），同時將 `thought == true` 排除後的 `rawJson` 作為 `model` 回合，節制 Token 並利於前綴快取。
     * `listModels` 查詢 `GET /v1beta/models`，自動篩選支援 `generateContent` 之 `gemini-*` 純文字候選模型（排除 `nano-banana`、`-image`、`imagen`、`veo`、`-tts`、`-audio`、`-live`、`robotics`、`computer-use`、`deep-research`、`embedding` 等非翻譯特化子模型；過濾為空時仍安全降級）供設定頁即時挑選。
     * 遭遇 `HTTP 429` 時解析 `RetryInfo.retryDelay`（含 `Retry-After` Header fallback）與 `QuotaFailure.violations[0].quotaId`，區分每分鐘上限 (`PerMinute`) 與每日額度 (`PerDay`)。
 * **Opt-in 實機煙霧測試 (Live Smoke Test)**：
@@ -331,8 +333,8 @@ Step 3 完成設定持久化與 [`OniTranslatorViewModel`](src/main/kotlin/dolph
     * `Configs.effectiveGeminiApiKey()` 在設定欄位留空時自動 fallback 讀取環境變數 `GEMINI_API_KEY`。
     * [`ConfigScreen`](src/main/kotlin/dolphin/desktop/apps/onitranslator/ui/ConfigScreen.kt) 支援 API Key 遮罩切換、`ExposedDropdownMenuBox` 載入並選取 AI Studio 最新模型或手動輸入 Model ID；僅異動 Gemini 設定時維持 `pathChanged = false`，不觸發 PO 檔重載。
 * **MVI 生命週期與競態防護**：
-    * `AppEvent.Brigette` 涵蓋 `Open`（僅在本機組裝並開啟預覽）、`UpdateContextOptions`、`UpdatePrompt`、`ResetPrompt`、`Request`、`Cancel`、`SelectOption`、`ApplyOption`、`Dismiss`。
-    * 切換條目（`Editor.Select`）、取消或關閉疊層時立即取消 `aiRequestJob`；非同步回應返回時核對 `entryKey` 一致性才更新狀態，防止舊條目覆寫。
+    * `AppEvent.Brigette` 涵蓋 `Open`（僅在本機組裝並開啟預覽）、`UpdateContextOptions`、`UpdatePrompt`、`ResetPrompt`、`Request`（開啟新回合並清空舊 `rounds`）、`FollowUp`（帶入多輪歷史追問；若失敗或取消仍完整保留既有 `rounds` 與 `pendingFollowUp` 供重試或套用）、`Cancel`、跨輪 `SelectOption(index, roundIndex)`、`ApplyOption`、`CopyHandoff`、`Dismiss`。
+    * 切換條目（`Editor.Select`）、取消或關閉疊層時立即取消 `aiRequestJob`；非同步回應返回時核對 `entryKey` 與基準輪數一致性才更新狀態，防止舊條目或舊請求覆寫。
 * **近期譯文視窗與 Session 統計**：
     * ViewModel 維護上限 3 筆的 `recentTranslations`（隨 `edit()` 更新並去重），供 `PromptComposer` 動態取用。
     * 每次翻譯請求成功自動累加 `AppState.geminiSessionStats`，並將精簡遙測寫入 `PoHelper.log()`（嚴禁寫入 API Key）；`ApplyOption` 比照智慧貼上直接呼叫 `edit()` 落地並觸發 AutoSave。
