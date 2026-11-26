@@ -117,6 +117,16 @@
     <string name="brigette_error_rate_generic">Rate limit reached (HTTP 429). Please wait and retry.</string>
     <string name="brigette_error_cancelled">Request cancelled.</string>
     <string name="brigette_handoff_copied">Copied conversation handoff to clipboard</string>
+    <string name="brigette_copy_handoff_tooltip">Copy conversation handoff for web chat</string>
+    <string name="brigette_followup_placeholder">Ask a follow-up (e.g., shorter, more natural)… Ctrl+Enter to send</string>
+    <string name="brigette_followup_send">Send</string>
+    <string name="brigette_retry_followup">Retry Follow-up</string>
+    <string name="brigette_round_initial">Round %1$d · Initial</string>
+    <string name="brigette_round_followup">Round %1$d · Follow-up</string>
+    <string name="brigette_round_expand">Expand</string>
+    <string name="brigette_round_collapse">Collapse</string>
+    <string name="brigette_round_selected_badge">Selected</string>
+    <string name="brigette_apply_option_from_round">Apply Selected (R%1$d)</string>
     <string name="bottom_bar_ai_stats">AI: %1$d req · %2$d tok</string>
     <string name="bottom_bar_ai_stats_detail">Session AI Usage — Requests: %1$d | In: %2$d | Out: %3$d | Thoughts: %4$d | Total: %5$d tok | Time: %6$ss</string>
 

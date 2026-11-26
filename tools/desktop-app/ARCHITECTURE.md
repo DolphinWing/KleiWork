@@ -349,7 +349,9 @@ Step 4 完成 [`BrigetteDeskDrawer`](src/main/kotlin/dolphin/desktop/apps/onitra
     * **動態 Context 晶片列 (`DeskContextChip`)**：採用 `.clip(shape)` 嚴格裁切圓角之自訂晶片（避免桌面端 Material `FilterChip` 預設觸控熱區在滑鼠懸停時出現方形灰底邊界），於記憶體內即時切換「同組詞條」與「近期譯文」開關並立即在本機重算 Prompt 與命中數量（0 API 成本），支援展開命中的「術語表」。
     * **Ready 預覽態**：輸入框自適應撐滿剩餘垂直空間，直接顯示可編輯之 Prompt 預覽區（含字元數統計與一鍵重設），讓譯者在發送前確認並微調指令，按下「發送至 Gemini」才正式發出請求。
     * **Loading 態**：顯示 `NisbetThinking` 插圖、進度條、每 100ms 更新之經過秒數與「取消」按鈕。
-    * **Success 態**：顯示 Brigette 分析與結語，並將 2–3 組評分候選譯文渲染為可點擊選項卡；每張卡片即時執行 `TagSensor.diagnose()` 與 `GlossarySensor.diagnose()` 呈現標籤、術語與換行一致徽章，並提供行內 **`NisbetPeekCard` 遊戲預覽切換**。亦支援展開並微調 Prompt 後再次重送。
+    * **Success 態、多輪追問與長討論網頁交接**：顯示 Brigette 分析與結語，並將 2–3 組評分候選譯文渲染為可點擊選項卡；每張卡片即時執行 `TagSensor.diagnose()` 與 `GlossarySensor.diagnose()` 呈現標籤、術語與換行一致徽章，並提供行內 **`NisbetPeekCard` 遊戲預覽切換**。
+    * **多輪對話、跨輪選取與次數策略**：已有結果時於頁尾上方常駐精簡單行追問輸入列（支援 `Ctrl+Enter` 送出且刻意不攔截單獨 `Enter`，避開 Windows 注音選字誤觸）；UI 端不設追問次數硬上限（所有輪次皆完整保留於記憶體供回看、跨輪選取與交接匯出），API 傳輸端則由 `GeminiClient.trimHistoryTurns` 採滑動視窗封頂（永遠釘住第 1 輪 + 最近 4 輪，詳見 4.14 節）。進入第 2 輪後先前回合自動收合為可展開摘要卡，追問載入或錯誤（如 HTTP 429）均於底部內嵌提示並保留前輪成果。
+    * **一鍵網頁交接出口**：已有對話結果時，Header 右側顯示「複製討論交接紀錄」按鈕，連同未送出的追問草稿一併輸出為 Markdown（並指示網頁版改採自由對話），無縫銜接網頁長討論與編輯器智慧貼上閉環。
     * **Error 態**：區分缺 Key／未選模型／驗證失敗（引導開啟設定）與 HTTP 429 配額類型（`PerMinute` 等待秒數 vs `PerDay` 每日上限）。
 * **一鍵套用與累計統計**：
     * 點擊「套用所選譯文」比照智慧貼上同步備份 `backupText`（相容既有復原按鈕）、寫入編輯器並自動存檔；疊層頁尾左下角即時顯示 Session 累計請求數／Token（含懸停明細），結果態並同時呈現單次耗時與 Token 明細，[`OniTranslatorBottomBar`](src/main/kotlin/dolphin/desktop/apps/onitranslator/app/OniTranslatorBottomBar.kt) 亦同步呈現本次 Session 累計統計。

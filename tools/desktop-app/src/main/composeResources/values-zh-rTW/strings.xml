@@ -117,6 +117,16 @@
     <string name="brigette_error_rate_generic">已達速率上限（HTTP 429），請稍候重試。</string>
     <string name="brigette_error_cancelled">已取消本次翻譯請求。</string>
     <string name="brigette_handoff_copied">已複製交接紀錄至剪貼簿，可直接貼至網頁版繼續討論</string>
+    <string name="brigette_copy_handoff_tooltip">複製討論交接紀錄（貼至網頁繼續長討論）</string>
+    <string name="brigette_followup_placeholder">追問 Brigette（如：改短、換口氣、問術語）… Ctrl+Enter 送出</string>
+    <string name="brigette_followup_send">追問</string>
+    <string name="brigette_retry_followup">重試追問</string>
+    <string name="brigette_round_initial">第 %1$d 輪 · 初始分析</string>
+    <string name="brigette_round_followup">第 %1$d 輪 · 追問</string>
+    <string name="brigette_round_expand">展開</string>
+    <string name="brigette_round_collapse">收合</string>
+    <string name="brigette_round_selected_badge">已選定</string>
+    <string name="brigette_apply_option_from_round">套用所選譯文 (R%1$d)</string>
     <string name="bottom_bar_ai_stats">AI: %1$d 次 · %2$d tok</string>
     <string name="bottom_bar_ai_stats_detail">本次工作階段 AI 統計 — 請求: %1$d 次｜輸入: %2$d｜輸出: %3$d｜思考: %4$d｜合計: %5$d tok｜總耗時: %6$ss</string>
 

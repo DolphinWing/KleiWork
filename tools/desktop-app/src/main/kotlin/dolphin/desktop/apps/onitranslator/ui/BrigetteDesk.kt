@@ -9,6 +9,7 @@ import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -56,6 +57,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.input.key.Key
+import androidx.compose.ui.input.key.KeyEventType
+import androidx.compose.ui.input.key.isCtrlPressed
+import androidx.compose.ui.input.key.key
+import androidx.compose.ui.input.key.onPreviewKeyEvent
+import androidx.compose.ui.input.key.type
 import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.text.font.FontFamily
@@ -69,6 +76,8 @@ import dolphin.desktop.apps.onitranslator.generated.resources.Res
 import dolphin.desktop.apps.onitranslator.generated.resources.bottom_bar_ai_stats
 import dolphin.desktop.apps.onitranslator.generated.resources.bottom_bar_ai_stats_detail
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_apply_option
+import dolphin.desktop.apps.onitranslator.generated.resources.brigette_apply_option_from_round
+import dolphin.desktop.apps.onitranslator.generated.resources.brigette_copy_handoff_tooltip
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_ctx_glossary
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_ctx_recent
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_ctx_siblings
@@ -80,6 +89,8 @@ import dolphin.desktop.apps.onitranslator.generated.resources.brigette_error_rat
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_error_rate_generic
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_error_rate_minute_delay
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_error_unauthorized
+import dolphin.desktop.apps.onitranslator.generated.resources.brigette_followup_placeholder
+import dolphin.desktop.apps.onitranslator.generated.resources.brigette_followup_send
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_loading_elapsed
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_open_settings
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_preview_hide
@@ -90,6 +101,12 @@ import dolphin.desktop.apps.onitranslator.generated.resources.brigette_prompt_re
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_recommended
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_resend
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_retry
+import dolphin.desktop.apps.onitranslator.generated.resources.brigette_retry_followup
+import dolphin.desktop.apps.onitranslator.generated.resources.brigette_round_collapse
+import dolphin.desktop.apps.onitranslator.generated.resources.brigette_round_expand
+import dolphin.desktop.apps.onitranslator.generated.resources.brigette_round_followup
+import dolphin.desktop.apps.onitranslator.generated.resources.brigette_round_initial
+import dolphin.desktop.apps.onitranslator.generated.resources.brigette_round_selected_badge
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_send_request
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_sensor_glossary_ok
 import dolphin.desktop.apps.onitranslator.generated.resources.brigette_sensor_glossary_warn
@@ -102,6 +119,7 @@ import dolphin.desktop.apps.onitranslator.generated.resources.button_cancel
 import dolphin.desktop.apps.onitranslator.generated.resources.button_close
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_auto_awesome
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_close
+import dolphin.desktop.apps.onitranslator.generated.resources.ic_content_copy
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_done
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_report
 import dolphin.desktop.apps.onitranslator.generated.resources.ic_visibility
@@ -121,6 +139,7 @@ import dolphin.desktop.apps.onitranslator.model.PromptContextSnapshot
 import dolphin.desktop.apps.onitranslator.model.SiblingContext
 import dolphin.desktop.apps.onitranslator.model.TagSensor
 import dolphin.desktop.apps.onitranslator.theme.OniTranslatorTheme
+import dolphin.desktop.apps.onitranslator.widget.TooltipIconButton
 import kotlinx.coroutines.delay
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
@@ -145,6 +164,8 @@ fun BrigetteDeskDrawer(
     modifier: Modifier = Modifier,
     sessionStats: GeminiSessionStats = GeminiSessionStats(),
     initialPreviewIndices: Set<Int> = emptySet(),
+    initialExpandedHistoryRounds: Set<Int> = emptySet(),
+    initialFollowUpDraft: String = "",
 ) {
     AnimatedVisibility(
         visible = state.visible,
@@ -154,13 +175,28 @@ fun BrigetteDeskDrawer(
     ) {
         var showGlossaryDetails by remember(state.entryKey) { mutableStateOf(false) }
         var showPromptInResult by remember(state.entryKey) { mutableStateOf(false) }
-        var previewIndices by remember(state.entryKey, state.result) { mutableStateOf(initialPreviewIndices) }
-        val lastSentOptions = remember(state.entryKey, state.startedAtMs, state.result) {
+        var followUpText by remember(state.entryKey) { mutableStateOf(initialFollowUpDraft) }
+        var expandedHistoryRounds by remember(state.entryKey, state.rounds.size) {
+            mutableStateOf(initialExpandedHistoryRounds)
+        }
+        var previewPairs by remember(state.entryKey, state.rounds.size) {
+            val latestIdx = state.rounds.lastIndex.coerceAtLeast(0)
+            mutableStateOf(initialPreviewIndices.map { latestIdx to it }.toSet())
+        }
+        val lastSentOptions = remember(state.entryKey, state.startedAtMs, state.rounds.size) {
             state.contextOptions
         }
-        val optionsDirty = state.result != null && state.contextOptions != lastSentOptions
+        val hasRounds = state.rounds.isNotEmpty()
+        val optionsDirty = hasRounds && state.contextOptions != lastSentOptions
         val activeModel = state.result?.usage?.modelName?.ifBlank { configuredModel }
             ?: configuredModel.ifBlank { "—" }
+
+        fun submitFollowUp() {
+            val trimmed = followUpText.trim()
+            if (trimmed.isBlank() || state.isLoading) return
+            followUpText = ""
+            onEvent(AppEvent.Brigette.FollowUp(trimmed))
+        }
 
         Surface(
             modifier = Modifier.fillMaxSize(),
@@ -206,6 +242,14 @@ fun BrigetteDeskDrawer(
                         )
                     }
                     Spacer(Modifier.weight(1f))
+                    if (hasRounds) {
+                        TooltipIconButton(
+                            painter = painterResource(Res.drawable.ic_content_copy),
+                            tooltip = stringResource(Res.string.brigette_copy_handoff_tooltip),
+                            modifier = Modifier.size(28.dp),
+                            onClick = { onEvent(AppEvent.Brigette.CopyHandoff(draftFollowUp = followUpText)) },
+                        )
+                    }
                     IconButton(
                         onClick = { onEvent(AppEvent.Brigette.Dismiss) },
                         modifier = Modifier.size(28.dp),
@@ -235,9 +279,92 @@ fun BrigetteDeskDrawer(
 
                 HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f))
 
-                // Main Content (Loading / Error / Success / Ready Editable Prompt Preview)
-                val latestResult = state.result
+                // Main Content (Multi-turn Conversation / Initial Loading / Initial Error / Ready Editable Prompt Preview)
                 when {
+                    hasRounds -> {
+                        val conversationScrollState = rememberScrollState()
+                        LaunchedEffect(state.rounds.size, state.isLoading, state.error) {
+                            if (state.rounds.size > 1 || state.isLoading || state.error != null) {
+                                conversationScrollState.animateScrollTo(conversationScrollState.maxValue)
+                            }
+                        }
+                        DeskScrollContainer(
+                            modifier = Modifier.weight(1f),
+                            scrollState = conversationScrollState,
+                        ) {
+                            state.rounds.forEachIndexed { roundIndex, round ->
+                                val isLatest = roundIndex == state.rounds.lastIndex
+                                val isExpanded = isLatest || roundIndex in expandedHistoryRounds
+                                val hasSelectedInRound = roundIndex == state.selectedRoundIndex
+
+                                if (isExpanded) {
+                                    RoundDetailSection(
+                                        roundIndex = roundIndex,
+                                        totalRounds = state.rounds.size,
+                                        round = round,
+                                        isLatest = isLatest,
+                                        hasSelectedInRound = hasSelectedInRound,
+                                        selectedOptionIndex = state.selectedOptionIndex,
+                                        sourceText = sourceText,
+                                        glossaryTerms = glossaryTerms,
+                                        previewPairs = previewPairs,
+                                        onCollapse = { expandedHistoryRounds = expandedHistoryRounds - roundIndex },
+                                        onSelectOption = { optIndex ->
+                                            onEvent(AppEvent.Brigette.SelectOption(optIndex, roundIndex))
+                                        },
+                                        onTogglePreview = { optIndex ->
+                                            val pair = roundIndex to optIndex
+                                            previewPairs = if (pair in previewPairs) {
+                                                previewPairs - pair
+                                            } else {
+                                                previewPairs + pair
+                                            }
+                                        },
+                                    )
+                                } else {
+                                    HistoryRoundSummaryCard(
+                                        roundIndex = roundIndex,
+                                        round = round,
+                                        hasSelectedInRound = hasSelectedInRound,
+                                        selectedOptionIndex = state.selectedOptionIndex,
+                                        onExpand = { expandedHistoryRounds = expandedHistoryRounds + roundIndex },
+                                    )
+                                }
+                            }
+
+                            if (state.isLoading) {
+                                if (state.pendingFollowUp.isNotBlank()) {
+                                    FollowUpPromptBanner(prompt = state.pendingFollowUp)
+                                }
+                                BrigetteLoadingView(
+                                    startedAtMs = state.startedAtMs,
+                                    onCancel = { onEvent(AppEvent.Brigette.Cancel) },
+                                )
+                            } else if (state.error != null) {
+                                if (state.pendingFollowUp.isNotBlank()) {
+                                    FollowUpPromptBanner(prompt = state.pendingFollowUp)
+                                }
+                                BrigetteErrorView(
+                                    error = state.error,
+                                    onOpenSettings = { onEvent(AppEvent.Ui.ShowConfig) },
+                                    onRetry = {
+                                        val msg = state.pendingFollowUp.ifBlank { followUpText.trim() }
+                                        if (msg.isNotBlank()) {
+                                            onEvent(AppEvent.Brigette.FollowUp(msg))
+                                        } else {
+                                            onSendRequest(state.contextOptions, state.editablePrompt)
+                                        }
+                                    },
+                                    retryLabel = if (state.pendingFollowUp.isNotBlank()) {
+                                        stringResource(Res.string.brigette_retry_followup)
+                                    } else {
+                                        null
+                                    },
+                                )
+                            }
+                        }
+                    }
+
                     state.isLoading -> {
                         DeskScrollContainer(modifier = Modifier.weight(1f)) {
                             BrigetteLoadingView(
@@ -257,68 +384,6 @@ fun BrigetteDeskDrawer(
                         }
                     }
 
-                    latestResult != null -> {
-                        val payload = latestResult.payload
-                        DeskScrollContainer(modifier = Modifier.weight(1f)) {
-                            if (payload.analysis.isNotBlank()) {
-                                Surface(
-                                    shape = RoundedCornerShape(8.dp),
-                                    color = MaterialTheme.colorScheme.surface,
-                                    border = BorderStroke(
-                                        1.dp,
-                                        MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f),
-                                    ),
-                                    modifier = Modifier.fillMaxWidth(),
-                                ) {
-                                    Text(
-                                        text = payload.analysis,
-                                        style = MaterialTheme.typography.bodySmall,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                        modifier = Modifier.padding(10.dp),
-                                    )
-                                }
-                            }
-
-                            payload.options.forEachIndexed { index, option ->
-                                val isSelected = index == state.selectedOptionIndex
-                                val isRecommended = index == payload.recommendedIndex
-                                val isPreviewVisible = index in previewIndices
-
-                                ScoredOptionCard(
-                                    option = option,
-                                    sourceText = sourceText,
-                                    glossaryTerms = glossaryTerms,
-                                    isSelected = isSelected,
-                                    isRecommended = isRecommended,
-                                    previewVisible = isPreviewVisible,
-                                    onSelect = { onEvent(AppEvent.Brigette.SelectOption(index)) },
-                                    onTogglePreview = {
-                                        previewIndices = if (isPreviewVisible) {
-                                            previewIndices - index
-                                        } else {
-                                            previewIndices + index
-                                        }
-                                    },
-                                )
-                            }
-
-                            if (payload.conclusion.isNotBlank()) {
-                                Surface(
-                                    shape = RoundedCornerShape(8.dp),
-                                    color = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.35f),
-                                    modifier = Modifier.fillMaxWidth(),
-                                ) {
-                                    Text(
-                                        text = payload.conclusion,
-                                        style = MaterialTheme.typography.bodySmall,
-                                        color = MaterialTheme.colorScheme.onSurface,
-                                        modifier = Modifier.padding(10.dp),
-                                    )
-                                }
-                            }
-                        }
-                    }
-
                     else -> {
                         Box(
                             modifier = Modifier
@@ -335,6 +400,17 @@ fun BrigetteDeskDrawer(
                             )
                         }
                     }
+                }
+
+                // Option A: Permanent single-line follow-up input bar whenever at least 1 round exists
+                if (hasRounds) {
+                    HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f))
+                    FollowUpInputBar(
+                        text = followUpText,
+                        enabled = !state.isLoading,
+                        onTextChange = { followUpText = it },
+                        onSend = ::submitFollowUp,
+                    )
                 }
 
                 HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
@@ -371,7 +447,8 @@ fun BrigetteDeskDrawer(
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
-                        if (state.result != null) {
+                        if (hasRounds) {
+                            val isPickingEarlierRound = state.rounds.size > 1 && state.selectedRoundIndex != state.rounds.lastIndex
                             OutlinedButton(
                                 onClick = { onSendRequest(state.contextOptions, state.editablePrompt) },
                                 enabled = !state.isLoading,
@@ -391,7 +468,13 @@ fun BrigetteDeskDrawer(
                                     modifier = Modifier.size(16.dp),
                                 )
                                 Spacer(Modifier.width(6.dp))
-                                Text(stringResource(Res.string.brigette_apply_option))
+                                Text(
+                                    if (isPickingEarlierRound) {
+                                        stringResource(Res.string.brigette_apply_option_from_round, state.selectedRoundIndex + 1)
+                                    } else {
+                                        stringResource(Res.string.brigette_apply_option)
+                                    }
+                                )
                             }
                         } else {
                             SessionStatsFooterText(sessionStats)
@@ -419,16 +502,312 @@ fun BrigetteDeskDrawer(
 @Composable
 private fun DeskScrollContainer(
     modifier: Modifier = Modifier,
+    scrollState: ScrollState = rememberScrollState(),
     content: @Composable ColumnScope.() -> Unit,
 ) {
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .verticalScroll(rememberScrollState())
+            .verticalScroll(scrollState)
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
         content = content,
     )
+}
+
+@Composable
+private fun HistoryRoundSummaryCard(
+    roundIndex: Int,
+    round: BrigetteRound,
+    hasSelectedInRound: Boolean,
+    selectedOptionIndex: Int,
+    onExpand: () -> Unit,
+) {
+    val payload = round.result.payload
+    val previewOption = if (hasSelectedInRound) {
+        payload.options.getOrNull(selectedOptionIndex)
+    } else {
+        payload.options.getOrNull(payload.recommendedIndex) ?: payload.options.firstOrNull()
+    }
+    val roundLabel = if (round.isFollowUp) {
+        stringResource(Res.string.brigette_round_followup, roundIndex + 1)
+    } else {
+        stringResource(Res.string.brigette_round_initial, roundIndex + 1)
+    }
+
+    Surface(
+        onClick = onExpand,
+        shape = RoundedCornerShape(10.dp),
+        color = MaterialTheme.colorScheme.surface.copy(alpha = 0.72f),
+        border = BorderStroke(
+            width = if (hasSelectedInRound) 1.5.dp else 1.dp,
+            color = if (hasSelectedInRound) {
+                MaterialTheme.colorScheme.primary
+            } else {
+                MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.45f)
+            },
+        ),
+        modifier = Modifier.fillMaxWidth(),
+    ) {
+        Column(
+            modifier = Modifier.padding(horizontal = 12.dp, vertical = 10.dp),
+            verticalArrangement = Arrangement.spacedBy(4.dp),
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+            ) {
+                Text(
+                    text = roundLabel,
+                    style = MaterialTheme.typography.labelSmall,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.primary,
+                )
+                if (hasSelectedInRound) {
+                    Surface(
+                        shape = RoundedCornerShape(4.dp),
+                        color = MaterialTheme.colorScheme.primaryContainer,
+                    ) {
+                        Text(
+                            text = stringResource(Res.string.brigette_round_selected_badge),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onPrimaryContainer,
+                            modifier = Modifier.padding(horizontal = 6.dp, vertical = 1.dp),
+                        )
+                    }
+                }
+                Spacer(Modifier.weight(1f))
+                Text(
+                    text = stringResource(Res.string.brigette_round_expand),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+
+            if (round.isFollowUp && round.userPrompt.isNotBlank()) {
+                Text(
+                    text = round.userPrompt,
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+            }
+
+            previewOption?.let { opt ->
+                Text(
+                    text = opt.text,
+                    style = MaterialTheme.typography.bodySmall,
+                    fontFamily = FontFamily.Monospace,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun RoundDetailSection(
+    roundIndex: Int,
+    totalRounds: Int,
+    round: BrigetteRound,
+    isLatest: Boolean,
+    hasSelectedInRound: Boolean,
+    selectedOptionIndex: Int,
+    sourceText: String,
+    glossaryTerms: List<GlossaryTerm>,
+    previewPairs: Set<Pair<Int, Int>>,
+    onCollapse: () -> Unit,
+    onSelectOption: (Int) -> Unit,
+    onTogglePreview: (Int) -> Unit,
+) {
+    val payload = round.result.payload
+    Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        if (totalRounds > 1) {
+            val roundLabel = if (round.isFollowUp) {
+                stringResource(Res.string.brigette_round_followup, roundIndex + 1)
+            } else {
+                stringResource(Res.string.brigette_round_initial, roundIndex + 1)
+            }
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                Text(
+                    text = roundLabel,
+                    style = MaterialTheme.typography.labelMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.primary,
+                )
+                if (hasSelectedInRound && !isLatest) {
+                    Surface(
+                        shape = RoundedCornerShape(4.dp),
+                        color = MaterialTheme.colorScheme.primaryContainer,
+                    ) {
+                        Text(
+                            text = stringResource(Res.string.brigette_round_selected_badge),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onPrimaryContainer,
+                            modifier = Modifier.padding(horizontal = 6.dp, vertical = 1.dp),
+                        )
+                    }
+                }
+                Spacer(Modifier.weight(1f))
+                if (!isLatest) {
+                    TextButton(
+                        onClick = onCollapse,
+                        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp),
+                    ) {
+                        Text(
+                            text = stringResource(Res.string.brigette_round_collapse),
+                            style = MaterialTheme.typography.labelSmall,
+                        )
+                    }
+                }
+            }
+        }
+
+        if (round.isFollowUp && round.userPrompt.isNotBlank()) {
+            FollowUpPromptBanner(prompt = round.userPrompt)
+        }
+
+        if (payload.analysis.isNotBlank()) {
+            Surface(
+                shape = RoundedCornerShape(8.dp),
+                color = MaterialTheme.colorScheme.surface,
+                border = BorderStroke(
+                    1.dp,
+                    MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f),
+                ),
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                Text(
+                    text = payload.analysis,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(10.dp),
+                )
+            }
+        }
+
+        payload.options.forEachIndexed { index, option ->
+            val isSelected = hasSelectedInRound && index == selectedOptionIndex
+            val isRecommended = index == payload.recommendedIndex
+            val isPreviewVisible = (roundIndex to index) in previewPairs
+
+            ScoredOptionCard(
+                option = option,
+                sourceText = sourceText,
+                glossaryTerms = glossaryTerms,
+                isSelected = isSelected,
+                isRecommended = isRecommended,
+                previewVisible = isPreviewVisible,
+                onSelect = { onSelectOption(index) },
+                onTogglePreview = { onTogglePreview(index) },
+            )
+        }
+
+        if (payload.conclusion.isNotBlank()) {
+            Surface(
+                shape = RoundedCornerShape(8.dp),
+                color = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.35f),
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                Text(
+                    text = payload.conclusion,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    modifier = Modifier.padding(10.dp),
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun FollowUpPromptBanner(prompt: String) {
+    Surface(
+        shape = RoundedCornerShape(8.dp),
+        color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.25f)),
+        modifier = Modifier.fillMaxWidth(),
+    ) {
+        Text(
+            text = prompt,
+            style = MaterialTheme.typography.bodySmall,
+            fontWeight = FontWeight.Medium,
+            color = MaterialTheme.colorScheme.onSurface,
+            modifier = Modifier.padding(horizontal = 10.dp, vertical = 8.dp),
+        )
+    }
+}
+
+@Composable
+private fun FollowUpInputBar(
+    text: String,
+    enabled: Boolean,
+    onTextChange: (String) -> Unit,
+    onSend: () -> Unit,
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 8.dp),
+        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        OutlinedTextField(
+            value = text,
+            onValueChange = onTextChange,
+            enabled = enabled,
+            minLines = 1,
+            maxLines = 3,
+            placeholder = {
+                Text(
+                    text = stringResource(Res.string.brigette_followup_placeholder),
+                    style = MaterialTheme.typography.bodySmall,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+            },
+            textStyle = MaterialTheme.typography.bodySmall,
+            shape = MaterialTheme.shapes.medium,
+            modifier = Modifier
+                .weight(1f)
+                .onPreviewKeyEvent { event ->
+                    // Only submit on Ctrl+Enter; never intercept plain Enter so Windows Zhuyin IME candidate confirmation works safely
+                    if (event.type == KeyEventType.KeyDown &&
+                        event.isCtrlPressed &&
+                        (event.key == Key.Enter || event.key == Key.NumPadEnter)
+                    ) {
+                        onSend()
+                        true
+                    } else {
+                        false
+                    }
+                },
+        )
+        FilledTonalButton(
+            onClick = onSend,
+            enabled = enabled && text.isNotBlank(),
+            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
+        ) {
+            Icon(
+                painter = painterResource(Res.drawable.ic_auto_awesome),
+                contentDescription = null,
+                modifier = Modifier.size(15.dp),
+            )
+            Spacer(Modifier.width(4.dp))
+            Text(
+                text = stringResource(Res.string.brigette_followup_send),
+                style = MaterialTheme.typography.labelMedium,
+            )
+        }
+    }
 }
 
 @Composable
@@ -706,6 +1085,7 @@ private fun BrigetteErrorView(
     error: GeminiError,
     onOpenSettings: () -> Unit,
     onRetry: () -> Unit,
+    retryLabel: String? = null,
 ) {
     val guidance = when (error) {
         is GeminiError.MissingApiKey -> stringResource(Res.string.brigette_error_missing_key)
@@ -775,7 +1155,7 @@ private fun BrigetteErrorView(
                     Spacer(Modifier.width(8.dp))
                 }
                 OutlinedButton(onClick = onRetry) {
-                    Text(stringResource(Res.string.brigette_retry))
+                    Text(retryLabel ?: stringResource(Res.string.brigette_retry))
                 }
             }
         }
@@ -1211,6 +1591,208 @@ private fun BrigetteDeskLoadingAndErrorPreview() {
                     state = errorState,
                     sourceText = "Oxygen",
                     glossaryTerms = emptyList(),
+                    configuredModel = "gemini-3.6-flash",
+                    onEvent = {},
+                    onToggleContextOptions = {},
+                    onSendRequest = { _, _ -> },
+                    onApplyTranslation = {},
+                )
+            }
+        }
+    }
+}
+
+private fun sampleMultiRoundFixtures(): Pair<List<GlossaryTerm>, List<BrigetteRound>> {
+    val terms = listOf(
+        GlossaryTerm("ELEMENTS", "Oxygen", "氧氣", "STRINGS.ELEMENTS.OXYGEN.NAME"),
+        GlossaryTerm("BUILDINGS.PREFABS", "Gas Pipe", "氣體管道", "STRINGS.BUILDINGS.PREFABS.GASCONDUIT.NAME"),
+    )
+    val round1 = BrigetteRound(
+        userPrompt = "## Target Entry\nmsgid \"Carries <link=\\\"OXYGEN\\\">Oxygen</link> cleanly.\"",
+        isFollowUp = false,
+        result = GeminiTranslationResult(
+            payload = GeminiPayload(
+                analysis = "建築物功能說明，需保留 <link> 標籤與鎖定術語。",
+                options = listOf(
+                    GeminiOption(
+                        label = "選項 A（標準）",
+                        score = 9,
+                        text = "穩定輸送<link=\"OXYGEN\">氧氣</link>。",
+                        rationale = "精準簡潔，完整保留連結標籤。",
+                    ),
+                    GeminiOption(
+                        label = "選項 B（口語）",
+                        score = 8,
+                        text = "用來乾淨輸送<link=\"OXYGEN\">氧氣</link>的管線。",
+                        rationale = "語氣較自然，略帶「管線」補充。",
+                    ),
+                ),
+                recommendedIndex = 0,
+                conclusion = "建議採用選項 A，術語與標籤皆對齊。",
+            ),
+            usage = GeminiUsage(520, 180, 40, 740, 1800L, "gemini-3.6-flash"),
+            rawJson = "{}",
+        ),
+    )
+    val round2 = BrigetteRound(
+        userPrompt = "選項 B 的「乾淨」好像有點怪，有沒有更適合 UI 的講法？",
+        isFollowUp = true,
+        result = GeminiTranslationResult(
+            payload = GeminiPayload(
+                analysis = "「cleanly」在建築說明裡多指順暢無阻，避免翻成表面字義的「乾淨」。",
+                options = listOf(
+                    GeminiOption(
+                        label = "選項 A2（順暢）",
+                        score = 10,
+                        text = "順暢輸送<link=\"OXYGEN\">氧氣</link>。",
+                        rationale = "保留動作感又不失 UI 簡潔度。",
+                    ),
+                    GeminiOption(
+                        label = "選項 B2（緊湊）",
+                        score = 9,
+                        text = "純淨輸送<link=\"OXYGEN\">氧氣</link>。",
+                        rationale = "貼近原句重心，字數精簡。",
+                    ),
+                ),
+                recommendedIndex = 0,
+                conclusion = "建議改用「順暢輸送」作為第 2 輪定案。",
+            ),
+            usage = GeminiUsage(920, 195, 55, 1170, 2100L, "gemini-3.6-flash"),
+            rawJson = "{}",
+        ),
+    )
+    return terms to listOf(round1, round2)
+}
+
+@Preview
+@Composable
+private fun BrigetteDeskFollowUpConversationPreview() {
+    val (terms, rounds) = sampleMultiRoundFixtures()
+    val deskState = BrigetteDeskState(
+        visible = true,
+        entryKey = "STRINGS.BUILDINGS.PREFABS.GASCONDUIT.DESC",
+        contextSnapshot = PromptContextSnapshot(matchedTerms = terms),
+        builtPromptPreview = rounds.first().userPrompt,
+        editablePrompt = rounds.first().userPrompt,
+        rounds = rounds,
+        selectedRoundIndex = 1,
+        selectedOptionIndex = 0,
+    )
+
+    Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+        arrayOf(false, true).forEach { dark ->
+            OniTranslatorTheme(darkTheme = dark) {
+                Surface(modifier = Modifier.width(760.dp).height(760.dp)) {
+                    BrigetteDeskDrawer(
+                        state = deskState,
+                        sourceText = "Carries <link=\"OXYGEN\">Oxygen</link> cleanly.",
+                        glossaryTerms = terms,
+                        configuredModel = "gemini-3.6-flash",
+                        sessionStats = GeminiSessionStats(2, 1440, 375, 95, 1910, 3900L),
+                        initialFollowUpDraft = "如果想改成四字詞綴會不會更好？",
+                        onEvent = {},
+                        onToggleContextOptions = {},
+                        onSendRequest = { _, _ -> },
+                        onApplyTranslation = {},
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Preview
+@Composable
+private fun BrigetteDeskFollowUpExpandedHistoryPreview() {
+    val (terms, rounds) = sampleMultiRoundFixtures()
+    val deskState = BrigetteDeskState(
+        visible = true,
+        entryKey = "STRINGS.BUILDINGS.PREFABS.GASCONDUIT.DESC",
+        contextSnapshot = PromptContextSnapshot(matchedTerms = terms),
+        builtPromptPreview = rounds.first().userPrompt,
+        editablePrompt = rounds.first().userPrompt,
+        rounds = rounds,
+        selectedRoundIndex = 0,
+        selectedOptionIndex = 1,
+    )
+
+    Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+        arrayOf(false, true).forEach { dark ->
+            OniTranslatorTheme(darkTheme = dark) {
+                Surface(modifier = Modifier.width(760.dp).height(820.dp)) {
+                    BrigetteDeskDrawer(
+                        state = deskState,
+                        sourceText = "Carries <link=\"OXYGEN\">Oxygen</link> cleanly.",
+                        glossaryTerms = terms,
+                        configuredModel = "gemini-3.6-flash",
+                        initialExpandedHistoryRounds = setOf(0),
+                        onEvent = {},
+                        onToggleContextOptions = {},
+                        onSendRequest = { _, _ -> },
+                        onApplyTranslation = {},
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Preview
+@Composable
+private fun BrigetteDeskFollowUpLoadingAndErrorPreview() {
+    val (terms, rounds) = sampleMultiRoundFixtures()
+    val round1Only = listOf(rounds.first())
+    val loadingState = BrigetteDeskState(
+        visible = true,
+        entryKey = "STRINGS.BUILDINGS.PREFABS.GASCONDUIT.DESC",
+        contextSnapshot = PromptContextSnapshot(matchedTerms = terms),
+        builtPromptPreview = round1Only.first().userPrompt,
+        editablePrompt = round1Only.first().userPrompt,
+        rounds = round1Only,
+        selectedRoundIndex = 0,
+        selectedOptionIndex = 0,
+        isLoading = true,
+        startedAtMs = System.currentTimeMillis() - 1800L,
+        pendingFollowUp = "請幫我把語氣調得更簡短精煉一點",
+    )
+    val errorState = BrigetteDeskState(
+        visible = true,
+        entryKey = "STRINGS.BUILDINGS.PREFABS.GASCONDUIT.DESC",
+        contextSnapshot = PromptContextSnapshot(matchedTerms = terms),
+        builtPromptPreview = round1Only.first().userPrompt,
+        editablePrompt = round1Only.first().userPrompt,
+        rounds = round1Only,
+        selectedRoundIndex = 0,
+        selectedOptionIndex = 0,
+        pendingFollowUp = "請幫我把語氣調得更簡短精煉一點",
+        error = GeminiError.RateLimited(
+            message = "RESOURCE_EXHAUSTED: Quota exceeded for GenerateRequestsPerMinute",
+            retryDelaySeconds = 12,
+            quotaId = "GenerateRequestsPerMinutePerProjectPerModel-FreeTier",
+        ),
+    )
+
+    Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+        OniTranslatorTheme(darkTheme = false) {
+            Surface(modifier = Modifier.width(760.dp).height(760.dp)) {
+                BrigetteDeskDrawer(
+                    state = loadingState,
+                    sourceText = "Carries <link=\"OXYGEN\">Oxygen</link> cleanly.",
+                    glossaryTerms = terms,
+                    configuredModel = "gemini-3.6-flash",
+                    onEvent = {},
+                    onToggleContextOptions = {},
+                    onSendRequest = { _, _ -> },
+                    onApplyTranslation = {},
+                )
+            }
+        }
+        OniTranslatorTheme(darkTheme = true) {
+            Surface(modifier = Modifier.width(760.dp).height(760.dp)) {
+                BrigetteDeskDrawer(
+                    state = errorState,
+                    sourceText = "Carries <link=\"OXYGEN\">Oxygen</link> cleanly.",
+                    glossaryTerms = terms,
                     configuredModel = "gemini-3.6-flash",
                     onEvent = {},
                     onToggleContextOptions = {},
