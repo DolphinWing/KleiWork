@@ -39,7 +39,7 @@ class OniTranslatorViewModel(appVersion: String, private val debugMode: Boolean)
 
     private var helper: PoHelper? = null
     private var textRefinery: TextRefinery? = null
-    private val geminiClient = GeminiClient()
+    private val geminiClient by lazy { GeminiClient() }
     private var cachedSystemPrompt: String? = null
 
     // A mutable state for windowConfig to be used by window state remembering

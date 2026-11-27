@@ -313,6 +313,7 @@
 為確保發佈打包（Release ProGuard）的穩定性並維持極簡依賴樹，系統透過 [`GeminiClient`](src/main/kotlin/dolphin/desktop/apps/onitranslator/model/GeminiClient.kt) 直接對接 Google AI Studio REST API：
 * **零反射序列化與輕量傳輸**：
     * 採用 JDK 內建 `java.net.http.HttpClient` 搭配 `kotlinx-serialization-json` 純 JSON AST 解碼（免編譯器外掛、零反射與零 `$$serializer` 混淆風險），避免引入大型 SDK 的傳遞依賴。
+    * [`build.gradle.kts`](build.gradle.kts) 於 `nativeDistributions` 顯式宣告 `modules("java.net.http", "jdk.unsupported")`，確保 `packageExe` 打包出的精簡 jlink Runtime 包含 `HttpClient`；[`OniTranslatorViewModel`](src/main/kotlin/dolphin/desktop/apps/onitranslator/model/OniTranslatorViewModel.kt) 亦以 `by lazy` 延遲初始化 `GeminiClient`，避免冷啟動提前建立網路執行緒池。
     * API Key 僅透過 `x-goog-api-key` HTTP Header 傳遞，並於所有錯誤訊息及原始 Body 紀錄中強制遮罩為 `[REDACTED]`。
 * **Structured Output 與 Thinking 過濾**：
     * `generationConfig` 指定 `responseMimeType = "application/json"` 並強制附上 OpenAPI `responseSchema`，確保回傳固定結構（`matchedTerms`、`analysis`、`options`、`recommendedIndex`、`conclusion`）。
@@ -364,6 +365,32 @@ Step 4 完成 [`BrigetteDeskDrawer`](src/main/kotlin/dolphin/desktop/apps/onitra
 * **一鍵套用與累計統計**：
     * 點擊「套用所選譯文」比照智慧貼上同步備份 `backupText`（相容既有復原按鈕）、寫入編輯器並自動存檔；疊層頁尾左下角即時顯示 Session 累計請求數／Token（含懸停明細），結果態並同時呈現單次耗時與 Token 明細，[`OniTranslatorBottomBar`](src/main/kotlin/dolphin/desktop/apps/onitranslator/app/OniTranslatorBottomBar.kt) 亦同步呈現本次 Session 累計統計。
 
+### 4.17. Windows 打包與安裝流程 (`createDistributable` + Inno Setup 6)
+
+為避免 Compose `packageReleaseExe` 未配置 ProGuard 規則造成 `opencc4j` 等反射路徑崩潰，並取得完整的安裝流程掌控度與較小體積，Windows 正式安裝檔統一由 Gradle Task `packageInnoSetup` 產出：
+
+* **兩段式管線 (`build.gradle.kts` + `installer.iss`)**：
+  1. `packageInnoSetup` 先相依執行 Compose `createDistributable`，產出免混淆之 App Image（`build/compose/binaries/main/app/OniTranslator`），並強制檢驗 `OniTranslator.exe` 存在且 `runtime/release` 已納入 `java.net.http`。
+  2. 自動探測本機 `ISCC.exe`（順序：`-PisccPath` $\rightarrow$ `ISCC_PATH` 環境變數 $\rightarrow$ `PATH` $\rightarrow$ 標準 Inno Setup 6 安裝目錄），傳入 [`gradle.properties`](gradle.properties) 的 `releaseAppVersion` 編譯 [`installer.iss`](installer.iss)，於 `build/installer/` 產出 `OniTranslator-Setup-<version>.exe` 並計算檔案大小與 SHA-256。
+* **安裝策略與圖示沿用**：
+  * 採用 `PrivilegesRequired=lowest`（純個人使用者免 UAC 安裝至 `%LOCALAPPDATA%\Programs\OniTranslator`）、繁體中文優先／英文備援、僅建立開始功能表捷徑（不建桌面捷徑）、安裝完成提供「立即啟動」選項（預設不勾選）。
+  * 安裝檔、執行檔與控制台反安裝列表皆沿用 [`src/main/resources/nisbet_ponder.ico`](src/main/resources/nisbet_ponder.ico)。
+  * 透過固定 `AppId` 與 `[InstallDelete]`（升級前清空 `{app}\app` 與 `{app}\runtime`）確保後續版本無縫覆蓋且不殘留舊版帶雜湊檔名 JAR；使用者設定位於 `%LOCALAPPDATA%\oni-translator\configs.ini`，與安裝目錄完全隔離。
+* **兩種安裝方式互不相容（重要遷移提示）**：
+  * 原 Compose `packageExe`（WiX 引擎）與 Inno Setup 屬於**完全不同且互不相容**的安裝器引擎，無法互相偵測或覆蓋升級（未先移除會導致 Windows「已安裝的應用程式」同時存在兩筆紀錄）。
+  * 首次改用 Inno Setup 安裝前，需先從 Windows 移除先前由 `packageExe` 安裝的舊版；移除舊版不會清除 `%LOCALAPPDATA%\oni-translator\configs.ini` 設定檔與草稿。
+* **常用指令**：
+  ```powershell
+  # 執行單元測試並打包 Windows 安裝檔（支援 Gradle Configuration Cache）
+  .\gradlew.bat test packageInnoSetup --console=plain
+
+  # 若已測過、僅需快速重新產出安裝檔
+  .\gradlew.bat packageInnoSetup --console=plain
+
+  # 指定自訂 ISCC.exe 路徑（選用）
+  .\gradlew.bat packageInnoSetup -PisccPath="C:\Custom\Inno Setup 6\ISCC.exe"
+  ```
+
 ---
 
 ## 5. 目錄結構 (Directory Structure)
@@ -376,6 +403,8 @@ src/main/kotlin/dolphin/desktop/apps/onitranslator/
 ├── theme/        # Material 3 主題設定
 ├── widget/       # 共用 UI 元件
 └── generated/    # Compose Resources 自動生成的代碼
+
+installer.iss     # Inno Setup 6 Windows 安裝腳本
 ```
 
 ---
